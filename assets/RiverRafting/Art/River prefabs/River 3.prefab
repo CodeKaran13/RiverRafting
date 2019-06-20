@@ -28,9 +28,16 @@
     ],
     "_active": true,
     "_level": 1,
-    "_components": [],
+    "_components": [
+      {
+        "__id__": 11
+      },
+      {
+        "__id__": 12
+      }
+    ],
     "_prefab": {
-      "__id__": 11
+      "__id__": 13
     },
     "_opacity": 255,
     "_color": {
@@ -52,7 +59,7 @@
     },
     "_position": {
       "__type__": "cc.Vec3",
-      "x": 0,
+      "x": 540,
       "y": 0,
       "z": 0
     },
@@ -378,6 +385,39 @@
     },
     "fileId": "0418ect21LFY1Nqq1Sp96X",
     "sync": false
+  },
+  {
+    "__type__": "5bea7AUtt9IT7JCNjugT32A",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 1
+    },
+    "_enabled": true,
+    "_matchManagerRef": null,
+    "player": null,
+    "_id": ""
+  },
+  {
+    "__type__": "cc.BoxCollider",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 1
+    },
+    "_enabled": true,
+    "tag": 0,
+    "_offset": {
+      "__type__": "cc.Vec2",
+      "x": 0,
+      "y": 2500
+    },
+    "_size": {
+      "__type__": "cc.Size",
+      "width": 1920,
+      "height": 10
+    },
+    "_id": ""
   },
   {
     "__type__": "cc.PrefabInfo",
