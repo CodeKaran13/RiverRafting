@@ -1,3 +1,5 @@
+import PoolingSystem from "../GamePlay/PoolingSystem";
+
 const { ccclass, property } = cc._decorator;
 
 @ccclass
@@ -7,19 +9,13 @@ export default class MatchManager extends cc.Component {
     LevelPrefabs: cc.Node = null;
 
     @property({
-        type: cc.Node,
+        type: PoolingSystem,
         visible: true,
         serializable: true
     })
-    RiverMapsNode: cc.Node = null;
+    _poolingSystem: PoolingSystem = null;
 
-    @property({
-        type: cc.Prefab,
-        visible: true,
-        serializable: true
-    })
-    RiverMaps: cc.Prefab[] = [];
-
+    totalHeight: number = 0;
     // onLoad () {}
 
     start() {
@@ -29,54 +25,62 @@ export default class MatchManager extends cc.Component {
     // update (dt) {}
 
     spawnNextRiverMap(height: number) {
-        var previousHeight = 0;
-        previousHeight = previousHeight + height;
-        console.log('height', height);
-        console.log('preheight', previousHeight);
+
+        // this.totalHeight = this.totalHeight + height;
+        // var nextMap = this._poolingSystem.getRiverMapfromPool(1);
+
+        // this.LevelPrefabs.addChild(nextMap, 0, nextMap.name);
+        // nextMap.setPosition(cc.Vec2.ZERO);
+
+        // nextMap.setPosition(new cc.Vec2(0, this.totalHeight));
+        // nextMap.active = true;
+
         switch (this.getRandomNumber()) {
-            case 0:
-                var nextMap = cc.instantiate(this.RiverMaps[0]); //this.RiverMapsNode.children[0];
-                // this.RiverMapsNode.removeChild(nextMap);
+            case 1:
+                this.totalHeight = this.totalHeight + height;
+                var nextMap = this._poolingSystem.getRiverMapfromPool(1);
 
                 this.LevelPrefabs.addChild(nextMap, 0, nextMap.name);
                 nextMap.setPosition(cc.Vec2.ZERO);
 
-                nextMap.setPosition(new cc.Vec2(0, previousHeight + height));
-                nextMap.active = true;
-                break;
-            case 1:
-                var nextMap = cc.instantiate(this.RiverMaps[1]); //this.RiverMapsNode.children[1];
-                // this.RiverMapsNode.removeChild(nextMap);
-
-                this.LevelPrefabs.addChild(nextMap, 0, nextMap.name);
-                // nextMap.setPosition(cc.Vec2.ZERO);
-                nextMap.setPosition(new cc.Vec2(0, previousHeight + height));
+                nextMap.setPosition(new cc.Vec2(0, this.totalHeight));
                 nextMap.active = true;
                 break;
             case 2:
-                var nextMap = cc.instantiate(this.RiverMaps[2]); //this.RiverMapsNode.children[2];
-                // this.RiverMapsNode.removeChild(nextMap);
+                this.totalHeight = this.totalHeight + height;
+                var nextMap = this._poolingSystem.getRiverMapfromPool(2);
 
                 this.LevelPrefabs.addChild(nextMap, 0, nextMap.name);
-                // nextMap.setPosition(cc.Vec2.ZERO);
-                nextMap.setPosition(new cc.Vec2(0, previousHeight + height));
+                nextMap.setPosition(cc.Vec2.ZERO);
+
+                nextMap.setPosition(new cc.Vec2(0, this.totalHeight));
                 nextMap.active = true;
                 break;
             case 3:
-                var nextMap = cc.instantiate(this.RiverMaps[3]); //this.RiverMapsNode.children[3];
-                // this.RiverMapsNode.removeChild(nextMap);
+                this.totalHeight = this.totalHeight + height;
+                var nextMap = this._poolingSystem.getRiverMapfromPool(3);
 
                 this.LevelPrefabs.addChild(nextMap, 0, nextMap.name);
-                // nextMap.setPosition(cc.Vec2.ZERO);
-                nextMap.setPosition(new cc.Vec2(0, previousHeight + height));
+                nextMap.setPosition(cc.Vec2.ZERO);
+
+                nextMap.setPosition(new cc.Vec2(0, this.totalHeight));
+                nextMap.active = true;
+                break;
+            case 4:
+                this.totalHeight = this.totalHeight + height;
+                var nextMap = this._poolingSystem.getRiverMapfromPool(4);
+
+                this.LevelPrefabs.addChild(nextMap, 0, nextMap.name);
+                nextMap.setPosition(cc.Vec2.ZERO);
+
+                nextMap.setPosition(new cc.Vec2(0, this.totalHeight));
                 nextMap.active = true;
                 break;
         }
     }
 
     getRandomNumber() {
-        var rand = Math.floor(Math.random() * 3);
-
+        var rand = Math.floor(Math.random() * 3) + 1;
         return rand;
     }
 }
