@@ -29,7 +29,7 @@ export default class RiverMap extends cc.Component {
     }
 
     onCollisionEnter(other, self) {
-        console.log('collision enter');
+        // console.log('collision enter');
         if (other.node.name == 'Player') {
             this._matchManagerRef.spawnNextRiverMap(this.node.height);
             // this.destroy();

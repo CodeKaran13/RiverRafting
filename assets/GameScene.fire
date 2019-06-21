@@ -29,10 +29,10 @@
         "__id__": 18
       },
       {
-        "__id__": 40
+        "__id__": 38
       },
       {
-        "__id__": 43
+        "__id__": 41
       }
     ],
     "_active": false,
@@ -59,8 +59,8 @@
     },
     "_scale": {
       "__type__": "cc.Vec3",
-      "x": 0.1,
-      "y": 0.1,
+      "x": 0.19453098948245673,
+      "y": 0.19453098948245673,
       "z": 1
     },
     "_quat": {
@@ -667,7 +667,7 @@
     },
     "_enabled": true,
     "movementSpeed": 5,
-    "turnSpeed": 5,
+    "turnSpeed": 0,
     "_id": "fao3X7d/hDVKgHNZ5BauNy"
   },
   {
@@ -762,14 +762,14 @@
         "__id__": 21
       },
       {
-        "__id__": 30
+        "__id__": 29
       }
     ],
     "_active": true,
     "_level": 1,
     "_components": [
       {
-        "__id__": 39
+        "__id__": 37
       }
     ],
     "_prefab": null,
@@ -918,7 +918,7 @@
         "__id__": 27
       },
       {
-        "__id__": 29
+        "__id__": 28
       }
     ],
     "_prefab": null,
@@ -942,7 +942,7 @@
     },
     "_position": {
       "__type__": "cc.Vec3",
-      "x": -540,
+      "x": -535,
       "y": 0,
       "z": 0
     },
@@ -1183,11 +1183,7 @@
     "_enabled": false,
     "duration": 0.1,
     "zoomScale": 1.2,
-    "clickEvents": [
-      {
-        "__id__": 28
-      }
-    ],
+    "clickEvents": [],
     "_N$interactable": true,
     "_N$enableAutoGrayEffect": false,
     "_N$transition": 2,
@@ -1258,16 +1254,6 @@
     "_id": "0bLDNLVvxJn5wCazWT7YVD"
   },
   {
-    "__type__": "cc.ClickEvent",
-    "target": {
-      "__id__": 10
-    },
-    "component": "",
-    "_componentId": "9952ebJYiBOw4NPp/lU2+FN",
-    "handler": "onKeyDown",
-    "customEventData": "left"
-  },
-  {
     "__type__": "9952ebJYiBOw4NPp/lU2+FN",
     "_name": "",
     "_objFlags": 0,
@@ -1290,17 +1276,17 @@
     },
     "_children": [
       {
-        "__id__": 31
+        "__id__": 30
       }
     ],
     "_active": true,
     "_level": 2,
     "_components": [
       {
-        "__id__": 36
+        "__id__": 35
       },
       {
-        "__id__": 38
+        "__id__": 36
       }
     ],
     "_prefab": null,
@@ -1324,7 +1310,7 @@
     },
     "_position": {
       "__type__": "cc.Vec3",
-      "x": 540,
+      "x": 535,
       "y": 0,
       "z": 0
     },
@@ -1353,21 +1339,21 @@
     "_name": "Background",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 30
+      "__id__": 29
     },
     "_children": [
       {
-        "__id__": 32
+        "__id__": 31
       }
     ],
     "_active": true,
     "_level": 2,
     "_components": [
       {
-        "__id__": 34
+        "__id__": 33
       },
       {
-        "__id__": 35
+        "__id__": 34
       }
     ],
     "_prefab": null,
@@ -1420,14 +1406,14 @@
     "_name": "Label",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 31
+      "__id__": 30
     },
     "_children": [],
     "_active": true,
     "_level": 3,
     "_components": [
       {
-        "__id__": 33
+        "__id__": 32
       }
     ],
     "_prefab": null,
@@ -1480,7 +1466,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 32
+      "__id__": 31
     },
     "_enabled": false,
     "_useOriginalSize": false,
@@ -1505,7 +1491,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 31
+      "__id__": 30
     },
     "_enabled": false,
     "_spriteFrame": {
@@ -1533,7 +1519,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 31
+      "__id__": 30
     },
     "_enabled": true,
     "alignMode": 0,
@@ -1560,16 +1546,12 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 30
+      "__id__": 29
     },
     "_enabled": false,
     "duration": 0.1,
     "zoomScale": 1.2,
-    "clickEvents": [
-      {
-        "__id__": 37
-      }
-    ],
+    "clickEvents": [],
     "_N$interactable": true,
     "_N$enableAutoGrayEffect": false,
     "_N$transition": 2,
@@ -1635,26 +1617,16 @@
       "__uuid__": "29158224-f8dd-4661-a796-1ffab537140e"
     },
     "_N$target": {
-      "__id__": 31
+      "__id__": 30
     },
     "_id": "fasq9r0glFcrWpZgHjIU9f"
-  },
-  {
-    "__type__": "cc.ClickEvent",
-    "target": {
-      "__id__": 10
-    },
-    "component": "",
-    "_componentId": "9952ebJYiBOw4NPp/lU2+FN",
-    "handler": "onKeyDown",
-    "customEventData": "right"
   },
   {
     "__type__": "9952ebJYiBOw4NPp/lU2+FN",
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 30
+      "__id__": 29
     },
     "_enabled": true,
     "player": {
@@ -1692,10 +1664,10 @@
     "_level": 1,
     "_components": [
       {
-        "__id__": 41
+        "__id__": 39
       },
       {
-        "__id__": 42
+        "__id__": 40
       }
     ],
     "_prefab": null,
@@ -1748,7 +1720,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 40
+      "__id__": 38
     },
     "_enabled": true,
     "_cullingMask": 5,
@@ -1770,7 +1742,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 40
+      "__id__": 38
     },
     "_enabled": true,
     "smoothFollow": false,
@@ -1791,16 +1763,16 @@
     },
     "_children": [
       {
-        "__id__": 44
+        "__id__": 42
       },
       {
-        "__id__": 56
+        "__id__": 54
       },
       {
-        "__id__": 74
+        "__id__": 72
       },
       {
-        "__id__": 86
+        "__id__": 84
       }
     ],
     "_active": false,
@@ -1856,28 +1828,28 @@
     "_name": "River 1",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 43
+      "__id__": 41
     },
     "_children": [
       {
-        "__id__": 45
+        "__id__": 43
       },
       {
-        "__id__": 48
+        "__id__": 46
       },
       {
-        "__id__": 51
+        "__id__": 49
       }
     ],
     "_active": false,
     "_level": 2,
     "_components": [
       {
-        "__id__": 54
+        "__id__": 52
       }
     ],
     "_prefab": {
-      "__id__": 55
+      "__id__": 53
     },
     "_opacity": 255,
     "_color": {
@@ -1928,18 +1900,18 @@
     "_name": "Straight road",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 44
+      "__id__": 42
     },
     "_children": [],
     "_active": true,
     "_level": 2,
     "_components": [
       {
-        "__id__": 46
+        "__id__": 44
       }
     ],
     "_prefab": {
-      "__id__": 47
+      "__id__": 45
     },
     "_opacity": 255,
     "_color": {
@@ -1990,7 +1962,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 45
+      "__id__": 43
     },
     "_enabled": true,
     "_spriteFrame": {
@@ -2016,7 +1988,7 @@
   {
     "__type__": "cc.PrefabInfo",
     "root": {
-      "__id__": 44
+      "__id__": 42
     },
     "asset": {
       "__uuid__": "74c8478f-e719-44e0-8915-857f7b61370e"
@@ -2029,18 +2001,18 @@
     "_name": "C turn",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 44
+      "__id__": 42
     },
     "_children": [],
     "_active": true,
     "_level": 2,
     "_components": [
       {
-        "__id__": 49
+        "__id__": 47
       }
     ],
     "_prefab": {
-      "__id__": 50
+      "__id__": 48
     },
     "_opacity": 255,
     "_color": {
@@ -2091,7 +2063,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 48
+      "__id__": 46
     },
     "_enabled": true,
     "_spriteFrame": {
@@ -2117,7 +2089,7 @@
   {
     "__type__": "cc.PrefabInfo",
     "root": {
-      "__id__": 44
+      "__id__": 42
     },
     "asset": {
       "__uuid__": "74c8478f-e719-44e0-8915-857f7b61370e"
@@ -2130,18 +2102,18 @@
     "_name": "Straight road",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 44
+      "__id__": 42
     },
     "_children": [],
     "_active": true,
     "_level": 2,
     "_components": [
       {
-        "__id__": 52
+        "__id__": 50
       }
     ],
     "_prefab": {
-      "__id__": 53
+      "__id__": 51
     },
     "_opacity": 255,
     "_color": {
@@ -2192,7 +2164,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 51
+      "__id__": 49
     },
     "_enabled": true,
     "_spriteFrame": {
@@ -2218,7 +2190,7 @@
   {
     "__type__": "cc.PrefabInfo",
     "root": {
-      "__id__": 44
+      "__id__": 42
     },
     "asset": {
       "__uuid__": "74c8478f-e719-44e0-8915-857f7b61370e"
@@ -2231,7 +2203,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 44
+      "__id__": 42
     },
     "_enabled": true,
     "_matchManagerRef": {
@@ -2245,7 +2217,7 @@
   {
     "__type__": "cc.PrefabInfo",
     "root": {
-      "__id__": 44
+      "__id__": 42
     },
     "asset": {
       "__uuid__": "74c8478f-e719-44e0-8915-857f7b61370e"
@@ -2258,34 +2230,34 @@
     "_name": "River 2",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 43
+      "__id__": 41
     },
     "_children": [
       {
-        "__id__": 57
+        "__id__": 55
       },
       {
-        "__id__": 60
+        "__id__": 58
       },
       {
-        "__id__": 63
+        "__id__": 61
       },
       {
-        "__id__": 66
+        "__id__": 64
       },
       {
-        "__id__": 69
+        "__id__": 67
       }
     ],
     "_active": false,
     "_level": 2,
     "_components": [
       {
-        "__id__": 72
+        "__id__": 70
       }
     ],
     "_prefab": {
-      "__id__": 73
+      "__id__": 71
     },
     "_opacity": 255,
     "_color": {
@@ -2336,18 +2308,18 @@
     "_name": "S right turn",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 56
+      "__id__": 54
     },
     "_children": [],
     "_active": true,
     "_level": 2,
     "_components": [
       {
-        "__id__": 58
+        "__id__": 56
       }
     ],
     "_prefab": {
-      "__id__": 59
+      "__id__": 57
     },
     "_opacity": 255,
     "_color": {
@@ -2398,7 +2370,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 57
+      "__id__": 55
     },
     "_enabled": true,
     "_spriteFrame": {
@@ -2424,7 +2396,7 @@
   {
     "__type__": "cc.PrefabInfo",
     "root": {
-      "__id__": 56
+      "__id__": 54
     },
     "asset": {
       "__uuid__": "1cf17b6c-825c-48c0-8e8f-f17b45de7b1a"
@@ -2437,18 +2409,18 @@
     "_name": "Straight road",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 56
+      "__id__": 54
     },
     "_children": [],
     "_active": true,
     "_level": 2,
     "_components": [
       {
-        "__id__": 61
+        "__id__": 59
       }
     ],
     "_prefab": {
-      "__id__": 62
+      "__id__": 60
     },
     "_opacity": 255,
     "_color": {
@@ -2499,7 +2471,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 60
+      "__id__": 58
     },
     "_enabled": true,
     "_spriteFrame": {
@@ -2525,7 +2497,7 @@
   {
     "__type__": "cc.PrefabInfo",
     "root": {
-      "__id__": 56
+      "__id__": 54
     },
     "asset": {
       "__uuid__": "1cf17b6c-825c-48c0-8e8f-f17b45de7b1a"
@@ -2538,18 +2510,18 @@
     "_name": "S left turn",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 56
+      "__id__": 54
     },
     "_children": [],
     "_active": true,
     "_level": 2,
     "_components": [
       {
-        "__id__": 64
+        "__id__": 62
       }
     ],
     "_prefab": {
-      "__id__": 65
+      "__id__": 63
     },
     "_opacity": 255,
     "_color": {
@@ -2600,7 +2572,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 63
+      "__id__": 61
     },
     "_enabled": true,
     "_spriteFrame": {
@@ -2626,7 +2598,7 @@
   {
     "__type__": "cc.PrefabInfo",
     "root": {
-      "__id__": 56
+      "__id__": 54
     },
     "asset": {
       "__uuid__": "1cf17b6c-825c-48c0-8e8f-f17b45de7b1a"
@@ -2639,18 +2611,18 @@
     "_name": "Straight road",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 56
+      "__id__": 54
     },
     "_children": [],
     "_active": true,
     "_level": 2,
     "_components": [
       {
-        "__id__": 67
+        "__id__": 65
       }
     ],
     "_prefab": {
-      "__id__": 68
+      "__id__": 66
     },
     "_opacity": 255,
     "_color": {
@@ -2701,7 +2673,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 66
+      "__id__": 64
     },
     "_enabled": true,
     "_spriteFrame": {
@@ -2727,7 +2699,7 @@
   {
     "__type__": "cc.PrefabInfo",
     "root": {
-      "__id__": 56
+      "__id__": 54
     },
     "asset": {
       "__uuid__": "1cf17b6c-825c-48c0-8e8f-f17b45de7b1a"
@@ -2740,18 +2712,18 @@
     "_name": "Straight road",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 56
+      "__id__": 54
     },
     "_children": [],
     "_active": true,
     "_level": 2,
     "_components": [
       {
-        "__id__": 70
+        "__id__": 68
       }
     ],
     "_prefab": {
-      "__id__": 71
+      "__id__": 69
     },
     "_opacity": 255,
     "_color": {
@@ -2802,7 +2774,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 69
+      "__id__": 67
     },
     "_enabled": true,
     "_spriteFrame": {
@@ -2828,7 +2800,7 @@
   {
     "__type__": "cc.PrefabInfo",
     "root": {
-      "__id__": 56
+      "__id__": 54
     },
     "asset": {
       "__uuid__": "1cf17b6c-825c-48c0-8e8f-f17b45de7b1a"
@@ -2841,7 +2813,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 56
+      "__id__": 54
     },
     "_enabled": true,
     "_matchManagerRef": {
@@ -2855,7 +2827,7 @@
   {
     "__type__": "cc.PrefabInfo",
     "root": {
-      "__id__": 56
+      "__id__": 54
     },
     "asset": {
       "__uuid__": "1cf17b6c-825c-48c0-8e8f-f17b45de7b1a"
@@ -2868,28 +2840,28 @@
     "_name": "River 3",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 43
+      "__id__": 41
     },
     "_children": [
       {
-        "__id__": 75
+        "__id__": 73
       },
       {
-        "__id__": 78
+        "__id__": 76
       },
       {
-        "__id__": 81
+        "__id__": 79
       }
     ],
     "_active": false,
     "_level": 2,
     "_components": [
       {
-        "__id__": 84
+        "__id__": 82
       }
     ],
     "_prefab": {
-      "__id__": 85
+      "__id__": 83
     },
     "_opacity": 255,
     "_color": {
@@ -2940,18 +2912,18 @@
     "_name": "Straight road",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 74
+      "__id__": 72
     },
     "_children": [],
     "_active": true,
     "_level": 2,
     "_components": [
       {
-        "__id__": 76
+        "__id__": 74
       }
     ],
     "_prefab": {
-      "__id__": 77
+      "__id__": 75
     },
     "_opacity": 255,
     "_color": {
@@ -3002,7 +2974,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 75
+      "__id__": 73
     },
     "_enabled": true,
     "_spriteFrame": {
@@ -3028,7 +3000,7 @@
   {
     "__type__": "cc.PrefabInfo",
     "root": {
-      "__id__": 74
+      "__id__": 72
     },
     "asset": {
       "__uuid__": "8297ccae-5755-480c-b2a1-2c4883d5e84a"
@@ -3041,18 +3013,18 @@
     "_name": "Straight road",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 74
+      "__id__": 72
     },
     "_children": [],
     "_active": true,
     "_level": 2,
     "_components": [
       {
-        "__id__": 79
+        "__id__": 77
       }
     ],
     "_prefab": {
-      "__id__": 80
+      "__id__": 78
     },
     "_opacity": 255,
     "_color": {
@@ -3103,7 +3075,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 78
+      "__id__": 76
     },
     "_enabled": true,
     "_spriteFrame": {
@@ -3129,7 +3101,7 @@
   {
     "__type__": "cc.PrefabInfo",
     "root": {
-      "__id__": 74
+      "__id__": 72
     },
     "asset": {
       "__uuid__": "8297ccae-5755-480c-b2a1-2c4883d5e84a"
@@ -3142,18 +3114,18 @@
     "_name": "Straight road",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 74
+      "__id__": 72
     },
     "_children": [],
     "_active": true,
     "_level": 2,
     "_components": [
       {
-        "__id__": 82
+        "__id__": 80
       }
     ],
     "_prefab": {
-      "__id__": 83
+      "__id__": 81
     },
     "_opacity": 255,
     "_color": {
@@ -3204,7 +3176,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 81
+      "__id__": 79
     },
     "_enabled": true,
     "_spriteFrame": {
@@ -3230,7 +3202,7 @@
   {
     "__type__": "cc.PrefabInfo",
     "root": {
-      "__id__": 74
+      "__id__": 72
     },
     "asset": {
       "__uuid__": "8297ccae-5755-480c-b2a1-2c4883d5e84a"
@@ -3243,7 +3215,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 74
+      "__id__": 72
     },
     "_enabled": true,
     "_matchManagerRef": {
@@ -3257,7 +3229,7 @@
   {
     "__type__": "cc.PrefabInfo",
     "root": {
-      "__id__": 74
+      "__id__": 72
     },
     "asset": {
       "__uuid__": "8297ccae-5755-480c-b2a1-2c4883d5e84a"
@@ -3270,37 +3242,37 @@
     "_name": "River 4",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 43
+      "__id__": 41
     },
     "_children": [
       {
-        "__id__": 87
+        "__id__": 85
       },
       {
-        "__id__": 90
+        "__id__": 88
       },
       {
-        "__id__": 93
+        "__id__": 91
       },
       {
-        "__id__": 96
+        "__id__": 94
       },
       {
-        "__id__": 99
+        "__id__": 97
       },
       {
-        "__id__": 102
+        "__id__": 100
       }
     ],
     "_active": false,
     "_level": 2,
     "_components": [
       {
-        "__id__": 105
+        "__id__": 103
       }
     ],
     "_prefab": {
-      "__id__": 106
+      "__id__": 104
     },
     "_opacity": 255,
     "_color": {
@@ -3351,18 +3323,18 @@
     "_name": "U S turn",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 86
+      "__id__": 84
     },
     "_children": [],
     "_active": true,
     "_level": 2,
     "_components": [
       {
-        "__id__": 88
+        "__id__": 86
       }
     ],
     "_prefab": {
-      "__id__": 89
+      "__id__": 87
     },
     "_opacity": 255,
     "_color": {
@@ -3413,7 +3385,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 87
+      "__id__": 85
     },
     "_enabled": true,
     "_spriteFrame": {
@@ -3439,7 +3411,7 @@
   {
     "__type__": "cc.PrefabInfo",
     "root": {
-      "__id__": 86
+      "__id__": 84
     },
     "asset": {
       "__uuid__": "b967216f-6921-4483-8d1b-3e4f74d031e3"
@@ -3452,18 +3424,18 @@
     "_name": "Straight road",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 86
+      "__id__": 84
     },
     "_children": [],
     "_active": true,
     "_level": 2,
     "_components": [
       {
-        "__id__": 91
+        "__id__": 89
       }
     ],
     "_prefab": {
-      "__id__": 92
+      "__id__": 90
     },
     "_opacity": 255,
     "_color": {
@@ -3514,7 +3486,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 90
+      "__id__": 88
     },
     "_enabled": true,
     "_spriteFrame": {
@@ -3540,7 +3512,7 @@
   {
     "__type__": "cc.PrefabInfo",
     "root": {
-      "__id__": 86
+      "__id__": 84
     },
     "asset": {
       "__uuid__": "b967216f-6921-4483-8d1b-3e4f74d031e3"
@@ -3553,18 +3525,18 @@
     "_name": "Straight road",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 86
+      "__id__": 84
     },
     "_children": [],
     "_active": true,
     "_level": 2,
     "_components": [
       {
-        "__id__": 94
+        "__id__": 92
       }
     ],
     "_prefab": {
-      "__id__": 95
+      "__id__": 93
     },
     "_opacity": 255,
     "_color": {
@@ -3615,7 +3587,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 93
+      "__id__": 91
     },
     "_enabled": true,
     "_spriteFrame": {
@@ -3641,7 +3613,7 @@
   {
     "__type__": "cc.PrefabInfo",
     "root": {
-      "__id__": 86
+      "__id__": 84
     },
     "asset": {
       "__uuid__": "b967216f-6921-4483-8d1b-3e4f74d031e3"
@@ -3654,18 +3626,18 @@
     "_name": "U S turn",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 86
+      "__id__": 84
     },
     "_children": [],
     "_active": true,
     "_level": 2,
     "_components": [
       {
-        "__id__": 97
+        "__id__": 95
       }
     ],
     "_prefab": {
-      "__id__": 98
+      "__id__": 96
     },
     "_opacity": 255,
     "_color": {
@@ -3716,7 +3688,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 96
+      "__id__": 94
     },
     "_enabled": true,
     "_spriteFrame": {
@@ -3742,7 +3714,7 @@
   {
     "__type__": "cc.PrefabInfo",
     "root": {
-      "__id__": 86
+      "__id__": 84
     },
     "asset": {
       "__uuid__": "b967216f-6921-4483-8d1b-3e4f74d031e3"
@@ -3755,18 +3727,18 @@
     "_name": "Straight road",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 86
+      "__id__": 84
     },
     "_children": [],
     "_active": true,
     "_level": 2,
     "_components": [
       {
-        "__id__": 100
+        "__id__": 98
       }
     ],
     "_prefab": {
-      "__id__": 101
+      "__id__": 99
     },
     "_opacity": 255,
     "_color": {
@@ -3817,7 +3789,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 99
+      "__id__": 97
     },
     "_enabled": true,
     "_spriteFrame": {
@@ -3843,7 +3815,7 @@
   {
     "__type__": "cc.PrefabInfo",
     "root": {
-      "__id__": 86
+      "__id__": 84
     },
     "asset": {
       "__uuid__": "b967216f-6921-4483-8d1b-3e4f74d031e3"
@@ -3856,18 +3828,18 @@
     "_name": "Straight road",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 86
+      "__id__": 84
     },
     "_children": [],
     "_active": true,
     "_level": 2,
     "_components": [
       {
-        "__id__": 103
+        "__id__": 101
       }
     ],
     "_prefab": {
-      "__id__": 104
+      "__id__": 102
     },
     "_opacity": 255,
     "_color": {
@@ -3918,7 +3890,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 102
+      "__id__": 100
     },
     "_enabled": true,
     "_spriteFrame": {
@@ -3944,7 +3916,7 @@
   {
     "__type__": "cc.PrefabInfo",
     "root": {
-      "__id__": 86
+      "__id__": 84
     },
     "asset": {
       "__uuid__": "b967216f-6921-4483-8d1b-3e4f74d031e3"
@@ -3957,7 +3929,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 86
+      "__id__": 84
     },
     "_enabled": true,
     "_matchManagerRef": {
@@ -3971,7 +3943,7 @@
   {
     "__type__": "cc.PrefabInfo",
     "root": {
-      "__id__": 86
+      "__id__": 84
     },
     "asset": {
       "__uuid__": "b967216f-6921-4483-8d1b-3e4f74d031e3"
