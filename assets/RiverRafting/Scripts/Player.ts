@@ -11,6 +11,7 @@ export default class Player extends cc.Component {
     MAXTURNSPEED: number = 8;
 
     turnSequence;
+    currentAction: cc.Action = null;
 
     start() {
 
@@ -31,7 +32,7 @@ export default class Player extends cc.Component {
     }
 
     startCounter() {
-        var time = cc.delayTime(0.2);
+        var time = cc.delayTime(0.35);
         this.turnSequence = cc.sequence(time, cc.callFunc(this.countdown, this));
         this.node.runAction(this.turnSequence);
     }
@@ -39,9 +40,31 @@ export default class Player extends cc.Component {
     countdown() {
         this.turnSpeed += 2;
         this.startCounter();
-        if(this.turnSpeed >= this.MAXTURNSPEED) {
+        if (this.turnSpeed >= this.MAXTURNSPEED) {
             this.turnSpeed = this.MAXTURNSPEED;
             this.node.stopAction(this.turnSequence);
         }
+    }
+
+    RotateLeft() {
+        var toLeft = cc.rotateTo(1.5, -30);
+        this.node.runAction(toLeft);
+        this.currentAction = toLeft;
+    }
+
+    RotateRight() {
+        var toRight = cc.rotateTo(1.5, 30);
+        this.node.runAction(toRight);
+        this.currentAction = toRight;
+    }
+
+    RotateToCenter() {
+        var toCenter = cc.rotateTo(1.5, 0);
+        this.node.runAction(toCenter);
+        this.currentAction = toCenter;
+    }
+
+    StopAction(action: cc.Action) {
+        this.node.stopAction(action);
     }
 }
