@@ -45,6 +45,14 @@ export default class MatchManager extends cc.Component {
 
                 nextMap.setPosition(new cc.Vec2(0, this.totalHeight));
                 nextMap.active = true;
+                nextMap.children[0].children[0].active = true;
+                nextMap.children[0].children[1].active = true;
+                nextMap.children[1].children[0].active = true;
+                nextMap.children[1].children[1].active = true;
+                nextMap.children[1].children[2].active = true;
+                nextMap.children[1].children[3].active = true;
+                nextMap.children[2].children[0].active = true;
+                nextMap.children[2].children[1].active = true;
                 break;
             case 2:
                 this.totalHeight = this.totalHeight + height;
@@ -80,7 +88,8 @@ export default class MatchManager extends cc.Component {
     }
 
     getRandomNumber() {
-        var rand = Math.floor(Math.random() * 3) + 1;
-        return rand;
+        // var rand = Math.floor(Math.random() * 3) + 1;
+        // return rand;
+        return 1;
     }
 }

@@ -13,6 +13,13 @@
     [
       true,
       false,
+      false,
+      true
+    ],
+    [
+      false,
+      false,
+      true,
       false
     ]
   ],
@@ -34,7 +41,8 @@
   "group-list": [
     "default",
     "UI",
-    "Player"
+    "Player",
+    "Bound"
   ],
   "last-module-event-record-time": 0,
   "simulator-orientation": false,
