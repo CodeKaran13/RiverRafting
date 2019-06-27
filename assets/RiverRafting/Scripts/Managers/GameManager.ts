@@ -1,9 +1,11 @@
 const { ccclass, property } = cc._decorator;
 
 @ccclass
-export default class GameManager extends cc.Component {
+export default class GameManager extends cc.Component
+{
 
-    onLoad() {
+    onLoad()
+    {
         cc.director.getPhysicsManager().enabled = true;
         cc.director.getCollisionManager().enabled = true;
         cc.director.getCollisionManager().enabledDebugDraw = true;
@@ -16,7 +18,8 @@ export default class GameManager extends cc.Component {
             cc.PhysicsManager.DrawBits.e_shapeBit;
     }
 
-    start() {
+    start()
+    {
 
     }
 

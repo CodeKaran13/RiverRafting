@@ -3,7 +3,8 @@ import MatchManager from "../Managers/MatchManager";
 const { ccclass, property } = cc._decorator;
 
 @ccclass
-export default class RiverMap extends cc.Component {
+export default class RiverMap extends cc.Component
+{
 
     @property({
         type: MatchManager,
@@ -19,19 +20,23 @@ export default class RiverMap extends cc.Component {
     })
     player: cc.Node = null;
 
-    onLoad() {
+    onLoad()
+    {
         this._matchManagerRef = cc.find('Script Collection/Match Manager').getComponent('MatchManager');
         this.player = cc.find('Player');
     }
 
-    start() {
+    start()
+    {
 
     }
 
-    onCollisionEnter(other, self) {
+    onCollisionEnter(other, self)
+    {
         // console.log('collision enter');
-        if (other.node.name == 'Player') {
-            this._matchManagerRef.spawnNextRiverMap(this.node.height);
+        if (other.node.name == 'Player')
+        {
+            this._matchManagerRef.spawnNextRiverMap(this.node.height + (0.5 * this.node.height));
             // this.destroy();
             // this._matchManagerRef._poolingSystem.addRiverMapToPool(this.node);
         }

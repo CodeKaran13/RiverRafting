@@ -3,7 +3,8 @@ import Player from "../Player";
 const { ccclass, property } = cc._decorator;
 
 @ccclass
-export default class InputHandler extends cc.Component {
+export default class InputHandler extends cc.Component
+{
 
     @property(cc.Node)
     player: cc.Node = null;
@@ -15,17 +16,21 @@ export default class InputHandler extends cc.Component {
     isTouchActive: boolean = false;
 
 
-    onLoad() {
+    onLoad()
+    {
         this._PlayerRef = this.player.getComponent('Player');
 
-        this.node.on(cc.Node.EventType.TOUCH_START, (event: cc.Event.EventTouch) => {
+        this.node.on(cc.Node.EventType.TOUCH_START, (event: cc.Event.EventTouch) =>
+        {
             this.isTouchActive = true;
-            if (this.xDir < 0) {
+            if (this.xDir < 0)
+            {
                 this._PlayerRef.ApplyBrakeSequence();
                 this._PlayerRef.StopAction(this._PlayerRef.currentAction);
                 this._PlayerRef.RotateLeft();
             }
-            else if (this.xDir > 0) {
+            else if (this.xDir > 0)
+            {
                 this._PlayerRef.ApplyBrakeSequence();
                 this._PlayerRef.StopAction(this._PlayerRef.currentAction);
                 this._PlayerRef.RotateRight();
@@ -34,7 +39,8 @@ export default class InputHandler extends cc.Component {
             this._PlayerRef.startCounter();
         }, this.node);
 
-        this.node.on(cc.Node.EventType.TOUCH_END, (event: cc.Event.EventTouch) => {
+        this.node.on(cc.Node.EventType.TOUCH_END, (event: cc.Event.EventTouch) =>
+        {
             this.isTouchActive = false;
             this._PlayerRef.StopAction(this._PlayerRef.currentAction);
             this._PlayerRef.resetMovementSpeed();
@@ -44,19 +50,24 @@ export default class InputHandler extends cc.Component {
         }, this.node);
     }
 
-    start() {
+    start()
+    {
 
     }
 
-    update(dt) {
-        if (this.isTouchActive) {
+    update(dt)
+    {
+        if (this.isTouchActive)
+        {
             this.onKeyDown();
         }
-        else {
+        else
+        {
         }
     }
 
-    onKeyDown() {
+    onKeyDown()
+    {
         this.player.setPosition(new cc.Vec2(this.player.position.x + (this.xDir * this._PlayerRef.turnSpeed), this.player.position.y));
 
         // if (this.xDir < 0) {
@@ -93,7 +104,8 @@ export default class InputHandler extends cc.Component {
         // }
     }
 
-    onKeyUp() {
+    onKeyUp()
+    {
         // this.player.rotation = cc.misc.lerp(this.player.rotation, 0, 0.9);
     }
 }

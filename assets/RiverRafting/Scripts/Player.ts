@@ -1,7 +1,8 @@
 const { ccclass, property } = cc._decorator;
 
 @ccclass
-export default class Player extends cc.Component {
+export default class Player extends cc.Component
+{
     @property
     movementSpeed: number = 0;
 
@@ -17,95 +18,113 @@ export default class Player extends cc.Component {
     accelerateSequence;
     currentAction: cc.Action = null;
 
-    start() {
+    start()
+    {
         this.movementSpeed = 8;
     }
 
-    update(dt) {
+    update(dt)
+    {
         this.startAcceleration(dt);
         // console.log('turn speed: ' + this.turnSpeed);
         // console.log('movement speed: ' + this.movementSpeed);
     }
 
-    startAcceleration(dt) {
+    startAcceleration(dt)
+    {
         this.node.setPosition(new cc.Vec2(this.node.position.x, this.node.position.y + this.movementSpeed));
     }
 
-    AccelerationSequence() {
+    AccelerationSequence()
+    {
         this.startAccelerating();
     }
 
-    ApplyBrakeSequence() {
+    ApplyBrakeSequence()
+    {
         this.startApplyingBrakes();
     }
 
     // Increase turn speed slowly.
-    restartCounter() {
+    restartCounter()
+    {
         this.turnSpeed = 0;
         this.node.stopAction(this.turnSequence);
     }
 
-    startCounter() {
+    startCounter()
+    {
         var time = cc.delayTime(0.2);
         this.turnSequence = cc.sequence(time, cc.callFunc(this.countdown, this));
         this.node.runAction(this.turnSequence);
     }
 
-    countdown() {
+    countdown()
+    {
         this.turnSpeed += 2;
         this.startCounter();
-        if (this.turnSpeed >= this.MAXTURNSPEED) {
+        if (this.turnSpeed >= this.MAXTURNSPEED)
+        {
             this.turnSpeed = this.MAXTURNSPEED;
             this.node.stopAction(this.turnSequence);
         }
     }
 
-    RotateLeft() {
+    RotateLeft()
+    {
         var toLeft = cc.rotateTo(1, -45);
         this.node.runAction(toLeft);
         this.currentAction = toLeft;
     }
 
-    RotateRight() {
+    RotateRight()
+    {
         var toRight = cc.rotateTo(1, 45);
         this.node.runAction(toRight);
         this.currentAction = toRight;
     }
 
-    RotateToCenter() {
+    RotateToCenter()
+    {
         var toCenter = cc.rotateTo(1.5, 0);
         this.node.runAction(toCenter);
         this.currentAction = toCenter;
     }
 
-    StartAction(action: cc.Action) {
+    StartAction(action: cc.Action)
+    {
         this.node.runAction(action);
     }
 
-    StopAction(action: cc.Action) {
+    StopAction(action: cc.Action)
+    {
         this.node.stopAction(action);
     }
 
     // When the player is turning, lower the movement speed/apply brakes.
-    resetMovementSpeed() {
+    resetMovementSpeed()
+    {
         // console.log('reset movement speed');
         this.node.stopAction(this.brakeSequence);
         this.node.stopAction(this.brakeSequence);
         this.startAccelerating();
     }
 
-    startApplyingBrakes() {
+    startApplyingBrakes()
+    {
         // console.log('start applying brakes');
         var time = cc.delayTime(0.2);
         this.brakeSequence = cc.sequence(time, cc.callFunc(this.applyBrake, this));
         this.node.runAction(this.brakeSequence.repeatForever());
     }
 
-    applyBrake() {
+    applyBrake()
+    {
         // console.log('apply brakes');
         // console.log('movement speed: ' + this.movementSpeed);
         this.movementSpeed -= 1;
-        if (this.movementSpeed <= this.MINMOVEMENTSPEED) {
+        if (this.movementSpeed <= this.MINMOVEMENTSPEED)
+        {
             // console.log('min movement speed');
             this.movementSpeed = this.MINMOVEMENTSPEED;
             this.node.stopAction(this.brakeSequence);
@@ -113,23 +132,27 @@ export default class Player extends cc.Component {
     }
 
     // Start acceleration after brakes are applied.
-    startAccelerating() {
+    startAccelerating()
+    {
         // console.log('start accelerating');
         var time = cc.delayTime(0.1);
         this.accelerateSequence = cc.sequence(time, cc.callFunc(this.accelerate, this));
         this.node.runAction(this.accelerateSequence.repeatForever());
     }
 
-    accelerate() {
+    accelerate()
+    {
         this.movementSpeed += 1;
         // console.log('movement speed: ' + this.movementSpeed);
-        if (this.movementSpeed >= this.MAXMOVEMENTSPEED) {
+        if (this.movementSpeed >= this.MAXMOVEMENTSPEED)
+        {
             this.movementSpeed = this.MAXMOVEMENTSPEED;
             this.node.stopAction(this.accelerateSequence);
         }
     }
 
-    onBeginContact(contact, selfCollider, otherCollider) {
+    onBeginContact(contact, selfCollider, otherCollider)
+    {
         console.log('collided');
     }
 }

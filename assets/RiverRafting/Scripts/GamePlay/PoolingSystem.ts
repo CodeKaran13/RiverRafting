@@ -1,7 +1,8 @@
 const { ccclass, property } = cc._decorator;
 
 @ccclass
-export default class PoolingSystem extends cc.Component {
+export default class PoolingSystem extends cc.Component
+{
 
     @property({
         type: cc.Prefab,
@@ -14,13 +15,15 @@ export default class PoolingSystem extends cc.Component {
 
     // onLoad () {}
 
-    start() {
+    start()
+    {
 
     }
 
     // update (dt) {}
 
-    addRiverMapToPool(Type: cc.Node) {
+    addRiverMapToPool(Type: cc.Node)
+    {
 
         Type.destroy();
 
@@ -33,8 +36,10 @@ export default class PoolingSystem extends cc.Component {
         // }
     }
 
-    getRiverMapfromPool(Type: number) {
-        switch (Type) {
+    getRiverMapfromPool(Type: number)
+    {
+        switch (Type)
+        {
 
             case 1:
                 var ref = cc.instantiate(this.RiverMapsPrefabs[0]);

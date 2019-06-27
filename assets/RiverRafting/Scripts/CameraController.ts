@@ -1,7 +1,8 @@
 const { ccclass, property } = cc._decorator;
 
 @ccclass
-export default class CameraController extends cc.Component {
+export default class CameraController extends cc.Component
+{
 
     @property
     smoothFollow: boolean = true;
@@ -24,17 +25,21 @@ export default class CameraController extends cc.Component {
 
     startFollow = true;
 
-    onLoad() {
+    onLoad()
+    {
 
     }
 
-    start() {
+    start()
+    {
 
     }
 
-    update(dt) {
+    update(dt)
+    {
 
-        if (this.startFollow) {
+        if (this.startFollow)
+        {
             this.node.position = new cc.Vec2(this.target.getPosition().x + this.followOffsetX, this.target.getPosition().y + this.followOffsetY);
         }
     }
