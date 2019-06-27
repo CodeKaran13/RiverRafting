@@ -36,7 +36,7 @@ export default class RiverMap extends cc.Component
         // console.log('collision enter');
         if (other.node.name == 'Player')
         {
-            this._matchManagerRef.spawnNextRiverMap(this.node.height + (0.5 * this.node.height));
+            this._matchManagerRef.spawnNextRiverMap(this.node.height + (0.8 * this.node.height));
             // this.destroy();
             // this._matchManagerRef._poolingSystem.addRiverMapToPool(this.node);
         }

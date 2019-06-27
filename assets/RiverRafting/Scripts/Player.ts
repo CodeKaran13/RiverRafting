@@ -75,6 +75,8 @@ export default class Player extends cc.Component
         var toLeft = cc.rotateTo(1, -45);
         this.node.runAction(toLeft);
         this.currentAction = toLeft;
+        this.node.children[4].getComponent(cc.Animation).play();
+        this.node.children[3].getComponent(cc.Animation).stop();
     }
 
     RotateRight()
@@ -82,6 +84,8 @@ export default class Player extends cc.Component
         var toRight = cc.rotateTo(1, 45);
         this.node.runAction(toRight);
         this.currentAction = toRight;
+        this.node.children[3].getComponent(cc.Animation).play();
+        this.node.children[4].getComponent(cc.Animation).stop();
     }
 
     RotateToCenter()
@@ -89,6 +93,8 @@ export default class Player extends cc.Component
         var toCenter = cc.rotateTo(1.5, 0);
         this.node.runAction(toCenter);
         this.currentAction = toCenter;
+        this.node.children[3].getComponent(cc.Animation).play();
+        this.node.children[4].getComponent(cc.Animation).play();
     }
 
     StartAction(action: cc.Action)
