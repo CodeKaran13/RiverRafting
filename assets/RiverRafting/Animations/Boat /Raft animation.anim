@@ -1,0 +1,92 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "Raft animation",
+  "_objFlags": 0,
+  "_native": "",
+  "_duration": 2.4166666666666665,
+  "sample": 60,
+  "speed": 2,
+  "wrapMode": "2",
+  "curveData": {
+    "paths": {
+      "raft ": {
+        "props": {
+          "rotation": [
+            {
+              "frame": 0,
+              "value": 16,
+              "curve": "cubicInOut"
+            },
+            {
+              "frame": 1.25,
+              "value": -13,
+              "curve": "cubicInOut"
+            },
+            {
+              "frame": 2.4166666666666665,
+              "value": 16
+            }
+          ],
+          "position": [
+            {
+              "frame": 0,
+              "value": [
+                2.1,
+                -47
+              ]
+            }
+          ],
+          "anchorX": [
+            {
+              "frame": 0,
+              "value": 1
+            }
+          ],
+          "anchorY": [
+            {
+              "frame": 0,
+              "value": 0.5
+            }
+          ]
+        }
+      },
+      "raft /raft end": {
+        "props": {
+          "anchorX": [
+            {
+              "frame": 0,
+              "value": 1
+            }
+          ],
+          "opacity": [
+            {
+              "frame": 0,
+              "value": 255
+            },
+            {
+              "frame": 0.25,
+              "value": 255
+            },
+            {
+              "frame": 0.3333333333333333,
+              "value": 200
+            },
+            {
+              "frame": 0.5,
+              "value": 150
+            },
+            {
+              "frame": 1,
+              "value": 150
+            },
+            {
+              "frame": 1.25,
+              "value": 255
+            }
+          ]
+        }
+      }
+    }
+  },
+  "events": []
+}
