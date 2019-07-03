@@ -20,6 +20,8 @@ export default class RiverMap extends cc.Component
     })
     player: cc.Node = null;
 
+    CheckPlayerLocation: boolean = false;
+
     onLoad()
     {
         this._matchManagerRef = cc.find('Script Collection/Match Manager').getComponent('MatchManager');
@@ -31,14 +33,25 @@ export default class RiverMap extends cc.Component
 
     }
 
+    update(dt)
+    {
+        if (this.CheckPlayerLocation)
+        {
+            if (this.player.getPosition().y > this._matchManagerRef.totalHeight)
+            {
+                this._matchManagerRef._poolingSystem.addRiverMapToPool(this.node);
+                this.CheckPlayerLocation = false;
+            }
+        }
+    }
+
     onCollisionEnter(other, self)
     {
         // console.log('collision enter');
         if (other.node.name == 'Player')
         {
             this._matchManagerRef.spawnNextRiverMap(this.node.height + (0.8 * this.node.height));
-            // this.destroy();
-            // this._matchManagerRef._poolingSystem.addRiverMapToPool(this.node);
+            this.CheckPlayerLocation = true;
         }
     }
 }
