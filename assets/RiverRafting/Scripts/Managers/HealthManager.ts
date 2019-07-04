@@ -23,7 +23,8 @@ export default class HealthManager extends cc.Component
 
     start()
     {
-        this.currentHealth = this.MaxHealth;
+        // this.currentHealth = this.MaxHealth;
+        this.updateHealthLabel();
     }
 
     takeDamage(damage: number)

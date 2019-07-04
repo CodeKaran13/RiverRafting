@@ -20,7 +20,15 @@ export default class RiverMap extends cc.Component
     })
     player: cc.Node = null;
 
+    @property({
+        type: cc.Node,
+        visible: true,
+        serializable: true
+    })
+    SpawnLocations: cc.Node[] = [];
+
     CheckPlayerLocation: boolean = false;
+    IsActive: boolean = false;
 
     onLoad()
     {

@@ -1,6 +1,8 @@
-import PoolingSystem from "../GamePlay/PoolingSystem";
+import PoolingSystem from "../Pools/PoolingSystem";
 import TimeManager from "./TimeManager";
 import GameManager from "./GameManager";
+import ScoreManager from "./ScoreManager";
+import UIManager from "./UIManager";
 
 const { ccclass, property } = cc._decorator;
 
@@ -32,9 +34,23 @@ export default class MatchManager extends cc.Component
     })
     _gameManagerRef: GameManager = null;
 
+    @property({
+        type: ScoreManager,
+        visible: true,
+        serializable: true
+    })
+    _scoreManagerRef: ScoreManager = null;
+
+    @property({
+        type: UIManager,
+        visible: true,
+        serializable: true
+    })
+    _UIManagerRef: UIManager = null;
+
     totalHeight: number = 0;
 
-    onLoad () 
+    onLoad() 
     {
         this._timeManagerRef._matchManagerRef = this;
         this._gameManagerRef._matchManagerRef = this;
