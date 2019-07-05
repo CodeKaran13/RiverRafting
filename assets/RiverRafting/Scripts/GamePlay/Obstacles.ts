@@ -1,3 +1,5 @@
+import ObstaclePool from "../Pools/ObstaclePool";
+
 const {ccclass, property} = cc._decorator;
 
 export enum ObstacleType
@@ -13,6 +15,13 @@ export enum ObstacleType
 export default class Obstacles extends cc.Component {
 
     myType: ObstacleType = null;
+
+    @property({
+        type: ObstaclePool,
+        visible: true,
+        serializable: true
+    })
+    _ObstaclePoolRef: ObstaclePool = null;
 
     // onLoad () {}
 

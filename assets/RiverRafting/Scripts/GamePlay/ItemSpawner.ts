@@ -1,4 +1,5 @@
 import CollectiblesPool from "../Pools/CollectiblesPool";
+import ObstaclePool from "../Pools/ObstaclePool";
 
 const { ccclass, property } = cc._decorator;
 
@@ -17,6 +18,13 @@ export default class ItemSpawner extends cc.Component
         serializable: true
     })
     _CollectiblePoolRef: CollectiblesPool = null;
+
+    @property({
+        type: ObstaclePool,
+        visible: true,
+        serializable: true
+    })
+    _ObstaclePoolRef: ObstaclePool = null;
 
     currentTimeHealth: number = 0;
     currentTimeCoin: number = 0;
@@ -79,7 +87,18 @@ export default class ItemSpawner extends cc.Component
 
     countdownCoin()
     {
-        
+        if (this.currentTimeCoin > 0)
+        {
+            this.currentTimeCoin -= 1;
+        }
+        else
+        {
+            // trigger new spawn for item
+            this.node.stopAction(this.sequenceCoin);
+            this.SpawnCoinPack();
+            this.restartTimerForPack('coinpack');
+            this.startTimerForPack('coinpack');
+        }
     }
 
     SpawnHealthPack()
@@ -87,7 +106,6 @@ export default class ItemSpawner extends cc.Component
         var healthpack = this._CollectiblePoolRef.getCollectibleFromPool('healthpack');
 
         var parent = this.getRandomSpawnPos();
-        // console.log('spawnposition' + pos);
 
         if (healthpack.parent != null)
         {
@@ -99,7 +117,23 @@ export default class ItemSpawner extends cc.Component
         healthpack.setPosition(cc.Vec2.ZERO);
 
         healthpack.active = true;
-        // console.log('healthpackposition' + healthpack.position);
+    }
+
+    SpawnCoinPack()
+    {
+        var coinpack = this._CollectiblePoolRef.getCollectibleFromPool('coinpack');
+
+        var parent = this.getRandomSpawnPos();
+
+        if (coinpack.parent != null)
+        {
+            coinpack.parent.removeChild(coinpack);
+        }
+        parent.active = true;
+        parent.addChild(coinpack);
+        coinpack.setPosition(cc.Vec2.ZERO);
+
+        coinpack.active = true;
     }
 
     getRandomSpawnPos(): cc.Node
