@@ -81,7 +81,7 @@ export default class MatchManager extends cc.Component
                 this.totalHeight = this.totalHeight + height;
                 var nextMap = this._poolingSystem.getRiverMapfromPool(1);
 
-                this.LevelPrefabs.addChild(nextMap, 0, nextMap.name);
+                this.LevelPrefabs.addChild(nextMap);
                 nextMap.setPosition(cc.Vec2.ZERO);
 
                 nextMap.setPosition(new cc.Vec2(0, this.totalHeight));
@@ -89,10 +89,14 @@ export default class MatchManager extends cc.Component
 
                 for (let i = 0; i < nextMap.childrenCount; i++)
                 {
-                    for (let j = 0; j < nextMap.children[i].childrenCount; j++)
+                    // for (let j = 0; j < nextMap.children[i].childrenCount; j++)
+                    // {
+                    if (nextMap.children[i].childrenCount > 0)
                     {
-                        nextMap.children[i].children[j].active = true;
+                        nextMap.children[i].children[0].active = true;
+                        nextMap.children[i].children[1].active = true;
                     }
+                    // }
                 }
 
                 break;
@@ -157,9 +161,9 @@ export default class MatchManager extends cc.Component
     getRandomNumber()
     {
         // will return 1,2,3
-        var rand = Math.floor(Math.random() * 3) + 1;
+        // var rand = Math.floor(Math.random() * 3) + 1;
         // console.log('random number: ' + rand);
-        return rand;
-        // return 1;
+        // return rand;
+        return 1;
     }
 }

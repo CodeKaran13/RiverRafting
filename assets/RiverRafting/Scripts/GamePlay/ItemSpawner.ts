@@ -8,6 +8,9 @@ export default class ItemSpawner extends cc.Component
     @property
     healthPackSpawnTime: number = 30;
 
+    @property
+    coinPackSpawnTime: number = 15;
+
     @property({
         type: CollectiblesPool,
         visible: true,
@@ -15,8 +18,10 @@ export default class ItemSpawner extends cc.Component
     })
     _CollectiblePoolRef: CollectiblesPool = null;
 
-    currentime: number = 0;
-    sequence: cc.ActionInterval;
+    currentTimeHealth: number = 0;
+    currentTimeCoin: number = 0;
+    sequenceHealth: cc.ActionInterval;
+    sequenceCoin: cc.ActionInterval;
 
     SpawnPos: cc.Node[] = [];
 
@@ -24,36 +29,57 @@ export default class ItemSpawner extends cc.Component
 
     start()
     {
-        this.restartTimer();
-        this.startTimer();
+        this.restartTimerForPack('healthpack');
+        this.startTimerForPack('healthpack');
     }
 
-    restartTimer()
+    restartTimerForPack(name: string)
     {
-        this.currentime = this.healthPackSpawnTime;
-    }
-
-    startTimer()
-    {
-        var time = cc.delayTime(1);
-        this.sequence = cc.sequence(time, cc.callFunc(this.countdown, this));
-        this.node.runAction(this.sequence.repeatForever());
-    }
-
-    countdown()
-    {
-        if (this.currentime > 0)
+        if (name == 'healthpack')
         {
-            this.currentime -= 1;
+            this.currentTimeHealth = this.healthPackSpawnTime;
+        }
+        else if (name == 'coinpack')
+        {
+            this.currentTimeCoin = this.coinPackSpawnTime;
+        }
+    }
+
+    startTimerForPack(packName: string)
+    {
+        if (packName == 'healthpack')
+        {
+            var time = cc.delayTime(1);
+            this.sequenceHealth = cc.sequence(time, cc.callFunc(this.countdownHealth, this));
+            this.node.runAction(this.sequenceHealth.repeatForever());
+        }
+        else if (packName == 'coinpack')
+        {
+            var time = cc.delayTime(1);
+            this.sequenceCoin = cc.sequence(time, cc.callFunc(this.countdownCoin, this));
+            this.node.runAction(this.sequenceCoin.repeatForever());
+        }
+    }
+
+    countdownHealth()
+    {
+        if (this.currentTimeHealth > 0)
+        {
+            this.currentTimeHealth -= 1;
         }
         else
         {
             //trigger new spawn for item
-            this.node.stopAction(this.sequence);
+            this.node.stopAction(this.sequenceHealth);
             this.SpawnHealthPack();
-            this.restartTimer();
-            this.startTimer();
+            this.restartTimerForPack('healthpack');
+            this.startTimerForPack('healthpack');
         }
+    }
+
+    countdownCoin()
+    {
+        
     }
 
     SpawnHealthPack()

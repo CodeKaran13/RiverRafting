@@ -9,9 +9,9 @@ export default class Player extends cc.Component
     @property
     turnSpeed: number = 0;
 
-    MAXTURNSPEED: number = 8;
+    MAXTURNSPEED: number = 5;//8
     MINMOVEMENTSPEED: number = 4;
-    MAXMOVEMENTSPEED: number = 12;
+    MAXMOVEMENTSPEED: number = 5;//12
 
     turnSequence: cc.Action = null;
     brakeSequence;
