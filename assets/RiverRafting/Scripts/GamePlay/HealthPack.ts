@@ -1,5 +1,4 @@
 import Collectibles, { CollectibleType } from "./Collectibles";
-import CollectiblesPool from "../Pools/CollectiblesPool";
 
 const { ccclass, property } = cc._decorator;
 
@@ -10,12 +9,6 @@ export default class HealthPack extends Collectibles
     health: number = 20;
 
     myPos: any;
-    // @property({
-    //     type: CollectiblesPool,
-    //     visible: true,
-    //     serializable: true
-    // })
-    // _CollectiblePoolRef: CollectiblesPool = null;
 
     onLoad() 
     {
@@ -41,7 +34,7 @@ export default class HealthPack extends Collectibles
     {
         if (this.node.active)
         {
-            if (cc.find('Player').position.y > this.myPos)
+            if (cc.find('Player').position.y - 500 > this.myPos)
             {
                 console.log('player is above me');
                 this._CollectiblePoolRef.addCollectibleBackToPool(this.node);

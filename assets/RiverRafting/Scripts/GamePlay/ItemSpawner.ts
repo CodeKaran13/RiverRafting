@@ -37,8 +37,13 @@ export default class ItemSpawner extends cc.Component
 
     start()
     {
+        //spawn health packs
         this.restartTimerForPack('healthpack');
         this.startTimerForPack('healthpack');
+
+        //spawn coin packs
+        this.restartTimerForPack('coinpack');
+        this.startTimerForPack('coinpack');
     }
 
     restartTimerForPack(name: string)

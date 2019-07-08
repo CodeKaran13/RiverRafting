@@ -20,10 +20,4 @@ export default class Collectibles extends cc.Component
     })
     _CollectiblePoolRef: CollectiblesPool = null;
 
-    // @property(cc.Label)
-    // label: cc.Label = null;
-
-    // @property
-    // text: string = 'hello';
-
 }

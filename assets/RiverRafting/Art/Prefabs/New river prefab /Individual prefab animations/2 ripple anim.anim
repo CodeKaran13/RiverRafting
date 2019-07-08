@@ -1,0 +1,406 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "2 ripple anim",
+  "_objFlags": 0,
+  "_native": "",
+  "_duration": 1,
+  "sample": 60,
+  "speed": 0.25,
+  "wrapMode": "2",
+  "curveData": {
+    "paths": {
+      "ripple 6": {
+        "props": {
+          "position": [
+            {
+              "frame": 0,
+              "value": [
+                -92,
+                -214
+              ]
+            },
+            {
+              "frame": 1,
+              "value": [
+                -94,
+                -128
+              ]
+            }
+          ],
+          "opacity": [
+            {
+              "frame": 0,
+              "value": 0
+            },
+            {
+              "frame": 0.16666666666666666,
+              "value": 255
+            },
+            {
+              "frame": 0.8333333333333334,
+              "value": 255
+            },
+            {
+              "frame": 1,
+              "value": 0
+            }
+          ],
+          "rotation": [
+            {
+              "frame": 0,
+              "value": 0
+            }
+          ]
+        }
+      },
+      "ripple 7": {
+        "props": {
+          "position": [
+            {
+              "frame": 0,
+              "value": [
+                21,
+                -218
+              ],
+              "motionPath": []
+            },
+            {
+              "frame": 1,
+              "value": [
+                15,
+                -122
+              ],
+              "motionPath": []
+            }
+          ],
+          "opacity": [
+            {
+              "frame": 0,
+              "value": 0
+            },
+            {
+              "frame": 0.16666666666666666,
+              "value": 255
+            },
+            {
+              "frame": 0.8333333333333334,
+              "value": 255
+            },
+            {
+              "frame": 1,
+              "value": 0
+            }
+          ],
+          "rotation": [
+            {
+              "frame": 0,
+              "value": 0
+            },
+            {
+              "frame": 1,
+              "value": 0
+            }
+          ]
+        }
+      },
+      "ripple 8": {
+        "props": {
+          "position": [
+            {
+              "frame": 0,
+              "value": [
+                -301,
+                -124
+              ],
+              "motionPath": []
+            },
+            {
+              "frame": 1,
+              "value": [
+                -299,
+                32
+              ],
+              "motionPath": []
+            }
+          ],
+          "rotation": [
+            {
+              "frame": 0,
+              "value": 0
+            },
+            {
+              "frame": 1,
+              "value": 0
+            }
+          ]
+        }
+      },
+      "ripple 9": {
+        "props": {
+          "position": [
+            {
+              "frame": 0,
+              "value": [
+                -179,
+                6
+              ],
+              "motionPath": []
+            },
+            {
+              "frame": 1,
+              "value": [
+                -179.6,
+                91.9
+              ],
+              "motionPath": []
+            }
+          ],
+          "rotation": [
+            {
+              "frame": 0,
+              "value": 0
+            }
+          ],
+          "opacity": [
+            {
+              "frame": 0,
+              "value": 0
+            },
+            {
+              "frame": 0.3333333333333333,
+              "value": 255
+            },
+            {
+              "frame": 0.8333333333333334,
+              "value": 255
+            },
+            {
+              "frame": 1,
+              "value": 0
+            }
+          ]
+        }
+      },
+      "ripple 10": {
+        "props": {
+          "position": [
+            {
+              "frame": 0,
+              "value": [
+                -237,
+                -74
+              ],
+              "motionPath": []
+            },
+            {
+              "frame": 1,
+              "value": [
+                -236,
+                51
+              ]
+            }
+          ],
+          "rotation": [
+            {
+              "frame": 0,
+              "value": 0
+            },
+            {
+              "frame": 1,
+              "value": 0
+            }
+          ],
+          "opacity": [
+            {
+              "frame": 0.16666666666666666,
+              "value": 0
+            },
+            {
+              "frame": 0.3333333333333333,
+              "value": 255
+            },
+            {
+              "frame": 0.6666666666666666,
+              "value": 255
+            },
+            {
+              "frame": 0.8333333333333334,
+              "value": 0
+            }
+          ]
+        }
+      },
+      "ripple 11": {
+        "props": {
+          "position": [
+            {
+              "frame": 0,
+              "value": [
+                -258,
+                -131
+              ]
+            },
+            {
+              "frame": 0.5,
+              "value": [
+                -269,
+                -131
+              ]
+            },
+            {
+              "frame": 1,
+              "value": [
+                -272,
+                -39
+              ],
+              "motionPath": []
+            }
+          ],
+          "rotation": [
+            {
+              "frame": 0.5,
+              "value": 0
+            },
+            {
+              "frame": 1,
+              "value": 0
+            }
+          ],
+          "opacity": [
+            {
+              "frame": 0.5,
+              "value": 0
+            },
+            {
+              "frame": 0.6666666666666666,
+              "value": 255
+            }
+          ]
+        }
+      },
+      "ripple 12": {
+        "props": {
+          "position": [
+            {
+              "frame": 0.3333333333333333,
+              "value": [
+                -199,
+                70
+              ]
+            },
+            {
+              "frame": 1,
+              "value": [
+                -193,
+                146
+              ]
+            }
+          ],
+          "opacity": [
+            {
+              "frame": 0.3333333333333333,
+              "value": 0
+            },
+            {
+              "frame": 0.5,
+              "value": 255
+            },
+            {
+              "frame": 0.9166666666666666,
+              "value": 255
+            },
+            {
+              "frame": 1,
+              "value": 0
+            }
+          ]
+        }
+      },
+      "ripple 13": {
+        "props": {
+          "position": [
+            {
+              "frame": 0,
+              "value": [
+                -113,
+                30
+              ],
+              "motionPath": []
+            },
+            {
+              "frame": 1,
+              "value": [
+                -113,
+                151
+              ],
+              "motionPath": []
+            }
+          ],
+          "rotation": [
+            {
+              "frame": 0,
+              "value": 0
+            }
+          ],
+          "opacity": [
+            {
+              "frame": 0.3333333333333333,
+              "value": 0
+            },
+            {
+              "frame": 0.5,
+              "value": 255
+            },
+            {
+              "frame": 0.9166666666666666,
+              "value": 255
+            },
+            {
+              "frame": 1,
+              "value": 0
+            }
+          ]
+        }
+      },
+      "ripple 14": {
+        "props": {
+          "position": [
+            {
+              "frame": 0,
+              "value": [
+                -25,
+                17
+              ],
+              "motionPath": []
+            },
+            {
+              "frame": 1,
+              "value": [
+                -26,
+                152
+              ],
+              "motionPath": []
+            }
+          ],
+          "rotation": [
+            {
+              "frame": 0,
+              "value": 0
+            }
+          ],
+          "opacity": [
+            {
+              "frame": 0.5,
+              "value": 255
+            },
+            {
+              "frame": 0.8333333333333334,
+              "value": 0
+            }
+          ]
+        }
+      }
+    }
+  },
+  "events": []
+}

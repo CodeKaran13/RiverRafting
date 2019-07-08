@@ -11,7 +11,7 @@ export default class Player extends cc.Component
 
     MAXTURNSPEED: number = 5;//8
     MINMOVEMENTSPEED: number = 4;
-    MAXMOVEMENTSPEED: number = 5;//12
+    MAXMOVEMENTSPEED: number = 6;//12
 
     turnSequence: cc.Action = null;
     brakeSequence;
@@ -20,7 +20,8 @@ export default class Player extends cc.Component
 
     start()
     {
-        this.movementSpeed = 8;
+        // this.movementSpeed = 6;
+        this.AccelerationSequence();
     }
 
     update(dt)
