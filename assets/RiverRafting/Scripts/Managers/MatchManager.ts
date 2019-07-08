@@ -3,6 +3,7 @@ import TimeManager from "./TimeManager";
 import GameManager from "./GameManager";
 import ScoreManager from "./ScoreManager";
 import UIManager from "./UIManager";
+import ObstacleSpawner from "../GamePlay/ObstacleSpawner";
 
 const { ccclass, property } = cc._decorator;
 
@@ -48,12 +49,18 @@ export default class MatchManager extends cc.Component
     })
     _UIManagerRef: UIManager = null;
 
+    _obstacleSpawner: ObstacleSpawner = null;
+
     totalHeight: number = 0;
+
+    @property
+    totalObstacleToSpawnOnPrefab: number = 5;
 
     onLoad() 
     {
         this._timeManagerRef._matchManagerRef = this;
         this._gameManagerRef._matchManagerRef = this;
+        this._obstacleSpawner = this.node.getComponent(ObstacleSpawner);
     }
 
     start()
@@ -98,6 +105,8 @@ export default class MatchManager extends cc.Component
                     }
                     // }
                 }
+
+                this._obstacleSpawner.SpawnDocks();
 
                 break;
             case 2:

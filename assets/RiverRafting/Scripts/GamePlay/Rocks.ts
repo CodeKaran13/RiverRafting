@@ -17,7 +17,7 @@ export default class Rocks extends Obstacles
 
     onCollisionEnter(other, self)
     {
-        if (other.node.name == 'Player')
+        if (other.node.parent.name == 'Player')
         {
             console.log('player collided rock');
         }

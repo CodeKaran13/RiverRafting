@@ -48,23 +48,31 @@ export default class ObstaclePool extends cc.Component
                 name.active = false;
                 this.BreakableLogs.push(name);
                 break;
+            case 'docks':
+                name.parent.removeChild(name);
+                name.active = false;
+                this.BreakableDecks.push(name);
+                break;
         }
     }
 
-    getObstacleFromPool(packName: string): cc.Node
+    getObstacleFromPool(obstacleName: string): cc.Node
     {
-        switch (packName)
+        switch (obstacleName)
         {
             case 'rollinglogs':
                 var rollinglog = this.RollingLogs.pop();
                 // rollinglog.active = true;
                 return rollinglog;
                 break;
-
             case 'breakablelogs':
                 var breakablelog = this.BreakableLogs.pop();
                 // breakablelog.active = true;
                 return breakablelog;
+                break;
+            case 'docks':
+                var dock = this.BreakableDecks.pop();
+                return dock;
                 break;
         }
     }

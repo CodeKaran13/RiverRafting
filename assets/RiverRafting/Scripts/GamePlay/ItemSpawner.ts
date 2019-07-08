@@ -19,13 +19,6 @@ export default class ItemSpawner extends cc.Component
     })
     _CollectiblePoolRef: CollectiblesPool = null;
 
-    @property({
-        type: ObstaclePool,
-        visible: true,
-        serializable: true
-    })
-    _ObstaclePoolRef: ObstaclePool = null;
-
     currentTimeHealth: number = 0;
     currentTimeCoin: number = 0;
     sequenceHealth: cc.ActionInterval;

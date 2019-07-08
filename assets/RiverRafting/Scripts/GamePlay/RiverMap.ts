@@ -27,6 +27,13 @@ export default class RiverMap extends cc.Component
     })
     SpawnLocations: cc.Node[] = [];
 
+    @property({
+        type: cc.Node,
+        visible: true,
+        serializable: true
+    })
+    DocksSpawnLocation: cc.Node[] = [];
+
     CheckPlayerLocation: boolean = false;
     IsActive: boolean = false;
 

@@ -1,4 +1,5 @@
 import ItemSpawner from "../GamePlay/ItemSpawner";
+import ObstacleSpawner from "../GamePlay/ObstacleSpawner";
 
 const { ccclass, property } = cc._decorator;
 
@@ -18,7 +19,9 @@ export default class PoolingSystem extends cc.Component
         visible: true,
         serializable: true
     })
-    _itemSpawnerRef: ItemSpawner = null;
+    _itemSpawner: ItemSpawner = null;
+
+    _obstacleSpawner: ObstacleSpawner = null;
 
     // onLoad () {}
 
@@ -54,8 +57,17 @@ export default class PoolingSystem extends cc.Component
                 for (let i = 0; i < rivermap.SpawnLocations.length; i++)
                 {
                     // console.log('1: ' + i);
-                    this._itemSpawnerRef.SpawnPos[i] = rivermap.SpawnLocations[i];
+                    this._itemSpawner.SpawnPos[i] = rivermap.SpawnLocations[i];
                 }
+
+                for(let i = 0; i < rivermap.DocksSpawnLocation.length; i++)
+                {
+                    // console.log('obs ' + i);
+                    this._obstacleSpawner.DockSpawnPos[i] = rivermap.DocksSpawnLocation[i];
+                }
+
+                // this._obstacleSpawner.SpawnDocks();
+
                 return ref;
 
             case 2:
@@ -65,7 +77,7 @@ export default class PoolingSystem extends cc.Component
                 for (let i = 0; i < rivermap.SpawnLocations.length; i++)
                 {
                     // console.log('2: ' + i);
-                    this._itemSpawnerRef.SpawnPos[i] = rivermap.SpawnLocations[i];
+                    this._itemSpawner.SpawnPos[i] = rivermap.SpawnLocations[i];
                 }
                 ref.getComponent('RiverMap').IsActive = true;
                 return ref;
@@ -77,7 +89,7 @@ export default class PoolingSystem extends cc.Component
                 for (let i = 0; i < rivermap.SpawnLocations.length; i++)
                 {
                     // console.log('3: ' + i);
-                    this._itemSpawnerRef.SpawnPos[i] = rivermap.SpawnLocations[i];
+                    this._itemSpawner.SpawnPos[i] = rivermap.SpawnLocations[i];
                 }
                 ref.getComponent('RiverMap').IsActive = true;
                 return ref;
@@ -88,7 +100,7 @@ export default class PoolingSystem extends cc.Component
                 rivermap.IsActive = true;
                 for (let i = 0; i < rivermap.SpawnLocations.length; i++)
                 {
-                    this._itemSpawnerRef.SpawnPos[i] = rivermap.SpawnLocations[i];
+                    this._itemSpawner.SpawnPos[i] = rivermap.SpawnLocations[i];
                 }
                 ref.getComponent('RiverMap').IsActive = true;
                 return ref;
