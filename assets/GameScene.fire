@@ -399,15 +399,6 @@
     "RiverMapsPrefabs": [
       {
         "__uuid__": "2d73e831-33b1-4b68-a8e9-4332061799dc"
-      },
-      {
-        "__uuid__": "1cf17b6c-825c-48c0-8e8f-f17b45de7b1a"
-      },
-      {
-        "__uuid__": "8297ccae-5755-480c-b2a1-2c4883d5e84a"
-      },
-      {
-        "__uuid__": "b967216f-6921-4483-8d1b-3e4f74d031e3"
       }
     ],
     "_itemSpawner": {
