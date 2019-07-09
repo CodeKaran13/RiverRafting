@@ -22,7 +22,7 @@ export default class Player extends cc.Component
 
     onLoad()
     {
-        // this.rigidBody = this.node.getComponent(cc.RigidBody);
+
     }
 
     start()
@@ -34,7 +34,7 @@ export default class Player extends cc.Component
     update(dt)
     {
         this.startAcceleration(dt);
-        console.log('movement speed: ' + this.movementSpeed);
+        // console.log('movement speed: ' + this.movementSpeed);
     }
 
     startAcceleration(dt)
@@ -83,29 +83,29 @@ export default class Player extends cc.Component
     }
 
     // Increase turn speed slowly.
-    restartCounter()
-    {
-        this.turnSpeed = 0;
-        this.node.stopAction(this.turnSequence);
-    }
+    // restartCounter()
+    // {
+    //     this.turnSpeed = 0;
+    //     this.node.stopAction(this.turnSequence);
+    // }
 
-    startCounter()
-    {
-        var time = cc.delayTime(0.2);
-        this.turnSequence = cc.sequence(time, cc.callFunc(this.countdown, this));
-        this.node.runAction(this.turnSequence);
-    }
+    // startCounter()
+    // {
+    //     var time = cc.delayTime(0.2);
+    //     this.turnSequence = cc.sequence(time, cc.callFunc(this.countdown, this));
+    //     this.node.runAction(this.turnSequence);
+    // }
 
-    countdown()
-    {
-        this.turnSpeed += 2;
-        this.startCounter();
-        if (this.turnSpeed >= this.MAXTURNSPEED)
-        {
-            this.turnSpeed = this.MAXTURNSPEED;
-            this.node.stopAction(this.turnSequence);
-        }
-    }
+    // countdown()
+    // {
+    //     this.turnSpeed += 2;
+    //     this.startCounter();
+    //     if (this.turnSpeed >= this.MAXTURNSPEED)
+    //     {
+    //         this.turnSpeed = this.MAXTURNSPEED;
+    //         this.node.stopAction(this.turnSequence);
+    //     }
+    // }
 
     RotateLeft()
     {
@@ -144,7 +144,6 @@ export default class Player extends cc.Component
         this.node.stopAction(action);
     }
 
-    // When the player is turning, lower the movement speed/apply brakes.
     resetMovementSpeed()
     {
         // console.log('reset movement speed');
@@ -153,6 +152,7 @@ export default class Player extends cc.Component
         this.startAccelerating();
     }
 
+    // When the player is turning, lower the movement speed/apply brakes.
     startApplyingBrakes()
     {
         // console.log('start applying brakes');
@@ -186,7 +186,7 @@ export default class Player extends cc.Component
     accelerate()
     {
         this.movementSpeed += 1;
-        console.log('movement speed: ' + this.movementSpeed);
+        // console.log('movement speed: ' + this.movementSpeed);
         if (this.movementSpeed >= this.MAXMOVEMENTSPEED)
         {
             this.movementSpeed = this.MAXMOVEMENTSPEED;
