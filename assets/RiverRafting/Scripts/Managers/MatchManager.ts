@@ -68,20 +68,8 @@ export default class MatchManager extends cc.Component
         this.spawnNextRiverMap(0);
     }
 
-    // update (dt) {}
-
     spawnNextRiverMap(height: number)
     {
-
-        // this.totalHeight = this.totalHeight + height;
-        // var nextMap = this._poolingSystem.getRiverMapfromPool(1);
-
-        // this.LevelPrefabs.addChild(nextMap, 0, nextMap.name);
-        // nextMap.setPosition(cc.Vec2.ZERO);
-
-        // nextMap.setPosition(new cc.Vec2(0, this.totalHeight));
-        // nextMap.active = true;
-
         switch (this.getRandomNumber())
         {
             case 1:

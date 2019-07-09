@@ -23,11 +23,19 @@ export default class Obstacles extends cc.Component {
     })
     _ObstaclePoolRef: ObstaclePool = null;
 
-    // onLoad () {}
+    @property({
+        type: cc.Node,
+        visible: true,
+        serializable: true
+    })
+    _player: cc.Node = null;
 
-    start () {
+    @property({
+        type: cc.Animation,
+        visible: true,
+        serializable: true
+    })
+    myAnimator: cc.Animation = null;
 
-    }
-
-    // update (dt) {}
+    myPos: any;
 }

@@ -8,13 +8,6 @@ export default class HealthPack extends Collectibles
     @property
     health: number = 20;
 
-    myPos: any;
-
-    onLoad() 
-    {
-
-    }
-
     start()
     {
         this.myType = CollectibleType.Health;
@@ -34,7 +27,7 @@ export default class HealthPack extends Collectibles
     {
         if (this.node.active)
         {
-            if (cc.find('Player').position.y - 500 > this.myPos)
+            if (this._player.position.y - 500 > this.myPos)
             {
                 console.log('player is above me');
                 this._CollectiblePoolRef.addCollectibleBackToPool(this.node);
@@ -44,10 +37,10 @@ export default class HealthPack extends Collectibles
 
     onCollisionEnter(other, self)
     {
-        if (other.node.name == 'Player')
+        if (other.node.name == this._player.name)
         {
             // console.log('player collided health');
-            other.node.getComponent('HealthManager').increaseHP(this.health);
+            this._player.getComponent('HealthManager').increaseHP(this.health);
             this._CollectiblePoolRef.addCollectibleBackToPool(this.node);
         }
     }

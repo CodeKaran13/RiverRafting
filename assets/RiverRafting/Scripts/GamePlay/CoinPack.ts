@@ -5,9 +5,6 @@ const { ccclass, property } = cc._decorator;
 @ccclass
 export default class CoinPack extends Collectibles
 {
-
-    myPos: any;
-
     // onLoad () {}
 
     start()
@@ -29,7 +26,7 @@ export default class CoinPack extends Collectibles
     {
         if (this.node.active)
         {
-            if (cc.find('Player').position.y - 500 > this.myPos)
+            if (this._player.position.y - 500 > this.myPos)
             {
                 console.log('player is above me');
                 this._CollectiblePoolRef.addCollectibleBackToPool(this.node);
@@ -39,7 +36,7 @@ export default class CoinPack extends Collectibles
 
     onCollisionEnter(other, self)
     {
-        if(other.node.name == 'Player')
+        if(other.node.name == this._player.name)
         {
             console.log('player collided coin');
 

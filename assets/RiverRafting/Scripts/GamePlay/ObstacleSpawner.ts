@@ -20,21 +20,21 @@ export default class ObstacleSpawner extends cc.Component
     })
     _ObstaclePoolRef: ObstaclePool = null;
 
-    LogsSpawnPos: cc.Node[] = [];
+    @property({
+        type: cc.Node,
+        visible: true,
+        serializable: true
+    })
+    _player: cc.Node = null;
 
+    LogsSpawnPos: cc.Node[] = [];
     DockSpawnPos: cc.Node[] = [];
+
 
     onLoad()
     {
         this._matchManagerRef._poolingSystem._obstacleSpawner = this;
     }
-
-    start()
-    {
-
-    }
-
-    // update (dt) {}
 
     SpawnDocks()
     {
@@ -53,9 +53,19 @@ export default class ObstacleSpawner extends cc.Component
         dock.active = true;
     }
 
-    SpawnRollingLogs()
+    SpawnRollingLogs(pos: cc.Vec2)
     {
         var rollinglog = this._ObstaclePoolRef.getObstacleFromPool('rollinglogs');
+
+        // var pos = this.getRollingLogSpawnPos();
+
+        if (rollinglog != null)
+        {
+            rollinglog.getComponent('RollingLogs').SetInitialPosition(pos);
+
+            rollinglog.active = true;
+            rollinglog.getComponent('RollingLogs').enabled = true;
+        }
     }
 
     SpawnLogs()

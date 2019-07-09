@@ -23,7 +23,7 @@ export default class ObstaclePool extends cc.Component
         visible: true,
         serializable: true
     })
-    BreakableDecks: cc.Node[] = [];
+    BreakableDocks: cc.Node[] = [];
 
     // onLoad () {}
 
@@ -39,7 +39,8 @@ export default class ObstaclePool extends cc.Component
         switch (name.name)
         {
             case 'rollinglogs':
-                name.parent.removeChild(name);
+                // name.parent.removeChild(name);
+                name.getComponent('RollingLogs').enabled = false;
                 name.active = false;
                 this.RollingLogs.push(name);
                 break;
@@ -51,7 +52,7 @@ export default class ObstaclePool extends cc.Component
             case 'docks':
                 name.parent.removeChild(name);
                 name.active = false;
-                this.BreakableDecks.push(name);
+                this.BreakableDocks.push(name);
                 break;
         }
     }
@@ -61,19 +62,17 @@ export default class ObstaclePool extends cc.Component
         switch (obstacleName)
         {
             case 'rollinglogs':
+                console.log('get rolling log');
                 var rollinglog = this.RollingLogs.pop();
-                // rollinglog.active = true;
+                rollinglog.active = true;
                 return rollinglog;
-                break;
             case 'breakablelogs':
                 var breakablelog = this.BreakableLogs.pop();
                 // breakablelog.active = true;
                 return breakablelog;
-                break;
             case 'docks':
-                var dock = this.BreakableDecks.pop();
+                var dock = this.BreakableDocks.pop();
                 return dock;
-                break;
         }
     }
 }

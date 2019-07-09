@@ -6,18 +6,8 @@ const { ccclass, property } = cc._decorator;
 export default class RiverMap extends cc.Component
 {
 
-    @property({
-        type: MatchManager,
-        visible: true,
-        serializable: true
-    })
     _matchManagerRef: MatchManager = null;
 
-    @property({
-        type: cc.Node,
-        visible: true,
-        serializable: true
-    })
     player: cc.Node = null;
 
     @property({
@@ -60,13 +50,13 @@ export default class RiverMap extends cc.Component
         }
     }
 
-    onCollisionEnter(other, self)
-    {
-        // console.log('collision enter');
-        if (other.node.name == 'Player')
-        {
-            this._matchManagerRef.spawnNextRiverMap(this.node.height + (1 * this.node.height));
-            this.CheckPlayerLocation = true;
-        }
-    }
+    // onCollisionEnter(other, self)
+    // {
+    //     // console.log('collision enter');
+    //     if (other.node.name == 'Player')
+    //     {
+    //         this._matchManagerRef.spawnNextRiverMap(this.node.height + (1 * this.node.height));
+    //         this.CheckPlayerLocation = true;
+    //     }
+    // }
 }
