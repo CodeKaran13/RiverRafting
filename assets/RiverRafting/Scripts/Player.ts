@@ -34,6 +34,7 @@ export default class Player extends cc.Component
     update(dt)
     {
         this.startAcceleration(dt);
+        console.log('movement speed: ' + this.movementSpeed);
     }
 
     startAcceleration(dt)
@@ -41,30 +42,34 @@ export default class Player extends cc.Component
         // this.node.setPosition(new cc.Vec2(this.node.position.x, this.node.position.y + this.movementSpeed));
         var direction = this.node.children[3].convertToWorldSpace(cc.Vec2.ZERO).sub(this.node.position);
 
-        console.log('dir: ' + direction);
-
-        console.log('world pos: ' + this.node.children[3].convertToWorldSpace(cc.Vec2.ZERO));
-
-        console.log('normalised: ' + direction.normalizeSelf());
         this.node.position = this.node.position.add(direction.normalizeSelf().mulSelf(this.movementSpeed));
 
-        var results = cc.director.getPhysicsManager().rayCast(this.node.position, this.node.children[3].position, cc.RayCastType.Closest)
+        // console.log('dir: ' + direction);
+        // console.log('world pos: ' + this.node.children[3].convertToWorldSpace(cc.Vec2.ZERO));
+        // console.log('normalised: ' + direction.normalizeSelf());
 
-        for (let i = 0; i < results.length; i++)
-        {
-            // console.log('' + results[i].collider.node.group);
-            if (results[i].collider.node.group == 'Bound')
-            {
-                // this.startApplyingBrakes();
-                var distance = results[i].point.y - this.node.position.y;
-                console.log('dist: ' + distance);
-                if (distance < 120)
-                {
-                    this.node.stopAction(this.accelerateSequence);
-                    this.movementSpeed = 0;
-                }
-            }
-        }
+        // var results = cc.director.getPhysicsManager().rayCast(this.node.position, this.node.children[3].convertToWorldSpace(cc.Vec2.ZERO), cc.RayCastType.Closest)
+
+        // for (let i = 0; i < results.length; i++)
+        // {
+        //     // console.log('' + results[i].collider.node.group);
+        //     if (results[i].collider.node.group == 'Bound')
+        //     {
+        //         var distance = results[i].point.y - this.node.position.y;
+        //         console.log('dist: ' + distance);
+        //         if (distance < 120)
+        //         {
+        //             // this.node.stopAction(this.accelerateSequence);
+        //             this.movementSpeed = 0;
+        //         }
+        //     }
+        //     else
+        //     {
+        //         var direction = this.node.children[3].convertToWorldSpace(cc.Vec2.ZERO).sub(this.node.position);
+
+        //         this.node.position = this.node.position.add(direction.normalizeSelf().mulSelf(this.movementSpeed));
+        //     }
+        // }
     }
 
     AccelerationSequence()
