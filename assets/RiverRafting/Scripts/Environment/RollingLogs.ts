@@ -1,5 +1,6 @@
 import Obstacles from "../GamePlay/Obstacles";
 import Player from "../Player";
+import HealthManager from "../Managers/HealthManager";
 
 const { ccclass, property } = cc._decorator;
 
@@ -59,7 +60,7 @@ export default class RollingLogs extends Obstacles
             console.log('rolling log collided with player.');
 
             // damage player here and add this back to pool
-
+            this._player.getComponent(HealthManager).takeDamage(this.damage);
             this._ObstaclePoolRef.addObstacleBackToPool(this.node);
         }
 

@@ -1,4 +1,5 @@
 import CollectiblesPool from "../Pools/CollectiblesPool";
+import ScoreManager from "../Managers/ScoreManager";
 
 const { ccclass, property } = cc._decorator;
 
@@ -26,6 +27,13 @@ export default class Collectibles extends cc.Component
         serializable: true
     })
     _player: cc.Node = null;
+
+    @property({
+        type: ScoreManager,
+        visible: true,
+        serializable: true
+    })
+    _scoreManager: ScoreManager = null;
 
     myPos: any;
 }

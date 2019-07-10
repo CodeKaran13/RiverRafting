@@ -1,4 +1,5 @@
 import Obstacles from "../GamePlay/Obstacles";
+import HealthManager from "../Managers/HealthManager";
 
 const { ccclass, property } = cc._decorator;
 
@@ -41,6 +42,7 @@ export default class Docks extends Obstacles
         if (other.node.name == this._player.name)
         {
             this.myAnimator.play('dock fall');
+            this._player.getComponent(HealthManager).takeDamage(this.damage);
         }
     }
 }

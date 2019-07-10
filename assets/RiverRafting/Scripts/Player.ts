@@ -193,9 +193,4 @@ export default class Player extends cc.Component
             this.node.stopAction(this.accelerateSequence);
         }
     }
-
-    onBeginContact(contact, selfCollider, otherCollider)
-    {
-        // console.log('collided');
-    }
 }

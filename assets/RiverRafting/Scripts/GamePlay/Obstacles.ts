@@ -37,5 +37,8 @@ export default class Obstacles extends cc.Component {
     })
     myAnimator: cc.Animation = null;
 
+    @property
+    damage: number = 5;
+
     myPos: any;
 }

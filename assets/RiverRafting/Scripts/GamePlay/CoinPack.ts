@@ -5,6 +5,9 @@ const { ccclass, property } = cc._decorator;
 @ccclass
 export default class CoinPack extends Collectibles
 {
+    @property
+    awardScore: number = 20;
+
     // onLoad () {}
 
     start()
@@ -22,7 +25,7 @@ export default class CoinPack extends Collectibles
         this.myPos = 0;
     }
 
-    update(dt) 
+    update(dt)
     {
         if (this.node.active)
         {
@@ -41,6 +44,7 @@ export default class CoinPack extends Collectibles
             console.log('player collided coin');
 
             // increase score
+            this._scoreManager.AddScore(this.awardScore);
             this._CollectiblePoolRef.addCollectibleBackToPool(this.node);
         }
     }
