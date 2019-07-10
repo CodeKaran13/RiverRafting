@@ -11,9 +11,9 @@ export default class Player extends cc.Component
     @property
     turnSpeed: number = 0;
 
-    MAXTURNSPEED: number = 5;
-    MINMOVEMENTSPEED: number = 4;
-    MAXMOVEMENTSPEED: number = 6;//12
+    MAXTURNSPEED: number = 3;
+    MINMOVEMENTSPEED: number = 2;
+    MAXMOVEMENTSPEED: number = 4;//12
 
     turnSequence: cc.Action = null;
     brakeSequence;
@@ -109,7 +109,7 @@ export default class Player extends cc.Component
 
     RotateLeft()
     {
-        var toLeft = cc.rotateTo(1, -45);
+        var toLeft = cc.rotateTo(1, -60);
         this.node.runAction(toLeft);
         this.currentAction = toLeft;
         this.node.children[1].getComponent(cc.Animation).play();
@@ -118,7 +118,7 @@ export default class Player extends cc.Component
 
     RotateRight()
     {
-        var toRight = cc.rotateTo(1, 45);
+        var toRight = cc.rotateTo(1, 60);
         this.node.runAction(toRight);
         this.currentAction = toRight;
         this.node.children[0].getComponent(cc.Animation).play();

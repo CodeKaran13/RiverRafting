@@ -42,7 +42,7 @@ export default class RiverMap extends cc.Component
     {
         if (this.CheckPlayerLocation)
         {
-            if (this.player.getPosition().y > this._matchManagerRef.totalHeight)
+            if (this.player.getPosition().y > this._matchManagerRef.totalHeight + 800)
             {
                 this._matchManagerRef._poolingSystem.addRiverMapToPool(this.node);
                 this.CheckPlayerLocation = false;

@@ -82,16 +82,9 @@ export default class MatchManager extends cc.Component
                 nextMap.setPosition(new cc.Vec2(0, this.totalHeight));
                 nextMap.active = true;
 
-                for (let i = 0; i < nextMap.childrenCount; i++)
+                for (let i = 0; i < nextMap.children[1].childrenCount; i++)
                 {
-                    // for (let j = 0; j < nextMap.children[i].childrenCount; j++)
-                    // {
-                    if (nextMap.children[i].childrenCount > 0)
-                    {
-                        nextMap.children[i].children[0].active = true;
-                        nextMap.children[i].children[1].active = true;
-                    }
-                    // }
+                    nextMap.children[1].children[i].active = true;
                 }
 
                 this._obstacleSpawner.SpawnDocks();
