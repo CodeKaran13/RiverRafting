@@ -4,6 +4,7 @@ import GameManager from "./GameManager";
 import ScoreManager from "./ScoreManager";
 import UIManager from "./UIManager";
 import ObstacleSpawner from "../GamePlay/ObstacleSpawner";
+import BonusSystem from "../GamePlay/BonusSystem";
 
 const { ccclass, property } = cc._decorator;
 
@@ -49,6 +50,13 @@ export default class MatchManager extends cc.Component
     })
     _UIManagerRef: UIManager = null;
 
+    @property({
+        type: BonusSystem,
+        visible: true,
+        serializable: true
+    })
+    _bonusSystem: BonusSystem = null;
+
     _obstacleSpawner: ObstacleSpawner = null;
 
     totalHeight: number = 0;
@@ -66,6 +74,9 @@ export default class MatchManager extends cc.Component
     start()
     {
         this.spawnNextRiverMap(0);
+
+        this._bonusSystem.resetBonus();
+        this._bonusSystem.restartCounter();
     }
 
     spawnNextRiverMap(height: number)
