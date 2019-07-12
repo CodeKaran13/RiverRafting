@@ -112,8 +112,11 @@ export default class Player extends cc.Component
         var toLeft = cc.rotateTo(1, -60);
         this.node.runAction(toLeft);
         this.currentAction = toLeft;
-        this.node.children[1].getComponent(cc.Animation).play();
-        this.node.children[0].getComponent(cc.Animation).stop();
+        // this.node.children[1].getComponent(cc.Animation).play();
+        // this.node.children[0].getComponent(cc.Animation).stop();
+
+        this.node.children[1].getComponent(dragonBones.ArmatureDisplay).timeScale = 3;
+        this.node.children[0].getComponent(dragonBones.ArmatureDisplay).timeScale = 0;
     }
 
     RotateRight()
@@ -121,8 +124,11 @@ export default class Player extends cc.Component
         var toRight = cc.rotateTo(1, 60);
         this.node.runAction(toRight);
         this.currentAction = toRight;
-        this.node.children[0].getComponent(cc.Animation).play();
-        this.node.children[1].getComponent(cc.Animation).stop();
+        // this.node.children[0].getComponent(cc.Animation).play();
+        // this.node.children[1].getComponent(cc.Animation).stop();
+
+        this.node.children[1].getComponent(dragonBones.ArmatureDisplay).timeScale = 0;
+        this.node.children[0].getComponent(dragonBones.ArmatureDisplay).timeScale = 3;
     }
 
     RotateToCenter()
@@ -130,8 +136,11 @@ export default class Player extends cc.Component
         var toCenter = cc.rotateTo(1.5, 0);
         this.node.runAction(toCenter);
         this.currentAction = toCenter;
-        this.node.children[0].getComponent(cc.Animation).play();
-        this.node.children[1].getComponent(cc.Animation).play();
+        // this.node.children[0].getComponent(cc.Animation).play();
+        // this.node.children[1].getComponent(cc.Animation).play();
+
+        this.node.children[1].getComponent(dragonBones.ArmatureDisplay).timeScale = 3;
+        this.node.children[0].getComponent(dragonBones.ArmatureDisplay).timeScale = 3;
     }
 
     StartAction(action: cc.Action)

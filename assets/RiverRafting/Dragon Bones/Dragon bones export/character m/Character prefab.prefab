@@ -12,7 +12,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "Dragon parent",
+    "_name": "Character prefab",
     "_objFlags": 0,
     "_parent": null,
     "_children": [],
@@ -46,8 +46,8 @@
     },
     "_position": {
       "__type__": "cc.Vec3",
-      "x": 925,
-      "y": 504,
+      "x": 0,
+      "y": 0,
       "z": 0
     },
     "_scale": {
@@ -79,12 +79,12 @@
     },
     "_enabled": true,
     "_armatureName": "Armature",
-    "_animationName": "animtion0",
+    "_animationName": "Raft_smooth_2",
     "_preCacheMode": 0,
     "_cacheMode": 0,
     "playTimes": -1,
     "premultipliedAlpha": false,
-    "_armatureKey": "7e6362e0-ea4d-4df5-8304-68e93d53a691#e943b16c-987f-40c7-89ce-9fe35025fff4",
+    "_armatureKey": "c77c72fa-9216-4f3a-9f9c-e67520e2833d#7238a915-c31c-419d-8bb0-60e34911841d",
     "_accTime": 0,
     "_playCount": 0,
     "_frameCache": null,
@@ -92,13 +92,13 @@
     "_playing": false,
     "_armatureCache": null,
     "_N$dragonAsset": {
-      "__uuid__": "7e6362e0-ea4d-4df5-8304-68e93d53a691"
+      "__uuid__": "c77c72fa-9216-4f3a-9f9c-e67520e2833d"
     },
     "_N$dragonAtlasAsset": {
-      "__uuid__": "e943b16c-987f-40c7-89ce-9fe35025fff4"
+      "__uuid__": "7238a915-c31c-419d-8bb0-60e34911841d"
     },
     "_N$_defaultArmatureIndex": 0,
-    "_N$_animationIndex": 1,
+    "_N$_animationIndex": 5,
     "_N$_defaultCacheMode": 0,
     "_N$timeScale": 1,
     "_N$debugBones": false,
@@ -113,7 +113,7 @@
     "asset": {
       "__id__": 0
     },
-    "fileId": "89E8J3I/pH3KFxLSo5P76U",
+    "fileId": "70wEYQ9mNKdq3rcPhzGsZH",
     "sync": false
   }
 ]
