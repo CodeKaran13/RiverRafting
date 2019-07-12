@@ -1,13 +1,14 @@
 {
-  "ver": "2.2.0",
+  "ver": "2.3.0",
   "uuid": "700444e3-fed7-464a-8abf-1104f51a25ad",
   "type": "sprite",
   "wrapMode": "clamp",
   "filterMode": "bilinear",
   "premultiplyAlpha": false,
+  "platformSettings": {},
   "subMetas": {
     "wooden stand": {
-      "ver": "1.0.3",
+      "ver": "1.0.4",
       "uuid": "bd534abe-f8b2-4610-b053-41efde12a5fe",
       "rawTextureUuid": "700444e3-fed7-464a-8abf-1104f51a25ad",
       "trimType": "auto",
