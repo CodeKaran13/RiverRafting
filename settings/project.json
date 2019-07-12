@@ -2,6 +2,8 @@
   "assets-sort-type": "name",
   "collision-matrix": [
     [
+      true,
+      null,
       true
     ],
     [
@@ -9,7 +11,33 @@
       false
     ],
     [
+      true,
       false,
+      false,
+      true,
+      true,
+      true
+    ],
+    [
+      false,
+      false,
+      true,
+      false,
+      null,
+      true
+    ],
+    [
+      false,
+      false,
+      true,
+      false,
+      false
+    ],
+    [
+      false,
+      false,
+      true,
+      true,
       false,
       false
     ]
@@ -32,7 +60,10 @@
   "group-list": [
     "default",
     "UI",
-    "Player"
+    "Player",
+    "Bound",
+    "Collectibles",
+    "Obstacles"
   ],
   "last-module-event-record-time": 0,
   "simulator-orientation": false,
@@ -41,5 +72,6 @@
     "width": 960
   },
   "use-customize-simulator": true,
-  "use-project-simulator-setting": false
+  "use-project-simulator-setting": false,
+  "start-scene": "current"
 }
