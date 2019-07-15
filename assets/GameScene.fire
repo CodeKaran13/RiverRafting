@@ -793,7 +793,7 @@
     "_enabled": true,
     "_materials": [],
     "_armatureName": "Armature",
-    "_animationName": "",
+    "_animationName": "Raft_smooth_2",
     "_preCacheMode": 0,
     "_cacheMode": 0,
     "playTimes": -1,
@@ -812,7 +812,7 @@
       "__uuid__": "7238a915-c31c-419d-8bb0-60e34911841d"
     },
     "_N$_defaultArmatureIndex": 0,
-    "_N$_animationIndex": 0,
+    "_N$_animationIndex": 5,
     "_N$_defaultCacheMode": 0,
     "_N$timeScale": 3,
     "_N$debugBones": false,
@@ -903,7 +903,7 @@
     "_enabled": true,
     "_materials": [],
     "_armatureName": "Armature",
-    "_animationName": "",
+    "_animationName": "Raft_smooth_2",
     "_preCacheMode": 0,
     "_cacheMode": 0,
     "playTimes": -1,
@@ -922,7 +922,7 @@
       "__uuid__": "7238a915-c31c-419d-8bb0-60e34911841d"
     },
     "_N$_defaultArmatureIndex": 0,
-    "_N$_animationIndex": 0,
+    "_N$_animationIndex": 5,
     "_N$_defaultCacheMode": 0,
     "_N$timeScale": 3,
     "_N$debugBones": false,
@@ -2715,7 +2715,7 @@
       "__type__": "cc.Vec3",
       "x": 540,
       "y": 960,
-      "z": 1662.7687752661222
+      "z": 1662.76878
     },
     "_scale": {
       "__type__": "cc.Vec3",
@@ -2756,7 +2756,7 @@
       "a": 255
     },
     "_depth": -1,
-    "_zoomRatio": 1,
+    "_zoomRatio": 1.4,
     "_targetTexture": null,
     "_fov": 60,
     "_orthoSize": 10,
