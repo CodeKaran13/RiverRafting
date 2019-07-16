@@ -1,4 +1,5 @@
 import Player from "../Player";
+import CameraController from "../CameraController";
 
 const { ccclass, property } = cc._decorator;
 
@@ -15,6 +16,12 @@ export default class InputHandler extends cc.Component
 
     isTouchActive: boolean = false;
 
+    @property({
+        type: CameraController,
+        visible: true,
+        serializable: true
+    })
+    _cameraController: CameraController = null;
 
     onLoad()
     {
@@ -28,12 +35,14 @@ export default class InputHandler extends cc.Component
                 // this._playerRef.ApplyBrakeSequence();
                 this._playerRef.StopAction(this._playerRef.currentAction);
                 this._playerRef.RotateLeft();
+                // this._cameraController.startZoomIn();
             }
             else if (this.xDir > 0)
             {
                 // this._playerRef.ApplyBrakeSequence();
                 this._playerRef.StopAction(this._playerRef.currentAction);
                 this._playerRef.RotateRight();
+                // this._cameraController.startZoomIn();
             }
             // this._playerRef.restartCounter();
             // this._playerRef.startCounter();
@@ -45,25 +54,11 @@ export default class InputHandler extends cc.Component
             this._playerRef.StopAction(this._playerRef.currentAction);
             // this._playerRef.resetMovementSpeed();
             this._playerRef.RotateToCenter();
+            // this._cameraController.shouldZoomIn = false;
+            // this._cameraController.startNormalize();
             // this._playerRef.restartCounter();
             this.onKeyUp();
         }, this.node);
-    }
-
-    start()
-    {
-
-    }
-
-    update(dt)
-    {
-        // if (this.isTouchActive)
-        // {
-        //     this.onKeyDown();
-        // }
-        // else
-        // {
-        // }
     }
 
     onKeyDown()
