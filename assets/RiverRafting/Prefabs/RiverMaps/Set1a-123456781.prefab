@@ -310,7 +310,7 @@
     },
     "_angularVelocity": 0,
     "_fixedRotation": true,
-    "enabledContactListener": false,
+    "enabledContactListener": true,
     "bullet": false,
     "awakeOnLoad": true,
     "_id": ""
@@ -856,7 +856,7 @@
     },
     "_angularVelocity": 0,
     "_fixedRotation": true,
-    "enabledContactListener": false,
+    "enabledContactListener": true,
     "bullet": false,
     "awakeOnLoad": true,
     "_id": ""
@@ -1417,7 +1417,7 @@
     },
     "_angularVelocity": 0,
     "_fixedRotation": true,
-    "enabledContactListener": false,
+    "enabledContactListener": true,
     "bullet": false,
     "awakeOnLoad": true,
     "_id": ""
@@ -1808,7 +1808,7 @@
     },
     "_angularVelocity": 0,
     "_fixedRotation": true,
-    "enabledContactListener": false,
+    "enabledContactListener": true,
     "bullet": false,
     "awakeOnLoad": true,
     "_id": ""
@@ -2209,7 +2209,7 @@
     },
     "_angularVelocity": 0,
     "_fixedRotation": true,
-    "enabledContactListener": false,
+    "enabledContactListener": true,
     "bullet": false,
     "awakeOnLoad": true,
     "_id": ""
@@ -2845,7 +2845,7 @@
     },
     "_angularVelocity": 0,
     "_fixedRotation": true,
-    "enabledContactListener": false,
+    "enabledContactListener": true,
     "bullet": false,
     "awakeOnLoad": true,
     "_id": ""
@@ -3456,7 +3456,7 @@
     },
     "_angularVelocity": 0,
     "_fixedRotation": true,
-    "enabledContactListener": false,
+    "enabledContactListener": true,
     "bullet": false,
     "awakeOnLoad": true,
     "_id": ""
@@ -3892,7 +3892,7 @@
     },
     "_angularVelocity": 0,
     "_fixedRotation": true,
-    "enabledContactListener": false,
+    "enabledContactListener": true,
     "bullet": false,
     "awakeOnLoad": true,
     "_id": ""
@@ -4253,7 +4253,7 @@
     },
     "_angularVelocity": 0,
     "_fixedRotation": true,
-    "enabledContactListener": false,
+    "enabledContactListener": true,
     "bullet": false,
     "awakeOnLoad": true,
     "_id": ""
@@ -4934,7 +4934,7 @@
     },
     "_angularVelocity": 0,
     "_fixedRotation": true,
-    "enabledContactListener": false,
+    "enabledContactListener": true,
     "bullet": false,
     "awakeOnLoad": true,
     "_id": ""
@@ -5625,7 +5625,7 @@
     },
     "_angularVelocity": 0,
     "_fixedRotation": true,
-    "enabledContactListener": false,
+    "enabledContactListener": true,
     "bullet": false,
     "awakeOnLoad": true,
     "_id": ""
@@ -6036,7 +6036,7 @@
     },
     "_angularVelocity": 0,
     "_fixedRotation": true,
-    "enabledContactListener": false,
+    "enabledContactListener": true,
     "bullet": false,
     "awakeOnLoad": true,
     "_id": ""
@@ -6432,7 +6432,7 @@
     },
     "_angularVelocity": 0,
     "_fixedRotation": true,
-    "enabledContactListener": false,
+    "enabledContactListener": true,
     "bullet": false,
     "awakeOnLoad": true,
     "_id": ""
@@ -6938,7 +6938,7 @@
     },
     "_angularVelocity": 0,
     "_fixedRotation": true,
-    "enabledContactListener": false,
+    "enabledContactListener": true,
     "bullet": false,
     "awakeOnLoad": true,
     "_id": ""
@@ -7489,7 +7489,7 @@
     },
     "_angularVelocity": 0,
     "_fixedRotation": true,
-    "enabledContactListener": false,
+    "enabledContactListener": true,
     "bullet": false,
     "awakeOnLoad": true,
     "_id": ""
@@ -7720,7 +7720,7 @@
     },
     "_angularVelocity": 0,
     "_fixedRotation": true,
-    "enabledContactListener": false,
+    "enabledContactListener": true,
     "bullet": false,
     "awakeOnLoad": true,
     "_id": ""
@@ -7971,7 +7971,7 @@
     },
     "_angularVelocity": 0,
     "_fixedRotation": true,
-    "enabledContactListener": false,
+    "enabledContactListener": true,
     "bullet": false,
     "awakeOnLoad": true,
     "_id": ""
@@ -8517,7 +8517,7 @@
     },
     "_angularVelocity": 0,
     "_fixedRotation": true,
-    "enabledContactListener": false,
+    "enabledContactListener": true,
     "bullet": false,
     "awakeOnLoad": true,
     "_id": ""

@@ -31,7 +31,7 @@ export default class Docks extends Obstacles
         {
             if (this._player.position.y - 500 > this.myPos)
             {
-                console.log('player is above me');
+                // console.log('player is above me');
                 this._ObstaclePoolRef.addObstacleBackToPool(this.node);
             }
         }

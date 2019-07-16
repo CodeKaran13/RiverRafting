@@ -1,5 +1,4 @@
 import Obstacles from "../GamePlay/Obstacles";
-import Player from "../Player";
 import HealthManager from "../Managers/HealthManager";
 
 const { ccclass, property } = cc._decorator;

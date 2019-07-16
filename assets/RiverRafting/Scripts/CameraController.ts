@@ -24,7 +24,7 @@ export default class CameraController extends cc.Component
     camera: cc.Camera = null;
 
 
-    //
+    // camera zoom
     initZoomRatio: number = 0;
     previousPos: cc.Vec2;
 
@@ -53,7 +53,7 @@ export default class CameraController extends cc.Component
 
     cameraShake()
     {
-        // this.anim.play('shake');
+        this.anim.play('shake');
         this.scheduleOnce(this.stopShake.bind(this), this.shakeDuration);
     }
 

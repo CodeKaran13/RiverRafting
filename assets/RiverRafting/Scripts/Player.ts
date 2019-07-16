@@ -37,12 +37,11 @@ export default class Player extends cc.Component
 
         if (!this.CheckBound())
         {
-            // this.movementSpeed = this.MAXMOVEMENTSPEED;
             this.startAcceleration(dt);
         }
         else
         {
-            // this.movementSpeed = 0;
+
         }
     }
 
@@ -67,15 +66,17 @@ export default class Player extends cc.Component
 
     CheckBound()
     {
-        var results = cc.director.getPhysicsManager().rayCast(this.node.position, this.node.children[3].convertToWorldSpaceAR(cc.Vec2.ZERO), cc.RayCastType.All);
+        var results = cc.director.getPhysicsManager().rayCast(this.node.position, this.node.children[3].convertToWorldSpaceAR(cc.Vec2.ZERO), cc.RayCastType.Closest);
         if (results.length > 1)
         {
             for (let i = 0; i < results.length; i++)
             {
                 if (results[i].collider.node.group == 'Bound')
                 {
+                    // var distance = results[i].point.sub(this.node.position);
                     var distance = results[i].point.y - this.node.position.y;
-                    if (distance < 120)
+                    console.log('dist: ' + distance + ' ' + results[i].collider.name);
+                    if (distance < 100)
                     {
                         return true;
                     }
@@ -91,38 +92,12 @@ export default class Player extends cc.Component
             return false;
         }
     }
-    // Increase turn speed slowly.
-    // restartCounter()
-    // {
-    //     this.turnSpeed = 0;
-    //     this.node.stopAction(this.turnSequence);
-    // }
-
-    // startCounter()
-    // {
-    //     var time = cc.delayTime(0.2);
-    //     this.turnSequence = cc.sequence(time, cc.callFunc(this.countdown, this));
-    //     this.node.runAction(this.turnSequence);
-    // }
-
-    // countdown()
-    // {
-    //     this.turnSpeed += 2;
-    //     this.startCounter();
-    //     if (this.turnSpeed >= this.MAXTURNSPEED)
-    //     {
-    //         this.turnSpeed = this.MAXTURNSPEED;
-    //         this.node.stopAction(this.turnSequence);
-    //     }
-    // }
 
     RotateLeft()
     {
         var toLeft = cc.rotateTo(1, -60);
         this.node.runAction(toLeft);
         this.currentAction = toLeft;
-        // this.node.children[1].getComponent(cc.Animation).play();
-        // this.node.children[0].getComponent(cc.Animation).stop();
 
         this.node.children[1].getComponent(dragonBones.ArmatureDisplay).timeScale = 3;
         this.node.children[0].getComponent(dragonBones.ArmatureDisplay).timeScale = 0;
@@ -135,8 +110,6 @@ export default class Player extends cc.Component
         var toRight = cc.rotateTo(1, 60);
         this.node.runAction(toRight);
         this.currentAction = toRight;
-        // this.node.children[0].getComponent(cc.Animation).play();
-        // this.node.children[1].getComponent(cc.Animation).stop();
 
         this.node.children[1].getComponent(dragonBones.ArmatureDisplay).timeScale = 0;
         this.node.children[0].getComponent(dragonBones.ArmatureDisplay).timeScale = 3;
@@ -149,8 +122,6 @@ export default class Player extends cc.Component
         var toCenter = cc.rotateTo(1.5, 0);
         this.node.runAction(toCenter);
         this.currentAction = toCenter;
-        // this.node.children[0].getComponent(cc.Animation).play();
-        // this.node.children[1].getComponent(cc.Animation).play();
 
         this.node.children[1].getComponent(dragonBones.ArmatureDisplay).timeScale = 3;
         this.node.children[0].getComponent(dragonBones.ArmatureDisplay).timeScale = 3;

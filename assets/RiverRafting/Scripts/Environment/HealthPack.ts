@@ -1,4 +1,4 @@
-import Collectibles, { CollectibleType } from "./Collectibles";
+import Collectibles, { CollectibleType } from "../GamePlay/Collectibles";
 
 const { ccclass, property } = cc._decorator;
 
@@ -29,7 +29,7 @@ export default class HealthPack extends Collectibles
         {
             if (this._player.position.y - 500 > this.myPos)
             {
-                console.log('player is above me');
+                // console.log('player is above me');
                 this._CollectiblePoolRef.addCollectibleBackToPool(this.node);
             }
         }

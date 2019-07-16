@@ -18,7 +18,7 @@ export default class CollisionDetection extends cc.Component
         if(otherCollider.node.group == 'Bound')
         {
             // stop clean run on collision and restart timer for bonus system
-            console.log('physics collided');
+            // console.log('physics collided');
 
             this._bonusSystem.stopAction();
         }

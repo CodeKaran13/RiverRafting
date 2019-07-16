@@ -1,0 +1,103 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "looping 2a",
+  "_objFlags": 0,
+  "_native": "",
+  "_duration": 1,
+  "sample": 60,
+  "speed": 0.1,
+  "wrapMode": 2,
+  "curveData": {
+    "paths": {
+      "waves_parent_2_1": {
+        "props": {
+          "position": [
+            {
+              "frame": 0,
+              "value": [
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "frame": 1,
+              "value": [
+                0,
+                300,
+                0
+              ]
+            }
+          ]
+        }
+      },
+      "waves_parent_2_2": {
+        "props": {
+          "position": [
+            {
+              "frame": 0,
+              "value": [
+                0,
+                300,
+                0
+              ]
+            },
+            {
+              "frame": 1,
+              "value": [
+                0,
+                600,
+                0
+              ]
+            }
+          ]
+        }
+      },
+      "waves_parent_2_3": {
+        "props": {
+          "position": [
+            {
+              "frame": 0,
+              "value": [
+                0,
+                600,
+                0
+              ]
+            },
+            {
+              "frame": 1,
+              "value": [
+                0,
+                900,
+                0
+              ]
+            }
+          ]
+        }
+      },
+      "waves_parent_2_4": {
+        "props": {
+          "position": [
+            {
+              "frame": 0,
+              "value": [
+                0,
+                -300,
+                0
+              ]
+            },
+            {
+              "frame": 1,
+              "value": [
+                0,
+                0,
+                0
+              ]
+            }
+          ]
+        }
+      }
+    }
+  },
+  "events": []
+}

@@ -19,7 +19,7 @@ export default class Rocks extends Obstacles
     {
         if (other.node.parent.name == 'Player')
         {
-            console.log('player collided rock');
+            // console.log('player collided rock');
         }
     }
 }
