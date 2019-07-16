@@ -93,9 +93,9 @@ export default class MatchManager extends cc.Component
                 nextMap.setPosition(new cc.Vec2(0, this.totalHeight));
                 nextMap.active = true;
 
-                for (let i = 0; i < nextMap.children[1].childrenCount; i++)
+                for (let i = 0; i < nextMap.children[0].childrenCount; i++)
                 {
-                    nextMap.children[1].children[i].active = true;
+                    nextMap.children[0].children[i].active = true;
                 }
 
                 this._obstacleSpawner.SpawnDocks();
@@ -110,16 +110,9 @@ export default class MatchManager extends cc.Component
                 nextMap.setPosition(new cc.Vec2(0, this.totalHeight));
                 nextMap.active = true;
 
-                // for (let i = 0; i < nextMap.children[0].childrenCount; i++)
-                // {
-                //     nextMap.children[0].children[i].active = true;
-                // }
-                for (let i = 0; i < nextMap.childrenCount; i++)
+                for (let i = 0; i < nextMap.children[0].childrenCount; i++)
                 {
-                    for (let j = 0; j < nextMap.children[i].childrenCount; j++)
-                    {
-                        nextMap.children[i].children[j].active = true;
-                    }
+                    nextMap.children[0].children[i].active = true;
                 }
 
                 break;
@@ -133,16 +126,9 @@ export default class MatchManager extends cc.Component
                 nextMap.setPosition(new cc.Vec2(0, this.totalHeight));
                 nextMap.active = true;
 
-                // for (let i = 0; i < nextMap.children[0].childrenCount; i++)
-                // {
-                //     nextMap.children[0].children[i].active = true;
-                // }
-                for (let i = 0; i < nextMap.childrenCount; i++)
+                for (let i = 0; i < nextMap.children[0].childrenCount; i++)
                 {
-                    for (let j = 0; j < nextMap.children[i].childrenCount; j++)
-                    {
-                        nextMap.children[i].children[j].active = true;
-                    }
+                    nextMap.children[0].children[i].active = true;
                 }
 
                 break;
@@ -155,16 +141,51 @@ export default class MatchManager extends cc.Component
 
                 nextMap.setPosition(new cc.Vec2(0, this.totalHeight));
                 nextMap.active = true;
+
+                for (let i = 0; i < nextMap.children[0].childrenCount; i++)
+                {
+                    nextMap.children[0].children[i].active = true;
+                }
+                break;
+            case 5:
+                this.totalHeight = this.totalHeight + height;
+                var nextMap = this._poolingSystem.getRiverMapfromPool(5);
+
+                this.LevelPrefabs.addChild(nextMap, 0, nextMap.name);
+                nextMap.setPosition(cc.Vec2.ZERO);
+
+                nextMap.setPosition(new cc.Vec2(0, this.totalHeight));
+                nextMap.active = true;
+
+                for (let i = 0; i < nextMap.children[0].childrenCount; i++)
+                {
+                    nextMap.children[0].children[i].active = true;
+                }
+                break;
+            case 6:
+                this.totalHeight = this.totalHeight + height;
+                var nextMap = this._poolingSystem.getRiverMapfromPool(6);
+
+                this.LevelPrefabs.addChild(nextMap, 0, nextMap.name);
+                nextMap.setPosition(cc.Vec2.ZERO);
+
+                nextMap.setPosition(new cc.Vec2(0, this.totalHeight));
+                nextMap.active = true;
+
+                for (let i = 0; i < nextMap.children[0].childrenCount; i++)
+                {
+                    nextMap.children[0].children[i].active = true;
+                }
                 break;
         }
     }
 
     getRandomNumber()
     {
-        // will return 1,2,3
-        // var rand = Math.floor(Math.random() * 3) + 1;
+        // will return 1,2,3,4
+        var rand = Math.floor(Math.random() * 4) + 1;
         // console.log('random number: ' + rand);
-        // return rand;
-        return 1;
+        return rand;
+        // return 1;
     }
 }

@@ -3,8 +3,6 @@ const { ccclass, property } = cc._decorator;
 @ccclass
 export default class Player extends cc.Component
 {
-    // rigidBody: cc.RigidBody = null;
-
     @property
     movementSpeed: number = 0;
 
@@ -20,6 +18,8 @@ export default class Player extends cc.Component
     accelerateSequence;
     currentAction: cc.Action = null;
 
+    // ObstacleAhead: boolean = false;
+
     onLoad()
     {
 
@@ -27,49 +27,32 @@ export default class Player extends cc.Component
 
     start()
     {
-        // this.movementSpeed = 6;
         this.AccelerationSequence();
     }
 
     update(dt)
     {
-        this.startAcceleration(dt);
+        // this.startAcceleration(dt);
         // console.log('movement speed: ' + this.movementSpeed);
+
+        if (!this.CheckBound())
+        {
+            // this.movementSpeed = this.MAXMOVEMENTSPEED;
+            this.startAcceleration(dt);
+        }
+        else
+        {
+            // this.movementSpeed = 0;
+        }
     }
 
     startAcceleration(dt)
     {
-        // this.node.setPosition(new cc.Vec2(this.node.position.x, this.node.position.y + this.movementSpeed));
-        var direction = this.node.children[3].convertToWorldSpace(cc.Vec2.ZERO).sub(this.node.position);
+        // console.log('player pos: ' + this.node.position);
+        // console.log('forward vector pos: ' + this.node.children[3].convertToWorldSpaceAR(cc.Vec2.ZERO));
 
+        var direction = this.node.children[3].convertToWorldSpaceAR(cc.Vec2.ZERO).sub(this.node.position);
         this.node.position = this.node.position.add(direction.normalizeSelf().mulSelf(this.movementSpeed));
-
-        // console.log('dir: ' + direction);
-        // console.log('world pos: ' + this.node.children[3].convertToWorldSpace(cc.Vec2.ZERO));
-        // console.log('normalised: ' + direction.normalizeSelf());
-
-        // var results = cc.director.getPhysicsManager().rayCast(this.node.position, this.node.children[3].convertToWorldSpace(cc.Vec2.ZERO), cc.RayCastType.Closest)
-
-        // for (let i = 0; i < results.length; i++)
-        // {
-        //     // console.log('' + results[i].collider.node.group);
-        //     if (results[i].collider.node.group == 'Bound')
-        //     {
-        //         var distance = results[i].point.y - this.node.position.y;
-        //         console.log('dist: ' + distance);
-        //         if (distance < 120)
-        //         {
-        //             // this.node.stopAction(this.accelerateSequence);
-        //             this.movementSpeed = 0;
-        //         }
-        //     }
-        //     else
-        //     {
-        //         var direction = this.node.children[3].convertToWorldSpace(cc.Vec2.ZERO).sub(this.node.position);
-
-        //         this.node.position = this.node.position.add(direction.normalizeSelf().mulSelf(this.movementSpeed));
-        //     }
-        // }
     }
 
     AccelerationSequence()
@@ -82,6 +65,32 @@ export default class Player extends cc.Component
         this.startApplyingBrakes();
     }
 
+    CheckBound()
+    {
+        var results = cc.director.getPhysicsManager().rayCast(this.node.position, this.node.children[3].convertToWorldSpaceAR(cc.Vec2.ZERO), cc.RayCastType.All);
+        if (results.length > 1)
+        {
+            for (let i = 0; i < results.length; i++)
+            {
+                if (results[i].collider.node.group == 'Bound')
+                {
+                    var distance = results[i].point.y - this.node.position.y;
+                    if (distance < 120)
+                    {
+                        return true;
+                    }
+                }
+                else
+                {
+                    return false;
+                }
+            }
+        }
+        else
+        {
+            return false;
+        }
+    }
     // Increase turn speed slowly.
     // restartCounter()
     // {
@@ -117,6 +126,8 @@ export default class Player extends cc.Component
 
         this.node.children[1].getComponent(dragonBones.ArmatureDisplay).timeScale = 3;
         this.node.children[0].getComponent(dragonBones.ArmatureDisplay).timeScale = 0;
+
+        this.CheckBound();
     }
 
     RotateRight()
@@ -129,6 +140,8 @@ export default class Player extends cc.Component
 
         this.node.children[1].getComponent(dragonBones.ArmatureDisplay).timeScale = 0;
         this.node.children[0].getComponent(dragonBones.ArmatureDisplay).timeScale = 3;
+
+        this.CheckBound();
     }
 
     RotateToCenter()
@@ -141,6 +154,8 @@ export default class Player extends cc.Component
 
         this.node.children[1].getComponent(dragonBones.ArmatureDisplay).timeScale = 3;
         this.node.children[0].getComponent(dragonBones.ArmatureDisplay).timeScale = 3;
+
+        this.CheckBound();
     }
 
     StartAction(action: cc.Action)
@@ -186,7 +201,7 @@ export default class Player extends cc.Component
     // Start acceleration after brakes are applied.
     startAccelerating()
     {
-        // console.log('start accelerating');
+        console.log('start accelerating');
         var time = cc.delayTime(0.1);
         this.accelerateSequence = cc.sequence(time, cc.callFunc(this.accelerate, this));
         this.node.runAction(this.accelerateSequence.repeatForever());

@@ -56,17 +56,13 @@ export default class PoolingSystem extends cc.Component
                 rivermap.IsActive = true;
                 for (let i = 0; i < rivermap.SpawnLocations.length; i++)
                 {
-                    // console.log('1: ' + i);
                     this._itemSpawner.SpawnPos[i] = rivermap.SpawnLocations[i];
                 }
 
                 for(let i = 0; i < rivermap.DocksSpawnLocation.length; i++)
                 {
-                    // console.log('obs ' + i);
                     this._obstacleSpawner.DockSpawnPos[i] = rivermap.DocksSpawnLocation[i];
                 }
-
-                // this._obstacleSpawner.SpawnDocks();
 
                 return ref;
 
@@ -76,7 +72,6 @@ export default class PoolingSystem extends cc.Component
                 rivermap.IsActive = true;
                 for (let i = 0; i < rivermap.SpawnLocations.length; i++)
                 {
-                    // console.log('2: ' + i);
                     this._itemSpawner.SpawnPos[i] = rivermap.SpawnLocations[i];
                 }
                 ref.getComponent('RiverMap').IsActive = true;
@@ -88,7 +83,6 @@ export default class PoolingSystem extends cc.Component
                 rivermap.IsActive = true;
                 for (let i = 0; i < rivermap.SpawnLocations.length; i++)
                 {
-                    // console.log('3: ' + i);
                     this._itemSpawner.SpawnPos[i] = rivermap.SpawnLocations[i];
                 }
                 ref.getComponent('RiverMap').IsActive = true;
