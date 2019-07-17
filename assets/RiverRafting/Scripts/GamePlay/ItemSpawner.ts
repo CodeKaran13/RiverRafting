@@ -17,7 +17,7 @@ export default class ItemSpawner extends cc.Component
         visible: true,
         serializable: true
     })
-    _CollectiblePoolRef: CollectiblesPool = null;
+    _CollectiblePool: CollectiblesPool = null;
 
     currentTimeHealth: number = 0;
     currentTimeCoin: number = 0;
@@ -26,9 +26,7 @@ export default class ItemSpawner extends cc.Component
 
     SpawnPos: cc.Node[] = [];
 
-    // onLoad () {}
-
-    start()
+    onGameStart()
     {
         //spawn health packs
         this.restartTimerForPack('healthpack');
@@ -101,7 +99,7 @@ export default class ItemSpawner extends cc.Component
 
     SpawnHealthPack()
     {
-        var healthpack = this._CollectiblePoolRef.getCollectibleFromPool('healthpack');
+        var healthpack = this._CollectiblePool.getCollectibleFromPool('healthpack');
 
         var parent = this.getRandomSpawnPos();
 
@@ -119,7 +117,7 @@ export default class ItemSpawner extends cc.Component
 
     SpawnCoinPack()
     {
-        var coinpack = this._CollectiblePoolRef.getCollectibleFromPool('coinpack');
+        var coinpack = this._CollectiblePool.getCollectibleFromPool('coinpack');
 
         var parent = this.getRandomSpawnPos();
 

@@ -1,21 +1,31 @@
 import UIManager from "./UIManager";
+import MatchManager from "./MatchManager";
 
 const { ccclass, property } = cc._decorator;
 
 @ccclass
 export default class ScoreManager extends cc.Component
 {
-
+    //All script refs
+    @property({
+        type: MatchManager,
+        visible: true,
+        serializable: true
+    })
+    _matchManager: MatchManager = null;
     @property({
         type: UIManager,
         visible: true,
         serializable: true
     })
-    _UIManagerRef: UIManager = null;
+    _UIManager: UIManager = null;
 
     totalScore: number = 0;
 
-    // onLoad () {}
+    onLoad () {
+        this._matchManager._bonusSystem._scoreManager = this;
+        this._matchManager._scoreManager = this;
+    }
 
     start()
     {
@@ -28,7 +38,7 @@ export default class ScoreManager extends cc.Component
     {
         this.totalScore += value;
 
-        this._UIManagerRef.OnUIUpdateScore(this.totalScore);
+        this._UIManager.OnUIUpdateScore(this.totalScore);
     }
 
     SubScore(value: number)
@@ -39,6 +49,6 @@ export default class ScoreManager extends cc.Component
             this.totalScore = 0;
         }
 
-        this._UIManagerRef.OnUIUpdateScore(this.totalScore);
+        this._UIManager.OnUIUpdateScore(this.totalScore);
     }
 }

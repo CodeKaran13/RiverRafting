@@ -19,7 +19,7 @@ export default class Collectibles extends cc.Component
         visible: true,
         serializable: true
     })
-    _CollectiblePoolRef: CollectiblesPool = null;
+    _CollectiblePool: CollectiblesPool = null;
 
     @property({
         type: cc.Node,

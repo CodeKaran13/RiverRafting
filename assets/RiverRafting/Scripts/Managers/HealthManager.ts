@@ -17,7 +17,7 @@ export default class HealthManager extends cc.Component
         visible: true,
         serializable: true
     })
-    _UIManagerRef: UIManager = null;
+    _UIManager: UIManager = null;
 
     // onLoad () {}
 
@@ -49,6 +49,6 @@ export default class HealthManager extends cc.Component
 
     updateHealthLabel()
     {
-        this._UIManagerRef.OnUIUpdateHealth(this.currentHealth);
+        this._UIManager.OnUIUpdateHealth(this.currentHealth);
     }
 }

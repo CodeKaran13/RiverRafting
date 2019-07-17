@@ -1,13 +1,21 @@
 import { Difficulty } from "../Enums";
 import MatchManager from "./MatchManager";
 
+export enum GameState
+{
+    PreGame = 0,
+    InGame = 1,
+    PostGame = 2
+}
+
 const { ccclass, property } = cc._decorator;
 
 @ccclass
 export default class GameManager extends cc.Component
 {
-    _matchManagerRef: MatchManager = null;
+    _matchManager: MatchManager = null;
 
+    public static currentGameState: GameState = GameState.PreGame;
     currentDifficulty: Difficulty = Difficulty.Easy;
 
     onLoad()
@@ -27,11 +35,8 @@ export default class GameManager extends cc.Component
 
     start()
     {
-        this._matchManagerRef._timeManagerRef.restartTimer();
-        this._matchManagerRef._timeManagerRef.startTimer();
+        
     }
-
-    // update (dt) {}
 
     OnGameOver() {
 

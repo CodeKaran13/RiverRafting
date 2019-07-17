@@ -1,3 +1,5 @@
+import GameManager, { GameState } from "./Managers/GameManager";
+
 const { ccclass, property } = cc._decorator;
 
 @ccclass
@@ -5,7 +7,6 @@ export default class Player extends cc.Component
 {
     @property
     movementSpeed: number = 0;
-
     @property
     turnSpeed: number = 0;
 
@@ -18,30 +19,29 @@ export default class Player extends cc.Component
     accelerateSequence;
     currentAction: cc.Action = null;
 
-    // ObstacleAhead: boolean = false;
-
-    onLoad()
-    {
-
-    }
-
-    start()
-    {
-        this.AccelerationSequence();
-    }
+    HasAccelerationStarted: boolean = false;
 
     update(dt)
     {
-        // this.startAcceleration(dt);
-        // console.log('movement speed: ' + this.movementSpeed);
-
-        if (!this.CheckBound())
+        if(GameManager.currentGameState == GameState.InGame)
         {
+            if(!this.HasAccelerationStarted)
+            {
+                this.HasAccelerationStarted = true
+                this.StartAccelerationSequence();
+            }
+
             this.startAcceleration(dt);
-        }
-        else
-        {
-
+            // console.log('movement speed: ' + this.movementSpeed);
+    
+            // if (!this.CheckBound())
+            // {
+            //     this.startAcceleration(dt);
+            // }
+            // else
+            // {
+    
+            // }
         }
     }
 
@@ -50,11 +50,11 @@ export default class Player extends cc.Component
         // console.log('player pos: ' + this.node.position);
         // console.log('forward vector pos: ' + this.node.children[3].convertToWorldSpaceAR(cc.Vec2.ZERO));
 
-        var direction = this.node.children[3].convertToWorldSpaceAR(cc.Vec2.ZERO).sub(this.node.position);
+        var direction = this.node.children[4].convertToWorldSpaceAR(cc.Vec2.ZERO).sub(this.node.position);
         this.node.position = this.node.position.add(direction.normalizeSelf().mulSelf(this.movementSpeed));
     }
 
-    AccelerationSequence()
+    StartAccelerationSequence()
     {
         this.startAccelerating();
     }
@@ -66,7 +66,7 @@ export default class Player extends cc.Component
 
     CheckBound()
     {
-        var results = cc.director.getPhysicsManager().rayCast(this.node.position, this.node.children[3].convertToWorldSpaceAR(cc.Vec2.ZERO), cc.RayCastType.Closest);
+        var results = cc.director.getPhysicsManager().rayCast(this.node.position, this.node.children[4].convertToWorldSpaceAR(cc.Vec2.ZERO), cc.RayCastType.Closest);
         if (results.length > 1)
         {
             for (let i = 0; i < results.length; i++)
@@ -75,7 +75,7 @@ export default class Player extends cc.Component
                 {
                     // var distance = results[i].point.sub(this.node.position);
                     var distance = results[i].point.y - this.node.position.y;
-                    console.log('dist: ' + distance + ' ' + results[i].collider.name);
+                    // console.log('dist: ' + distance + ' ' + results[i].collider.name);
                     if (distance < 100)
                     {
                         return true;
@@ -99,8 +99,8 @@ export default class Player extends cc.Component
         this.node.runAction(toLeft);
         this.currentAction = toLeft;
 
+        this.node.children[2].getComponent(dragonBones.ArmatureDisplay).timeScale = 0;
         this.node.children[1].getComponent(dragonBones.ArmatureDisplay).timeScale = 3;
-        this.node.children[0].getComponent(dragonBones.ArmatureDisplay).timeScale = 0;
 
         this.CheckBound();
     }
@@ -111,8 +111,8 @@ export default class Player extends cc.Component
         this.node.runAction(toRight);
         this.currentAction = toRight;
 
+        this.node.children[2].getComponent(dragonBones.ArmatureDisplay).timeScale = 3;
         this.node.children[1].getComponent(dragonBones.ArmatureDisplay).timeScale = 0;
-        this.node.children[0].getComponent(dragonBones.ArmatureDisplay).timeScale = 3;
 
         this.CheckBound();
     }
@@ -123,8 +123,8 @@ export default class Player extends cc.Component
         this.node.runAction(toCenter);
         this.currentAction = toCenter;
 
+        this.node.children[2].getComponent(dragonBones.ArmatureDisplay).timeScale = 3;
         this.node.children[1].getComponent(dragonBones.ArmatureDisplay).timeScale = 3;
-        this.node.children[0].getComponent(dragonBones.ArmatureDisplay).timeScale = 3;
 
         this.CheckBound();
     }
