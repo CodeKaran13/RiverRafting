@@ -37,7 +37,7 @@ export default class GameManager extends cc.Component
 
     start()
     {
-        this.GetData();
+        // this.GetData();
     }
 
     GetData()
