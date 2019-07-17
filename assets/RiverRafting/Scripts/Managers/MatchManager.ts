@@ -173,9 +173,9 @@ export default class MatchManager extends cc.Component
     getRandomNumber()
     {
         // will return 1,2,3,4
-        var rand = Math.floor(Math.random() * 4) + 1;
+        // var rand = Math.floor(Math.random() * 4) + 1;
         // console.log('random number: ' + rand);
-        return rand;
-        // return 1;
+        // return rand;
+        return 2;
     }
 }

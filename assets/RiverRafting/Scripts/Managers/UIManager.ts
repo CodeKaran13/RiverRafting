@@ -13,6 +13,12 @@ export default class UIManager extends cc.Component
         serializable: true
     })
     MainMenuWindow: cc.Node = null;
+    @property({
+        type: cc.Node,
+        visible: true,
+        serializable: true
+    })
+    GameWindow: cc.Node = null;
 
     // Canvas Labels
     @property({
@@ -49,7 +55,7 @@ export default class UIManager extends cc.Component
 
     start()
     {
-        
+
     }
 
     // All UI update functions
@@ -77,11 +83,12 @@ export default class UIManager extends cc.Component
         // close main menu window
 
         this.MainMenuWindow.active = false;
+        this.GameWindow.active = true;
     }
 
     OnSubmitButtonClick()
     {
-
+        window.$Arena.submitScore(this._matchManager._scoreManager.totalScore, GameManager.Seed);
     }
 
 }
