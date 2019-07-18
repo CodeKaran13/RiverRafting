@@ -1,3 +1,5 @@
+import GameManager, { GameState } from "./Managers/GameManager";
+
 const { ccclass, property } = cc._decorator;
 
 @ccclass
@@ -13,7 +15,7 @@ export default class CameraController extends cc.Component
     followOffsetX: number = 0;
     @property
     followOffsetY: number = 500;
-    startFollow = true;
+    startFollow = false;
 
     // camera shake
     @property(cc.Float)
@@ -41,6 +43,11 @@ export default class CameraController extends cc.Component
 
     update(dt)
     {
+        if (GameManager.currentGameState == GameState.InGame && !this.startFollow)
+        {
+            this.startFollow = true;
+        }
+
         if (this.startFollow)
         {
             // this.node.position = new cc.Vec2(this.target.getPosition().x + this.followOffsetX, this.target.getPosition().y + this.followOffsetY);

@@ -19,6 +19,24 @@ export default class UIManager extends cc.Component
         serializable: true
     })
     GameWindow: cc.Node = null;
+    @property({
+        type: cc.Node,
+        visible: true,
+        serializable: true
+    })
+    SubmitScoreWindow: cc.Node = null;
+    @property({
+        type: cc.Node,
+        visible: true,
+        serializable: true
+    })
+    MenuCrossWindow: cc.Node = null;
+    @property({
+        type: cc.Node,
+        visible: true,
+        serializable: true
+    })
+    GameCrossWindow: cc.Node = null;
 
     // Canvas Labels
     @property({
@@ -85,10 +103,38 @@ export default class UIManager extends cc.Component
         this.MainMenuWindow.active = false;
         this.GameWindow.active = true;
     }
-
+    // Final submit button
     OnSubmitButtonClick()
     {
         window.$Arena.submitScore(this._matchManager._scoreManager.totalScore, GameManager.Seed);
     }
 
+    // In game cross button functions
+    OnGameCrossButtonClick()
+    {
+        this.GameCrossWindow.active = true;
+    }
+    OnGameYesButtonClick()
+    {
+        window.$Arena.submitScore(this._matchManager._scoreManager.totalScore, GameManager.Seed);
+    }
+    OnGameNoButtonClick()
+    {
+        this.GameCrossWindow.active = false;
+    }
+
+    // Menu cross button functions
+    OnMenuCrossButtonClick()
+    {
+        this.MenuCrossWindow.active = true;
+    }
+    OnMenuYesButtonClick()
+    {
+        this._matchManager._scoreManager.totalScore = 0;
+        window.$Arena.submitScore(this._matchManager._scoreManager.totalScore, GameManager.Seed);
+    }
+    OnMenuNoButtonClick()
+    {
+        this.MenuCrossWindow.active = false;
+    }
 }
