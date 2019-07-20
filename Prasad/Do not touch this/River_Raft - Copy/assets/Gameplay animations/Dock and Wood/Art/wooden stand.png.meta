@@ -1,0 +1,32 @@
+{
+  "ver": "2.3.0",
+  "uuid": "700444e3-fed7-464a-8abf-1104f51a25ad",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "platformSettings": {},
+  "subMetas": {
+    "wooden stand": {
+      "ver": "1.0.4",
+      "uuid": "bd534abe-f8b2-4610-b053-41efde12a5fe",
+      "rawTextureUuid": "700444e3-fed7-464a-8abf-1104f51a25ad",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 33,
+      "height": 95,
+      "rawWidth": 33,
+      "rawHeight": 95,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}
