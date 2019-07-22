@@ -93,12 +93,11 @@
       "y": 1,
       "z": 1
     },
-    "_quat": {
-      "__type__": "cc.Quat",
+    "_eulerAngles": {
+      "__type__": "cc.Vec3",
       "x": 0,
       "y": 0,
-      "z": 0,
-      "w": 1
+      "z": 0
     },
     "_is3DNode": true,
     "groupIndex": 0,
@@ -169,12 +168,11 @@
       "y": 1,
       "z": 1
     },
-    "_quat": {
-      "__type__": "cc.Quat",
+    "_eulerAngles": {
+      "__type__": "cc.Vec3",
       "x": 0,
       "y": 0,
-      "z": 0,
-      "w": 1
+      "z": 0
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -230,12 +228,11 @@
       "y": 1,
       "z": 1
     },
-    "_quat": {
-      "__type__": "cc.Quat",
+    "_eulerAngles": {
+      "__type__": "cc.Vec3",
       "x": 0,
       "y": 0,
-      "z": 0,
-      "w": 1
+      "z": 0
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -307,12 +304,11 @@
       "y": 1,
       "z": 1
     },
-    "_quat": {
-      "__type__": "cc.Quat",
+    "_eulerAngles": {
+      "__type__": "cc.Vec3",
       "x": 0,
       "y": 0,
-      "z": 0,
-      "w": 1
+      "z": 0
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -390,12 +386,11 @@
       "y": 1,
       "z": 1
     },
-    "_quat": {
-      "__type__": "cc.Quat",
+    "_eulerAngles": {
+      "__type__": "cc.Vec3",
       "x": 0,
       "y": 0,
-      "z": 0,
-      "w": 1
+      "z": 0
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -508,12 +503,11 @@
       "y": 1,
       "z": 1
     },
-    "_quat": {
-      "__type__": "cc.Quat",
+    "_eulerAngles": {
+      "__type__": "cc.Vec3",
       "x": 0,
       "y": 0,
-      "z": 0,
-      "w": 1
+      "z": 0
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -595,12 +589,11 @@
       "y": 0.5,
       "z": 1
     },
-    "_quat": {
-      "__type__": "cc.Quat",
+    "_eulerAngles": {
+      "__type__": "cc.Vec3",
       "x": 0,
       "y": 0,
-      "z": 0,
-      "w": 1
+      "z": 0
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -738,12 +731,11 @@
       "y": 0.1,
       "z": 1
     },
-    "_quat": {
-      "__type__": "cc.Quat",
+    "_eulerAngles": {
+      "__type__": "cc.Vec3",
       "x": 0,
       "y": 0,
-      "z": 0,
-      "w": 1
+      "z": 0
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -801,12 +793,11 @@
       "y": 100,
       "z": 100
     },
-    "_quat": {
-      "__type__": "cc.Quat",
-      "x": -3.3484724945001065e-17,
-      "y": 0.7071067811865476,
-      "z": 0.7071067811865475,
-      "w": 5.3110880678548264e-17
+    "_eulerAngles": {
+      "__type__": "cc.Vec3",
+      "x": -89.99999999999999,
+      "y": 180,
+      "z": 1.5902773407317588e-15
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -862,12 +853,11 @@
       "y": 100,
       "z": 100
     },
-    "_quat": {
-      "__type__": "cc.Quat",
+    "_eulerAngles": {
+      "__type__": "cc.Vec3",
       "x": 0,
       "y": 0,
-      "z": 0,
-      "w": 1
+      "z": 0
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -966,12 +956,11 @@
       "y": 1.4,
       "z": 1
     },
-    "_quat": {
-      "__type__": "cc.Quat",
+    "_eulerAngles": {
+      "__type__": "cc.Vec3",
       "x": 0,
       "y": 0,
-      "z": 0,
-      "w": 1
+      "z": 0
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -989,7 +978,11 @@
       "__id__": 20
     },
     "_enabled": true,
-    "_materials": [],
+    "_materials": [
+      {
+        "__uuid__": "eca5d2f2-8ef6-41c2-bbe6-f9c79d09c432"
+      }
+    ],
     "_armatureName": "Armature",
     "_animationName": "Raft_smooth_2",
     "_preCacheMode": 0,
@@ -1076,12 +1069,11 @@
       "y": 1.4,
       "z": 1
     },
-    "_quat": {
-      "__type__": "cc.Quat",
+    "_eulerAngles": {
+      "__type__": "cc.Vec3",
       "x": 0,
       "y": 0,
-      "z": 0,
-      "w": 1
+      "z": 0
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -1099,7 +1091,11 @@
       "__id__": 23
     },
     "_enabled": true,
-    "_materials": [],
+    "_materials": [
+      {
+        "__uuid__": "eca5d2f2-8ef6-41c2-bbe6-f9c79d09c432"
+      }
+    ],
     "_armatureName": "Armature",
     "_animationName": "Raft_smooth_2",
     "_preCacheMode": 0,
@@ -1184,12 +1180,11 @@
       "y": 1,
       "z": 1
     },
-    "_quat": {
-      "__type__": "cc.Quat",
+    "_eulerAngles": {
+      "__type__": "cc.Vec3",
       "x": 0,
       "y": 0,
-      "z": 0,
-      "w": 1
+      "z": 0
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -1207,7 +1202,11 @@
       "__id__": 26
     },
     "_enabled": true,
-    "_materials": [],
+    "_materials": [
+      {
+        "__uuid__": "eca5d2f2-8ef6-41c2-bbe6-f9c79d09c432"
+      }
+    ],
     "_srcBlendFactor": 770,
     "_dstBlendFactor": 1,
     "_custom": false,
@@ -1342,12 +1341,11 @@
       "y": 2.85714,
       "z": 2.85714
     },
-    "_quat": {
-      "__type__": "cc.Quat",
+    "_eulerAngles": {
+      "__type__": "cc.Vec3",
       "x": 0,
       "y": 0,
-      "z": 0,
-      "w": 1
+      "z": 0
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -1619,12 +1617,11 @@
       "y": 1,
       "z": 1
     },
-    "_quat": {
-      "__type__": "cc.Quat",
+    "_eulerAngles": {
+      "__type__": "cc.Vec3",
       "x": 0,
       "y": 0,
-      "z": 0,
-      "w": 1
+      "z": 0
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -1692,12 +1689,11 @@
       "y": 1,
       "z": 1
     },
-    "_quat": {
-      "__type__": "cc.Quat",
+    "_eulerAngles": {
+      "__type__": "cc.Vec3",
       "x": 0,
       "y": 0,
-      "z": 0,
-      "w": 1
+      "z": 0
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -1779,12 +1775,11 @@
       "y": 1,
       "z": 1
     },
-    "_quat": {
-      "__type__": "cc.Quat",
+    "_eulerAngles": {
+      "__type__": "cc.Vec3",
       "x": 0,
       "y": 0,
-      "z": 0,
-      "w": 1
+      "z": 0
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -1840,12 +1835,11 @@
       "y": 1,
       "z": 1
     },
-    "_quat": {
-      "__type__": "cc.Quat",
+    "_eulerAngles": {
+      "__type__": "cc.Vec3",
       "x": 0,
       "y": 0,
-      "z": 0,
-      "w": 1
+      "z": 0
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -1939,12 +1933,11 @@
       "y": 1,
       "z": 1
     },
-    "_quat": {
-      "__type__": "cc.Quat",
+    "_eulerAngles": {
+      "__type__": "cc.Vec3",
       "x": 0,
       "y": 0,
-      "z": 0,
-      "w": 1
+      "z": 0
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -2054,12 +2047,11 @@
       "y": 3,
       "z": 1
     },
-    "_quat": {
-      "__type__": "cc.Quat",
+    "_eulerAngles": {
+      "__type__": "cc.Vec3",
       "x": 0,
       "y": 0,
-      "z": 0,
-      "w": 1
+      "z": 0
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -2075,7 +2067,11 @@
       "__id__": 44
     },
     "_enabled": true,
-    "_materials": [],
+    "_materials": [
+      {
+        "__uuid__": "eca5d2f2-8ef6-41c2-bbe6-f9c79d09c432"
+      }
+    ],
     "_srcBlendFactor": 770,
     "_dstBlendFactor": 771,
     "_custom": true,
@@ -2219,12 +2215,11 @@
       "y": 1,
       "z": 1
     },
-    "_quat": {
-      "__type__": "cc.Quat",
+    "_eulerAngles": {
+      "__type__": "cc.Vec3",
       "x": 0,
       "y": 0,
-      "z": 0,
-      "w": 1
+      "z": 0
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -2288,12 +2283,11 @@
       "y": 1,
       "z": 1
     },
-    "_quat": {
-      "__type__": "cc.Quat",
+    "_eulerAngles": {
+      "__type__": "cc.Vec3",
       "x": 0,
       "y": 0,
-      "z": 0,
-      "w": 1
+      "z": 0
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -2356,12 +2350,11 @@
       "y": 1,
       "z": 1
     },
-    "_quat": {
-      "__type__": "cc.Quat",
+    "_eulerAngles": {
+      "__type__": "cc.Vec3",
       "x": 0,
       "y": 0,
-      "z": 0,
-      "w": 1
+      "z": 0
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -2417,12 +2410,11 @@
       "y": 1,
       "z": 1
     },
-    "_quat": {
-      "__type__": "cc.Quat",
+    "_eulerAngles": {
+      "__type__": "cc.Vec3",
       "x": 0,
       "y": 0,
-      "z": 0,
-      "w": 1
+      "z": 0
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -2715,12 +2707,11 @@
       "y": 1,
       "z": 1
     },
-    "_quat": {
-      "__type__": "cc.Quat",
+    "_eulerAngles": {
+      "__type__": "cc.Vec3",
       "x": 0,
       "y": 0,
-      "z": 0,
-      "w": 1
+      "z": 0
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -2783,12 +2774,11 @@
       "y": 1,
       "z": 1
     },
-    "_quat": {
-      "__type__": "cc.Quat",
+    "_eulerAngles": {
+      "__type__": "cc.Vec3",
       "x": 0,
       "y": 0,
-      "z": 0,
-      "w": 1
+      "z": 0
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -2844,12 +2834,11 @@
       "y": 1,
       "z": 1
     },
-    "_quat": {
-      "__type__": "cc.Quat",
+    "_eulerAngles": {
+      "__type__": "cc.Vec3",
       "x": 0,
       "y": 0,
-      "z": 0,
-      "w": 1
+      "z": 0
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -3113,12 +3102,11 @@
       "y": 1.93,
       "z": 1.93
     },
-    "_quat": {
-      "__type__": "cc.Quat",
+    "_eulerAngles": {
+      "__type__": "cc.Vec3",
       "x": 0,
       "y": 0,
-      "z": 0,
-      "w": 1
+      "z": 0
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -3242,12 +3230,11 @@
       "y": 1,
       "z": 1
     },
-    "_quat": {
-      "__type__": "cc.Quat",
+    "_eulerAngles": {
+      "__type__": "cc.Vec3",
       "x": 0,
       "y": 0,
-      "z": 0,
-      "w": 1
+      "z": 0
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -3310,12 +3297,11 @@
       "y": 1,
       "z": 1
     },
-    "_quat": {
-      "__type__": "cc.Quat",
+    "_eulerAngles": {
+      "__type__": "cc.Vec3",
       "x": 0,
       "y": 0,
-      "z": 0,
-      "w": 1
+      "z": 0
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -3371,12 +3357,11 @@
       "y": 1.93,
       "z": 1.93
     },
-    "_quat": {
-      "__type__": "cc.Quat",
+    "_eulerAngles": {
+      "__type__": "cc.Vec3",
       "x": 0,
       "y": 0,
-      "z": 0,
-      "w": 1
+      "z": 0
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -3522,12 +3507,11 @@
       "y": 1,
       "z": 1
     },
-    "_quat": {
-      "__type__": "cc.Quat",
+    "_eulerAngles": {
+      "__type__": "cc.Vec3",
       "x": 0,
       "y": 0,
-      "z": 0,
-      "w": 1
+      "z": 0
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -3583,12 +3567,11 @@
       "y": 1.93,
       "z": 1.93
     },
-    "_quat": {
-      "__type__": "cc.Quat",
+    "_eulerAngles": {
+      "__type__": "cc.Vec3",
       "x": 0,
       "y": 0,
-      "z": 0,
-      "w": 1
+      "z": 0
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -3734,12 +3717,11 @@
       "y": 1,
       "z": 1
     },
-    "_quat": {
-      "__type__": "cc.Quat",
+    "_eulerAngles": {
+      "__type__": "cc.Vec3",
       "x": 0,
       "y": 0,
-      "z": 0,
-      "w": 1
+      "z": 0
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -3798,12 +3780,11 @@
       "y": 1,
       "z": 1
     },
-    "_quat": {
-      "__type__": "cc.Quat",
+    "_eulerAngles": {
+      "__type__": "cc.Vec3",
       "x": 0,
       "y": 0,
-      "z": 0,
-      "w": 1
+      "z": 0
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -4090,12 +4071,11 @@
       "y": 1,
       "z": 1
     },
-    "_quat": {
-      "__type__": "cc.Quat",
+    "_eulerAngles": {
+      "__type__": "cc.Vec3",
       "x": 0,
       "y": 0,
-      "z": 0,
-      "w": 1
+      "z": 0
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -4153,12 +4133,11 @@
       "y": 1,
       "z": 1
     },
-    "_quat": {
-      "__type__": "cc.Quat",
+    "_eulerAngles": {
+      "__type__": "cc.Vec3",
       "x": 0,
       "y": 0,
-      "z": 0,
-      "w": 1
+      "z": 0
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -4218,12 +4197,11 @@
       "y": 2.904,
       "z": 1
     },
-    "_quat": {
-      "__type__": "cc.Quat",
+    "_eulerAngles": {
+      "__type__": "cc.Vec3",
       "x": 0,
       "y": 0,
-      "z": 0,
-      "w": 1
+      "z": 0
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -4282,12 +4260,11 @@
       "y": 1,
       "z": 1
     },
-    "_quat": {
-      "__type__": "cc.Quat",
+    "_eulerAngles": {
+      "__type__": "cc.Vec3",
       "x": 0,
       "y": 0,
-      "z": 0,
-      "w": 1
+      "z": 0
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -4520,12 +4497,11 @@
       "y": 1,
       "z": 1
     },
-    "_quat": {
-      "__type__": "cc.Quat",
+    "_eulerAngles": {
+      "__type__": "cc.Vec3",
       "x": 0,
       "y": 0,
-      "z": 0,
-      "w": 1
+      "z": 0
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -4586,12 +4562,11 @@
       "y": 1,
       "z": 1
     },
-    "_quat": {
-      "__type__": "cc.Quat",
+    "_eulerAngles": {
+      "__type__": "cc.Vec3",
       "x": 0,
       "y": 0,
-      "z": 0,
-      "w": 1
+      "z": 0
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -4651,12 +4626,11 @@
       "y": 1,
       "z": 1
     },
-    "_quat": {
-      "__type__": "cc.Quat",
+    "_eulerAngles": {
+      "__type__": "cc.Vec3",
       "x": 0,
       "y": 0,
-      "z": 0,
-      "w": 1
+      "z": 0
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -4715,12 +4689,11 @@
       "y": 1,
       "z": 1
     },
-    "_quat": {
-      "__type__": "cc.Quat",
+    "_eulerAngles": {
+      "__type__": "cc.Vec3",
       "x": 0,
       "y": 0,
-      "z": 0,
-      "w": 1
+      "z": 0
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -4929,12 +4902,11 @@
       "y": 1,
       "z": 1
     },
-    "_quat": {
-      "__type__": "cc.Quat",
+    "_eulerAngles": {
+      "__type__": "cc.Vec3",
       "x": 0,
       "y": 0,
-      "z": 0,
-      "w": 1
+      "z": 0
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -4993,12 +4965,11 @@
       "y": 1,
       "z": 1
     },
-    "_quat": {
-      "__type__": "cc.Quat",
+    "_eulerAngles": {
+      "__type__": "cc.Vec3",
       "x": 0,
       "y": 0,
-      "z": 0,
-      "w": 1
+      "z": 0
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -5231,12 +5202,11 @@
       "y": 1,
       "z": 1
     },
-    "_quat": {
-      "__type__": "cc.Quat",
+    "_eulerAngles": {
+      "__type__": "cc.Vec3",
       "x": 0,
       "y": 0,
-      "z": 0,
-      "w": 1
+      "z": 0
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -5297,12 +5267,11 @@
       "y": 1,
       "z": 1
     },
-    "_quat": {
-      "__type__": "cc.Quat",
+    "_eulerAngles": {
+      "__type__": "cc.Vec3",
       "x": 0,
       "y": 0,
-      "z": 0,
-      "w": 1
+      "z": 0
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -5362,12 +5331,11 @@
       "y": 1,
       "z": 1
     },
-    "_quat": {
-      "__type__": "cc.Quat",
+    "_eulerAngles": {
+      "__type__": "cc.Vec3",
       "x": 0,
       "y": 0,
-      "z": 0,
-      "w": 1
+      "z": 0
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -5426,12 +5394,11 @@
       "y": 1,
       "z": 1
     },
-    "_quat": {
-      "__type__": "cc.Quat",
+    "_eulerAngles": {
+      "__type__": "cc.Vec3",
       "x": 0,
       "y": 0,
-      "z": 0,
-      "w": 1
+      "z": 0
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -5640,12 +5607,11 @@
       "y": 1,
       "z": 1
     },
-    "_quat": {
-      "__type__": "cc.Quat",
+    "_eulerAngles": {
+      "__type__": "cc.Vec3",
       "x": 0,
       "y": 0,
-      "z": 0,
-      "w": 1
+      "z": 0
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -5704,12 +5670,11 @@
       "y": 1,
       "z": 1
     },
-    "_quat": {
-      "__type__": "cc.Quat",
+    "_eulerAngles": {
+      "__type__": "cc.Vec3",
       "x": 0,
       "y": 0,
-      "z": 0,
-      "w": 1
+      "z": 0
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -5959,12 +5924,11 @@
       "y": 1,
       "z": 1
     },
-    "_quat": {
-      "__type__": "cc.Quat",
+    "_eulerAngles": {
+      "__type__": "cc.Vec3",
       "x": 0,
       "y": 0,
-      "z": 0,
-      "w": 1
+      "z": 0
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -5982,7 +5946,11 @@
       "__id__": 129
     },
     "_enabled": true,
-    "_materials": [],
+    "_materials": [
+      {
+        "__uuid__": "eca5d2f2-8ef6-41c2-bbe6-f9c79d09c432"
+      }
+    ],
     "_srcBlendFactor": 770,
     "_dstBlendFactor": 771,
     "_spriteFrame": {
@@ -6052,12 +6020,11 @@
       "y": 1,
       "z": 1
     },
-    "_quat": {
-      "__type__": "cc.Quat",
+    "_eulerAngles": {
+      "__type__": "cc.Vec3",
       "x": 0,
       "y": 0,
-      "z": 0,
-      "w": 1
+      "z": 0
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -6116,12 +6083,11 @@
       "y": 1,
       "z": 1
     },
-    "_quat": {
-      "__type__": "cc.Quat",
+    "_eulerAngles": {
+      "__type__": "cc.Vec3",
       "x": 0,
       "y": 0,
-      "z": 0,
-      "w": 1
+      "z": 0
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -6139,7 +6105,11 @@
       "__id__": 132
     },
     "_enabled": true,
-    "_materials": [],
+    "_materials": [
+      {
+        "__uuid__": "eca5d2f2-8ef6-41c2-bbe6-f9c79d09c432"
+      }
+    ],
     "_srcBlendFactor": 770,
     "_dstBlendFactor": 771,
     "_spriteFrame": {
@@ -6330,12 +6300,11 @@
       "y": 1,
       "z": 1
     },
-    "_quat": {
-      "__type__": "cc.Quat",
+    "_eulerAngles": {
+      "__type__": "cc.Vec3",
       "x": 0,
       "y": 0,
-      "z": 0,
-      "w": 1
+      "z": 0
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -6394,12 +6363,11 @@
       "y": 1,
       "z": 1
     },
-    "_quat": {
-      "__type__": "cc.Quat",
+    "_eulerAngles": {
+      "__type__": "cc.Vec3",
       "x": 0,
       "y": 0,
-      "z": 0,
-      "w": 1
+      "z": 0
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -6417,7 +6385,11 @@
       "__id__": 138
     },
     "_enabled": true,
-    "_materials": [],
+    "_materials": [
+      {
+        "__uuid__": "eca5d2f2-8ef6-41c2-bbe6-f9c79d09c432"
+      }
+    ],
     "_srcBlendFactor": 770,
     "_dstBlendFactor": 771,
     "_spriteFrame": {
@@ -6594,12 +6566,11 @@
       "y": 1,
       "z": 1
     },
-    "_quat": {
-      "__type__": "cc.Quat",
+    "_eulerAngles": {
+      "__type__": "cc.Vec3",
       "x": 0,
       "y": 0,
-      "z": 0,
-      "w": 1
+      "z": 0
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -6658,12 +6629,11 @@
       "y": 1,
       "z": 1
     },
-    "_quat": {
-      "__type__": "cc.Quat",
+    "_eulerAngles": {
+      "__type__": "cc.Vec3",
       "x": 0,
       "y": 0,
-      "z": 0,
-      "w": 1
+      "z": 0
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -6681,7 +6651,11 @@
       "__id__": 143
     },
     "_enabled": true,
-    "_materials": [],
+    "_materials": [
+      {
+        "__uuid__": "eca5d2f2-8ef6-41c2-bbe6-f9c79d09c432"
+      }
+    ],
     "_srcBlendFactor": 770,
     "_dstBlendFactor": 771,
     "_spriteFrame": {
@@ -6861,12 +6835,11 @@
       "y": 1,
       "z": 1
     },
-    "_quat": {
-      "__type__": "cc.Quat",
+    "_eulerAngles": {
+      "__type__": "cc.Vec3",
       "x": 0,
       "y": 0,
-      "z": 0,
-      "w": 1
+      "z": 0
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -6925,12 +6898,11 @@
       "y": 1,
       "z": 1
     },
-    "_quat": {
-      "__type__": "cc.Quat",
+    "_eulerAngles": {
+      "__type__": "cc.Vec3",
       "x": 0,
       "y": 0,
-      "z": 0,
-      "w": 1
+      "z": 0
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -6948,7 +6920,11 @@
       "__id__": 148
     },
     "_enabled": true,
-    "_materials": [],
+    "_materials": [
+      {
+        "__uuid__": "eca5d2f2-8ef6-41c2-bbe6-f9c79d09c432"
+      }
+    ],
     "_srcBlendFactor": 770,
     "_dstBlendFactor": 771,
     "_spriteFrame": {
@@ -7187,12 +7163,11 @@
       "y": 1,
       "z": 1
     },
-    "_quat": {
-      "__type__": "cc.Quat",
+    "_eulerAngles": {
+      "__type__": "cc.Vec3",
       "x": 0,
       "y": 0,
-      "z": 0,
-      "w": 1
+      "z": 0
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -7264,12 +7239,11 @@
       "y": 1,
       "z": 1
     },
-    "_quat": {
-      "__type__": "cc.Quat",
+    "_eulerAngles": {
+      "__type__": "cc.Vec3",
       "x": 0,
       "y": 0,
-      "z": 0,
-      "w": 1
+      "z": 0
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -7352,12 +7326,11 @@
       "y": 0.5,
       "z": 1
     },
-    "_quat": {
-      "__type__": "cc.Quat",
+    "_eulerAngles": {
+      "__type__": "cc.Vec3",
       "x": 0,
       "y": 0,
-      "z": 0,
-      "w": 1
+      "z": 0
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -7536,12 +7509,11 @@
       "y": 2,
       "z": 1
     },
-    "_quat": {
-      "__type__": "cc.Quat",
+    "_eulerAngles": {
+      "__type__": "cc.Vec3",
       "x": 0,
       "y": 0,
-      "z": -0.7071067811865475,
-      "w": 0.7071067811865476
+      "z": -90
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -7599,12 +7571,11 @@
       "y": 1,
       "z": 1
     },
-    "_quat": {
-      "__type__": "cc.Quat",
+    "_eulerAngles": {
+      "__type__": "cc.Vec3",
       "x": 0,
       "y": 0,
-      "z": 0.7071067811865475,
-      "w": 0.7071067811865476
+      "z": 90
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -7701,12 +7672,11 @@
       "y": 1,
       "z": 1
     },
-    "_quat": {
-      "__type__": "cc.Quat",
+    "_eulerAngles": {
+      "__type__": "cc.Vec3",
       "x": 0,
       "y": 0,
-      "z": 0.7071067811865475,
-      "w": 0.7071067811865476
+      "z": 90
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -7888,12 +7858,11 @@
       "y": 2,
       "z": 1
     },
-    "_quat": {
-      "__type__": "cc.Quat",
+    "_eulerAngles": {
+      "__type__": "cc.Vec3",
       "x": 0,
       "y": 0,
-      "z": -0.7071067811865475,
-      "w": 0.7071067811865476
+      "z": -90
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -7951,12 +7920,11 @@
       "y": 1,
       "z": 1
     },
-    "_quat": {
-      "__type__": "cc.Quat",
+    "_eulerAngles": {
+      "__type__": "cc.Vec3",
       "x": 0,
       "y": 0,
-      "z": 0.7071067811865475,
-      "w": 0.7071067811865476
+      "z": 90
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -8053,12 +8021,11 @@
       "y": 1,
       "z": 1
     },
-    "_quat": {
-      "__type__": "cc.Quat",
+    "_eulerAngles": {
+      "__type__": "cc.Vec3",
       "x": 0,
       "y": 0,
-      "z": 0.7071067811865475,
-      "w": 0.7071067811865476
+      "z": 90
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -8240,12 +8207,11 @@
       "y": 2,
       "z": 1
     },
-    "_quat": {
-      "__type__": "cc.Quat",
+    "_eulerAngles": {
+      "__type__": "cc.Vec3",
       "x": 0,
       "y": 0,
-      "z": -0.7071067811865475,
-      "w": 0.7071067811865476
+      "z": -90
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -8303,12 +8269,11 @@
       "y": 1,
       "z": 1
     },
-    "_quat": {
-      "__type__": "cc.Quat",
+    "_eulerAngles": {
+      "__type__": "cc.Vec3",
       "x": 0,
       "y": 0,
-      "z": 0.7071067811865475,
-      "w": 0.7071067811865476
+      "z": 90
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -8405,12 +8370,11 @@
       "y": 1,
       "z": 1
     },
-    "_quat": {
-      "__type__": "cc.Quat",
+    "_eulerAngles": {
+      "__type__": "cc.Vec3",
       "x": 0,
       "y": 0,
-      "z": 0.7071067811865475,
-      "w": 0.7071067811865476
+      "z": 90
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -8595,12 +8559,11 @@
       "y": 0.3,
       "z": 1
     },
-    "_quat": {
-      "__type__": "cc.Quat",
+    "_eulerAngles": {
+      "__type__": "cc.Vec3",
       "x": 0,
       "y": 0,
-      "z": 0,
-      "w": 1
+      "z": 0
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -8662,12 +8625,11 @@
       "y": 1,
       "z": 1
     },
-    "_quat": {
-      "__type__": "cc.Quat",
+    "_eulerAngles": {
+      "__type__": "cc.Vec3",
       "x": 0,
       "y": 0,
-      "z": 0,
-      "w": 1
+      "z": 0
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -8725,12 +8687,11 @@
       "y": 1,
       "z": 1
     },
-    "_quat": {
-      "__type__": "cc.Quat",
+    "_eulerAngles": {
+      "__type__": "cc.Vec3",
       "x": 0,
       "y": 0,
-      "z": 0,
-      "w": 1
+      "z": 0
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -8866,12 +8827,11 @@
       "y": 1,
       "z": 1
     },
-    "_quat": {
-      "__type__": "cc.Quat",
+    "_eulerAngles": {
+      "__type__": "cc.Vec3",
       "x": 0,
       "y": 0,
-      "z": 0,
-      "w": 1
+      "z": 0
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -8968,12 +8928,11 @@
       "y": 1,
       "z": 1
     },
-    "_quat": {
-      "__type__": "cc.Quat",
+    "_eulerAngles": {
+      "__type__": "cc.Vec3",
       "x": 0,
       "y": 0,
-      "z": 0,
-      "w": 1
+      "z": 0
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -9158,12 +9117,11 @@
       "y": 0.3,
       "z": 1
     },
-    "_quat": {
-      "__type__": "cc.Quat",
+    "_eulerAngles": {
+      "__type__": "cc.Vec3",
       "x": 0,
       "y": 0,
-      "z": 0,
-      "w": 1
+      "z": 0
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -9225,12 +9183,11 @@
       "y": 1,
       "z": 1
     },
-    "_quat": {
-      "__type__": "cc.Quat",
+    "_eulerAngles": {
+      "__type__": "cc.Vec3",
       "x": 0,
       "y": 0,
-      "z": 0,
-      "w": 1
+      "z": 0
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -9288,12 +9245,11 @@
       "y": 1,
       "z": 1
     },
-    "_quat": {
-      "__type__": "cc.Quat",
+    "_eulerAngles": {
+      "__type__": "cc.Vec3",
       "x": 0,
       "y": 0,
-      "z": 0,
-      "w": 1
+      "z": 0
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -9429,12 +9385,11 @@
       "y": 1,
       "z": 1
     },
-    "_quat": {
-      "__type__": "cc.Quat",
+    "_eulerAngles": {
+      "__type__": "cc.Vec3",
       "x": 0,
       "y": 0,
-      "z": 0,
-      "w": 1
+      "z": 0
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -9531,12 +9486,11 @@
       "y": 1,
       "z": 1
     },
-    "_quat": {
-      "__type__": "cc.Quat",
+    "_eulerAngles": {
+      "__type__": "cc.Vec3",
       "x": 0,
       "y": 0,
-      "z": 0,
-      "w": 1
+      "z": 0
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -9721,12 +9675,11 @@
       "y": 0.3,
       "z": 1
     },
-    "_quat": {
-      "__type__": "cc.Quat",
+    "_eulerAngles": {
+      "__type__": "cc.Vec3",
       "x": 0,
       "y": 0,
-      "z": 0,
-      "w": 1
+      "z": 0
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -9788,12 +9741,11 @@
       "y": 1,
       "z": 1
     },
-    "_quat": {
-      "__type__": "cc.Quat",
+    "_eulerAngles": {
+      "__type__": "cc.Vec3",
       "x": 0,
       "y": 0,
-      "z": 0,
-      "w": 1
+      "z": 0
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -9851,12 +9803,11 @@
       "y": 1,
       "z": 1
     },
-    "_quat": {
-      "__type__": "cc.Quat",
+    "_eulerAngles": {
+      "__type__": "cc.Vec3",
       "x": 0,
       "y": 0,
-      "z": 0,
-      "w": 1
+      "z": 0
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -9992,12 +9943,11 @@
       "y": 1,
       "z": 1
     },
-    "_quat": {
-      "__type__": "cc.Quat",
+    "_eulerAngles": {
+      "__type__": "cc.Vec3",
       "x": 0,
       "y": 0,
-      "z": 0,
-      "w": 1
+      "z": 0
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -10094,12 +10044,11 @@
       "y": 1,
       "z": 1
     },
-    "_quat": {
-      "__type__": "cc.Quat",
+    "_eulerAngles": {
+      "__type__": "cc.Vec3",
       "x": 0,
       "y": 0,
-      "z": 0,
-      "w": 1
+      "z": 0
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -10284,12 +10233,11 @@
       "y": 0.3,
       "z": 1
     },
-    "_quat": {
-      "__type__": "cc.Quat",
+    "_eulerAngles": {
+      "__type__": "cc.Vec3",
       "x": 0,
       "y": 0,
-      "z": 0,
-      "w": 1
+      "z": 0
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -10351,12 +10299,11 @@
       "y": 1,
       "z": 1
     },
-    "_quat": {
-      "__type__": "cc.Quat",
+    "_eulerAngles": {
+      "__type__": "cc.Vec3",
       "x": 0,
       "y": 0,
-      "z": 0,
-      "w": 1
+      "z": 0
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -10414,12 +10361,11 @@
       "y": 1,
       "z": 1
     },
-    "_quat": {
-      "__type__": "cc.Quat",
+    "_eulerAngles": {
+      "__type__": "cc.Vec3",
       "x": 0,
       "y": 0,
-      "z": 0,
-      "w": 1
+      "z": 0
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -10555,12 +10501,11 @@
       "y": 1,
       "z": 1
     },
-    "_quat": {
-      "__type__": "cc.Quat",
+    "_eulerAngles": {
+      "__type__": "cc.Vec3",
       "x": 0,
       "y": 0,
-      "z": 0,
-      "w": 1
+      "z": 0
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -10657,12 +10602,11 @@
       "y": 1,
       "z": 1
     },
-    "_quat": {
-      "__type__": "cc.Quat",
+    "_eulerAngles": {
+      "__type__": "cc.Vec3",
       "x": 0,
       "y": 0,
-      "z": 0,
-      "w": 1
+      "z": 0
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -10847,12 +10791,11 @@
       "y": 0.3,
       "z": 1
     },
-    "_quat": {
-      "__type__": "cc.Quat",
+    "_eulerAngles": {
+      "__type__": "cc.Vec3",
       "x": 0,
       "y": 0,
-      "z": 0,
-      "w": 1
+      "z": 0
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -10914,12 +10857,11 @@
       "y": 1,
       "z": 1
     },
-    "_quat": {
-      "__type__": "cc.Quat",
+    "_eulerAngles": {
+      "__type__": "cc.Vec3",
       "x": 0,
       "y": 0,
-      "z": 0,
-      "w": 1
+      "z": 0
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -10977,12 +10919,11 @@
       "y": 1,
       "z": 1
     },
-    "_quat": {
-      "__type__": "cc.Quat",
+    "_eulerAngles": {
+      "__type__": "cc.Vec3",
       "x": 0,
       "y": 0,
-      "z": 0,
-      "w": 1
+      "z": 0
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -11118,12 +11059,11 @@
       "y": 1,
       "z": 1
     },
-    "_quat": {
-      "__type__": "cc.Quat",
+    "_eulerAngles": {
+      "__type__": "cc.Vec3",
       "x": 0,
       "y": 0,
-      "z": 0,
-      "w": 1
+      "z": 0
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -11220,12 +11160,11 @@
       "y": 1,
       "z": 1
     },
-    "_quat": {
-      "__type__": "cc.Quat",
+    "_eulerAngles": {
+      "__type__": "cc.Vec3",
       "x": 0,
       "y": 0,
-      "z": 0,
-      "w": 1
+      "z": 0
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -11442,12 +11381,11 @@
       "y": 1,
       "z": 1
     },
-    "_quat": {
-      "__type__": "cc.Quat",
+    "_eulerAngles": {
+      "__type__": "cc.Vec3",
       "x": 0,
       "y": 0,
-      "z": 0,
-      "w": 1
+      "z": 0
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -11499,12 +11437,11 @@
       "y": 1,
       "z": 1
     },
-    "_quat": {
-      "__type__": "cc.Quat",
+    "_eulerAngles": {
+      "__type__": "cc.Vec3",
       "x": 0,
       "y": 0,
-      "z": 0,
-      "w": 1
+      "z": 0
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -11574,16 +11511,15 @@
     },
     "_scale": {
       "__type__": "cc.Vec3",
-      "x": 3.5,
-      "y": 3.5,
+      "x": 1,
+      "y": 1,
       "z": 1
     },
-    "_quat": {
-      "__type__": "cc.Quat",
+    "_eulerAngles": {
+      "__type__": "cc.Vec3",
       "x": 0,
       "y": 0,
-      "z": 0,
-      "w": 1
+      "z": 0
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -11639,12 +11575,11 @@
       "y": 1,
       "z": 1
     },
-    "_quat": {
-      "__type__": "cc.Quat",
+    "_eulerAngles": {
+      "__type__": "cc.Vec3",
       "x": 0,
       "y": 0,
-      "z": 0,
-      "w": 1
+      "z": 0
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -11660,7 +11595,11 @@
       "__id__": 289
     },
     "_enabled": true,
-    "_materials": [],
+    "_materials": [
+      {
+        "__uuid__": "eca5d2f2-8ef6-41c2-bbe6-f9c79d09c432"
+      }
+    ],
     "_srcBlendFactor": 770,
     "_dstBlendFactor": 771,
     "_spriteFrame": {
@@ -11739,12 +11678,11 @@
       "y": 1,
       "z": 1
     },
-    "_quat": {
-      "__type__": "cc.Quat",
+    "_eulerAngles": {
+      "__type__": "cc.Vec3",
       "x": 0,
       "y": 0,
-      "z": 0,
-      "w": 1
+      "z": 0
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -11760,7 +11698,11 @@
       "__id__": 292
     },
     "_enabled": true,
-    "_materials": [],
+    "_materials": [
+      {
+        "__uuid__": "eca5d2f2-8ef6-41c2-bbe6-f9c79d09c432"
+      }
+    ],
     "_srcBlendFactor": 770,
     "_dstBlendFactor": 771,
     "_spriteFrame": {
@@ -11839,12 +11781,11 @@
       "y": 1,
       "z": 1
     },
-    "_quat": {
-      "__type__": "cc.Quat",
+    "_eulerAngles": {
+      "__type__": "cc.Vec3",
       "x": 0,
       "y": 0,
-      "z": 0,
-      "w": 1
+      "z": 0
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -11860,7 +11801,11 @@
       "__id__": 295
     },
     "_enabled": true,
-    "_materials": [],
+    "_materials": [
+      {
+        "__uuid__": "eca5d2f2-8ef6-41c2-bbe6-f9c79d09c432"
+      }
+    ],
     "_srcBlendFactor": 770,
     "_dstBlendFactor": 771,
     "_spriteFrame": {
@@ -11939,12 +11884,11 @@
       "y": 1,
       "z": 1
     },
-    "_quat": {
-      "__type__": "cc.Quat",
+    "_eulerAngles": {
+      "__type__": "cc.Vec3",
       "x": 0,
       "y": 0,
-      "z": 0,
-      "w": 1
+      "z": 0
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -11960,7 +11904,11 @@
       "__id__": 298
     },
     "_enabled": true,
-    "_materials": [],
+    "_materials": [
+      {
+        "__uuid__": "eca5d2f2-8ef6-41c2-bbe6-f9c79d09c432"
+      }
+    ],
     "_srcBlendFactor": 770,
     "_dstBlendFactor": 771,
     "_spriteFrame": {
@@ -12081,12 +12029,11 @@
       "y": 1,
       "z": 1
     },
-    "_quat": {
-      "__type__": "cc.Quat",
+    "_eulerAngles": {
+      "__type__": "cc.Vec3",
       "x": 0,
       "y": 0,
-      "z": 0,
-      "w": 1
+      "z": 0
     },
     "_skewX": 0,
     "_skewY": 0,

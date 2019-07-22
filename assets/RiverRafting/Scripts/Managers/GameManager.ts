@@ -42,28 +42,28 @@ export default class GameManager extends cc.Component
 
     GetData()
     {
-        var vars = {};
-        var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value)
-        {
-            vars[key] = value;
-        });
+        // var vars = {};
+        // var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value)
+        // {
+        //     vars[key] = value;
+        // });
 
-        //alert(vars["FBID"]);
-        var gameSeconds;
+        // //alert(vars["FBID"]);
+        // var gameSeconds;
 
-        if (vars["time"] == null)
-        {
-            this._matchManager._timeManager.totaltime = 180;
-        }
-        else
-        {
-            this._matchManager._timeManager.totaltime = vars["time"];
-        }
+        // if (vars["time"] == null)
+        // {
+        //     this._matchManager._timeManager.totaltime = 180;
+        // }
+        // else
+        // {
+        //     this._matchManager._timeManager.totaltime = vars["time"];
+        // }
 
 
-        // var gamedata = window.$Arena.getGameData();
-        // this._matchManager._timeManager.totaltime = gamedata.play_time_seconds;
-        // GameManager.Seed = gamedata.seed;
+        var gamedata = window.$Arena.getGameData();
+        this._matchManager._timeManager.totaltime = gamedata.play_time_seconds;
+        GameManager.Seed = gamedata.seed;
     }
 
     OnGameOver()

@@ -30,7 +30,7 @@
       "subMetas": {}
     },
     "SPW_Medieval_Boat.prefab": {
-      "ver": "1.1.0",
+      "ver": "1.2.0",
       "uuid": "3bcb3e5e-61d2-4d53-816c-cd78e6b699ba",
       "optimizationPolicy": "AUTO",
       "asyncLoadAssets": false,
