@@ -1,6 +1,7 @@
 import MatchManager from "./MatchManager";
 import { Difficulty } from "../Enums";
-import GameManager from "./GameManager";
+import GameManager, { GameState } from "./GameManager";
+import Player from "../Player";
 
 const { ccclass, property } = cc._decorator;
 
@@ -12,40 +13,28 @@ export default class TimeManager extends cc.Component
     TimeLabel: cc.Label = null;
 
     _matchManager: MatchManager = null;
-
     @property({
         type: GameManager,
         visible: true,
         serializable: true
     })
     _gameManagerRef: GameManager = null;
+    @property({
+        type: Player,
+        visible: true,
+        serializable: true
+    })
+    _player: Player = null;
 
     @property({
         visible: true,
         serializable: true
     })
     public totaltime: number = 180;
-
     @property
     ShouldTimePass: boolean = true;
-
     currentime: number;
     sequenceas;
-    // static BonusTime: number = 0;
-
-    // LIFE-CYCLE CALLBACKS:
-
-    onLoad()
-    {
-
-    }
-
-    start()
-    {
-        // this.restartTimer();
-        // this.startTimer();
-    }
-
 
     restartTimer()
     {
@@ -70,24 +59,24 @@ export default class TimeManager extends cc.Component
 
                 if (this.currentime < this.totaltime / 2)
                 {
-                    this._gameManagerRef.currentDifficulty = Difficulty.Hard;
+                    GameManager.currentDifficulty = Difficulty.Hard;
+                    this._player.MAXMOVEMENTSPEED = 2;
+                    this._player.StartAccelerationSequence();
                 }
             }
             else
             {
                 //trigger game over
                 this._gameManagerRef.OnGameOver();
+                GameManager.currentGameState = GameState.PostGame;
             }
         }
         else
         {
             this.TimeLabel.string = "";
-            // TimeManager.BonusTime = this.currentime;
             this.node.stopAction(this.sequenceas);
         }
     }
-
-    // update (dt) {}
 
     calculateFormat(time: number)
     {

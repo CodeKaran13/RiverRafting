@@ -51,6 +51,12 @@ export default class UIManager extends cc.Component
         serializable: true
     })
     ScoreLabel: cc.Label = null;
+    @property({
+        type: cc.Label,
+        visible: true,
+        serializable: true
+    })
+    SubmitScoreLabel: cc.Label = null;
 
     // All Script Refs
     @property({
@@ -88,8 +94,18 @@ export default class UIManager extends cc.Component
         this.ScoreLabel.string = '' + score;
     }
 
-    // All Button functions
+    OpenSubmitWindow()
+    {
+        this.SubmitScoreLabel.string = '' + this._matchManager._scoreManager.totalScore;
+        this.SubmitScoreWindow.active = true;
+    }
 
+    CloseSubmitWindow()
+    {
+        this.SubmitScoreWindow.active = false;
+    }
+
+    // All Button functions
     OnPlayButtonClick()
     {
         GameManager.currentGameState = GameState.InGame;
@@ -103,6 +119,7 @@ export default class UIManager extends cc.Component
         this.MainMenuWindow.active = false;
         this.GameWindow.active = true;
     }
+
     // Final submit button
     OnSubmitButtonClick()
     {

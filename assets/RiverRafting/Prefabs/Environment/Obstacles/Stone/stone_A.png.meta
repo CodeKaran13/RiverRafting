@@ -1,6 +1,6 @@
 {
   "ver": "2.3.1",
-  "uuid": "e7cb270c-4886-418f-85b3-3712f57f7477",
+  "uuid": "81f98d73-1902-4578-a9ec-bfbf7e7b8c76",
   "type": "sprite",
   "wrapMode": "clamp",
   "filterMode": "bilinear",
@@ -9,8 +9,8 @@
   "subMetas": {
     "stone_A": {
       "ver": "1.0.4",
-      "uuid": "417835af-7a1e-4006-a0fb-d2a9088b2bf6",
-      "rawTextureUuid": "e7cb270c-4886-418f-85b3-3712f57f7477",
+      "uuid": "b90cf324-be86-4298-8ef8-34b2c7e842ba",
+      "rawTextureUuid": "81f98d73-1902-4578-a9ec-bfbf7e7b8c76",
       "trimType": "auto",
       "trimThreshold": 1,
       "rotated": false,

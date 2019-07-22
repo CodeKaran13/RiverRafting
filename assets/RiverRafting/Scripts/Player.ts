@@ -1,4 +1,5 @@
 import GameManager, { GameState } from "./Managers/GameManager";
+import { Difficulty } from "./Enums";
 
 const { ccclass, property } = cc._decorator;
 
@@ -11,8 +12,8 @@ export default class Player extends cc.Component
     turnSpeed: number = 0;
 
     MAXTURNSPEED: number = 3;
-    MINMOVEMENTSPEED: number = 2;
-    MAXMOVEMENTSPEED: number = 2;//12
+    MINMOVEMENTSPEED: number = 0.2;
+    MAXMOVEMENTSPEED: number = 1;
 
     turnSequence: cc.Action = null;
     brakeSequence;
@@ -50,7 +51,7 @@ export default class Player extends cc.Component
         // console.log('player pos: ' + this.node.position);
         // console.log('forward vector pos: ' + this.node.children[3].convertToWorldSpaceAR(cc.Vec2.ZERO));
 
-        var direction = this.node.children[4].convertToWorldSpaceAR(cc.Vec2.ZERO).sub(this.node.position);
+        var direction = this.node.children[2].convertToWorldSpaceAR(cc.Vec2.ZERO).sub(this.node.position);
         this.node.position = this.node.position.add(direction.normalizeSelf().mulSelf(this.movementSpeed));
     }
 
@@ -66,7 +67,7 @@ export default class Player extends cc.Component
 
     CheckBound()
     {
-        var results = cc.director.getPhysicsManager().rayCast(this.node.position, this.node.children[4].convertToWorldSpaceAR(cc.Vec2.ZERO), cc.RayCastType.Closest);
+        var results = cc.director.getPhysicsManager().rayCast(this.node.position, this.node.children[2].convertToWorldSpaceAR(cc.Vec2.ZERO), cc.RayCastType.Closest);
         if (results.length > 1)
         {
             for (let i = 0; i < results.length; i++)
@@ -103,8 +104,8 @@ export default class Player extends cc.Component
         // this.node.children[0].eulerAngles = this.lerpVec3(this.node.children[0].eulerAngles, new cc.Vec3(-90, 205, 0), 0.1);
         // this.node.children[0].eulerAngles = new cc.Vec3(-90, 205, 0);
 
-        this.node.children[2].getComponent(dragonBones.ArmatureDisplay).timeScale = 0;
-        this.node.children[1].getComponent(dragonBones.ArmatureDisplay).timeScale = 3;
+        // this.node.children[2].getComponent(dragonBones.ArmatureDisplay).timeScale = 0;
+        // this.node.children[1].getComponent(dragonBones.ArmatureDisplay).timeScale = 3;
 
         this.CheckBound();
     }
@@ -117,8 +118,8 @@ export default class Player extends cc.Component
 
         // this.node.children[0].eulerAngles = new cc.Vec3(-90, 155, 0);
 
-        this.node.children[2].getComponent(dragonBones.ArmatureDisplay).timeScale = 3;
-        this.node.children[1].getComponent(dragonBones.ArmatureDisplay).timeScale = 0;
+        // this.node.children[2].getComponent(dragonBones.ArmatureDisplay).timeScale = 3;
+        // this.node.children[1].getComponent(dragonBones.ArmatureDisplay).timeScale = 0;
 
         this.CheckBound();
     }
@@ -131,8 +132,8 @@ export default class Player extends cc.Component
 
         // this.node.children[0].eulerAngles = new cc.Vec3(-90, 180, 0);
 
-        this.node.children[2].getComponent(dragonBones.ArmatureDisplay).timeScale = 3;
-        this.node.children[1].getComponent(dragonBones.ArmatureDisplay).timeScale = 3;
+        // this.node.children[2].getComponent(dragonBones.ArmatureDisplay).timeScale = 3;
+        // this.node.children[1].getComponent(dragonBones.ArmatureDisplay).timeScale = 3;
 
         this.CheckBound();
     }
@@ -181,14 +182,14 @@ export default class Player extends cc.Component
     startAccelerating()
     {
         // console.log('start accelerating');
-        var time = cc.delayTime(0.1);
+        var time = cc.delayTime(0.2);
         this.accelerateSequence = cc.sequence(time, cc.callFunc(this.accelerate, this));
         this.node.runAction(this.accelerateSequence.repeatForever());
     }
 
     accelerate()
     {
-        this.movementSpeed += 1;
+        this.movementSpeed += 0.2;
         // console.log('movement speed: ' + this.movementSpeed);
         if (this.movementSpeed >= this.MAXMOVEMENTSPEED)
         {

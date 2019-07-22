@@ -83,9 +83,9 @@ export default class MatchManager extends cc.Component
                 nextMap.setPosition(new cc.Vec2(0, this.totalHeight));
                 nextMap.active = true;
 
-                for (let i = 0; i < nextMap.children[0].childrenCount; i++)
+                for (let i = 0; i < nextMap.children[1].childrenCount; i++)
                 {
-                    nextMap.children[0].children[i].active = true;
+                    nextMap.children[1].children[i].active = true;
                 }
 
                 this._obstacleSpawner.SpawnDocks();
@@ -100,9 +100,9 @@ export default class MatchManager extends cc.Component
                 nextMap.setPosition(new cc.Vec2(0, this.totalHeight));
                 nextMap.active = true;
 
-                for (let i = 0; i < nextMap.children[0].childrenCount; i++)
+                for (let i = 0; i < nextMap.children[1].childrenCount; i++)
                 {
-                    nextMap.children[0].children[i].active = true;
+                    nextMap.children[1].children[i].active = true;
                 }
 
                 break;
@@ -116,9 +116,9 @@ export default class MatchManager extends cc.Component
                 nextMap.setPosition(new cc.Vec2(0, this.totalHeight));
                 nextMap.active = true;
 
-                for (let i = 0; i < nextMap.children[0].childrenCount; i++)
+                for (let i = 0; i < nextMap.children[1].childrenCount; i++)
                 {
-                    nextMap.children[0].children[i].active = true;
+                    nextMap.children[1].children[i].active = true;
                 }
 
                 break;
@@ -132,9 +132,9 @@ export default class MatchManager extends cc.Component
                 nextMap.setPosition(new cc.Vec2(0, this.totalHeight));
                 nextMap.active = true;
 
-                for (let i = 0; i < nextMap.children[0].childrenCount; i++)
+                for (let i = 0; i < nextMap.children[1].childrenCount; i++)
                 {
-                    nextMap.children[0].children[i].active = true;
+                    nextMap.children[1].children[i].active = true;
                 }
                 break;
             case 5:
@@ -147,9 +147,9 @@ export default class MatchManager extends cc.Component
                 nextMap.setPosition(new cc.Vec2(0, this.totalHeight));
                 nextMap.active = true;
 
-                for (let i = 0; i < nextMap.children[0].childrenCount; i++)
+                for (let i = 0; i < nextMap.children[1].childrenCount; i++)
                 {
-                    nextMap.children[0].children[i].active = true;
+                    nextMap.children[1].children[i].active = true;
                 }
                 break;
             case 6:
@@ -162,9 +162,9 @@ export default class MatchManager extends cc.Component
                 nextMap.setPosition(new cc.Vec2(0, this.totalHeight));
                 nextMap.active = true;
 
-                for (let i = 0; i < nextMap.children[0].childrenCount; i++)
+                for (let i = 0; i < nextMap.children[1].childrenCount; i++)
                 {
-                    nextMap.children[0].children[i].active = true;
+                    nextMap.children[1].children[i].active = true;
                 }
                 break;
         }
