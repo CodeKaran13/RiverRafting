@@ -104,8 +104,8 @@ export default class Player extends cc.Component
         // this.node.children[0].eulerAngles = this.lerpVec3(this.node.children[0].eulerAngles, new cc.Vec3(-90, 205, 0), 0.1);
         // this.node.children[0].eulerAngles = new cc.Vec3(-90, 205, 0);
 
-        // this.node.children[2].getComponent(dragonBones.ArmatureDisplay).timeScale = 0;
-        // this.node.children[1].getComponent(dragonBones.ArmatureDisplay).timeScale = 3;
+        this.node.children[4].getComponent(dragonBones.ArmatureDisplay).timeScale = 0;
+        this.node.children[3].getComponent(dragonBones.ArmatureDisplay).timeScale = 3;
 
         this.CheckBound();
     }
@@ -118,8 +118,8 @@ export default class Player extends cc.Component
 
         // this.node.children[0].eulerAngles = new cc.Vec3(-90, 155, 0);
 
-        // this.node.children[2].getComponent(dragonBones.ArmatureDisplay).timeScale = 3;
-        // this.node.children[1].getComponent(dragonBones.ArmatureDisplay).timeScale = 0;
+        this.node.children[4].getComponent(dragonBones.ArmatureDisplay).timeScale = 3;
+        this.node.children[3].getComponent(dragonBones.ArmatureDisplay).timeScale = 0;
 
         this.CheckBound();
     }
@@ -132,8 +132,8 @@ export default class Player extends cc.Component
 
         // this.node.children[0].eulerAngles = new cc.Vec3(-90, 180, 0);
 
-        // this.node.children[2].getComponent(dragonBones.ArmatureDisplay).timeScale = 3;
-        // this.node.children[1].getComponent(dragonBones.ArmatureDisplay).timeScale = 3;
+        this.node.children[4].getComponent(dragonBones.ArmatureDisplay).timeScale = 3;
+        this.node.children[3].getComponent(dragonBones.ArmatureDisplay).timeScale = 3;
 
         this.CheckBound();
     }
