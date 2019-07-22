@@ -32,7 +32,7 @@ export default class CoinPack extends Collectibles
             if (this._player.position.y - 500 > this.myPos)
             {
                 // console.log('player is above me');
-                this._CollectiblePoolRef.addCollectibleBackToPool(this.node);
+                this._CollectiblePool.addCollectibleBackToPool(this.node);
             }
         }
     }
@@ -45,7 +45,7 @@ export default class CoinPack extends Collectibles
 
             // increase score
             this._scoreManager.AddScore(this.awardScore);
-            this._CollectiblePoolRef.addCollectibleBackToPool(this.node);
+            this._CollectiblePool.addCollectibleBackToPool(this.node);
         }
     }
 }

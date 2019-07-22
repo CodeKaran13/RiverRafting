@@ -5,78 +5,68 @@ import ScoreManager from "./ScoreManager";
 import UIManager from "./UIManager";
 import ObstacleSpawner from "../GamePlay/ObstacleSpawner";
 import BonusSystem from "../GamePlay/BonusSystem";
+import ItemSpawner from "../GamePlay/ItemSpawner";
 
 const { ccclass, property } = cc._decorator;
 
 @ccclass
 export default class MatchManager extends cc.Component
 {
-
+    // RiverMap Prefabs Parent Node
     @property(cc.Node)
     LevelPrefabs: cc.Node = null;
 
+    // All script Refs
     @property({
         type: PoolingSystem,
         visible: true,
         serializable: true
     })
     _poolingSystem: PoolingSystem = null;
-
     @property({
         type: TimeManager,
         visible: true,
         serializable: true
     })
-    _timeManagerRef: TimeManager = null;
-
+    _timeManager: TimeManager = null;
     @property({
         type: GameManager,
         visible: true,
         serializable: true
     })
-    _gameManagerRef: GameManager = null;
-
-    @property({
-        type: ScoreManager,
-        visible: true,
-        serializable: true
-    })
-    _scoreManagerRef: ScoreManager = null;
-
-    @property({
-        type: UIManager,
-        visible: true,
-        serializable: true
-    })
-    _UIManagerRef: UIManager = null;
-
+    _gameManager: GameManager = null;
+    _scoreManager: ScoreManager = null;
+    _UIManager: UIManager = null;
     @property({
         type: BonusSystem,
         visible: true,
         serializable: true
     })
     _bonusSystem: BonusSystem = null;
-
     _obstacleSpawner: ObstacleSpawner = null;
+    _itemSpawner: ItemSpawner = null;
 
+    // Script variables
     totalHeight: number = 0;
-
     @property
     totalObstacleToSpawnOnPrefab: number = 5;
 
     onLoad() 
     {
-        this._timeManagerRef._matchManagerRef = this;
-        this._gameManagerRef._matchManagerRef = this;
+        this._timeManager._matchManager = this;
+        this._gameManager._matchManager = this;
         this._obstacleSpawner = this.node.getComponent(ObstacleSpawner);
+        this._itemSpawner = this.node.getComponent(ItemSpawner);
     }
 
-    start()
+    StartGame()
     {
         this.spawnNextRiverMap(0);
 
         this._bonusSystem.resetBonus();
         this._bonusSystem.restartCounter();
+
+        this._itemSpawner.onGameStart();
     }
 
     spawnNextRiverMap(height: number)
@@ -183,9 +173,9 @@ export default class MatchManager extends cc.Component
     getRandomNumber()
     {
         // will return 1,2,3,4
-        var rand = Math.floor(Math.random() * 4) + 1;
+        // var rand = Math.floor(Math.random() * 4) + 1;
         // console.log('random number: ' + rand);
-        return rand;
-        // return 1;
+        // return rand;
+        return 2;
     }
 }

@@ -5,38 +5,17 @@ const { ccclass, property } = cc._decorator;
 @ccclass
 export default class BonusSystem extends cc.Component
 {
-    currentTime: number = 0;
 
+    currentTime: number = 0;
     @property
     bonusTime: number = 5;
-
     @property
     bonusReward: number = 500;
-
     bonusMultiplier: number = 1;
-
     sequence: cc.ActionInterval = null;
 
-    @property({
-        type: ScoreManager,
-        visible: true,
-        serializable: true
-    })
+    // All script Refs
     _scoreManager: ScoreManager = null;
-
-    // IsSequenceActive: boolean = false;
-
-    // onLoad () {}
-
-    start()
-    {
-
-    }
-
-    update (dt) 
-    {
-        
-    }
 
     resetBonus()
     {

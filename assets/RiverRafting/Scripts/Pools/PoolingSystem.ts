@@ -6,7 +6,7 @@ const { ccclass, property } = cc._decorator;
 @ccclass
 export default class PoolingSystem extends cc.Component
 {
-
+    //All river prefabs refs
     @property({
         type: cc.Prefab,
         visible: true,
@@ -14,23 +14,24 @@ export default class PoolingSystem extends cc.Component
     })
     RiverMapsPrefabs: cc.Prefab[] = [];
 
+    // All script refs
     @property({
         type: ItemSpawner,
         visible: true,
         serializable: true
     })
     _itemSpawner: ItemSpawner = null;
-
+    @property({
+        type:ObstacleSpawner,
+        visible: true,
+        serializable: true
+    })
     _obstacleSpawner: ObstacleSpawner = null;
-
-    // onLoad () {}
 
     start()
     {
 
     }
-
-    // update (dt) {}
 
     addRiverMapToPool(Type: cc.Node)
     {

@@ -6,12 +6,8 @@ const { ccclass, property } = cc._decorator;
 @ccclass
 export default class ObstacleSpawner extends cc.Component
 {
-    @property({
-        type: MatchManager,
-        visible: true,
-        serializable: true
-    })
-    _matchManagerRef: MatchManager = null;
+    @property(MatchManager)
+    _matchManager: MatchManager = null;
 
     @property({
         type: ObstaclePool,
@@ -33,7 +29,7 @@ export default class ObstacleSpawner extends cc.Component
 
     onLoad()
     {
-        this._matchManagerRef._poolingSystem._obstacleSpawner = this;
+        
     }
 
     SpawnDocks()

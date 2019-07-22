@@ -6,7 +6,7 @@ const { ccclass, property } = cc._decorator;
 export default class RiverMap extends cc.Component
 {
 
-    _matchManagerRef: MatchManager = null;
+    _matchManager: MatchManager = null;
 
     player: cc.Node = null;
 
@@ -29,7 +29,7 @@ export default class RiverMap extends cc.Component
 
     onLoad()
     {
-        this._matchManagerRef = cc.find('Script Collection/Match Manager').getComponent('MatchManager');
+        this._matchManager = cc.find('Script Collection/Match Manager').getComponent('MatchManager');
         this.player = cc.find('Player');
     }
 
@@ -42,9 +42,9 @@ export default class RiverMap extends cc.Component
     {
         if (this.CheckPlayerLocation)
         {
-            if (this.player.getPosition().y > this._matchManagerRef.totalHeight + 800)
+            if (this.player.getPosition().y > this._matchManager.totalHeight + 800)
             {
-                this._matchManagerRef._poolingSystem.addRiverMapToPool(this.node);
+                this._matchManager._poolingSystem.addRiverMapToPool(this.node);
                 this.CheckPlayerLocation = false;
             }
         }

@@ -1,14 +1,24 @@
 import { Difficulty } from "../Enums";
 import MatchManager from "./MatchManager";
 
+export enum GameState
+{
+    PreGame = 0,
+    InGame = 1,
+    PostGame = 2
+}
+
 const { ccclass, property } = cc._decorator;
 
 @ccclass
 export default class GameManager extends cc.Component
 {
-    _matchManagerRef: MatchManager = null;
+    _matchManager: MatchManager = null;
 
+    public static currentGameState: GameState = GameState.PreGame;
     currentDifficulty: Difficulty = Difficulty.Easy;
+
+    public static Seed: number = null;
 
     onLoad()
     {
@@ -27,13 +37,37 @@ export default class GameManager extends cc.Component
 
     start()
     {
-        this._matchManagerRef._timeManagerRef.restartTimer();
-        this._matchManagerRef._timeManagerRef.startTimer();
+        // this.GetData();
     }
 
-    // update (dt) {}
+    GetData()
+    {
+        // var vars = {};
+        // var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value)
+        // {
+        //     vars[key] = value;
+        // });
 
-    OnGameOver() {
+        // //alert(vars["FBID"]);
+        // var gameSeconds;
 
+        // if (vars["time"] == null)
+        // {
+        //     this._matchManager._timeManager.totaltime = 180;
+        // }
+        // else
+        // {
+        //     this._matchManager._timeManager.totaltime = vars["time"];
+        // }
+
+
+        var gamedata = window.$Arena.getGameData();
+        this._matchManager._timeManager.totaltime = gamedata.play_time_seconds;
+        GameManager.Seed = gamedata.seed;
+    }
+
+    OnGameOver()
+    {
+        window.$Arena.submitScore(this._matchManager._scoreManager.totalScore, GameManager.Seed);
     }
 }

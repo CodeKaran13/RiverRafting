@@ -11,7 +11,7 @@ export default class TimeManager extends cc.Component
     @property(cc.Label)
     TimeLabel: cc.Label = null;
 
-    _matchManagerRef: MatchManager = null;
+    _matchManager: MatchManager = null;
 
     @property({
         type: GameManager,
