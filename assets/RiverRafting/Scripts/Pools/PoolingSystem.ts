@@ -89,15 +89,13 @@ export default class PoolingSystem extends cc.Component
                 return ref;
 
             case 2:
-                // var ref = cc.instantiate(this.RiverMapsPrefabs[1]);
                 var ref = this.RiverMapsSet1.pop();
-                var rivermap = ref.getComponent(RiverMap);
-                rivermap.IsActive = true;
-                for (let i = 0; i < rivermap.SpawnLocations.length; i++)
-                {
-                    this._itemSpawner.SpawnPos[i] = rivermap.SpawnLocations[i];
-                }
-                ref.getComponent(RiverMap).IsActive = true;
+                // var rivermap = ref.getComponent(RiverMap);
+                // for (let i = 0; i < rivermap.SpawnLocations.length; i++)
+                // {
+                //     this._itemSpawner.SpawnPos[i] = rivermap.SpawnLocations[i];
+                // }
+                // rivermap.IsActive = true;
                 return ref;
 
             case 3:
@@ -138,6 +136,7 @@ export default class PoolingSystem extends cc.Component
     getWavePrefabFromPool(): cc.Node
     {
         var ref: cc.Node = this.WavePrefabs.pop();
+        ref.getComponent(Waves).IsActive = true;
         return ref;
     }
 }

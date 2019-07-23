@@ -63,7 +63,16 @@ export default class MatchManager extends cc.Component
 
     StartGame()
     {
-        this.spawnNextRiverMap(0);
+        this.totalHeight = 0;
+
+        for(let i = 0; i < 20; i++)
+        {
+            // console.log('total height: ' + this.totalHeight);
+            this.spawnNextRiverMap(this.totalHeight);
+            this.totalHeight = this.totalHeight + 1004;
+        }
+
+        // this.spawnNextRiverMap(0);
         this.spawnNextWave(0);
 
         this._bonusSystem.resetBonus();
@@ -95,20 +104,19 @@ export default class MatchManager extends cc.Component
 
                 break;
             case 2:
-                this.totalHeight = this.totalHeight + height;
+                // this.totalHeight = this.totalHeight + height;
                 var nextMap = this._poolingSystem.getRiverMapfromPool(2);
 
                 nextMap.parent.removeChild(nextMap);
-                this.LevelPrefabs.addChild(nextMap, 0, nextMap.name);
-                
-                nextMap.setPosition(cc.Vec2.ZERO);
+                this.LevelPrefabs.addChild(nextMap);
+
                 nextMap.setPosition(new cc.Vec2(0, this.totalHeight));
                 nextMap.active = true;
 
-                for (let i = 0; i < nextMap.children[0].childrenCount; i++)
-                {
-                    nextMap.children[0].children[i].active = true;
-                }
+                // for (let i = 0; i < nextMap.children[0].childrenCount; i++)
+                // {
+                //     nextMap.children[0].children[i].active = true;
+                // }
 
                 break;
             case 3:
@@ -187,11 +195,11 @@ export default class MatchManager extends cc.Component
     totalWaveHeight: number = 0;
     spawnNextWave(height: number)
     {
-        this.totalWaveHeight = this.totalWaveHeight + height; 
+        this.totalWaveHeight = this.totalWaveHeight + height;
         var wavePrefab: cc.Node = this._poolingSystem.getWavePrefabFromPool();
 
         wavePrefab.parent.removeChild(wavePrefab);
-        this.WavePrefabs.addChild(wavePrefab);
+        this.WavePrefabs.addChild(wavePrefab, 0, wavePrefab.name);
 
         wavePrefab.setPosition(cc.Vec2.ZERO);
         wavePrefab.setPosition(new cc.Vec2(0, this.totalWaveHeight));

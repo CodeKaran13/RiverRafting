@@ -5,9 +5,9 @@ const { ccclass, property } = cc._decorator;
 @ccclass
 export default class RiverMap extends cc.Component
 {
-
     _matchManager: MatchManager = null;
 
+    @property(cc.Node)
     player: cc.Node = null;
 
     @property({
@@ -30,12 +30,6 @@ export default class RiverMap extends cc.Component
     onLoad()
     {
         this._matchManager = cc.find('Script Collection/Match Manager').getComponent('MatchManager');
-        this.player = cc.find('Player');
-    }
-
-    start()
-    {
-
     }
 
     update(dt)
