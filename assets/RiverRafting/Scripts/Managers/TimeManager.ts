@@ -60,7 +60,7 @@ export default class TimeManager extends cc.Component
                 if (this.currentime < this.totaltime / 2)
                 {
                     GameManager.currentDifficulty = Difficulty.Hard;
-                    this._player.MAXMOVEMENTSPEED = 2;
+                    this._player.MAXMOVEMENTSPEED = 3;
                     this._player.StartAccelerationSequence();
                 }
             }

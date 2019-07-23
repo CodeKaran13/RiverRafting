@@ -7,12 +7,12 @@ export default class SpawnNextMap extends cc.Component
 {
     _matchManager: MatchManager = null;
 
-    player: cc.Node = null;
+    // player: cc.Node = null;
 
     onLoad() 
     {
         this._matchManager = cc.find('Script Collection/Match Manager').getComponent('MatchManager');
-        this.player = cc.find('Player');
+        // this.player = cc.find('Player');
     }
 
     start()

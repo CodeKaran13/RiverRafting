@@ -42,8 +42,9 @@ export default class RiverMap extends cc.Component
     {
         if (this.CheckPlayerLocation)
         {
-            if (this.player.getPosition().y > this._matchManager.totalHeight + 800)
+            if (this.player.position.y > this._matchManager.totalHeight + 300)
             {
+                // console.log('player above me river prefab');
                 this._matchManager._poolingSystem.addRiverMapToPool(this.node);
                 this.CheckPlayerLocation = false;
             }

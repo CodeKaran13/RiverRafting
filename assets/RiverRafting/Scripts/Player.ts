@@ -12,8 +12,8 @@ export default class Player extends cc.Component
     turnSpeed: number = 0;
 
     MAXTURNSPEED: number = 3;
-    MINMOVEMENTSPEED: number = 0.2;
-    MAXMOVEMENTSPEED: number = 1;
+    MINMOVEMENTSPEED: number = 1;
+    MAXMOVEMENTSPEED: number = 2;
 
     turnSequence: cc.Action = null;
     brakeSequence;

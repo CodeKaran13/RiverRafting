@@ -12,9 +12,11 @@ const { ccclass, property } = cc._decorator;
 @ccclass
 export default class MatchManager extends cc.Component
 {
-    // RiverMap Prefabs Parent Node
+    // RiverMap/Wave Prefabs Parent Node
     @property(cc.Node)
     LevelPrefabs: cc.Node = null;
+    @property(cc.Node)
+    WavePrefabs: cc.Node = null;
 
     // All script Refs
     @property({
@@ -62,11 +64,12 @@ export default class MatchManager extends cc.Component
     StartGame()
     {
         this.spawnNextRiverMap(0);
+        this.spawnNextWave(0);
 
         this._bonusSystem.resetBonus();
         this._bonusSystem.restartCounter();
 
-        this._itemSpawner.onGameStart();
+        // this._itemSpawner.onGameStart();
     }
 
     spawnNextRiverMap(height: number)
@@ -83,9 +86,9 @@ export default class MatchManager extends cc.Component
                 nextMap.setPosition(new cc.Vec2(0, this.totalHeight));
                 nextMap.active = true;
 
-                for (let i = 0; i < nextMap.children[1].childrenCount; i++)
+                for (let i = 0; i < nextMap.children[0].childrenCount; i++)
                 {
-                    nextMap.children[1].children[i].active = true;
+                    nextMap.children[0].children[i].active = true;
                 }
 
                 this._obstacleSpawner.SpawnDocks();
@@ -95,14 +98,16 @@ export default class MatchManager extends cc.Component
                 this.totalHeight = this.totalHeight + height;
                 var nextMap = this._poolingSystem.getRiverMapfromPool(2);
 
+                nextMap.parent.removeChild(nextMap);
                 this.LevelPrefabs.addChild(nextMap, 0, nextMap.name);
+                
                 nextMap.setPosition(cc.Vec2.ZERO);
                 nextMap.setPosition(new cc.Vec2(0, this.totalHeight));
                 nextMap.active = true;
 
-                for (let i = 0; i < nextMap.children[1].childrenCount; i++)
+                for (let i = 0; i < nextMap.children[0].childrenCount; i++)
                 {
-                    nextMap.children[1].children[i].active = true;
+                    nextMap.children[0].children[i].active = true;
                 }
 
                 break;
@@ -116,9 +121,9 @@ export default class MatchManager extends cc.Component
                 nextMap.setPosition(new cc.Vec2(0, this.totalHeight));
                 nextMap.active = true;
 
-                for (let i = 0; i < nextMap.children[1].childrenCount; i++)
+                for (let i = 0; i < nextMap.children[0].childrenCount; i++)
                 {
-                    nextMap.children[1].children[i].active = true;
+                    nextMap.children[0].children[i].active = true;
                 }
 
                 break;
@@ -132,9 +137,9 @@ export default class MatchManager extends cc.Component
                 nextMap.setPosition(new cc.Vec2(0, this.totalHeight));
                 nextMap.active = true;
 
-                for (let i = 0; i < nextMap.children[1].childrenCount; i++)
+                for (let i = 0; i < nextMap.children[0].childrenCount; i++)
                 {
-                    nextMap.children[1].children[i].active = true;
+                    nextMap.children[0].children[i].active = true;
                 }
                 break;
             case 5:
@@ -147,9 +152,9 @@ export default class MatchManager extends cc.Component
                 nextMap.setPosition(new cc.Vec2(0, this.totalHeight));
                 nextMap.active = true;
 
-                for (let i = 0; i < nextMap.children[1].childrenCount; i++)
+                for (let i = 0; i < nextMap.children[0].childrenCount; i++)
                 {
-                    nextMap.children[1].children[i].active = true;
+                    nextMap.children[0].children[i].active = true;
                 }
                 break;
             case 6:
@@ -162,14 +167,13 @@ export default class MatchManager extends cc.Component
                 nextMap.setPosition(new cc.Vec2(0, this.totalHeight));
                 nextMap.active = true;
 
-                for (let i = 0; i < nextMap.children[1].childrenCount; i++)
+                for (let i = 0; i < nextMap.children[0].childrenCount; i++)
                 {
-                    nextMap.children[1].children[i].active = true;
+                    nextMap.children[0].children[i].active = true;
                 }
                 break;
         }
     }
-
     getRandomNumber()
     {
         // will return 1,2,3,4
@@ -177,5 +181,21 @@ export default class MatchManager extends cc.Component
         // console.log('random number: ' + rand);
         // return rand;
         return 2;
+    }
+
+    // Spawn Wave Prefabs
+    totalWaveHeight: number = 0;
+    spawnNextWave(height: number)
+    {
+        this.totalWaveHeight = this.totalWaveHeight + height; 
+        var wavePrefab: cc.Node = this._poolingSystem.getWavePrefabFromPool();
+
+        wavePrefab.parent.removeChild(wavePrefab);
+        this.WavePrefabs.addChild(wavePrefab);
+
+        wavePrefab.setPosition(cc.Vec2.ZERO);
+        wavePrefab.setPosition(new cc.Vec2(0, this.totalWaveHeight));
+
+        wavePrefab.active = true;
     }
 }
