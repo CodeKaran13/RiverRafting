@@ -53,6 +53,10 @@ export default class MatchManager extends cc.Component
     @property
     totalObstacleToSpawnOnPrefab: number = 5;
 
+
+    PrefabArray:cc.Node[]=[];
+    currentindex=0;
+
     onLoad() 
     {
         this._timeManager._matchManager = this;
@@ -63,7 +67,7 @@ export default class MatchManager extends cc.Component
 
     StartGame()
     {
-        this.totalHeight = 0;
+        this.totalHeight = 1004;
 
         for(let i = 0; i < 20; i++)
         {
@@ -113,10 +117,45 @@ export default class MatchManager extends cc.Component
                 nextMap.setPosition(new cc.Vec2(0, this.totalHeight));
                 nextMap.active = true;
 
-                // for (let i = 0; i < nextMap.children[0].childrenCount; i++)
-                // {
-                //     nextMap.children[0].children[i].active = true;
-                // }
+                //nextMap.children[0].children[].active = true;
+                for (let i = 0; i < nextMap.children[0].childrenCount-1; i++)
+                {
+                    nextMap.children[0].children[i].active = true;
+                    nextMap.children[0].children[i].getComponent(cc.RenderComponent).enabled=false;
+                    var grandchildcount=0;
+                    if(nextMap.children[0].children[i].childrenCount>0)
+                    {grandchildcount=nextMap.children[0].children[i].children[0].childrenCount;
+                    if(grandchildcount>0)
+                    {
+                        for(var j=0;j<grandchildcount;j++)
+                        {
+                            nextMap.children[0].children[i].children[0].children[j].getComponent(cc.RenderComponent).enabled=false;
+                        }
+                    }
+                }
+                }
+
+                var propcount=nextMap.children[0].childrenCount-1;
+                nextMap.children[0].children[propcount].active = true;
+                var grandchildcount=0;
+                    if(nextMap.children[0].children[propcount].childrenCount>0)
+                    {grandchildcount=nextMap.children[0].children[propcount].childrenCount;
+                    if(grandchildcount>0)
+                    {
+                        for(var j=0;j<grandchildcount;j++)
+                        {
+                            nextMap.children[0].children[propcount].children[j].active=true;
+                            if(nextMap.children[0].children[propcount].children[j].getComponent(dragonBones.ArmatureDisplay)!=null)
+                            {
+                                nextMap.children[0].children[propcount].children[j].getComponent(dragonBones.ArmatureDisplay).playAnimation('tree_movement', 0);
+                                nextMap.children[0].children[propcount].children[j].getComponent(dragonBones.ArmatureDisplay).timeScale = 1;
+                            }
+                            nextMap.children[0].children[propcount].children[j].getComponent(cc.RenderComponent).enabled=false;
+                        }
+                    }
+                }
+
+                this.PrefabArray.push(nextMap);
 
                 break;
             case 3:

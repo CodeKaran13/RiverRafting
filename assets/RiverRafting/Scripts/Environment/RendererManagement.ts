@@ -3,6 +3,12 @@ const { ccclass, property } = cc._decorator;
 @ccclass
 export default class RendererManagement extends cc.Component
 {
+
+   
+
+
+
+
     onCollisionEnter(other, self)
     {
         if (other.node.name == 'EndCollider')
