@@ -73,7 +73,7 @@ export default class MatchManager extends cc.Component
         }
 
         // this.spawnNextRiverMap(0);
-        this.spawnNextWave(0);
+        // this.spawnNextWave(0);
 
         this._bonusSystem.resetBonus();
         this._bonusSystem.restartCounter();

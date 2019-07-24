@@ -3,14 +3,13 @@ const { ccclass, property } = cc._decorator;
 @ccclass
 export default class RendererManagement extends cc.Component
 {
-
     onCollisionEnter(other, self)
     {
         if (other.node.name == 'EndCollider')
         {
             
-            var rend: cc.RenderComponent = this.node.getComponent(cc.RenderComponent);
-            rend.enabled = false;
+            // var rend: cc.RenderComponent = this.node.getComponent(cc.RenderComponent);
+            // rend.enabled = false;
             if (self.node.getComponent(dragonBones.ArmatureDisplay) != null)
             {
                 // console.log('stop animation');
@@ -19,8 +18,8 @@ export default class RendererManagement extends cc.Component
         }
         if (other.node.name == 'StartCollider')
         {
-            var rend: cc.RenderComponent = this.node.getComponent(cc.RenderComponent);
-            rend.enabled = true;
+            // var rend: cc.RenderComponent = this.node.getComponent(cc.RenderComponent);
+            // rend.enabled = true;
             if (self.node.getComponent(dragonBones.ArmatureDisplay) != null)
             {
                 // console.log('play animation');

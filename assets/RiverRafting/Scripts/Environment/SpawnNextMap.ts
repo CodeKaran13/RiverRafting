@@ -19,7 +19,7 @@ export default class SpawnNextMap extends cc.Component
         {
             // this._matchManager.totalHeight = this._matchManager.totalHeight + this.node.parent.height;
             // this._matchManager.spawnNextRiverMap(this.node.parent.height);
-            this.node.parent.getComponent(RiverMap).CheckPlayerLocation = true;
+            // this.node.parent.getComponent(RiverMap).CheckPlayerLocation = true;
         }
     }
 }
