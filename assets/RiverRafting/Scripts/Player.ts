@@ -102,7 +102,8 @@ export default class Player extends cc.Component
 
         // this.startRotation(this.node.children[0].eulerAngles, new cc.Vec3(-90, 205, 0));
         // this.node.children[0].eulerAngles = this.lerpVec3(this.node.children[0].eulerAngles, new cc.Vec3(-90, 205, 0), 0.1);
-        // this.node.children[0].eulerAngles = new cc.Vec3(-90, 205, 0);
+
+        this.node.children[0].children[0].eulerAngles = new cc.Vec3(0, 0, 15);
 
         this.node.children[4].getComponent(dragonBones.ArmatureDisplay).timeScale = 0;
         this.node.children[3].getComponent(dragonBones.ArmatureDisplay).timeScale = 3;
@@ -116,7 +117,8 @@ export default class Player extends cc.Component
         this.node.runAction(toRight);
         this.currentAction = toRight;
 
-        // this.node.children[0].eulerAngles = new cc.Vec3(-90, 155, 0);
+        // this.node.children[0].children[0].runAction()
+        this.node.children[0].children[0].eulerAngles = new cc.Vec3(0, 0, -15);
 
         this.node.children[4].getComponent(dragonBones.ArmatureDisplay).timeScale = 3;
         this.node.children[3].getComponent(dragonBones.ArmatureDisplay).timeScale = 0;
@@ -130,7 +132,7 @@ export default class Player extends cc.Component
         this.node.runAction(toCenter);
         this.currentAction = toCenter;
 
-        // this.node.children[0].eulerAngles = new cc.Vec3(-90, 180, 0);
+        this.node.children[0].children[0].eulerAngles = new cc.Vec3(0, 0, 0);
 
         this.node.children[4].getComponent(dragonBones.ArmatureDisplay).timeScale = 3;
         this.node.children[3].getComponent(dragonBones.ArmatureDisplay).timeScale = 3;
@@ -212,11 +214,9 @@ export default class Player extends cc.Component
     }
     rotate(target, data)
     {
-
         if (this.shouldRotate)
         {
             console.log(data);
-            //console.log('data1: ' + data[1]);
             if (data[0].y > data[1].y)
             {
                 if (this.node.children[0].eulerAngles.y > data[1].y)

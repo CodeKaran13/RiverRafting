@@ -72,6 +72,10 @@ export default class UIManager extends cc.Component
     })
     _gameManager: GameManager = null;
 
+    //Sprite refs
+    @property(cc.Sprite)
+    healthBarSprite: cc.Sprite = null;
+
     onLoad()
     {
         this._matchManager._UIManager = this;
@@ -87,6 +91,10 @@ export default class UIManager extends cc.Component
     OnUIUpdateHealth(health: number)
     {
         this.HealthLabel.string = '' + health;
+
+        var fillValue = health / 100;
+
+        this.healthBarSprite.fillRange = fillValue;
     }
 
     OnUIUpdateScore(score: number)

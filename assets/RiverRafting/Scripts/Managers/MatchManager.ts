@@ -6,6 +6,7 @@ import UIManager from "./UIManager";
 import ObstacleSpawner from "../GamePlay/ObstacleSpawner";
 import BonusSystem from "../GamePlay/BonusSystem";
 import ItemSpawner from "../GamePlay/ItemSpawner";
+import Waves from "../GamePlay/Waves";
 
 const { ccclass, property } = cc._decorator;
 
@@ -54,8 +55,8 @@ export default class MatchManager extends cc.Component
     totalObstacleToSpawnOnPrefab: number = 5;
 
 
-    PrefabArray:cc.Node[]=[];
-    currentindex=0;
+    PrefabArray: cc.Node[] = [];
+    currentindex = 0;
 
     onLoad() 
     {
@@ -69,7 +70,7 @@ export default class MatchManager extends cc.Component
     {
         this.totalHeight = 1004;
 
-        for(let i = 0; i < 20; i++)
+        for (let i = 0; i < 3; i++)
         {
             // console.log('total height: ' + this.totalHeight);
             this.spawnNextRiverMap(this.totalHeight);
@@ -117,45 +118,46 @@ export default class MatchManager extends cc.Component
                 nextMap.setPosition(new cc.Vec2(0, this.totalHeight));
                 nextMap.active = true;
 
-                //nextMap.children[0].children[].active = true;
-                for (let i = 0; i < nextMap.children[0].childrenCount-1; i++)
+                for (let i = 0; i < nextMap.children[0].childrenCount - 1; i++)
                 {
                     nextMap.children[0].children[i].active = true;
-                    nextMap.children[0].children[i].getComponent(cc.RenderComponent).enabled=false;
-                    var grandchildcount=0;
-                    if(nextMap.children[0].children[i].childrenCount>0)
-                    {grandchildcount=nextMap.children[0].children[i].children[0].childrenCount;
-                    if(grandchildcount>0)
+                    nextMap.children[0].children[i].getComponent(cc.RenderComponent).enabled = false;
+                    var grandchildcount = 0;
+                    if (nextMap.children[0].children[i].childrenCount > 0)
                     {
-                        for(var j=0;j<grandchildcount;j++)
+                        grandchildcount = nextMap.children[0].children[i].children[0].childrenCount;
+                        if (grandchildcount > 0)
                         {
-                            nextMap.children[0].children[i].children[0].children[j].getComponent(cc.RenderComponent).enabled=false;
+                            for (var j = 0; j < grandchildcount; j++)
+                            {
+                                nextMap.children[0].children[i].children[0].children[j].getComponent(cc.RenderComponent).enabled = false;
+                            }
                         }
                     }
                 }
-                }
 
-                var propcount=nextMap.children[0].childrenCount-1;
+                var propcount = nextMap.children[0].childrenCount - 1;
                 nextMap.children[0].children[propcount].active = true;
-                var grandchildcount=0;
-                    if(nextMap.children[0].children[propcount].childrenCount>0)
-                    {grandchildcount=nextMap.children[0].children[propcount].childrenCount;
-                    if(grandchildcount>0)
+                var grandchildcount = 0;
+                if (nextMap.children[0].children[propcount].childrenCount > 0)
+                {
+                    grandchildcount = nextMap.children[0].children[propcount].childrenCount;
+                    if (grandchildcount > 0)
                     {
-                        for(var j=0;j<grandchildcount;j++)
+                        for (var j = 0; j < grandchildcount; j++)
                         {
-                            nextMap.children[0].children[propcount].children[j].active=true;
-                            if(nextMap.children[0].children[propcount].children[j].getComponent(dragonBones.ArmatureDisplay)!=null)
+                            nextMap.children[0].children[propcount].children[j].active = true;
+                            if (nextMap.children[0].children[propcount].children[j].getComponent(dragonBones.ArmatureDisplay) != null)
                             {
                                 nextMap.children[0].children[propcount].children[j].getComponent(dragonBones.ArmatureDisplay).playAnimation('tree_movement', 0);
                                 nextMap.children[0].children[propcount].children[j].getComponent(dragonBones.ArmatureDisplay).timeScale = 1;
                             }
-                            nextMap.children[0].children[propcount].children[j].getComponent(cc.RenderComponent).enabled=false;
+                            nextMap.children[0].children[propcount].children[j].getComponent(cc.RenderComponent).enabled = false;
                         }
                     }
                 }
 
-                this.PrefabArray.push(nextMap);
+                // this.PrefabArray.push(nextMap);
 
                 break;
             case 3:
@@ -237,12 +239,16 @@ export default class MatchManager extends cc.Component
         this.totalWaveHeight = this.totalWaveHeight + height;
         var wavePrefab: cc.Node = this._poolingSystem.getWavePrefabFromPool();
 
-        wavePrefab.parent.removeChild(wavePrefab);
+        if(wavePrefab.parent != null)
+            wavePrefab.parent.removeChild(wavePrefab);
         this.WavePrefabs.addChild(wavePrefab, 0, wavePrefab.name);
 
-        wavePrefab.setPosition(cc.Vec2.ZERO);
         wavePrefab.setPosition(new cc.Vec2(0, this.totalWaveHeight));
+        // console.log('pos: ' + wavePrefab.convertToWorldSpaceAR(cc.Vec2.ZERO));
+        wavePrefab.getComponent(Waves).myPos = wavePrefab.convertToWorldSpaceAR(cc.Vec2.ZERO);
 
         wavePrefab.active = true;
+        wavePrefab.getComponent(Waves).IsActive = true;
+        wavePrefab.getComponent(Waves).CheckPlayerLocation = true;
     }
 }

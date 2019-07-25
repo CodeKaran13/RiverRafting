@@ -130,13 +130,14 @@ export default class PoolingSystem extends cc.Component
     addWavePrefabToPool(prefab: cc.Node)
     {
         prefab.getComponent(Waves).IsActive = false;
+        prefab.getComponent(Waves).CheckPlayerLocation = false;
         prefab.parent.removeChild(prefab);
         this.WavePrefabs.push(prefab);
     }
     getWavePrefabFromPool(): cc.Node
     {
         var ref: cc.Node = this.WavePrefabs.pop();
-        ref.getComponent(Waves).IsActive = true;
+        // ref.getComponent(Waves).IsActive = true;
         return ref;
     }
 }

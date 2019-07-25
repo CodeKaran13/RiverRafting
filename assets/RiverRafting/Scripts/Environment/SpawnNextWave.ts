@@ -17,8 +17,9 @@ export default class SpawnNextWave extends cc.Component
     {
         if (other.node.name == 'Player')
         {
+            // console.log('spawn next wave');
             this._matchManager.spawnNextWave(this.node.parent.height);
-            this.node.parent.getComponent(Waves).CheckPlayerLocation = true;
+            // this.node.parent.getComponent(Waves).CheckPlayerLocation = true;
         }
     }
 }
