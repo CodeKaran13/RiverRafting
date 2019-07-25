@@ -1,7 +1,0 @@
-{
-  "ver": "1.0.0",
-  "uuid": "7238a915-c31c-419d-8bb0-60e34911841d",
-  "atlasJson": "{\"width\":256,\"SubTexture\":[{\"width\":136,\"y\":1,\"height\":15,\"name\":\"raft\",\"x\":1},{\"width\":9,\"y\":38,\"height\":22,\"name\":\"left_hand2 \",\"x\":243},{\"width\":25,\"y\":28,\"height\":23,\"name\":\"left_hand1\",\"x\":185},{\"width\":16,\"y\":18,\"height\":19,\"name\":\"right_hand2\",\"x\":1},{\"width\":29,\"y\":38,\"height\":16,\"name\":\"right_hand1\",\"x\":212},{\"width\":40,\"y\":1,\"height\":25,\"name\":\"ass\",\"x\":185},{\"width\":28,\"y\":1,\"height\":35,\"name\":\"head\",\"x\":227},{\"width\":44,\"y\":1,\"height\":43,\"name\":\"upper body\",\"x\":139},{\"width\":42,\"y\":56,\"height\":6,\"name\":\"water\",\"x\":1}],\"imagePath\":\"River_raft_animation_tex.png\",\"name\":\"River_raft_animation\",\"height\":64}",
-  "texture": "baf21ce1-15f2-4bda-81f4-de4847b8aeb5",
-  "subMetas": {}
-}
