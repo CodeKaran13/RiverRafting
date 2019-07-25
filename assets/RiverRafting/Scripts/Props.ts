@@ -17,11 +17,8 @@ export default class Props extends cc.Component
 
         for (let i = 0; i < this.node.childrenCount; i++)
         {
-            // console.log('add component');
-            this.node.children[i].addComponent(RendererManagement);
+            // this.node.children[i].addComponent(RendererManagement);
             //this.node.children[i].addComponent(cc.BoxCollider);
-            // if (!this.isStartPrefab)
-            //     this.node.children[i].getComponent(cc.RenderComponent).enabled = false;
         }
     }
 }

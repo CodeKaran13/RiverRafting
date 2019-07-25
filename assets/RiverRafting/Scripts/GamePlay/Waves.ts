@@ -15,6 +15,7 @@ export default class Waves extends cc.Component
     // Script variables
     CheckPlayerLocation: boolean = false;
     IsActive: boolean = false;
+    myPos: cc.Vec2;
 
     onLoad()
     {
@@ -26,9 +27,13 @@ export default class Waves extends cc.Component
     {
         if(this.IsActive && this.CheckPlayerLocation)
         {
-            if(this._player.position.y > this._matchManager.totalWaveHeight + 300)
+            // console.log('wave pos: ' + this.myPos.y);
+            // console.log('player pos: ' + this._player.position.y);
+            var checkpoint = this.node.height + this.myPos.y;
+            if(this._player.position.y > checkpoint + 150)
             {
-                this.CheckPlayerLocation = false;
+                // console.log('adding waves back to pool');
+                // this.CheckPlayerLocation = false;
                 this._matchManager._poolingSystem.addWavePrefabToPool(this.node);
             }
         }
