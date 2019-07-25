@@ -70,7 +70,7 @@ export default class MatchManager extends cc.Component
     {
         this.totalHeight = 1004;
 
-        for (let i = 0; i < 20; i++)
+        for (let i = 0; i < 3; i++)
         {
             // console.log('total height: ' + this.totalHeight);
             this.spawnNextRiverMap(this.totalHeight);
@@ -78,7 +78,7 @@ export default class MatchManager extends cc.Component
         }
 
         // this.spawnNextRiverMap(0);
-        this.spawnNextWave(0);
+        // this.spawnNextWave(0);
 
         this._bonusSystem.resetBonus();
         this._bonusSystem.restartCounter();
