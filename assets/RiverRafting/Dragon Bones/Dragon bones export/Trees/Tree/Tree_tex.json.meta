@@ -1,0 +1,7 @@
+{
+  "ver": "1.0.0",
+  "uuid": "01e7761f-3c80-43f6-ad0b-8d540fefc643",
+  "atlasJson": "{\"width\":128,\"imagePath\":\"Tree_tex.png\",\"height\":256,\"name\":\"Tree\",\"SubTexture\":[{\"width\":103,\"y\":1,\"height\":246,\"name\":\"Layer 90\",\"x\":1}]}",
+  "texture": "d6e5452e-daa4-45a2-80a5-9dc5d33f1ee6",
+  "subMetas": {}
+}
