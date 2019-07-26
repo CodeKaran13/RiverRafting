@@ -255,4 +255,12 @@ export default class Player extends cc.Component
 
         return new cc.Vec3(x, y, z);
     }
+
+    onBeginContact(contact, self, other)
+    {
+        if(other.node.group == 'Bound')
+        {
+            console.log('' + other.node.name);
+        }
+    }
 }

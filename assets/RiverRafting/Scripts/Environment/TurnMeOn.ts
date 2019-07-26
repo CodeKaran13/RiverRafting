@@ -87,8 +87,8 @@ export default class TurnMeOn extends cc.Component
     sequenceProps: cc.ActionInterval;
     resetSequenceProps()
     {
-        this.propsIndex = 0;
         this.propsCount = this.node.children[0].children[this.totalCount - 1].childrenCount;
+        this.propsIndex = this.propsCount - 1;
         this.startSequenceProps();
     }
     startSequenceProps()
@@ -99,10 +99,10 @@ export default class TurnMeOn extends cc.Component
     }
     propsDelay()
     {
-        if (this.propsIndex < this.propsCount)
+        if (this.propsIndex >= 0)
         {
             this.node.children[0].children[this.totalCount - 1].children[this.propsIndex].getComponent(cc.RenderComponent).enabled = true;
-            this.propsIndex++;
+            this.propsIndex--;
         }
         else
         {

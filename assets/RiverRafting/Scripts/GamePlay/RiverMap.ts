@@ -9,14 +9,12 @@ export default class RiverMap extends cc.Component
 
     @property(cc.Node)
     player: cc.Node = null;
-
     @property({
         type: cc.Node,
         visible: true,
         serializable: true
     })
     SpawnLocations: cc.Node[] = [];
-
     @property({
         type: cc.Node,
         visible: true,
@@ -26,22 +24,17 @@ export default class RiverMap extends cc.Component
 
     CheckPlayerLocation: boolean = false;
     IsActive: boolean = false;
+    @property
+    myHeight: number = 0;
 
     onLoad()
     {
+        this.myHeight = this.node.height;
         this._matchManager = cc.find('Script Collection/Match Manager').getComponent('MatchManager');
     }
 
     update(dt)
     {
-        // if (this.CheckPlayerLocation)
-        // {
-        //     if (this.player.position.y > this._matchManager.totalHeight + 300)
-        //     {
-        //         // console.log('player above me river prefab');
-        //         this._matchManager._poolingSystem.addRiverMapToPool(this.node);
-        //         this.CheckPlayerLocation = false;
-        //     }
-        // }
+        
     }
 }
