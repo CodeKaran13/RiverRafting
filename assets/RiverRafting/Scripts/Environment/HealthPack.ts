@@ -12,24 +12,21 @@ export default class HealthPack extends Collectibles
     {
         this.myType = CollectibleType.Health;
     }
-
     onEnable() 
     {
-        this.myPos = this.node.convertToWorldSpace(cc.Vec2.ZERO).y;
+        this.myPos = this.node.convertToWorldSpaceAR(cc.Vec2.ZERO).y;
     }
-
     onDisable()
     {
         this.myPos = 0;
     }
-
     update(dt) 
     {
         if (this.node.active)
         {
             if (this._player.position.y - 500 > this.myPos)
             {
-                // console.log('player is above me');
+                console.log('healthpack, player is above me');
                 this._CollectiblePool.addCollectibleBackToPool(this.node);
             }
         }
@@ -39,7 +36,7 @@ export default class HealthPack extends Collectibles
     {
         if (other.node.name == this._player.name)
         {
-            // console.log('player collided health');
+            console.log('player collided health');
             this._player.getComponent('HealthManager').increaseHP(this.health);
             this._CollectiblePool.addCollectibleBackToPool(this.node);
         }

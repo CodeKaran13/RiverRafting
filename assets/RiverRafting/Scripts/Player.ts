@@ -54,6 +54,12 @@ export default class Player extends cc.Component
 
         var direction = this.node.children[2].convertToWorldSpaceAR(cc.Vec2.ZERO).sub(this.node.position);
         this.node.position = this.node.position.add(direction.normalizeSelf().mulSelf(this.movementSpeed));
+
+        // check for wrong direction
+        if (this.node.angle > 60 || this.node.angle < -60)
+        {
+            console.log('wrong direction..');
+        }
     }
 
     StartAccelerationSequence()
@@ -102,7 +108,7 @@ export default class Player extends cc.Component
         this.node.runAction(toLeft);
         this.currentAction = toLeft;
         this.node.children[0].children[0].runAction(tilt);
-        
+
 
         // this.node.children[0].children[0].eulerAngles = new cc.Vec3(0, 0, 15);
 
@@ -207,52 +213,35 @@ export default class Player extends cc.Component
         }
     }
 
-    // Boat rotation sequence
-    // shouldRotate: boolean = false;
-    // rotateSequence: cc.ActionInterval;
-    // startRotation(init, end)
-    // {
-    //     var time = cc.delayTime(0.1);
-    //     this.shouldRotate = true;
-    //     var data: cc.Vec3[] = [init, end];
-    //     console.log(init);
-    //     this.rotateSequence = cc.sequence(time, cc.callFunc(this.rotate, this, data));
-    //     this.node.runAction(this.rotateSequence.repeatForever());
-    // }
-    // rotate(target, data)
-    // {
-    //     if (this.shouldRotate)
-    //     {
-    //         console.log(data);
-    //         if (data[0].y > data[1].y)
-    //         {
-    //             if (this.node.children[0].eulerAngles.y > data[1].y)
-    //             {
-    //                 this.node.children[0].eulerAngles = this.lerpVec3(data[0], data[1], 0.1);
-    //             }
-    //             else
-    //             {
-    //                 this.shouldRotate = false;
-    //             }
-
-    //         }
-    //         else if (data[0].y < data[1].y)
-    //         {
-    //             if (this.node.children[0].eulerAngles.y < data[1].y)
-    //             {
-    //                 this.node.children[0].eulerAngles = this.lerpVec3(data[0], data[1], 0.1);
-    //             }
-    //             else
-    //             {
-    //                 this.shouldRotate = false;
-    //             }
-    //         }
-    //     }
-    //     else
-    //     {
-    //         this.node.stopAction(this.rotateSequence);
-    //     }
-    // }
+    // Boat wrong direction
+    wrongDirectionSequence: cc.ActionInterval;
+    IsWrongDirection: boolean = false;
+    restartWrongDirectionSequence()
+    {
+        this.startWrongDirectionSequence();
+    }
+    startWrongDirectionSequence()
+    {
+        var time = cc.delayTime(1);
+        this.wrongDirectionSequence = cc.sequence(time, cc.callFunc(this.CheckWrongDirection, this));
+        this.node.runAction(this.wrongDirectionSequence.repeatForever());
+    }
+    CheckWrongDirection()
+    {
+        // check for wrong direction
+        if (!this.IsWrongDirection)
+        {
+            if (this.node.angle > 60 || this.node.angle < -60)
+            {
+                console.log('wrong direction..');
+                this.IsWrongDirection = true;
+            }
+        }
+        else
+        {
+            this.node.stopAction(this.wrongDirectionSequence);
+        }
+    }
 
     // lerpVec3(start: cc.Vec3, end: cc.Vec3, amt)
     // {
@@ -265,7 +254,7 @@ export default class Player extends cc.Component
 
     onBeginContact(contact, self, other)
     {
-        if(other.node.group == 'Bound')
+        if (other.node.group == 'Bound')
         {
             // console.log('' + other.node.name);
             this.node.getComponent(HealthManager).takeDamage(5);
