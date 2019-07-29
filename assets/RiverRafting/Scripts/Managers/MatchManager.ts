@@ -199,7 +199,7 @@ export default class MatchManager extends cc.Component
                             if (nextMap.children[0].children[propIndex].children[j].getComponent(dragonBones.ArmatureDisplay) != null)
                             {
                                 // nextMap.children[0].children[propIndex].children[j].getComponent(dragonBones.ArmatureDisplay).playAnimation('tree_movement', 0);
-                                nextMap.children[0].children[propIndex].children[j].getComponent(dragonBones.ArmatureDisplay).timeScale = 1;
+                                nextMap.children[0].children[propIndex].children[j].getComponent(dragonBones.ArmatureDisplay).timeScale = 0.5;
                             }
                             nextMap.children[0].children[propIndex].children[j].getComponent(cc.RenderComponent).enabled = false;
                         }
@@ -274,10 +274,10 @@ export default class MatchManager extends cc.Component
     getRandomNumber()
     {
         // will return 1,2
-        // var rand = Math.floor(Math.random() * 2) + 1;
+        var rand = Math.floor(Math.random() * 2) + 1;
         // console.log('random number: ' + rand);
-        // return rand;
-        return 2;
+        return rand;
+        // return 2;
     }
 
     // Spawn Wave Prefabs

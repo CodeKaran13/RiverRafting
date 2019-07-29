@@ -37,18 +37,18 @@ export default class TurnMeOn extends cc.Component
 
     onSetPosition()
     {
-        console.log('assigning spawn positions');
+        // console.log('assigning spawn positions');
         for (let i = 0; i < this.itemSpawnLocations.length; i++)
         {
             this._itemSpawner.SpawnPos[i] = null;
             this._itemSpawner.SpawnPos[i] = this.itemSpawnLocations[i];
-            console.log('pos [' + i + '] : ' + this._itemSpawner.SpawnPos[i].convertToWorldSpaceAR(cc.Vec2.ZERO));
+            // console.log('pos [' + i + '] : ' + this._itemSpawner.SpawnPos[i].convertToWorldSpaceAR(cc.Vec2.ZERO));
         }
     }
 
     onCollisionExit(other, self)
     {
-        if (other.node.name == 'StartCollider')
+        if (self.tag == 0 && other.node.name == 'StartCollider')
         {
             this.onSetPosition();
             this._itemSpawner.SpawnHealthPack();

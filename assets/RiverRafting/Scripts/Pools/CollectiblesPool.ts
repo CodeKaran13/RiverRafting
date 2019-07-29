@@ -1,3 +1,5 @@
+import Collectibles, { CollectibleType } from "../GamePlay/Collectibles";
+
 const { ccclass, property } = cc._decorator;
 
 @ccclass
@@ -28,14 +30,17 @@ export default class CollectiblesPool extends cc.Component
 
     addCollectibleBackToPool(pack: cc.Node)
     {
-        switch (pack.name)
+        var type = pack.getComponent(Collectibles).myType;
+        switch (type)
         {
-            case 'healthpack':
+            case CollectibleType.Health:
+                console.log('healthpack added successfully');
                 pack.parent.removeChild(pack);
                 pack.active = false;
                 this.HealthPacks.push(pack);
                 break;
-            case 'coinpack':
+            case CollectibleType.Coins:
+                console.log('coinpack added successfully');
                 pack.parent.removeChild(pack);
                 pack.active = false;
                 this.CoinsPack.push(pack);
@@ -43,21 +48,18 @@ export default class CollectiblesPool extends cc.Component
         }
     }
 
-    getCollectibleFromPool(packName: string): cc.Node 
+    getCollectibleFromPool(packName: CollectibleType): cc.Node 
     {
         switch (packName)
         {
-            case 'healthpack':
+            case CollectibleType.Health:
                 var healthpack = this.HealthPacks.pop();
                 // healthpack.active = true;
                 return healthpack;
-                break;
-
-            case 'coinpack':
+            case CollectibleType.Coins:
                 var coinpack = this.CoinsPack.pop();
                 // coinpack.active = true;
                 return coinpack;
-                break;
         }
     }
 }
