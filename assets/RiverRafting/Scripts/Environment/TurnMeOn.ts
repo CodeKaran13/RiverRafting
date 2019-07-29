@@ -1,18 +1,62 @@
+import ItemSpawner from "../GamePlay/ItemSpawner";
+import ObstacleSpawner from "../GamePlay/ObstacleSpawner";
+
 const { ccclass, property } = cc._decorator;
 
 @ccclass
 export default class TurnMeOn extends cc.Component
 {
+    // All class Refs
+    @property({
+        type: ItemSpawner,
+        visible: true,
+        serializable: true
+    })
+    _itemSpawner: ItemSpawner = null;
+    @property({
+        type: ObstacleSpawner,
+        visible: true,
+        serializable: true
+    })
+    _obstacleSpawner: ObstacleSpawner = null;
+
+    // class variables
+    @property({
+        type: cc.Node,
+        visible: true,
+        serializable: true
+    })
+    itemSpawnLocations: cc.Node[] = [];
+    @property({
+        type: cc.Node,
+        visible: true,
+        serializable: true
+    })
+    docksSpawnLocation: cc.Node[] = [];
     delaySequence: cc.ActionInterval;
+
+    onSetPosition()
+    {
+        console.log('assigning spawn positions');
+        for (let i = 0; i < this.itemSpawnLocations.length; i++)
+        {
+            this._itemSpawner.SpawnPos[i] = null;
+            this._itemSpawner.SpawnPos[i] = this.itemSpawnLocations[i];
+            console.log('pos [' + i + '] : ' + this._itemSpawner.SpawnPos[i].convertToWorldSpaceAR(cc.Vec2.ZERO));
+        }
+    }
 
     onCollisionExit(other, self)
     {
         if (other.node.name == 'StartCollider')
         {
+            this.onSetPosition();
+            this._itemSpawner.SpawnHealthPack();
+            this._itemSpawner.SpawnCoinPack();
             // console.log('collider spotted');
             for (let i = 0; i < self.node.children[0].childrenCount - 1; i++)
             {
-                //self.node.children[0].children[i].active = true;
+                // self.node.children[0].children[i].active = true;
                 // console.log(self.node.name);
                 self.node.children[0].children[i].getComponent(cc.RenderComponent).enabled = true;
                 var grandchildcount = 0;
@@ -28,24 +72,6 @@ export default class TurnMeOn extends cc.Component
                     }
                 }
             }
-
-
-            // var propcount = self.node.children[0].childrenCount - 1;
-            // self.node.children[0].children[propcount].active = true;
-            // var grandchildcount = 0;
-            // if (self.node.children[0].children[propcount].childrenCount > 0) {
-            //     grandchildcount = self.node.children[0].children[propcount].childrenCount;
-            //     if (grandchildcount > 0) {
-            //         for (var j = 0; j < grandchildcount; j++) {
-            //             // if (self.node.children[0].children[propcount].children[j].getComponent(dragonBones.ArmatureDisplay) != null) {
-            //             //     self.node.children[0].children[propcount].children[j].getComponent(dragonBones.ArmatureDisplay).playAnimation('tree_movement', 0);
-            //             //     self.node.children[0].children[propcount].children[j].getComponent(dragonBones.ArmatureDisplay).timeScale = 1;
-            //             // }
-            //             self.node.children[0].children[propcount].children[j].getComponent(cc.RenderComponent).enabled = true;
-            //         }
-            //     }
-            // }
-
 
             // console.log("reached here" + this.node.name);
             this.totalCount = this.node.children[0].childrenCount;

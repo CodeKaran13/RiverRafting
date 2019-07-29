@@ -8,7 +8,6 @@ export default class ItemSpawner extends cc.Component
 {
     @property
     healthPackSpawnTime: number = 30;
-
     @property
     coinPackSpawnTime: number = 15;
 
@@ -101,15 +100,15 @@ export default class ItemSpawner extends cc.Component
     {
         var healthpack = this._CollectiblePool.getCollectibleFromPool('healthpack');
 
-        var parent = this.getRandomSpawnPos();
+        var spawnPosParent = this.getRandomSpawnPos();
 
         if (healthpack.parent != null)
         {
             healthpack.parent.removeChild(healthpack);
         }
 
-        parent.active = true;
-        parent.addChild(healthpack);
+        // spawnPosParent.active = true;
+        spawnPosParent.addChild(healthpack);
         healthpack.setPosition(cc.Vec2.ZERO);
 
         healthpack.active = true;
@@ -119,14 +118,15 @@ export default class ItemSpawner extends cc.Component
     {
         var coinpack = this._CollectiblePool.getCollectibleFromPool('coinpack');
 
-        var parent = this.getRandomSpawnPos();
+        var spawnPosParent = this.getRandomSpawnPos();
 
         if (coinpack.parent != null)
         {
             coinpack.parent.removeChild(coinpack);
         }
-        parent.active = true;
-        parent.addChild(coinpack);
+
+        // spawnPosParent.active = true;
+        spawnPosParent.addChild(coinpack);
         coinpack.setPosition(cc.Vec2.ZERO);
 
         coinpack.active = true;
@@ -139,6 +139,7 @@ export default class ItemSpawner extends cc.Component
         if (this.SpawnPos[rand] != null)
         {
             // return this.SpawnPos[rand].convertToWorldSpace(cc.Vec2.ZERO);
+            // console.log('spawn pos: ' + this.SpawnPos[rand].convertToNodeSpaceAR(cc.Vec2.ZERO));
             return this.SpawnPos[rand];
         }
         else

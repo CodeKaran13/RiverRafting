@@ -27,7 +27,7 @@ export default class InputHandler extends cc.Component
     {
         this._playerRef = this.player.getComponent('Player');
 
-        this.node.on(cc.Node.EventType.TOUCH_START, (event: cc.Event.EventTouch) =>
+        this.node.on('touchstart', (event: cc.Event.EventTouch) =>
         {
             this.isTouchActive = true;
             if (this.xDir < 0)
@@ -48,7 +48,7 @@ export default class InputHandler extends cc.Component
             // this._playerRef.startCounter();
         }, this.node);
 
-        this.node.on(cc.Node.EventType.TOUCH_END, (event: cc.Event.EventTouch) =>
+        this.node.on('touchend', (event: cc.Event.EventTouch) =>
         {
             // this.isTouchActive = false;
             this._playerRef.StopAction(this._playerRef.currentAction);

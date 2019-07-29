@@ -8,6 +8,7 @@ import BonusSystem from "../GamePlay/BonusSystem";
 import ItemSpawner from "../GamePlay/ItemSpawner";
 import Waves from "../GamePlay/Waves";
 import RiverMap from "../GamePlay/RiverMap";
+import TurnMeOn from "../Environment/TurnMeOn";
 
 const { ccclass, property } = cc._decorator;
 
@@ -47,7 +48,7 @@ export default class MatchManager extends cc.Component
         serializable: true
     })
     _bonusSystem: BonusSystem = null;
-    _obstacleSpawner: ObstacleSpawner = null;
+    // _obstacleSpawner: ObstacleSpawner = null;
     _itemSpawner: ItemSpawner = null;
 
     // Script variables
@@ -63,7 +64,7 @@ export default class MatchManager extends cc.Component
     {
         this._timeManager._matchManager = this;
         this._gameManager._matchManager = this;
-        this._obstacleSpawner = this.node.getComponent(ObstacleSpawner);
+        // this._obstacleSpawner = this.node.getComponent(ObstacleSpawner);
         this._itemSpawner = this.node.getComponent(ItemSpawner);
 
         this.totalHeight = 1004;
@@ -268,34 +269,34 @@ export default class MatchManager extends cc.Component
             //     }
             //     break;
         }
-        console.log('total height: ' + this.totalHeight);
-}
-getRandomNumber()
-{
-    // will return 1,2,3,4
-    var rand = Math.floor(Math.random() * 2) + 1;
-    console.log('random number: ' + rand);
-    return rand;
-    // return 2;
-}
+        // console.log('total height: ' + this.totalHeight);
+    }
+    getRandomNumber()
+    {
+        // will return 1,2
+        // var rand = Math.floor(Math.random() * 2) + 1;
+        // console.log('random number: ' + rand);
+        // return rand;
+        return 2;
+    }
 
-// Spawn Wave Prefabs
-totalWaveHeight: number = 0;
-spawnNextWave(height: number)
-{
-    this.totalWaveHeight = this.totalWaveHeight + height;
-    var wavePrefab: cc.Node = this._poolingSystem.getWavePrefabFromPool();
+    // Spawn Wave Prefabs
+    totalWaveHeight: number = 0;
+    spawnNextWave(height: number)
+    {
+        this.totalWaveHeight = this.totalWaveHeight + height;
+        var wavePrefab: cc.Node = this._poolingSystem.getWavePrefabFromPool();
 
-    if (wavePrefab.parent != null)
-        wavePrefab.parent.removeChild(wavePrefab);
-    this.WavePrefabs.addChild(wavePrefab, 0, wavePrefab.name);
+        if (wavePrefab.parent != null)
+            wavePrefab.parent.removeChild(wavePrefab);
+        this.WavePrefabs.addChild(wavePrefab, 0, wavePrefab.name);
 
-    wavePrefab.setPosition(new cc.Vec2(0, this.totalWaveHeight));
-    // console.log('pos: ' + wavePrefab.convertToWorldSpaceAR(cc.Vec2.ZERO));
-    wavePrefab.getComponent(Waves).myPos = wavePrefab.convertToWorldSpaceAR(cc.Vec2.ZERO);
+        wavePrefab.setPosition(new cc.Vec2(0, this.totalWaveHeight));
+        // console.log('pos: ' + wavePrefab.convertToWorldSpaceAR(cc.Vec2.ZERO));
+        wavePrefab.getComponent(Waves).myPos = wavePrefab.convertToWorldSpaceAR(cc.Vec2.ZERO);
 
-    wavePrefab.active = true;
-    wavePrefab.getComponent(Waves).IsActive = true;
-    wavePrefab.getComponent(Waves).CheckPlayerLocation = true;
-}
+        wavePrefab.active = true;
+        wavePrefab.getComponent(Waves).IsActive = true;
+        wavePrefab.getComponent(Waves).CheckPlayerLocation = true;
+    }
 }

@@ -1,5 +1,6 @@
 import GameManager, { GameState } from "./Managers/GameManager";
 import { Difficulty } from "./Enums";
+import HealthManager from "./Managers/HealthManager";
 
 const { ccclass, property } = cc._decorator;
 
@@ -65,79 +66,85 @@ export default class Player extends cc.Component
         this.startApplyingBrakes();
     }
 
-    CheckBound()
-    {
-        var results = cc.director.getPhysicsManager().rayCast(this.node.position, this.node.children[2].convertToWorldSpaceAR(cc.Vec2.ZERO), cc.RayCastType.Closest);
-        if (results.length > 1)
-        {
-            for (let i = 0; i < results.length; i++)
-            {
-                if (results[i].collider.node.group == 'Bound')
-                {
-                    // var distance = results[i].point.sub(this.node.position);
-                    var distance = results[i].point.y - this.node.position.y;
-                    // console.log('dist: ' + distance + ' ' + results[i].collider.name);
-                    if (distance < 100)
-                    {
-                        return true;
-                    }
-                }
-                else
-                {
-                    return false;
-                }
-            }
-        }
-        else
-        {
-            return false;
-        }
-    }
+    // CheckBound()
+    // {
+    //     var results = cc.director.getPhysicsManager().rayCast(this.node.position, this.node.children[2].convertToWorldSpaceAR(cc.Vec2.ZERO), cc.RayCastType.Closest);
+    //     if (results.length > 1)
+    //     {
+    //         for (let i = 0; i < results.length; i++)
+    //         {
+    //             if (results[i].collider.node.group == 'Bound')
+    //             {
+    //                 // var distance = results[i].point.sub(this.node.position);
+    //                 var distance = results[i].point.y - this.node.position.y;
+    //                 // console.log('dist: ' + distance + ' ' + results[i].collider.name);
+    //                 if (distance < 100)
+    //                 {
+    //                     return true;
+    //                 }
+    //             }
+    //             else
+    //             {
+    //                 return false;
+    //             }
+    //         }
+    //     }
+    //     else
+    //     {
+    //         return false;
+    //     }
+    // }
 
     RotateLeft()
     {
         var toLeft = cc.rotateTo(1, -60);
+        var tilt = cc.rotate3DTo(0.5, 0, 0, -25);
         this.node.runAction(toLeft);
         this.currentAction = toLeft;
+        this.node.children[0].children[0].runAction(tilt);
+        
 
-        // this.startRotation(this.node.children[0].eulerAngles, new cc.Vec3(-90, 205, 0));
-        // this.node.children[0].eulerAngles = this.lerpVec3(this.node.children[0].eulerAngles, new cc.Vec3(-90, 205, 0), 0.1);
-
-        this.node.children[0].children[0].eulerAngles = new cc.Vec3(0, 0, 15);
+        // this.node.children[0].children[0].eulerAngles = new cc.Vec3(0, 0, 15);
 
         this.node.children[4].getComponent(dragonBones.ArmatureDisplay).timeScale = 0;
         this.node.children[3].getComponent(dragonBones.ArmatureDisplay).timeScale = 3;
 
-        this.CheckBound();
+        // this.CheckBound();
     }
 
     RotateRight()
     {
         var toRight = cc.rotateTo(1, 60);
+        var tilt = cc.rotate3DTo(0.5, 0, 0, 25);
         this.node.runAction(toRight);
         this.currentAction = toRight;
 
-        // this.node.children[0].children[0].runAction()
-        this.node.children[0].children[0].eulerAngles = new cc.Vec3(0, 0, -15);
+        this.node.children[0].children[0].runAction(tilt);
+
+
+        // this.node.children[0].children[0].eulerAngles = new cc.Vec3(0, 0, -15);
 
         this.node.children[4].getComponent(dragonBones.ArmatureDisplay).timeScale = 3;
         this.node.children[3].getComponent(dragonBones.ArmatureDisplay).timeScale = 0;
 
-        this.CheckBound();
+        // this.CheckBound();
     }
 
     RotateToCenter()
     {
         var toCenter = cc.rotateTo(1.5, 0);
+        var tilt = cc.rotate3DTo(0.5, 0, 0, 0);
         this.node.runAction(toCenter);
         this.currentAction = toCenter;
 
-        this.node.children[0].children[0].eulerAngles = new cc.Vec3(0, 0, 0);
+        this.node.children[0].children[0].runAction(tilt);
+
+        // this.node.children[0].children[0].eulerAngles = new cc.Vec3(0, 0, 0);
 
         this.node.children[4].getComponent(dragonBones.ArmatureDisplay).timeScale = 3;
         this.node.children[3].getComponent(dragonBones.ArmatureDisplay).timeScale = 3;
 
-        this.CheckBound();
+        // this.CheckBound();
     }
 
     StartAction(action: cc.Action)
@@ -201,66 +208,67 @@ export default class Player extends cc.Component
     }
 
     // Boat rotation sequence
-    shouldRotate: boolean = false;
-    rotateSequence: cc.ActionInterval;
-    startRotation(init, end)
-    {
-        var time = cc.delayTime(0.1);
-        this.shouldRotate = true;
-        var data: cc.Vec3[] = [init, end];
-        console.log(init);
-        this.rotateSequence = cc.sequence(time, cc.callFunc(this.rotate, this, data));
-        this.node.runAction(this.rotateSequence.repeatForever());
-    }
-    rotate(target, data)
-    {
-        if (this.shouldRotate)
-        {
-            console.log(data);
-            if (data[0].y > data[1].y)
-            {
-                if (this.node.children[0].eulerAngles.y > data[1].y)
-                {
-                    this.node.children[0].eulerAngles = this.lerpVec3(data[0], data[1], 0.1);
-                }
-                else
-                {
-                    this.shouldRotate = false;
-                }
+    // shouldRotate: boolean = false;
+    // rotateSequence: cc.ActionInterval;
+    // startRotation(init, end)
+    // {
+    //     var time = cc.delayTime(0.1);
+    //     this.shouldRotate = true;
+    //     var data: cc.Vec3[] = [init, end];
+    //     console.log(init);
+    //     this.rotateSequence = cc.sequence(time, cc.callFunc(this.rotate, this, data));
+    //     this.node.runAction(this.rotateSequence.repeatForever());
+    // }
+    // rotate(target, data)
+    // {
+    //     if (this.shouldRotate)
+    //     {
+    //         console.log(data);
+    //         if (data[0].y > data[1].y)
+    //         {
+    //             if (this.node.children[0].eulerAngles.y > data[1].y)
+    //             {
+    //                 this.node.children[0].eulerAngles = this.lerpVec3(data[0], data[1], 0.1);
+    //             }
+    //             else
+    //             {
+    //                 this.shouldRotate = false;
+    //             }
 
-            }
-            else if (data[0].y < data[1].y)
-            {
-                if (this.node.children[0].eulerAngles.y < data[1].y)
-                {
-                    this.node.children[0].eulerAngles = this.lerpVec3(data[0], data[1], 0.1);
-                }
-                else
-                {
-                    this.shouldRotate = false;
-                }
-            }
-        }
-        else
-        {
-            this.node.stopAction(this.rotateSequence);
-        }
-    }
+    //         }
+    //         else if (data[0].y < data[1].y)
+    //         {
+    //             if (this.node.children[0].eulerAngles.y < data[1].y)
+    //             {
+    //                 this.node.children[0].eulerAngles = this.lerpVec3(data[0], data[1], 0.1);
+    //             }
+    //             else
+    //             {
+    //                 this.shouldRotate = false;
+    //             }
+    //         }
+    //     }
+    //     else
+    //     {
+    //         this.node.stopAction(this.rotateSequence);
+    //     }
+    // }
 
-    lerpVec3(start: cc.Vec3, end: cc.Vec3, amt)
-    {
-        var x = (1 - amt) * start.x + amt * end.x;
-        var y = (1 - amt) * start.y + amt * end.y;
-        var z = (1 - amt) * start.z + amt * end.z;
+    // lerpVec3(start: cc.Vec3, end: cc.Vec3, amt)
+    // {
+    //     var x = (1 - amt) * start.x + amt * end.x;
+    //     var y = (1 - amt) * start.y + amt * end.y;
+    //     var z = (1 - amt) * start.z + amt * end.z;
 
-        return new cc.Vec3(x, y, z);
-    }
+    //     return new cc.Vec3(x, y, z);
+    // }
 
     onBeginContact(contact, self, other)
     {
         if(other.node.group == 'Bound')
         {
-            console.log('' + other.node.name);
+            // console.log('' + other.node.name);
+            this.node.getComponent(HealthManager).takeDamage(5);
         }
     }
 }

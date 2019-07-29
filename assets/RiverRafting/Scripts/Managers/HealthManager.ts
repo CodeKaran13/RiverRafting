@@ -1,3 +1,4 @@
+// import MatchManager from "./MatchManager";
 import UIManager from "./UIManager";
 
 const { ccclass, property } = cc._decorator;
@@ -12,11 +13,11 @@ export default class HealthManager extends cc.Component
     @property(Number)
     MaxHealth: number = 100;
 
-    @property({
-        type: UIManager,
-        visible: true,
-        serializable: true
-    })
+    // @property({
+    //     type: MatchManager,
+    //     visible: true,
+    //     serializable: true
+    // })
     _UIManager: UIManager = null;
 
     // onLoad () {}

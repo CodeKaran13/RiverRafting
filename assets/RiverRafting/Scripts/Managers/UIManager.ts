@@ -1,5 +1,6 @@
 import MatchManager from "./MatchManager";
 import GameManager, { GameState } from "./GameManager";
+import HealthManager from "./HealthManager";
 
 const { ccclass, property } = cc._decorator;
 
@@ -71,6 +72,12 @@ export default class UIManager extends cc.Component
         serializable: true
     })
     _gameManager: GameManager = null;
+    @property({
+        type: HealthManager,
+        visible: true,
+        serializable: true
+    })
+    _healthManager: HealthManager = null;
 
     //Sprite refs
     @property(cc.Sprite)
@@ -79,6 +86,8 @@ export default class UIManager extends cc.Component
     onLoad()
     {
         this._matchManager._UIManager = this;
+        this._healthManager._UIManager = this;
+        // this._matchManager = this._matchManagerNode.getComponent(MatchManager);
     }
 
     start()
