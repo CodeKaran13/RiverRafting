@@ -67,16 +67,24 @@ export default class MatchManager extends cc.Component
         // this._obstacleSpawner = this.node.getComponent(ObstacleSpawner);
         this._itemSpawner = this.node.getComponent(ItemSpawner);
 
-        this.totalHeight = 1004;
+        this.totalHeight = 1920;
     }
 
-    StartGame()
+    start()
     {
         for (let i = 0; i < this.totalPrefabsToSpawn; i++)
         {
             this.spawnNextRiverMap();
-            // this.totalHeight = this.totalHeight + 1004;
         }
+    }
+
+    StartGame()
+    {
+        // for (let i = 0; i < this.totalPrefabsToSpawn; i++)
+        // {
+        //     this.spawnNextRiverMap();
+        // }
+
         // this.startSpawnSequence();
 
         // this.spawnNextRiverMap(0);

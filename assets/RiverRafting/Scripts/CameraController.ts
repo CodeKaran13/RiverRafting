@@ -46,6 +46,7 @@ export default class CameraController extends cc.Component
         if (GameManager.currentGameState == GameState.InGame && !this.startFollow)
         {
             this.startFollow = true;
+            this.startZoomIn();
         }
 
         if (this.startFollow)
@@ -74,7 +75,7 @@ export default class CameraController extends cc.Component
     shouldZoomIn: boolean = false;
     startZoomIn()
     {
-        var time = cc.delayTime(0.1);
+        var time = cc.delayTime(0.02);
         this.shouldZoomIn = true;
         this.zoominsequence = cc.sequence(time, cc.callFunc(this.CameraZoomIn, this));
         this.node.runAction(this.zoominsequence.repeatForever());
@@ -84,10 +85,10 @@ export default class CameraController extends cc.Component
     {
         if (this.shouldZoomIn)
         {
-            if (this.camera.zoomRatio < 1.2)
+            if (this.camera.zoomRatio <= 3.5)
             {
                 // console.log('zooming in..');
-                var end = this.camera.zoomRatio + 0.1;
+                var end = this.camera.zoomRatio + 0.2;
                 this.camera.zoomRatio = this.lerp(this.camera.zoomRatio, end, 0.1);
             }
             else

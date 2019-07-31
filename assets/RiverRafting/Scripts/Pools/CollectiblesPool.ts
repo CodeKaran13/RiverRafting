@@ -34,13 +34,13 @@ export default class CollectiblesPool extends cc.Component
         switch (type)
         {
             case CollectibleType.Health:
-                console.log('healthpack added successfully');
+                // console.log('healthpack added successfully');
                 pack.parent.removeChild(pack);
                 pack.active = false;
                 this.HealthPacks.push(pack);
                 break;
             case CollectibleType.Coins:
-                console.log('coinpack added successfully');
+                // console.log('coinpack added successfully');
                 pack.parent.removeChild(pack);
                 pack.active = false;
                 this.CoinsPack.push(pack);

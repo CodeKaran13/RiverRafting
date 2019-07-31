@@ -31,19 +31,10 @@ export default class Player extends cc.Component
             {
                 this.HasAccelerationStarted = true
                 this.StartAccelerationSequence();
+                this.restartWrongDirectionSequence();
             }
 
             this.startAcceleration(dt);
-            // console.log('movement speed: ' + this.movementSpeed);
-
-            // if (!this.CheckBound())
-            // {
-            //     this.startAcceleration(dt);
-            // }
-            // else
-            // {
-
-            // }
         }
     }
 
@@ -56,9 +47,10 @@ export default class Player extends cc.Component
         this.node.position = this.node.position.add(direction.normalizeSelf().mulSelf(this.movementSpeed));
 
         // check for wrong direction
-        if (this.node.angle > 60 || this.node.angle < -60)
+        if (this.IsWrongDirection)
         {
-            console.log('wrong direction..');
+            this.RotateToCenter();
+            this.IsWrongDirection = false;
         }
     }
 

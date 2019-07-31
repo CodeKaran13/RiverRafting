@@ -17,7 +17,7 @@ export default class TurnMeOff extends cc.Component
             //     if(this.node.children[2].children[i].active)
             //         this.node.children[2].children[i].active = false;
             // }
-
+            console.log(self.node.name);
             this.resetSequenceProps();
         }
     }
@@ -63,7 +63,7 @@ export default class TurnMeOff extends cc.Component
     }
     startSequenceProps()
     {
-        var time = cc.delayTime(0.2);
+        var time = cc.delayTime(0.1);
         this.sequenceProps = cc.sequence(time, cc.callFunc(this.propsDelay, this));
         this.node.runAction(this.sequenceProps.repeatForever());
     }
@@ -72,6 +72,7 @@ export default class TurnMeOff extends cc.Component
         if (this.propsIndex < this.propsCount)
         {
             this.node.children[0].children[this.totalCount - 1].children[this.propsIndex].active = false;
+            console.log('' + this.node.children[0].children[this.totalCount - 1].children[this.propsIndex].name);
             // if(this.node.children[0].children[this.totalCount-1].children[this.propsIndex].getComponent(dragonBones.ArmatureDisplay)!=null)
             // {
             //     this.node.children[0].children[this.totalCount-1].children[this.propsIndex].getComponent(dragonBones.ArmatureDisplay).timeScale = 0;
