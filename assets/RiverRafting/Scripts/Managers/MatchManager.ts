@@ -88,7 +88,7 @@ export default class MatchManager extends cc.Component
         // this.startSpawnSequence();
 
         // this.spawnNextRiverMap(0);
-        // this.spawnNextWave(0);
+        this.spawnNextWave(0);
 
         this._bonusSystem.resetBonus();
         this._bonusSystem.restartCounter();
@@ -108,6 +108,7 @@ export default class MatchManager extends cc.Component
     //     this.node.runAction(this.spawnSequence.repeatForever());
     // }
 
+    zOrder: number = 0;
     spawnNextRiverMap()
     {
         var rand = this.getRandomNumber();
@@ -117,7 +118,8 @@ export default class MatchManager extends cc.Component
                 var nextMap = this._poolingSystem.getRiverMapfromPool(1);
 
                 nextMap.parent.removeChild(nextMap);
-                this.LevelPrefabs.addChild(nextMap);
+                this.LevelPrefabs.addChild(nextMap, this.zOrder);
+                this.zOrder--;
 
                 nextMap.setPosition(new cc.Vec2(0, this.totalHeight));
                 nextMap.active = true;

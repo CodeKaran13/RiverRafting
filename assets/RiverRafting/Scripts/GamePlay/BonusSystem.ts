@@ -1,4 +1,5 @@
 import ScoreManager from "../Managers/ScoreManager";
+import GameManager, { GameState } from "../Managers/GameManager";
 
 const { ccclass, property } = cc._decorator;
 
@@ -25,7 +26,7 @@ export default class BonusSystem extends cc.Component
     restartCounter()
     {
         this.currentTime = this.bonusTime;
-        this.startCounter();   
+        this.startCounter();
     }
 
     startCounter()
@@ -46,7 +47,10 @@ export default class BonusSystem extends cc.Component
 
             this._scoreManager.AddScore(this.bonusReward * this.bonusMultiplier);
             this.bonusMultiplier += 0.2;
-            this.restartCounter();
+            if (GameManager.currentGameState == GameState.InGame)
+            {
+                this.restartCounter();
+            }
         }
     }
 

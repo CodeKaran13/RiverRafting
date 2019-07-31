@@ -43,15 +43,18 @@ export default class Player extends cc.Component
         // console.log('player pos: ' + this.node.position);
         // console.log('forward vector pos: ' + this.node.children[3].convertToWorldSpaceAR(cc.Vec2.ZERO));
 
-        var direction = this.node.children[2].convertToWorldSpaceAR(cc.Vec2.ZERO).sub(this.node.position);
-        this.node.position = this.node.position.add(direction.normalizeSelf().mulSelf(this.movementSpeed));
+        // if (!this.IsCycloned)
+        // {
+            var direction = this.node.children[2].convertToWorldSpaceAR(cc.Vec2.ZERO).sub(this.node.position);
+            this.node.position = this.node.position.add(direction.normalizeSelf().mulSelf(this.movementSpeed));
 
-        // check for wrong direction
-        if (this.IsWrongDirection)
-        {
-            this.RotateToCenter();
-            this.IsWrongDirection = false;
-        }
+            // check for wrong direction
+            if (this.IsWrongDirection)
+            {
+                this.RotateToCenter();
+                this.IsWrongDirection = false;
+            }
+        // }
     }
 
     StartAccelerationSequence()
@@ -251,5 +254,28 @@ export default class Player extends cc.Component
             // console.log('' + other.node.name);
             this.node.getComponent(HealthManager).takeDamage(5);
         }
+    }
+
+    // Cyclone Effect
+    IsCycloned: boolean = false;
+    cycloneSequence: cc.ActionInterval;
+    currentRot: number = 0;
+    startCyclone()
+    {
+        var time = cc.delayTime(0.1);
+        this.cycloneSequence = cc.sequence(time, cc.callFunc(this.turnOnCyclone, this));
+        this.node.runAction(this.cycloneSequence);
+    }
+    turnOnCyclone()
+    {
+        // if (this.currentRot < 3)
+        // {
+            var rot = cc.rotateBy(2, 720)
+            this.node.runAction(rot);
+            this.node.stopAction(this.cycloneSequence);
+            // this.currentRot++;
+
+            // this.IsCycloned = false;
+        // }
     }
 }
