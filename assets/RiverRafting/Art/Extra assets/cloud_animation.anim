@@ -6,7 +6,7 @@
   "_duration": 1,
   "sample": 60,
   "speed": 0.1,
-  "wrapMode": 0,
+  "wrapMode": 2,
   "curveData": {
     "paths": {
       "clouds_fog": {

@@ -228,7 +228,7 @@ export default class Player extends cc.Component
         {
             if (this.node.angle > 60 || this.node.angle < -60)
             {
-                console.log('wrong direction..');
+                // console.log('wrong direction..');
                 this.IsWrongDirection = true;
             }
         }
@@ -275,7 +275,7 @@ export default class Player extends cc.Component
     reachedCenter: boolean = false;
     startCyclone(pos)
     {
-        var time = cc.delayTime(0.01);
+        var time = cc.delayTime(0.03);
         this.dragSequence = cc.sequence(time, cc.callFunc(this.dragRaftToCyclone, this, pos));
         this.node.runAction(this.dragSequence.repeatForever());
         // this.startCycloneEffect();
@@ -283,14 +283,14 @@ export default class Player extends cc.Component
     dragRaftToCyclone(target, pos: cc.Vec2)
     {
         var dir = pos.sub(this.node.position);
-        var endPos = this.node.position.add(dir.normalizeSelf().mulSelf(1));
+        var endPos = this.node.position.add(dir.normalizeSelf().mulSelf(2));
 
-        this.node.position = endPos;
-        console.log('dragging..');
+        this.node.position = this.lerpVec2(this.node.position, endPos, 0.5);
+        // console.log('dragging..');
         if (this.reachedCenter)
         {
             this.node.stopAction(this.dragSequence);
-            console.log('reached center');
+            // console.log('reached center');
             // this.startCycloneEffect();
         }
     }
@@ -310,7 +310,7 @@ export default class Player extends cc.Component
             {
                 this.node.angle = 0;
                 this.currentRot++;
-                console.log('angle above 355, ' + this.currentRot);
+                // console.log('angle above 355, ' + this.currentRot);
             }
         }
         else
