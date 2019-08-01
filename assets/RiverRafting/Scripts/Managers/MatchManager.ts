@@ -126,7 +126,7 @@ export default class MatchManager extends cc.Component
 
                 this.totalHeight = this.totalHeight + nextMap.getComponent(RiverMap).myHeight;
 
-                for (let i = 0; i < nextMap.children[0].childrenCount - 1; i++)
+                for (let i = 0; i < nextMap.children[0].childrenCount - 2; i++)
                 {
                     nextMap.children[0].children[i].active = true;
                     nextMap.children[0].children[i].getComponent(cc.RenderComponent).enabled = false;
@@ -177,7 +177,7 @@ export default class MatchManager extends cc.Component
 
                 this.totalHeight = this.totalHeight + nextMap.getComponent(RiverMap).myHeight;
 
-                for (let i = 0; i < nextMap.children[0].childrenCount - 1; i++)
+                for (let i = 0; i < nextMap.children[0].childrenCount - 2; i++)
                 {
                     nextMap.children[0].children[i].active = true;
                     nextMap.children[0].children[i].getComponent(cc.RenderComponent).enabled = false;
@@ -284,10 +284,10 @@ export default class MatchManager extends cc.Component
     getRandomNumber()
     {
         // will return 1,2
-        var rand = Math.floor(Math.random() * 2) + 1;
+        // var rand = Math.floor(Math.random() * 2) + 1;
         // console.log('random number: ' + rand);
-        return rand;
-        // return 2;
+        // return rand;
+        return 2;
     }
 
     // Spawn Wave Prefabs

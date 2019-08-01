@@ -26,7 +26,8 @@ export default class CoinPack extends Collectibles
         {
             if (this._player.position.y - 500 > this.myPos)
             {
-                console.log('coinpack, player is above me');
+                // console.log('coinpack, player is above me');
+                this.node.getComponent(cc.RenderComponent).enabled = true;
                 this._CollectiblePool.addCollectibleBackToPool(this.node);
             }
         }
@@ -36,10 +37,11 @@ export default class CoinPack extends Collectibles
     {
         if(other.node.name == this._player.name)
         {
-            console.log('player collided coin');
+            // console.log('player collided coin');
 
             // increase score
             this._scoreManager.AddScore(this.awardScore);
+            this.node.getComponent(cc.RenderComponent).enabled = true;
             this._CollectiblePool.addCollectibleBackToPool(this.node);
         }
     }
