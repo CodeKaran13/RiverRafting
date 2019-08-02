@@ -98,7 +98,7 @@ export default class Player extends cc.Component
 
     RotateLeft()
     {
-        var toLeft = cc.rotateTo(1, -60);
+        var toLeft = cc.rotateTo(1, -80);
         var tilt = cc.rotate3DTo(0.5, 0, 0, -25);
         this.node.runAction(toLeft);
         this.currentAction = toLeft;
@@ -115,7 +115,7 @@ export default class Player extends cc.Component
 
     RotateRight()
     {
-        var toRight = cc.rotateTo(1, 60);
+        var toRight = cc.rotateTo(1, 80);
         var tilt = cc.rotate3DTo(0.5, 0, 0, 25);
         this.node.runAction(toRight);
         this.currentAction = toRight;
@@ -226,7 +226,7 @@ export default class Player extends cc.Component
         // check for wrong direction
         if (!this.IsWrongDirection)
         {
-            if (this.node.angle > 60 || this.node.angle < -60)
+            if (this.node.angle > 80 || this.node.angle < -80)
             {
                 // console.log('wrong direction..');
                 this.IsWrongDirection = true;

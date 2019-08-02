@@ -26,7 +26,7 @@ export default class HealthPack extends Collectibles
         {
             if (this._player.position.y - 500 > this.myPos)
             {
-                console.log('healthpack, player is above me');
+                // console.log('healthpack, player is above me');
                 this._CollectiblePool.addCollectibleBackToPool(this.node);
             }
         }
@@ -36,7 +36,7 @@ export default class HealthPack extends Collectibles
     {
         if (other.node.name == this._player.name)
         {
-            console.log('player collided health');
+            // console.log('player collided health');
             this._player.getComponent('HealthManager').increaseHP(this.health);
             this._CollectiblePool.addCollectibleBackToPool(this.node);
         }
