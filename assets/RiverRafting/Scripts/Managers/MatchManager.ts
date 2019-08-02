@@ -158,7 +158,7 @@ export default class MatchManager extends cc.Component
                             if (nextMap.children[0].children[propIndex].children[j].getComponent(dragonBones.ArmatureDisplay) != null)
                             {
                                 // nextMap.children[0].children[propIndex].children[j].getComponent(dragonBones.ArmatureDisplay).playAnimation('tree_movement', 0);
-                                nextMap.children[0].children[propIndex].children[j].getComponent(dragonBones.ArmatureDisplay).timeScale = 1;
+                                nextMap.children[0].children[propIndex].children[j].getComponent(dragonBones.ArmatureDisplay).timeScale = 0.5;
                             }
                             nextMap.children[0].children[propIndex].children[j].getComponent(cc.RenderComponent).enabled = false;
                         }
@@ -170,7 +170,7 @@ export default class MatchManager extends cc.Component
                 var nextMap = this._poolingSystem.getRiverMapfromPool(2);
 
                 nextMap.parent.removeChild(nextMap);
-                this.LevelPrefabs.addChild(nextMap);
+                this.LevelPrefabs.addChild(nextMap, this.zOrder);
 
                 nextMap.setPosition(new cc.Vec2(0, this.totalHeight));
                 nextMap.active = true;
