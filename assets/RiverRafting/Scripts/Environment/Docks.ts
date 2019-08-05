@@ -16,6 +16,7 @@ export default class Docks extends Obstacles
 
     onEnable() 
     {
+        this.myAnimator.stop();
         this.myPos = this.node.convertToWorldSpace(cc.Vec2.ZERO).y;
     }
 
@@ -41,7 +42,7 @@ export default class Docks extends Obstacles
     {
         if (other.node.name == this._player.name)
         {
-            this.myAnimator.play('dock fall');
+            this.myAnimator.play('dock_crack');
             this._player.getComponent(HealthManager).takeDamage(this.damage);
         }
     }

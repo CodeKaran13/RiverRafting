@@ -192,7 +192,7 @@
       "__id__": 1
     },
     "asset": {
-      "__id__": 0
+      "__uuid__": "8f4eb930-82ed-4753-935f-f95f06ca9916"
     },
     "fileId": "9eaXrMgStLSI2h/MiBBjJT",
     "sync": false
@@ -295,7 +295,7 @@
       "__id__": 1
     },
     "asset": {
-      "__id__": 0
+      "__uuid__": "8f4eb930-82ed-4753-935f-f95f06ca9916"
     },
     "fileId": "1cLB4sKPNKl7TsUqw8uDPl",
     "sync": false
@@ -398,7 +398,7 @@
       "__id__": 1
     },
     "asset": {
-      "__id__": 0
+      "__uuid__": "8f4eb930-82ed-4753-935f-f95f06ca9916"
     },
     "fileId": "48GymigMtO/7/+4SsiV/+O",
     "sync": false
@@ -501,7 +501,7 @@
       "__id__": 1
     },
     "asset": {
-      "__id__": 0
+      "__uuid__": "8f4eb930-82ed-4753-935f-f95f06ca9916"
     },
     "fileId": "c95IbSA/BK9rp8v7vI8F36",
     "sync": false
@@ -604,7 +604,7 @@
       "__id__": 1
     },
     "asset": {
-      "__id__": 0
+      "__uuid__": "8f4eb930-82ed-4753-935f-f95f06ca9916"
     },
     "fileId": "00SOcAXyxMe5b6uY2Whh/I",
     "sync": false
@@ -707,7 +707,7 @@
       "__id__": 1
     },
     "asset": {
-      "__id__": 0
+      "__uuid__": "8f4eb930-82ed-4753-935f-f95f06ca9916"
     },
     "fileId": "69BXmhGepE05tOUyThrA5s",
     "sync": false
@@ -810,7 +810,7 @@
       "__id__": 1
     },
     "asset": {
-      "__id__": 0
+      "__uuid__": "8f4eb930-82ed-4753-935f-f95f06ca9916"
     },
     "fileId": "9bm7aPl71J1YhxuAjF7jmB",
     "sync": false
@@ -913,7 +913,7 @@
       "__id__": 1
     },
     "asset": {
-      "__id__": 0
+      "__uuid__": "8f4eb930-82ed-4753-935f-f95f06ca9916"
     },
     "fileId": "daGD16Ek1MBJbqccUUhDbg",
     "sync": false
@@ -926,7 +926,9 @@
       "__id__": 1
     },
     "_enabled": true,
-    "_defaultClip": null,
+    "_defaultClip": {
+      "__uuid__": "3de12c02-6131-4bda-b15c-242a3530483c"
+    },
     "_clips": [
       {
         "__uuid__": "3de12c02-6131-4bda-b15c-242a3530483c"
@@ -941,7 +943,7 @@
       "__id__": 1
     },
     "asset": {
-      "__id__": 0
+      "__uuid__": "8f4eb930-82ed-4753-935f-f95f06ca9916"
     },
     "fileId": "damXJPoxZPCYnT/lwKXUgK",
     "sync": false

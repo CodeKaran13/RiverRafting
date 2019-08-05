@@ -60,9 +60,9 @@ export default class GameManager extends cc.Component
         // }
 
 
-        var gamedata = window.$Arena.getGameData();
-        this._matchManager._timeManager.totaltime = gamedata.play_time_seconds;
-        GameManager.Seed = gamedata.seed;
+        // var gamedata = window.$Arena.getGameData();
+        // this._matchManager._timeManager.totaltime = gamedata.play_time_seconds;
+        // GameManager.Seed = gamedata.seed;
     }
 
     OnGameOver()
