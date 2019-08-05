@@ -249,14 +249,14 @@ export default class Player extends cc.Component
 
         return new cc.Vec2(x, y);
     }
-    // lerpVec3(start: cc.Vec3, end: cc.Vec3, amt)
-    // {
-    //     var x = (1 - amt) * start.x + amt * end.x;
-    //     var y = (1 - amt) * start.y + amt * end.y;
-    //     var z = (1 - amt) * start.z + amt * end.z;
+    lerpVec3(start: cc.Vec3, end: cc.Vec3, amt)
+    {
+        var x = (1 - amt) * start.x + amt * end.x;
+        var y = (1 - amt) * start.y + amt * end.y;
+        var z = (1 - amt) * start.z + amt * end.z;
 
-    //     return new cc.Vec3(x, y, z);
-    // }
+        return new cc.Vec3(x, y, z);
+    }
 
     onBeginContact(contact, self, other)
     {
