@@ -45,6 +45,7 @@ export default class BonusSystem extends cc.Component
             this.node.stopAction(this.sequence);
             // reward player with clean run bonus and restart counter
 
+            this._scoreManager.AddBonus(this.bonusReward * this.bonusMultiplier);
             this._scoreManager.AddScore(this.bonusReward * this.bonusMultiplier);
             this.bonusMultiplier += 0.2;
             if (GameManager.currentGameState == GameState.InGame)

@@ -42,22 +42,22 @@ export default class GameManager extends cc.Component
 
     GetData()
     {
-        // var vars = {};
-        // var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value)
-        // {
-        //     vars[key] = value;
-        // });
+        var vars = {};
+        var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value)
+        {
+            vars[key] = value;
+        });
 
-        // var gameSeconds;
+        var gameSeconds;
 
-        // if (vars["time"] == null)
-        // {
-        //     this._matchManager._timeManager.totaltime = 180;
-        // }
-        // else
-        // {
-        //     this._matchManager._timeManager.totaltime = vars["time"];
-        // }
+        if (vars["time"] == null)
+        {
+            this._matchManager._timeManager.totaltime = 180;
+        }
+        else
+        {
+            this._matchManager._timeManager.totaltime = vars["time"];
+        }
 
 
         // var gamedata = window.$Arena.getGameData();
@@ -68,6 +68,9 @@ export default class GameManager extends cc.Component
     OnGameOver()
     {
         // window.$Arena.submitScore(this._matchManager._scoreManager.totalScore, GameManager.Seed);
+        this._matchManager._scoreManager.AddHumanSavedBonus();
+        this._matchManager._scoreManager.AddCoinsBonus();
+
 
         this._matchManager._UIManager.OpenSubmitWindow();
     }
