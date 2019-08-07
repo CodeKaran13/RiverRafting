@@ -58,6 +58,24 @@ export default class UIManager extends cc.Component
         serializable: true
     })
     SubmitScoreLabel: cc.Label = null;
+    @property({
+        type: cc.Label,
+        visible: true,
+        serializable: true
+    })
+    CleanRunBonusLabel: cc.Label = null;
+    @property({
+        type: cc.Label,
+        visible: true,
+        serializable: true
+    })
+    HumansSavedLabel: cc.Label = null;
+    @property({
+        type: cc.Label,
+        visible: true,
+        serializable: true
+    })
+    CoinsCollectedLabel: cc.Label = null;
 
     // All Script Refs
     @property({
@@ -113,6 +131,9 @@ export default class UIManager extends cc.Component
 
     OpenSubmitWindow()
     {
+        this.CleanRunBonusLabel.string = '' + this._matchManager._scoreManager.cleanRunBonus;
+        this.HumansSavedLabel.string = '' + this._matchManager._scoreManager.totalHumanSaved + ' X ' + this._matchManager._scoreManager.perHumanSavedBonus;
+        this.CoinsCollectedLabel.string = '' + this._matchManager._scoreManager.totalCoinsCollected + ' X ' + this._matchManager._scoreManager.perCoinBonus;
         this.SubmitScoreLabel.string = '' + this._matchManager._scoreManager.totalScore;
         this.SubmitScoreWindow.active = true;
     }

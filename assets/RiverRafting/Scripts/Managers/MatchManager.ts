@@ -55,7 +55,7 @@ export default class MatchManager extends cc.Component
     totalHeight: number = 0;
     @property
     totalObstacleToSpawnOnPrefab: number = 5;
-
+    
 
     // PrefabArray: cc.Node[] = [];
     // currentindex = 0;
@@ -155,7 +155,7 @@ export default class MatchManager extends cc.Component
                         for (var j = 0; j < grandchildcount; j++)
                         {
                             nextMap.children[0].children[propIndex].children[j].active = true;
-                            if (nextMap.children[0].children[propIndex].children[j].getComponent(dragonBones.ArmatureDisplay) != null)
+                            if (nextMap.children[0].children[propIndex].children[j].getComponent(dragonBones.ArmatureDisplay) != null && GameManager.isHighEndDevice)
                             {
                                 // nextMap.children[0].children[propIndex].children[j].getComponent(dragonBones.ArmatureDisplay).playAnimation('tree_movement', 0);
                                 nextMap.children[0].children[propIndex].children[j].getComponent(dragonBones.ArmatureDisplay).timeScale = 0.5;
@@ -206,7 +206,7 @@ export default class MatchManager extends cc.Component
                         for (var j = 0; j < grandchildcount; j++)
                         {
                             nextMap.children[0].children[propIndex].children[j].active = true;
-                            if (nextMap.children[0].children[propIndex].children[j].getComponent(dragonBones.ArmatureDisplay) != null)
+                            if (nextMap.children[0].children[propIndex].children[j].getComponent(dragonBones.ArmatureDisplay) != null && GameManager.isHighEndDevice)
                             {
                                 // nextMap.children[0].children[propIndex].children[j].getComponent(dragonBones.ArmatureDisplay).playAnimation('tree_movement', 0);
                                 nextMap.children[0].children[propIndex].children[j].getComponent(dragonBones.ArmatureDisplay).timeScale = 0.5;

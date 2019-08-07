@@ -5,8 +5,8 @@ const { ccclass, property } = cc._decorator;
 @ccclass
 export default class CoinPack extends Collectibles
 {
-    @property
-    awardScore: number = 20;
+    // @property
+    // awardScore: number = 20;
 
     start()
     {
@@ -40,7 +40,8 @@ export default class CoinPack extends Collectibles
             // console.log('player collided coin');
 
             // increase score
-            this._scoreManager.AddScore(this.awardScore);
+            this._scoreManager.totalCoinsCollected += 1;
+            this._scoreManager.AddScore(this._scoreManager.perCoinBonus);
             this.node.getComponent(cc.RenderComponent).enabled = true;
             this._CollectiblePool.addCollectibleBackToPool(this.node);
         }

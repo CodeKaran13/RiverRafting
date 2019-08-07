@@ -19,6 +19,7 @@ export default class GameManager extends cc.Component
     public static currentDifficulty: Difficulty = Difficulty.Easy;
 
     public static Seed: number = null;
+    public static isHighEndDevice: boolean = true;
 
     onLoad()
     {
@@ -39,25 +40,38 @@ export default class GameManager extends cc.Component
     {
         this.GetData();
     }
+    update(dt)
+    {
+        if(Math.floor(1/dt) <= 35)
+        {
+            // MatchManager.isHighEndDevice = false;
+            GameManager.isHighEndDevice = false;
+        }
+        else
+        {
+            // MatchManager.isHighEndDevice = true;
+            GameManager.isHighEndDevice = true;
+        }
+    }
 
     GetData()
     {
-        // var vars = {};
-        // var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value)
-        // {
-        //     vars[key] = value;
-        // });
+        var vars = {};
+        var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value)
+        {
+            vars[key] = value;
+        });
 
-        // var gameSeconds;
+        var gameSeconds;
 
-        // if (vars["time"] == null)
-        // {
-        //     this._matchManager._timeManager.totaltime = 180;
-        // }
-        // else
-        // {
-        //     this._matchManager._timeManager.totaltime = vars["time"];
-        // }
+        if (vars["time"] == null)
+        {
+            this._matchManager._timeManager.totaltime = 180;
+        }
+        else
+        {
+            this._matchManager._timeManager.totaltime = vars["time"];
+        }
 
 
         // var gamedata = window.$Arena.getGameData();
@@ -68,6 +82,9 @@ export default class GameManager extends cc.Component
     OnGameOver()
     {
         // window.$Arena.submitScore(this._matchManager._scoreManager.totalScore, GameManager.Seed);
+        this._matchManager._scoreManager.AddHumanSavedBonus();
+        this._matchManager._scoreManager.AddCoinsBonus();
+
 
         this._matchManager._UIManager.OpenSubmitWindow();
     }
