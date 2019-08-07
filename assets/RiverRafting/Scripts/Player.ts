@@ -25,6 +25,9 @@ export default class Player extends cc.Component
 
     update(dt)
     {
+        // console.log('' + Math.floor(1/dt));
+        
+
         if (GameManager.currentGameState == GameState.InGame)
         {
             if (!this.HasAccelerationStarted)
