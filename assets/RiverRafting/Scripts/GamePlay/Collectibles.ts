@@ -6,7 +6,8 @@ const { ccclass, property } = cc._decorator;
 export enum CollectibleType
 {
     Health = 0,
-    Coins = 1
+    Coins = 1,
+    DrowningHuman = 2
 }
 
 @ccclass
@@ -20,14 +21,12 @@ export default class Collectibles extends cc.Component
         serializable: true
     })
     _CollectiblePool: CollectiblesPool = null;
-
     @property({
         type: cc.Node,
         visible: true,
         serializable: true
     })
     _player: cc.Node = null;
-
     @property({
         type: ScoreManager,
         visible: true,

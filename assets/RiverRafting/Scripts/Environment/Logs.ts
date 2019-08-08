@@ -4,16 +4,13 @@ import HealthManager from "../Managers/HealthManager";
 const { ccclass, property } = cc._decorator;
 
 @ccclass
-export default class Docks extends Obstacles
+export default class Logs extends Obstacles
 {
-
-    // onLoad () {}
 
     start()
     {
-        this.myType = ObstacleType.Dock;
+        this.myType = ObstacleType.Log;
     }
-
     onEnable() 
     {
         this.myAnimator.stop();
@@ -43,7 +40,7 @@ export default class Docks extends Obstacles
     {
         if (other.node.name == this._player.name)
         {
-            this.myAnimator.play('dock_crack');
+            this.myAnimator.play('floating_wood_break');
             this._player.getComponent(HealthManager).takeDamage(this.damage);
         }
     }

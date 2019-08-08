@@ -55,7 +55,7 @@ export default class MatchManager extends cc.Component
     totalHeight: number = 0;
     @property
     totalObstacleToSpawnOnPrefab: number = 5;
-    
+
 
     // PrefabArray: cc.Node[] = [];
     // currentindex = 0;
@@ -129,7 +129,10 @@ export default class MatchManager extends cc.Component
                 for (let i = 0; i < nextMap.children[0].childrenCount - 2; i++)
                 {
                     nextMap.children[0].children[i].active = true;
-                    nextMap.children[0].children[i].getComponent(cc.RenderComponent).enabled = false;
+                    if (nextMap.children[0].children[i].getComponent(cc.RenderComponent) != null)
+                    {
+                        nextMap.children[0].children[i].getComponent(cc.RenderComponent).enabled = false;
+                    }
                     var grandchildcount = 0;
                     if (nextMap.children[0].children[i].childrenCount > 0)
                     {
@@ -180,7 +183,11 @@ export default class MatchManager extends cc.Component
                 for (let i = 0; i < nextMap.children[0].childrenCount - 2; i++)
                 {
                     nextMap.children[0].children[i].active = true;
-                    nextMap.children[0].children[i].getComponent(cc.RenderComponent).enabled = false;
+                    if (nextMap.children[0].children[i].getComponent(cc.RenderComponent) != null)
+                    {
+                        // console.log('' + i);
+                        nextMap.children[0].children[i].getComponent(cc.RenderComponent).enabled = false;
+                    }
                     var grandchildcount = 0;
                     if (nextMap.children[0].children[i].childrenCount > 0)
                     {

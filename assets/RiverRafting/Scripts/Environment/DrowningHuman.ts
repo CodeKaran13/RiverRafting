@@ -3,16 +3,13 @@ import Collectibles, { CollectibleType } from "../GamePlay/Collectibles";
 const { ccclass, property } = cc._decorator;
 
 @ccclass
-export default class CoinPack extends Collectibles
+export default class DrowningHuman extends Collectibles
 {
-    // @property
-    // awardScore: number = 20;
-
     start()
     {
-        this.myType = CollectibleType.Coins;
+        this.myType = CollectibleType.DrowningHuman;
     }
-    onEnable() 
+    onEnable()
     {
         this.myPos = this.node.convertToWorldSpaceAR(cc.Vec2.ZERO).y;
     }
@@ -26,7 +23,7 @@ export default class CoinPack extends Collectibles
         {
             if (this._player.position.y - 500 > this.myPos)
             {
-                // console.log('coinpack, player is above me');
+                // console.log('drowning human, player is above me');
                 // this.node.getComponent(cc.RenderComponent).enabled = true;
                 this._CollectiblePool.addCollectibleBackToPool(this.node);
             }
@@ -40,8 +37,8 @@ export default class CoinPack extends Collectibles
             // console.log('player collided coin');
 
             // increase score
-            this._scoreManager.totalCoinsCollected += 1;
-            this._scoreManager.AddScore(this._scoreManager.perCoinBonus);
+            this._scoreManager.totalHumanSaved += 1;
+            this._scoreManager.AddScore(this._scoreManager.perHumanSavedBonus);
             // this.node.getComponent(cc.RenderComponent).enabled = true;
             this._CollectiblePool.addCollectibleBackToPool(this.node);
         }

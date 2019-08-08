@@ -19,6 +19,7 @@ export default class TurnMeOff extends cc.Component
             // }
             // console.log(self.node.name);
             this.resetSequenceProps();
+            this.node.children[1].active = false;
         }
     }
 

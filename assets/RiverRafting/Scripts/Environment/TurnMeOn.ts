@@ -58,7 +58,10 @@ export default class TurnMeOn extends cc.Component
             {
                 // self.node.children[0].children[i].active = true;
                 // console.log(self.node.name);
-                self.node.children[0].children[i].getComponent(cc.RenderComponent).enabled = true;
+                if (self.node.children[0].children[i].getComponent(cc.RenderComponent) != null)
+                {
+                    self.node.children[0].children[i].getComponent(cc.RenderComponent).enabled = true;
+                }
                 var grandchildcount = 0;
                 if (self.node.children[0].children[i].childrenCount > 0)
                 {
@@ -67,7 +70,10 @@ export default class TurnMeOn extends cc.Component
                     {
                         for (var j = 0; j < grandchildcount; j++)
                         {
-                            self.node.children[0].children[i].children[0].children[j].getComponent(cc.RenderComponent).enabled = true;
+                            if (self.node.children[0].children[i].children[0].children[j].getComponent(cc.RenderComponent) != null)
+                            {
+                                self.node.children[0].children[i].children[0].children[j].getComponent(cc.RenderComponent).enabled = true;
+                            }
                         }
                     }
                 }

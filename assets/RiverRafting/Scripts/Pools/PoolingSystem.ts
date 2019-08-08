@@ -52,7 +52,7 @@ export default class PoolingSystem extends cc.Component
     // Pooling for river maps prefabs
     addRiverMapToPool(Type: cc.Node)
     {
-        console.log('adding back to pool');
+        // console.log('adding back to pool');
         Type.getComponent(RiverMap).IsActive = false;
         Type.getComponent(RiverMap).CheckPlayerLocation = false;
         // Type.destroy();
