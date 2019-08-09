@@ -54,7 +54,7 @@ export default class TurnMeOn extends cc.Component
             this._itemSpawner.SpawnHealthPack();
             // this._itemSpawner.SpawnCoinPack();
             // console.log('collider spotted');
-            for (let i = 0; i < self.node.children[0].childrenCount - 2; i++)
+            for (let i = 0; i < self.node.children[0].childrenCount - 1; i++)
             {
                 // self.node.children[0].children[i].active = true;
                 // console.log(self.node.name);
