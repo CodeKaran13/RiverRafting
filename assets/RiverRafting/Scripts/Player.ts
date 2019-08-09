@@ -286,7 +286,7 @@ export default class Player extends cc.Component
     dragRaftToCyclone(target, pos: cc.Vec2)
     {
         var dir = pos.sub(this.node.position);
-        var endPos = this.node.position.add(dir.normalizeSelf().mulSelf(2));
+        var endPos = this.node.position.add(dir.normalizeSelf().mulSelf(4));
 
         this.node.position = this.lerpVec2(this.node.position, endPos, 0.5);
         // console.log('dragging..');
@@ -297,13 +297,13 @@ export default class Player extends cc.Component
             // this.startCycloneEffect();
         }
     }
-    startCycloneEffect()
+    startCycloneEffect(node)
     {
         var time = cc.delayTime(0.01);
-        this.cycloneSequence = cc.sequence(time, cc.callFunc(this.cycloneEffect, this));
+        this.cycloneSequence = cc.sequence(time, cc.callFunc(this.cycloneEffect, this, node));
         this.node.runAction(this.cycloneSequence.repeatForever());
     }
-    cycloneEffect()
+    cycloneEffect(target, node)
     {
         if (this.currentRot < 3)
         {
@@ -319,6 +319,7 @@ export default class Player extends cc.Component
         else
         {
             this.node.stopAction(this.cycloneSequence);
+            node.active = false;
             this.reachedCenter = false;
             this.IsCycloned = false;
             this.currentRot = 0;
