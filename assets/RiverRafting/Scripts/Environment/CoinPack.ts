@@ -5,8 +5,8 @@ const { ccclass, property } = cc._decorator;
 @ccclass
 export default class CoinPack extends Collectibles
 {
-    @property
-    awardScore: number = 20;
+    // @property
+    // awardScore: number = 20;
 
     start()
     {
@@ -27,7 +27,7 @@ export default class CoinPack extends Collectibles
             if (this._player.position.y - 500 > this.myPos)
             {
                 // console.log('coinpack, player is above me');
-                this.node.getComponent(cc.RenderComponent).enabled = true;
+                // this.node.getComponent(cc.RenderComponent).enabled = true;
                 this._CollectiblePool.addCollectibleBackToPool(this.node);
             }
         }
@@ -40,8 +40,9 @@ export default class CoinPack extends Collectibles
             // console.log('player collided coin');
 
             // increase score
-            this._scoreManager.AddScore(this.awardScore);
-            this.node.getComponent(cc.RenderComponent).enabled = true;
+            this._scoreManager.totalCoinsCollected += 1;
+            this._scoreManager.AddScore(this._scoreManager.perCoinBonus);
+            // this.node.getComponent(cc.RenderComponent).enabled = true;
             this._CollectiblePool.addCollectibleBackToPool(this.node);
         }
     }

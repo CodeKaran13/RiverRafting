@@ -1,3 +1,5 @@
+import Obstacles, { ObstacleType } from "../GamePlay/Obstacles";
+
 const { ccclass, property } = cc._decorator;
 
 @ccclass
@@ -10,14 +12,12 @@ export default class ObstaclePool extends cc.Component
         serializable: true
     })
     RollingLogs: cc.Node[] = [];
-
     @property({
         type: cc.Node,
         visible: true,
         serializable: true
     })
     BreakableLogs: cc.Node[] = [];
-
     @property({
         type: cc.Node,
         visible: true,
@@ -36,41 +36,30 @@ export default class ObstaclePool extends cc.Component
 
     addObstacleBackToPool(name: cc.Node)
     {
-        switch (name.name)
+        var type = name.getComponent(Obstacles).myType;
+        switch (type)
         {
-            case 'rollinglogs':
-                // name.parent.removeChild(name);
-                name.getComponent('RollingLogs').enabled = false;
-                name.active = false;
-                this.RollingLogs.push(name);
-                break;
-            case 'breakablelogs':
+            case ObstacleType.Log:
                 name.parent.removeChild(name);
                 name.active = false;
-                this.BreakableLogs.push(name);
+                // this.BreakableLogs.push(name);
                 break;
-            case 'docks':
+            case ObstacleType.Dock:
                 name.parent.removeChild(name);
                 name.active = false;
-                this.BreakableDocks.push(name);
+                // this.BreakableDocks.push(name);
                 break;
         }
     }
 
-    getObstacleFromPool(obstacleName: string): cc.Node
+    getObstacleFromPool(obstacleType: ObstacleType): cc.Node
     {
-        switch (obstacleName)
+        switch (obstacleType)
         {
-            case 'rollinglogs':
-                console.log('get rolling log');
-                var rollinglog = this.RollingLogs.pop();
-                rollinglog.active = true;
-                return rollinglog;
-            case 'breakablelogs':
+            case ObstacleType.Log:
                 var breakablelog = this.BreakableLogs.pop();
-                // breakablelog.active = true;
                 return breakablelog;
-            case 'docks':
+            case ObstacleType.Dock:
                 var dock = this.BreakableDocks.pop();
                 return dock;
         }

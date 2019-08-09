@@ -129,7 +129,10 @@ export default class MatchManager extends cc.Component
                 for (let i = 0; i < nextMap.children[0].childrenCount - 2; i++)
                 {
                     nextMap.children[0].children[i].active = true;
-                    nextMap.children[0].children[i].getComponent(cc.RenderComponent).enabled = false;
+                    if (nextMap.children[0].children[i].getComponent(cc.RenderComponent) != null)
+                    {
+                        nextMap.children[0].children[i].getComponent(cc.RenderComponent).enabled = false;
+                    }
                     var grandchildcount = 0;
                     if (nextMap.children[0].children[i].childrenCount > 0)
                     {
@@ -155,7 +158,7 @@ export default class MatchManager extends cc.Component
                         for (var j = 0; j < grandchildcount; j++)
                         {
                             nextMap.children[0].children[propIndex].children[j].active = true;
-                            if (nextMap.children[0].children[propIndex].children[j].getComponent(dragonBones.ArmatureDisplay) != null)
+                            if (nextMap.children[0].children[propIndex].children[j].getComponent(dragonBones.ArmatureDisplay) != null && GameManager.isHighEndDevice)
                             {
                                 // nextMap.children[0].children[propIndex].children[j].getComponent(dragonBones.ArmatureDisplay).playAnimation('tree_movement', 0);
                                 nextMap.children[0].children[propIndex].children[j].getComponent(dragonBones.ArmatureDisplay).timeScale = 0.5;
@@ -180,7 +183,11 @@ export default class MatchManager extends cc.Component
                 for (let i = 0; i < nextMap.children[0].childrenCount - 2; i++)
                 {
                     nextMap.children[0].children[i].active = true;
-                    nextMap.children[0].children[i].getComponent(cc.RenderComponent).enabled = false;
+                    if (nextMap.children[0].children[i].getComponent(cc.RenderComponent) != null)
+                    {
+                        // console.log('' + i);
+                        nextMap.children[0].children[i].getComponent(cc.RenderComponent).enabled = false;
+                    }
                     var grandchildcount = 0;
                     if (nextMap.children[0].children[i].childrenCount > 0)
                     {
@@ -206,7 +213,7 @@ export default class MatchManager extends cc.Component
                         for (var j = 0; j < grandchildcount; j++)
                         {
                             nextMap.children[0].children[propIndex].children[j].active = true;
-                            if (nextMap.children[0].children[propIndex].children[j].getComponent(dragonBones.ArmatureDisplay) != null)
+                            if (nextMap.children[0].children[propIndex].children[j].getComponent(dragonBones.ArmatureDisplay) != null && GameManager.isHighEndDevice)
                             {
                                 // nextMap.children[0].children[propIndex].children[j].getComponent(dragonBones.ArmatureDisplay).playAnimation('tree_movement', 0);
                                 nextMap.children[0].children[propIndex].children[j].getComponent(dragonBones.ArmatureDisplay).timeScale = 0.5;

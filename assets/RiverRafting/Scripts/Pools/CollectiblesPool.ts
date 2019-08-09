@@ -11,14 +11,18 @@ export default class CollectiblesPool extends cc.Component
         serializable: true
     })
     HealthPacks: cc.Node[] = [];
-
     @property({
         type: cc.Node,
         visible: true,
         serializable: true
     })
     CoinsPack: cc.Node[] = [];
-
+    @property({
+        type: cc.Node,
+        visible: true,
+        serializable: true
+    })
+    DrowningHumansPack: cc.Node[] = [];
     // onLoad () {}
 
     start()
@@ -41,9 +45,16 @@ export default class CollectiblesPool extends cc.Component
                 break;
             case CollectibleType.Coins:
                 // console.log('coinpack added successfully');
-                pack.parent.removeChild(pack);
+                // pack.parent.removeChild(pack);
                 pack.active = false;
-                this.CoinsPack.push(pack);
+                // this.CoinsPack.push(pack);
+                break;
+            case CollectibleType.DrowningHuman:
+                // console.log('drowninghuman added successfully');
+                // pack.parent.removeChild(pack);
+                // pack.active = false;
+                // this.DrowningHumansPack.push(pack);
+                pack.active = false;
                 break;
         }
     }
@@ -60,6 +71,9 @@ export default class CollectiblesPool extends cc.Component
                 var coinpack = this.CoinsPack.pop();
                 // coinpack.active = true;
                 return coinpack;
+            case CollectibleType.DrowningHuman:
+                var drowningPack = this.DrowningHumansPack.pop();
+                return drowningPack;
         }
     }
 }

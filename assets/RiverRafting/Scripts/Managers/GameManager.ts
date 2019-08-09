@@ -19,6 +19,7 @@ export default class GameManager extends cc.Component
     public static currentDifficulty: Difficulty = Difficulty.Easy;
 
     public static Seed: number = null;
+    public static isHighEndDevice: boolean = true;
 
     onLoad()
     {
@@ -38,6 +39,19 @@ export default class GameManager extends cc.Component
     start()
     {
         this.GetData();
+    }
+    update(dt)
+    {
+        if(Math.floor(1/dt) <= 35)
+        {
+            // MatchManager.isHighEndDevice = false;
+            GameManager.isHighEndDevice = false;
+        }
+        else
+        {
+            // MatchManager.isHighEndDevice = true;
+            GameManager.isHighEndDevice = true;
+        }
     }
 
     GetData()
@@ -68,6 +82,9 @@ export default class GameManager extends cc.Component
     OnGameOver()
     {
         // window.$Arena.submitScore(this._matchManager._scoreManager.totalScore, GameManager.Seed);
+        this._matchManager._scoreManager.AddHumanSavedBonus();
+        this._matchManager._scoreManager.AddCoinsBonus();
+
 
         this._matchManager._UIManager.OpenSubmitWindow();
     }

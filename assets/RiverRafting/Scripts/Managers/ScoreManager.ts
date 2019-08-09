@@ -1,5 +1,6 @@
 import UIManager from "./UIManager";
 import MatchManager from "./MatchManager";
+import BonusSystem from "../GamePlay/BonusSystem";
 
 const { ccclass, property } = cc._decorator;
 
@@ -20,6 +21,16 @@ export default class ScoreManager extends cc.Component
     })
     _UIManager: UIManager = null;
 
+    @property
+    perCoinBonus: number = 10;
+    @property
+    perHumanSavedBonus: number = 20;
+
+    cleanRunBonus: number = 0;
+    totalHumanSaved: number = 0;
+    humanSavedBonus: number = 0;
+    totalCoinsCollected: number = 0;
+    coinsCollectedBonus: number = 0;
     totalScore: number = 0;
 
     onLoad () {
@@ -27,20 +38,26 @@ export default class ScoreManager extends cc.Component
         this._matchManager._scoreManager = this;
     }
 
-    start()
+
+    AddBonus(value: number)
     {
-
+        this.cleanRunBonus += value;
+        // this.AddScore(this.cleanRunBonus);
     }
-
-    // update (dt) {}
+    AddCoinsBonus()
+    {
+        this.coinsCollectedBonus = this.totalCoinsCollected * this.perCoinBonus;
+    }
+    AddHumanSavedBonus()
+    {
+        this.humanSavedBonus = this.totalHumanSaved * this.humanSavedBonus;
+    }
 
     AddScore(value: number)
     {
         this.totalScore += value;
-
         this._UIManager.OnUIUpdateScore(this.totalScore);
     }
-
     SubScore(value: number)
     {
         this.totalScore -= value;
