@@ -1628,7 +1628,7 @@
     },
     "_enabled": true,
     "tag": 0,
-    "_density": 1,
+    "_density": 100,
     "_sensor": false,
     "_friction": 0.2,
     "_restitution": 0,
@@ -199539,7 +199539,7 @@
       "__id__": 4976
     },
     "_enabled": true,
-    "_type": 1,
+    "_type": 2,
     "_allowSleep": false,
     "_gravityScale": 0,
     "_linearDamping": 0,
@@ -199699,7 +199699,7 @@
       "__id__": 4981
     },
     "_enabled": true,
-    "_type": 1,
+    "_type": 2,
     "_allowSleep": false,
     "_gravityScale": 0,
     "_linearDamping": 0,
@@ -199859,7 +199859,7 @@
       "__id__": 4986
     },
     "_enabled": true,
-    "_type": 1,
+    "_type": 2,
     "_allowSleep": false,
     "_gravityScale": 0,
     "_linearDamping": 0,
@@ -200019,7 +200019,7 @@
       "__id__": 4991
     },
     "_enabled": true,
-    "_type": 1,
+    "_type": 2,
     "_allowSleep": false,
     "_gravityScale": 0,
     "_linearDamping": 0,
@@ -200179,7 +200179,7 @@
       "__id__": 4996
     },
     "_enabled": true,
-    "_type": 1,
+    "_type": 2,
     "_allowSleep": false,
     "_gravityScale": 0,
     "_linearDamping": 0,
