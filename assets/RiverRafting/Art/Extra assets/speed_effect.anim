@@ -1,0 +1,173 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "speed_effect",
+  "_objFlags": 0,
+  "_native": "",
+  "_duration": 0.5,
+  "sample": 60,
+  "speed": 1.4,
+  "wrapMode": 2,
+  "curveData": {
+    "paths": {
+      "speed_effect": {
+        "props": {
+          "position": [
+            {
+              "frame": 0,
+              "value": [
+                128.5,
+                793.1
+              ],
+              "motionPath": [
+                [
+                  142.2,
+                  763.3,
+                  139.2,
+                  776,
+                  146.2,
+                  746.5
+                ]
+              ]
+            },
+            {
+              "frame": 0.5,
+              "value": [
+                146.9,
+                721.7
+              ],
+              "motionPath": []
+            }
+          ],
+          "scale": [
+            {
+              "frame": 0,
+              "value": {
+                "__type__": "cc.Vec2",
+                "x": 0.08,
+                "y": 0.08
+              }
+            },
+            {
+              "frame": 0.5,
+              "value": {
+                "__type__": "cc.Vec2",
+                "x": 0.2,
+                "y": 0.2
+              }
+            }
+          ],
+          "opacity": [
+            {
+              "frame": 0,
+              "value": 0
+            },
+            {
+              "frame": 0.16666666666666666,
+              "value": 150
+            },
+            {
+              "frame": 0.3333333333333333,
+              "value": 150
+            },
+            {
+              "frame": 0.5,
+              "value": 0
+            }
+          ],
+          "angle": [
+            {
+              "frame": 0,
+              "value": 11
+            },
+            {
+              "frame": 0.5,
+              "value": -19.903
+            }
+          ]
+        }
+      },
+      "speed_effect_right": {
+        "props": {
+          "position": [
+            {
+              "frame": 0,
+              "value": [
+                113.2,
+                791.8
+              ],
+              "motionPath": [
+                [
+                  103.4,
+                  767,
+                  106.1,
+                  780.6,
+                  99.3,
+                  746.7
+                ]
+              ]
+            },
+            {
+              "frame": 0.5,
+              "value": [
+                99,
+                721.3
+              ],
+              "motionPath": []
+            }
+          ],
+          "angle": [
+            {
+              "frame": 0,
+              "value": -4.2913242299393985
+            },
+            {
+              "frame": 0.16666666666666666,
+              "value": 8.715675770060603
+            },
+            {
+              "frame": 0.5,
+              "value": 20.369675770060603
+            }
+          ],
+          "opacity": [
+            {
+              "frame": 0,
+              "value": 0
+            },
+            {
+              "frame": 0.16666666666666666,
+              "value": 150
+            },
+            {
+              "frame": 0.3333333333333333,
+              "value": 150
+            },
+            {
+              "frame": 0.5,
+              "value": 0
+            }
+          ],
+          "scale": [
+            {
+              "frame": 0,
+              "value": {
+                "__type__": "cc.Vec2",
+                "x": -0.08,
+                "y": 0.08
+              }
+            },
+            {
+              "frame": 0.5,
+              "value": {
+                "__type__": "cc.Vec2",
+                "x": -0.2,
+                "y": 0.2
+              }
+            }
+          ]
+        }
+      }
+    }
+  },
+  "events": []
+}

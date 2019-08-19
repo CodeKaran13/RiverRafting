@@ -13,7 +13,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "character_drowning",
+    "_name": "Light1",
     "_objFlags": 0,
     "_parent": null,
     "_children": [],
@@ -22,10 +22,13 @@
     "_components": [
       {
         "__id__": 2
+      },
+      {
+        "__id__": 3
       }
     ],
     "_prefab": {
-      "__id__": 3
+      "__id__": 4
     },
     "_opacity": 255,
     "_color": {
@@ -37,18 +40,18 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 0,
-      "height": 0
+      "width": 662,
+      "height": 778
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
       "x": 0.5,
-      "y": 0.5
+      "y": 1
     },
     "_position": {
       "__type__": "cc.Vec3",
-      "x": 481.734,
-      "y": -14.672,
+      "x": 559.234,
+      "y": 733.05,
       "z": 0
     },
     "_scale": {
@@ -70,7 +73,7 @@
     "_id": ""
   },
   {
-    "__type__": "dragonBones.ArmatureDisplay",
+    "__type__": "cc.Sprite",
     "_name": "",
     "_objFlags": 0,
     "node": {
@@ -82,31 +85,42 @@
         "__uuid__": "eca5d2f2-8ef6-41c2-bbe6-f9c79d09c432"
       }
     ],
-    "_armatureName": "Armature",
-    "_animationName": "drowning_anim",
-    "_preCacheMode": 0,
-    "_cacheMode": 0,
-    "playTimes": -1,
-    "premultipliedAlpha": false,
-    "_armatureKey": "a8d6d2dc-a3f9-4730-b91a-1632ed160987#94f18a63-0c89-459a-970f-54a032c41c13",
-    "_accTime": 0,
-    "_playCount": 0,
-    "_frameCache": null,
-    "_curFrame": null,
-    "_playing": false,
-    "_armatureCache": null,
-    "_N$dragonAsset": {
-      "__uuid__": "a8d6d2dc-a3f9-4730-b91a-1632ed160987"
+    "_srcBlendFactor": 770,
+    "_dstBlendFactor": 771,
+    "_spriteFrame": {
+      "__uuid__": "caedde1a-b85a-486e-8c03-0058b14a5f6c"
     },
-    "_N$dragonAtlasAsset": {
-      "__uuid__": "94f18a63-0c89-459a-970f-54a032c41c13"
+    "_type": 3,
+    "_sizeMode": 1,
+    "_fillType": 1,
+    "_fillCenter": {
+      "__type__": "cc.Vec2",
+      "x": 0,
+      "y": 0
     },
-    "_N$_defaultArmatureIndex": 0,
-    "_N$_animationIndex": 1,
-    "_N$_defaultCacheMode": 0,
-    "_N$timeScale": 2,
-    "_N$debugBones": false,
-    "_N$enableBatch": true,
+    "_fillStart": 0,
+    "_fillRange": 1,
+    "_isTrimmedMode": true,
+    "_atlas": null,
+    "_id": ""
+  },
+  {
+    "__type__": "cc.Animation",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 1
+    },
+    "_enabled": true,
+    "_defaultClip": {
+      "__uuid__": "66c3360e-7480-4e97-b261-ff014db19052"
+    },
+    "_clips": [
+      {
+        "__uuid__": "66c3360e-7480-4e97-b261-ff014db19052"
+      }
+    ],
+    "playOnLoad": true,
     "_id": ""
   },
   {
@@ -117,7 +131,7 @@
     "asset": {
       "__id__": 0
     },
-    "fileId": "e7IYKuEFxATJ+tmVzdZDcY",
+    "fileId": "49OJrJrl5Cl6jbWcTBV1MY",
     "sync": false
   }
 ]
