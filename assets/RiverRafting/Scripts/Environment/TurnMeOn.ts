@@ -133,7 +133,10 @@ export default class TurnMeOn extends cc.Component
     {
         if (this.propsIndex >= 0)
         {
-            this.node.children[0].children[this.totalCount - 1].children[this.propsIndex].getComponent(cc.RenderComponent).enabled = true;
+            if (this.node.children[0].children[this.totalCount - 1].children[this.propsIndex].getComponent(cc.RenderComponent) != null)
+            {
+                this.node.children[0].children[this.totalCount - 1].children[this.propsIndex].getComponent(cc.RenderComponent).enabled = true;
+            }
             this.propsIndex--;
         }
         else
