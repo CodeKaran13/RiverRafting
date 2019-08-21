@@ -11,28 +11,13 @@ export default class ObstaclePool extends cc.Component
         visible: true,
         serializable: true
     })
-    RollingLogs: cc.Node[] = [];
+    Logs: cc.Node[] = [];
     @property({
         type: cc.Node,
         visible: true,
         serializable: true
     })
-    BreakableLogs: cc.Node[] = [];
-    @property({
-        type: cc.Node,
-        visible: true,
-        serializable: true
-    })
-    BreakableDocks: cc.Node[] = [];
-
-    // onLoad () {}
-
-    start()
-    {
-
-    }
-
-    // update (dt) {}
+    Cyclones: cc.Node[] = [];
 
     addObstacleBackToPool(name: cc.Node)
     {
@@ -42,12 +27,10 @@ export default class ObstaclePool extends cc.Component
             case ObstacleType.Log:
                 name.parent.removeChild(name);
                 name.active = false;
-                // this.BreakableLogs.push(name);
                 break;
-            case ObstacleType.Dock:
+            case ObstacleType.Cyclone:
                 name.parent.removeChild(name);
                 name.active = false;
-                // this.BreakableDocks.push(name);
                 break;
         }
     }
@@ -57,11 +40,11 @@ export default class ObstaclePool extends cc.Component
         switch (obstacleType)
         {
             case ObstacleType.Log:
-                var breakablelog = this.BreakableLogs.pop();
-                return breakablelog;
-            case ObstacleType.Dock:
-                var dock = this.BreakableDocks.pop();
-                return dock;
+                var log = this.Logs.pop();
+                return log;
+            case ObstacleType.Cyclone:
+                var cyclone = this.Cyclones.pop();
+                return cyclone;
         }
     }
 }

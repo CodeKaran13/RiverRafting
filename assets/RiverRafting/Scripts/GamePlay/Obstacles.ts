@@ -7,8 +7,7 @@ export enum ObstacleType
     Dock = 0,
     Log = 1,
     Rock = 2,
-    Ramps = 3,
-    Cyclone = 4
+    Cyclone = 3
 }
 
 @ccclass

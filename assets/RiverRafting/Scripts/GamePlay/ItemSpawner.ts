@@ -5,13 +5,7 @@ import { CollectibleType } from "./Collectibles";
 const { ccclass, property } = cc._decorator;
 
 @ccclass
-export default class ItemSpawner extends cc.Component
-{
-    // @property
-    // healthPackSpawnTime: number = 30;
-    // @property
-    // coinPackSpawnTime: number = 15;
-
+export default class ItemSpawner extends cc.Component {
     @property({
         type: CollectiblesPool,
         visible: true,
@@ -19,92 +13,16 @@ export default class ItemSpawner extends cc.Component
     })
     _CollectiblePool: CollectiblesPool = null;
 
-    currentTimeHealth: number = 0;
-    currentTimeCoin: number = 0;
-    sequenceHealth: cc.ActionInterval;
-    sequenceCoin: cc.ActionInterval;
+    healthSpawnPos: cc.Node[] = [];
+    coinSpawnPos: cc.Node[] = [];
+    humanSpawnPos: cc.Node[] = [];
 
-    SpawnPos: cc.Node[] = [];
-
-    // onGameStart()
-    // {
-    //     //spawn health packs
-    //     this.restartTimerForPack('healthpack');
-    //     this.startTimerForPack('healthpack');
-
-    //     //spawn coin packs
-    //     this.restartTimerForPack('coinpack');
-    //     this.startTimerForPack('coinpack');
-    // }
-
-    // restartTimerForPack(name: string)
-    // {
-    //     if (name == 'healthpack')
-    //     {
-    //         this.currentTimeHealth = this.healthPackSpawnTime;
-    //     }
-    //     else if (name == 'coinpack')
-    //     {
-    //         this.currentTimeCoin = this.coinPackSpawnTime;
-    //     }
-    // }
-
-    // startTimerForPack(packName: string)
-    // {
-    //     if (packName == 'healthpack')
-    //     {
-    //         var time = cc.delayTime(1);
-    //         this.sequenceHealth = cc.sequence(time, cc.callFunc(this.countdownHealth, this));
-    //         this.node.runAction(this.sequenceHealth.repeatForever());
-    //     }
-    //     else if (packName == 'coinpack')
-    //     {
-    //         var time = cc.delayTime(1);
-    //         this.sequenceCoin = cc.sequence(time, cc.callFunc(this.countdownCoin, this));
-    //         this.node.runAction(this.sequenceCoin.repeatForever());
-    //     }
-    // }
-
-    // countdownHealth()
-    // {
-    //     if (this.currentTimeHealth > 0)
-    //     {
-    //         this.currentTimeHealth -= 1;
-    //     }
-    //     else
-    //     {
-    //         //trigger new spawn for item
-    //         this.node.stopAction(this.sequenceHealth);
-    //         this.SpawnHealthPack();
-    //         this.restartTimerForPack('healthpack');
-    //         this.startTimerForPack('healthpack');
-    //     }
-    // }
-
-    // countdownCoin()
-    // {
-    //     if (this.currentTimeCoin > 0)
-    //     {
-    //         this.currentTimeCoin -= 1;
-    //     }
-    //     else
-    //     {
-    //         // trigger new spawn for item
-    //         this.node.stopAction(this.sequenceCoin);
-    //         this.SpawnCoinPack();
-    //         this.restartTimerForPack('coinpack');
-    //         this.startTimerForPack('coinpack');
-    //     }
-    // }
-
-    SpawnHealthPack()
-    {
+    SpawnHealthPack() {
         var healthpack = this._CollectiblePool.getCollectibleFromPool(CollectibleType.Health);
 
-        var spawnPosParent = this.getRandomSpawnPos();
+        var spawnPosParent = this.getRandomHealthSpawnPos();
 
-        if (healthpack.parent != null)
-        {
+        if (healthpack.parent != null) {
             healthpack.parent.removeChild(healthpack);
         }
 
@@ -114,35 +32,36 @@ export default class ItemSpawner extends cc.Component
 
         healthpack.active = true;
     }
-    SpawnCoinPack()
-    {
+    SpawnStarPack() {
         var coinpack = this._CollectiblePool.getCollectibleFromPool(CollectibleType.Coins);
 
-        var spawnPosParent = this.getRandomSpawnPos();
+        // var spawnPosParent = this.getRandomHealthSpawnPos();
 
-        if (coinpack.parent != null)
-        {
+        if (coinpack.parent != null) {
             coinpack.parent.removeChild(coinpack);
         }
 
         // spawnPosParent.active = true;
-        spawnPosParent.addChild(coinpack);
-        coinpack.setPosition(cc.Vec2.ZERO);
+        // spawnPosParent.addChild(coinpack);
+        // coinpack.setPosition(cc.Vec2.ZERO);
 
-        coinpack.active = true;
+        // coinpack.active = true;
+    }
+    SpawnDrowningHumans() {
+        var collectible = this._CollectiblePool.getCollectibleFromPool(CollectibleType.DrowningHuman);
     }
 
-    getRandomSpawnPos(): cc.Node
-    {
+    getRandomHealthSpawnPos(): cc.Node {
         var rand = Math.floor(Math.random() * this.SpawnPos.length);
-        if (this.SpawnPos[rand] != null)
-        {
+        if (this.SpawnPos[rand] != null) {
             // console.log('spawn pos: ' + this.SpawnPos[rand].convertToNodeSpaceAR(cc.Vec2.ZERO));
             return this.SpawnPos[rand];
         }
-        else
-        {
+        else {
             console.log('spawn pos is null');
         }
+    }
+    getRandomCoinPacksNum() {
+
     }
 }

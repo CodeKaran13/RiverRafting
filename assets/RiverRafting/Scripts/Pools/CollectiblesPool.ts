@@ -23,14 +23,11 @@ export default class CollectiblesPool extends cc.Component
         serializable: true
     })
     DrowningHumansPack: cc.Node[] = [];
-    // onLoad () {}
 
     start()
     {
 
     }
-
-    // update (dt) {}
 
     addCollectibleBackToPool(pack: cc.Node)
     {
@@ -65,11 +62,9 @@ export default class CollectiblesPool extends cc.Component
         {
             case CollectibleType.Health:
                 var healthpack = this.HealthPacks.pop();
-                // healthpack.active = true;
                 return healthpack;
             case CollectibleType.Coins:
                 var coinpack = this.CoinsPack.pop();
-                // coinpack.active = true;
                 return coinpack;
             case CollectibleType.DrowningHuman:
                 var drowningPack = this.DrowningHumansPack.pop();

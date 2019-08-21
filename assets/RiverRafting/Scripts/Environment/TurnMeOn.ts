@@ -4,8 +4,7 @@ import ObstacleSpawner from "../GamePlay/ObstacleSpawner";
 const { ccclass, property } = cc._decorator;
 
 @ccclass
-export default class TurnMeOn extends cc.Component
-{
+export default class TurnMeOn extends cc.Component {
     // All class Refs
     @property({
         type: ItemSpawner,
@@ -26,52 +25,65 @@ export default class TurnMeOn extends cc.Component
         visible: true,
         serializable: true
     })
-    itemSpawnLocations: cc.Node[] = [];
+    heartSpawnLocations: cc.Node[] = [];
     @property({
         type: cc.Node,
         visible: true,
         serializable: true
     })
-    docksSpawnLocation: cc.Node[] = [];
+    logsSpawnLocation: cc.Node[] = [];
+    @property({
+        type: cc.Node,
+        visible: true,
+        serializable: true
+    })
+    cycloneSpawnLocation: cc.Node[] = [];
+    @property({
+        type: cc.Node,
+        visible: true,
+        serializable: true
+    })
+    humanSpawnLocation: cc.Node[] = [];
     delaySequence: cc.ActionInterval;
 
-    onSetPosition()
-    {
+    onSetPosition() {
         // console.log('assigning spawn positions');
-        for (let i = 0; i < this.itemSpawnLocations.length; i++)
-        {
-            this._itemSpawner.SpawnPos[i] = null;
-            this._itemSpawner.SpawnPos[i] = this.itemSpawnLocations[i];
-            // console.log('pos [' + i + '] : ' + this._itemSpawner.SpawnPos[i].convertToWorldSpaceAR(cc.Vec2.ZERO));
+        for (let i = 0; i < this.heartSpawnLocations.length; i++) {
+            this._itemSpawner.healthSpawnPos[i] = null;
+            this._itemSpawner.healthSpawnPos[i] = this.heartSpawnLocations[i];
+        }
+        for (let i = 0; i < this.humanSpawnLocation.length; i++) {
+            this._itemSpawner.humanSpawnPos[i] = null;
+            this._itemSpawner.humanSpawnPos[i] = this.humanSpawnLocation[i];
+        }
+        for (let i = 0; i < this.cycloneSpawnLocation.length; i++) {
+            this._obstacleSpawner.CycloneSpawnPos[i] = null;
+            this._obstacleSpawner.CycloneSpawnPos[i] = this.cycloneSpawnLocation[i];
+        }
+        for (let i = 0; i < this.cycloneSpawnLocation.length; i++) {
+            this._obstacleSpawner.LogsSpawnPos[i] = null;
+            this._obstacleSpawner.LogsSpawnPos[i] = this.logsSpawnLocation[i];
         }
     }
 
-    onCollisionExit(other, self)
-    {
-        if (self.tag == 0 && other.node.name == 'StartCollider')
-        {
+    onCollisionExit(other, self) {
+        if (self.tag == 0 && other.node.name == 'StartCollider') {
             this.onSetPosition();
             this._itemSpawner.SpawnHealthPack();
             // this._itemSpawner.SpawnCoinPack();
             // console.log('collider spotted');
-            for (let i = 0; i < self.node.children[0].childrenCount - 1; i++)
-            {
+            for (let i = 0; i < self.node.children[0].childrenCount - 1; i++) {
                 // self.node.children[0].children[i].active = true;
                 // console.log(self.node.name);
-                if (self.node.children[0].children[i].getComponent(cc.RenderComponent) != null)
-                {
+                if (self.node.children[0].children[i].getComponent(cc.RenderComponent) != null) {
                     self.node.children[0].children[i].getComponent(cc.RenderComponent).enabled = true;
                 }
                 var grandchildcount = 0;
-                if (self.node.children[0].children[i].childrenCount > 0)
-                {
+                if (self.node.children[0].children[i].childrenCount > 0) {
                     grandchildcount = self.node.children[0].children[i].children[0].childrenCount;
-                    if (grandchildcount > 0)
-                    {
-                        for (var j = 0; j < grandchildcount; j++)
-                        {
-                            if (self.node.children[0].children[i].children[0].children[j].getComponent(cc.RenderComponent) != null)
-                            {
+                    if (grandchildcount > 0) {
+                        for (var j = 0; j < grandchildcount; j++) {
+                            if (self.node.children[0].children[i].children[0].children[j].getComponent(cc.RenderComponent) != null) {
                                 self.node.children[0].children[i].children[0].children[j].getComponent(cc.RenderComponent).enabled = true;
                             }
                         }
@@ -88,27 +100,22 @@ export default class TurnMeOn extends cc.Component
 
     index: number = 0;
     totalCount: number = 0;
-    resetDelayedLoopSequence()
-    {
+    resetDelayedLoopSequence() {
         this.index = 0;
         this.totalCount = this.node.children[0].childrenCount;
         this.startSequence();
     }
-    startSequence()
-    {
+    startSequence() {
         var time = cc.delayTime(0.2);
         this.delaySequence = cc.sequence(time, cc.callFunc(this.delayedLoop, this));
         this.node.runAction(this.delaySequence.repeatForever());
     }
-    delayedLoop()
-    {
-        if (this.index < this.totalCount)
-        {
+    delayedLoop() {
+        if (this.index < this.totalCount) {
             this.node.children[0].children[this.index].active = true;
             this.index++;
         }
-        else
-        {
+        else {
             this.node.stopAction(this.delaySequence);
             this.resetSequenceProps();
         }
@@ -117,30 +124,24 @@ export default class TurnMeOn extends cc.Component
     propsIndex: number = 0;
     propsCount: number = 0;
     sequenceProps: cc.ActionInterval;
-    resetSequenceProps()
-    {
+    resetSequenceProps() {
         this.propsCount = this.node.children[0].children[this.totalCount - 1].childrenCount;
         this.propsIndex = this.propsCount - 1;
         this.startSequenceProps();
     }
-    startSequenceProps()
-    {
+    startSequenceProps() {
         var time = cc.delayTime(0.2);
         this.sequenceProps = cc.sequence(time, cc.callFunc(this.propsDelay, this));
         this.node.runAction(this.sequenceProps.repeatForever());
     }
-    propsDelay()
-    {
-        if (this.propsIndex >= 0)
-        {
-            if (this.node.children[0].children[this.totalCount - 1].children[this.propsIndex].getComponent(cc.RenderComponent) != null)
-            {
+    propsDelay() {
+        if (this.propsIndex >= 0) {
+            if (this.node.children[0].children[this.totalCount - 1].children[this.propsIndex].getComponent(cc.RenderComponent) != null) {
                 this.node.children[0].children[this.totalCount - 1].children[this.propsIndex].getComponent(cc.RenderComponent).enabled = true;
             }
             this.propsIndex--;
         }
-        else
-        {
+        else {
             this.node.stopAction(this.sequenceProps);
         }
     }
