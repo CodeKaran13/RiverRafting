@@ -3,18 +3,15 @@ import TimeManager from "./TimeManager";
 import GameManager from "./GameManager";
 import ScoreManager from "./ScoreManager";
 import UIManager from "./UIManager";
-import ObstacleSpawner from "../GamePlay/ObstacleSpawner";
 import BonusSystem from "../GamePlay/BonusSystem";
 import ItemSpawner from "../GamePlay/ItemSpawner";
 import Waves from "../GamePlay/Waves";
 import RiverMap from "../GamePlay/RiverMap";
-import TurnMeOn from "../Environment/TurnMeOn";
 
 const { ccclass, property } = cc._decorator;
 
 @ccclass
-export default class MatchManager extends cc.Component
-{
+export default class MatchManager extends cc.Component {
     // RiverMap/Wave Prefabs Parent Node
     @property(cc.Node)
     LevelPrefabs: cc.Node = null;
@@ -60,8 +57,7 @@ export default class MatchManager extends cc.Component
     // PrefabArray: cc.Node[] = [];
     // currentindex = 0;
 
-    onLoad() 
-    {
+    onLoad() {
         this._timeManager._matchManager = this;
         this._gameManager._matchManager = this;
         // this._obstacleSpawner = this.node.getComponent(ObstacleSpawner);
@@ -70,16 +66,13 @@ export default class MatchManager extends cc.Component
         this.totalHeight = 1920;
     }
 
-    start()
-    {
-        for (let i = 0; i < this.totalPrefabsToSpawn; i++)
-        {
+    start() {
+        for (let i = 0; i < this.totalPrefabsToSpawn; i++) {
             this.spawnNextRiverMap();
         }
     }
 
-    StartGame()
-    {
+    StartGame() {
         // for (let i = 0; i < this.totalPrefabsToSpawn; i++)
         // {
         //     this.spawnNextRiverMap();
@@ -109,198 +102,97 @@ export default class MatchManager extends cc.Component
     // }
 
     zOrder: number = 0;
-    spawnNextRiverMap()
-    {
+    spawnNextRiverMap() {
         var rand = this.getRandomNumber();
-        switch (rand)
-        {
+        switch (rand) {
+            case 0:
+                var nextMap = this._poolingSystem.getRiverMapfromPool(0);
+                this.setRendererOff(nextMap);
+
+                break;
             case 1:
                 var nextMap = this._poolingSystem.getRiverMapfromPool(1);
-
-                nextMap.parent.removeChild(nextMap);
-                this.LevelPrefabs.addChild(nextMap, this.zOrder);
-                this.zOrder--;
-
-                nextMap.setPosition(new cc.Vec2(0, this.totalHeight));
-                nextMap.active = true;
-
-                this.totalHeight = this.totalHeight + nextMap.getComponent(RiverMap).myHeight;
-
-                for (let i = 0; i < nextMap.children[0].childrenCount - 2; i++)
-                {
-                    nextMap.children[0].children[i].active = true;
-                    if (nextMap.children[0].children[i].getComponent(cc.RenderComponent) != null)
-                    {
-                        nextMap.children[0].children[i].getComponent(cc.RenderComponent).enabled = false;
-                    }
-                    var grandchildcount = 0;
-                    if (nextMap.children[0].children[i].childrenCount > 0)
-                    {
-                        grandchildcount = nextMap.children[0].children[i].children[0].childrenCount;
-                        if (grandchildcount > 0)
-                        {
-                            for (var j = 0; j < grandchildcount; j++)
-                            {
-                                nextMap.children[0].children[i].children[0].children[j].getComponent(cc.RenderComponent).enabled = false;
-                            }
-                        }
-                    }
-                }
-
-                var propIndex = nextMap.children[0].childrenCount - 1;
-                nextMap.children[0].children[propIndex].active = true;
-                var grandchildcount = 0;
-                if (nextMap.children[0].children[propIndex].childrenCount > 0)
-                {
-                    grandchildcount = nextMap.children[0].children[propIndex].childrenCount;
-                    if (grandchildcount > 0)
-                    {
-                        for (var j = 0; j < grandchildcount; j++)
-                        {
-                            nextMap.children[0].children[propIndex].children[j].active = true;
-                            if (nextMap.children[0].children[propIndex].children[j].getComponent(dragonBones.ArmatureDisplay) != null && GameManager.isHighEndDevice)
-                            {
-                                // nextMap.children[0].children[propIndex].children[j].getComponent(dragonBones.ArmatureDisplay).playAnimation('tree_movement', 0);
-                                nextMap.children[0].children[propIndex].children[j].getComponent(dragonBones.ArmatureDisplay).timeScale = 0.5;
-                            }
-                            nextMap.children[0].children[propIndex].children[j].getComponent(cc.RenderComponent).enabled = false;
-                        }
-                    }
-                }
+                this.setRendererOff(nextMap);
 
                 break;
             case 2:
                 var nextMap = this._poolingSystem.getRiverMapfromPool(2);
-
-                nextMap.parent.removeChild(nextMap);
-                this.LevelPrefabs.addChild(nextMap, this.zOrder);
-
-                nextMap.setPosition(new cc.Vec2(0, this.totalHeight));
-                nextMap.active = true;
-
-                this.totalHeight = this.totalHeight + nextMap.getComponent(RiverMap).myHeight;
-
-                for (let i = 0; i < nextMap.children[0].childrenCount - 2; i++)
-                {
-                    nextMap.children[0].children[i].active = true;
-                    if (nextMap.children[0].children[i].getComponent(cc.RenderComponent) != null)
-                    {
-                        // console.log('' + i);
-                        nextMap.children[0].children[i].getComponent(cc.RenderComponent).enabled = false;
-                    }
-                    var grandchildcount = 0;
-                    if (nextMap.children[0].children[i].childrenCount > 0)
-                    {
-                        grandchildcount = nextMap.children[0].children[i].children[0].childrenCount;
-                        if (grandchildcount > 0)
-                        {
-                            for (var j = 0; j < grandchildcount; j++)
-                            {
-                                nextMap.children[0].children[i].children[0].children[j].getComponent(cc.RenderComponent).enabled = false;
-                            }
-                        }
-                    }
-                }
-
-                var propIndex = nextMap.children[0].childrenCount - 1;
-                nextMap.children[0].children[propIndex].active = true;
-                var grandchildcount = 0;
-                if (nextMap.children[0].children[propIndex].childrenCount > 0)
-                {
-                    grandchildcount = nextMap.children[0].children[propIndex].childrenCount;
-                    if (grandchildcount > 0)
-                    {
-                        for (var j = 0; j < grandchildcount; j++)
-                        {
-                            nextMap.children[0].children[propIndex].children[j].active = true;
-                            if (nextMap.children[0].children[propIndex].children[j].getComponent(dragonBones.ArmatureDisplay) != null && GameManager.isHighEndDevice)
-                            {
-                                // nextMap.children[0].children[propIndex].children[j].getComponent(dragonBones.ArmatureDisplay).playAnimation('tree_movement', 0);
-                                nextMap.children[0].children[propIndex].children[j].getComponent(dragonBones.ArmatureDisplay).timeScale = 0.5;
-                            }
-                            nextMap.children[0].children[propIndex].children[j].getComponent(cc.RenderComponent).enabled = false;
-                        }
-                    }
-                }
+                this.setRendererOff(nextMap);
 
                 break;
-            // case 3:
-            //     this.totalHeight = this.totalHeight + height;
-            //     var nextMap = this._poolingSystem.getRiverMapfromPool(3);
+            case 3:
+                var nextMap = this._poolingSystem.getRiverMapfromPool(3);
+                this.setRendererOff(nextMap);
 
-            //     this.LevelPrefabs.addChild(nextMap, 0, nextMap.name);
-            //     nextMap.setPosition(cc.Vec2.ZERO);
+                break;
+            case 4:
+                var nextMap = this._poolingSystem.getRiverMapfromPool(4);
+                this.setRendererOff(nextMap);
 
-            //     nextMap.setPosition(new cc.Vec2(0, this.totalHeight));
-            //     nextMap.active = true;
+                break;
+            case 5:
+                var nextMap = this._poolingSystem.getRiverMapfromPool(5);
+                this.setRendererOff(nextMap);
 
-            //     for (let i = 0; i < nextMap.children[0].childrenCount; i++)
-            //     {
-            //         nextMap.children[0].children[i].active = true;
-            //     }
-
-            //     break;
-            // case 4:
-            //     this.totalHeight = this.totalHeight + height;
-            //     var nextMap = this._poolingSystem.getRiverMapfromPool(4);
-
-            //     this.LevelPrefabs.addChild(nextMap, 0, nextMap.name);
-            //     nextMap.setPosition(cc.Vec2.ZERO);
-
-            //     nextMap.setPosition(new cc.Vec2(0, this.totalHeight));
-            //     nextMap.active = true;
-
-            //     for (let i = 0; i < nextMap.children[0].childrenCount; i++)
-            //     {
-            //         nextMap.children[0].children[i].active = true;
-            //     }
-            //     break;
-            // case 5:
-            //     this.totalHeight = this.totalHeight + height;
-            //     var nextMap = this._poolingSystem.getRiverMapfromPool(5);
-
-            //     this.LevelPrefabs.addChild(nextMap, 0, nextMap.name);
-            //     nextMap.setPosition(cc.Vec2.ZERO);
-
-            //     nextMap.setPosition(new cc.Vec2(0, this.totalHeight));
-            //     nextMap.active = true;
-
-            //     for (let i = 0; i < nextMap.children[0].childrenCount; i++)
-            //     {
-            //         nextMap.children[0].children[i].active = true;
-            //     }
-            //     break;
-            // case 6:
-            //     this.totalHeight = this.totalHeight + height;
-            //     var nextMap = this._poolingSystem.getRiverMapfromPool(6);
-
-            //     this.LevelPrefabs.addChild(nextMap, 0, nextMap.name);
-            //     nextMap.setPosition(cc.Vec2.ZERO);
-
-            //     nextMap.setPosition(new cc.Vec2(0, this.totalHeight));
-            //     nextMap.active = true;
-
-            //     for (let i = 0; i < nextMap.children[0].childrenCount; i++)
-            //     {
-            //         nextMap.children[0].children[i].active = true;
-            //     }
-            //     break;
+                break;
         }
-        // console.log('total height: ' + this.totalHeight);
     }
-    getRandomNumber()
-    {
-        // will return 1,2
-        // var rand = Math.floor(Math.random() * 2) + 1;
+    getRandomNumber() {
+        // will return 0, 1
+        var rand = Math.floor(Math.random() * 2);
         // console.log('random number: ' + rand);
-        // return rand;
-        return 2;
+        return rand;
+        // return 0;
+    }
+    setRendererOff(nextMap: cc.Node) {
+        nextMap.parent.removeChild(nextMap);
+        this.LevelPrefabs.addChild(nextMap, this.zOrder);
+        this.zOrder--;
+
+        nextMap.setPosition(new cc.Vec2(0, this.totalHeight));
+        nextMap.active = true;
+
+        this.totalHeight = this.totalHeight + nextMap.getComponent(RiverMap).myHeight;
+
+        for (let i = 0; i < nextMap.children[0].childrenCount - 1; i++) {
+            nextMap.children[0].children[i].active = true;
+            if (nextMap.children[0].children[i].getComponent(cc.RenderComponent) != null) {
+                nextMap.children[0].children[i].getComponent(cc.RenderComponent).enabled = false;
+            }
+            var grandchildcount = 0;
+            if (nextMap.children[0].children[i].childrenCount > 0) {
+                grandchildcount = nextMap.children[0].children[i].children[0].childrenCount;
+                if (grandchildcount > 0) {
+                    for (var j = 0; j < grandchildcount; j++) {
+                        nextMap.children[0].children[i].children[0].children[j].getComponent(cc.RenderComponent).enabled = false;
+                    }
+                }
+            }
+        }
+
+        var propIndex = nextMap.children[0].childrenCount - 1;
+        nextMap.children[0].children[propIndex].active = true;
+        var grandchildcount = 0;
+        if (nextMap.children[0].children[propIndex].childrenCount > 0) {
+            grandchildcount = nextMap.children[0].children[propIndex].childrenCount;
+            if (grandchildcount > 0) {
+                for (var j = 0; j < grandchildcount; j++) {
+                    nextMap.children[0].children[propIndex].children[j].active = true;
+                    if (nextMap.children[0].children[propIndex].children[j].getComponent(dragonBones.ArmatureDisplay) != null && GameManager.isHighEndDevice) {
+                        // nextMap.children[0].children[propIndex].children[j].getComponent(dragonBones.ArmatureDisplay).playAnimation('tree_movement', 0);
+                        nextMap.children[0].children[propIndex].children[j].getComponent(dragonBones.ArmatureDisplay).timeScale = 0.5;
+                    }
+                    if (nextMap.children[0].children[propIndex].children[j].getComponent(cc.RenderComponent) != null) {
+                        nextMap.children[0].children[propIndex].children[j].getComponent(cc.RenderComponent).enabled = false;
+                    }
+                }
+            }
+        }
     }
 
     // Spawn Wave Prefabs
     totalWaveHeight: number = 0;
-    spawnNextWave(height: number)
-    {
+    spawnNextWave(height: number) {
         this.totalWaveHeight = this.totalWaveHeight + height;
         var wavePrefab: cc.Node = this._poolingSystem.getWavePrefabFromPool();
 

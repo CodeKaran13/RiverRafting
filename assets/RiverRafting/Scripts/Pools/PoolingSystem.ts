@@ -21,6 +21,48 @@ export default class PoolingSystem extends cc.Component
         serializable: true
     })
     RiverMapsSet1: cc.Node[] = [];
+    @property({
+        type: cc.Node,
+        visible: true,
+        serializable: true
+    })
+    RiverMapsSet2: cc.Node[] = [];
+    @property({
+        type: cc.Node,
+        visible: true,
+        serializable: true
+    })
+    RiverMapsSet3: cc.Node[] = [];
+    @property({
+        type: cc.Node,
+        visible: true,
+        serializable: true
+    })
+    RiverMapsSet4: cc.Node[] = [];
+    @property({
+        type: cc.Node,
+        visible: true,
+        serializable: true
+    })
+    RiverMapsSet5: cc.Node[] = [];
+    @property({
+        type: cc.Node,
+        visible: true,
+        serializable: true
+    })
+    RiverMapsSet6: cc.Node[] = [];
+    @property({
+        type: cc.Node,
+        visible: true,
+        serializable: true
+    })
+    RiverMapsSet7: cc.Node[] = [];
+    @property({
+        type: cc.Node,
+        visible: true,
+        serializable: true
+    })
+    RiverMapsSet8: cc.Node[] = [];
 
     //Wave Prefabs
     @property({
@@ -69,42 +111,37 @@ export default class PoolingSystem extends cc.Component
         // }
     }
 
-    getRiverMapfromPool(Type: number) : cc.Node
+    getRiverMapfromPool(Type: number): cc.Node
     {
         switch (Type)
         {
-            case 1:
+            case 0:
                 var ref = this.RiverMapsSet0.pop();
                 return ref;
-
-            case 2:
+            case 1:
                 var ref = this.RiverMapsSet1.pop();
                 return ref;
-
+            case 2:
+                var ref = this.RiverMapsSet2.pop(); 
+                return ref;
             case 3:
-                // var ref = cc.instantiate(this.RiverMapsSet0[2]);
-                // var rivermap = ref.getComponent(RiverMap);
-                // rivermap.IsActive = true;
-                // for (let i = 0; i < rivermap.SpawnLocations.length; i++)
-                // {
-                //     this._itemSpawner.SpawnPos[i] = rivermap.SpawnLocations[i];
-                // }
-                // ref.getComponent(RiverMap).IsActive = true;
-                // return ref;
-                break;
-
+                var ref = this.RiverMapsSet3.pop(); 
+                return ref;
             case 4:
-                // var ref = cc.instantiate(this.RiverMapsSet0[3]);
-                // var rivermap = ref.getComponent(RiverMap);
-                // rivermap.IsActive = true;
-                // for (let i = 0; i < rivermap.SpawnLocations.length; i++)
-                // {
-                //     this._itemSpawner.SpawnPos[i] = rivermap.SpawnLocations[i];
-                // }
-                // ref.getComponent(RiverMap).IsActive = true;
-                // return ref;
-                break;
-
+                var ref = this.RiverMapsSet4.pop(); 
+                return ref;
+            case 5:
+                var ref = this.RiverMapsSet5.pop();
+                return ref;
+            case 6:
+                var ref = this.RiverMapsSet6.pop(); 
+                return ref;
+            case 7:
+                var ref = this.RiverMapsSet7.pop(); 
+                return ref;
+            case 8:
+                var ref = this.RiverMapsSet8.pop(); 
+                return ref;
             default:
                 console.log('no such case found with type: ' + Type);
                 break;
@@ -112,17 +149,16 @@ export default class PoolingSystem extends cc.Component
     }
 
     // Pooling for wave prefabs
-    addWavePrefabToPool(prefab: cc.Node)
+    addWavePrefabToPool(node: cc.Node)
     {
-        prefab.getComponent(Waves).IsActive = false;
-        prefab.getComponent(Waves).CheckPlayerLocation = false;
-        prefab.parent.removeChild(prefab);
-        this.WavePrefabs.push(prefab);
+        node.getComponent(Waves).IsActive = false;
+        node.getComponent(Waves).CheckPlayerLocation = false;
+        node.parent.removeChild(node);
+        this.WavePrefabs.push(node);
     }
     getWavePrefabFromPool(): cc.Node
     {
         var ref: cc.Node = this.WavePrefabs.pop();
-        // ref.getComponent(Waves).IsActive = true;
         return ref;
     }
 }

@@ -22,16 +22,10 @@
     "_components": [
       {
         "__id__": 2
-      },
-      {
-        "__id__": 3
-      },
-      {
-        "__id__": 4
       }
     ],
     "_prefab": {
-      "__id__": 5
+      "__id__": 3
     },
     "_opacity": 255,
     "_color": {
@@ -53,14 +47,14 @@
     },
     "_position": {
       "__type__": "cc.Vec3",
-      "x": 555.692,
-      "y": 672.06,
+      "x": 481.734,
+      "y": -14.672,
       "z": 0
     },
     "_scale": {
       "__type__": "cc.Vec3",
-      "x": 0.1,
-      "y": 0.1,
+      "x": 1,
+      "y": 1,
       "z": 1
     },
     "_eulerAngles": {
@@ -72,7 +66,7 @@
     "_skewX": 0,
     "_skewY": 0,
     "_is3DNode": false,
-    "groupIndex": 4,
+    "groupIndex": 0,
     "_id": ""
   },
   {
@@ -116,46 +110,12 @@
     "_id": ""
   },
   {
-    "__type__": "7ccaffRJzNASJJfYOJL0z+t",
-    "_name": "",
-    "_objFlags": 0,
-    "node": {
-      "__id__": 1
-    },
-    "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
-    "_scoreManager": null,
-    "_id": ""
-  },
-  {
-    "__type__": "cc.BoxCollider",
-    "_name": "",
-    "_objFlags": 0,
-    "node": {
-      "__id__": 1
-    },
-    "_enabled": true,
-    "tag": 0,
-    "_offset": {
-      "__type__": "cc.Vec2",
-      "x": 0,
-      "y": 260
-    },
-    "_size": {
-      "__type__": "cc.Size",
-      "width": 673.3,
-      "height": 380
-    },
-    "_id": ""
-  },
-  {
     "__type__": "cc.PrefabInfo",
     "root": {
       "__id__": 1
     },
     "asset": {
-      "__uuid__": "77e993a3-f12d-4ab8-b175-5bbd5b7ea8ab"
+      "__id__": 0
     },
     "fileId": "e7IYKuEFxATJ+tmVzdZDcY",
     "sync": false

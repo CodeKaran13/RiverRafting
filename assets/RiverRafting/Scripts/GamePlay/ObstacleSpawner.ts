@@ -1,11 +1,12 @@
 import ObstaclePool from "../Pools/ObstaclePool";
 import MatchManager from "../Managers/MatchManager";
+import { ObstacleType } from "./Obstacles";
+import Logs from "../Environment/Logs";
 
 const { ccclass, property } = cc._decorator;
 
 @ccclass
-export default class ObstacleSpawner extends cc.Component
-{
+export default class ObstacleSpawner extends cc.Component {
     @property(MatchManager)
     _matchManager: MatchManager = null;
 
@@ -24,55 +25,35 @@ export default class ObstacleSpawner extends cc.Component
     _player: cc.Node = null;
 
     LogsSpawnPos: cc.Node[] = [];
-    DockSpawnPos: cc.Node[] = [];
+    CycloneSpawnPos: cc.Node[] = [];
 
 
-    onLoad()
-    {
-        
-    }
+    SpawnLogs(pos: cc.Vec2) {
+        var log = this._ObstaclePoolRef.getObstacleFromPool(ObstacleType.Log);
 
-    SpawnDocks()
-    {
-        var dock = this._ObstaclePoolRef.getObstacleFromPool('docks');
-
-        var parent = this.getDockSpawnPos();
-        if (dock.parent != null)
-        {
-            dock.parent.removeChild(dock);
+        if (log != null) {
+            
         }
-
-        parent.active = true;
-        parent.addChild(dock);
-        dock.setPosition(cc.Vec2.ZERO);
-
-        dock.active = true;
     }
+    SpawnCyclones() {
+        var cyclone = this._ObstaclePoolRef.getObstacleFromPool(ObstacleType.Cyclone)
 
-    SpawnRollingLogs(pos: cc.Vec2)
-    {
-        var rollinglog = this._ObstaclePoolRef.getObstacleFromPool('rollinglogs');
-
-        // var pos = this.getRollingLogSpawnPos();
-
-        if (rollinglog != null)
-        {
-            rollinglog.getComponent('RollingLogs').SetInitialPosition(pos);
-
-            rollinglog.active = true;
-            rollinglog.getComponent('RollingLogs').enabled = true;
+        if (cyclone != null) {
+            // cyclone.position = 
         }
     }
 
-    SpawnLogs()
-    {
-
+    // getDockSpawnPos() {
+    //     var rand = Math.floor(Math.random() * this.DockSpawnPos.length);
+    //     // console.log('rand: ' + rand);
+    //     return (this.DockSpawnPos[rand]);
+    // }
+    getLogsSpawnPos() {
+        var rand = Math.floor(Math.random() * this.LogsSpawnPos.length);
+        return (this.LogsSpawnPos[rand]);
     }
-
-    getDockSpawnPos()
-    {
-        var rand = Math.floor(Math.random() * this.DockSpawnPos.length);
-        // console.log('rand: ' + rand);
-        return (this.DockSpawnPos[rand]);
+    getCyclonePos() {
+        var rand = Math.floor(Math.random() * this.CycloneSpawnPos.length);
+        return (this.CycloneSpawnPos[rand]);
     }
 }
