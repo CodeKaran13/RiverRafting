@@ -66,15 +66,41 @@ export default class TurnMeOn extends cc.Component {
         }
     }
 
+    array: number[] = [];
+    setCoinPacks() {
+        for (let i = 0; i < this.node.children[4].childrenCount; i++) {
+            // var arr: number[] = [];
+            this.array.push(i);
+        }
+    }
+    getRandomCoinPack() {
+        var randIndex = Math.floor(Math.random() * this.array.length);
+        return this.array.splice(randIndex, 1);
+    }
+    index: number = 0;
+    setCoinsPosition() {
+        var rand = this.getRandomCoinPack();
+
+        for (let i = 0; i < this.node.children[4].children[rand[0]].childrenCount; i ++)
+        {
+            this._itemSpawner.coinSpawnPos[this.index] = null;
+            this._itemSpawner.coinSpawnPos[this.index] = this.node.children[4].children[rand[0]].children[i];
+            this.index++;
+        }
+    }
+
     onCollisionExit(other, self) {
         if (self.tag == 0 && other.node.name == 'StartCollider') {
             this.onSetPosition();
+            this.index = 0;
+            this.setCoinPacks();
+            this.setCoinsPosition();
+            this.setCoinsPosition();
+            this.setCoinsPosition();
             this._itemSpawner.SpawnHealthPack();
-            // this._itemSpawner.SpawnCoinPack();
-            // console.log('collider spotted');
+            this._itemSpawner.SpawnStarPack();
+
             for (let i = 0; i < self.node.children[0].childrenCount - 1; i++) {
-                // self.node.children[0].children[i].active = true;
-                // console.log(self.node.name);
                 if (self.node.children[0].children[i].getComponent(cc.RenderComponent) != null) {
                     self.node.children[0].children[i].getComponent(cc.RenderComponent).enabled = true;
                 }

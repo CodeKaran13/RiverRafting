@@ -32,36 +32,44 @@ export default class ItemSpawner extends cc.Component {
 
         healthpack.active = true;
     }
+
     SpawnStarPack() {
-        var coinpack = this._CollectiblePool.getCollectibleFromPool(CollectibleType.Coins);
+        for (let i = 0; i < this.coinSpawnPos.length; i++) {
+            var coinpack = this._CollectiblePool.getCollectibleFromPool(CollectibleType.Coins);
 
-        // var spawnPosParent = this.getRandomHealthSpawnPos();
+            if (coinpack.parent != null) {
+                coinpack.parent.removeChild(coinpack);
+            }
 
-        if (coinpack.parent != null) {
-            coinpack.parent.removeChild(coinpack);
+            this.coinSpawnPos[i].addChild(coinpack);
+            coinpack.setPosition(cc.Vec2.ZERO);
+
+            coinpack.active = true;
         }
-
-        // spawnPosParent.active = true;
-        // spawnPosParent.addChild(coinpack);
-        // coinpack.setPosition(cc.Vec2.ZERO);
-
-        // coinpack.active = true;
     }
+
     SpawnDrowningHumans() {
         var collectible = this._CollectiblePool.getCollectibleFromPool(CollectibleType.DrowningHuman);
     }
 
     getRandomHealthSpawnPos(): cc.Node {
-        var rand = Math.floor(Math.random() * this.SpawnPos.length);
-        if (this.SpawnPos[rand] != null) {
+        var rand = Math.floor(Math.random() * this.healthSpawnPos.length);
+        if (this.healthSpawnPos[rand] != null) {
             // console.log('spawn pos: ' + this.SpawnPos[rand].convertToNodeSpaceAR(cc.Vec2.ZERO));
-            return this.SpawnPos[rand];
+            return this.healthSpawnPos[rand];
         }
         else {
             console.log('spawn pos is null');
         }
     }
-    getRandomCoinPacksNum() {
-
+    getRandomHumanSpawnPos(): cc.Node {
+        var rand = Math.floor(Math.random() * this.humanSpawnPos.length);
+        if (this.humanSpawnPos[rand] != null) {
+            // console.log('spawn pos: ' + this.SpawnPos[rand].convertToNodeSpaceAR(cc.Vec2.ZERO));
+            return this.humanSpawnPos[rand];
+        }
+        else {
+            console.log('spawn pos is null');
+        }
     }
 }

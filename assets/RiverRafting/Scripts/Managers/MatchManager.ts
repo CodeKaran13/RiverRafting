@@ -139,10 +139,10 @@ export default class MatchManager extends cc.Component {
     }
     getRandomNumber() {
         // will return 0, 1
-        var rand = Math.floor(Math.random() * 2);
+        // var rand = Math.floor(Math.random() * 2);
         // console.log('random number: ' + rand);
-        return rand;
-        // return 0;
+        // return rand;
+        return 0;
     }
     setRendererOff(nextMap: cc.Node) {
         nextMap.parent.removeChild(nextMap);

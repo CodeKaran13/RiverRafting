@@ -17,7 +17,7 @@
     "_objFlags": 0,
     "_parent": null,
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 1,
     "_components": [
       {
@@ -43,8 +43,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 95,
-      "height": 93
+      "width": 536,
+      "height": 451
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -93,7 +93,7 @@
     "_srcBlendFactor": 770,
     "_dstBlendFactor": 771,
     "_spriteFrame": {
-      "__uuid__": "90f49354-010d-44a2-a987-ce4738fd0f72"
+      "__uuid__": "20f68dd4-4da7-4132-9ae2-d368511aa73a"
     },
     "_type": 0,
     "_sizeMode": 2,
@@ -120,7 +120,6 @@
     "_CollectiblePool": null,
     "_player": null,
     "_scoreManager": null,
-    "awardScore": 20,
     "_id": ""
   },
   {
@@ -150,7 +149,7 @@
       "__id__": 1
     },
     "asset": {
-      "__id__": 0
+      "__uuid__": "d7ff9541-cc54-42ec-a07f-52bcd782750f"
     },
     "fileId": "1e0f3wXeVIRYGWM4hnF0VN",
     "sync": false
