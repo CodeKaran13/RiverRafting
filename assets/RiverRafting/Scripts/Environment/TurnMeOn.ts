@@ -77,28 +77,31 @@ export default class TurnMeOn extends cc.Component {
         var randIndex = Math.floor(Math.random() * this.array.length);
         return this.array.splice(randIndex, 1);
     }
-    index: number = 0;
+    indexPos: number = 0;
     setCoinsPosition() {
         var rand = this.getRandomCoinPack();
 
         for (let i = 0; i < this.node.children[4].children[rand[0]].childrenCount; i ++)
         {
-            this._itemSpawner.coinSpawnPos[this.index] = null;
-            this._itemSpawner.coinSpawnPos[this.index] = this.node.children[4].children[rand[0]].children[i];
-            this.index++;
+            this._itemSpawner.coinSpawnPos[this.indexPos] = null;
+            this._itemSpawner.coinSpawnPos[this.indexPos] = this.node.children[4].children[rand[0]].children[i];
+            this.indexPos++;
         }
     }
 
     onCollisionExit(other, self) {
         if (self.tag == 0 && other.node.name == 'StartCollider') {
             this.onSetPosition();
-            this.index = 0;
+            this.indexPos = 0;
             this.setCoinPacks();
             this.setCoinsPosition();
             this.setCoinsPosition();
             this.setCoinsPosition();
             this._itemSpawner.SpawnHealthPack();
             this._itemSpawner.SpawnStarPack();
+            this._itemSpawner.SpawnDrowningHumans();
+            // this._obstacleSpawner.SpawnLogs();
+            this._obstacleSpawner.SpawnCyclones();
 
             for (let i = 0; i < self.node.children[0].childrenCount - 1; i++) {
                 if (self.node.children[0].children[i].getComponent(cc.RenderComponent) != null) {

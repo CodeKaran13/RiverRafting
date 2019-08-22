@@ -13,14 +13,8 @@ export enum ObstacleType
 @ccclass
 export default class Obstacles extends cc.Component
 {
-
     myType: ObstacleType = null;
 
-    // @property({
-    //     type: ObstaclePool,
-    //     visible: true,
-    //     serializable: true
-    // })
     _obstaclePool: ObstaclePool = null;
     @property({
         type: cc.Node,

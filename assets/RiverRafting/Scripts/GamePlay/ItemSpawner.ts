@@ -50,6 +50,17 @@ export default class ItemSpawner extends cc.Component {
 
     SpawnDrowningHumans() {
         var collectible = this._CollectiblePool.getCollectibleFromPool(CollectibleType.DrowningHuman);
+
+        var spawnPosParent = this.getRandomHumanSpawnPos();
+
+        if(collectible.parent != null) {
+            collectible.parent.removeChild(collectible);
+        }
+
+        spawnPosParent.addChild(collectible);
+        collectible.setPosition(cc.Vec2.ZERO);
+
+        collectible.active = true;
     }
 
     getRandomHealthSpawnPos(): cc.Node {

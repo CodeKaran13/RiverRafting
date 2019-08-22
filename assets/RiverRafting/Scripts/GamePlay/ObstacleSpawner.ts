@@ -28,31 +28,35 @@ export default class ObstacleSpawner extends cc.Component {
     CycloneSpawnPos: cc.Node[] = [];
 
 
-    SpawnLogs(pos: cc.Vec2) {
+    SpawnLogs() {
         var log = this._ObstaclePoolRef.getObstacleFromPool(ObstacleType.Log);
-
-        if (log != null) {
-            
+        var spawnPos = this.getLogsSpawnPos();
+        if (log.parent != null) {
+            log.parent.removeChild(log);
         }
+        spawnPos.addChild(log);
+        log.setPosition(cc.Vec2.ZERO);
+
+        log.active = true;
     }
     SpawnCyclones() {
         var cyclone = this._ObstaclePoolRef.getObstacleFromPool(ObstacleType.Cyclone)
-
-        if (cyclone != null) {
-            // cyclone.position = 
+        var spawnPos = this.getCycloneSpawnPos();
+        if (cyclone.parent != null) {
+            cyclone.parent.removeChild(cyclone);
         }
+        spawnPos.addChild(cyclone);
+        cyclone.setPosition(cc.Vec2.ZERO);
+
+        cyclone.active = true;
     }
 
-    // getDockSpawnPos() {
-    //     var rand = Math.floor(Math.random() * this.DockSpawnPos.length);
-    //     // console.log('rand: ' + rand);
-    //     return (this.DockSpawnPos[rand]);
-    // }
+
     getLogsSpawnPos() {
         var rand = Math.floor(Math.random() * this.LogsSpawnPos.length);
         return (this.LogsSpawnPos[rand]);
     }
-    getCyclonePos() {
+    getCycloneSpawnPos() {
         var rand = Math.floor(Math.random() * this.CycloneSpawnPos.length);
         return (this.CycloneSpawnPos[rand]);
     }

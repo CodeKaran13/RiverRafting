@@ -48,10 +48,9 @@ export default class CollectiblesPool extends cc.Component
                 break;
             case CollectibleType.DrowningHuman:
                 // console.log('drowninghuman added successfully');
-                // pack.parent.removeChild(pack);
-                // pack.active = false;
-                // this.DrowningHumansPack.push(pack);
+                pack.parent.removeChild(pack);
                 pack.active = false;
+                this.DrowningHumansPack.push(pack);
                 break;
         }
     }

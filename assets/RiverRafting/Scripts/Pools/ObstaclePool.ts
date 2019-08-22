@@ -27,10 +27,12 @@ export default class ObstaclePool extends cc.Component
             case ObstacleType.Log:
                 name.parent.removeChild(name);
                 name.active = false;
+                this.Logs.push(name);
                 break;
             case ObstacleType.Cyclone:
                 name.parent.removeChild(name);
                 name.active = false;
+                this.Cyclones.push(name);
                 break;
         }
     }
