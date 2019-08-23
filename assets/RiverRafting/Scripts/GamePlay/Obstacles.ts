@@ -33,4 +33,8 @@ export default class Obstacles extends cc.Component
     damage: number = 5;
 
     myPos: any;
+
+    onLoad() {
+        this._obstaclePool = cc.find("Script Collection/Pooling System").getComponent(ObstaclePool);
+    }
 }

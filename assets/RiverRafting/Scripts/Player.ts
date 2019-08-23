@@ -319,6 +319,7 @@ export default class Player extends cc.Component
         else
         {
             this.node.stopAction(this.cycloneSequence);
+            this.node.stopAction(this.dragSequence);
             node.active = false;
             this.reachedCenter = false;
             this.IsCycloned = false;

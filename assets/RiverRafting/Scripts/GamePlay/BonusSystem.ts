@@ -56,7 +56,7 @@ export default class BonusSystem extends cc.Component {
         this.node.stopAction(this.sequence);
         this.node.stopAction(this.cleanRunSequence);
         this.totalCleanTime = this.totalCleanTime + this.cleanTime;
-        console.log('total clean time in sec: ' + this.totalCleanTime);
+        // console.log('total clean time in sec: ' + this.totalCleanTime);
         this.closeLabel();
         this.resetBonus();
         this.restartCounter();
@@ -69,7 +69,7 @@ export default class BonusSystem extends cc.Component {
     startCleanRunBonus() {
         // if (!this.isCleanSequenceOn) {
             // this.isCleanSequenceOn = true;
-            console.log('started clean run');
+            // console.log('started clean run');
             var time = cc.delayTime(1);
             this.cleanRunSequence = cc.sequence(time, cc.callFunc(this.cleanRunCountdown, this));
             this.node.runAction(this.cleanRunSequence.repeatForever());
@@ -93,6 +93,6 @@ export default class BonusSystem extends cc.Component {
     }
     onUIUpdate() {
         this.openLabel();
-        this.cleanRunTimeLabel.string = 'CLEAN RUN: ' + this.cleanTime + 'SEC';
+        this.cleanRunTimeLabel.string = 'CLEAN RUN: ' + this.cleanTime + ' SEC';
     }
 }

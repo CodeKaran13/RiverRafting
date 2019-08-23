@@ -89,8 +89,10 @@ export default class TurnMeOn extends cc.Component {
         }
     }
 
+    triggerOnce: boolean = false;
     onCollisionExit(other, self) {
-        if (self.tag == 0 && other.node.name == 'StartCollider') {
+        if (self.tag == 0 && other.node.name == 'StartCollider' && !this.triggerOnce) {
+            this.triggerOnce = true;
             this.onSetPosition();
             this.indexPos = 0;
             this.setCoinPacks();

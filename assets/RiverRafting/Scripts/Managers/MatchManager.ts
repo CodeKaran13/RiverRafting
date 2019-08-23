@@ -108,41 +108,41 @@ export default class MatchManager extends cc.Component {
             case 0:
                 var nextMap = this._poolingSystem.getRiverMapfromPool(0);
                 this.setRendererOff(nextMap);
-
                 break;
             case 1:
                 var nextMap = this._poolingSystem.getRiverMapfromPool(1);
                 this.setRendererOff(nextMap);
-
                 break;
             case 2:
                 var nextMap = this._poolingSystem.getRiverMapfromPool(2);
                 this.setRendererOff(nextMap);
-
                 break;
             case 3:
                 var nextMap = this._poolingSystem.getRiverMapfromPool(3);
                 this.setRendererOff(nextMap);
-
                 break;
             case 4:
                 var nextMap = this._poolingSystem.getRiverMapfromPool(4);
                 this.setRendererOff(nextMap);
-
                 break;
             case 5:
                 var nextMap = this._poolingSystem.getRiverMapfromPool(5);
                 this.setRendererOff(nextMap);
-
+                break;
+            case 6:
+                var nextMap = this._poolingSystem.getRiverMapfromPool(6);
+                this.setRendererOff(nextMap);
+                break;
+            default:
                 break;
         }
     }
     getRandomNumber() {
-        // will return 0, 1
-        // var rand = Math.floor(Math.random() * 2);
+        // will return 0, 1, 2, 3, 4, 5, 6
+        var rand = Math.floor(Math.random() * 7);
         // console.log('random number: ' + rand);
-        // return rand;
-        return 0;
+        return rand;
+        // return 0;
     }
     setRendererOff(nextMap: cc.Node) {
         nextMap.parent.removeChild(nextMap);

@@ -13,7 +13,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "Set3a-14591",
+    "_name": "Set3a-1491",
     "_objFlags": 0,
     "_parent": null,
     "_children": [
@@ -30,21 +30,33 @@
         "__id__": 108
       },
       {
-        "__id__": 170
+        "__id__": 112
       },
       {
         "__id__": 174
       }
     ],
-    "_active": true,
-    "_level": 1,
+    "_active": false,
+    "_level": 2,
     "_components": [
       {
         "__id__": 178
+      },
+      {
+        "__id__": 179
+      },
+      {
+        "__id__": 180
+      },
+      {
+        "__id__": 181
+      },
+      {
+        "__id__": 182
       }
     ],
     "_prefab": {
-      "__id__": 179
+      "__id__": 183
     },
     "_opacity": 255,
     "_color": {
@@ -72,8 +84,8 @@
     },
     "_scale": {
       "__type__": "cc.Vec3",
-      "x": 3.5,
-      "y": 3.5,
+      "x": 1,
+      "y": 1,
       "z": 1
     },
     "_eulerAngles": {
@@ -184,7 +196,7 @@
       "__id__": 2
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 3,
     "_components": [
       {
@@ -733,7 +745,7 @@
       "__id__": 2
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 3,
     "_components": [
       {
@@ -1297,7 +1309,7 @@
       "__id__": 2
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 3,
     "_components": [
       {
@@ -1736,7 +1748,7 @@
       "__id__": 2
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 3,
     "_components": [
       {
@@ -2100,7 +2112,7 @@
       "__id__": 2
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 3,
     "_components": [
       {
@@ -2484,7 +2496,7 @@
       "__id__": 2
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 3,
     "_components": [
       {
@@ -2893,7 +2905,7 @@
       "__id__": 2
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 3,
     "_components": [
       {
@@ -3442,7 +3454,7 @@
       "__id__": 2
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 3,
     "_components": [
       {
@@ -4055,7 +4067,7 @@
         "__id__": 89
       }
     ],
-    "_active": true,
+    "_active": false,
     "_level": 3,
     "_components": [],
     "_prefab": {
@@ -4111,7 +4123,7 @@
       "__id__": 43
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 4,
     "_components": [
       {
@@ -4222,7 +4234,7 @@
       "__id__": 43
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 4,
     "_components": [
       {
@@ -4333,7 +4345,7 @@
       "__id__": 43
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 4,
     "_components": [
       {
@@ -4444,7 +4456,7 @@
       "__id__": 43
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 4,
     "_components": [
       {
@@ -4555,7 +4567,7 @@
       "__id__": 43
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 4,
     "_components": [
       {
@@ -4666,7 +4678,7 @@
       "__id__": 43
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 4,
     "_components": [
       {
@@ -4777,7 +4789,7 @@
       "__id__": 43
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 4,
     "_components": [
       {
@@ -4880,7 +4892,7 @@
       "__id__": 43
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 4,
     "_components": [
       {
@@ -4983,7 +4995,7 @@
       "__id__": 43
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 4,
     "_components": [
       {
@@ -5094,7 +5106,7 @@
       "__id__": 43
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 4,
     "_components": [
       {
@@ -5205,7 +5217,7 @@
       "__id__": 43
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 4,
     "_components": [
       {
@@ -5316,7 +5328,7 @@
       "__id__": 43
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 4,
     "_components": [
       {
@@ -5427,7 +5439,7 @@
       "__id__": 43
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 4,
     "_components": [
       {
@@ -5538,7 +5550,7 @@
       "__id__": 43
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 4,
     "_components": [
       {
@@ -5649,7 +5661,7 @@
       "__id__": 43
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 4,
     "_components": [
       {
@@ -5760,7 +5772,7 @@
       "__id__": 43
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 4,
     "_components": [
       {
@@ -5938,9 +5950,9 @@
     },
     "_scale": {
       "__type__": "cc.Vec3",
-      "x": 0.28571,
-      "y": 0.28571,
-      "z": 0.28571
+      "x": 1,
+      "y": 1,
+      "z": 1
     },
     "_eulerAngles": {
       "__type__": "cc.Vec3",
@@ -6277,9 +6289,9 @@
     },
     "_scale": {
       "__type__": "cc.Vec3",
-      "x": 0.28571,
-      "y": 0.28571,
-      "z": 0.28571
+      "x": 1,
+      "y": 1,
+      "z": 1
     },
     "_eulerAngles": {
       "__type__": "cc.Vec3",
@@ -6373,7 +6385,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "Coins Spawn Positions",
+    "_name": "Log Spawn Positions",
     "_objFlags": 0,
     "_parent": {
       "__id__": 1
@@ -6381,25 +6393,163 @@
     "_children": [
       {
         "__id__": 109
-      },
-      {
-        "__id__": 121
-      },
-      {
-        "__id__": 133
-      },
-      {
-        "__id__": 145
-      },
-      {
-        "__id__": 157
       }
     ],
     "_active": true,
     "_level": 2,
     "_components": [],
     "_prefab": {
-      "__id__": 169
+      "__id__": 111
+    },
+    "_opacity": 255,
+    "_color": {
+      "__type__": "cc.Color",
+      "r": 255,
+      "g": 255,
+      "b": 255,
+      "a": 255
+    },
+    "_contentSize": {
+      "__type__": "cc.Size",
+      "width": 0,
+      "height": 0
+    },
+    "_anchorPoint": {
+      "__type__": "cc.Vec2",
+      "x": 0.5,
+      "y": 0.5
+    },
+    "_position": {
+      "__type__": "cc.Vec3",
+      "x": -74.714,
+      "y": 385.04,
+      "z": 0
+    },
+    "_scale": {
+      "__type__": "cc.Vec3",
+      "x": 1,
+      "y": 1,
+      "z": 1
+    },
+    "_eulerAngles": {
+      "__type__": "cc.Vec3",
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "_skewX": 0,
+    "_skewY": 0,
+    "_is3DNode": false,
+    "groupIndex": 0,
+    "_id": ""
+  },
+  {
+    "__type__": "cc.Node",
+    "_name": "LogSpawnPos",
+    "_objFlags": 0,
+    "_parent": {
+      "__id__": 108
+    },
+    "_children": [],
+    "_active": true,
+    "_level": 3,
+    "_components": [],
+    "_prefab": {
+      "__id__": 110
+    },
+    "_opacity": 255,
+    "_color": {
+      "__type__": "cc.Color",
+      "r": 255,
+      "g": 255,
+      "b": 255,
+      "a": 255
+    },
+    "_contentSize": {
+      "__type__": "cc.Size",
+      "width": 0,
+      "height": 0
+    },
+    "_anchorPoint": {
+      "__type__": "cc.Vec2",
+      "x": 0.5,
+      "y": 0.5
+    },
+    "_position": {
+      "__type__": "cc.Vec3",
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "_scale": {
+      "__type__": "cc.Vec3",
+      "x": 1,
+      "y": 1,
+      "z": 1
+    },
+    "_eulerAngles": {
+      "__type__": "cc.Vec3",
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "_skewX": 0,
+    "_skewY": 0,
+    "_is3DNode": false,
+    "groupIndex": 0,
+    "_id": ""
+  },
+  {
+    "__type__": "cc.PrefabInfo",
+    "root": {
+      "__id__": 1
+    },
+    "asset": {
+      "__uuid__": "4fafbe9c-cae1-4ccf-8255-83399235a068"
+    },
+    "fileId": "2ch+cfVlZNhpcqFBnmVKwC",
+    "sync": false
+  },
+  {
+    "__type__": "cc.PrefabInfo",
+    "root": {
+      "__id__": 1
+    },
+    "asset": {
+      "__uuid__": "4fafbe9c-cae1-4ccf-8255-83399235a068"
+    },
+    "fileId": "d9GZmaTjNLMYZ5ZLzdxZwU",
+    "sync": false
+  },
+  {
+    "__type__": "cc.Node",
+    "_name": "Coins Spawn Positions",
+    "_objFlags": 0,
+    "_parent": {
+      "__id__": 1
+    },
+    "_children": [
+      {
+        "__id__": 113
+      },
+      {
+        "__id__": 125
+      },
+      {
+        "__id__": 137
+      },
+      {
+        "__id__": 149
+      },
+      {
+        "__id__": 161
+      }
+    ],
+    "_active": true,
+    "_level": 2,
+    "_components": [],
+    "_prefab": {
+      "__id__": 173
     },
     "_opacity": 255,
     "_color": {
@@ -6427,9 +6577,9 @@
     },
     "_scale": {
       "__type__": "cc.Vec3",
-      "x": 0.28571,
-      "y": 0.28571,
-      "z": 0.28571
+      "x": 1,
+      "y": 1,
+      "z": 1
     },
     "_eulerAngles": {
       "__type__": "cc.Vec3",
@@ -6448,15 +6598,9 @@
     "_name": "Pack1",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 108
+      "__id__": 112
     },
     "_children": [
-      {
-        "__id__": 110
-      },
-      {
-        "__id__": 112
-      },
       {
         "__id__": 114
       },
@@ -6465,13 +6609,19 @@
       },
       {
         "__id__": 118
+      },
+      {
+        "__id__": 120
+      },
+      {
+        "__id__": 122
       }
     ],
     "_active": true,
     "_level": 3,
     "_components": [],
     "_prefab": {
-      "__id__": 120
+      "__id__": 124
     },
     "_opacity": 255,
     "_color": {
@@ -6520,14 +6670,14 @@
     "_name": "CoinSpawnPos",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 109
+      "__id__": 113
     },
     "_children": [],
     "_active": true,
     "_level": 4,
     "_components": [],
     "_prefab": {
-      "__id__": 111
+      "__id__": 115
     },
     "_opacity": 255,
     "_color": {
@@ -6587,14 +6737,14 @@
     "_name": "CoinSpawnPos copy",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 109
+      "__id__": 113
     },
     "_children": [],
     "_active": true,
     "_level": 4,
     "_components": [],
     "_prefab": {
-      "__id__": 113
+      "__id__": 117
     },
     "_opacity": 255,
     "_color": {
@@ -6654,14 +6804,14 @@
     "_name": "CoinSpawnPos copy",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 109
+      "__id__": 113
     },
     "_children": [],
     "_active": true,
     "_level": 4,
     "_components": [],
     "_prefab": {
-      "__id__": 115
+      "__id__": 119
     },
     "_opacity": 255,
     "_color": {
@@ -6721,14 +6871,14 @@
     "_name": "CoinSpawnPos copy",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 109
+      "__id__": 113
     },
     "_children": [],
     "_active": true,
     "_level": 4,
     "_components": [],
     "_prefab": {
-      "__id__": 117
+      "__id__": 121
     },
     "_opacity": 255,
     "_color": {
@@ -6788,14 +6938,14 @@
     "_name": "CoinSpawnPos copy",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 109
+      "__id__": 113
     },
     "_children": [],
     "_active": true,
     "_level": 4,
     "_components": [],
     "_prefab": {
-      "__id__": 119
+      "__id__": 123
     },
     "_opacity": 255,
     "_color": {
@@ -6866,15 +7016,9 @@
     "_name": "Pack2",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 108
+      "__id__": 112
     },
     "_children": [
-      {
-        "__id__": 122
-      },
-      {
-        "__id__": 124
-      },
       {
         "__id__": 126
       },
@@ -6883,13 +7027,19 @@
       },
       {
         "__id__": 130
+      },
+      {
+        "__id__": 132
+      },
+      {
+        "__id__": 134
       }
     ],
     "_active": true,
     "_level": 3,
     "_components": [],
     "_prefab": {
-      "__id__": 132
+      "__id__": 136
     },
     "_opacity": 255,
     "_color": {
@@ -6938,14 +7088,14 @@
     "_name": "CoinSpawnPos copy",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 121
+      "__id__": 125
     },
     "_children": [],
     "_active": true,
     "_level": 5,
     "_components": [],
     "_prefab": {
-      "__id__": 123
+      "__id__": 127
     },
     "_opacity": 255,
     "_color": {
@@ -7005,14 +7155,14 @@
     "_name": "CoinSpawnPos copy",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 121
+      "__id__": 125
     },
     "_children": [],
     "_active": true,
     "_level": 6,
     "_components": [],
     "_prefab": {
-      "__id__": 125
+      "__id__": 129
     },
     "_opacity": 255,
     "_color": {
@@ -7072,14 +7222,14 @@
     "_name": "CoinSpawnPos copy",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 121
+      "__id__": 125
     },
     "_children": [],
     "_active": true,
     "_level": 6,
     "_components": [],
     "_prefab": {
-      "__id__": 127
+      "__id__": 131
     },
     "_opacity": 255,
     "_color": {
@@ -7139,14 +7289,14 @@
     "_name": "CoinSpawnPos copy",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 121
+      "__id__": 125
     },
     "_children": [],
     "_active": true,
     "_level": 6,
     "_components": [],
     "_prefab": {
-      "__id__": 129
+      "__id__": 133
     },
     "_opacity": 255,
     "_color": {
@@ -7206,14 +7356,14 @@
     "_name": "CoinSpawnPos copy",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 121
+      "__id__": 125
     },
     "_children": [],
     "_active": true,
     "_level": 6,
     "_components": [],
     "_prefab": {
-      "__id__": 131
+      "__id__": 135
     },
     "_opacity": 255,
     "_color": {
@@ -7284,15 +7434,9 @@
     "_name": "Pack3",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 108
+      "__id__": 112
     },
     "_children": [
-      {
-        "__id__": 134
-      },
-      {
-        "__id__": 136
-      },
       {
         "__id__": 138
       },
@@ -7301,13 +7445,19 @@
       },
       {
         "__id__": 142
+      },
+      {
+        "__id__": 144
+      },
+      {
+        "__id__": 146
       }
     ],
     "_active": true,
     "_level": 3,
     "_components": [],
     "_prefab": {
-      "__id__": 144
+      "__id__": 148
     },
     "_opacity": 255,
     "_color": {
@@ -7356,14 +7506,14 @@
     "_name": "CoinSpawnPos copy",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 133
+      "__id__": 137
     },
     "_children": [],
     "_active": true,
     "_level": 5,
     "_components": [],
     "_prefab": {
-      "__id__": 135
+      "__id__": 139
     },
     "_opacity": 255,
     "_color": {
@@ -7423,14 +7573,14 @@
     "_name": "CoinSpawnPos copy",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 133
+      "__id__": 137
     },
     "_children": [],
     "_active": true,
     "_level": 6,
     "_components": [],
     "_prefab": {
-      "__id__": 137
+      "__id__": 141
     },
     "_opacity": 255,
     "_color": {
@@ -7490,14 +7640,14 @@
     "_name": "CoinSpawnPos copy",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 133
+      "__id__": 137
     },
     "_children": [],
     "_active": true,
     "_level": 6,
     "_components": [],
     "_prefab": {
-      "__id__": 139
+      "__id__": 143
     },
     "_opacity": 255,
     "_color": {
@@ -7557,14 +7707,14 @@
     "_name": "CoinSpawnPos copy",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 133
+      "__id__": 137
     },
     "_children": [],
     "_active": true,
     "_level": 6,
     "_components": [],
     "_prefab": {
-      "__id__": 141
+      "__id__": 145
     },
     "_opacity": 255,
     "_color": {
@@ -7624,14 +7774,14 @@
     "_name": "CoinSpawnPos copy",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 133
+      "__id__": 137
     },
     "_children": [],
     "_active": true,
     "_level": 6,
     "_components": [],
     "_prefab": {
-      "__id__": 143
+      "__id__": 147
     },
     "_opacity": 255,
     "_color": {
@@ -7702,15 +7852,9 @@
     "_name": "Pack4",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 108
+      "__id__": 112
     },
     "_children": [
-      {
-        "__id__": 146
-      },
-      {
-        "__id__": 148
-      },
       {
         "__id__": 150
       },
@@ -7719,13 +7863,19 @@
       },
       {
         "__id__": 154
+      },
+      {
+        "__id__": 156
+      },
+      {
+        "__id__": 158
       }
     ],
     "_active": true,
     "_level": 3,
     "_components": [],
     "_prefab": {
-      "__id__": 156
+      "__id__": 160
     },
     "_opacity": 255,
     "_color": {
@@ -7774,14 +7924,14 @@
     "_name": "CoinSpawnPos copy",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 145
+      "__id__": 149
     },
     "_children": [],
     "_active": true,
     "_level": 5,
     "_components": [],
     "_prefab": {
-      "__id__": 147
+      "__id__": 151
     },
     "_opacity": 255,
     "_color": {
@@ -7841,14 +7991,14 @@
     "_name": "CoinSpawnPos copy",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 145
+      "__id__": 149
     },
     "_children": [],
     "_active": true,
     "_level": 6,
     "_components": [],
     "_prefab": {
-      "__id__": 149
+      "__id__": 153
     },
     "_opacity": 255,
     "_color": {
@@ -7908,14 +8058,14 @@
     "_name": "CoinSpawnPos copy",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 145
+      "__id__": 149
     },
     "_children": [],
     "_active": true,
     "_level": 6,
     "_components": [],
     "_prefab": {
-      "__id__": 151
+      "__id__": 155
     },
     "_opacity": 255,
     "_color": {
@@ -7975,14 +8125,14 @@
     "_name": "CoinSpawnPos copy",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 145
+      "__id__": 149
     },
     "_children": [],
     "_active": true,
     "_level": 6,
     "_components": [],
     "_prefab": {
-      "__id__": 153
+      "__id__": 157
     },
     "_opacity": 255,
     "_color": {
@@ -8042,14 +8192,14 @@
     "_name": "CoinSpawnPos copy",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 145
+      "__id__": 149
     },
     "_children": [],
     "_active": true,
     "_level": 6,
     "_components": [],
     "_prefab": {
-      "__id__": 155
+      "__id__": 159
     },
     "_opacity": 255,
     "_color": {
@@ -8120,15 +8270,9 @@
     "_name": "Pack5",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 108
+      "__id__": 112
     },
     "_children": [
-      {
-        "__id__": 158
-      },
-      {
-        "__id__": 160
-      },
       {
         "__id__": 162
       },
@@ -8137,13 +8281,19 @@
       },
       {
         "__id__": 166
+      },
+      {
+        "__id__": 168
+      },
+      {
+        "__id__": 170
       }
     ],
     "_active": true,
     "_level": 3,
     "_components": [],
     "_prefab": {
-      "__id__": 168
+      "__id__": 172
     },
     "_opacity": 255,
     "_color": {
@@ -8192,14 +8342,14 @@
     "_name": "CoinSpawnPos copy",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 157
+      "__id__": 161
     },
     "_children": [],
     "_active": true,
     "_level": 5,
     "_components": [],
     "_prefab": {
-      "__id__": 159
+      "__id__": 163
     },
     "_opacity": 255,
     "_color": {
@@ -8259,14 +8409,14 @@
     "_name": "CoinSpawnPos copy",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 157
+      "__id__": 161
     },
     "_children": [],
     "_active": true,
     "_level": 6,
     "_components": [],
     "_prefab": {
-      "__id__": 161
+      "__id__": 165
     },
     "_opacity": 255,
     "_color": {
@@ -8326,14 +8476,14 @@
     "_name": "CoinSpawnPos copy",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 157
+      "__id__": 161
     },
     "_children": [],
     "_active": true,
     "_level": 6,
     "_components": [],
     "_prefab": {
-      "__id__": 163
+      "__id__": 167
     },
     "_opacity": 255,
     "_color": {
@@ -8393,14 +8543,14 @@
     "_name": "CoinSpawnPos copy",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 157
+      "__id__": 161
     },
     "_children": [],
     "_active": true,
     "_level": 6,
     "_components": [],
     "_prefab": {
-      "__id__": 165
+      "__id__": 169
     },
     "_opacity": 255,
     "_color": {
@@ -8460,14 +8610,14 @@
     "_name": "CoinSpawnPos copy",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 157
+      "__id__": 161
     },
     "_children": [],
     "_active": true,
     "_level": 6,
     "_components": [],
     "_prefab": {
-      "__id__": 167
+      "__id__": 171
     },
     "_opacity": 255,
     "_color": {
@@ -8546,144 +8696,6 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "Log Spawn Positions",
-    "_objFlags": 0,
-    "_parent": {
-      "__id__": 1
-    },
-    "_children": [
-      {
-        "__id__": 171
-      }
-    ],
-    "_active": true,
-    "_level": 2,
-    "_components": [],
-    "_prefab": {
-      "__id__": 173
-    },
-    "_opacity": 255,
-    "_color": {
-      "__type__": "cc.Color",
-      "r": 255,
-      "g": 255,
-      "b": 255,
-      "a": 255
-    },
-    "_contentSize": {
-      "__type__": "cc.Size",
-      "width": 0,
-      "height": 0
-    },
-    "_anchorPoint": {
-      "__type__": "cc.Vec2",
-      "x": 0.5,
-      "y": 0.5
-    },
-    "_position": {
-      "__type__": "cc.Vec3",
-      "x": -74.714,
-      "y": 385.04,
-      "z": 0
-    },
-    "_scale": {
-      "__type__": "cc.Vec3",
-      "x": 0.28571,
-      "y": 0.28571,
-      "z": 0.28571
-    },
-    "_eulerAngles": {
-      "__type__": "cc.Vec3",
-      "x": 0,
-      "y": 0,
-      "z": 0
-    },
-    "_skewX": 0,
-    "_skewY": 0,
-    "_is3DNode": false,
-    "groupIndex": 0,
-    "_id": ""
-  },
-  {
-    "__type__": "cc.Node",
-    "_name": "LogSpawnPos",
-    "_objFlags": 0,
-    "_parent": {
-      "__id__": 170
-    },
-    "_children": [],
-    "_active": true,
-    "_level": 3,
-    "_components": [],
-    "_prefab": {
-      "__id__": 172
-    },
-    "_opacity": 255,
-    "_color": {
-      "__type__": "cc.Color",
-      "r": 255,
-      "g": 255,
-      "b": 255,
-      "a": 255
-    },
-    "_contentSize": {
-      "__type__": "cc.Size",
-      "width": 0,
-      "height": 0
-    },
-    "_anchorPoint": {
-      "__type__": "cc.Vec2",
-      "x": 0.5,
-      "y": 0.5
-    },
-    "_position": {
-      "__type__": "cc.Vec3",
-      "x": 0,
-      "y": 0,
-      "z": 0
-    },
-    "_scale": {
-      "__type__": "cc.Vec3",
-      "x": 1,
-      "y": 1,
-      "z": 1
-    },
-    "_eulerAngles": {
-      "__type__": "cc.Vec3",
-      "x": 0,
-      "y": 0,
-      "z": 0
-    },
-    "_skewX": 0,
-    "_skewY": 0,
-    "_is3DNode": false,
-    "groupIndex": 0,
-    "_id": ""
-  },
-  {
-    "__type__": "cc.PrefabInfo",
-    "root": {
-      "__id__": 1
-    },
-    "asset": {
-      "__uuid__": "4fafbe9c-cae1-4ccf-8255-83399235a068"
-    },
-    "fileId": "2ch+cfVlZNhpcqFBnmVKwC",
-    "sync": false
-  },
-  {
-    "__type__": "cc.PrefabInfo",
-    "root": {
-      "__id__": 1
-    },
-    "asset": {
-      "__uuid__": "4fafbe9c-cae1-4ccf-8255-83399235a068"
-    },
-    "fileId": "d9GZmaTjNLMYZ5ZLzdxZwU",
-    "sync": false
-  },
-  {
-    "__type__": "cc.Node",
     "_name": "Drowning Human Spawn Positions",
     "_objFlags": 0,
     "_parent": {
@@ -8726,9 +8738,9 @@
     },
     "_scale": {
       "__type__": "cc.Vec3",
-      "x": 0.28571,
-      "y": 0.28571,
-      "z": 0.28571
+      "x": 1,
+      "y": 1,
+      "z": 1
     },
     "_eulerAngles": {
       "__type__": "cc.Vec3",
@@ -8829,7 +8841,100 @@
     },
     "_enabled": true,
     "player": null,
-    "myHeight": 0,
+    "myHeight": 1270,
+    "_id": ""
+  },
+  {
+    "__type__": "cc.BoxCollider",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 1
+    },
+    "_enabled": true,
+    "tag": 0,
+    "_offset": {
+      "__type__": "cc.Vec2",
+      "x": 0,
+      "y": 0
+    },
+    "_size": {
+      "__type__": "cc.Size",
+      "width": 1400,
+      "height": 10
+    },
+    "_id": ""
+  },
+  {
+    "__type__": "cc.BoxCollider",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 1
+    },
+    "_enabled": true,
+    "tag": 1,
+    "_offset": {
+      "__type__": "cc.Vec2",
+      "x": 0,
+      "y": 1270
+    },
+    "_size": {
+      "__type__": "cc.Size",
+      "width": 1400,
+      "height": 10
+    },
+    "_id": ""
+  },
+  {
+    "__type__": "7b691A51vJBtbwoEJvb5Cxs",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 1
+    },
+    "_enabled": true,
+    "_itemSpawner": null,
+    "_obstacleSpawner": null,
+    "heartSpawnLocations": [
+      {
+        "__id__": 95
+      },
+      {
+        "__id__": 97
+      },
+      {
+        "__id__": 99
+      },
+      {
+        "__id__": 101
+      }
+    ],
+    "logsSpawnLocation": [
+      {
+        "__id__": 109
+      }
+    ],
+    "cycloneSpawnLocation": [
+      {
+        "__id__": 105
+      }
+    ],
+    "humanSpawnLocation": [
+      {
+        "__id__": 175
+      }
+    ],
+    "_id": ""
+  },
+  {
+    "__type__": "5a6f5KleJpDqLbuHJv+UX5u",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 1
+    },
+    "_enabled": true,
     "_id": ""
   },
   {

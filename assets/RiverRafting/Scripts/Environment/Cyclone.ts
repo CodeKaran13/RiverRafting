@@ -13,17 +13,23 @@ export default class Cyclone extends Obstacles {
     }
     onEnable() {
         this.myPos = this.node.convertToWorldSpaceAR(cc.Vec2.ZERO);
+        console.log('cyclone pos: ' + this.myPos.y);
+        console.log('player pos: ' + this._player.position.y);
         this.node.getComponent(cc.Animation).play();
     }
     onDisable() {
         this.node.getComponent(cc.Animation).stop();
+        this._obstaclePool.addObstacleBackToPool(this.node);
         this.myPos = 0;
     }
 
     update(dt) {
         if (this.node.active) {
-            if (this._player.position.y - 500 > this.myPos) {
-                // console.log('coinpack, player is above me');
+            // console.log('cyclone pos: ' + this.myPos);
+            // console.log('player pos: ' + this._player.position);
+            if (this._player.position.y - 500 > this.myPos.y) {
+
+                console.log('cyclone, player is above me');
                 this._obstaclePool.addObstacleBackToPool(this.node);
             }
         }
