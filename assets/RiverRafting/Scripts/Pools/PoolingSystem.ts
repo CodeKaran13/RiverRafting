@@ -135,13 +135,6 @@ export default class PoolingSystem extends cc.Component
                 return ref;
             case 6:
                 var ref = this.RiverMapsSet6.pop(); 
-                return ref;
-            // case 7:
-            //     var ref = this.RiverMapsSet7.pop(); 
-            //     return ref;
-            // case 8:
-            //     var ref = this.RiverMapsSet8.pop(); 
-            //     return ref;
             default:
                 console.log('no such case found with type: ' + Type);
                 break;

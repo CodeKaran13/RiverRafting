@@ -28,7 +28,7 @@ export default class CollisionDetection extends cc.Component {
     onBeginContact(contact, selfCollider, otherCollider) {
         if (otherCollider.node.group == 'Bound') {
             // stop clean run on collision and restart timer for bonus system
-            // console.log('collided: ' + otherCollider.node.parent.parent.name);
+            console.log('collided: ' + otherCollider.node.parent.parent.name);
 
             this._bonusSystem.stopAction();
             this.node.getComponent(HealthManager).takeDamage(5);

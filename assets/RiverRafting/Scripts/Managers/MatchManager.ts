@@ -73,7 +73,7 @@ export default class MatchManager extends cc.Component {
     }
 
     StartGame() {
-        this.spawnNextWave(0);
+        this.spawnNextWave(1920);
 
         // this._bonusSystem.resetBonus();
         // this._bonusSystem.restartCounter();
@@ -135,7 +135,8 @@ export default class MatchManager extends cc.Component {
         // return 0;
     }
     setRendererOff(nextMap: cc.Node) {
-        nextMap.parent.removeChild(nextMap);
+        if (nextMap.parent != null)
+            nextMap.parent.removeChild(nextMap);
         this.LevelPrefabs.addChild(nextMap, this.zOrder);
         this.zOrder--;
 
@@ -188,7 +189,7 @@ export default class MatchManager extends cc.Component {
 
         if (wavePrefab.parent != null)
             wavePrefab.parent.removeChild(wavePrefab);
-        this.WavePrefabs.addChild(wavePrefab, 0, wavePrefab.name);
+        this.WavePrefabs.addChild(wavePrefab);
 
         wavePrefab.setPosition(new cc.Vec2(0, this.totalWaveHeight));
         // console.log('pos: ' + wavePrefab.convertToWorldSpaceAR(cc.Vec2.ZERO));
