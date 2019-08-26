@@ -102,7 +102,7 @@ export default class TurnMeOn extends cc.Component {
             this._itemSpawner.SpawnHealthPack();
             this._itemSpawner.SpawnStarPack();
             this._itemSpawner.SpawnDrowningHumans();
-            // this._obstacleSpawner.SpawnLogs();
+            this._obstacleSpawner.SpawnLogs();
             this._obstacleSpawner.SpawnCyclones();
 
             for (let i = 0; i < self.node.children[0].childrenCount - 1; i++) {

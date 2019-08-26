@@ -73,20 +73,10 @@ export default class MatchManager extends cc.Component {
     }
 
     StartGame() {
-        // for (let i = 0; i < this.totalPrefabsToSpawn; i++)
-        // {
-        //     this.spawnNextRiverMap();
-        // }
-
-        // this.startSpawnSequence();
-
-        // this.spawnNextRiverMap(0);
         this.spawnNextWave(0);
 
-        this._bonusSystem.resetBonus();
-        this._bonusSystem.restartCounter();
-
-        // this._itemSpawner.onGameStart();
+        // this._bonusSystem.resetBonus();
+        // this._bonusSystem.restartCounter();
     }
 
     @property

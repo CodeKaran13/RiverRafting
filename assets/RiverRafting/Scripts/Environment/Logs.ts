@@ -13,7 +13,7 @@ export default class Logs extends Obstacles
     }
     onEnable() 
     {
-        this.myAnimator.stop();
+        this.myAnimator.play();
         this.myPos = this.node.convertToWorldSpace(cc.Vec2.ZERO).y;
     }
 
@@ -29,9 +29,8 @@ export default class Logs extends Obstacles
         {
             if (this._player.position.y - 500 > this.myPos)
             {
-                // console.log('player is above me');
-                // this._obstaclePool.addObstacleBackToPool(this.node);
-                this.node.active = true;
+                console.log('LOGS, player is above me');
+                this._obstaclePool.addObstacleBackToPool(this.node);
             }
         }
     }

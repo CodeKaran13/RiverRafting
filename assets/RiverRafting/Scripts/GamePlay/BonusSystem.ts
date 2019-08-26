@@ -16,8 +16,15 @@ export default class BonusSystem extends cc.Component {
 
     // All script Refs
     _scoreManager: ScoreManager = null;
+    @property({
+        type: cc.Animation,
+        visible: true,
+        serializable: true
+    })
+    _playerBonusEffect: cc.Animation = null;
     @property(cc.Label)
     cleanRunTimeLabel: cc.Label = null;
+    isBonusSequenceOn: boolean = false;
 
     resetBonus() {
         this.bonusMultiplier = 1;
@@ -40,15 +47,10 @@ export default class BonusSystem extends cc.Component {
             // start rewarding player with clean run bonus until he hits the bound
 
             if (GameManager.currentGameState == GameState.InGame) {
-                // this.isCleanSequenceOn = false;
                 this.startCleanRunBonus();
+                this._playerBonusEffect.node.active = true;
+                this._playerBonusEffect.play();
             }
-            // this._scoreManager.AddBonus(this.bonusReward * this.bonusMultiplier);
-            // this._scoreManager.AddScore(this.bonusReward * this.bonusMultiplier);
-            // this.bonusMultiplier += 0.2;
-            // if (GameManager.currentGameState == GameState.InGame) {
-            //     this.restartCounter();
-            // }
         }
     }
 
@@ -59,21 +61,19 @@ export default class BonusSystem extends cc.Component {
         // console.log('total clean time in sec: ' + this.totalCleanTime);
         this.closeLabel();
         this.resetBonus();
-        this.restartCounter();
+        this._playerBonusEffect.stop();
+        this._playerBonusEffect.node.active = false;
+        this.isBonusSequenceOn = false;
+        // this.restartCounter();
     }
 
-    // isCleanSequenceOn: boolean = false;
     totalCleanTime: number = 0;
     cleanTime: number = 0;
     cleanRunSequence: cc.ActionInterval;
     startCleanRunBonus() {
-        // if (!this.isCleanSequenceOn) {
-            // this.isCleanSequenceOn = true;
-            // console.log('started clean run');
-            var time = cc.delayTime(1);
-            this.cleanRunSequence = cc.sequence(time, cc.callFunc(this.cleanRunCountdown, this));
-            this.node.runAction(this.cleanRunSequence.repeatForever());
-        // }
+        var time = cc.delayTime(1);
+        this.cleanRunSequence = cc.sequence(time, cc.callFunc(this.cleanRunCountdown, this));
+        this.node.runAction(this.cleanRunSequence.repeatForever());
     }
     cleanRunCountdown() {
         this.cleanTime++;
