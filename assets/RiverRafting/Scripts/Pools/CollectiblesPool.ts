@@ -3,8 +3,7 @@ import Collectibles, { CollectibleType } from "../GamePlay/Collectibles";
 const { ccclass, property } = cc._decorator;
 
 @ccclass
-export default class CollectiblesPool extends cc.Component
-{
+export default class CollectiblesPool extends cc.Component {
     @property({
         type: cc.Node,
         visible: true,
@@ -24,16 +23,17 @@ export default class CollectiblesPool extends cc.Component
     })
     DrowningHumansPack: cc.Node[] = [];
 
-    start()
-    {
+    public static Instance: CollectiblesPool = null;
 
+    start() {
+        if (CollectiblesPool.Instance == null) {
+            CollectiblesPool.Instance = this;
+        }
     }
 
-    addCollectibleBackToPool(pack: cc.Node)
-    {
+    addCollectibleBackToPool(pack: cc.Node) {
         var type = pack.getComponent(Collectibles).myType;
-        switch (type)
-        {
+        switch (type) {
             case CollectibleType.Health:
                 // console.log('healthpack added successfully');
                 pack.parent.removeChild(pack);
@@ -55,10 +55,8 @@ export default class CollectiblesPool extends cc.Component
         }
     }
 
-    getCollectibleFromPool(packName: CollectibleType): cc.Node 
-    {
-        switch (packName)
-        {
+    getCollectibleFromPool(packName: CollectibleType): cc.Node {
+        switch (packName) {
             case CollectibleType.Health:
                 var healthpack = this.HealthPacks.pop();
                 return healthpack;

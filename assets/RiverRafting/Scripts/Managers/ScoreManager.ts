@@ -5,8 +5,7 @@ import BonusSystem from "../GamePlay/BonusSystem";
 const { ccclass, property } = cc._decorator;
 
 @ccclass
-export default class ScoreManager extends cc.Component
-{
+export default class ScoreManager extends cc.Component {
     //All script refs
     @property({
         type: MatchManager,
@@ -33,36 +32,36 @@ export default class ScoreManager extends cc.Component
     coinsCollectedBonus: number = 0;
     totalScore: number = 0;
 
-    onLoad () {
+    public static Instance: ScoreManager = null;
+
+    onLoad() {
         this._matchManager._bonusSystem._scoreManager = this;
         this._matchManager._scoreManager = this;
     }
+    start() {
+        if (ScoreManager.Instance == null) {
+            ScoreManager.Instance = this;
+        }
+    }
 
-
-    AddBonus(value: number)
-    {
+    AddBonus(value: number) {
         this.cleanRunBonus += value;
         // this.AddScore(this.cleanRunBonus);
     }
-    AddCoinsBonus()
-    {
+    AddCoinsBonus() {
         this.coinsCollectedBonus = this.totalCoinsCollected * this.perCoinBonus;
     }
-    AddHumanSavedBonus()
-    {
+    AddHumanSavedBonus() {
         this.humanSavedBonus = this.totalHumanSaved * this.humanSavedBonus;
     }
 
-    AddScore(value: number)
-    {
+    AddScore(value: number) {
         this.totalScore += value;
         this._UIManager.OnUIUpdateScore(this.totalScore);
     }
-    SubScore(value: number)
-    {
+    SubScore(value: number) {
         this.totalScore -= value;
-        if (this.totalScore < 0)
-        {
+        if (this.totalScore < 0) {
             this.totalScore = 0;
         }
 

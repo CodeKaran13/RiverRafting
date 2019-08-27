@@ -105,6 +105,10 @@ export default class TurnMeOn extends cc.Component {
             this._obstacleSpawner.SpawnLogs();
             this._obstacleSpawner.SpawnCyclones();
 
+            // cloud/lightning
+            this.node.children[this.node.childrenCount - 1].active = true;
+
+            // props
             for (let i = 0; i < self.node.children[0].childrenCount - 1; i++) {
                 if (self.node.children[0].children[i].getComponent(cc.RenderComponent) != null) {
                     self.node.children[0].children[i].getComponent(cc.RenderComponent).enabled = true;

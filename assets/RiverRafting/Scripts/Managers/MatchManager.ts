@@ -129,10 +129,10 @@ export default class MatchManager extends cc.Component {
     }
     getRandomNumber() {
         // will return 0, 1, 2, 3, 4, 5, 6
-        var rand = Math.floor(Math.random() * 7);
+        // var rand = Math.floor(Math.random() * 7);
         // console.log('random number: ' + rand);
-        return rand;
-        // return 6;
+        // return rand;
+        return 0;
     }
     setRendererOff(nextMap: cc.Node) {
         if (nextMap.parent != null)

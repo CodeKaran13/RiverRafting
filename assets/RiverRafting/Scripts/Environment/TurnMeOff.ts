@@ -10,7 +10,8 @@ export default class TurnMeOff extends cc.Component
             // console.log('deactivating me');
             
             this.resetSequenceProps();
-            this.node.children[1].active = false;
+            // this.node.children[1].active = false;
+            this.node.children[this.node.childrenCount - 1].active = false;
         }
     }
 

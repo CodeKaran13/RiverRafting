@@ -23,6 +23,14 @@ export default class Player extends cc.Component {
 
     HasAccelerationStarted: boolean = false;
 
+    public static Instance: Player = null;
+
+    start() {
+        if (Player.Instance == null) {
+            Player.Instance = this;
+        }
+    }
+
     update(dt) {
         // console.log('' + Math.floor(1/dt));
         // console.log(this.IsCollidingBound());
