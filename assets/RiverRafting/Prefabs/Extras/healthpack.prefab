@@ -13,12 +13,12 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "coinpack",
+    "_name": "healthpack",
     "_objFlags": 0,
     "_parent": null,
     "_children": [],
-    "_active": false,
-    "_level": 1,
+    "_active": true,
+    "_level": 2,
     "_components": [
       {
         "__id__": 2
@@ -43,8 +43,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 536,
-      "height": 451
+      "width": 563,
+      "height": 493
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -53,14 +53,14 @@
     },
     "_position": {
       "__type__": "cc.Vec3",
-      "x": 1916,
-      "y": 1505,
+      "x": 0,
+      "y": 0,
       "z": 0
     },
     "_scale": {
       "__type__": "cc.Vec3",
-      "x": 0.3,
-      "y": 0.3,
+      "x": 0.07,
+      "y": 0.07,
       "z": 1
     },
     "_eulerAngles": {
@@ -93,10 +93,10 @@
     "_srcBlendFactor": 770,
     "_dstBlendFactor": 771,
     "_spriteFrame": {
-      "__uuid__": "20f68dd4-4da7-4132-9ae2-d368511aa73a"
+      "__uuid__": "93c3cdad-a414-47b3-a683-f3371404f28d"
     },
     "_type": 0,
-    "_sizeMode": 2,
+    "_sizeMode": 1,
     "_fillType": 0,
     "_fillCenter": {
       "__type__": "cc.Vec2",
@@ -110,7 +110,7 @@
     "_id": ""
   },
   {
-    "__type__": "c01caKRl2pKULf+f32846lv",
+    "__type__": "ddb64/gXnxK8KpnEf6wI2yE",
     "_name": "",
     "_objFlags": 0,
     "node": {
@@ -120,6 +120,7 @@
     "_CollectiblePool": null,
     "_player": null,
     "_scoreManager": null,
+    "health": 20,
     "_id": ""
   },
   {
@@ -138,8 +139,8 @@
     },
     "_size": {
       "__type__": "cc.Size",
-      "width": 95,
-      "height": 93
+      "width": 563,
+      "height": 493
     },
     "_id": ""
   },
@@ -149,9 +150,9 @@
       "__id__": 1
     },
     "asset": {
-      "__uuid__": "d7ff9541-cc54-42ec-a07f-52bcd782750f"
+      "__id__": 0
     },
-    "fileId": "1e0f3wXeVIRYGWM4hnF0VN",
+    "fileId": "dfBWtG0VBE8YlED3Xk7xYt",
     "sync": false
   }
 ]
