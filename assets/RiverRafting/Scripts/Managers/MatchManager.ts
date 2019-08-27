@@ -132,7 +132,7 @@ export default class MatchManager extends cc.Component {
         var rand = Math.floor(Math.random() * 7);
         // console.log('random number: ' + rand);
         return rand;
-        // return 0;
+        // return 6;
     }
     setRendererOff(nextMap: cc.Node) {
         if (nextMap.parent != null)
