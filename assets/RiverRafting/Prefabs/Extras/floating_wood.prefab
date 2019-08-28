@@ -33,8 +33,8 @@
         "__id__": 14
       }
     ],
-    "_active": false,
-    "_level": 2,
+    "_active": true,
+    "_level": 1,
     "_components": [
       {
         "__id__": 17
