@@ -1,6 +1,7 @@
 import Player from "../Player";
 import Obstacles, { ObstacleType } from "../GamePlay/Obstacles";
 import ObstaclePool from "../Pools/ObstaclePool";
+import BonusSystem from "../GamePlay/BonusSystem";
 
 const { ccclass, property } = cc._decorator;
 
@@ -42,10 +43,11 @@ export default class Cyclone extends Obstacles {
         if (self.tag == 0 && other.node.name == 'Player') {
             if (!this.triggerOnce) {
                 this.triggerOnce = true;
+                BonusSystem.Instance.stopAction();
                 // console.log('entered cyclone');
-                other.node.getComponent(Player).IsCycloned = true;
-                other.node.getComponent(Player).startCyclone(this.node.convertToWorldSpaceAR(cc.Vec2.ZERO));
-                other.node.getComponent(Player).startCycloneEffect(this.node);
+                // Player.Instance.IsCycloned = true;
+                Player.Instance.startCyclone(this.node.convertToWorldSpaceAR(cc.Vec2.ZERO));
+                Player.Instance.startCycloneEffect(this.node);
             }
         }
         if (self.tag == 1 && other.node.name == 'Player') {

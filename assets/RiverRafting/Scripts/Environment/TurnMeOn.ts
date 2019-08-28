@@ -140,7 +140,7 @@ export default class TurnMeOn extends cc.Component {
             this.setCoinPacks();
             this.setCoinsPosition();
             this.setCoinsPosition();
-            this.setCoinsPosition();
+            // this.setCoinsPosition();
             // this._itemSpawner.SpawnHealthPack();
             // this._itemSpawner.SpawnStarPack();
             // this._itemSpawner.SpawnDrowningHumans();
@@ -216,6 +216,10 @@ export default class TurnMeOn extends cc.Component {
         if (this.propsIndex >= 0) {
             if (this.node.children[0].children[this.totalCount - 1].children[this.propsIndex].getComponent(cc.RenderComponent) != null) {
                 this.node.children[0].children[this.totalCount - 1].children[this.propsIndex].getComponent(cc.RenderComponent).enabled = true;
+                if (GameManager.isHighEndDevice) {
+                    if (this.node.children[0].children[this.totalCount - 1].children[this.propsIndex].getComponent(dragonBones.ArmatureDisplay) != null)
+                        this.node.children[0].children[this.totalCount - 1].children[this.propsIndex].getComponent(dragonBones.ArmatureDisplay).timeScale = 0.5;
+                }
             }
             this.propsIndex--;
         }

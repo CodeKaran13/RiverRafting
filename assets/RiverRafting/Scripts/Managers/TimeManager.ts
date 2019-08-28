@@ -59,6 +59,9 @@ export default class TimeManager extends cc.Component {
                     if (Player.Instance.MAXMOVEMENTSPEED != 3) {
                         this._player.MAXMOVEMENTSPEED = 3;
                         this._player.StartAccelerationSequence();
+                        Player.Instance.windDir = this.getRandomWindDir();
+                        Player.Instance.IsWindy = true;
+                        this.startWindyTimer();
                     }
                 }
                 else {
@@ -96,4 +99,30 @@ export default class TimeManager extends cc.Component {
         }
     }
 
+    getRandomWindDir() {
+        var rand = Math.floor(Math.random() * 2);
+
+        if (rand == 0) {
+            return -1;
+        }
+        else {
+            return 1;
+        }
+    }
+
+    windSequence: cc.ActionInterval = null;
+    windTime: number = 7;
+    startWindyTimer() {
+        var time = cc.delayTime(1);
+        this.windSequence = cc.sequence(time, cc.callFunc(this.windCountdown, this));
+        this.node.runAction(this.windSequence.repeatForever());
+    }
+    windCountdown() {
+        this.windTime--;
+        if (this.windTime <= 0) {
+            Player.Instance.IsWindy = false;
+            this.node.stopAction(this.windSequence);
+            this.windTime = 3;
+        }
+    }
 }

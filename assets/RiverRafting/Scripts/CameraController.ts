@@ -3,8 +3,7 @@ import GameManager, { GameState } from "./Managers/GameManager";
 const { ccclass, property } = cc._decorator;
 
 @ccclass
-export default class CameraController extends cc.Component
-{
+export default class CameraController extends cc.Component {
     @property({
         type: cc.Node,
         visible: true,
@@ -30,27 +29,27 @@ export default class CameraController extends cc.Component
     initZoomRatio: number = 0;
     previousPos: cc.Vec2;
 
-    onLoad()
-    {
+    public static Instance: CameraController = null;
+
+    onLoad() {
 
     }
 
-    start()
-    {
+    start() {
+        if (CameraController.Instance == null) {
+            CameraController.Instance = this;
+        }
         this.initZoomRatio = this.camera.zoomRatio;
         this.previousPos = this.node.position;
     }
 
-    update(dt)
-    {
-        if (GameManager.currentGameState == GameState.InGame && !this.startFollow)
-        {
+    update(dt) {
+        if (GameManager.currentGameState == GameState.InGame && !this.startFollow) {
             this.startFollow = true;
             this.startZoomIn();
         }
 
-        if (this.startFollow)
-        {
+        if (this.startFollow) {
             // this.node.position = new cc.Vec2(this.target.getPosition().x + this.followOffsetX, this.target.getPosition().y + this.followOffsetY);
             var Pos = new cc.Vec2(this.target.position.x + this.followOffsetX, this.target.position.y + this.followOffsetY);
             this.node.position = this.node.parent.convertToNodeSpaceAR(Pos);
@@ -59,81 +58,66 @@ export default class CameraController extends cc.Component
         // console.log('camera zoom: ' + this.camera.zoomRatio);
     }
 
-    cameraShake()
-    {
+    cameraShake() {
         this.anim.play('shake');
         this.scheduleOnce(this.stopShake.bind(this), this.shakeDuration);
     }
 
-    stopShake()
-    {
+    stopShake() {
         this.anim.stop();
         this.camera.node.position = cc.p(0, 0);
     }
 
     zoominsequence: cc.ActionInterval;
     shouldZoomIn: boolean = false;
-    startZoomIn()
-    {
+    startZoomIn() {
         var time = cc.delayTime(0.02);
         this.shouldZoomIn = true;
         this.zoominsequence = cc.sequence(time, cc.callFunc(this.CameraZoomIn, this));
         this.node.runAction(this.zoominsequence.repeatForever());
     }
 
-    CameraZoomIn()
-    {
-        if (this.shouldZoomIn)
-        {
-            if (this.camera.zoomRatio <= 3.5)
-            {
+    CameraZoomIn() {
+        if (this.shouldZoomIn) {
+            if (this.camera.zoomRatio <= 3.5) {
                 // console.log('zooming in..');
                 var end = this.camera.zoomRatio + 0.2;
                 this.camera.zoomRatio = this.lerp(this.camera.zoomRatio, end, 0.1);
             }
-            else
-            {
+            else {
                 this.shouldZoomIn = false;
             }
         }
-        else
-        {
+        else {
             this.node.stopAction(this.zoominsequence);
         }
     }
 
     zoomnormalizeseq: cc.ActionInterval;
     shouldNormalize: boolean = false;
-    startNormalize()
-    {
+    startNormalize() {
         var time = cc.delayTime(0.1);
         this.shouldNormalize = true;
         this.zoomnormalizeseq = cc.sequence(time, cc.callFunc(this.CameraZoomNormalize, this));
         this.node.runAction(this.zoomnormalizeseq.repeatForever());
     }
 
-    CameraZoomNormalize()
-    {
-        if (this.shouldNormalize)
-        {
-            if (this.camera.zoomRatio > 1)
-            {
+    CameraZoomNormalize() {
+        if (this.shouldNormalize) {
+            if (this.camera.zoomRatio > 1) {
                 var end = this.camera.zoomRatio - 0.1;
                 this.camera.zoomRatio = this.lerp(this.camera.zoomRatio, end, 0.1);
             }
-            else
-            {
+            else {
                 this.shouldZoomIn = false;
             }
         }
-        else
-        {
+        else {
             this.node.stopAction(this.zoomnormalizeseq);
         }
     }
 
-    lerp(start, end, amt)
-    {
+    lerp(start, end, amt) {
         return (1 - amt) * start + amt * end;
     }
 }

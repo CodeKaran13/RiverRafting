@@ -2,6 +2,7 @@ import Obstacles, { ObstacleType } from "../GamePlay/Obstacles";
 import HealthManager from "../Managers/HealthManager";
 import ObstaclePool from "../Pools/ObstaclePool";
 import Player from "../Player";
+import BonusSystem from "../GamePlay/BonusSystem";
 
 const { ccclass, property } = cc._decorator;
 
@@ -35,6 +36,7 @@ export default class Logs extends Obstacles {
         if (other.node.name == 'Player') {
             this.myAnimator.play('floating_wood_break');
             Player.Instance.node.getComponent(HealthManager).takeDamage(this.damage);
+            BonusSystem.Instance.stopAction();
             // this._player.getComponent(HealthManager).takeDamage(this.damage);
         }
     }

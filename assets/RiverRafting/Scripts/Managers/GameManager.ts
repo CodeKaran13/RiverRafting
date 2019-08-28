@@ -1,5 +1,6 @@
 import { Difficulty } from "../Enums";
 import MatchManager from "./MatchManager";
+import BonusSystem from "../GamePlay/BonusSystem";
 
 export enum GameState
 {
@@ -84,7 +85,7 @@ export default class GameManager extends cc.Component
         // window.$Arena.submitScore(this._matchManager._scoreManager.totalScore, GameManager.Seed);
         this._matchManager._scoreManager.AddHumanSavedBonus();
         this._matchManager._scoreManager.AddCoinsBonus();
-
+        BonusSystem.Instance.stopAction();
 
         this._matchManager._UIManager.OpenSubmitWindow();
     }

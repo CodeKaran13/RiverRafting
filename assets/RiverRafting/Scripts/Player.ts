@@ -14,7 +14,7 @@ export default class Player extends cc.Component {
 
     MAXTURNSPEED: number = 3;
     MINMOVEMENTSPEED: number = 1;
-    MAXMOVEMENTSPEED: number = 2;
+    MAXMOVEMENTSPEED: number = 3;
 
     turnSequence: cc.Action = null;
     brakeSequence;
@@ -22,6 +22,11 @@ export default class Player extends cc.Component {
     currentAction: cc.Action = null;
 
     HasAccelerationStarted: boolean = false;
+
+    // Windy Environment
+    IsWindy: boolean = false;
+    windDir: number = 1;
+    windSpeed: number = 125;
 
     public static Instance: Player = null;
 
@@ -50,11 +55,20 @@ export default class Player extends cc.Component {
         // console.log('player pos: ' + this.node.position);
         // console.log('forward vector pos: ' + this.node.children[3].convertToWorldSpaceAR(cc.Vec2.ZERO));
 
-        if (!this.IsCycloned) {
+        if (!this.IsCycloned && !this.IsWindy) {
             var direction = this.node.children[2].convertToWorldSpaceAR(cc.Vec2.ZERO).sub(this.node.position);
             this.node.position = this.node.position.add(direction.normalizeSelf().mulSelf(this.movementSpeed));
 
             // check for wrong direction
+            if (this.IsWrongDirection) {
+                this.RotateToCenter();
+                this.IsWrongDirection = false;
+            }
+        }
+        else if (!this.IsCycloned && this.IsWindy) {
+            var direction = this.node.children[2].convertToWorldSpaceAR(new cc.Vec2(this.windDir * this.windSpeed, 0)).sub(this.node.position);
+            this.node.position = this.node.position.add(direction.normalizeSelf().mulSelf(this.movementSpeed));
+
             if (this.IsWrongDirection) {
                 this.RotateToCenter();
                 this.IsWrongDirection = false;
@@ -235,15 +249,6 @@ export default class Player extends cc.Component {
         return new cc.Vec3(x, y, z);
     }
 
-    // onBeginContact(contact, self, other)
-    // {
-    //     if (other.node.group == 'Bound')
-    //     {
-    //         // console.log('' + other.node.name);
-    //         this.node.getComponent(HealthManager).takeDamage(5);
-    //     }
-    // }
-
     // Cyclone Effect
     IsCycloned: boolean = false;
     dragSequence: cc.ActionInterval;
@@ -251,12 +256,13 @@ export default class Player extends cc.Component {
     currentRot: number = 0;
     reachedCenter: boolean = false;
     startCyclone(pos) {
-        var time = cc.delayTime(0.03);
-        // this.IsCycloned = true;
-        this.dragSequence = cc.sequence(time, cc.callFunc(this.dragRaftToCyclone, this, pos));
-        this.node.runAction(this.dragSequence.repeatForever());
-        this.node.getComponent(CollisionDetection)._bonusSystem.stopAction();
-        // this.startCycloneEffect();
+        if (!this.IsCycloned) {
+            var time = cc.delayTime(0.03);
+            this.dragSequence = cc.sequence(time, cc.callFunc(this.dragRaftToCyclone, this, pos));
+            this.node.runAction(this.dragSequence.repeatForever());
+            this.node.getComponent(CollisionDetection)._bonusSystem.stopAction();
+            // this.startCycloneEffect();
+        }
     }
     dragRaftToCyclone(target, pos: cc.Vec2) {
         var dir = pos.sub(this.node.position);
@@ -271,9 +277,12 @@ export default class Player extends cc.Component {
         }
     }
     startCycloneEffect(node) {
-        var time = cc.delayTime(0.01);
-        this.cycloneSequence = cc.sequence(time, cc.callFunc(this.cycloneEffect, this, node));
-        this.node.runAction(this.cycloneSequence.repeatForever());
+        if (!this.IsCycloned) {
+            this.IsCycloned = true;
+            var time = cc.delayTime(0.01);
+            this.cycloneSequence = cc.sequence(time, cc.callFunc(this.cycloneEffect, this, node));
+            this.node.runAction(this.cycloneSequence.repeatForever());
+        }
     }
     cycloneEffect(target, node) {
         if (this.currentRot < 3) {
@@ -294,4 +303,7 @@ export default class Player extends cc.Component {
             this.currentRot = 0;
         }
     }
+
+
+
 }

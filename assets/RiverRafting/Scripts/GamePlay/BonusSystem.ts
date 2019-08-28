@@ -26,6 +26,14 @@ export default class BonusSystem extends cc.Component {
     cleanRunTimeLabel: cc.Label = null;
     isBonusSequenceOn: boolean = false;
 
+    public static Instance: BonusSystem = null;
+
+    start() {
+        if (BonusSystem.Instance == null) {
+            BonusSystem.Instance = this;
+        }
+    }
+
     resetBonus() {
         this.bonusMultiplier = 1;
     }
@@ -80,7 +88,7 @@ export default class BonusSystem extends cc.Component {
 
         this._scoreManager.AddBonus(this.bonusReward * this.bonusMultiplier);
         this._scoreManager.AddScore(this.bonusReward * this.bonusMultiplier);
-        this.bonusMultiplier += 0.2;
+        this.bonusMultiplier += 0.05;
 
         this.onUIUpdate();
     }

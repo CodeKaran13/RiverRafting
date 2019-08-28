@@ -1,6 +1,8 @@
 import Obstacles, { ObstacleType } from "../GamePlay/Obstacles";
 import HealthManager from "../Managers/HealthManager";
 import Player from "../Player";
+import BonusSystem from "../GamePlay/BonusSystem";
+import CameraController from "../CameraController";
 
 const { ccclass, property } = cc._decorator;
 
@@ -47,6 +49,8 @@ export default class Docks extends Obstacles
             this.myAnimator.play('dock_crack');
             // this._player.getComponent(HealthManager).takeDamage(this.damage);
             Player.Instance.node.getComponent(HealthManager).takeDamage(this.damage);
+            CameraController.Instance.cameraShake();
+            BonusSystem.Instance.stopAction();
         }
     }
 }
