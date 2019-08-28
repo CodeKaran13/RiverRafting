@@ -1,5 +1,6 @@
 import Player from "../Player";
 import Obstacles, { ObstacleType } from "../GamePlay/Obstacles";
+import ObstaclePool from "../Pools/ObstaclePool";
 
 const { ccclass, property } = cc._decorator;
 
@@ -19,7 +20,8 @@ export default class Cyclone extends Obstacles {
     }
     onDisable() {
         this.node.getComponent(cc.Animation).stop();
-        this._obstaclePool.addObstacleBackToPool(this.node);
+        // this._obstaclePool.addObstacleBackToPool(this.node);
+        ObstaclePool.Instance.addObstacleBackToPool(this.node);
         this.myPos = 0;
     }
 
@@ -27,10 +29,11 @@ export default class Cyclone extends Obstacles {
         if (this.node.active) {
             // console.log('cyclone pos: ' + this.myPos);
             // console.log('player pos: ' + this._player.position);
-            if (this._player.position.y - 500 > this.myPos.y) {
+            if (Player.Instance.node.position.y - 500 > this.myPos.y) {
 
                 // console.log('cyclone, player is above me');
-                this._obstaclePool.addObstacleBackToPool(this.node);
+                // this._obstaclePool.addObstacleBackToPool(this.node);
+                ObstaclePool.Instance.addObstacleBackToPool(this.node);
             }
         }
     }
@@ -48,7 +51,7 @@ export default class Cyclone extends Obstacles {
         if (self.tag == 1 && other.node.name == 'Player') {
             // console.log('center');
             // this.node.active = false;
-            other.node.getComponent(Player).reachedCenter = true
+            other.node.getComponent(Player).reachedCenter = true;
         }
     }
 }

@@ -18,6 +18,14 @@ export default class ObstaclePool extends cc.Component {
     })
     Cyclones: cc.Node[] = [];
 
+    public static Instance: ObstaclePool = null;
+
+    start() {
+        if (ObstaclePool.Instance == null) {
+            ObstaclePool.Instance = this;
+        }
+    }
+
     addObstacleBackToPool(name: cc.Node) {
         var type = name.getComponent(Obstacles).myType;
         switch (type) {

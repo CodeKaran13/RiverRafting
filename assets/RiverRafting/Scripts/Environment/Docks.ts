@@ -1,5 +1,6 @@
 import Obstacles, { ObstacleType } from "../GamePlay/Obstacles";
 import HealthManager from "../Managers/HealthManager";
+import Player from "../Player";
 
 const { ccclass, property } = cc._decorator;
 
@@ -30,7 +31,7 @@ export default class Docks extends Obstacles
     {
         if (this.node.active)
         {
-            if (this._player.position.y - 500 > this.myPos)
+            if (Player.Instance.node.position.y - 500 > this.myPos)
             {
                 // console.log('player is above me');
                 // this._obstaclePool.addObstacleBackToPool(this.node);
@@ -41,10 +42,11 @@ export default class Docks extends Obstacles
 
     onCollisionEnter(other, self)
     {
-        if (other.node.name == this._player.name)
+        if (other.node.name == 'Player')
         {
             this.myAnimator.play('dock_crack');
-            this._player.getComponent(HealthManager).takeDamage(this.damage);
+            // this._player.getComponent(HealthManager).takeDamage(this.damage);
+            Player.Instance.node.getComponent(HealthManager).takeDamage(this.damage);
         }
     }
 }

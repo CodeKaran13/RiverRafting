@@ -1,46 +1,41 @@
 import Obstacles, { ObstacleType } from "../GamePlay/Obstacles";
 import HealthManager from "../Managers/HealthManager";
+import ObstaclePool from "../Pools/ObstaclePool";
+import Player from "../Player";
 
 const { ccclass, property } = cc._decorator;
 
 @ccclass
-export default class Logs extends Obstacles
-{
+export default class Logs extends Obstacles {
 
-    start()
-    {
+    start() {
         this.myType = ObstacleType.Log;
     }
-    onEnable() 
-    {
+    onEnable() {
         this.myAnimator.play();
         this.myPos = this.node.convertToWorldSpace(cc.Vec2.ZERO).y;
     }
 
-    onDisable()
-    {
+    onDisable() {
         this.myPos = 0;
         this.myAnimator.stop();
     }
 
-    update(dt)
-    {
-        if (this.node.active)
-        {
-            if (this._player.position.y - 500 > this.myPos)
-            {
+    update(dt) {
+        if (this.node.active) {
+            if (Player.Instance.node.position.y - 500 > this.myPos) {
                 console.log('LOGS, player is above me');
-                this._obstaclePool.addObstacleBackToPool(this.node);
+                // this._obstaclePool.addObstacleBackToPool(this.node);
+                ObstaclePool.Instance.addObstacleBackToPool(this.node);
             }
         }
     }
 
-    onCollisionEnter(other, self)
-    {
-        if (other.node.name == this._player.name)
-        {
+    onCollisionEnter(other, self) {
+        if (other.node.name == 'Player') {
             this.myAnimator.play('floating_wood_break');
-            this._player.getComponent(HealthManager).takeDamage(this.damage);
+            Player.Instance.node.getComponent(HealthManager).takeDamage(this.damage);
+            // this._player.getComponent(HealthManager).takeDamage(this.damage);
         }
     }
 }

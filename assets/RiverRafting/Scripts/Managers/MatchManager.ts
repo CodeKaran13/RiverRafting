@@ -53,9 +53,9 @@ export default class MatchManager extends cc.Component {
     @property
     totalObstacleToSpawnOnPrefab: number = 5;
 
-
-    // PrefabArray: cc.Node[] = [];
-    // currentindex = 0;
+    public static easyIndex: number = 1;
+    public static normalIndex: number = 2;
+    public static hardIndex: number = 3;
 
     onLoad() {
         this._timeManager._matchManager = this;

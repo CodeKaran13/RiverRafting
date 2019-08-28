@@ -15,18 +15,18 @@ export default class Collectibles extends cc.Component
 {
     myType: CollectibleType = null;
 
-    @property({
-        type: CollectiblesPool,
-        visible: true,
-        serializable: true
-    })
-    _CollectiblePool: CollectiblesPool = null;
-    @property({
-        type: cc.Node,
-        visible: true,
-        serializable: true
-    })
-    _player: cc.Node = null;
+    // @property({
+    //     type: CollectiblesPool,
+    //     visible: true,
+    //     serializable: true
+    // })
+    // _CollectiblePool: CollectiblesPool = null;
+    // @property({
+    //     type: cc.Node,
+    //     visible: true,
+    //     serializable: true
+    // })
+    // _player: cc.Node = null;
     @property({
         type: ScoreManager,
         visible: true,

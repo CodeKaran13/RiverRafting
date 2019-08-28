@@ -1,5 +1,8 @@
 import ItemSpawner from "../GamePlay/ItemSpawner";
 import ObstacleSpawner from "../GamePlay/ObstacleSpawner";
+import GameManager from "../Managers/GameManager";
+import { Difficulty } from "../Enums";
+import MatchManager from "../Managers/MatchManager";
 
 const { ccclass, property } = cc._decorator;
 
@@ -20,57 +23,78 @@ export default class TurnMeOn extends cc.Component {
     _obstacleSpawner: ObstacleSpawner = null;
 
     // class variables
-    @property({
-        type: cc.Node,
-        visible: true,
-        serializable: true
-    })
-    heartSpawnLocations: cc.Node[] = [];
-    @property({
-        type: cc.Node,
-        visible: true,
-        serializable: true
-    })
-    logsSpawnLocation: cc.Node[] = [];
-    @property({
-        type: cc.Node,
-        visible: true,
-        serializable: true
-    })
-    cycloneSpawnLocation: cc.Node[] = [];
-    @property({
-        type: cc.Node,
-        visible: true,
-        serializable: true
-    })
-    humanSpawnLocation: cc.Node[] = [];
+    // @property({
+    //     type: cc.Node,
+    //     visible: true,
+    //     serializable: true
+    // })
+    // heartSpawnLocations: cc.Node[] = [];
+    // @property({
+    //     type: cc.Node,
+    //     visible: true,
+    //     serializable: true
+    // })
+    // logsSpawnLocation: cc.Node[] = [];
+    // @property({
+    //     type: cc.Node,
+    //     visible: true,
+    //     serializable: true
+    // })
+    // cycloneSpawnLocation: cc.Node[] = [];
+    // @property({
+    //     type: cc.Node,
+    //     visible: true,
+    //     serializable: true
+    // })
+    // humanSpawnLocation: cc.Node[] = [];
     delaySequence: cc.ActionInterval;
 
     onSetPosition() {
         // console.log('assigning spawn positions');
-        for (let i = 0; i < this.heartSpawnLocations.length; i++) {
-            this._itemSpawner.healthSpawnPos[i] = null;
-            this._itemSpawner.healthSpawnPos[i] = this.heartSpawnLocations[i];
-        }
-        for (let i = 0; i < this.humanSpawnLocation.length; i++) {
-            this._itemSpawner.humanSpawnPos[i] = null;
-            this._itemSpawner.humanSpawnPos[i] = this.humanSpawnLocation[i];
-        }
-        for (let i = 0; i < this.cycloneSpawnLocation.length; i++) {
-            this._obstacleSpawner.CycloneSpawnPos[i] = null;
-            this._obstacleSpawner.CycloneSpawnPos[i] = this.cycloneSpawnLocation[i];
-        }
-        for (let i = 0; i < this.cycloneSpawnLocation.length; i++) {
-            this._obstacleSpawner.LogsSpawnPos[i] = null;
-            this._obstacleSpawner.LogsSpawnPos[i] = this.logsSpawnLocation[i];
-        }
+        // for (let i = 0; i < this.heartSpawnLocations.length; i++) {
+        //     this._itemSpawner.healthSpawnPos[i] = null;
+        //     this._itemSpawner.healthSpawnPos[i] = this.heartSpawnLocations[i];
+        // }
+        // for (let i = 0; i < this.humanSpawnLocation.length; i++) {
+        //     this._itemSpawner.humanSpawnPos[i] = null;
+        //     this._itemSpawner.humanSpawnPos[i] = this.humanSpawnLocation[i];
+        // }
+        // for (let i = 0; i < this.cycloneSpawnLocation.length; i++) {
+        //     this._obstacleSpawner.CycloneSpawnPos[i] = null;
+        //     this._obstacleSpawner.CycloneSpawnPos[i] = this.cycloneSpawnLocation[i];
+        // }
+        // for (let i = 0; i < this.cycloneSpawnLocation.length; i++) {
+        //     this._obstacleSpawner.LogsSpawnPos[i] = null;
+        //     this._obstacleSpawner.LogsSpawnPos[i] = this.logsSpawnLocation[i];
+        // }
     }
 
     array: number[] = [];
+
     setCoinPacks() {
-        for (let i = 0; i < this.node.children[4].childrenCount; i++) {
-            // var arr: number[] = [];
-            this.array.push(i);
+        if (GameManager.currentDifficulty == Difficulty.Easy) {
+            for (let i = 0; i < this.array.length; i++) {
+                this.array[i] = null;
+            }
+            for (let i = 0; i < this.node.children[MatchManager.easyIndex].childrenCount; i++) {
+                this.array.push(i);
+            }
+        }
+        else if (GameManager.currentDifficulty == Difficulty.Normal) {
+            for (let i = 0; i < this.array.length; i++) {
+                this.array[i] = null;
+            }
+            for (let i = 0; i < this.node.children[MatchManager.normalIndex].childrenCount; i++) {
+                this.array.push(i);
+            }
+        }
+        else if (GameManager.currentDifficulty == Difficulty.Hard) {
+            for (let i = 0; i < this.array.length; i++) {
+                this.array[i] = null;
+            }
+            for (let i = 0; i < this.node.children[MatchManager.hardIndex].childrenCount; i++) {
+                this.array.push(i);
+            }
         }
     }
     getRandomCoinPack() {
@@ -81,11 +105,29 @@ export default class TurnMeOn extends cc.Component {
     setCoinsPosition() {
         var rand = this.getRandomCoinPack();
 
-        for (let i = 0; i < this.node.children[4].children[rand[0]].childrenCount; i ++)
-        {
-            this._itemSpawner.coinSpawnPos[this.indexPos] = null;
-            this._itemSpawner.coinSpawnPos[this.indexPos] = this.node.children[4].children[rand[0]].children[i];
-            this.indexPos++;
+        if (GameManager.currentDifficulty == Difficulty.Easy) {
+            // for (let i = 0; i < this.node.children[4].children[rand[0]].childrenCount; i++) {
+            //     this._itemSpawner.coinSpawnPos[this.indexPos] = null;
+            //     this._itemSpawner.coinSpawnPos[this.indexPos] = this.node.children[4].children[rand[0]].children[i];
+            //     this.indexPos++;
+            // }
+            this.node.children[MatchManager.easyIndex].children[rand[0]].active = true;
+        }
+        else if (GameManager.currentDifficulty == Difficulty.Normal) {
+            // for (let i = 0; i < this.node.children[4].children[rand[0]].childrenCount; i++) {
+            //     this._itemSpawner.coinSpawnPos[this.indexPos] = null;
+            //     this._itemSpawner.coinSpawnPos[this.indexPos] = this.node.children[4].children[rand[0]].children[i];
+            //     this.indexPos++;
+            // }
+            this.node.children[MatchManager.normalIndex].children[rand[0]].active = true;
+        }
+        else if (GameManager.currentDifficulty == Difficulty.Hard) {
+            // for (let i = 0; i < this.node.children[4].children[rand[0]].childrenCount; i++) {
+            //     this._itemSpawner.coinSpawnPos[this.indexPos] = null;
+            //     this._itemSpawner.coinSpawnPos[this.indexPos] = this.node.children[4].children[rand[0]].children[i];
+            //     this.indexPos++;
+            // }
+            this.node.children[MatchManager.hardIndex].children[rand[0]].active = true;
         }
     }
 
@@ -93,17 +135,17 @@ export default class TurnMeOn extends cc.Component {
     onCollisionExit(other, self) {
         if (self.tag == 0 && other.node.name == 'StartCollider' && !this.triggerOnce) {
             this.triggerOnce = true;
-            this.onSetPosition();
-            this.indexPos = 0;
+            // this.onSetPosition();
+            // this.indexPos = 0;
             this.setCoinPacks();
             this.setCoinsPosition();
             this.setCoinsPosition();
             this.setCoinsPosition();
-            this._itemSpawner.SpawnHealthPack();
-            this._itemSpawner.SpawnStarPack();
-            this._itemSpawner.SpawnDrowningHumans();
-            this._obstacleSpawner.SpawnLogs();
-            this._obstacleSpawner.SpawnCyclones();
+            // this._itemSpawner.SpawnHealthPack();
+            // this._itemSpawner.SpawnStarPack();
+            // this._itemSpawner.SpawnDrowningHumans();
+            // this._obstacleSpawner.SpawnLogs();
+            // this._obstacleSpawner.SpawnCyclones();
 
             // cloud/lightning
             this.node.children[this.node.childrenCount - 1].active = true;

@@ -1,5 +1,7 @@
 import Obstacles from "../GamePlay/Obstacles";
 import HealthManager from "../Managers/HealthManager";
+import Player from "../Player";
+import ObstaclePool from "../Pools/ObstaclePool";
 
 const { ccclass, property } = cc._decorator;
 
@@ -45,22 +47,22 @@ export default class RollingLogs extends Obstacles
             }
         }
 
-        if (this._player.position.y - this.node.position.y > 500)
+        if (Player.Instance.node.position.y - this.node.position.y > 500)
         {
-            console.log('rolling log: player is above me');
-            this._ObstaclePoolRef.addObstacleBackToPool(this.node);
+            // console.log('rolling log: player is above me');
+           ObstaclePool.Instance.addObstacleBackToPool(this.node);
         }
     }
 
     onCollisionEnter(other, self)
     {
-        if (other.node.name == this._player.name)
+        if (other.node.name == 'Player')
         {
-            console.log('rolling log collided with player.');
+            // console.log('rolling log collided with player.');
 
             // damage player here and add this back to pool
-            this._player.getComponent(HealthManager).takeDamage(this.damage);
-            this._ObstaclePoolRef.addObstacleBackToPool(this.node);
+            Player.Instance.node.getComponent(HealthManager).takeDamage(this.damage);
+            ObstaclePool.Instance.addObstacleBackToPool(this.node);
         }
 
         // if (other.node.group == 'Bound')

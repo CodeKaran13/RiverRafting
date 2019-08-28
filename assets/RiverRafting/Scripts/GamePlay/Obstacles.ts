@@ -15,13 +15,13 @@ export default class Obstacles extends cc.Component
 {
     myType: ObstacleType = null;
 
-    _obstaclePool: ObstaclePool = null;
-    @property({
-        type: cc.Node,
-        visible: true,
-        serializable: true
-    })
-    _player: cc.Node = null;
+    // _obstaclePool: ObstaclePool = null;
+    // @property({
+    //     type: cc.Node,
+    //     visible: true,
+    //     serializable: true
+    // })
+    // _player: cc.Node = null;
     @property({
         type: cc.Animation,
         visible: true,
@@ -35,6 +35,6 @@ export default class Obstacles extends cc.Component
     myPos: any;
 
     onLoad() {
-        this._obstaclePool = cc.find("Script Collection/Pooling System").getComponent(ObstaclePool);
+        // this._obstaclePool = cc.find("Script Collection/Pooling System").getComponent(ObstaclePool);
     }
 }
