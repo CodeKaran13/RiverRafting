@@ -33,8 +33,8 @@
         "__id__": 1683
       }
     ],
-    "_active": true,
-    "_level": 1,
+    "_active": false,
+    "_level": 2,
     "_components": [
       {
         "__id__": 1710
@@ -191,7 +191,7 @@
         "__id__": 4
       }
     ],
-    "_active": true,
+    "_active": false,
     "_level": 3,
     "_components": [
       {
@@ -1526,7 +1526,7 @@
       "__id__": 2
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 3,
     "_components": [
       {
@@ -1759,7 +1759,7 @@
         "__id__": 34
       }
     ],
-    "_active": true,
+    "_active": false,
     "_level": 3,
     "_components": [
       {
@@ -3034,7 +3034,7 @@
       "__id__": 2
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 3,
     "_components": [
       {
@@ -3223,7 +3223,7 @@
       "__id__": 2
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 3,
     "_components": [
       {
@@ -3476,7 +3476,7 @@
         "__id__": 69
       }
     ],
-    "_active": true,
+    "_active": false,
     "_level": 3,
     "_components": [
       {
@@ -4966,7 +4966,7 @@
         "__id__": 265
       }
     ],
-    "_active": true,
+    "_active": false,
     "_level": 3,
     "_components": [],
     "_prefab": {
@@ -5022,7 +5022,7 @@
       "__id__": 93
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 4,
     "_components": [
       {
@@ -5125,7 +5125,7 @@
       "__id__": 93
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 4,
     "_components": [
       {
@@ -5236,7 +5236,7 @@
       "__id__": 93
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 4,
     "_components": [
       {
@@ -5339,7 +5339,7 @@
       "__id__": 93
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 4,
     "_components": [
       {
@@ -5442,7 +5442,7 @@
       "__id__": 93
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 4,
     "_components": [
       {
@@ -5553,7 +5553,7 @@
       "__id__": 93
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 4,
     "_components": [
       {
@@ -5664,7 +5664,7 @@
       "__id__": 93
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 4,
     "_components": [
       {
@@ -5775,7 +5775,7 @@
       "__id__": 93
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 4,
     "_components": [
       {
@@ -5886,7 +5886,7 @@
       "__id__": 93
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 4,
     "_components": [
       {
@@ -5997,7 +5997,7 @@
       "__id__": 93
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 4,
     "_components": [
       {
@@ -6108,7 +6108,7 @@
       "__id__": 93
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 4,
     "_components": [
       {
@@ -6219,7 +6219,7 @@
       "__id__": 93
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 4,
     "_components": [
       {
@@ -6330,7 +6330,7 @@
       "__id__": 93
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 4,
     "_components": [
       {
@@ -6433,7 +6433,7 @@
       "__id__": 93
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 4,
     "_components": [
       {
@@ -6544,7 +6544,7 @@
       "__id__": 93
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 4,
     "_components": [
       {
@@ -6647,7 +6647,7 @@
       "__id__": 93
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 4,
     "_components": [
       {
@@ -6750,7 +6750,7 @@
       "__id__": 93
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 4,
     "_components": [
       {
@@ -6853,7 +6853,7 @@
       "__id__": 93
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 4,
     "_components": [
       {
@@ -6964,7 +6964,7 @@
       "__id__": 93
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 4,
     "_components": [
       {
@@ -7075,7 +7075,7 @@
       "__id__": 93
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 4,
     "_components": [
       {
@@ -7178,7 +7178,7 @@
       "__id__": 93
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 4,
     "_components": [
       {
@@ -7289,7 +7289,7 @@
       "__id__": 93
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 4,
     "_components": [
       {
@@ -7400,7 +7400,7 @@
       "__id__": 93
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 4,
     "_components": [
       {
@@ -7511,7 +7511,7 @@
       "__id__": 93
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 4,
     "_components": [
       {
@@ -7622,7 +7622,7 @@
       "__id__": 93
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 4,
     "_components": [
       {
@@ -7725,7 +7725,7 @@
       "__id__": 93
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 4,
     "_components": [
       {
@@ -7828,7 +7828,7 @@
       "__id__": 93
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 4,
     "_components": [
       {
@@ -7939,7 +7939,7 @@
       "__id__": 93
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 4,
     "_components": [
       {
@@ -8050,7 +8050,7 @@
       "__id__": 93
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 4,
     "_components": [
       {
@@ -8161,7 +8161,7 @@
       "__id__": 93
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 4,
     "_components": [
       {
@@ -8272,7 +8272,7 @@
       "__id__": 93
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 4,
     "_components": [
       {
@@ -8383,7 +8383,7 @@
       "__id__": 93
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 4,
     "_components": [
       {
@@ -8494,7 +8494,7 @@
       "__id__": 93
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 4,
     "_components": [
       {
@@ -8605,7 +8605,7 @@
       "__id__": 93
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 4,
     "_components": [
       {
@@ -8708,7 +8708,7 @@
       "__id__": 93
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 4,
     "_components": [
       {
@@ -8819,7 +8819,7 @@
       "__id__": 93
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 4,
     "_components": [
       {
@@ -8930,7 +8930,7 @@
       "__id__": 93
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 4,
     "_components": [
       {
@@ -9041,7 +9041,7 @@
       "__id__": 93
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 4,
     "_components": [
       {
@@ -9144,7 +9144,7 @@
       "__id__": 93
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 4,
     "_components": [
       {
@@ -9247,7 +9247,7 @@
       "__id__": 93
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 4,
     "_components": [
       {
@@ -9350,7 +9350,7 @@
       "__id__": 93
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 4,
     "_components": [
       {
@@ -9461,7 +9461,7 @@
       "__id__": 93
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 4,
     "_components": [
       {
@@ -9572,7 +9572,7 @@
       "__id__": 93
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 4,
     "_components": [
       {
@@ -9683,7 +9683,7 @@
       "__id__": 93
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 4,
     "_components": [
       {
@@ -9794,7 +9794,7 @@
       "__id__": 93
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 4,
     "_components": [
       {
@@ -9905,7 +9905,7 @@
       "__id__": 93
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 4,
     "_components": [
       {
@@ -10008,7 +10008,7 @@
       "__id__": 93
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 4,
     "_components": [
       {
@@ -10111,7 +10111,7 @@
       "__id__": 93
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 4,
     "_components": [
       {
@@ -10222,7 +10222,7 @@
       "__id__": 93
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 4,
     "_components": [
       {
@@ -10333,7 +10333,7 @@
       "__id__": 93
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 4,
     "_components": [
       {
@@ -10436,7 +10436,7 @@
       "__id__": 93
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 4,
     "_components": [
       {
@@ -10539,7 +10539,7 @@
       "__id__": 93
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 4,
     "_components": [
       {
@@ -10650,7 +10650,7 @@
       "__id__": 93
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 4,
     "_components": [
       {
@@ -10761,7 +10761,7 @@
       "__id__": 93
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 4,
     "_components": [
       {
@@ -10872,7 +10872,7 @@
       "__id__": 93
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 4,
     "_components": [
       {
@@ -10983,7 +10983,7 @@
       "__id__": 93
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 4,
     "_components": [
       {
@@ -11094,7 +11094,7 @@
       "__id__": 93
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 4,
     "_components": [
       {
@@ -11205,7 +11205,7 @@
       "__id__": 93
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 4,
     "_components": [
       {
@@ -11621,8 +11621,6 @@
       "__id__": 272
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -11766,8 +11764,6 @@
       "__id__": 277
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -11911,8 +11907,6 @@
       "__id__": 282
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -12056,8 +12050,6 @@
       "__id__": 287
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -12201,8 +12193,6 @@
       "__id__": 292
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -12346,8 +12336,6 @@
       "__id__": 297
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -12491,8 +12479,6 @@
       "__id__": 302
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -12636,8 +12622,6 @@
       "__id__": 307
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -12781,8 +12765,6 @@
       "__id__": 312
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -12926,8 +12908,6 @@
       "__id__": 317
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -13071,8 +13051,6 @@
       "__id__": 322
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -13216,8 +13194,6 @@
       "__id__": 327
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -13361,8 +13337,6 @@
       "__id__": 332
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -13506,8 +13480,6 @@
       "__id__": 337
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -13651,8 +13623,6 @@
       "__id__": 342
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -13796,8 +13766,6 @@
       "__id__": 347
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -13941,8 +13909,6 @@
       "__id__": 352
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -14605,7 +14571,6 @@
       "__id__": 357
     },
     "_enabled": true,
-    "_player": null,
     "myAnimator": {
       "__id__": 373
     },
@@ -14758,8 +14723,6 @@
       "__id__": 377
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -14829,8 +14792,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 563,
-      "height": 493
+      "width": 385,
+      "height": 514
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -14879,7 +14842,7 @@
     "_srcBlendFactor": 770,
     "_dstBlendFactor": 771,
     "_spriteFrame": {
-      "__uuid__": "93c3cdad-a414-47b3-a683-f3371404f28d"
+      "__uuid__": "77a94e86-f833-47e9-91d2-c1605bafbaa8"
     },
     "_type": 0,
     "_sizeMode": 1,
@@ -14903,8 +14866,6 @@
       "__id__": 382
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "health": 20,
     "_id": ""
@@ -15738,7 +15699,6 @@
       "__id__": 389
     },
     "_enabled": true,
-    "_player": null,
     "myAnimator": {
       "__id__": 405
     },
@@ -15891,8 +15851,6 @@
       "__id__": 409
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -15962,8 +15920,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 563,
-      "height": 493
+      "width": 385,
+      "height": 514
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -16012,7 +15970,7 @@
     "_srcBlendFactor": 770,
     "_dstBlendFactor": 771,
     "_spriteFrame": {
-      "__uuid__": "93c3cdad-a414-47b3-a683-f3371404f28d"
+      "__uuid__": "77a94e86-f833-47e9-91d2-c1605bafbaa8"
     },
     "_type": 0,
     "_sizeMode": 1,
@@ -16036,8 +15994,6 @@
       "__id__": 414
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "health": 20,
     "_id": ""
@@ -16182,8 +16138,6 @@
       "__id__": 419
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -16327,8 +16281,6 @@
       "__id__": 424
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -16472,8 +16424,6 @@
       "__id__": 429
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -16617,8 +16567,6 @@
       "__id__": 434
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -16762,8 +16710,6 @@
       "__id__": 439
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -16907,8 +16853,6 @@
       "__id__": 444
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -17052,8 +16996,6 @@
       "__id__": 449
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -17197,8 +17139,6 @@
       "__id__": 454
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -17342,8 +17282,6 @@
       "__id__": 459
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -17487,8 +17425,6 @@
       "__id__": 464
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -17632,8 +17568,6 @@
       "__id__": 469
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -17777,8 +17711,6 @@
       "__id__": 474
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -17922,8 +17854,6 @@
       "__id__": 479
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -18067,8 +17997,6 @@
       "__id__": 484
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -18212,8 +18140,6 @@
       "__id__": 489
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -18357,8 +18283,6 @@
       "__id__": 494
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -18502,8 +18426,6 @@
       "__id__": 499
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -18647,8 +18569,6 @@
       "__id__": 504
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -18792,8 +18712,6 @@
       "__id__": 509
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -18937,8 +18855,6 @@
       "__id__": 514
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -19082,8 +18998,6 @@
       "__id__": 519
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -19227,8 +19141,6 @@
       "__id__": 524
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -19372,8 +19284,6 @@
       "__id__": 529
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -19517,8 +19427,6 @@
       "__id__": 534
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -19662,8 +19570,6 @@
       "__id__": 539
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -19807,8 +19713,6 @@
       "__id__": 544
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -19952,8 +19856,6 @@
       "__id__": 549
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -20097,8 +19999,6 @@
       "__id__": 554
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -20242,8 +20142,6 @@
       "__id__": 559
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -20387,8 +20285,6 @@
       "__id__": 564
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -20532,8 +20428,6 @@
       "__id__": 569
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -21363,7 +21257,6 @@
       "__id__": 576
     },
     "_enabled": true,
-    "_player": null,
     "myAnimator": {
       "__id__": 592
     },
@@ -21377,7 +21270,7 @@
     "node": {
       "__id__": 576
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -21516,8 +21409,6 @@
       "__id__": 596
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -21587,8 +21478,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 563,
-      "height": 493
+      "width": 385,
+      "height": 514
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -21637,7 +21528,7 @@
     "_srcBlendFactor": 770,
     "_dstBlendFactor": 771,
     "_spriteFrame": {
-      "__uuid__": "93c3cdad-a414-47b3-a683-f3371404f28d"
+      "__uuid__": "77a94e86-f833-47e9-91d2-c1605bafbaa8"
     },
     "_type": 0,
     "_sizeMode": 1,
@@ -21661,8 +21552,6 @@
       "__id__": 601
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "health": 20,
     "_id": ""
@@ -21674,7 +21563,7 @@
     "node": {
       "__id__": 601
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -22220,7 +22109,6 @@
       "__id__": 606
     },
     "_enabled": true,
-    "_player": null,
     "myAnimator": {
       "__id__": 619
     },
@@ -22380,8 +22268,6 @@
       "__id__": 624
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -22525,8 +22411,6 @@
       "__id__": 629
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -22670,8 +22554,6 @@
       "__id__": 634
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -22815,8 +22697,6 @@
       "__id__": 639
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -22960,8 +22840,6 @@
       "__id__": 644
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -23105,8 +22983,6 @@
       "__id__": 649
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -23250,8 +23126,6 @@
       "__id__": 654
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -23395,8 +23269,6 @@
       "__id__": 659
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -23540,8 +23412,6 @@
       "__id__": 664
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -23685,8 +23555,6 @@
       "__id__": 669
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -23830,8 +23698,6 @@
       "__id__": 674
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -23975,8 +23841,6 @@
       "__id__": 679
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -24120,8 +23984,6 @@
       "__id__": 684
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -24265,8 +24127,6 @@
       "__id__": 689
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -24410,8 +24270,6 @@
       "__id__": 694
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -24555,8 +24413,6 @@
       "__id__": 699
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -24700,8 +24556,6 @@
       "__id__": 704
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -24845,8 +24699,6 @@
       "__id__": 709
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -24990,8 +24842,6 @@
       "__id__": 714
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -25135,8 +24985,6 @@
       "__id__": 719
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -25280,8 +25128,6 @@
       "__id__": 724
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -25425,8 +25271,6 @@
       "__id__": 729
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -25570,8 +25414,6 @@
       "__id__": 734
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -25715,8 +25557,6 @@
       "__id__": 739
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -25860,8 +25700,6 @@
       "__id__": 744
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -26005,8 +25843,6 @@
       "__id__": 749
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -26150,8 +25986,6 @@
       "__id__": 754
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -26295,8 +26129,6 @@
       "__id__": 759
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -26440,8 +26272,6 @@
       "__id__": 764
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -26826,8 +26656,6 @@
       "__id__": 773
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -26971,8 +26799,6 @@
       "__id__": 778
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -27116,8 +26942,6 @@
       "__id__": 783
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -27261,8 +27085,6 @@
       "__id__": 788
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -27406,8 +27228,6 @@
       "__id__": 793
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -27551,8 +27371,6 @@
       "__id__": 798
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -27696,8 +27514,6 @@
       "__id__": 803
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -27841,8 +27657,6 @@
       "__id__": 808
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -27986,8 +27800,6 @@
       "__id__": 813
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -28131,8 +27943,6 @@
       "__id__": 818
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -28276,8 +28086,6 @@
       "__id__": 823
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -28421,8 +28229,6 @@
       "__id__": 828
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -28566,8 +28372,6 @@
       "__id__": 833
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -28711,8 +28515,6 @@
       "__id__": 838
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -28856,8 +28658,6 @@
       "__id__": 843
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -29001,8 +28801,6 @@
       "__id__": 848
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -29146,8 +28944,6 @@
       "__id__": 853
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -29291,8 +29087,6 @@
       "__id__": 858
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -29436,8 +29230,6 @@
       "__id__": 863
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -29581,8 +29373,6 @@
       "__id__": 868
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -29726,8 +29516,6 @@
       "__id__": 873
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -29871,8 +29659,6 @@
       "__id__": 878
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -30016,8 +29802,6 @@
       "__id__": 883
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -30161,8 +29945,6 @@
       "__id__": 888
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -30306,8 +30088,6 @@
       "__id__": 893
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -30451,8 +30231,6 @@
       "__id__": 898
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -30596,8 +30374,6 @@
       "__id__": 903
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -31260,7 +31036,6 @@
       "__id__": 908
     },
     "_enabled": true,
-    "_player": null,
     "myAnimator": {
       "__id__": 924
     },
@@ -31926,7 +31701,6 @@
       "__id__": 928
     },
     "_enabled": true,
-    "_player": null,
     "myAnimator": {
       "__id__": 944
     },
@@ -32592,7 +32366,6 @@
       "__id__": 948
     },
     "_enabled": true,
-    "_player": null,
     "myAnimator": {
       "__id__": 964
     },
@@ -32745,8 +32518,6 @@
       "__id__": 968
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -33122,7 +32893,7 @@
       "__type__": "cc.Vec3",
       "x": 0,
       "y": 0,
-      "z": 103.41054999999999
+      "z": 103.41054999999997
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -33303,7 +33074,6 @@
       "__id__": 973
     },
     "_enabled": true,
-    "_player": null,
     "myAnimator": {
       "__id__": 986
     },
@@ -33597,8 +33367,6 @@
       "__id__": 993
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -33742,8 +33510,6 @@
       "__id__": 998
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -33887,8 +33653,6 @@
       "__id__": 1003
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -34032,8 +33796,6 @@
       "__id__": 1008
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -34177,8 +33939,6 @@
       "__id__": 1013
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -34322,8 +34082,6 @@
       "__id__": 1018
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -34467,8 +34225,6 @@
       "__id__": 1023
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -34612,8 +34368,6 @@
       "__id__": 1028
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -34757,8 +34511,6 @@
       "__id__": 1033
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -34902,8 +34654,6 @@
       "__id__": 1038
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -35047,8 +34797,6 @@
       "__id__": 1043
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -35192,8 +34940,6 @@
       "__id__": 1048
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -35337,8 +35083,6 @@
       "__id__": 1053
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -35482,8 +35226,6 @@
       "__id__": 1058
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -35627,8 +35369,6 @@
       "__id__": 1063
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -35772,8 +35512,6 @@
       "__id__": 1068
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -35917,8 +35655,6 @@
       "__id__": 1073
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -36062,8 +35798,6 @@
       "__id__": 1078
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -36207,8 +35941,6 @@
       "__id__": 1083
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -36584,7 +36316,7 @@
       "__type__": "cc.Vec3",
       "x": 0,
       "y": 0,
-      "z": 103.41054999999999
+      "z": 103.41054999999997
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -36765,7 +36497,6 @@
       "__id__": 1088
     },
     "_enabled": true,
-    "_player": null,
     "myAnimator": {
       "__id__": 1101
     },
@@ -37545,7 +37276,6 @@
       "__id__": 1108
     },
     "_enabled": true,
-    "_player": null,
     "myAnimator": {
       "__id__": 1124
     },
@@ -38211,7 +37941,6 @@
       "__id__": 1128
     },
     "_enabled": true,
-    "_player": null,
     "myAnimator": {
       "__id__": 1144
     },
@@ -38364,8 +38093,6 @@
       "__id__": 1148
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -38435,8 +38162,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 563,
-      "height": 493
+      "width": 385,
+      "height": 514
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -38485,7 +38212,7 @@
     "_srcBlendFactor": 770,
     "_dstBlendFactor": 771,
     "_spriteFrame": {
-      "__uuid__": "93c3cdad-a414-47b3-a683-f3371404f28d"
+      "__uuid__": "77a94e86-f833-47e9-91d2-c1605bafbaa8"
     },
     "_type": 0,
     "_sizeMode": 1,
@@ -38509,8 +38236,6 @@
       "__id__": 1153
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "health": 20,
     "_id": ""
@@ -39068,7 +38793,6 @@
       "__id__": 1158
     },
     "_enabled": true,
-    "_player": null,
     "myAnimator": {
       "__id__": 1171
     },
@@ -39228,8 +38952,6 @@
       "__id__": 1176
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -39373,8 +39095,6 @@
       "__id__": 1181
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -39518,8 +39238,6 @@
       "__id__": 1186
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -39663,8 +39381,6 @@
       "__id__": 1191
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -39808,8 +39524,6 @@
       "__id__": 1196
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -39953,8 +39667,6 @@
       "__id__": 1201
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -40030,7 +39742,7 @@
         "__id__": 1582
       }
     ],
-    "_active": false,
+    "_active": true,
     "_level": 2,
     "_components": [],
     "_prefab": {
@@ -40330,8 +40042,6 @@
       "__id__": 1210
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -40475,8 +40185,6 @@
       "__id__": 1215
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -40620,8 +40328,6 @@
       "__id__": 1220
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -40765,8 +40471,6 @@
       "__id__": 1225
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -40910,8 +40614,6 @@
       "__id__": 1230
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -41055,8 +40757,6 @@
       "__id__": 1235
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -41200,8 +40900,6 @@
       "__id__": 1240
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -41345,8 +41043,6 @@
       "__id__": 1245
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -41490,8 +41186,6 @@
       "__id__": 1250
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -41635,8 +41329,6 @@
       "__id__": 1255
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -41780,8 +41472,6 @@
       "__id__": 1260
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -41925,8 +41615,6 @@
       "__id__": 1265
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -42070,8 +41758,6 @@
       "__id__": 1270
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -42215,8 +41901,6 @@
       "__id__": 1275
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -42360,8 +42044,6 @@
       "__id__": 1280
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -42505,8 +42187,6 @@
       "__id__": 1285
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -42650,8 +42330,6 @@
       "__id__": 1290
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -42795,8 +42473,6 @@
       "__id__": 1295
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -42940,8 +42616,6 @@
       "__id__": 1300
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -43085,8 +42759,6 @@
       "__id__": 1305
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -43230,8 +42902,6 @@
       "__id__": 1310
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -43375,8 +43045,6 @@
       "__id__": 1315
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -43520,8 +43188,6 @@
       "__id__": 1320
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -44184,7 +43850,6 @@
       "__id__": 1325
     },
     "_enabled": true,
-    "_player": null,
     "myAnimator": {
       "__id__": 1341
     },
@@ -44850,7 +44515,6 @@
       "__id__": 1345
     },
     "_enabled": true,
-    "_player": null,
     "myAnimator": {
       "__id__": 1361
     },
@@ -45516,7 +45180,6 @@
       "__id__": 1365
     },
     "_enabled": true,
-    "_player": null,
     "myAnimator": {
       "__id__": 1381
     },
@@ -45669,8 +45332,6 @@
       "__id__": 1385
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -46046,7 +45707,7 @@
       "__type__": "cc.Vec3",
       "x": 0,
       "y": 0,
-      "z": 103.41054999999999
+      "z": 103.41054999999997
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -46227,7 +45888,6 @@
       "__id__": 1390
     },
     "_enabled": true,
-    "_player": null,
     "myAnimator": {
       "__id__": 1403
     },
@@ -46619,7 +46279,7 @@
       "__type__": "cc.Vec3",
       "x": 0,
       "y": 0,
-      "z": 103.41054999999999
+      "z": 103.41054999999997
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -46800,7 +46460,6 @@
       "__id__": 1408
     },
     "_enabled": true,
-    "_player": null,
     "myAnimator": {
       "__id__": 1421
     },
@@ -47613,7 +47272,6 @@
       "__id__": 1428
     },
     "_enabled": true,
-    "_player": null,
     "myAnimator": {
       "__id__": 1444
     },
@@ -48279,7 +47937,6 @@
       "__id__": 1448
     },
     "_enabled": true,
-    "_player": null,
     "myAnimator": {
       "__id__": 1464
     },
@@ -48432,8 +48089,6 @@
       "__id__": 1468
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -48577,8 +48232,6 @@
       "__id__": 1473
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -48722,8 +48375,6 @@
       "__id__": 1478
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -48867,8 +48518,6 @@
       "__id__": 1483
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -49012,8 +48661,6 @@
       "__id__": 1488
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -49157,8 +48804,6 @@
       "__id__": 1493
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -49302,8 +48947,6 @@
       "__id__": 1498
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -49447,8 +49090,6 @@
       "__id__": 1503
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -49592,8 +49233,6 @@
       "__id__": 1508
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -49737,8 +49376,6 @@
       "__id__": 1513
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -49882,8 +49519,6 @@
       "__id__": 1518
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -50027,8 +49662,6 @@
       "__id__": 1523
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -50172,8 +49805,6 @@
       "__id__": 1528
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -50317,8 +49948,6 @@
       "__id__": 1533
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -50462,8 +50091,6 @@
       "__id__": 1538
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -50607,8 +50234,6 @@
       "__id__": 1543
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -50752,8 +50377,6 @@
       "__id__": 1548
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -50897,8 +50520,6 @@
       "__id__": 1553
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -51042,8 +50663,6 @@
       "__id__": 1558
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -51419,7 +51038,7 @@
       "__type__": "cc.Vec3",
       "x": 0,
       "y": 0,
-      "z": 103.41054999999999
+      "z": 103.41054999999997
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -51600,7 +51219,6 @@
       "__id__": 1563
     },
     "_enabled": true,
-    "_player": null,
     "myAnimator": {
       "__id__": 1576
     },
@@ -52380,7 +51998,6 @@
       "__id__": 1583
     },
     "_enabled": true,
-    "_player": null,
     "myAnimator": {
       "__id__": 1599
     },
@@ -53046,7 +52663,6 @@
       "__id__": 1603
     },
     "_enabled": true,
-    "_player": null,
     "myAnimator": {
       "__id__": 1619
     },
@@ -53199,8 +52815,6 @@
       "__id__": 1623
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -53270,8 +52884,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 563,
-      "height": 493
+      "width": 385,
+      "height": 514
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -53320,7 +52934,7 @@
     "_srcBlendFactor": 770,
     "_dstBlendFactor": 771,
     "_spriteFrame": {
-      "__uuid__": "93c3cdad-a414-47b3-a683-f3371404f28d"
+      "__uuid__": "77a94e86-f833-47e9-91d2-c1605bafbaa8"
     },
     "_type": 0,
     "_sizeMode": 1,
@@ -53344,8 +52958,6 @@
       "__id__": 1628
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "health": 20,
     "_id": ""
@@ -53903,7 +53515,6 @@
       "__id__": 1633
     },
     "_enabled": true,
-    "_player": null,
     "myAnimator": {
       "__id__": 1646
     },
@@ -54063,8 +53674,6 @@
       "__id__": 1651
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -54208,8 +53817,6 @@
       "__id__": 1656
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -54353,8 +53960,6 @@
       "__id__": 1661
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -54498,8 +54103,6 @@
       "__id__": 1666
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -54643,8 +54246,6 @@
       "__id__": 1671
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -54788,8 +54389,6 @@
       "__id__": 1676
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -55801,21 +55400,6 @@
     "_enabled": true,
     "_itemSpawner": null,
     "_obstacleSpawner": null,
-    "heartSpawnLocations": [
-      null,
-      null,
-      null,
-      null
-    ],
-    "logsSpawnLocation": [
-      null
-    ],
-    "cycloneSpawnLocation": [
-      null
-    ],
-    "humanSpawnLocation": [
-      null
-    ],
     "_id": ""
   },
   {

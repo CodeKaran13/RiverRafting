@@ -190,7 +190,7 @@
       "__id__": 2
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 3,
     "_components": [
       {
@@ -439,7 +439,7 @@
       "__id__": 2
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 3,
     "_components": [
       {
@@ -668,7 +668,7 @@
       "__id__": 2
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 3,
     "_components": [
       {
@@ -912,7 +912,7 @@
       "__id__": 2
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 3,
     "_components": [
       {
@@ -1171,7 +1171,7 @@
       "__id__": 2
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 3,
     "_components": [
       {
@@ -1430,7 +1430,7 @@
       "__id__": 2
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 3,
     "_components": [
       {
@@ -1679,7 +1679,7 @@
       "__id__": 2
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 3,
     "_components": [
       {
@@ -2044,7 +2044,7 @@
         "__id__": 223
       }
     ],
-    "_active": true,
+    "_active": false,
     "_level": 3,
     "_components": [],
     "_prefab": {
@@ -2100,7 +2100,7 @@
       "__id__": 38
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 4,
     "_components": [
       {
@@ -2211,7 +2211,7 @@
       "__id__": 38
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 4,
     "_components": [
       {
@@ -2322,7 +2322,7 @@
       "__id__": 38
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 4,
     "_components": [
       {
@@ -2425,7 +2425,7 @@
       "__id__": 38
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 4,
     "_components": [
       {
@@ -2536,7 +2536,7 @@
       "__id__": 38
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 4,
     "_components": [
       {
@@ -2647,7 +2647,7 @@
       "__id__": 38
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 4,
     "_components": [
       {
@@ -2758,7 +2758,7 @@
       "__id__": 38
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 4,
     "_components": [
       {
@@ -2869,7 +2869,7 @@
       "__id__": 38
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 4,
     "_components": [
       {
@@ -2972,7 +2972,7 @@
       "__id__": 38
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 4,
     "_components": [
       {
@@ -3075,7 +3075,7 @@
       "__id__": 38
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 4,
     "_components": [
       {
@@ -3203,7 +3203,7 @@
         "__id__": 91
       }
     ],
-    "_active": true,
+    "_active": false,
     "_level": 4,
     "_components": [
       {
@@ -4110,7 +4110,6 @@
       "__id__": 69
     },
     "_enabled": true,
-    "_player": null,
     "myAnimator": {
       "__id__": 94
     },
@@ -4182,7 +4181,7 @@
         "__id__": 120
       }
     ],
-    "_active": true,
+    "_active": false,
     "_level": 4,
     "_components": [
       {
@@ -5089,7 +5088,6 @@
       "__id__": 98
     },
     "_enabled": true,
-    "_player": null,
     "myAnimator": {
       "__id__": 123
     },
@@ -5136,7 +5134,7 @@
       "__id__": 38
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 4,
     "_components": [
       {
@@ -5239,7 +5237,7 @@
       "__id__": 38
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 4,
     "_components": [
       {
@@ -5342,7 +5340,7 @@
       "__id__": 38
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 4,
     "_components": [
       {
@@ -5445,7 +5443,7 @@
       "__id__": 38
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 4,
     "_components": [
       {
@@ -5548,7 +5546,7 @@
       "__id__": 38
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 4,
     "_components": [
       {
@@ -5651,7 +5649,7 @@
       "__id__": 38
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 4,
     "_components": [
       {
@@ -5754,7 +5752,7 @@
       "__id__": 38
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 4,
     "_components": [
       {
@@ -5857,7 +5855,7 @@
       "__id__": 38
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 4,
     "_components": [
       {
@@ -5960,7 +5958,7 @@
       "__id__": 38
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 4,
     "_components": [
       {
@@ -6063,7 +6061,7 @@
       "__id__": 38
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 4,
     "_components": [
       {
@@ -6166,7 +6164,7 @@
       "__id__": 38
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 4,
     "_components": [
       {
@@ -6269,7 +6267,7 @@
       "__id__": 38
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 4,
     "_components": [
       {
@@ -6380,7 +6378,7 @@
       "__id__": 38
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 4,
     "_components": [
       {
@@ -6491,7 +6489,7 @@
       "__id__": 38
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 4,
     "_components": [
       {
@@ -6602,7 +6600,7 @@
       "__id__": 38
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 4,
     "_components": [
       {
@@ -6713,7 +6711,7 @@
       "__id__": 38
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 4,
     "_components": [
       {
@@ -6824,7 +6822,7 @@
       "__id__": 38
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 4,
     "_components": [
       {
@@ -6935,7 +6933,7 @@
       "__id__": 38
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 4,
     "_components": [
       {
@@ -7046,7 +7044,7 @@
       "__id__": 38
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 4,
     "_components": [
       {
@@ -7157,7 +7155,7 @@
       "__id__": 38
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 4,
     "_components": [
       {
@@ -7260,7 +7258,7 @@
       "__id__": 38
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 4,
     "_components": [
       {
@@ -7363,7 +7361,7 @@
       "__id__": 38
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 4,
     "_components": [
       {
@@ -7466,7 +7464,7 @@
       "__id__": 38
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 4,
     "_components": [
       {
@@ -7569,7 +7567,7 @@
       "__id__": 38
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 4,
     "_components": [
       {
@@ -7672,7 +7670,7 @@
       "__id__": 38
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 4,
     "_components": [
       {
@@ -7783,7 +7781,7 @@
       "__id__": 38
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 4,
     "_components": [
       {
@@ -7894,7 +7892,7 @@
       "__id__": 38
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 4,
     "_components": [
       {
@@ -8005,7 +8003,7 @@
       "__id__": 38
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 4,
     "_components": [
       {
@@ -8108,7 +8106,7 @@
       "__id__": 38
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 4,
     "_components": [
       {
@@ -8209,7 +8207,7 @@
       "__id__": 38
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 4,
     "_components": [
       {
@@ -8312,7 +8310,7 @@
       "__id__": 38
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 4,
     "_components": [
       {
@@ -8423,7 +8421,7 @@
       "__id__": 38
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 4,
     "_components": [
       {
@@ -8534,7 +8532,7 @@
       "__id__": 38
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 4,
     "_components": [
       {
@@ -8672,7 +8670,7 @@
         "__id__": 716
       }
     ],
-    "_active": false,
+    "_active": true,
     "_level": 2,
     "_components": [],
     "_prefab": {
@@ -8948,8 +8946,6 @@
       "__id__": 230
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -9093,8 +9089,6 @@
       "__id__": 235
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -9238,8 +9232,6 @@
       "__id__": 240
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -9383,8 +9375,6 @@
       "__id__": 245
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -9528,8 +9518,6 @@
       "__id__": 250
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -9673,8 +9661,6 @@
       "__id__": 255
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -9818,8 +9804,6 @@
       "__id__": 260
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -9963,8 +9947,6 @@
       "__id__": 265
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -10108,8 +10090,6 @@
       "__id__": 270
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -10253,8 +10233,6 @@
       "__id__": 275
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -10398,8 +10376,6 @@
       "__id__": 280
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -10543,8 +10519,6 @@
       "__id__": 285
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -10688,8 +10662,6 @@
       "__id__": 290
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -10833,8 +10805,6 @@
       "__id__": 295
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -10978,8 +10948,6 @@
       "__id__": 300
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -11123,8 +11091,6 @@
       "__id__": 305
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -11268,8 +11234,6 @@
       "__id__": 310
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -11413,8 +11377,6 @@
       "__id__": 315
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -12077,7 +12039,6 @@
       "__id__": 320
     },
     "_enabled": true,
-    "_player": null,
     "myAnimator": {
       "__id__": 336
     },
@@ -12230,8 +12191,6 @@
       "__id__": 340
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -12375,8 +12334,6 @@
       "__id__": 345
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "health": 20,
     "_id": ""
@@ -12691,8 +12648,6 @@
       "__id__": 352
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -12836,8 +12791,6 @@
       "__id__": 357
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "health": 20,
     "_id": ""
@@ -13395,7 +13348,6 @@
       "__id__": 362
     },
     "_enabled": true,
-    "_player": null,
     "myAnimator": {
       "__id__": 375
     },
@@ -13555,8 +13507,6 @@
       "__id__": 380
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -13700,8 +13650,6 @@
       "__id__": 385
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -13845,8 +13793,6 @@
       "__id__": 390
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -13990,8 +13936,6 @@
       "__id__": 395
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -14135,8 +14079,6 @@
       "__id__": 400
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -14280,8 +14222,6 @@
       "__id__": 405
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -14425,8 +14365,6 @@
       "__id__": 410
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -14570,8 +14508,6 @@
       "__id__": 415
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -14715,8 +14651,6 @@
       "__id__": 420
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -14860,8 +14794,6 @@
       "__id__": 425
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -15005,8 +14937,6 @@
       "__id__": 430
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -15150,8 +15080,6 @@
       "__id__": 435
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -15295,8 +15223,6 @@
       "__id__": 440
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -15440,8 +15366,6 @@
       "__id__": 445
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -15585,8 +15509,6 @@
       "__id__": 450
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -15730,8 +15652,6 @@
       "__id__": 455
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -15875,8 +15795,6 @@
       "__id__": 460
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -16020,8 +15938,6 @@
       "__id__": 465
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -16165,8 +16081,6 @@
       "__id__": 470
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -16310,8 +16224,6 @@
       "__id__": 475
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -16455,8 +16367,6 @@
       "__id__": 480
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -16600,8 +16510,6 @@
       "__id__": 485
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -16745,8 +16653,6 @@
       "__id__": 490
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -16890,8 +16796,6 @@
       "__id__": 495
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -17035,8 +16939,6 @@
       "__id__": 500
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -17180,8 +17082,6 @@
       "__id__": 505
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -17325,8 +17225,6 @@
       "__id__": 510
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -17989,7 +17887,6 @@
       "__id__": 515
     },
     "_enabled": true,
-    "_player": null,
     "myAnimator": {
       "__id__": 531
     },
@@ -18655,7 +18552,6 @@
       "__id__": 535
     },
     "_enabled": true,
-    "_player": null,
     "myAnimator": {
       "__id__": 551
     },
@@ -18954,8 +18850,6 @@
       "__id__": 557
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -19512,7 +19406,6 @@
       "__id__": 562
     },
     "_enabled": true,
-    "_player": null,
     "myAnimator": {
       "__id__": 575
     },
@@ -20191,7 +20084,6 @@
       "__id__": 580
     },
     "_enabled": true,
-    "_player": null,
     "myAnimator": {
       "__id__": 596
     },
@@ -20338,8 +20230,6 @@
       "__id__": 600
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -20483,8 +20373,6 @@
       "__id__": 605
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -20628,8 +20516,6 @@
       "__id__": 610
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -20773,8 +20659,6 @@
       "__id__": 615
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -20918,8 +20802,6 @@
       "__id__": 620
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -21063,8 +20945,6 @@
       "__id__": 625
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -21208,8 +21088,6 @@
       "__id__": 630
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -21353,8 +21231,6 @@
       "__id__": 635
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -21498,8 +21374,6 @@
       "__id__": 640
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -21643,8 +21517,6 @@
       "__id__": 645
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -21788,8 +21660,6 @@
       "__id__": 650
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -21933,8 +21803,6 @@
       "__id__": 655
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -22078,8 +21946,6 @@
       "__id__": 660
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -22223,8 +22089,6 @@
       "__id__": 665
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -22368,8 +22232,6 @@
       "__id__": 670
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -22513,8 +22375,6 @@
       "__id__": 675
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -22658,8 +22518,6 @@
       "__id__": 680
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -22803,8 +22661,6 @@
       "__id__": 685
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -22948,8 +22804,6 @@
       "__id__": 690
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -23093,8 +22947,6 @@
       "__id__": 695
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -23238,8 +23090,6 @@
       "__id__": 700
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -23383,8 +23233,6 @@
       "__id__": 705
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -23528,8 +23376,6 @@
       "__id__": 710
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -23816,8 +23662,6 @@
       "__id__": 717
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -24374,7 +24218,6 @@
       "__id__": 722
     },
     "_enabled": true,
-    "_player": null,
     "myAnimator": {
       "__id__": 735
     },
@@ -25053,7 +24896,6 @@
       "__id__": 740
     },
     "_enabled": true,
-    "_player": null,
     "myAnimator": {
       "__id__": 756
     },
@@ -25200,8 +25042,6 @@
       "__id__": 760
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -25345,8 +25185,6 @@
       "__id__": 765
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -25490,8 +25328,6 @@
       "__id__": 770
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -25635,8 +25471,6 @@
       "__id__": 775
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -25780,8 +25614,6 @@
       "__id__": 780
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -25925,8 +25757,6 @@
       "__id__": 785
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -26070,8 +25900,6 @@
       "__id__": 790
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -26215,8 +26043,6 @@
       "__id__": 795
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -26360,8 +26186,6 @@
       "__id__": 800
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -26505,8 +26329,6 @@
       "__id__": 805
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -26650,8 +26472,6 @@
       "__id__": 810
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -26795,8 +26615,6 @@
       "__id__": 815
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -26940,8 +26758,6 @@
       "__id__": 820
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -27085,8 +26901,6 @@
       "__id__": 825
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -27230,8 +27044,6 @@
       "__id__": 830
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -27375,8 +27187,6 @@
       "__id__": 835
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -27520,8 +27330,6 @@
       "__id__": 840
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -27665,8 +27473,6 @@
       "__id__": 845
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -27810,8 +27616,6 @@
       "__id__": 850
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -27955,8 +27759,6 @@
       "__id__": 855
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "health": 20,
     "_id": ""
@@ -28036,7 +27838,7 @@
         "__id__": 1439
       }
     ],
-    "_active": false,
+    "_active": true,
     "_level": 2,
     "_components": [],
     "_prefab": {
@@ -28861,7 +28663,6 @@
       "__id__": 864
     },
     "_enabled": true,
-    "_player": null,
     "myAnimator": {
       "__id__": 880
     },
@@ -29014,8 +28815,6 @@
       "__id__": 884
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -29572,7 +29371,6 @@
       "__id__": 889
     },
     "_enabled": true,
-    "_player": null,
     "myAnimator": {
       "__id__": 902
     },
@@ -30145,7 +29943,6 @@
       "__id__": 907
     },
     "_enabled": true,
-    "_player": null,
     "myAnimator": {
       "__id__": 920
     },
@@ -30305,8 +30102,6 @@
       "__id__": 925
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -30450,8 +30245,6 @@
       "__id__": 930
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -30595,8 +30388,6 @@
       "__id__": 935
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -30740,8 +30531,6 @@
       "__id__": 940
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -30885,8 +30674,6 @@
       "__id__": 945
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -31030,8 +30817,6 @@
       "__id__": 950
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -31175,8 +30960,6 @@
       "__id__": 955
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -31320,8 +31103,6 @@
       "__id__": 960
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -31465,8 +31246,6 @@
       "__id__": 965
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -31610,8 +31389,6 @@
       "__id__": 970
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -31755,8 +31532,6 @@
       "__id__": 975
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -31900,8 +31675,6 @@
       "__id__": 980
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -32045,8 +31818,6 @@
       "__id__": 985
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -32190,8 +31961,6 @@
       "__id__": 990
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -32335,8 +32104,6 @@
       "__id__": 995
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -32480,8 +32247,6 @@
       "__id__": 1000
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -32625,8 +32390,6 @@
       "__id__": 1005
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -32770,8 +32533,6 @@
       "__id__": 1010
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -32915,8 +32676,6 @@
       "__id__": 1015
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -33060,8 +32819,6 @@
       "__id__": 1020
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -33205,8 +32962,6 @@
       "__id__": 1025
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -33350,8 +33105,6 @@
       "__id__": 1030
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -33495,8 +33248,6 @@
       "__id__": 1035
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -33640,8 +33391,6 @@
       "__id__": 1040
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -33785,8 +33534,6 @@
       "__id__": 1045
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -33930,8 +33677,6 @@
       "__id__": 1050
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -34075,8 +33820,6 @@
       "__id__": 1055
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -34390,8 +34133,6 @@
       "__id__": 1062
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -34535,8 +34276,6 @@
       "__id__": 1067
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "health": 20,
     "_id": ""
@@ -35094,7 +34833,6 @@
       "__id__": 1072
     },
     "_enabled": true,
-    "_player": null,
     "myAnimator": {
       "__id__": 1085
     },
@@ -35773,7 +35511,6 @@
       "__id__": 1090
     },
     "_enabled": true,
-    "_player": null,
     "myAnimator": {
       "__id__": 1106
     },
@@ -36439,7 +36176,6 @@
       "__id__": 1110
     },
     "_enabled": true,
-    "_player": null,
     "myAnimator": {
       "__id__": 1126
     },
@@ -36586,8 +36322,6 @@
       "__id__": 1130
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -36731,8 +36465,6 @@
       "__id__": 1135
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -36876,8 +36608,6 @@
       "__id__": 1140
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -37021,8 +36751,6 @@
       "__id__": 1145
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -37166,8 +36894,6 @@
       "__id__": 1150
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -37311,8 +37037,6 @@
       "__id__": 1155
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -37456,8 +37180,6 @@
       "__id__": 1160
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -37601,8 +37323,6 @@
       "__id__": 1165
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -37746,8 +37466,6 @@
       "__id__": 1170
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -37891,8 +37609,6 @@
       "__id__": 1175
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -38036,8 +37752,6 @@
       "__id__": 1180
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -38181,8 +37895,6 @@
       "__id__": 1185
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -38326,8 +38038,6 @@
       "__id__": 1190
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -38471,8 +38181,6 @@
       "__id__": 1195
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -38616,8 +38324,6 @@
       "__id__": 1200
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -38761,8 +38467,6 @@
       "__id__": 1205
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -38906,8 +38610,6 @@
       "__id__": 1210
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -39051,8 +38753,6 @@
       "__id__": 1215
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -39196,8 +38896,6 @@
       "__id__": 1220
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -39341,8 +39039,6 @@
       "__id__": 1225
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -39486,8 +39182,6 @@
       "__id__": 1230
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -39631,8 +39325,6 @@
       "__id__": 1235
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -39776,8 +39468,6 @@
       "__id__": 1240
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -39921,8 +39611,6 @@
       "__id__": 1245
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -40066,8 +39754,6 @@
       "__id__": 1250
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -40211,8 +39897,6 @@
       "__id__": 1255
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -40356,8 +40040,6 @@
       "__id__": 1260
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -40644,8 +40326,6 @@
       "__id__": 1267
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -41202,7 +40882,6 @@
       "__id__": 1272
     },
     "_enabled": true,
-    "_player": null,
     "myAnimator": {
       "__id__": 1285
     },
@@ -41775,7 +41454,6 @@
       "__id__": 1290
     },
     "_enabled": true,
-    "_player": null,
     "myAnimator": {
       "__id__": 1303
     },
@@ -42454,7 +42132,6 @@
       "__id__": 1308
     },
     "_enabled": true,
-    "_player": null,
     "myAnimator": {
       "__id__": 1324
     },
@@ -43120,7 +42797,6 @@
       "__id__": 1328
     },
     "_enabled": true,
-    "_player": null,
     "myAnimator": {
       "__id__": 1344
     },
@@ -43267,8 +42943,6 @@
       "__id__": 1348
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -43412,8 +43086,6 @@
       "__id__": 1353
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -43557,8 +43229,6 @@
       "__id__": 1358
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -43702,8 +43372,6 @@
       "__id__": 1363
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -43847,8 +43515,6 @@
       "__id__": 1368
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -43992,8 +43658,6 @@
       "__id__": 1373
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -44137,8 +43801,6 @@
       "__id__": 1378
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -44282,8 +43944,6 @@
       "__id__": 1383
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -44427,8 +44087,6 @@
       "__id__": 1388
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -44572,8 +44230,6 @@
       "__id__": 1393
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -44717,8 +44373,6 @@
       "__id__": 1398
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -44862,8 +44516,6 @@
       "__id__": 1403
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -45007,8 +44659,6 @@
       "__id__": 1408
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -45152,8 +44802,6 @@
       "__id__": 1413
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -45297,8 +44945,6 @@
       "__id__": 1418
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -45442,8 +45088,6 @@
       "__id__": 1423
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -45587,8 +45231,6 @@
       "__id__": 1428
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -45732,8 +45374,6 @@
       "__id__": 1433
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -46026,8 +45666,6 @@
       "__id__": 1440
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -46690,7 +46328,6 @@
       "__id__": 1445
     },
     "_enabled": true,
-    "_player": null,
     "myAnimator": {
       "__id__": 1461
     },
@@ -46837,8 +46474,6 @@
       "__id__": 1465
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -46982,8 +46617,6 @@
       "__id__": 1470
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -47127,8 +46760,6 @@
       "__id__": 1475
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -47272,8 +46903,6 @@
       "__id__": 1480
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -47417,8 +47046,6 @@
       "__id__": 1485
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -47562,8 +47189,6 @@
       "__id__": 1490
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -47707,8 +47332,6 @@
       "__id__": 1495
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -47852,8 +47475,6 @@
       "__id__": 1500
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -47997,8 +47618,6 @@
       "__id__": 1505
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -48142,8 +47761,6 @@
       "__id__": 1510
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -48287,8 +47904,6 @@
       "__id__": 1515
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -48432,8 +48047,6 @@
       "__id__": 1520
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -48577,8 +48190,6 @@
       "__id__": 1525
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -48722,8 +48333,6 @@
       "__id__": 1530
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -48867,8 +48476,6 @@
       "__id__": 1535
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -49012,8 +48619,6 @@
       "__id__": 1540
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -49157,8 +48762,6 @@
       "__id__": 1545
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -49302,8 +48905,6 @@
       "__id__": 1550
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -49447,8 +49048,6 @@
       "__id__": 1555
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -49592,8 +49191,6 @@
       "__id__": 1560
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -49737,8 +49334,6 @@
       "__id__": 1565
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -49882,8 +49477,6 @@
       "__id__": 1570
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -50027,8 +49620,6 @@
       "__id__": 1575
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "health": 20,
     "_id": ""
@@ -50108,7 +49699,7 @@
         "__id__": 2144
       }
     ],
-    "_active": false,
+    "_active": true,
     "_level": 2,
     "_components": [],
     "_prefab": {
@@ -50924,7 +50515,6 @@
       "__id__": 1584
     },
     "_enabled": true,
-    "_player": null,
     "myAnimator": {
       "__id__": 1600
     },
@@ -51590,7 +51180,6 @@
       "__id__": 1604
     },
     "_enabled": true,
-    "_player": null,
     "myAnimator": {
       "__id__": 1620
     },
@@ -51743,8 +51332,6 @@
       "__id__": 1624
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -52301,7 +51888,6 @@
       "__id__": 1629
     },
     "_enabled": true,
-    "_player": null,
     "myAnimator": {
       "__id__": 1642
     },
@@ -52874,7 +52460,6 @@
       "__id__": 1647
     },
     "_enabled": true,
-    "_player": null,
     "myAnimator": {
       "__id__": 1660
     },
@@ -53034,8 +52619,6 @@
       "__id__": 1665
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -53179,8 +52762,6 @@
       "__id__": 1670
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -53324,8 +52905,6 @@
       "__id__": 1675
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -53469,8 +53048,6 @@
       "__id__": 1680
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -53614,8 +53191,6 @@
       "__id__": 1685
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -53759,8 +53334,6 @@
       "__id__": 1690
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -53904,8 +53477,6 @@
       "__id__": 1695
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -54049,8 +53620,6 @@
       "__id__": 1700
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -54194,8 +53763,6 @@
       "__id__": 1705
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -54339,8 +53906,6 @@
       "__id__": 1710
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -54484,8 +54049,6 @@
       "__id__": 1715
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -54629,8 +54192,6 @@
       "__id__": 1720
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -54774,8 +54335,6 @@
       "__id__": 1725
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -54919,8 +54478,6 @@
       "__id__": 1730
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -55064,8 +54621,6 @@
       "__id__": 1735
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -55209,8 +54764,6 @@
       "__id__": 1740
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -55354,8 +54907,6 @@
       "__id__": 1745
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -55499,8 +55050,6 @@
       "__id__": 1750
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -55644,8 +55193,6 @@
       "__id__": 1755
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -55789,8 +55336,6 @@
       "__id__": 1760
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -55934,8 +55479,6 @@
       "__id__": 1765
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -56079,8 +55622,6 @@
       "__id__": 1770
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -56224,8 +55765,6 @@
       "__id__": 1775
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -56542,8 +56081,6 @@
       "__id__": 1782
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -56687,8 +56224,6 @@
       "__id__": 1787
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "health": 20,
     "_id": ""
@@ -57246,7 +56781,6 @@
       "__id__": 1792
     },
     "_enabled": true,
-    "_player": null,
     "myAnimator": {
       "__id__": 1805
     },
@@ -57925,7 +57459,6 @@
       "__id__": 1810
     },
     "_enabled": true,
-    "_player": null,
     "myAnimator": {
       "__id__": 1826
     },
@@ -58591,7 +58124,6 @@
       "__id__": 1830
     },
     "_enabled": true,
-    "_player": null,
     "myAnimator": {
       "__id__": 1846
     },
@@ -58738,8 +58270,6 @@
       "__id__": 1850
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -58883,8 +58413,6 @@
       "__id__": 1855
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -59028,8 +58556,6 @@
       "__id__": 1860
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -59173,8 +58699,6 @@
       "__id__": 1865
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -59318,8 +58842,6 @@
       "__id__": 1870
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -59463,8 +58985,6 @@
       "__id__": 1875
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -59608,8 +59128,6 @@
       "__id__": 1880
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -59753,8 +59271,6 @@
       "__id__": 1885
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -59898,8 +59414,6 @@
       "__id__": 1890
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -60043,8 +59557,6 @@
       "__id__": 1895
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -60188,8 +59700,6 @@
       "__id__": 1900
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -60333,8 +59843,6 @@
       "__id__": 1905
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -60478,8 +59986,6 @@
       "__id__": 1910
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -60623,8 +60129,6 @@
       "__id__": 1915
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -60768,8 +60272,6 @@
       "__id__": 1920
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -60913,8 +60415,6 @@
       "__id__": 1925
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -61058,8 +60558,6 @@
       "__id__": 1930
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -61203,8 +60701,6 @@
       "__id__": 1935
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -61348,8 +60844,6 @@
       "__id__": 1940
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -61493,8 +60987,6 @@
       "__id__": 1945
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -61638,8 +61130,6 @@
       "__id__": 1950
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -61783,8 +61273,6 @@
       "__id__": 1955
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -61928,8 +61416,6 @@
       "__id__": 1960
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -62073,8 +61559,6 @@
       "__id__": 1965
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -62218,8 +61702,6 @@
       "__id__": 1970
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -62363,8 +61845,6 @@
       "__id__": 1975
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -62508,8 +61988,6 @@
       "__id__": 1980
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -62653,8 +62131,6 @@
       "__id__": 1985
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -62938,8 +62414,6 @@
       "__id__": 1992
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -63496,7 +62970,6 @@
       "__id__": 1997
     },
     "_enabled": true,
-    "_player": null,
     "myAnimator": {
       "__id__": 2010
     },
@@ -64069,7 +63542,6 @@
       "__id__": 2015
     },
     "_enabled": true,
-    "_player": null,
     "myAnimator": {
       "__id__": 2028
     },
@@ -64748,7 +64220,6 @@
       "__id__": 2033
     },
     "_enabled": true,
-    "_player": null,
     "myAnimator": {
       "__id__": 2049
     },
@@ -64895,8 +64366,6 @@
       "__id__": 2053
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -65040,8 +64509,6 @@
       "__id__": 2058
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -65185,8 +64652,6 @@
       "__id__": 2063
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -65330,8 +64795,6 @@
       "__id__": 2068
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -65475,8 +64938,6 @@
       "__id__": 2073
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -65620,8 +65081,6 @@
       "__id__": 2078
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -65765,8 +65224,6 @@
       "__id__": 2083
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -65910,8 +65367,6 @@
       "__id__": 2088
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -66055,8 +65510,6 @@
       "__id__": 2093
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -66200,8 +65653,6 @@
       "__id__": 2098
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -66345,8 +65796,6 @@
       "__id__": 2103
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -66490,8 +65939,6 @@
       "__id__": 2108
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -66635,8 +66082,6 @@
       "__id__": 2113
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -66780,8 +66225,6 @@
       "__id__": 2118
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -66925,8 +66368,6 @@
       "__id__": 2123
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -67070,8 +66511,6 @@
       "__id__": 2128
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -67215,8 +66654,6 @@
       "__id__": 2133
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -67360,8 +66797,6 @@
       "__id__": 2138
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -67657,8 +67092,6 @@
       "__id__": 2145
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -68215,7 +67648,6 @@
       "__id__": 2150
     },
     "_enabled": true,
-    "_player": null,
     "myAnimator": {
       "__id__": 2163
     },
@@ -68894,7 +68326,6 @@
       "__id__": 2168
     },
     "_enabled": true,
-    "_player": null,
     "myAnimator": {
       "__id__": 2184
     },
@@ -69041,8 +68472,6 @@
       "__id__": 2188
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -69186,8 +68615,6 @@
       "__id__": 2193
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -69331,8 +68758,6 @@
       "__id__": 2198
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -69476,8 +68901,6 @@
       "__id__": 2203
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -69621,8 +69044,6 @@
       "__id__": 2208
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -69766,8 +69187,6 @@
       "__id__": 2213
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -69911,8 +69330,6 @@
       "__id__": 2218
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -70056,8 +69473,6 @@
       "__id__": 2223
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -70201,8 +69616,6 @@
       "__id__": 2228
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -70346,8 +69759,6 @@
       "__id__": 2233
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -70491,8 +69902,6 @@
       "__id__": 2238
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -70636,8 +70045,6 @@
       "__id__": 2243
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -70781,8 +70188,6 @@
       "__id__": 2248
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -70926,8 +70331,6 @@
       "__id__": 2253
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -71071,8 +70474,6 @@
       "__id__": 2258
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -71216,8 +70617,6 @@
       "__id__": 2263
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -71361,8 +70760,6 @@
       "__id__": 2268
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -71506,8 +70903,6 @@
       "__id__": 2273
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -71651,8 +71046,6 @@
       "__id__": 2278
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -71796,8 +71189,6 @@
       "__id__": 2283
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -71941,8 +71332,6 @@
       "__id__": 2288
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -72086,8 +71475,6 @@
       "__id__": 2293
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "_id": ""
   },
@@ -72231,8 +71618,6 @@
       "__id__": 2298
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "health": 20,
     "_id": ""
@@ -73266,21 +72651,6 @@
     "_enabled": true,
     "_itemSpawner": null,
     "_obstacleSpawner": null,
-    "heartSpawnLocations": [
-      null,
-      null,
-      null,
-      null
-    ],
-    "logsSpawnLocation": [
-      null
-    ],
-    "cycloneSpawnLocation": [
-      null
-    ],
-    "humanSpawnLocation": [
-      null
-    ],
     "_id": ""
   },
   {

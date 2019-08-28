@@ -129,10 +129,10 @@ export default class MatchManager extends cc.Component {
     }
     getRandomNumber() {
         // will return 0, 1, 2, 3, 4, 5, 6
-        // var rand = Math.floor(Math.random() * 7);
+        var rand = Math.floor(Math.random() * 2);
         // console.log('random number: ' + rand);
-        // return rand;
-        return 0;
+        return rand;
+        // return 0;
     }
     setRendererOff(nextMap: cc.Node) {
         if (nextMap.parent != null)
@@ -171,7 +171,8 @@ export default class MatchManager extends cc.Component {
                     nextMap.children[0].children[propIndex].children[j].active = true;
                     if (nextMap.children[0].children[propIndex].children[j].getComponent(dragonBones.ArmatureDisplay) != null && GameManager.isHighEndDevice) {
                         // nextMap.children[0].children[propIndex].children[j].getComponent(dragonBones.ArmatureDisplay).playAnimation('tree_movement', 0);
-                        nextMap.children[0].children[propIndex].children[j].getComponent(dragonBones.ArmatureDisplay).timeScale = 0.5;
+                        // nextMap.children[0].children[propIndex].children[j].getComponent(dragonBones.ArmatureDisplay).timeScale = 0.5;
+                        nextMap.children[0].children[propIndex].children[j].getComponent(dragonBones.ArmatureDisplay).timeScale = 0;
                     }
                     if (nextMap.children[0].children[propIndex].children[j].getComponent(cc.RenderComponent) != null) {
                         nextMap.children[0].children[propIndex].children[j].getComponent(cc.RenderComponent).enabled = false;

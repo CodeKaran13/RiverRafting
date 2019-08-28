@@ -30,16 +30,16 @@ export default class ObstaclePool extends cc.Component {
         var type = name.getComponent(Obstacles).myType;
         switch (type) {
             case ObstacleType.Log:
-                if (name.parent != null)
-                    name.parent.removeChild(name);
+                // if (name.parent != null)
+                //     name.parent.removeChild(name);
                 name.active = false;
-                this.Logs.push(name);
+                // this.Logs.push(name);
                 break;
             case ObstacleType.Cyclone:
-                if (name.parent != null)
-                    name.parent.removeChild(name);
+                // if (name.parent != null)
+                //     name.parent.removeChild(name);
                 name.active = false;
-                this.Cyclones.push(name);
+                // this.Cyclones.push(name);
                 break;
         }
     }

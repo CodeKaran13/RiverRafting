@@ -56,13 +56,17 @@ export default class TimeManager extends cc.Component {
                 }
                 else if (this.currentime < 120 && this.currentime >= 60) {
                     GameManager.currentDifficulty = Difficulty.Normal;
-                    this._player.MAXMOVEMENTSPEED = 3;
-                    this._player.StartAccelerationSequence();
+                    if (Player.Instance.MAXMOVEMENTSPEED != 3) {
+                        this._player.MAXMOVEMENTSPEED = 3;
+                        this._player.StartAccelerationSequence();
+                    }
                 }
                 else {
                     GameManager.currentDifficulty = Difficulty.Hard;
-                    Player.Instance.MAXMOVEMENTSPEED = 4;
-                    Player.Instance.StartAccelerationSequence();
+                    if (Player.Instance.MAXMOVEMENTSPEED != 4) {
+                        Player.Instance.MAXMOVEMENTSPEED = 4;
+                        Player.Instance.StartAccelerationSequence();
+                    }
                 }
             }
             else {

@@ -148,7 +148,8 @@ export default class TurnMeOn extends cc.Component {
             // this._obstacleSpawner.SpawnCyclones();
 
             // cloud/lightning
-            this.node.children[this.node.childrenCount - 1].active = true;
+            if (GameManager.currentDifficulty == Difficulty.Hard)
+                this.node.children[this.node.childrenCount - 1].active = true;
 
             // props
             for (let i = 0; i < self.node.children[0].childrenCount - 1; i++) {
