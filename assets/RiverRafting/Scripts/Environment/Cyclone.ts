@@ -17,10 +17,14 @@ export default class Cyclone extends Obstacles {
         this.myPos = this.node.convertToWorldSpaceAR(cc.Vec2.ZERO);
         // console.log('cyclone pos: ' + this.myPos.y);
         // console.log('player pos: ' + this._player.position.y);
-        this.node.getComponent(cc.Animation).play();
+        // this.node.getComponent(cc.Animation).play();
+        this.myAnimator.play();
+        // console.log(animState);
+        // animState.step();
     }
     onDisable() {
-        this.node.getComponent(cc.Animation).stop();
+        // this.node.getComponent(cc.Animation).stop();
+        this.myAnimator.stop();
         // this._obstaclePool.addObstacleBackToPool(this.node);
         ObstaclePool.Instance.addObstacleBackToPool(this.node);
         this.myPos = 0;
