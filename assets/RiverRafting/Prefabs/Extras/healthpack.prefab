@@ -18,7 +18,7 @@
     "_parent": null,
     "_children": [],
     "_active": true,
-    "_level": 2,
+    "_level": 1,
     "_components": [
       {
         "__id__": 2
@@ -43,8 +43,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 563,
-      "height": 493
+      "width": 387,
+      "height": 516
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -93,7 +93,7 @@
     "_srcBlendFactor": 770,
     "_dstBlendFactor": 771,
     "_spriteFrame": {
-      "__uuid__": "93c3cdad-a414-47b3-a683-f3371404f28d"
+      "__uuid__": "66f7be6b-3a85-4e75-b281-32ddc8dcb843"
     },
     "_type": 0,
     "_sizeMode": 1,
@@ -106,7 +106,9 @@
     "_fillStart": 0,
     "_fillRange": 0,
     "_isTrimmedMode": true,
-    "_atlas": null,
+    "_atlas": {
+      "__uuid__": "14d87bc5-83e1-4494-bee4-d5d6329ca0ca"
+    },
     "_id": ""
   },
   {
@@ -117,8 +119,6 @@
       "__id__": 1
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
     "_scoreManager": null,
     "health": 20,
     "_id": ""
@@ -150,7 +150,7 @@
       "__id__": 1
     },
     "asset": {
-      "__id__": 0
+      "__uuid__": "57699706-bc74-444d-bee8-11b1e7d0a86b"
     },
     "fileId": "dfBWtG0VBE8YlED3Xk7xYt",
     "sync": false
