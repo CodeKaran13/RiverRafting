@@ -63,14 +63,14 @@
     },
     "_position": {
       "__type__": "cc.Vec3",
-      "x": 0,
-      "y": 0,
+      "x": 702,
+      "y": 285,
       "z": 0
     },
     "_scale": {
       "__type__": "cc.Vec3",
-      "x": 1,
-      "y": 1,
+      "x": 0.2,
+      "y": 0.2,
       "z": 1
     },
     "_eulerAngles": {
@@ -183,9 +183,9 @@
       "__id__": 1
     },
     "asset": {
-      "__uuid__": "30eab134-86f5-471e-b42c-4635f5bdc98d"
+      "__uuid__": "3c231d72-af05-4144-9ec3-acbdc0cf8c39"
     },
-    "fileId": "48tyk8/TRMfZs5nlu3x7sw",
+    "fileId": "4bS2Ju7ttMH6QAWWirWUwD",
     "sync": false
   },
   {
@@ -282,9 +282,9 @@
       "__id__": 1
     },
     "asset": {
-      "__uuid__": "30eab134-86f5-471e-b42c-4635f5bdc98d"
+      "__uuid__": "3c231d72-af05-4144-9ec3-acbdc0cf8c39"
     },
-    "fileId": "79Wnj80UxO0Z/2oqLKBZRZ",
+    "fileId": "ebszqnajBCQL0TR+wv7uFz",
     "sync": false
   },
   {
@@ -504,9 +504,9 @@
       "__id__": 1
     },
     "asset": {
-      "__uuid__": "30eab134-86f5-471e-b42c-4635f5bdc98d"
+      "__uuid__": "3c231d72-af05-4144-9ec3-acbdc0cf8c39"
     },
-    "fileId": "c8ZWVLxuNNa4i+GNNBW5ew",
+    "fileId": "c0z4iEH6VDHLCpMuOEUq2p",
     "sync": false
   },
   {
@@ -607,9 +607,9 @@
       "__id__": 1
     },
     "asset": {
-      "__uuid__": "30eab134-86f5-471e-b42c-4635f5bdc98d"
+      "__uuid__": "3c231d72-af05-4144-9ec3-acbdc0cf8c39"
     },
-    "fileId": "97Rrc7Kq5DxpggnK+dUonq",
+    "fileId": "ed0H6gzb9E5biMhL/1y0hG",
     "sync": false
   },
   {
@@ -710,9 +710,9 @@
       "__id__": 1
     },
     "asset": {
-      "__uuid__": "30eab134-86f5-471e-b42c-4635f5bdc98d"
+      "__uuid__": "3c231d72-af05-4144-9ec3-acbdc0cf8c39"
     },
-    "fileId": "b49jWypRFKkp5SgS9JkGmf",
+    "fileId": "49r+g1bgBN/JU0KFl6E5nO",
     "sync": false
   },
   {
@@ -738,9 +738,9 @@
       "__id__": 1
     },
     "asset": {
-      "__uuid__": "30eab134-86f5-471e-b42c-4635f5bdc98d"
+      "__uuid__": "3c231d72-af05-4144-9ec3-acbdc0cf8c39"
     },
-    "fileId": "06NOuOZodBaJKfHbmIK0pi",
+    "fileId": "786dABLo1JW633HcutAJC0",
     "sync": false
   }
 ]
