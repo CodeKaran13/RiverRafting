@@ -170,7 +170,7 @@
     "_srcBlendFactor": 770,
     "_dstBlendFactor": 771,
     "_spriteFrame": {
-      "__uuid__": "665b1b83-3010-4879-9d28-883449ce5eab"
+      "__uuid__": "c579fcde-aa4b-46b5-a70f-17a4d5f89309"
     },
     "_type": 0,
     "_sizeMode": 1,
@@ -184,7 +184,7 @@
     "_fillRange": 0,
     "_isTrimmedMode": true,
     "_atlas": {
-      "__uuid__": "14d87bc5-83e1-4494-bee4-d5d6329ca0ca"
+      "__uuid__": "5efa8f5f-9e79-468b-b536-dbb66b40ab49"
     },
     "_id": ""
   },
@@ -275,7 +275,7 @@
     "_srcBlendFactor": 770,
     "_dstBlendFactor": 771,
     "_spriteFrame": {
-      "__uuid__": "d690a7e8-7c41-4ac1-9350-2627d813d271"
+      "__uuid__": "266f0229-905c-4032-b1b1-a6cf90d24455"
     },
     "_type": 0,
     "_sizeMode": 1,
@@ -289,7 +289,7 @@
     "_fillRange": 0,
     "_isTrimmedMode": true,
     "_atlas": {
-      "__uuid__": "14d87bc5-83e1-4494-bee4-d5d6329ca0ca"
+      "__uuid__": "5efa8f5f-9e79-468b-b536-dbb66b40ab49"
     },
     "_id": ""
   },
@@ -380,7 +380,7 @@
     "_srcBlendFactor": 770,
     "_dstBlendFactor": 771,
     "_spriteFrame": {
-      "__uuid__": "09900c29-99e3-481c-9d62-31b79eadfbcc"
+      "__uuid__": "b625120b-5211-46bf-9cac-f183ea7ff0f5"
     },
     "_type": 0,
     "_sizeMode": 1,
@@ -394,7 +394,7 @@
     "_fillRange": 0,
     "_isTrimmedMode": true,
     "_atlas": {
-      "__uuid__": "14d87bc5-83e1-4494-bee4-d5d6329ca0ca"
+      "__uuid__": "5efa8f5f-9e79-468b-b536-dbb66b40ab49"
     },
     "_id": ""
   },
@@ -485,7 +485,7 @@
     "_srcBlendFactor": 770,
     "_dstBlendFactor": 771,
     "_spriteFrame": {
-      "__uuid__": "10b236ea-c88b-4a38-9a01-78d0438092d5"
+      "__uuid__": "553f7726-2112-4cff-8db2-d5f8d5cd2b22"
     },
     "_type": 0,
     "_sizeMode": 1,
@@ -499,7 +499,7 @@
     "_fillRange": 0,
     "_isTrimmedMode": true,
     "_atlas": {
-      "__uuid__": "14d87bc5-83e1-4494-bee4-d5d6329ca0ca"
+      "__uuid__": "5efa8f5f-9e79-468b-b536-dbb66b40ab49"
     },
     "_id": ""
   },
@@ -590,7 +590,7 @@
     "_srcBlendFactor": 770,
     "_dstBlendFactor": 771,
     "_spriteFrame": {
-      "__uuid__": "ccb05261-315f-4749-9da3-f56d30ee949e"
+      "__uuid__": "ae881e9e-08e2-4084-8121-b263381bbf7a"
     },
     "_type": 0,
     "_sizeMode": 1,
@@ -604,7 +604,7 @@
     "_fillRange": 0,
     "_isTrimmedMode": true,
     "_atlas": {
-      "__uuid__": "14d87bc5-83e1-4494-bee4-d5d6329ca0ca"
+      "__uuid__": "5efa8f5f-9e79-468b-b536-dbb66b40ab49"
     },
     "_id": ""
   },
@@ -695,7 +695,7 @@
     "_srcBlendFactor": 770,
     "_dstBlendFactor": 771,
     "_spriteFrame": {
-      "__uuid__": "81508f14-b593-4fd6-89b2-15f301b14d47"
+      "__uuid__": "fb9df92b-dc1c-4e75-aa02-28b45588f4e2"
     },
     "_type": 0,
     "_sizeMode": 1,
@@ -709,7 +709,7 @@
     "_fillRange": 0,
     "_isTrimmedMode": true,
     "_atlas": {
-      "__uuid__": "14d87bc5-83e1-4494-bee4-d5d6329ca0ca"
+      "__uuid__": "5efa8f5f-9e79-468b-b536-dbb66b40ab49"
     },
     "_id": ""
   },
@@ -800,7 +800,7 @@
     "_srcBlendFactor": 770,
     "_dstBlendFactor": 771,
     "_spriteFrame": {
-      "__uuid__": "7e258955-49b7-4403-ad84-c13366a3bb27"
+      "__uuid__": "e0e658d1-60ad-4cac-96be-360f3e135154"
     },
     "_type": 0,
     "_sizeMode": 1,
@@ -814,7 +814,7 @@
     "_fillRange": 0,
     "_isTrimmedMode": true,
     "_atlas": {
-      "__uuid__": "14d87bc5-83e1-4494-bee4-d5d6329ca0ca"
+      "__uuid__": "5efa8f5f-9e79-468b-b536-dbb66b40ab49"
     },
     "_id": ""
   },
@@ -905,7 +905,7 @@
     "_srcBlendFactor": 770,
     "_dstBlendFactor": 771,
     "_spriteFrame": {
-      "__uuid__": "665b1b83-3010-4879-9d28-883449ce5eab"
+      "__uuid__": "c579fcde-aa4b-46b5-a70f-17a4d5f89309"
     },
     "_type": 0,
     "_sizeMode": 1,
@@ -919,7 +919,7 @@
     "_fillRange": 0,
     "_isTrimmedMode": true,
     "_atlas": {
-      "__uuid__": "14d87bc5-83e1-4494-bee4-d5d6329ca0ca"
+      "__uuid__": "5efa8f5f-9e79-468b-b536-dbb66b40ab49"
     },
     "_id": ""
   },
@@ -942,7 +942,9 @@
       "__id__": 1
     },
     "_enabled": true,
-    "_defaultClip": null,
+    "_defaultClip": {
+      "__uuid__": "3de12c02-6131-4bda-b15c-242a3530483c"
+    },
     "_clips": [
       {
         "__uuid__": "3de12c02-6131-4bda-b15c-242a3530483c"
