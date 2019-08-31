@@ -56,8 +56,8 @@ export default class TimeManager extends cc.Component {
                 }
                 else if (this.currentime < 120 && this.currentime >= 60) {
                     GameManager.currentDifficulty = Difficulty.Normal;
-                    if (Player.Instance.MAXMOVEMENTSPEED != 3) {
-                        this._player.MAXMOVEMENTSPEED = 3;
+                    if (Player.Instance.MAXMOVEMENTSPEED != 4) {
+                        this._player.MAXMOVEMENTSPEED = 4;
                         this._player.StartAccelerationSequence();
                         Player.Instance.windDir = this.getRandomWindDir();
                         Player.Instance.IsWindy = true;
@@ -66,8 +66,8 @@ export default class TimeManager extends cc.Component {
                 }
                 else {
                     GameManager.currentDifficulty = Difficulty.Hard;
-                    if (Player.Instance.MAXMOVEMENTSPEED != 4) {
-                        Player.Instance.MAXMOVEMENTSPEED = 4;
+                    if (Player.Instance.MAXMOVEMENTSPEED != 5) {
+                        Player.Instance.MAXMOVEMENTSPEED = 5;
                         Player.Instance.StartAccelerationSequence();
                     }
                 }

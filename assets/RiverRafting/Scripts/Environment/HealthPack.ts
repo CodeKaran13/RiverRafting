@@ -22,7 +22,7 @@ export default class HealthPack extends Collectibles {
     update(dt) {
         if (this.node.active) {
             if (Player.Instance.node.position.y - 500 > this.myPos) {
-                console.log('healthpack, player is above me');
+                // console.log('healthpack, player is above me');
                 // this._CollectiblePool.addCollectibleBackToPool(this.node);
                 CollectiblesPool.Instance.addCollectibleBackToPool(this.node);
             }

@@ -67,13 +67,13 @@ export default class MatchManager extends cc.Component {
     }
 
     start() {
-        // for (let i = 0; i < this.totalPrefabsToSpawn; i++) {
-        //     this.spawnNextRiverMap();
-        // }
+        for (let i = 0; i < this.totalPrefabsToSpawn; i++) {
+            this.spawnNextRiverMap();
+        }
     }
 
     StartGame() {
-        // this.spawnNextWave(1920);
+        this.spawnNextWave(1920);
 
         // this._bonusSystem.resetBonus();
         // this._bonusSystem.restartCounter();
@@ -129,10 +129,10 @@ export default class MatchManager extends cc.Component {
     }
     getRandomNumber() {
         // will return 0, 1, 2, 3, 4, 5, 6
-        var rand = Math.floor(Math.random() * 2);
+        var rand = Math.floor(Math.random() * 6);
         // console.log('random number: ' + rand);
         return rand;
-        // return 0;
+        // return 5;
     }
     setRendererOff(nextMap: cc.Node) {
         if (nextMap.parent != null)

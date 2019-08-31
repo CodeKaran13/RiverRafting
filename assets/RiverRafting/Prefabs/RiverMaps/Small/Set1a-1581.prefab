@@ -102,7 +102,7 @@
   {
     "__type__": "cc.Node",
     "_name": "child set 1",
-    "_objFlags": 512,
+    "_objFlags": 0,
     "_parent": {
       "__id__": 1
     },
@@ -193,7 +193,7 @@
       "__id__": 2
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 3,
     "_components": [
       {
@@ -484,7 +484,7 @@
       "__id__": 2
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 3,
     "_components": [
       {
@@ -750,7 +750,7 @@
       "__id__": 2
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 3,
     "_components": [
       {
@@ -1101,7 +1101,7 @@
       "__id__": 2
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 3,
     "_components": [
       {
@@ -1407,7 +1407,7 @@
       "__id__": 2
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 3,
     "_components": [
       {
@@ -1628,7 +1628,7 @@
       "__id__": 2
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 3,
     "_components": [
       {
@@ -1839,7 +1839,7 @@
       "__id__": 2
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 3,
     "_components": [
       {
@@ -2130,7 +2130,7 @@
       "__id__": 2
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 3,
     "_components": [
       {
@@ -2391,7 +2391,7 @@
   {
     "__type__": "cc.Node",
     "_name": "Props_left",
-    "_objFlags": 512,
+    "_objFlags": 0,
     "_parent": {
       "__id__": 2
     },
@@ -2538,7 +2538,7 @@
         "__id__": 182
       }
     ],
-    "_active": true,
+    "_active": false,
     "_level": 3,
     "_components": [],
     "_prefab": {
@@ -2594,7 +2594,7 @@
       "__id__": 43
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 4,
     "_components": [
       {
@@ -2705,7 +2705,7 @@
       "__id__": 43
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 4,
     "_components": [
       {
@@ -2816,7 +2816,7 @@
       "__id__": 43
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 4,
     "_components": [
       {
@@ -2927,7 +2927,7 @@
       "__id__": 43
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 4,
     "_components": [
       {
@@ -3038,7 +3038,7 @@
       "__id__": 43
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 4,
     "_components": [
       {
@@ -3149,7 +3149,7 @@
       "__id__": 43
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 4,
     "_components": [
       {
@@ -3254,7 +3254,7 @@
       "__id__": 43
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 4,
     "_components": [
       {
@@ -3365,7 +3365,7 @@
       "__id__": 43
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 4,
     "_components": [
       {
@@ -3476,7 +3476,7 @@
       "__id__": 43
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 4,
     "_components": [
       {
@@ -3581,7 +3581,7 @@
       "__id__": 43
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 4,
     "_components": [
       {
@@ -3692,7 +3692,7 @@
       "__id__": 43
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 4,
     "_components": [
       {
@@ -3797,7 +3797,7 @@
       "__id__": 43
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 4,
     "_components": [
       {
@@ -3908,7 +3908,7 @@
       "__id__": 43
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 4,
     "_components": [
       {
@@ -4019,7 +4019,7 @@
       "__id__": 43
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 4,
     "_components": [
       {
@@ -4124,7 +4124,7 @@
       "__id__": 43
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 4,
     "_components": [
       {
@@ -4229,7 +4229,7 @@
       "__id__": 43
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 4,
     "_components": [
       {
@@ -4334,7 +4334,7 @@
       "__id__": 43
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 4,
     "_components": [
       {
@@ -4439,7 +4439,7 @@
       "__id__": 43
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 4,
     "_components": [
       {
@@ -4544,7 +4544,7 @@
       "__id__": 43
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 4,
     "_components": [
       {
@@ -4649,7 +4649,7 @@
       "__id__": 43
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 4,
     "_components": [
       {
@@ -4754,7 +4754,7 @@
       "__id__": 43
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 4,
     "_components": [
       {
@@ -4859,7 +4859,7 @@
       "__id__": 43
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 4,
     "_components": [
       {
@@ -4964,7 +4964,7 @@
       "__id__": 43
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 4,
     "_components": [
       {
@@ -5069,7 +5069,7 @@
       "__id__": 43
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 4,
     "_components": [
       {
@@ -5174,7 +5174,7 @@
       "__id__": 43
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 4,
     "_components": [
       {
@@ -5279,7 +5279,7 @@
       "__id__": 43
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 4,
     "_components": [
       {
@@ -5390,7 +5390,7 @@
       "__id__": 43
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 4,
     "_components": [
       {
@@ -5501,7 +5501,7 @@
       "__id__": 43
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 4,
     "_components": [
       {
@@ -5612,7 +5612,7 @@
       "__id__": 43
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 4,
     "_components": [
       {
@@ -5723,7 +5723,7 @@
       "__id__": 43
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 4,
     "_components": [
       {
@@ -5834,7 +5834,7 @@
       "__id__": 43
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 4,
     "_components": [
       {
@@ -5945,7 +5945,7 @@
       "__id__": 43
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 4,
     "_components": [
       {
@@ -6056,7 +6056,7 @@
       "__id__": 43
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 4,
     "_components": [
       {
@@ -6167,7 +6167,7 @@
       "__id__": 43
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 4,
     "_components": [
       {
@@ -6278,7 +6278,7 @@
       "__id__": 43
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 4,
     "_components": [
       {
@@ -6389,7 +6389,7 @@
       "__id__": 43
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 4,
     "_components": [
       {
@@ -6500,7 +6500,7 @@
       "__id__": 43
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 4,
     "_components": [
       {
@@ -6611,7 +6611,7 @@
       "__id__": 43
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 4,
     "_components": [
       {
@@ -6716,7 +6716,7 @@
       "__id__": 43
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 4,
     "_components": [
       {
@@ -6821,7 +6821,7 @@
       "__id__": 43
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 4,
     "_components": [
       {
@@ -6926,7 +6926,7 @@
       "__id__": 43
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 4,
     "_components": [
       {
@@ -7037,7 +7037,7 @@
       "__id__": 43
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 4,
     "_components": [
       {
@@ -7148,7 +7148,7 @@
       "__id__": 43
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 4,
     "_components": [
       {
@@ -7259,7 +7259,7 @@
       "__id__": 43
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 4,
     "_components": [
       {
@@ -7370,7 +7370,7 @@
       "__id__": 43
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 4,
     "_components": [
       {
@@ -7481,7 +7481,7 @@
       "__id__": 43
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 4,
     "_components": [
       {
@@ -7592,7 +7592,7 @@
       "__id__": 43
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 4,
     "_components": [
       {
@@ -7738,7 +7738,7 @@
         "__id__": 802
       }
     ],
-    "_active": false,
+    "_active": true,
     "_level": 2,
     "_components": [],
     "_prefab": {
@@ -7870,7 +7870,7 @@
         "__id__": 352
       }
     ],
-    "_active": true,
+    "_active": false,
     "_level": 3,
     "_components": [],
     "_prefab": {
@@ -9346,7 +9346,6 @@
       "__id__": 227
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -9491,7 +9490,6 @@
       "__id__": 232
     },
     "_enabled": true,
-    "_scoreManager": null,
     "health": 20,
     "_id": ""
   },
@@ -10312,7 +10310,6 @@
       "__id__": 257
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -10322,7 +10319,7 @@
     "node": {
       "__id__": 257
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -10457,7 +10454,6 @@
       "__id__": 262
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -10467,7 +10463,7 @@
     "node": {
       "__id__": 262
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -10602,7 +10598,6 @@
       "__id__": 267
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -10612,7 +10607,7 @@
     "node": {
       "__id__": 267
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -10747,7 +10742,6 @@
       "__id__": 272
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -10757,7 +10751,7 @@
     "node": {
       "__id__": 272
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -10892,7 +10886,6 @@
       "__id__": 277
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -10902,7 +10895,7 @@
     "node": {
       "__id__": 277
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -11037,7 +11030,6 @@
       "__id__": 282
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -11047,7 +11039,7 @@
     "node": {
       "__id__": 282
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -11182,7 +11174,6 @@
       "__id__": 287
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -11192,7 +11183,7 @@
     "node": {
       "__id__": 287
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -11327,7 +11318,6 @@
       "__id__": 292
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -11337,7 +11327,7 @@
     "node": {
       "__id__": 292
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -11472,7 +11462,6 @@
       "__id__": 297
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -11482,7 +11471,7 @@
     "node": {
       "__id__": 297
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -11617,7 +11606,6 @@
       "__id__": 302
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -11627,7 +11615,7 @@
     "node": {
       "__id__": 302
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -11762,7 +11750,6 @@
       "__id__": 307
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -11772,7 +11759,7 @@
     "node": {
       "__id__": 307
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -11907,7 +11894,6 @@
       "__id__": 312
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -11917,7 +11903,7 @@
     "node": {
       "__id__": 312
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -12052,7 +12038,6 @@
       "__id__": 317
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -12062,7 +12047,7 @@
     "node": {
       "__id__": 317
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -12197,7 +12182,6 @@
       "__id__": 322
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -12207,7 +12191,7 @@
     "node": {
       "__id__": 322
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -12342,7 +12326,6 @@
       "__id__": 327
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -12352,7 +12335,7 @@
     "node": {
       "__id__": 327
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -12487,7 +12470,6 @@
       "__id__": 332
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -12497,7 +12479,7 @@
     "node": {
       "__id__": 332
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -12632,7 +12614,6 @@
       "__id__": 337
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -12642,7 +12623,7 @@
     "node": {
       "__id__": 337
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -12777,7 +12758,6 @@
       "__id__": 342
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -12787,7 +12767,7 @@
     "node": {
       "__id__": 342
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -12922,7 +12902,6 @@
       "__id__": 347
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -12932,7 +12911,7 @@
     "node": {
       "__id__": 347
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -13067,7 +13046,6 @@
       "__id__": 352
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -13077,7 +13055,7 @@
     "node": {
       "__id__": 352
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -13230,7 +13208,7 @@
         "__id__": 594
       }
     ],
-    "_active": true,
+    "_active": false,
     "_level": 3,
     "_components": [],
     "_prefab": {
@@ -14126,7 +14104,6 @@
       "__id__": 379
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -14271,7 +14248,6 @@
       "__id__": 384
     },
     "_enabled": true,
-    "_scoreManager": null,
     "health": 20,
     "_id": ""
   },
@@ -16442,7 +16418,6 @@
       "__id__": 449
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -16452,7 +16427,7 @@
     "node": {
       "__id__": 449
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -16587,7 +16562,6 @@
       "__id__": 454
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -16597,7 +16571,7 @@
     "node": {
       "__id__": 454
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -16732,7 +16706,6 @@
       "__id__": 459
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -16742,7 +16715,7 @@
     "node": {
       "__id__": 459
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -16877,7 +16850,6 @@
       "__id__": 464
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -16887,7 +16859,7 @@
     "node": {
       "__id__": 464
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -17022,7 +16994,6 @@
       "__id__": 469
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -17032,7 +17003,7 @@
     "node": {
       "__id__": 469
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -17167,7 +17138,6 @@
       "__id__": 474
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -17177,7 +17147,7 @@
     "node": {
       "__id__": 474
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -17312,7 +17282,6 @@
       "__id__": 479
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -17322,7 +17291,7 @@
     "node": {
       "__id__": 479
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -17457,7 +17426,6 @@
       "__id__": 484
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -17467,7 +17435,7 @@
     "node": {
       "__id__": 484
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -17602,7 +17570,6 @@
       "__id__": 489
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -17612,7 +17579,7 @@
     "node": {
       "__id__": 489
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -17747,7 +17714,6 @@
       "__id__": 494
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -17757,7 +17723,7 @@
     "node": {
       "__id__": 494
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -17892,7 +17858,6 @@
       "__id__": 499
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -17902,7 +17867,7 @@
     "node": {
       "__id__": 499
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -18037,7 +18002,6 @@
       "__id__": 504
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -18047,7 +18011,7 @@
     "node": {
       "__id__": 504
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -18182,7 +18146,6 @@
       "__id__": 509
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -18192,7 +18155,7 @@
     "node": {
       "__id__": 509
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -18327,7 +18290,6 @@
       "__id__": 514
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -18337,7 +18299,7 @@
     "node": {
       "__id__": 514
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -18472,7 +18434,6 @@
       "__id__": 519
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -18482,7 +18443,7 @@
     "node": {
       "__id__": 519
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -18617,7 +18578,6 @@
       "__id__": 524
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -18627,7 +18587,7 @@
     "node": {
       "__id__": 524
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -18762,7 +18722,6 @@
       "__id__": 529
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -18772,7 +18731,7 @@
     "node": {
       "__id__": 529
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -18907,7 +18866,6 @@
       "__id__": 534
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -18917,7 +18875,7 @@
     "node": {
       "__id__": 534
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -19052,7 +19010,6 @@
       "__id__": 539
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -19062,7 +19019,7 @@
     "node": {
       "__id__": 539
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -19197,7 +19154,6 @@
       "__id__": 544
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -19207,7 +19163,7 @@
     "node": {
       "__id__": 544
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -19342,7 +19298,6 @@
       "__id__": 549
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -19352,7 +19307,7 @@
     "node": {
       "__id__": 549
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -19487,7 +19442,6 @@
       "__id__": 554
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -19497,7 +19451,7 @@
     "node": {
       "__id__": 554
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -19632,7 +19586,6 @@
       "__id__": 559
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -19642,7 +19595,7 @@
     "node": {
       "__id__": 559
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -19777,7 +19730,6 @@
       "__id__": 564
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -19787,7 +19739,7 @@
     "node": {
       "__id__": 564
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -19922,7 +19874,6 @@
       "__id__": 569
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -19932,7 +19883,7 @@
     "node": {
       "__id__": 569
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -20067,7 +20018,6 @@
       "__id__": 574
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -20077,7 +20027,7 @@
     "node": {
       "__id__": 574
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -20212,7 +20162,6 @@
       "__id__": 579
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -20222,7 +20171,7 @@
     "node": {
       "__id__": 579
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -20357,7 +20306,6 @@
       "__id__": 584
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -20367,7 +20315,7 @@
     "node": {
       "__id__": 584
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -20502,7 +20450,6 @@
       "__id__": 589
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -20512,7 +20459,7 @@
     "node": {
       "__id__": 589
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -20647,7 +20594,6 @@
       "__id__": 594
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -20657,7 +20603,7 @@
     "node": {
       "__id__": 594
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -20795,7 +20741,7 @@
         "__id__": 796
       }
     ],
-    "_active": true,
+    "_active": false,
     "_level": 3,
     "_components": [],
     "_prefab": {
@@ -22366,7 +22312,6 @@
       "__id__": 641
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -22511,7 +22456,6 @@
       "__id__": 646
     },
     "_enabled": true,
-    "_scoreManager": null,
     "health": 20,
     "_id": ""
   },
@@ -23332,7 +23276,6 @@
       "__id__": 671
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -23342,7 +23285,7 @@
     "node": {
       "__id__": 671
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -23477,7 +23420,6 @@
       "__id__": 676
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -23487,7 +23429,7 @@
     "node": {
       "__id__": 676
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -23622,7 +23564,6 @@
       "__id__": 681
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -23632,7 +23573,7 @@
     "node": {
       "__id__": 681
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -23767,7 +23708,6 @@
       "__id__": 686
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -23777,7 +23717,7 @@
     "node": {
       "__id__": 686
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -23912,7 +23852,6 @@
       "__id__": 691
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -23922,7 +23861,7 @@
     "node": {
       "__id__": 691
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -24057,7 +23996,6 @@
       "__id__": 696
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -24067,7 +24005,7 @@
     "node": {
       "__id__": 696
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -24202,7 +24140,6 @@
       "__id__": 701
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -24212,7 +24149,7 @@
     "node": {
       "__id__": 701
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -24347,7 +24284,6 @@
       "__id__": 706
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -24357,7 +24293,7 @@
     "node": {
       "__id__": 706
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -24492,7 +24428,6 @@
       "__id__": 711
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -24502,7 +24437,7 @@
     "node": {
       "__id__": 711
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -24637,7 +24572,6 @@
       "__id__": 716
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -24647,7 +24581,7 @@
     "node": {
       "__id__": 716
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -24782,7 +24716,6 @@
       "__id__": 721
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -24792,7 +24725,7 @@
     "node": {
       "__id__": 721
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -24927,7 +24860,6 @@
       "__id__": 726
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -24937,7 +24869,7 @@
     "node": {
       "__id__": 726
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -25072,7 +25004,6 @@
       "__id__": 731
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -25082,7 +25013,7 @@
     "node": {
       "__id__": 731
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -25217,7 +25148,6 @@
       "__id__": 736
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -25227,7 +25157,7 @@
     "node": {
       "__id__": 736
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -25362,7 +25292,6 @@
       "__id__": 741
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -25372,7 +25301,7 @@
     "node": {
       "__id__": 741
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -25507,7 +25436,6 @@
       "__id__": 746
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -25517,7 +25445,7 @@
     "node": {
       "__id__": 746
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -25652,7 +25580,6 @@
       "__id__": 751
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -25662,7 +25589,7 @@
     "node": {
       "__id__": 751
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -25797,7 +25724,6 @@
       "__id__": 756
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -25807,7 +25733,7 @@
     "node": {
       "__id__": 756
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -25942,7 +25868,6 @@
       "__id__": 761
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -25952,7 +25877,7 @@
     "node": {
       "__id__": 761
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -26087,7 +26012,6 @@
       "__id__": 766
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -26097,7 +26021,7 @@
     "node": {
       "__id__": 766
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -26232,7 +26156,6 @@
       "__id__": 771
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -26242,7 +26165,7 @@
     "node": {
       "__id__": 771
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -26377,7 +26300,6 @@
       "__id__": 776
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -26387,7 +26309,7 @@
     "node": {
       "__id__": 776
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -26522,7 +26444,6 @@
       "__id__": 781
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -26532,7 +26453,7 @@
     "node": {
       "__id__": 781
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -26667,7 +26588,6 @@
       "__id__": 786
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -26677,7 +26597,7 @@
     "node": {
       "__id__": 786
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -26812,7 +26732,6 @@
       "__id__": 791
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -26822,7 +26741,7 @@
     "node": {
       "__id__": 791
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -26957,7 +26876,6 @@
       "__id__": 796
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -26967,7 +26885,7 @@
     "node": {
       "__id__": 796
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -27099,7 +27017,7 @@
         "__id__": 988
       }
     ],
-    "_active": true,
+    "_active": false,
     "_level": 3,
     "_components": [],
     "_prefab": {
@@ -28670,7 +28588,6 @@
       "__id__": 843
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -28815,7 +28732,6 @@
       "__id__": 848
     },
     "_enabled": true,
-    "_scoreManager": null,
     "health": 20,
     "_id": ""
   },
@@ -29636,7 +29552,6 @@
       "__id__": 873
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -29646,7 +29561,7 @@
     "node": {
       "__id__": 873
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -29781,7 +29696,6 @@
       "__id__": 878
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -29791,7 +29705,7 @@
     "node": {
       "__id__": 878
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -29926,7 +29840,6 @@
       "__id__": 883
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -29936,7 +29849,7 @@
     "node": {
       "__id__": 883
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -30071,7 +29984,6 @@
       "__id__": 888
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -30081,7 +29993,7 @@
     "node": {
       "__id__": 888
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -30216,7 +30128,6 @@
       "__id__": 893
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -30226,7 +30137,7 @@
     "node": {
       "__id__": 893
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -30361,7 +30272,6 @@
       "__id__": 898
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -30371,7 +30281,7 @@
     "node": {
       "__id__": 898
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -30506,7 +30416,6 @@
       "__id__": 903
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -30516,7 +30425,7 @@
     "node": {
       "__id__": 903
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -30651,7 +30560,6 @@
       "__id__": 908
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -30661,7 +30569,7 @@
     "node": {
       "__id__": 908
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -30796,7 +30704,6 @@
       "__id__": 913
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -30806,7 +30713,7 @@
     "node": {
       "__id__": 913
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -30941,7 +30848,6 @@
       "__id__": 918
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -30951,7 +30857,7 @@
     "node": {
       "__id__": 918
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -31086,7 +30992,6 @@
       "__id__": 923
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -31096,7 +31001,7 @@
     "node": {
       "__id__": 923
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -31231,7 +31136,6 @@
       "__id__": 928
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -31241,7 +31145,7 @@
     "node": {
       "__id__": 928
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -31376,7 +31280,6 @@
       "__id__": 933
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -31386,7 +31289,7 @@
     "node": {
       "__id__": 933
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -31521,7 +31424,6 @@
       "__id__": 938
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -31531,7 +31433,7 @@
     "node": {
       "__id__": 938
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -31666,7 +31568,6 @@
       "__id__": 943
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -31676,7 +31577,7 @@
     "node": {
       "__id__": 943
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -31811,7 +31712,6 @@
       "__id__": 948
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -31821,7 +31721,7 @@
     "node": {
       "__id__": 948
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -31956,7 +31856,6 @@
       "__id__": 953
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -31966,7 +31865,7 @@
     "node": {
       "__id__": 953
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -32101,7 +32000,6 @@
       "__id__": 958
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -32111,7 +32009,7 @@
     "node": {
       "__id__": 958
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -32246,7 +32144,6 @@
       "__id__": 963
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -32256,7 +32153,7 @@
     "node": {
       "__id__": 963
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -32391,7 +32288,6 @@
       "__id__": 968
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -32401,7 +32297,7 @@
     "node": {
       "__id__": 968
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -32536,7 +32432,6 @@
       "__id__": 973
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -32546,7 +32441,7 @@
     "node": {
       "__id__": 973
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -32681,7 +32576,6 @@
       "__id__": 978
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -32691,7 +32585,7 @@
     "node": {
       "__id__": 978
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -32826,7 +32720,6 @@
       "__id__": 983
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -32836,7 +32729,7 @@
     "node": {
       "__id__": 983
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -32971,7 +32864,6 @@
       "__id__": 988
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -32981,7 +32873,7 @@
     "node": {
       "__id__": 988
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -33049,7 +32941,7 @@
         "__id__": 1721
       }
     ],
-    "_active": false,
+    "_active": true,
     "_level": 2,
     "_components": [],
     "_prefab": {
@@ -33187,7 +33079,7 @@
         "__id__": 1198
       }
     ],
-    "_active": true,
+    "_active": false,
     "_level": 3,
     "_components": [],
     "_prefab": {
@@ -35243,7 +35135,6 @@
       "__id__": 1053
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -35388,7 +35279,6 @@
       "__id__": 1058
     },
     "_enabled": true,
-    "_scoreManager": null,
     "health": 20,
     "_id": ""
   },
@@ -36884,7 +36774,6 @@
       "__id__": 1103
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -36894,7 +36783,7 @@
     "node": {
       "__id__": 1103
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -37029,7 +36918,6 @@
       "__id__": 1108
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -37039,7 +36927,7 @@
     "node": {
       "__id__": 1108
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -37174,7 +37062,6 @@
       "__id__": 1113
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -37184,7 +37071,7 @@
     "node": {
       "__id__": 1113
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -37319,7 +37206,6 @@
       "__id__": 1118
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -37329,7 +37215,7 @@
     "node": {
       "__id__": 1118
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -37464,7 +37350,6 @@
       "__id__": 1123
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -37474,7 +37359,7 @@
     "node": {
       "__id__": 1123
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -37609,7 +37494,6 @@
       "__id__": 1128
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -37619,7 +37503,7 @@
     "node": {
       "__id__": 1128
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -37754,7 +37638,6 @@
       "__id__": 1133
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -37764,7 +37647,7 @@
     "node": {
       "__id__": 1133
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -37899,7 +37782,6 @@
       "__id__": 1138
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -37909,7 +37791,7 @@
     "node": {
       "__id__": 1138
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -38044,7 +37926,6 @@
       "__id__": 1143
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -38054,7 +37935,7 @@
     "node": {
       "__id__": 1143
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -38189,7 +38070,6 @@
       "__id__": 1148
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -38199,7 +38079,7 @@
     "node": {
       "__id__": 1148
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -38334,7 +38214,6 @@
       "__id__": 1153
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -38344,7 +38223,7 @@
     "node": {
       "__id__": 1153
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -38479,7 +38358,6 @@
       "__id__": 1158
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -38489,7 +38367,7 @@
     "node": {
       "__id__": 1158
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -38624,7 +38502,6 @@
       "__id__": 1163
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -38634,7 +38511,7 @@
     "node": {
       "__id__": 1163
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -38769,7 +38646,6 @@
       "__id__": 1168
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -38779,7 +38655,7 @@
     "node": {
       "__id__": 1168
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -38914,7 +38790,6 @@
       "__id__": 1173
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -38924,7 +38799,7 @@
     "node": {
       "__id__": 1173
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -39059,7 +38934,6 @@
       "__id__": 1178
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -39069,7 +38943,7 @@
     "node": {
       "__id__": 1178
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -39204,7 +39078,6 @@
       "__id__": 1183
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -39214,7 +39087,7 @@
     "node": {
       "__id__": 1183
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -39349,7 +39222,6 @@
       "__id__": 1188
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -39359,7 +39231,7 @@
     "node": {
       "__id__": 1188
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -39494,7 +39366,6 @@
       "__id__": 1193
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -39504,7 +39375,7 @@
     "node": {
       "__id__": 1193
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -39639,7 +39510,6 @@
       "__id__": 1198
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -39649,7 +39519,7 @@
     "node": {
       "__id__": 1198
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -39835,7 +39705,7 @@
         "__id__": 1495
       }
     ],
-    "_active": true,
+    "_active": false,
     "_level": 3,
     "_components": [],
     "_prefab": {
@@ -40597,7 +40467,9 @@
       "__id__": 1205
     },
     "_enabled": true,
-    "_defaultClip": null,
+    "_defaultClip": {
+      "__uuid__": "3b303c68-8efd-4106-af6b-6ba3c649f637"
+    },
     "_clips": [
       {
         "__uuid__": "3b303c68-8efd-4106-af6b-6ba3c649f637"
@@ -40731,7 +40603,6 @@
       "__id__": 1225
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -40876,7 +40747,6 @@
       "__id__": 1230
     },
     "_enabled": true,
-    "_scoreManager": null,
     "health": 20,
     "_id": ""
   },
@@ -43047,7 +42917,6 @@
       "__id__": 1295
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -43057,7 +42926,7 @@
     "node": {
       "__id__": 1295
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -43192,7 +43061,6 @@
       "__id__": 1300
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -43202,7 +43070,7 @@
     "node": {
       "__id__": 1300
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -43337,7 +43205,6 @@
       "__id__": 1305
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -43347,7 +43214,7 @@
     "node": {
       "__id__": 1305
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -43482,7 +43349,6 @@
       "__id__": 1310
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -43492,7 +43358,7 @@
     "node": {
       "__id__": 1310
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -43627,7 +43493,6 @@
       "__id__": 1315
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -43637,7 +43502,7 @@
     "node": {
       "__id__": 1315
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -43772,7 +43637,6 @@
       "__id__": 1320
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -43782,7 +43646,7 @@
     "node": {
       "__id__": 1320
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -43917,7 +43781,6 @@
       "__id__": 1325
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -43927,7 +43790,7 @@
     "node": {
       "__id__": 1325
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -44062,7 +43925,6 @@
       "__id__": 1330
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -44072,7 +43934,7 @@
     "node": {
       "__id__": 1330
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -44207,7 +44069,6 @@
       "__id__": 1335
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -44217,7 +44078,7 @@
     "node": {
       "__id__": 1335
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -44352,7 +44213,6 @@
       "__id__": 1340
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -44362,7 +44222,7 @@
     "node": {
       "__id__": 1340
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -44497,7 +44357,6 @@
       "__id__": 1345
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -44507,7 +44366,7 @@
     "node": {
       "__id__": 1345
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -44642,7 +44501,6 @@
       "__id__": 1350
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -44652,7 +44510,7 @@
     "node": {
       "__id__": 1350
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -44787,7 +44645,6 @@
       "__id__": 1355
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -44797,7 +44654,7 @@
     "node": {
       "__id__": 1355
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -44932,7 +44789,6 @@
       "__id__": 1360
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -44942,7 +44798,7 @@
     "node": {
       "__id__": 1360
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -45077,7 +44933,6 @@
       "__id__": 1365
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -45087,7 +44942,7 @@
     "node": {
       "__id__": 1365
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -45222,7 +45077,6 @@
       "__id__": 1370
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -45232,7 +45086,7 @@
     "node": {
       "__id__": 1370
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -45367,7 +45221,6 @@
       "__id__": 1375
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -45377,7 +45230,7 @@
     "node": {
       "__id__": 1375
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -45512,7 +45365,6 @@
       "__id__": 1380
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -45522,7 +45374,7 @@
     "node": {
       "__id__": 1380
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -45657,7 +45509,6 @@
       "__id__": 1385
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -45667,7 +45518,7 @@
     "node": {
       "__id__": 1385
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -45802,7 +45653,6 @@
       "__id__": 1390
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -45812,7 +45662,7 @@
     "node": {
       "__id__": 1390
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -45947,7 +45797,6 @@
       "__id__": 1395
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -45957,7 +45806,7 @@
     "node": {
       "__id__": 1395
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -46092,7 +45941,6 @@
       "__id__": 1400
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -46102,7 +45950,7 @@
     "node": {
       "__id__": 1400
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -46237,7 +46085,6 @@
       "__id__": 1405
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -46247,7 +46094,7 @@
     "node": {
       "__id__": 1405
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -46382,7 +46229,6 @@
       "__id__": 1410
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -46392,7 +46238,7 @@
     "node": {
       "__id__": 1410
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -46527,7 +46373,6 @@
       "__id__": 1415
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -46537,7 +46382,7 @@
     "node": {
       "__id__": 1415
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -46672,7 +46517,6 @@
       "__id__": 1420
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -46682,7 +46526,7 @@
     "node": {
       "__id__": 1420
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -46817,7 +46661,6 @@
       "__id__": 1425
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -46827,7 +46670,7 @@
     "node": {
       "__id__": 1425
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -46962,7 +46805,6 @@
       "__id__": 1430
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -46972,7 +46814,7 @@
     "node": {
       "__id__": 1430
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -47107,7 +46949,6 @@
       "__id__": 1435
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -47117,7 +46958,7 @@
     "node": {
       "__id__": 1435
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -47252,7 +47093,6 @@
       "__id__": 1440
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -47262,7 +47102,7 @@
     "node": {
       "__id__": 1440
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -47397,7 +47237,6 @@
       "__id__": 1445
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -47407,7 +47246,7 @@
     "node": {
       "__id__": 1445
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -47542,7 +47381,6 @@
       "__id__": 1450
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -47552,7 +47390,7 @@
     "node": {
       "__id__": 1450
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -47687,7 +47525,6 @@
       "__id__": 1455
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -47697,7 +47534,7 @@
     "node": {
       "__id__": 1455
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -47832,7 +47669,6 @@
       "__id__": 1460
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -47842,7 +47678,7 @@
     "node": {
       "__id__": 1460
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -47977,7 +47813,6 @@
       "__id__": 1465
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -47987,7 +47822,7 @@
     "node": {
       "__id__": 1465
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -48122,7 +47957,6 @@
       "__id__": 1470
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -48132,7 +47966,7 @@
     "node": {
       "__id__": 1470
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -48267,7 +48101,6 @@
       "__id__": 1475
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -48277,7 +48110,7 @@
     "node": {
       "__id__": 1475
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -48412,7 +48245,6 @@
       "__id__": 1480
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -48422,7 +48254,7 @@
     "node": {
       "__id__": 1480
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -48557,7 +48389,6 @@
       "__id__": 1485
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -48567,7 +48398,7 @@
     "node": {
       "__id__": 1485
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -48702,7 +48533,6 @@
       "__id__": 1490
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -48712,7 +48542,7 @@
     "node": {
       "__id__": 1490
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -48847,7 +48677,6 @@
       "__id__": 1495
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -48857,7 +48686,7 @@
     "node": {
       "__id__": 1495
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -48998,7 +48827,7 @@
         "__id__": 1702
       }
     ],
-    "_active": true,
+    "_active": false,
     "_level": 3,
     "_components": [],
     "_prefab": {
@@ -50435,7 +50264,9 @@
       "__id__": 1522
     },
     "_enabled": true,
-    "_defaultClip": null,
+    "_defaultClip": {
+      "__uuid__": "3b303c68-8efd-4106-af6b-6ba3c649f637"
+    },
     "_clips": [
       {
         "__uuid__": "3b303c68-8efd-4106-af6b-6ba3c649f637"
@@ -50569,7 +50400,6 @@
       "__id__": 1542
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -50714,7 +50544,6 @@
       "__id__": 1547
     },
     "_enabled": true,
-    "_scoreManager": null,
     "health": 20,
     "_id": ""
   },
@@ -51535,7 +51364,6 @@
       "__id__": 1572
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -51545,7 +51373,7 @@
     "node": {
       "__id__": 1572
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -51680,7 +51508,6 @@
       "__id__": 1577
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -51690,7 +51517,7 @@
     "node": {
       "__id__": 1577
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -51825,7 +51652,6 @@
       "__id__": 1582
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -51835,7 +51661,7 @@
     "node": {
       "__id__": 1582
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -51970,7 +51796,6 @@
       "__id__": 1587
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -51980,7 +51805,7 @@
     "node": {
       "__id__": 1587
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -52115,7 +51940,6 @@
       "__id__": 1592
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -52125,7 +51949,7 @@
     "node": {
       "__id__": 1592
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -52260,7 +52084,6 @@
       "__id__": 1597
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -52270,7 +52093,7 @@
     "node": {
       "__id__": 1597
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -52405,7 +52228,6 @@
       "__id__": 1602
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -52415,7 +52237,7 @@
     "node": {
       "__id__": 1602
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -52550,7 +52372,6 @@
       "__id__": 1607
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -52560,7 +52381,7 @@
     "node": {
       "__id__": 1607
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -52695,7 +52516,6 @@
       "__id__": 1612
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -52705,7 +52525,7 @@
     "node": {
       "__id__": 1612
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -52840,7 +52660,6 @@
       "__id__": 1617
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -52850,7 +52669,7 @@
     "node": {
       "__id__": 1617
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -52985,7 +52804,6 @@
       "__id__": 1622
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -52995,7 +52813,7 @@
     "node": {
       "__id__": 1622
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -53130,7 +52948,6 @@
       "__id__": 1627
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -53140,7 +52957,7 @@
     "node": {
       "__id__": 1627
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -53275,7 +53092,6 @@
       "__id__": 1632
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -53285,7 +53101,7 @@
     "node": {
       "__id__": 1632
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -53420,7 +53236,6 @@
       "__id__": 1637
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -53430,7 +53245,7 @@
     "node": {
       "__id__": 1637
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -53565,7 +53380,6 @@
       "__id__": 1642
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -53575,7 +53389,7 @@
     "node": {
       "__id__": 1642
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -53710,7 +53524,6 @@
       "__id__": 1647
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -53720,7 +53533,7 @@
     "node": {
       "__id__": 1647
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -53855,7 +53668,6 @@
       "__id__": 1652
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -53865,7 +53677,7 @@
     "node": {
       "__id__": 1652
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -54000,7 +53812,6 @@
       "__id__": 1657
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -54010,7 +53821,7 @@
     "node": {
       "__id__": 1657
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -54145,7 +53956,6 @@
       "__id__": 1662
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -54155,7 +53965,7 @@
     "node": {
       "__id__": 1662
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -54290,7 +54100,6 @@
       "__id__": 1667
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -54300,7 +54109,7 @@
     "node": {
       "__id__": 1667
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -54435,7 +54244,6 @@
       "__id__": 1672
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -54445,7 +54253,7 @@
     "node": {
       "__id__": 1672
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -54580,7 +54388,6 @@
       "__id__": 1677
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -54590,7 +54397,7 @@
     "node": {
       "__id__": 1677
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -54725,7 +54532,6 @@
       "__id__": 1682
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -54735,7 +54541,7 @@
     "node": {
       "__id__": 1682
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -54870,7 +54676,6 @@
       "__id__": 1687
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -54880,7 +54685,7 @@
     "node": {
       "__id__": 1687
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -55015,7 +54820,6 @@
       "__id__": 1692
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -55025,7 +54829,7 @@
     "node": {
       "__id__": 1692
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -55160,7 +54964,6 @@
       "__id__": 1697
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -55170,7 +54973,7 @@
     "node": {
       "__id__": 1697
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -55885,7 +55688,7 @@
         "__id__": 1927
       }
     ],
-    "_active": true,
+    "_active": false,
     "_level": 3,
     "_components": [],
     "_prefab": {
@@ -57322,7 +57125,9 @@
       "__id__": 1742
     },
     "_enabled": true,
-    "_defaultClip": null,
+    "_defaultClip": {
+      "__uuid__": "3b303c68-8efd-4106-af6b-6ba3c649f637"
+    },
     "_clips": [
       {
         "__uuid__": "3b303c68-8efd-4106-af6b-6ba3c649f637"
@@ -58056,7 +57861,9 @@
       "__id__": 1762
     },
     "_enabled": true,
-    "_defaultClip": null,
+    "_defaultClip": {
+      "__uuid__": "3b303c68-8efd-4106-af6b-6ba3c649f637"
+    },
     "_clips": [
       {
         "__uuid__": "3b303c68-8efd-4106-af6b-6ba3c649f637"
@@ -58190,7 +57997,6 @@
       "__id__": 1782
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -58335,7 +58141,6 @@
       "__id__": 1787
     },
     "_enabled": true,
-    "_scoreManager": null,
     "health": 20,
     "_id": ""
   },
@@ -59156,7 +58961,6 @@
       "__id__": 1812
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -59166,7 +58970,7 @@
     "node": {
       "__id__": 1812
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -59301,7 +59105,6 @@
       "__id__": 1817
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -59311,7 +59114,7 @@
     "node": {
       "__id__": 1817
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -59446,7 +59249,6 @@
       "__id__": 1822
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -59456,7 +59258,7 @@
     "node": {
       "__id__": 1822
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -59591,7 +59393,6 @@
       "__id__": 1827
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -59601,7 +59402,7 @@
     "node": {
       "__id__": 1827
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -59736,7 +59537,6 @@
       "__id__": 1832
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -59746,7 +59546,7 @@
     "node": {
       "__id__": 1832
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -59881,7 +59681,6 @@
       "__id__": 1837
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -59891,7 +59690,7 @@
     "node": {
       "__id__": 1837
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -60026,7 +59825,6 @@
       "__id__": 1842
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -60036,7 +59834,7 @@
     "node": {
       "__id__": 1842
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -60171,7 +59969,6 @@
       "__id__": 1847
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -60181,7 +59978,7 @@
     "node": {
       "__id__": 1847
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -60316,7 +60113,6 @@
       "__id__": 1852
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -60326,7 +60122,7 @@
     "node": {
       "__id__": 1852
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -60461,7 +60257,6 @@
       "__id__": 1857
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -60471,7 +60266,7 @@
     "node": {
       "__id__": 1857
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -60606,7 +60401,6 @@
       "__id__": 1862
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -60616,7 +60410,7 @@
     "node": {
       "__id__": 1862
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -60751,7 +60545,6 @@
       "__id__": 1867
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -60761,7 +60554,7 @@
     "node": {
       "__id__": 1867
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -60896,7 +60689,6 @@
       "__id__": 1872
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -60906,7 +60698,7 @@
     "node": {
       "__id__": 1872
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -61041,7 +60833,6 @@
       "__id__": 1877
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -61051,7 +60842,7 @@
     "node": {
       "__id__": 1877
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -61186,7 +60977,6 @@
       "__id__": 1882
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -61196,7 +60986,7 @@
     "node": {
       "__id__": 1882
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -61331,7 +61121,6 @@
       "__id__": 1887
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -61341,7 +61130,7 @@
     "node": {
       "__id__": 1887
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -61476,7 +61265,6 @@
       "__id__": 1892
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -61486,7 +61274,7 @@
     "node": {
       "__id__": 1892
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -61621,7 +61409,6 @@
       "__id__": 1897
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -61631,7 +61418,7 @@
     "node": {
       "__id__": 1897
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -61766,7 +61553,6 @@
       "__id__": 1902
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -61776,7 +61562,7 @@
     "node": {
       "__id__": 1902
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -61911,7 +61697,6 @@
       "__id__": 1907
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -61921,7 +61706,7 @@
     "node": {
       "__id__": 1907
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -62056,7 +61841,6 @@
       "__id__": 1912
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -62066,7 +61850,7 @@
     "node": {
       "__id__": 1912
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -62201,7 +61985,6 @@
       "__id__": 1917
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -62211,7 +61994,7 @@
     "node": {
       "__id__": 1917
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -62346,7 +62129,6 @@
       "__id__": 1922
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -62356,7 +62138,7 @@
     "node": {
       "__id__": 1922
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -62491,7 +62273,6 @@
       "__id__": 1927
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -62501,7 +62282,7 @@
     "node": {
       "__id__": 1927
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -62569,7 +62350,7 @@
         "__id__": 2713
       }
     ],
-    "_active": false,
+    "_active": true,
     "_level": 2,
     "_components": [],
     "_prefab": {
@@ -62713,7 +62494,7 @@
         "__id__": 2177
       }
     ],
-    "_active": true,
+    "_active": false,
     "_level": 3,
     "_components": [],
     "_prefab": {
@@ -64635,7 +64416,9 @@
       "__id__": 1972
     },
     "_enabled": true,
-    "_defaultClip": null,
+    "_defaultClip": {
+      "__uuid__": "3b303c68-8efd-4106-af6b-6ba3c649f637"
+    },
     "_clips": [
       {
         "__uuid__": "3b303c68-8efd-4106-af6b-6ba3c649f637"
@@ -65369,7 +65152,9 @@
       "__id__": 1992
     },
     "_enabled": true,
-    "_defaultClip": null,
+    "_defaultClip": {
+      "__uuid__": "3b303c68-8efd-4106-af6b-6ba3c649f637"
+    },
     "_clips": [
       {
         "__uuid__": "3b303c68-8efd-4106-af6b-6ba3c649f637"
@@ -66103,7 +65888,9 @@
       "__id__": 2012
     },
     "_enabled": true,
-    "_defaultClip": null,
+    "_defaultClip": {
+      "__uuid__": "3b303c68-8efd-4106-af6b-6ba3c649f637"
+    },
     "_clips": [
       {
         "__uuid__": "3b303c68-8efd-4106-af6b-6ba3c649f637"
@@ -66237,7 +66024,6 @@
       "__id__": 2032
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -66382,7 +66168,6 @@
       "__id__": 2037
     },
     "_enabled": true,
-    "_scoreManager": null,
     "health": 20,
     "_id": ""
   },
@@ -67878,7 +67663,6 @@
       "__id__": 2082
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -67888,7 +67672,7 @@
     "node": {
       "__id__": 2082
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -68023,7 +67807,6 @@
       "__id__": 2087
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -68033,7 +67816,7 @@
     "node": {
       "__id__": 2087
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -68168,7 +67951,6 @@
       "__id__": 2092
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -68178,7 +67960,7 @@
     "node": {
       "__id__": 2092
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -68313,7 +68095,6 @@
       "__id__": 2097
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -68323,7 +68104,7 @@
     "node": {
       "__id__": 2097
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -68458,7 +68239,6 @@
       "__id__": 2102
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -68468,7 +68248,7 @@
     "node": {
       "__id__": 2102
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -68603,7 +68383,6 @@
       "__id__": 2107
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -68613,7 +68392,7 @@
     "node": {
       "__id__": 2107
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -68748,7 +68527,6 @@
       "__id__": 2112
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -68758,7 +68536,7 @@
     "node": {
       "__id__": 2112
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -68893,7 +68671,6 @@
       "__id__": 2117
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -68903,7 +68680,7 @@
     "node": {
       "__id__": 2117
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -69038,7 +68815,6 @@
       "__id__": 2122
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -69048,7 +68824,7 @@
     "node": {
       "__id__": 2122
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -69183,7 +68959,6 @@
       "__id__": 2127
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -69193,7 +68968,7 @@
     "node": {
       "__id__": 2127
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -69328,7 +69103,6 @@
       "__id__": 2132
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -69338,7 +69112,7 @@
     "node": {
       "__id__": 2132
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -69473,7 +69247,6 @@
       "__id__": 2137
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -69483,7 +69256,7 @@
     "node": {
       "__id__": 2137
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -69618,7 +69391,6 @@
       "__id__": 2142
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -69628,7 +69400,7 @@
     "node": {
       "__id__": 2142
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -69763,7 +69535,6 @@
       "__id__": 2147
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -69773,7 +69544,7 @@
     "node": {
       "__id__": 2147
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -69908,7 +69679,6 @@
       "__id__": 2152
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -69918,7 +69688,7 @@
     "node": {
       "__id__": 2152
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -70053,7 +69823,6 @@
       "__id__": 2157
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -70063,7 +69832,7 @@
     "node": {
       "__id__": 2157
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -70198,7 +69967,6 @@
       "__id__": 2162
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -70208,7 +69976,7 @@
     "node": {
       "__id__": 2162
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -70343,7 +70111,6 @@
       "__id__": 2167
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -70353,7 +70120,7 @@
     "node": {
       "__id__": 2167
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -70488,7 +70255,6 @@
       "__id__": 2172
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -70498,7 +70264,7 @@
     "node": {
       "__id__": 2172
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -70633,7 +70399,6 @@
       "__id__": 2177
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -70643,7 +70408,7 @@
     "node": {
       "__id__": 2177
     },
-    "_enabled": false,
+    "_enabled": true,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -70832,7 +70597,7 @@
         "__id__": 2479
       }
     ],
-    "_active": true,
+    "_active": false,
     "_level": 3,
     "_components": [],
     "_prefab": {
@@ -71728,7 +71493,6 @@
       "__id__": 2204
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -71873,7 +71637,6 @@
       "__id__": 2209
     },
     "_enabled": true,
-    "_scoreManager": null,
     "health": 20,
     "_id": ""
   },
@@ -74044,7 +73807,6 @@
       "__id__": 2274
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -74189,7 +73951,6 @@
       "__id__": 2279
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -74334,7 +74095,6 @@
       "__id__": 2284
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -74479,7 +74239,6 @@
       "__id__": 2289
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -74624,7 +74383,6 @@
       "__id__": 2294
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -74769,7 +74527,6 @@
       "__id__": 2299
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -74914,7 +74671,6 @@
       "__id__": 2304
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -75059,7 +74815,6 @@
       "__id__": 2309
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -75204,7 +74959,6 @@
       "__id__": 2314
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -75349,7 +75103,6 @@
       "__id__": 2319
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -75494,7 +75247,6 @@
       "__id__": 2324
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -75639,7 +75391,6 @@
       "__id__": 2329
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -75784,7 +75535,6 @@
       "__id__": 2334
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -75929,7 +75679,6 @@
       "__id__": 2339
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -76074,7 +75823,6 @@
       "__id__": 2344
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -76219,7 +75967,6 @@
       "__id__": 2349
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -76364,7 +76111,6 @@
       "__id__": 2354
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -76509,7 +76255,6 @@
       "__id__": 2359
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -76654,7 +76399,6 @@
       "__id__": 2364
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -76799,7 +76543,6 @@
       "__id__": 2369
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -76944,7 +76687,6 @@
       "__id__": 2374
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -77089,7 +76831,6 @@
       "__id__": 2379
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -77234,7 +76975,6 @@
       "__id__": 2384
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -77379,7 +77119,6 @@
       "__id__": 2389
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -77524,7 +77263,6 @@
       "__id__": 2394
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -77669,7 +77407,6 @@
       "__id__": 2399
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -77814,7 +77551,6 @@
       "__id__": 2404
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -77959,7 +77695,6 @@
       "__id__": 2409
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -78104,7 +77839,6 @@
       "__id__": 2414
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -78249,7 +77983,6 @@
       "__id__": 2419
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -78394,7 +78127,6 @@
       "__id__": 2424
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -78539,7 +78271,6 @@
       "__id__": 2429
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -78684,7 +78415,6 @@
       "__id__": 2434
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -78829,7 +78559,6 @@
       "__id__": 2439
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -78974,7 +78703,6 @@
       "__id__": 2444
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -79119,7 +78847,6 @@
       "__id__": 2449
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -79264,7 +78991,6 @@
       "__id__": 2454
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -79409,7 +79135,6 @@
       "__id__": 2459
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -79554,7 +79279,6 @@
       "__id__": 2464
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -79699,7 +79423,6 @@
       "__id__": 2469
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -79844,7 +79567,6 @@
       "__id__": 2474
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -80572,7 +80294,7 @@
         "__id__": 2707
       }
     ],
-    "_active": true,
+    "_active": false,
     "_level": 3,
     "_components": [],
     "_prefab": {
@@ -82782,7 +82504,6 @@
       "__id__": 2557
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -83602,7 +83323,6 @@
       "__id__": 2582
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -83747,7 +83467,6 @@
       "__id__": 2587
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -83892,7 +83611,6 @@
       "__id__": 2592
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -84037,7 +83755,6 @@
       "__id__": 2597
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -84182,7 +83899,6 @@
       "__id__": 2602
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -84327,7 +84043,6 @@
       "__id__": 2607
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -84472,7 +84187,6 @@
       "__id__": 2612
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -84617,7 +84331,6 @@
       "__id__": 2617
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -84762,7 +84475,6 @@
       "__id__": 2622
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -84907,7 +84619,6 @@
       "__id__": 2627
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -85052,7 +84763,6 @@
       "__id__": 2632
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -85197,7 +84907,6 @@
       "__id__": 2637
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -85342,7 +85051,6 @@
       "__id__": 2642
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -85487,7 +85195,6 @@
       "__id__": 2647
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -85632,7 +85339,6 @@
       "__id__": 2652
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -85777,7 +85483,6 @@
       "__id__": 2657
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -85922,7 +85627,6 @@
       "__id__": 2662
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -86067,7 +85771,6 @@
       "__id__": 2667
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -86212,7 +85915,6 @@
       "__id__": 2672
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -86357,7 +86059,6 @@
       "__id__": 2677
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -86502,7 +86203,6 @@
       "__id__": 2682
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -86647,7 +86347,6 @@
       "__id__": 2687
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -86792,7 +86491,6 @@
       "__id__": 2692
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -86937,7 +86635,6 @@
       "__id__": 2697
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -87082,7 +86779,6 @@
       "__id__": 2702
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -87227,7 +86923,6 @@
       "__id__": 2707
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -87357,7 +87052,7 @@
         "__id__": 2892
       }
     ],
-    "_active": true,
+    "_active": false,
     "_level": 3,
     "_components": [],
     "_prefab": {
@@ -89504,7 +89199,6 @@
       "__id__": 2772
     },
     "_enabled": true,
-    "_scoreManager": null,
     "health": 20,
     "_id": ""
   },
@@ -90325,7 +90019,6 @@
       "__id__": 2797
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -90470,7 +90163,6 @@
       "__id__": 2802
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -90615,7 +90307,6 @@
       "__id__": 2807
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -90760,7 +90451,6 @@
       "__id__": 2812
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -90905,7 +90595,6 @@
       "__id__": 2817
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -91050,7 +90739,6 @@
       "__id__": 2822
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -91195,7 +90883,6 @@
       "__id__": 2827
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -91340,7 +91027,6 @@
       "__id__": 2832
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -91485,7 +91171,6 @@
       "__id__": 2837
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -91630,7 +91315,6 @@
       "__id__": 2842
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -91775,7 +91459,6 @@
       "__id__": 2847
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -91920,7 +91603,6 @@
       "__id__": 2852
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -92065,7 +91747,6 @@
       "__id__": 2857
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -92210,7 +91891,6 @@
       "__id__": 2862
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -92355,7 +92035,6 @@
       "__id__": 2867
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -92500,7 +92179,6 @@
       "__id__": 2872
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -92645,7 +92323,6 @@
       "__id__": 2877
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -92790,7 +92467,6 @@
       "__id__": 2882
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -92935,7 +92611,6 @@
       "__id__": 2887
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {
@@ -93080,7 +92755,6 @@
       "__id__": 2892
     },
     "_enabled": true,
-    "_scoreManager": null,
     "_id": ""
   },
   {

@@ -27,12 +27,12 @@ export default class Collectibles extends cc.Component
     //     serializable: true
     // })
     // _player: cc.Node = null;
-    @property({
-        type: ScoreManager,
-        visible: true,
-        serializable: true
-    })
-    _scoreManager: ScoreManager = null;
+    // @property({
+    //     type: ScoreManager,
+    //     visible: true,
+    //     serializable: true
+    // })
+    // _scoreManager: ScoreManager = null;
 
     myPos: any;
 }

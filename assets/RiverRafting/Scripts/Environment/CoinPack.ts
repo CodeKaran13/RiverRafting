@@ -15,6 +15,7 @@ export default class CoinPack extends Collectibles
     }
     onEnable() 
     {
+        // this.node.getComponent(cc.BoxCollider).enabled = true;
         this.myPos = this.node.convertToWorldSpaceAR(cc.Vec2.ZERO).y;
     }
     onDisable()

@@ -25,7 +25,7 @@ export default class Logs extends Obstacles {
     update(dt) {
         if (this.node.active) {
             if (Player.Instance.node.position.y - 500 > this.myPos) {
-                console.log('LOGS, player is above me');
+                // console.log('LOGS, player is above me');
                 // this._obstaclePool.addObstacleBackToPool(this.node);
                 ObstaclePool.Instance.addObstacleBackToPool(this.node);
             }
