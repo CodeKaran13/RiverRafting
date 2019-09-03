@@ -3,42 +3,42 @@ import Collectibles, { CollectibleType } from "../GamePlay/Collectibles";
 const { ccclass, property } = cc._decorator;
 
 @ccclass
-export default class CollectiblesPool extends cc.Component
-{
-    @property({
-        type: cc.Node,
-        visible: true,
-        serializable: true
-    })
-    HealthPacks: cc.Node[] = [];
-    @property({
-        type: cc.Node,
-        visible: true,
-        serializable: true
-    })
-    CoinsPack: cc.Node[] = [];
-    @property({
-        type: cc.Node,
-        visible: true,
-        serializable: true
-    })
-    DrowningHumansPack: cc.Node[] = [];
+export default class CollectiblesPool extends cc.Component {
+    // @property({
+    //     type: cc.Node,
+    //     visible: true,
+    //     serializable: true
+    // })
+    // HealthPacks: cc.Node[] = [];
+    // @property({
+    //     type: cc.Node,
+    //     visible: true,
+    //     serializable: true
+    // })
+    // CoinsPack: cc.Node[] = [];
+    // @property({
+    //     type: cc.Node,
+    //     visible: true,
+    //     serializable: true
+    // })
+    // DrowningHumansPack: cc.Node[] = [];
 
-    start()
-    {
+    public static Instance: CollectiblesPool = null;
 
+    start() {
+        if (CollectiblesPool.Instance == null) {
+            CollectiblesPool.Instance = this;
+        }
     }
 
-    addCollectibleBackToPool(pack: cc.Node)
-    {
+    addCollectibleBackToPool(pack: cc.Node) {
         var type = pack.getComponent(Collectibles).myType;
-        switch (type)
-        {
+        switch (type) {
             case CollectibleType.Health:
                 // console.log('healthpack added successfully');
-                pack.parent.removeChild(pack);
+                // pack.parent.removeChild(pack);
                 pack.active = false;
-                this.HealthPacks.push(pack);
+                // this.HealthPacks.push(pack);
                 break;
             case CollectibleType.Coins:
                 // console.log('coinpack added successfully');
@@ -49,26 +49,23 @@ export default class CollectiblesPool extends cc.Component
             case CollectibleType.DrowningHuman:
                 // console.log('drowninghuman added successfully');
                 // pack.parent.removeChild(pack);
-                // pack.active = false;
-                // this.DrowningHumansPack.push(pack);
                 pack.active = false;
+                // this.DrowningHumansPack.push(pack);
                 break;
         }
     }
 
-    getCollectibleFromPool(packName: CollectibleType): cc.Node 
-    {
-        switch (packName)
-        {
+    getCollectibleFromPool(packName: CollectibleType) {
+        switch (packName) {
             case CollectibleType.Health:
-                var healthpack = this.HealthPacks.pop();
-                return healthpack;
+                // var healthpack = this.HealthPacks.pop();
+                // return healthpack;
             case CollectibleType.Coins:
-                var coinpack = this.CoinsPack.pop();
-                return coinpack;
+                // var coinpack = this.CoinsPack.pop();
+                // return coinpack;
             case CollectibleType.DrowningHuman:
-                var drowningPack = this.DrowningHumansPack.pop();
-                return drowningPack;
+                // var drowningPack = this.DrowningHumansPack.pop();
+                // return drowningPack;
         }
     }
 }

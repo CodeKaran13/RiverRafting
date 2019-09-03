@@ -1,12 +1,12 @@
 import GameManager, { GameState } from "./Managers/GameManager";
 import { Difficulty } from "./Enums";
 import HealthManager from "./Managers/HealthManager";
+import CollisionDetection from "./Environment/CollisionDetection";
 
 const { ccclass, property } = cc._decorator;
 
 @ccclass
-export default class Player extends cc.Component
-{
+export default class Player extends cc.Component {
     @property
     movementSpeed: number = 0;
     @property
@@ -14,7 +14,7 @@ export default class Player extends cc.Component
 
     MAXTURNSPEED: number = 3;
     MINMOVEMENTSPEED: number = 1;
-    MAXMOVEMENTSPEED: number = 2;
+    MAXMOVEMENTSPEED: number = 3;
 
     turnSequence: cc.Action = null;
     brakeSequence;
@@ -23,15 +23,25 @@ export default class Player extends cc.Component
 
     HasAccelerationStarted: boolean = false;
 
-    update(dt)
-    {
-        // console.log('' + Math.floor(1/dt));
-        
+    // Windy Environment
+    IsWindy: boolean = false;
+    windDir: number = 1;
+    windSpeed: number = 125;
 
-        if (GameManager.currentGameState == GameState.InGame)
-        {
-            if (!this.HasAccelerationStarted)
-            {
+    public static Instance: Player = null;
+
+    start() {
+        if (Player.Instance == null) {
+            Player.Instance = this;
+        }
+    }
+
+    update(dt) {
+        // console.log('' + Math.floor(1/dt));
+        // console.log(this.IsCollidingBound());
+
+        if (GameManager.currentGameState == GameState.InGame) {
+            if (!this.HasAccelerationStarted) {
                 this.HasAccelerationStarted = true
                 this.StartAccelerationSequence();
                 this.restartWrongDirectionSequence();
@@ -41,66 +51,64 @@ export default class Player extends cc.Component
         }
     }
 
-    startAcceleration(dt)
-    {
+    startAcceleration(dt) {
         // console.log('player pos: ' + this.node.position);
         // console.log('forward vector pos: ' + this.node.children[3].convertToWorldSpaceAR(cc.Vec2.ZERO));
 
-        if (!this.IsCycloned)
-        {
+        if (!this.IsCycloned && !this.IsWindy) {
             var direction = this.node.children[2].convertToWorldSpaceAR(cc.Vec2.ZERO).sub(this.node.position);
             this.node.position = this.node.position.add(direction.normalizeSelf().mulSelf(this.movementSpeed));
 
             // check for wrong direction
-            if (this.IsWrongDirection)
-            {
+            if (this.IsWrongDirection) {
+                this.RotateToCenter();
+                this.IsWrongDirection = false;
+            }
+        }
+        else if (!this.IsCycloned && this.IsWindy) {
+            var direction = this.node.children[2].convertToWorldSpaceAR(new cc.Vec2(this.windDir * this.windSpeed, 0)).sub(this.node.position);
+            this.node.position = this.node.position.add(direction.normalizeSelf().mulSelf(this.movementSpeed));
+
+            if (this.IsWrongDirection) {
                 this.RotateToCenter();
                 this.IsWrongDirection = false;
             }
         }
     }
 
-    StartAccelerationSequence()
-    {
+    StartAccelerationSequence() {
         this.startAccelerating();
     }
 
-    ApplyBrakeSequence()
-    {
+    ApplyBrakeSequence() {
         this.startApplyingBrakes();
     }
 
-    // CheckBound()
-    // {
-    //     var results = cc.director.getPhysicsManager().rayCast(this.node.position, this.node.children[2].convertToWorldSpaceAR(cc.Vec2.ZERO), cc.RayCastType.Closest);
-    //     if (results.length > 1)
-    //     {
-    //         for (let i = 0; i < results.length; i++)
-    //         {
-    //             if (results[i].collider.node.group == 'Bound')
-    //             {
-    //                 // var distance = results[i].point.sub(this.node.position);
-    //                 var distance = results[i].point.y - this.node.position.y;
-    //                 // console.log('dist: ' + distance + ' ' + results[i].collider.name);
-    //                 if (distance < 100)
-    //                 {
-    //                     return true;
-    //                 }
-    //             }
-    //             else
-    //             {
-    //                 return false;
-    //             }
-    //         }
-    //     }
-    //     else
-    //     {
-    //         return false;
-    //     }
-    // }
+    IsCollidingBound() {
+        var results = cc.director.getPhysicsManager().rayCast(this.node.position, this.node.children[2].convertToWorldSpaceAR(cc.Vec2.ZERO), cc.RayCastType.All);
+        // var results = cc.director.getPhysicsManager().rayCast(this.node.position, this.node.position.add(new cc.Vec2(0, 300)), cc.RayCastType.Closest);
+        if (results.length > 1) {
+            for (let i = 0; i < results.length; i++) {
+                // console.log(results[i].collider.node.name);
+                if (results[i].collider.node.group == 'Bound') {
+                    // var distance = results[i].point.sub(this.node.position);
+                    // var distance = results[i].point.y - this.node.position.y;
+                    // console.log('dist: ' + distance + ' ' + results[i].collider.name);
+                    // if (distance < 100) {
+                    return true;
+                    // }
+                }
+                else {
+                    return false;
+                }
+            }
+        }
+        else {
+            return false;
+        }
+    }
 
-    RotateLeft()
-    {
+    RotateLeft() {
         var toLeft = cc.rotateTo(1, -80);
         var tilt = cc.rotate3DTo(0.5, 0, 0, -25);
         this.node.runAction(toLeft);
@@ -116,8 +124,7 @@ export default class Player extends cc.Component
         // this.CheckBound();
     }
 
-    RotateRight()
-    {
+    RotateRight() {
         var toRight = cc.rotateTo(1, 80);
         var tilt = cc.rotate3DTo(0.5, 0, 0, 25);
         this.node.runAction(toRight);
@@ -134,8 +141,7 @@ export default class Player extends cc.Component
         // this.CheckBound();
     }
 
-    RotateToCenter()
-    {
+    RotateToCenter() {
         var toCenter = cc.rotateTo(1.5, 0);
         var tilt = cc.rotate3DTo(0.5, 0, 0, 0);
         this.node.runAction(toCenter);
@@ -151,18 +157,15 @@ export default class Player extends cc.Component
         // this.CheckBound();
     }
 
-    StartAction(action: cc.Action)
-    {
+    StartAction(action: cc.Action) {
         this.node.runAction(action);
     }
 
-    StopAction(action: cc.Action)
-    {
+    StopAction(action: cc.Action) {
         this.node.stopAction(action);
     }
 
-    resetMovementSpeed()
-    {
+    resetMovementSpeed() {
         // console.log('reset movement speed');
         this.node.stopAction(this.brakeSequence);
         this.node.stopAction(this.brakeSequence);
@@ -170,21 +173,18 @@ export default class Player extends cc.Component
     }
 
     // When the player is turning, lower the movement speed/apply brakes.
-    startApplyingBrakes()
-    {
+    startApplyingBrakes() {
         // console.log('start applying brakes');
         var time = cc.delayTime(0.2);
         this.brakeSequence = cc.sequence(time, cc.callFunc(this.applyBrake, this));
         this.node.runAction(this.brakeSequence.repeatForever());
     }
 
-    applyBrake()
-    {
+    applyBrake() {
         // console.log('apply brakes');
         // console.log('movement speed: ' + this.movementSpeed);
         this.movementSpeed -= 1;
-        if (this.movementSpeed <= this.MINMOVEMENTSPEED)
-        {
+        if (this.movementSpeed <= this.MINMOVEMENTSPEED) {
             // console.log('min movement speed');
             this.movementSpeed = this.MINMOVEMENTSPEED;
             this.node.stopAction(this.brakeSequence);
@@ -192,20 +192,17 @@ export default class Player extends cc.Component
     }
 
     // Start acceleration after brakes are applied.
-    startAccelerating()
-    {
+    startAccelerating() {
         // console.log('start accelerating');
         var time = cc.delayTime(0.2);
         this.accelerateSequence = cc.sequence(time, cc.callFunc(this.accelerate, this));
         this.node.runAction(this.accelerateSequence.repeatForever());
     }
 
-    accelerate()
-    {
+    accelerate() {
         this.movementSpeed += 0.2;
         // console.log('movement speed: ' + this.movementSpeed);
-        if (this.movementSpeed >= this.MAXMOVEMENTSPEED)
-        {
+        if (this.movementSpeed >= this.MAXMOVEMENTSPEED) {
             this.movementSpeed = this.MAXMOVEMENTSPEED;
             this.node.stopAction(this.accelerateSequence);
         }
@@ -214,60 +211,42 @@ export default class Player extends cc.Component
     // Boat wrong direction
     wrongDirectionSequence: cc.ActionInterval;
     IsWrongDirection: boolean = false;
-    restartWrongDirectionSequence()
-    {
+    restartWrongDirectionSequence() {
         this.startWrongDirectionSequence();
     }
-    startWrongDirectionSequence()
-    {
+    startWrongDirectionSequence() {
         var time = cc.delayTime(1);
         this.wrongDirectionSequence = cc.sequence(time, cc.callFunc(this.CheckWrongDirection, this));
         this.node.runAction(this.wrongDirectionSequence.repeatForever());
     }
-    CheckWrongDirection()
-    {
+    CheckWrongDirection() {
         // check for wrong direction
-        if (!this.IsWrongDirection)
-        {
-            if (this.node.angle > 80 || this.node.angle < -80)
-            {
+        if (!this.IsWrongDirection) {
+            if (this.node.angle > 80 || this.node.angle < -80) {
                 // console.log('wrong direction..');
                 this.IsWrongDirection = true;
             }
         }
-        else
-        {
+        else {
             this.node.stopAction(this.wrongDirectionSequence);
         }
     }
 
-    lerp(start, end, amt)
-    {
+    lerp(start, end, amt) {
         return (1 - amt) * start + amt * end;
     }
-    lerpVec2(start: cc.Vec2, end: cc.Vec2, amt)
-    {
+    lerpVec2(start: cc.Vec2, end: cc.Vec2, amt) {
         var x = (1 - amt) * start.x + amt * end.x;
         var y = (1 - amt) * start.y + amt * end.y;
 
         return new cc.Vec2(x, y);
     }
-    lerpVec3(start: cc.Vec3, end: cc.Vec3, amt)
-    {
+    lerpVec3(start: cc.Vec3, end: cc.Vec3, amt) {
         var x = (1 - amt) * start.x + amt * end.x;
         var y = (1 - amt) * start.y + amt * end.y;
         var z = (1 - amt) * start.z + amt * end.z;
 
         return new cc.Vec3(x, y, z);
-    }
-
-    onBeginContact(contact, self, other)
-    {
-        if (other.node.group == 'Bound')
-        {
-            // console.log('' + other.node.name);
-            this.node.getComponent(HealthManager).takeDamage(5);
-        }
     }
 
     // Cyclone Effect
@@ -276,53 +255,55 @@ export default class Player extends cc.Component
     cycloneSequence: cc.ActionInterval;
     currentRot: number = 0;
     reachedCenter: boolean = false;
-    startCyclone(pos)
-    {
-        var time = cc.delayTime(0.03);
-        this.dragSequence = cc.sequence(time, cc.callFunc(this.dragRaftToCyclone, this, pos));
-        this.node.runAction(this.dragSequence.repeatForever());
-        // this.startCycloneEffect();
+    startCyclone(pos) {
+        if (!this.IsCycloned) {
+            var time = cc.delayTime(0.03);
+            this.dragSequence = cc.sequence(time, cc.callFunc(this.dragRaftToCyclone, this, pos));
+            this.node.runAction(this.dragSequence.repeatForever());
+            this.node.getComponent(CollisionDetection)._bonusSystem.stopAction();
+            // this.startCycloneEffect();
+        }
     }
-    dragRaftToCyclone(target, pos: cc.Vec2)
-    {
+    dragRaftToCyclone(target, pos: cc.Vec2) {
         var dir = pos.sub(this.node.position);
         var endPos = this.node.position.add(dir.normalizeSelf().mulSelf(4));
 
         this.node.position = this.lerpVec2(this.node.position, endPos, 0.5);
         // console.log('dragging..');
-        if (this.reachedCenter)
-        {
+        if (this.reachedCenter) {
             this.node.stopAction(this.dragSequence);
             // console.log('reached center');
             // this.startCycloneEffect();
         }
     }
-    startCycloneEffect(node)
-    {
-        var time = cc.delayTime(0.01);
-        this.cycloneSequence = cc.sequence(time, cc.callFunc(this.cycloneEffect, this, node));
-        this.node.runAction(this.cycloneSequence.repeatForever());
+    startCycloneEffect(node) {
+        if (!this.IsCycloned) {
+            this.IsCycloned = true;
+            var time = cc.delayTime(0.01);
+            this.cycloneSequence = cc.sequence(time, cc.callFunc(this.cycloneEffect, this, node));
+            this.node.runAction(this.cycloneSequence.repeatForever());
+        }
     }
-    cycloneEffect(target, node)
-    {
-        if (this.currentRot < 3)
-        {
+    cycloneEffect(target, node) {
+        if (this.currentRot < 3) {
             var endRot = this.node.angle + 10;
             this.node.angle = this.lerp(this.node.angle, endRot, 0.5);
-            if (this.node.angle > 355)
-            {
+            if (this.node.angle > 355) {
                 this.node.angle = 0;
                 this.currentRot++;
                 // console.log('angle above 355, ' + this.currentRot);
             }
         }
-        else
-        {
+        else {
             this.node.stopAction(this.cycloneSequence);
+            this.node.stopAction(this.dragSequence);
             node.active = false;
             this.reachedCenter = false;
             this.IsCycloned = false;
             this.currentRot = 0;
         }
     }
+
+
+
 }

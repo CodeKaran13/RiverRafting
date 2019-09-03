@@ -1,46 +1,42 @@
 import Collectibles, { CollectibleType } from "../GamePlay/Collectibles";
+import Player from "../Player";
+import CollectiblesPool from "../Pools/CollectiblesPool";
+import ScoreManager from "../Managers/ScoreManager";
 
 const { ccclass, property } = cc._decorator;
 
 @ccclass
-export default class DrowningHuman extends Collectibles
-{
-    start()
-    {
+export default class DrowningHuman extends Collectibles {
+    start() {
         this.myType = CollectibleType.DrowningHuman;
     }
-    onEnable()
-    {
+    onEnable() {
         this.myPos = this.node.convertToWorldSpaceAR(cc.Vec2.ZERO).y;
     }
-    onDisable()
-    {
+    onDisable() {
         this.myPos = 0;
     }
-    update(dt)
-    {
-        if (this.node.active)
-        {
-            if (this._player.position.y - 500 > this.myPos)
-            {
+    update(dt) {
+        if (this.node.active) {
+            if (Player.Instance.node.position.y - 500 > this.myPos) {
                 // console.log('drowning human, player is above me');
-                // this.node.getComponent(cc.RenderComponent).enabled = true;
-                this._CollectiblePool.addCollectibleBackToPool(this.node);
+                CollectiblesPool.Instance.addCollectibleBackToPool(this.node);
             }
         }
     }
 
-    onCollisionEnter(other, self)
-    {
-        if(other.node.name == this._player.name)
-        {
+    onCollisionEnter(other, self) {
+        if (other.node.name == 'Player') {
             // console.log('player collided coin');
 
             // increase score
-            this._scoreManager.totalHumanSaved += 1;
-            this._scoreManager.AddScore(this._scoreManager.perHumanSavedBonus);
-            // this.node.getComponent(cc.RenderComponent).enabled = true;
-            this._CollectiblePool.addCollectibleBackToPool(this.node);
+            // this._scoreManager.totalHumanSaved += 1;
+            // this._scoreManager.AddScore(this._scoreManager.perHumanSavedBonus);
+            // this._CollectiblePool.addCollectibleBackToPool(this.node);
+
+            ScoreManager.Instance.totalHumanSaved += 1;
+            ScoreManager.Instance.AddScore(ScoreManager.Instance.perHumanSavedBonus);
+            CollectiblesPool.Instance.addCollectibleBackToPool(this.node);
         }
     }
 }

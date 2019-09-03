@@ -16,8 +16,23 @@ export default class BonusSystem extends cc.Component {
 
     // All script Refs
     _scoreManager: ScoreManager = null;
+    @property({
+        type: cc.Animation,
+        visible: true,
+        serializable: true
+    })
+    _playerBonusEffect: cc.Animation = null;
     @property(cc.Label)
     cleanRunTimeLabel: cc.Label = null;
+    isBonusSequenceOn: boolean = false;
+
+    public static Instance: BonusSystem = null;
+
+    start() {
+        if (BonusSystem.Instance == null) {
+            BonusSystem.Instance = this;
+        }
+    }
 
     resetBonus() {
         this.bonusMultiplier = 1;
@@ -40,15 +55,10 @@ export default class BonusSystem extends cc.Component {
             // start rewarding player with clean run bonus until he hits the bound
 
             if (GameManager.currentGameState == GameState.InGame) {
-                // this.isCleanSequenceOn = false;
                 this.startCleanRunBonus();
+                this._playerBonusEffect.node.active = true;
+                this._playerBonusEffect.play();
             }
-            // this._scoreManager.AddBonus(this.bonusReward * this.bonusMultiplier);
-            // this._scoreManager.AddScore(this.bonusReward * this.bonusMultiplier);
-            // this.bonusMultiplier += 0.2;
-            // if (GameManager.currentGameState == GameState.InGame) {
-            //     this.restartCounter();
-            // }
         }
     }
 
@@ -56,31 +66,29 @@ export default class BonusSystem extends cc.Component {
         this.node.stopAction(this.sequence);
         this.node.stopAction(this.cleanRunSequence);
         this.totalCleanTime = this.totalCleanTime + this.cleanTime;
-        console.log('total clean time in sec: ' + this.totalCleanTime);
+        // console.log('total clean time in sec: ' + this.totalCleanTime);
         this.closeLabel();
         this.resetBonus();
-        this.restartCounter();
+        this._playerBonusEffect.stop();
+        this._playerBonusEffect.node.active = false;
+        this.isBonusSequenceOn = false;
+        // this.restartCounter();
     }
 
-    // isCleanSequenceOn: boolean = false;
     totalCleanTime: number = 0;
     cleanTime: number = 0;
     cleanRunSequence: cc.ActionInterval;
     startCleanRunBonus() {
-        // if (!this.isCleanSequenceOn) {
-            // this.isCleanSequenceOn = true;
-            console.log('started clean run');
-            var time = cc.delayTime(1);
-            this.cleanRunSequence = cc.sequence(time, cc.callFunc(this.cleanRunCountdown, this));
-            this.node.runAction(this.cleanRunSequence.repeatForever());
-        // }
+        var time = cc.delayTime(1);
+        this.cleanRunSequence = cc.sequence(time, cc.callFunc(this.cleanRunCountdown, this));
+        this.node.runAction(this.cleanRunSequence.repeatForever());
     }
     cleanRunCountdown() {
         this.cleanTime++;
 
         this._scoreManager.AddBonus(this.bonusReward * this.bonusMultiplier);
         this._scoreManager.AddScore(this.bonusReward * this.bonusMultiplier);
-        this.bonusMultiplier += 0.2;
+        this.bonusMultiplier += 0.05;
 
         this.onUIUpdate();
     }
@@ -93,6 +101,6 @@ export default class BonusSystem extends cc.Component {
     }
     onUIUpdate() {
         this.openLabel();
-        this.cleanRunTimeLabel.string = 'CLEAN RUN: ' + this.cleanTime + 'SEC';
+        this.cleanRunTimeLabel.string = 'CLEAN RUN: ' + this.cleanTime + ' SEC';
     }
 }

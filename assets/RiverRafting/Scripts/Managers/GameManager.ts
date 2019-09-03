@@ -1,5 +1,6 @@
 import { Difficulty } from "../Enums";
 import MatchManager from "./MatchManager";
+import BonusSystem from "../GamePlay/BonusSystem";
 
 export enum GameState
 {
@@ -38,7 +39,7 @@ export default class GameManager extends cc.Component
 
     start()
     {
-        this.GetData();
+        // this.GetData();
     }
     update(dt)
     {
@@ -56,27 +57,27 @@ export default class GameManager extends cc.Component
 
     GetData()
     {
-        var vars = {};
-        var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value)
-        {
-            vars[key] = value;
-        });
+        // var vars = {};
+        // var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value)
+        // {
+        //     vars[key] = value;
+        // });
 
-        var gameSeconds;
+        // var gameSeconds;
 
-        if (vars["time"] == null)
-        {
-            this._matchManager._timeManager.totaltime = 180;
-        }
-        else
-        {
-            this._matchManager._timeManager.totaltime = vars["time"];
-        }
+        // if (vars["time"] == null)
+        // {
+        //     this._matchManager._timeManager.totaltime = 180;
+        // }
+        // else
+        // {
+        //     this._matchManager._timeManager.totaltime = vars["time"];
+        // }
 
 
-        // var gamedata = window.$Arena.getGameData();
-        // this._matchManager._timeManager.totaltime = gamedata.play_time_seconds;
-        // GameManager.Seed = gamedata.seed;
+        var gamedata = window.$Arena.getGameData();
+        this._matchManager._timeManager.totaltime = gamedata.play_time_seconds;
+        GameManager.Seed = gamedata.seed;
     }
 
     OnGameOver()
@@ -84,7 +85,7 @@ export default class GameManager extends cc.Component
         // window.$Arena.submitScore(this._matchManager._scoreManager.totalScore, GameManager.Seed);
         this._matchManager._scoreManager.AddHumanSavedBonus();
         this._matchManager._scoreManager.AddCoinsBonus();
-
+        BonusSystem.Instance.stopAction();
 
         this._matchManager._UIManager.OpenSubmitWindow();
     }

@@ -1,12 +1,13 @@
 import Collectibles, { CollectibleType } from "../GamePlay/Collectibles";
+import Player from "../Player";
+import CollectiblesPool from "../Pools/CollectiblesPool";
+import ScoreManager from "../Managers/ScoreManager";
 
 const { ccclass, property } = cc._decorator;
 
 @ccclass
 export default class CoinPack extends Collectibles
 {
-    // @property
-    // awardScore: number = 20;
 
     start()
     {
@@ -14,6 +15,7 @@ export default class CoinPack extends Collectibles
     }
     onEnable() 
     {
+        // this.node.getComponent(cc.BoxCollider).enabled = true;
         this.myPos = this.node.convertToWorldSpaceAR(cc.Vec2.ZERO).y;
     }
     onDisable()
@@ -24,26 +26,29 @@ export default class CoinPack extends Collectibles
     {
         if (this.node.active)
         {
-            if (this._player.position.y - 500 > this.myPos)
+            if (Player.Instance.node.position.y - 500 > this.myPos)
             {
                 // console.log('coinpack, player is above me');
-                // this.node.getComponent(cc.RenderComponent).enabled = true;
-                this._CollectiblePool.addCollectibleBackToPool(this.node);
+                // this._CollectiblePool.addCollectibleBackToPool(this.node);
+                CollectiblesPool.Instance.addCollectibleBackToPool(this.node);
             }
         }
     }
 
     onCollisionEnter(other, self)
     {
-        if(other.node.name == this._player.name)
+        if(other.node.name == 'Player')
         {
             // console.log('player collided coin');
 
             // increase score
-            this._scoreManager.totalCoinsCollected += 1;
-            this._scoreManager.AddScore(this._scoreManager.perCoinBonus);
-            // this.node.getComponent(cc.RenderComponent).enabled = true;
-            this._CollectiblePool.addCollectibleBackToPool(this.node);
+            // this._scoreManager.totalCoinsCollected += 1;
+            // this._scoreManager.AddScore(this._scoreManager.perCoinBonus);
+            // this._CollectiblePool.addCollectibleBackToPool(this.node);
+
+            ScoreManager.Instance.totalCoinsCollected += 1;
+            ScoreManager.Instance.AddScore(ScoreManager.Instance.perCoinBonus);
+            CollectiblesPool.Instance.addCollectibleBackToPool(this.node);
         }
     }
 }

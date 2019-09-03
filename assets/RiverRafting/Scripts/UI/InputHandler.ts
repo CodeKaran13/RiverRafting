@@ -1,11 +1,11 @@
 import Player from "../Player";
 import CameraController from "../CameraController";
+import GameManager from "../Managers/GameManager";
 
 const { ccclass, property } = cc._decorator;
 
 @ccclass
-export default class InputHandler extends cc.Component
-{
+export default class InputHandler extends cc.Component {
 
     @property(cc.Node)
     player: cc.Node = null;
@@ -23,37 +23,38 @@ export default class InputHandler extends cc.Component
     })
     _cameraController: CameraController = null;
 
-    onLoad()
-    {
+    onLoad() {
         this._playerRef = this.player.getComponent('Player');
 
-        this.node.on('touchstart', (event: cc.Event.EventTouch) =>
-        {
+        this.node.on('touchstart', (event: cc.Event.EventTouch) => {
             this.isTouchActive = true;
-            if (this.xDir < 0)
-            {
+            if (this.xDir < 0) {
                 // this._playerRef.ApplyBrakeSequence();
-                this._playerRef.StopAction(this._playerRef.currentAction);
-                this._playerRef.RotateLeft();
+                if (!Player.Instance.IsCycloned) {
+                    this._playerRef.StopAction(this._playerRef.currentAction);
+                    this._playerRef.RotateLeft();
+                }
+
                 // this._cameraController.startZoomIn();
             }
-            else if (this.xDir > 0)
-            {
+            else if (this.xDir > 0) {
                 // this._playerRef.ApplyBrakeSequence();
-                this._playerRef.StopAction(this._playerRef.currentAction);
-                this._playerRef.RotateRight();
+                if (!Player.Instance.IsCycloned) {
+                    this._playerRef.StopAction(this._playerRef.currentAction);
+                    this._playerRef.RotateRight();
+                }
                 // this._cameraController.startZoomIn();
             }
             // this._playerRef.restartCounter();
             // this._playerRef.startCounter();
         }, this.node);
 
-        this.node.on('touchend', (event: cc.Event.EventTouch) =>
-        {
+        this.node.on('touchend', (event: cc.Event.EventTouch) => {
             // this.isTouchActive = false;
-            this._playerRef.StopAction(this._playerRef.currentAction);
-            // this._playerRef.resetMovementSpeed();
-            this._playerRef.RotateToCenter();
+            if (!Player.Instance.IsCycloned) {
+                this._playerRef.StopAction(this._playerRef.currentAction);
+                this._playerRef.RotateToCenter();
+            }
             // this._cameraController.shouldZoomIn = false;
             // this._cameraController.startNormalize();
             // this._playerRef.restartCounter();
@@ -61,14 +62,12 @@ export default class InputHandler extends cc.Component
         }, this.node);
     }
 
-    onKeyDown()
-    {
+    onKeyDown() {
         // this.player.setPosition(new cc.Vec2(this.player.position.x + (this.xDir * this._playerRef.turnSpeed), this.player.position.y));
-        
+
     }
 
-    onKeyUp()
-    {
-        
+    onKeyUp() {
+
     }
 }

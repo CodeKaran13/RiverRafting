@@ -51,18 +51,18 @@ export default class PoolingSystem extends cc.Component
         serializable: true
     })
     RiverMapsSet6: cc.Node[] = [];
-    @property({
-        type: cc.Node,
-        visible: true,
-        serializable: true
-    })
-    RiverMapsSet7: cc.Node[] = [];
-    @property({
-        type: cc.Node,
-        visible: true,
-        serializable: true
-    })
-    RiverMapsSet8: cc.Node[] = [];
+    // @property({
+    //     type: cc.Node,
+    //     visible: true,
+    //     serializable: true
+    // })
+    // RiverMapsSet7: cc.Node[] = [];
+    // @property({
+    //     type: cc.Node,
+    //     visible: true,
+    //     serializable: true
+    // })
+    // RiverMapsSet8: cc.Node[] = [];
 
     //Wave Prefabs
     @property({
@@ -134,13 +134,7 @@ export default class PoolingSystem extends cc.Component
                 var ref = this.RiverMapsSet5.pop();
                 return ref;
             case 6:
-                var ref = this.RiverMapsSet6.pop(); 
-                return ref;
-            case 7:
-                var ref = this.RiverMapsSet7.pop(); 
-                return ref;
-            case 8:
-                var ref = this.RiverMapsSet8.pop(); 
+                var ref = this.RiverMapsSet6.pop();
                 return ref;
             default:
                 console.log('no such case found with type: ' + Type);
