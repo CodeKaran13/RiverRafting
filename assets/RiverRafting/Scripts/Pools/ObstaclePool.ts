@@ -5,18 +5,18 @@ const { ccclass, property } = cc._decorator;
 @ccclass
 export default class ObstaclePool extends cc.Component {
 
-    @property({
-        type: cc.Node,
-        visible: true,
-        serializable: true
-    })
-    Logs: cc.Node[] = [];
-    @property({
-        type: cc.Node,
-        visible: true,
-        serializable: true
-    })
-    Cyclones: cc.Node[] = [];
+    // @property({
+    //     type: cc.Node,
+    //     visible: true,
+    //     serializable: true
+    // })
+    // Logs: cc.Node[] = [];
+    // @property({
+    //     type: cc.Node,
+    //     visible: true,
+    //     serializable: true
+    // })
+    // Cyclones: cc.Node[] = [];
 
     public static Instance: ObstaclePool = null;
 
@@ -44,14 +44,14 @@ export default class ObstaclePool extends cc.Component {
         }
     }
 
-    getObstacleFromPool(obstacleType: ObstacleType): cc.Node {
+    getObstacleFromPool(obstacleType: ObstacleType) {
         switch (obstacleType) {
             case ObstacleType.Log:
-                var log = this.Logs.pop();
-                return log;
+                // var log = this.Logs.pop();
+                // return log;
             case ObstacleType.Cyclone:
-                var cyclone = this.Cyclones.pop();
-                return cyclone;
+                // var cyclone = this.Cyclones.pop();
+                // return cyclone;
         }
     }
 }

@@ -127,11 +127,11 @@ export default class MatchManager extends cc.Component {
                 break;
         }
     }
+    prefabArray: Number[] = [0, 0, 0, 1, 1, 1, 2, 2, 2, 3, 3, 3, 4, 4, 4, 5, 5, 5];
     getRandomNumber() {
         // will return 0, 1, 2, 3, 4, 5, 6
-        var rand = Math.floor(Math.random() * 6);
-        // console.log('random number: ' + rand);
-        return rand;
+        var rand = this.prefabArray.splice(Math.floor(Math.random() * this.prefabArray.length), 1);
+        return rand[0];
         // return 5;
     }
     setRendererOff(nextMap: cc.Node) {

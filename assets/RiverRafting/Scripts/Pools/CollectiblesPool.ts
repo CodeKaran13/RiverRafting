@@ -4,24 +4,24 @@ const { ccclass, property } = cc._decorator;
 
 @ccclass
 export default class CollectiblesPool extends cc.Component {
-    @property({
-        type: cc.Node,
-        visible: true,
-        serializable: true
-    })
-    HealthPacks: cc.Node[] = [];
-    @property({
-        type: cc.Node,
-        visible: true,
-        serializable: true
-    })
-    CoinsPack: cc.Node[] = [];
-    @property({
-        type: cc.Node,
-        visible: true,
-        serializable: true
-    })
-    DrowningHumansPack: cc.Node[] = [];
+    // @property({
+    //     type: cc.Node,
+    //     visible: true,
+    //     serializable: true
+    // })
+    // HealthPacks: cc.Node[] = [];
+    // @property({
+    //     type: cc.Node,
+    //     visible: true,
+    //     serializable: true
+    // })
+    // CoinsPack: cc.Node[] = [];
+    // @property({
+    //     type: cc.Node,
+    //     visible: true,
+    //     serializable: true
+    // })
+    // DrowningHumansPack: cc.Node[] = [];
 
     public static Instance: CollectiblesPool = null;
 
@@ -55,17 +55,17 @@ export default class CollectiblesPool extends cc.Component {
         }
     }
 
-    getCollectibleFromPool(packName: CollectibleType): cc.Node {
+    getCollectibleFromPool(packName: CollectibleType) {
         switch (packName) {
             case CollectibleType.Health:
-                var healthpack = this.HealthPacks.pop();
-                return healthpack;
+                // var healthpack = this.HealthPacks.pop();
+                // return healthpack;
             case CollectibleType.Coins:
-                var coinpack = this.CoinsPack.pop();
-                return coinpack;
+                // var coinpack = this.CoinsPack.pop();
+                // return coinpack;
             case CollectibleType.DrowningHuman:
-                var drowningPack = this.DrowningHumansPack.pop();
-                return drowningPack;
+                // var drowningPack = this.DrowningHumansPack.pop();
+                // return drowningPack;
         }
     }
 }

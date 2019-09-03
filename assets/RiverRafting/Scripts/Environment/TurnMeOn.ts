@@ -1,5 +1,3 @@
-import ItemSpawner from "../GamePlay/ItemSpawner";
-import ObstacleSpawner from "../GamePlay/ObstacleSpawner";
 import GameManager from "../Managers/GameManager";
 import { Difficulty } from "../Enums";
 import MatchManager from "../Managers/MatchManager";
@@ -9,18 +7,18 @@ const { ccclass, property } = cc._decorator;
 @ccclass
 export default class TurnMeOn extends cc.Component {
     // All class Refs
-    @property({
-        type: ItemSpawner,
-        visible: true,
-        serializable: true
-    })
-    _itemSpawner: ItemSpawner = null;
-    @property({
-        type: ObstacleSpawner,
-        visible: true,
-        serializable: true
-    })
-    _obstacleSpawner: ObstacleSpawner = null;
+    // @property({
+    //     type: ItemSpawner,
+    //     visible: true,
+    //     serializable: true
+    // })
+    // _itemSpawner: ItemSpawner = null;
+    // @property({
+    //     type: ObstacleSpawner,
+    //     visible: true,
+    //     serializable: true
+    // })
+    // _obstacleSpawner: ObstacleSpawner = null;
 
     // class variables
     // @property({
@@ -140,7 +138,6 @@ export default class TurnMeOn extends cc.Component {
             this.setCoinPacks();
             this.setCoinsPosition();
             this.setCoinsPosition();
-            // this.setCoinsPosition();
             // this._itemSpawner.SpawnHealthPack();
             // this._itemSpawner.SpawnStarPack();
             // this._itemSpawner.SpawnDrowningHumans();
@@ -208,7 +205,7 @@ export default class TurnMeOn extends cc.Component {
         this.startSequenceProps();
     }
     startSequenceProps() {
-        var time = cc.delayTime(0.2);
+        var time = cc.delayTime(0.1);
         this.sequenceProps = cc.sequence(time, cc.callFunc(this.propsDelay, this));
         this.node.runAction(this.sequenceProps.repeatForever());
     }
