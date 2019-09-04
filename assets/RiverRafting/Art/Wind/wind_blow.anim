@@ -1,0 +1,151 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "wind_blow",
+  "_objFlags": 0,
+  "_native": "",
+  "_duration": 0.6666666666666666,
+  "sample": 60,
+  "speed": 1,
+  "wrapMode": 2,
+  "curveData": {
+    "paths": {
+      "wind": {
+        "props": {
+          "position": [
+            {
+              "frame": 0,
+              "value": [
+                498.355,
+                556,
+                0
+              ]
+            },
+            {
+              "frame": 0.5,
+              "value": [
+                -1399,
+                580
+              ],
+              "motionPath": []
+            }
+          ],
+          "opacity": [
+            {
+              "frame": 0,
+              "value": 255
+            },
+            {
+              "frame": 0.5,
+              "value": 0
+            }
+          ]
+        }
+      },
+      "wind1": {
+        "props": {
+          "position": [
+            {
+              "frame": 0,
+              "value": [
+                453.411,
+                263,
+                0
+              ]
+            },
+            {
+              "frame": 0.6666666666666666,
+              "value": [
+                -1246,
+                275
+              ],
+              "motionPath": []
+            }
+          ],
+          "opacity": [
+            {
+              "frame": 0,
+              "value": 255
+            },
+            {
+              "frame": 0.5,
+              "value": 0
+            },
+            {
+              "frame": 0.6666666666666666,
+              "value": 50
+            }
+          ]
+        }
+      },
+      "wind copy": {
+        "props": {
+          "position": [
+            {
+              "frame": 0,
+              "value": [
+                441.186,
+                998,
+                0
+              ]
+            },
+            {
+              "frame": 0.6666666666666666,
+              "value": [
+                -1300,
+                1007
+              ],
+              "motionPath": []
+            }
+          ],
+          "opacity": [
+            {
+              "frame": 0,
+              "value": 255
+            },
+            {
+              "frame": 0.5,
+              "value": 0
+            },
+            {
+              "frame": 0.6666666666666666,
+              "value": 50
+            }
+          ]
+        }
+      },
+      "wind1 copy": {
+        "props": {
+          "position": [
+            {
+              "frame": 0,
+              "value": [
+                347.678,
+                1326,
+                0
+              ]
+            },
+            {
+              "frame": 0.5,
+              "value": [
+                -1096,
+                1342
+              ],
+              "motionPath": []
+            }
+          ],
+          "opacity": [
+            {
+              "frame": 0,
+              "value": 255
+            },
+            {
+              "frame": 0.5,
+              "value": 0
+            }
+          ]
+        }
+      }
+    }
+  },
+  "events": []
+}
