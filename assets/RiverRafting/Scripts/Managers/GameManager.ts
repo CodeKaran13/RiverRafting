@@ -45,12 +45,10 @@ export default class GameManager extends cc.Component
     {
         if(Math.floor(1/dt) <= 35)
         {
-            // MatchManager.isHighEndDevice = false;
             GameManager.isHighEndDevice = false;
         }
         else
         {
-            // MatchManager.isHighEndDevice = true;
             GameManager.isHighEndDevice = true;
         }
     }

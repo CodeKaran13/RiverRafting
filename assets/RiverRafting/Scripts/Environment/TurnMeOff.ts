@@ -65,7 +65,7 @@ export default class TurnMeOff extends cc.Component
         if (this.propsIndex < this.propsCount)
         {
             this.node.children[0].children[this.totalCount - 1].children[this.propsIndex].active = false;
-            console.log('' + this.node.children[0].children[this.totalCount - 1].children[this.propsIndex].name);
+            // console.log('' + this.node.children[0].children[this.totalCount - 1].children[this.propsIndex].name);
             // if(this.node.children[0].children[this.totalCount-1].children[this.propsIndex].getComponent(dragonBones.ArmatureDisplay)!=null)
             // {
             //     this.node.children[0].children[this.totalCount-1].children[this.propsIndex].getComponent(dragonBones.ArmatureDisplay).timeScale = 0;
