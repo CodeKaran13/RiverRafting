@@ -60,6 +60,7 @@ export default class TimeManager extends cc.Component {
                         this._player.MAXMOVEMENTSPEED = 4;
                         this._player.StartAccelerationSequence();
                         Player.Instance.windDir = this.getRandomWindDir();
+                        GameManager.Instance.PlayWindEffect(Player.Instance.windDir);
                         Player.Instance.IsWindy = true;
                         this.startWindyTimer();
                     }
@@ -74,7 +75,7 @@ export default class TimeManager extends cc.Component {
             }
             else {
                 //trigger game over
-                this._gameManagerRef.OnGameOver();
+                GameManager.Instance.OnGameOver();
                 GameManager.currentGameState = GameState.PostGame;
             }
         }
@@ -121,6 +122,7 @@ export default class TimeManager extends cc.Component {
         this.windTime--;
         if (this.windTime <= 0) {
             Player.Instance.IsWindy = false;
+            GameManager.Instance.StopWindEffect();
             this.node.stopAction(this.windSequence);
             this.windTime = 3;
         }

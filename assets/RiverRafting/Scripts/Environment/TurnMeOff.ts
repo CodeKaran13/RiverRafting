@@ -56,7 +56,7 @@ export default class TurnMeOff extends cc.Component
     }
     startSequenceProps()
     {
-        var time = cc.delayTime(0.1);
+        var time = cc.delayTime(0.2);
         this.sequenceProps = cc.sequence(time, cc.callFunc(this.propsDelay, this));
         this.node.runAction(this.sequenceProps.repeatForever());
     }

@@ -57,6 +57,8 @@ export default class MatchManager extends cc.Component {
     public static normalIndex: number = 2;
     public static hardIndex: number = 3;
 
+    public static Instance: MatchManager = null;
+
     onLoad() {
         this._timeManager._matchManager = this;
         this._gameManager._matchManager = this;
@@ -67,6 +69,9 @@ export default class MatchManager extends cc.Component {
     }
 
     start() {
+        if (MatchManager.Instance == null) {
+            MatchManager.Instance = this;
+        }
         for (let i = 0; i < this.totalPrefabsToSpawn; i++) {
             this.spawnNextRiverMap();
         }
@@ -169,9 +174,7 @@ export default class MatchManager extends cc.Component {
             if (grandchildcount > 0) {
                 for (var j = 0; j < grandchildcount; j++) {
                     nextMap.children[0].children[propIndex].children[j].active = true;
-                    if (nextMap.children[0].children[propIndex].children[j].getComponent(dragonBones.ArmatureDisplay) != null && GameManager.isHighEndDevice) {
-                        // nextMap.children[0].children[propIndex].children[j].getComponent(dragonBones.ArmatureDisplay).playAnimation('tree_movement', 0);
-                        // nextMap.children[0].children[propIndex].children[j].getComponent(dragonBones.ArmatureDisplay).timeScale = 0.5;
+                    if (nextMap.children[0].children[propIndex].children[j].getComponent(dragonBones.ArmatureDisplay) != null) {
                         nextMap.children[0].children[propIndex].children[j].getComponent(dragonBones.ArmatureDisplay).timeScale = 0;
                     }
                     if (nextMap.children[0].children[propIndex].children[j].getComponent(cc.RenderComponent) != null) {

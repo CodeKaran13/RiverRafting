@@ -1,37 +1,37 @@
 import BonusSystem from "../GamePlay/BonusSystem";
 import HealthManager from "../Managers/HealthManager";
 import Player from "../Player";
+import GameManager from "../Managers/GameManager";
 
 const { ccclass, property } = cc._decorator;
 
 @ccclass
 export default class CollisionDetection extends cc.Component {
-    @property({
-        type: BonusSystem,
-        visible: true,
-        serializable: true
-    })
-    _bonusSystem: BonusSystem = null;
+
     _player: Player = null;
 
     start() {
-        this._player = this.node.getComponent(Player);
+        this._player = Player.Instance;
     }
     update() {
-        if (!this._player.IsCollidingBound() && !this._bonusSystem.isBonusSequenceOn && !this._player.IsCycloned) {
+        if (!this._player.IsCollidingBound() && !BonusSystem.Instance.isBonusSequenceOn && !this._player.IsCycloned) {
             // console.log('starting bonus system');
-            this._bonusSystem.isBonusSequenceOn = true;
-            this._bonusSystem.restartCounter();
+            BonusSystem.Instance.isBonusSequenceOn = true;
+            BonusSystem.Instance.restartCounter();
         }
     }
 
-    onBeginContact(contact, selfCollider, otherCollider) {
+    onBeginContact(contact: cc.PhysicsContact, selfCollider, otherCollider) {
         if (otherCollider.node.group == 'Bound') {
             // stop clean run on collision and restart timer for bonus system
             // console.log('collided: ' + otherCollider.node.parent.parent.name);
 
-            this._bonusSystem.stopAction();
+            BonusSystem.Instance.stopAction();
             this.node.getComponent(HealthManager).takeDamage(5);
+
+            var position = contact.getWorldManifold().points[0];
+            // console.log('' + position);
+            GameManager.Instance.PlayImapactEffectAtPos(position);
         }
     }
 }

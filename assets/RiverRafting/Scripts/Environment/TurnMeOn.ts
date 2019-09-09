@@ -133,22 +133,15 @@ export default class TurnMeOn extends cc.Component {
     onCollisionExit(other, self) {
         if (self.tag == 0 && other.node.name == 'StartCollider' && !this.triggerOnce) {
             this.triggerOnce = true;
-            // this.onSetPosition();
-            // this.indexPos = 0;
             this.setCoinPacks();
             this.setCoinsPosition();
             this.setCoinsPosition();
-            // this._itemSpawner.SpawnHealthPack();
-            // this._itemSpawner.SpawnStarPack();
-            // this._itemSpawner.SpawnDrowningHumans();
-            // this._obstacleSpawner.SpawnLogs();
-            // this._obstacleSpawner.SpawnCyclones();
 
             // cloud/lightning
             if (GameManager.currentDifficulty == Difficulty.Hard)
                 this.node.children[this.node.childrenCount - 1].active = true;
 
-            // props
+            // landmass and rocks
             for (let i = 0; i < self.node.children[0].childrenCount - 1; i++) {
                 if (self.node.children[0].children[i].getComponent(cc.RenderComponent) != null) {
                     self.node.children[0].children[i].getComponent(cc.RenderComponent).enabled = true;
@@ -169,32 +162,46 @@ export default class TurnMeOn extends cc.Component {
             // console.log("reached here" + this.node.name);
             this.totalCount = this.node.children[0].childrenCount;
             this.resetSequenceProps();
-            // this.resetDelayedLoopSequence();
         }
     }
 
     index: number = 0;
+    grandchildcountIndex: number = 0;
     totalCount: number = 0;
-    resetDelayedLoopSequence() {
-        this.index = 0;
-        this.totalCount = this.node.children[0].childrenCount;
-        this.startSequence();
-    }
-    startSequence() {
-        var time = cc.delayTime(0.2);
-        this.delaySequence = cc.sequence(time, cc.callFunc(this.delayedLoop, this));
-        this.node.runAction(this.delaySequence.repeatForever());
-    }
-    delayedLoop() {
-        if (this.index < this.totalCount) {
-            this.node.children[0].children[this.index].active = true;
-            this.index++;
-        }
-        else {
-            this.node.stopAction(this.delaySequence);
-            this.resetSequenceProps();
-        }
-    }
+    // resetDelayedLoopSequence() {
+    //     this.index = 0;
+    //     this.grandchildcountIndex = 0;
+    //     this.totalCount = this.node.children[0].childrenCount;
+    //     this.startSequence();
+    // }
+    // startSequence() {
+    //     var time = cc.delayTime(0.2);
+    //     this.delaySequence = cc.sequence(time, cc.callFunc(this.delayedLoop, this));
+    //     this.node.runAction(this.delaySequence.repeatForever());
+    // }
+    // delayedLoop() {
+    //     if (this.index < this.totalCount) {
+    //         if (this.node.children[0].children[this.index].getComponent(cc.RenderComponent) != null) {
+    //             this.node.children[0].children[this.index].getComponent(cc.RenderComponent).enabled = true;
+    //             var grandchildcount = 0;
+    //             if (this.node.children[0].children[this.index].childrenCount > 0) {
+    //                 grandchildcount = this.node.children[0].children[this.index].children[0].childrenCount;
+    //                 if (this.grandchildcountIndex < grandchildcount) {
+    //                     if (this.node.children[0].children[this.index].children[0].children[this.grandchildcountIndex].getComponent(cc.RenderComponent) != null)
+    //                         this.node.children[0].children[this.index].children[0].children[this.grandchildcountIndex].getComponent(cc.RenderComponent).enabled = true;
+    //                 }
+
+    //                 this.grandchildcountIndex++;
+    //             }
+    //         }
+
+    //         this.index++;
+    //     }
+    //     else {
+    //         this.node.stopAction(this.delaySequence);
+    //         this.resetSequenceProps();
+    //     }
+    // }
 
     propsIndex: number = 0;
     propsCount: number = 0;
@@ -205,7 +212,7 @@ export default class TurnMeOn extends cc.Component {
         this.startSequenceProps();
     }
     startSequenceProps() {
-        var time = cc.delayTime(0.1);
+        var time = cc.delayTime(0.2);
         this.sequenceProps = cc.sequence(time, cc.callFunc(this.propsDelay, this));
         this.node.runAction(this.sequenceProps.repeatForever());
     }
