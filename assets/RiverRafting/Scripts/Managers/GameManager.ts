@@ -48,7 +48,7 @@ export default class GameManager extends cc.Component {
             GameManager.Instance = this;
         }
 
-        this.GetData();
+        // this.GetData();
     }
     update(dt) {
         if (Math.floor(1 / dt) <= 35) {

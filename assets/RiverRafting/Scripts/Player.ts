@@ -2,6 +2,7 @@ import GameManager, { GameState } from "./Managers/GameManager";
 import { Difficulty } from "./Enums";
 import HealthManager from "./Managers/HealthManager";
 import CollisionDetection from "./Environment/CollisionDetection";
+import BonusSystem from "./GamePlay/BonusSystem";
 
 const { ccclass, property } = cc._decorator;
 
@@ -260,7 +261,7 @@ export default class Player extends cc.Component {
             var time = cc.delayTime(0.03);
             this.dragSequence = cc.sequence(time, cc.callFunc(this.dragRaftToCyclone, this, pos));
             this.node.runAction(this.dragSequence.repeatForever());
-            this.node.getComponent(CollisionDetection)._bonusSystem.stopAction();
+            BonusSystem.Instance.stopAction();
             // this.startCycloneEffect();
         }
     }

@@ -104,27 +104,12 @@ export default class TurnMeOn extends cc.Component {
         var rand = this.getRandomCoinPack();
 
         if (GameManager.currentDifficulty == Difficulty.Easy) {
-            // for (let i = 0; i < this.node.children[4].children[rand[0]].childrenCount; i++) {
-            //     this._itemSpawner.coinSpawnPos[this.indexPos] = null;
-            //     this._itemSpawner.coinSpawnPos[this.indexPos] = this.node.children[4].children[rand[0]].children[i];
-            //     this.indexPos++;
-            // }
             this.node.children[MatchManager.easyIndex].children[rand[0]].active = true;
         }
         else if (GameManager.currentDifficulty == Difficulty.Normal) {
-            // for (let i = 0; i < this.node.children[4].children[rand[0]].childrenCount; i++) {
-            //     this._itemSpawner.coinSpawnPos[this.indexPos] = null;
-            //     this._itemSpawner.coinSpawnPos[this.indexPos] = this.node.children[4].children[rand[0]].children[i];
-            //     this.indexPos++;
-            // }
             this.node.children[MatchManager.normalIndex].children[rand[0]].active = true;
         }
         else if (GameManager.currentDifficulty == Difficulty.Hard) {
-            // for (let i = 0; i < this.node.children[4].children[rand[0]].childrenCount; i++) {
-            //     this._itemSpawner.coinSpawnPos[this.indexPos] = null;
-            //     this._itemSpawner.coinSpawnPos[this.indexPos] = this.node.children[4].children[rand[0]].children[i];
-            //     this.indexPos++;
-            // }
             this.node.children[MatchManager.hardIndex].children[rand[0]].active = true;
         }
     }
@@ -142,6 +127,30 @@ export default class TurnMeOn extends cc.Component {
                 this.node.children[this.node.childrenCount - 1].active = true;
 
             // landmass and rocks
+            // for (let i = 0; i < self.node.children[0].childrenCount - 1; i++) {
+            //     if (self.node.children[0].children[i].getComponent(cc.RenderComponent) != null) {
+            //         self.node.children[0].children[i].getComponent(cc.RenderComponent).enabled = true;
+            //     }
+            //     var grandchildcount = 0;
+            //     if (self.node.children[0].children[i].childrenCount > 0) {
+            //         grandchildcount = self.node.children[0].children[i].children[0].childrenCount;
+            //         if (grandchildcount > 0) {
+            //             for (var j = 0; j < grandchildcount; j++) {
+            //                 if (self.node.children[0].children[i].children[0].children[j].getComponent(cc.RenderComponent) != null) {
+            //                     self.node.children[0].children[i].children[0].children[j].getComponent(cc.RenderComponent).enabled = true;
+            //                 }
+            //             }
+            //         }
+            //     }
+            // }
+
+            // console.log("reached here" + this.node.name);
+            this.totalCount = this.node.children[0].childrenCount;
+            this.resetSequenceProps();
+        }
+
+        if (self.tag == 2 && other.node.name == 'StartCollider') {
+            // landmass and rocks
             for (let i = 0; i < self.node.children[0].childrenCount - 1; i++) {
                 if (self.node.children[0].children[i].getComponent(cc.RenderComponent) != null) {
                     self.node.children[0].children[i].getComponent(cc.RenderComponent).enabled = true;
@@ -158,10 +167,6 @@ export default class TurnMeOn extends cc.Component {
                     }
                 }
             }
-
-            // console.log("reached here" + this.node.name);
-            this.totalCount = this.node.children[0].childrenCount;
-            this.resetSequenceProps();
         }
     }
 

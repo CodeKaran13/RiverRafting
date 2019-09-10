@@ -135,9 +135,9 @@ export default class MatchManager extends cc.Component {
     prefabArray: Number[] = [0, 0, 0, 1, 1, 1, 2, 2, 2, 3, 3, 3, 4, 4, 4, 5, 5, 5];
     getRandomNumber() {
         // will return 0, 1, 2, 3, 4, 5, 6
-        var rand = this.prefabArray.splice(Math.floor(Math.random() * this.prefabArray.length), 1);
-        return rand[0];
-        // return 5;
+        // var rand = this.prefabArray.splice(Math.floor(Math.random() * this.prefabArray.length), 1);
+        // return rand[0];
+        return 0;
     }
     setRendererOff(nextMap: cc.Node) {
         if (nextMap.parent != null)
