@@ -839,7 +839,7 @@
       "__id__": 17
     },
     "_enabled": true,
-    "_cullingMask": 2,
+    "_cullingMask": 66,
     "_clearFlags": 0,
     "_backgroundColor": {
       "__type__": "cc.Color",
@@ -1067,7 +1067,7 @@
     "_skewX": 0,
     "_skewY": 0,
     "_is3DNode": false,
-    "groupIndex": 1,
+    "groupIndex": 6,
     "_id": "7d6RAKRnZH+KGD7B6ktvtQ"
   },
   {
@@ -1700,7 +1700,7 @@
   {
     "__type__": "cc.Node",
     "_name": "RootNode",
-    "_objFlags": 512,
+    "_objFlags": 0,
     "_parent": {
       "__id__": 34
     },

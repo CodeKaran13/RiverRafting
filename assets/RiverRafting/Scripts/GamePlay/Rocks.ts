@@ -14,8 +14,7 @@ export default class Rocks extends Obstacles {
             this.myAnimator.play();
     }
     onDisable() {
-        if (GameManager.isHighEndDevice)
-            this.myAnimator.stop();
+        this.myAnimator.stop();
     }
 
     start() {

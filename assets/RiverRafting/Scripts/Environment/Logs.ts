@@ -3,6 +3,7 @@ import HealthManager from "../Managers/HealthManager";
 import ObstaclePool from "../Pools/ObstaclePool";
 import Player from "../Player";
 import BonusSystem from "../GamePlay/BonusSystem";
+import GameManager from "../Managers/GameManager";
 
 const { ccclass, property } = cc._decorator;
 
@@ -13,20 +14,18 @@ export default class Logs extends Obstacles {
         this.myType = ObstacleType.Log;
     }
     onEnable() {
-        this.myAnimator.play();
+        if (GameManager.isHighEndDevice) {
+            this.myAnimator.play();
+        }
         this.myPos = this.node.convertToWorldSpace(cc.Vec2.ZERO).y;
     }
-
     onDisable() {
         this.myPos = 0;
         this.myAnimator.stop();
     }
-
     update(dt) {
         if (this.node.active) {
             if (Player.Instance.node.position.y - 500 > this.myPos) {
-                // console.log('LOGS, player is above me');
-                // this._obstaclePool.addObstacleBackToPool(this.node);
                 ObstaclePool.Instance.addObstacleBackToPool(this.node);
             }
         }
@@ -37,7 +36,6 @@ export default class Logs extends Obstacles {
             this.myAnimator.play('floating_wood_break');
             Player.Instance.node.getComponent(HealthManager).takeDamage(this.damage);
             BonusSystem.Instance.stopAction();
-            // this._player.getComponent(HealthManager).takeDamage(this.damage);
         }
     }
 }
