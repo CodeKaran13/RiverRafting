@@ -11,10 +11,12 @@ export default class DrowningHuman extends Collectibles {
 
     start() {
         this.myType = CollectibleType.DrowningHuman;
-        this.myAnim = this.node.getComponent(dragonBones.ArmatureDisplay);
+        // console.log(this.node.name);
     }
     onEnable() {
         this.myPos = this.node.convertToWorldSpaceAR(cc.Vec2.ZERO).y;
+        this.myAnim = this.node.getComponent(dragonBones.ArmatureDisplay);
+
         if(GameManager.isHighEndDevice) {
             this.myAnim.timeScale = 2;
         }

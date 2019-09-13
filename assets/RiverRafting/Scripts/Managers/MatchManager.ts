@@ -52,6 +52,8 @@ export default class MatchManager extends cc.Component {
     totalHeight: number = 0;
     @property
     totalObstacleToSpawnOnPrefab: number = 5;
+    @property
+    totalMapsToGenerate: number = 18;
 
     public static easyIndex: number = 1;
     public static normalIndex: number = 2;
@@ -72,7 +74,37 @@ export default class MatchManager extends cc.Component {
         if (MatchManager.Instance == null) {
             MatchManager.Instance = this;
         }
+
+        PoolingSystem.Instance.RiverMapSet0 = new cc.NodePool();
+        PoolingSystem.Instance.RiverMapSet1 = new cc.NodePool();
+        PoolingSystem.Instance.RiverMapSet2 = new cc.NodePool();
+        PoolingSystem.Instance.RiverMapSet3 = new cc.NodePool();
+        PoolingSystem.Instance.RiverMapSet4 = new cc.NodePool();
+        PoolingSystem.Instance.RiverMapSet5 = new cc.NodePool();
+
         for (let i = 0; i < this.totalPrefabsToSpawn; i++) {
+            // this.spawnNextRiverMap();
+
+            let map0 = cc.instantiate(PoolingSystem.Instance.PrefabRiverMapSet0);
+            PoolingSystem.Instance.RiverMapSet0.put(map0);
+
+            let map1 = cc.instantiate(PoolingSystem.Instance.PrefabRiverMapSet1);
+            PoolingSystem.Instance.RiverMapSet1.put(map1);
+
+            let map2 = cc.instantiate(PoolingSystem.Instance.PrefabRiverMapSet2);
+            PoolingSystem.Instance.RiverMapSet2.put(map2);
+
+            let map3 = cc.instantiate(PoolingSystem.Instance.PrefabRiverMapSet3);
+            PoolingSystem.Instance.RiverMapSet3.put(map3);
+
+            let map4 = cc.instantiate(PoolingSystem.Instance.PrefabRiverMapSet4);
+            PoolingSystem.Instance.RiverMapSet3.put(map4);
+
+            let map5 = cc.instantiate(PoolingSystem.Instance.PrefabRiverMapSet5);
+            PoolingSystem.Instance.RiverMapSet3.put(map5);
+        }
+
+        for (let i = 0; i < this.totalMapsToGenerate; i++) {
             this.spawnNextRiverMap();
         }
     }
@@ -101,43 +133,80 @@ export default class MatchManager extends cc.Component {
         var rand = this.getRandomNumber();
         switch (rand) {
             case 0:
-                var nextMap = this._poolingSystem.getRiverMapfromPool(0);
+                // var nextMap = this._poolingSystem.getRiverMapfromPool(0);
+                if (PoolingSystem.Instance.RiverMapSet0.size() > 0) {
+                    var nextMap = PoolingSystem.Instance.RiverMapSet0.get();
+                }
+                else {
+                    var nextMap = cc.instantiate(PoolingSystem.Instance.PrefabRiverMapSet0);
+                }
+
                 this.setRendererOff(nextMap);
                 break;
             case 1:
-                var nextMap = this._poolingSystem.getRiverMapfromPool(1);
+                // var nextMap = this._poolingSystem.getRiverMapfromPool(1);
+                if (PoolingSystem.Instance.RiverMapSet1.size() > 0) {
+                    var nextMap = PoolingSystem.Instance.RiverMapSet1.get();
+                }
+                else {
+                    var nextMap = cc.instantiate(PoolingSystem.Instance.PrefabRiverMapSet1);
+                }
                 this.setRendererOff(nextMap);
                 break;
             case 2:
-                var nextMap = this._poolingSystem.getRiverMapfromPool(2);
+                // var nextMap = this._poolingSystem.getRiverMapfromPool(2);
+                if (PoolingSystem.Instance.RiverMapSet2.size() > 0) {
+                    var nextMap = PoolingSystem.Instance.RiverMapSet2.get();
+                }
+                else {
+                    var nextMap = cc.instantiate(PoolingSystem.Instance.PrefabRiverMapSet2);
+                }
                 this.setRendererOff(nextMap);
                 break;
             case 3:
-                var nextMap = this._poolingSystem.getRiverMapfromPool(3);
+                // var nextMap = this._poolingSystem.getRiverMapfromPool(3);
+                if (PoolingSystem.Instance.RiverMapSet3.size() > 0) {
+                    var nextMap = PoolingSystem.Instance.RiverMapSet3.get();
+                }
+                else {
+                    var nextMap = cc.instantiate(PoolingSystem.Instance.PrefabRiverMapSet3);
+                }
                 this.setRendererOff(nextMap);
                 break;
             case 4:
-                var nextMap = this._poolingSystem.getRiverMapfromPool(4);
+                // var nextMap = this._poolingSystem.getRiverMapfromPool(4);
+                if (PoolingSystem.Instance.RiverMapSet4.size() > 0) {
+                    var nextMap = PoolingSystem.Instance.RiverMapSet4.get();
+                }
+                else {
+                    var nextMap = cc.instantiate(PoolingSystem.Instance.PrefabRiverMapSet4);
+                }
                 this.setRendererOff(nextMap);
                 break;
             case 5:
-                var nextMap = this._poolingSystem.getRiverMapfromPool(5);
+                // var nextMap = this._poolingSystem.getRiverMapfromPool(5);
+                if (PoolingSystem.Instance.RiverMapSet5.size() > 0) {
+                    var nextMap = PoolingSystem.Instance.RiverMapSet5.get();
+                }
+                else {
+                    var nextMap = cc.instantiate(PoolingSystem.Instance.PrefabRiverMapSet5);
+                }
                 this.setRendererOff(nextMap);
                 break;
-            case 6:
-                var nextMap = this._poolingSystem.getRiverMapfromPool(6);
-                this.setRendererOff(nextMap);
-                break;
+            // case 6:
+            //     var nextMap = this._poolingSystem.getRiverMapfromPool(6);
+            //     this.setRendererOff(nextMap);
+            //     break;
             default:
                 break;
         }
     }
-    prefabArray: Number[] = [0, 0, 0, 1, 1, 1, 2, 2, 2, 3, 3, 3, 4, 4, 4, 5, 5, 5];
+    prefabArray: Number[] = [0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4, 5, 5, 5, 5, 5];
     getRandomNumber() {
         // will return 0, 1, 2, 3, 4, 5, 6
-        // var rand = this.prefabArray.splice(Math.floor(Math.random() * this.prefabArray.length), 1);
-        // return rand[0];
-        return 0;
+        var rand = this.prefabArray.splice(Math.floor(Math.random() * this.prefabArray.length), 1);
+        return rand[0];
+        // return 0;
     }
     setRendererOff(nextMap: cc.Node) {
         if (nextMap.parent != null)
