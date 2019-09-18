@@ -1,51 +1,21 @@
 import GameManager from "../Managers/GameManager";
-import { Difficulty } from "../Enums";
+import { Difficulty, Renderer } from "../Enums";
 import MatchManager from "../Managers/MatchManager";
+import { TEST } from "../EventSystem/Emitter";
 
 const { ccclass, property } = cc._decorator;
 
 @ccclass
 export default class TurnMeOn extends cc.Component {
     // All class Refs
-    // @property({
-    //     type: ItemSpawner,
-    //     visible: true,
-    //     serializable: true
-    // })
-    // _itemSpawner: ItemSpawner = null;
-    // @property({
-    //     type: ObstacleSpawner,
-    //     visible: true,
-    //     serializable: true
-    // })
-    // _obstacleSpawner: ObstacleSpawner = null;
 
-    // class variables
-    // @property({
-    //     type: cc.Node,
-    //     visible: true,
-    //     serializable: true
-    // })
-    // heartSpawnLocations: cc.Node[] = [];
-    // @property({
-    //     type: cc.Node,
-    //     visible: true,
-    //     serializable: true
-    // })
-    // logsSpawnLocation: cc.Node[] = [];
-    // @property({
-    //     type: cc.Node,
-    //     visible: true,
-    //     serializable: true
-    // })
-    // cycloneSpawnLocation: cc.Node[] = [];
-    // @property({
-    //     type: cc.Node,
-    //     visible: true,
-    //     serializable: true
-    // })
-    // humanSpawnLocation: cc.Node[] = [];
     delaySequence: cc.ActionInterval;
+
+    onEnable() {
+        this.setCoinPacks();
+        this.setCoinsPosition();
+        this.setCoinsPosition();
+    }
 
     onSetPosition() {
         // console.log('assigning spawn positions');
@@ -70,29 +40,36 @@ export default class TurnMeOn extends cc.Component {
     array: number[] = [];
 
     setCoinPacks() {
-        if (GameManager.currentDifficulty == Difficulty.Easy) {
-            for (let i = 0; i < this.array.length; i++) {
-                this.array[i] = null;
-            }
-            for (let i = 0; i < this.node.children[MatchManager.easyIndex].childrenCount; i++) {
-                this.array.push(i);
-            }
+        // if (GameManager.currentDifficulty == Difficulty.Easy) {
+        //     for (let i = 0; i < this.array.length; i++) {
+        //         this.array[i] = null;
+        //     }
+        //     for (let i = 0; i < this.node.children[0].children[MatchManager.easyIndex].childrenCount; i++) {
+        //         this.array.push(i);
+        //     }
+        // }
+        // else if (GameManager.currentDifficulty == Difficulty.Normal) {
+        //     for (let i = 0; i < this.array.length; i++) {
+        //         this.array[i] = null;
+        //     }
+        //     for (let i = 0; i < this.node.children[0].children[MatchManager.normalIndex].childrenCount; i++) {
+        //         this.array.push(i);
+        //     }
+        // }
+        // else if (GameManager.currentDifficulty == Difficulty.Hard) {
+        //     for (let i = 0; i < this.array.length; i++) {
+        //         this.array[i] = null;
+        //     }
+        //     for (let i = 0; i < this.node.children[0].children[MatchManager.hardIndex].childrenCount; i++) {
+        //         this.array.push(i);
+        //     }
+        // }
+
+        for (let i = 0; i < this.array.length; i++) {
+            this.array[i] = null;
         }
-        else if (GameManager.currentDifficulty == Difficulty.Normal) {
-            for (let i = 0; i < this.array.length; i++) {
-                this.array[i] = null;
-            }
-            for (let i = 0; i < this.node.children[MatchManager.normalIndex].childrenCount; i++) {
-                this.array.push(i);
-            }
-        }
-        else if (GameManager.currentDifficulty == Difficulty.Hard) {
-            for (let i = 0; i < this.array.length; i++) {
-                this.array[i] = null;
-            }
-            for (let i = 0; i < this.node.children[MatchManager.hardIndex].childrenCount; i++) {
-                this.array.push(i);
-            }
+        for (let i = 0; i < this.node.children[0].children[MatchManager.easyIndex].childrenCount; i++) {
+            this.array.push(i);
         }
     }
     getRandomCoinPack() {
@@ -102,29 +79,36 @@ export default class TurnMeOn extends cc.Component {
     indexPos: number = 0;
     setCoinsPosition() {
         var rand = this.getRandomCoinPack();
+        // console.log('setting coins pack: #', rand);
+        // if (GameManager.currentDifficulty == Difficulty.Easy) {
+        //     this.node.children[0].children[MatchManager.easyIndex].children[rand[0]].active = true;
+        // }
+        // else if (GameManager.currentDifficulty == Difficulty.Normal) {
+        //     this.node.children[0].children[MatchManager.normalIndex].children[rand[0]].active = true;
+        // }
+        // else if (GameManager.currentDifficulty == Difficulty.Hard) {
+        //     this.node.children[0].children[MatchManager.hardIndex].children[rand[0]].active = true;
+        // }
 
-        if (GameManager.currentDifficulty == Difficulty.Easy) {
-            this.node.children[MatchManager.easyIndex].children[rand[0]].active = true;
-        }
-        else if (GameManager.currentDifficulty == Difficulty.Normal) {
-            this.node.children[MatchManager.normalIndex].children[rand[0]].active = true;
-        }
-        else if (GameManager.currentDifficulty == Difficulty.Hard) {
-            this.node.children[MatchManager.hardIndex].children[rand[0]].active = true;
-        }
+        this.node.children[0].children[MatchManager.easyIndex].children[rand[0]].active = true;
     }
 
     triggerOnce: boolean = false;
     onCollisionExit(other, self) {
         if (self.tag == 0 && other.node.name == 'StartCollider' && !this.triggerOnce) {
             this.triggerOnce = true;
-            this.setCoinPacks();
-            this.setCoinsPosition();
-            this.setCoinsPosition();
+            // this.setCoinPacks();
+            // this.setCoinsPosition();
+            // this.setCoinsPosition();
 
             // cloud/lightning
-            if (GameManager.currentDifficulty == Difficulty.Hard)
-                this.node.children[this.node.childrenCount - 1].active = true;
+            if (GameManager.currentDifficulty == Difficulty.Hard) {
+                // this.node.children[this.node.childrenCount - 1].active = true;
+            }
+
+            if (!this.node.children[0].active) {
+                // cc.systemEvent.emit(Renderer.TURN_ON, this.node);
+            }
 
             // landmass and rocks
             // for (let i = 0; i < self.node.children[0].childrenCount - 1; i++) {
@@ -145,34 +129,34 @@ export default class TurnMeOn extends cc.Component {
             // }
 
             // console.log("reached here" + this.node.name);
-            this.totalCount = this.node.children[0].childrenCount;
-            this.resetSequenceProps();
+            // this.totalCount = this.node.children[0].childrenCount;
+            // this.resetSequenceProps();
         }
 
-        if (self.tag == 2 && other.node.name == 'StartCollider') {
-            // landmass and rocks
-            for (let i = 0; i < self.node.children[0].childrenCount - 1; i++) {
-                if (self.node.children[0].children[i].getComponent(cc.RenderComponent) != null) {
-                    self.node.children[0].children[i].getComponent(cc.RenderComponent).enabled = true;
-                }
-                var grandchildcount = 0;
-                if (self.node.children[0].children[i].childrenCount > 0) {
-                    grandchildcount = self.node.children[0].children[i].children[0].childrenCount;
-                    if (grandchildcount > 0) {
-                        for (var j = 0; j < grandchildcount; j++) {
-                            if (self.node.children[0].children[i].children[0].children[j].getComponent(cc.RenderComponent) != null) {
-                                self.node.children[0].children[i].children[0].children[j].getComponent(cc.RenderComponent).enabled = true;
-                            }
-                        }
-                    }
-                }
-            }
-        }
+        // if (self.tag == 2 && other.node.name == 'StartCollider') {
+        // landmass and rocks
+        // for (let i = 0; i < self.node.children[0].childrenCount - 1; i++) {
+        //     if (self.node.children[0].children[i].getComponent(cc.RenderComponent) != null) {
+        //         self.node.children[0].children[i].getComponent(cc.RenderComponent).enabled = true;
+        //     }
+        //     var grandchildcount = 0;
+        //     if (self.node.children[0].children[i].childrenCount > 0) {
+        //         grandchildcount = self.node.children[0].children[i].children[0].childrenCount;
+        //         if (grandchildcount > 0) {
+        //             for (var j = 0; j < grandchildcount; j++) {
+        //                 if (self.node.children[0].children[i].children[0].children[j].getComponent(cc.RenderComponent) != null) {
+        //                     self.node.children[0].children[i].children[0].children[j].getComponent(cc.RenderComponent).enabled = true;
+        //                 }
+        //             }
+        //         }
+        //     }
+        // }
+        // }
     }
 
-    index: number = 0;
-    grandchildcountIndex: number = 0;
-    totalCount: number = 0;
+    // index: number = 0;
+    // grandchildcountIndex: number = 0;
+    // totalCount: number = 0;
     // resetDelayedLoopSequence() {
     //     this.index = 0;
     //     this.grandchildcountIndex = 0;
@@ -208,32 +192,32 @@ export default class TurnMeOn extends cc.Component {
     //     }
     // }
 
-    propsIndex: number = 0;
-    propsCount: number = 0;
-    sequenceProps: cc.ActionInterval;
-    resetSequenceProps() {
-        this.propsCount = this.node.children[0].children[this.totalCount - 1].childrenCount;
-        this.propsIndex = this.propsCount - 1;
-        this.startSequenceProps();
-    }
-    startSequenceProps() {
-        var time = cc.delayTime(0.2);
-        this.sequenceProps = cc.sequence(time, cc.callFunc(this.propsDelay, this));
-        this.node.runAction(this.sequenceProps.repeatForever());
-    }
-    propsDelay() {
-        if (this.propsIndex >= 0) {
-            if (this.node.children[0].children[this.totalCount - 1].children[this.propsIndex].getComponent(cc.RenderComponent) != null) {
-                this.node.children[0].children[this.totalCount - 1].children[this.propsIndex].getComponent(cc.RenderComponent).enabled = true;
-                if (GameManager.isHighEndDevice) {
-                    if (this.node.children[0].children[this.totalCount - 1].children[this.propsIndex].getComponent(dragonBones.ArmatureDisplay) != null)
-                        this.node.children[0].children[this.totalCount - 1].children[this.propsIndex].getComponent(dragonBones.ArmatureDisplay).timeScale = 0.5;
-                }
-            }
-            this.propsIndex--;
-        }
-        else {
-            this.node.stopAction(this.sequenceProps);
-        }
-    }
+    // propsIndex: number = 0;
+    // propsCount: number = 0;
+    // sequenceProps: cc.ActionInterval;
+    // resetSequenceProps() {
+    //     this.propsCount = this.node.children[0].children[this.totalCount - 1].childrenCount;
+    //     this.propsIndex = this.propsCount - 1;
+    //     this.startSequenceProps();
+    // }
+    // startSequenceProps() {
+    //     var time = cc.delayTime(0.2);
+    //     this.sequenceProps = cc.sequence(time, cc.callFunc(this.propsDelay, this));
+    //     this.node.runAction(this.sequenceProps.repeatForever());
+    // }
+    // propsDelay() {
+    //     if (this.propsIndex >= 0) {
+    //         if (this.node.children[0].children[this.totalCount - 1].children[this.propsIndex].getComponent(cc.RenderComponent) != null) {
+    //             this.node.children[0].children[this.totalCount - 1].children[this.propsIndex].getComponent(cc.RenderComponent).enabled = true;
+    //             if (GameManager.isHighEndDevice) {
+    //                 if (this.node.children[0].children[this.totalCount - 1].children[this.propsIndex].getComponent(dragonBones.ArmatureDisplay) != null)
+    //                     this.node.children[0].children[this.totalCount - 1].children[this.propsIndex].getComponent(dragonBones.ArmatureDisplay).timeScale = 0.5;
+    //             }
+    //         }
+    //         this.propsIndex--;
+    //     }
+    //     else {
+    //         this.node.stopAction(this.sequenceProps);
+    //     }
+    // }
 }

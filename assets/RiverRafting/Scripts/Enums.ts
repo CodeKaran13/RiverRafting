@@ -3,3 +3,8 @@ export const enum Difficulty {
     Normal = 1,
     Hard = 2
 }
+
+export const enum Renderer {
+    TURN_ON = 'turnon',
+    TURN_OFF = 'turnoff'
+}

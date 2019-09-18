@@ -10,7 +10,11 @@ const { ccclass, property } = cc._decorator;
 export default class PoolingSystem extends cc.Component {
     //All river prefabs refs
     @property(cc.Prefab)
-    PrefabRiverMapSet0: cc.Prefab = null;
+    EasyPrefabRiverMapSet0: cc.Prefab = null;
+    @property(cc.Prefab)
+    MediumPrefabRiverMapSet0: cc.Prefab = null;
+    @property(cc.Prefab)
+    HardPrefabRiverMapSet0: cc.Prefab = null;
     @property(cc.Prefab)
     PrefabRiverMapSet1: cc.Prefab = null;
     @property(cc.Prefab)
@@ -24,7 +28,9 @@ export default class PoolingSystem extends cc.Component {
     @property(cc.Prefab)
     PrefabRiverMapSet6: cc.Prefab = null;
 
-    RiverMapSet0: cc.NodePool;
+    EasyRiverMapSet0: cc.NodePool;
+    MediumRiverMapSet0: cc.NodePool;
+    HardRiverMapSet0: cc.NodePool;
     RiverMapSet1: cc.NodePool;
     RiverMapSet2: cc.NodePool;
     RiverMapSet3: cc.NodePool;
