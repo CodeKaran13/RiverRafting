@@ -2,6 +2,7 @@ import GameManager, { GameState } from "./Managers/GameManager";
 import { Difficulty } from "./Enums";
 import HealthManager from "./Managers/HealthManager";
 import CollisionDetection from "./Environment/CollisionDetection";
+import BonusSystem from "./GamePlay/BonusSystem";
 
 const { ccclass, property } = cc._decorator;
 
@@ -37,8 +38,6 @@ export default class Player extends cc.Component {
     }
 
     update(dt) {
-        // console.log('' + Math.floor(1/dt));
-        // console.log(this.IsCollidingBound());
 
         if (GameManager.currentGameState == GameState.InGame) {
             if (!this.HasAccelerationStarted) {
@@ -80,9 +79,9 @@ export default class Player extends cc.Component {
         this.startAccelerating();
     }
 
-    ApplyBrakeSequence() {
-        this.startApplyingBrakes();
-    }
+    // ApplyBrakeSequence() {
+    //     this.startApplyingBrakes();
+    // }
 
     IsCollidingBound() {
         var results = cc.director.getPhysicsManager().rayCast(this.node.position, this.node.children[2].convertToWorldSpaceAR(cc.Vec2.ZERO), cc.RayCastType.All);
@@ -115,13 +114,8 @@ export default class Player extends cc.Component {
         this.currentAction = toLeft;
         this.node.children[0].children[0].runAction(tilt);
 
-
-        // this.node.children[0].children[0].eulerAngles = new cc.Vec3(0, 0, 15);
-
         this.node.children[4].getComponent(dragonBones.ArmatureDisplay).timeScale = 0;
         this.node.children[3].getComponent(dragonBones.ArmatureDisplay).timeScale = 3;
-
-        // this.CheckBound();
     }
 
     RotateRight() {
@@ -132,13 +126,8 @@ export default class Player extends cc.Component {
 
         this.node.children[0].children[0].runAction(tilt);
 
-
-        // this.node.children[0].children[0].eulerAngles = new cc.Vec3(0, 0, -15);
-
         this.node.children[4].getComponent(dragonBones.ArmatureDisplay).timeScale = 3;
         this.node.children[3].getComponent(dragonBones.ArmatureDisplay).timeScale = 0;
-
-        // this.CheckBound();
     }
 
     RotateToCenter() {
@@ -149,12 +138,8 @@ export default class Player extends cc.Component {
 
         this.node.children[0].children[0].runAction(tilt);
 
-        // this.node.children[0].children[0].eulerAngles = new cc.Vec3(0, 0, 0);
-
         this.node.children[4].getComponent(dragonBones.ArmatureDisplay).timeScale = 3;
         this.node.children[3].getComponent(dragonBones.ArmatureDisplay).timeScale = 3;
-
-        // this.CheckBound();
     }
 
     StartAction(action: cc.Action) {
@@ -165,35 +150,34 @@ export default class Player extends cc.Component {
         this.node.stopAction(action);
     }
 
-    resetMovementSpeed() {
-        // console.log('reset movement speed');
-        this.node.stopAction(this.brakeSequence);
-        this.node.stopAction(this.brakeSequence);
-        this.startAccelerating();
-    }
+    // resetMovementSpeed() {
+    //     // console.log('reset movement speed');
+    //     this.node.stopAction(this.brakeSequence);
+    //     this.node.stopAction(this.brakeSequence);
+    //     this.startAccelerating();
+    // }
 
     // When the player is turning, lower the movement speed/apply brakes.
-    startApplyingBrakes() {
-        // console.log('start applying brakes');
-        var time = cc.delayTime(0.2);
-        this.brakeSequence = cc.sequence(time, cc.callFunc(this.applyBrake, this));
-        this.node.runAction(this.brakeSequence.repeatForever());
-    }
+    // startApplyingBrakes() {
+    //     // console.log('start applying brakes');
+    //     var time = cc.delayTime(0.2);
+    //     this.brakeSequence = cc.sequence(time, cc.callFunc(this.applyBrake, this));
+    //     this.node.runAction(this.brakeSequence.repeatForever());
+    // }
 
-    applyBrake() {
-        // console.log('apply brakes');
-        // console.log('movement speed: ' + this.movementSpeed);
-        this.movementSpeed -= 1;
-        if (this.movementSpeed <= this.MINMOVEMENTSPEED) {
-            // console.log('min movement speed');
-            this.movementSpeed = this.MINMOVEMENTSPEED;
-            this.node.stopAction(this.brakeSequence);
-        }
-    }
+    // applyBrake() {
+    //     // console.log('apply brakes');
+    //     // console.log('movement speed: ' + this.movementSpeed);
+    //     this.movementSpeed -= 1;
+    //     if (this.movementSpeed <= this.MINMOVEMENTSPEED) {
+    //         // console.log('min movement speed');
+    //         this.movementSpeed = this.MINMOVEMENTSPEED;
+    //         this.node.stopAction(this.brakeSequence);
+    //     }
+    // }
 
     // Start acceleration after brakes are applied.
     startAccelerating() {
-        // console.log('start accelerating');
         var time = cc.delayTime(0.2);
         this.accelerateSequence = cc.sequence(time, cc.callFunc(this.accelerate, this));
         this.node.runAction(this.accelerateSequence.repeatForever());
@@ -201,7 +185,6 @@ export default class Player extends cc.Component {
 
     accelerate() {
         this.movementSpeed += 0.2;
-        // console.log('movement speed: ' + this.movementSpeed);
         if (this.movementSpeed >= this.MAXMOVEMENTSPEED) {
             this.movementSpeed = this.MAXMOVEMENTSPEED;
             this.node.stopAction(this.accelerateSequence);
@@ -260,7 +243,7 @@ export default class Player extends cc.Component {
             var time = cc.delayTime(0.03);
             this.dragSequence = cc.sequence(time, cc.callFunc(this.dragRaftToCyclone, this, pos));
             this.node.runAction(this.dragSequence.repeatForever());
-            this.node.getComponent(CollisionDetection)._bonusSystem.stopAction();
+            BonusSystem.Instance.stopAction();
             // this.startCycloneEffect();
         }
     }

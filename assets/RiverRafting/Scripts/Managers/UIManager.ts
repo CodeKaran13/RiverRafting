@@ -1,12 +1,13 @@
 import MatchManager from "./MatchManager";
 import GameManager, { GameState } from "./GameManager";
 import HealthManager from "./HealthManager";
+import TimeManager from "./TimeManager";
+import ScoreManager from "./ScoreManager";
 
 const { ccclass, property } = cc._decorator;
 
 @ccclass
-export default class UIManager extends cc.Component
-{
+export default class UIManager extends cc.Component {
     // Canvas Windows
     @property({
         type: cc.Node,
@@ -79,18 +80,6 @@ export default class UIManager extends cc.Component
 
     // All Script Refs
     @property({
-        type: MatchManager,
-        visible: true,
-        serializable: true
-    })
-    _matchManager: MatchManager = null;
-    @property({
-        type: GameManager,
-        visible: true,
-        serializable: true
-    })
-    _gameManager: GameManager = null;
-    @property({
         type: HealthManager,
         visible: true,
         serializable: true
@@ -101,22 +90,22 @@ export default class UIManager extends cc.Component
     @property(cc.Sprite)
     healthBarSprite: cc.Sprite = null;
 
-    onLoad()
-    {
-        this._matchManager._UIManager = this;
+    public static Instance: UIManager = null;
+
+    onLoad() {
+        // this._matchManager._UIManager = this;
         this._healthManager._UIManager = this;
-        // this._matchManager = this._matchManagerNode.getComponent(MatchManager);
     }
 
-    start()
-    {
-
+    start() {
+        if (UIManager.Instance == null) {
+            UIManager.Instance = this;
+        }
     }
 
     // All UI update functions
 
-    OnUIUpdateHealth(health: number)
-    {
+    OnUIUpdateHealth(health: number) {
         this.HealthLabel.string = '' + health;
 
         var fillValue = health / 100;
@@ -124,33 +113,29 @@ export default class UIManager extends cc.Component
         this.healthBarSprite.fillRange = fillValue;
     }
 
-    OnUIUpdateScore(score: number)
-    {
+    OnUIUpdateScore(score: number) {
         this.ScoreLabel.string = '' + score;
     }
 
-    OpenSubmitWindow()
-    {
-        this.CleanRunBonusLabel.string = '' + this._matchManager._scoreManager.cleanRunBonus;
-        this.HumansSavedLabel.string = '' + this._matchManager._scoreManager.totalHumanSaved + ' X ' + this._matchManager._scoreManager.perHumanSavedBonus;
-        this.CoinsCollectedLabel.string = '' + this._matchManager._scoreManager.totalCoinsCollected + ' X ' + this._matchManager._scoreManager.perCoinBonus;
-        this.SubmitScoreLabel.string = '' + this._matchManager._scoreManager.totalScore;
+    OpenSubmitWindow() {
+        this.CleanRunBonusLabel.string = '' + ScoreManager.Instance.cleanRunBonus;
+        this.HumansSavedLabel.string = '' + ScoreManager.Instance.totalHumanSaved + ' X ' + ScoreManager.Instance.perHumanSavedBonus;
+        this.CoinsCollectedLabel.string = '' + ScoreManager.Instance.totalCoinsCollected + ' X ' + ScoreManager.Instance.perCoinBonus;
+        this.SubmitScoreLabel.string = '' + ScoreManager.Instance.totalScore;
         this.SubmitScoreWindow.active = true;
     }
 
-    CloseSubmitWindow()
-    {
+    CloseSubmitWindow() {
         this.SubmitScoreWindow.active = false;
     }
 
     // All Button functions
-    OnPlayButtonClick()
-    {
+    OnPlayButtonClick() {
         GameManager.currentGameState = GameState.InGame;
 
-        this._matchManager._timeManager.restartTimer();
-        this._matchManager._timeManager.startTimer();
-        this._matchManager.StartGame();
+        TimeManager.Instance.restartTimer();
+        TimeManager.Instance.startTimer();
+        MatchManager.Instance.StartGame();
 
         // close main menu window
 
@@ -159,37 +144,30 @@ export default class UIManager extends cc.Component
     }
 
     // Final submit button
-    OnSubmitButtonClick()
-    {
-        window.$Arena.submitScore(this._matchManager._scoreManager.totalScore, GameManager.Seed);
+    OnSubmitButtonClick() {
+        window.$Arena.submitScore(ScoreManager.Instance.totalScore, GameManager.Seed);
     }
 
     // In game cross button functions
-    OnGameCrossButtonClick()
-    {
+    OnGameCrossButtonClick() {
         this.GameCrossWindow.active = true;
     }
-    OnGameYesButtonClick()
-    {
-        window.$Arena.submitScore(this._matchManager._scoreManager.totalScore, GameManager.Seed);
+    OnGameYesButtonClick() {
+        window.$Arena.submitScore(ScoreManager.Instance.totalScore, GameManager.Seed);
     }
-    OnGameNoButtonClick()
-    {
+    OnGameNoButtonClick() {
         this.GameCrossWindow.active = false;
     }
 
     // Menu cross button functions
-    OnMenuCrossButtonClick()
-    {
+    OnMenuCrossButtonClick() {
         this.MenuCrossWindow.active = true;
     }
-    OnMenuYesButtonClick()
-    {
-        this._matchManager._scoreManager.totalScore = 0;
-        window.$Arena.submitScore(this._matchManager._scoreManager.totalScore, GameManager.Seed);
+    OnMenuYesButtonClick() {
+        ScoreManager.Instance.totalScore = 0;
+        window.$Arena.submitScore(ScoreManager.Instance.totalScore, GameManager.Seed);
     }
-    OnMenuNoButtonClick()
-    {
+    OnMenuNoButtonClick() {
         this.MenuCrossWindow.active = false;
     }
 }

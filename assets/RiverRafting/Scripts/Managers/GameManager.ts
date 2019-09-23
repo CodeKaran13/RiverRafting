@@ -1,9 +1,11 @@
 import { Difficulty } from "../Enums";
 import MatchManager from "./MatchManager";
 import BonusSystem from "../GamePlay/BonusSystem";
+import TimeManager from "./TimeManager";
+import UIManager from "./UIManager";
+import ScoreManager from "./ScoreManager";
 
-export enum GameState
-{
+export enum GameState {
     PreGame = 0,
     InGame = 1,
     PostGame = 2
@@ -12,9 +14,15 @@ export enum GameState
 const { ccclass, property } = cc._decorator;
 
 @ccclass
-export default class GameManager extends cc.Component
-{
+export default class GameManager extends cc.Component {
     _matchManager: MatchManager = null;
+
+    @property(cc.Animation)
+    ImpactPE: cc.Animation = null;
+    @property(cc.Animation)
+    leftWindEffect: cc.Animation = null;
+    @property(cc.Animation)
+    rightWindEffect: cc.Animation = null;
 
     public static currentGameState: GameState = GameState.PreGame;
     public static currentDifficulty: Difficulty = Difficulty.Easy;
@@ -22,8 +30,9 @@ export default class GameManager extends cc.Component
     public static Seed: number = null;
     public static isHighEndDevice: boolean = true;
 
-    onLoad()
-    {
+    public static Instance: GameManager = null;
+
+    onLoad() {
         cc.director.getPhysicsManager().enabled = true;
         cc.director.getCollisionManager().enabled = true;
 
@@ -37,24 +46,23 @@ export default class GameManager extends cc.Component
         //     cc.PhysicsManager.DrawBits.e_shapeBit;
     }
 
-    start()
-    {
+    start() {
+        if (GameManager.Instance == null) {
+            GameManager.Instance = this;
+        }
+
         // this.GetData();
     }
-    update(dt)
-    {
-        if(Math.floor(1/dt) <= 35)
-        {
+    update(dt) {
+        if (Math.floor(1 / dt) <= 35) {
             GameManager.isHighEndDevice = false;
         }
-        else
-        {
+        else {
             GameManager.isHighEndDevice = true;
         }
     }
 
-    GetData()
-    {
+    GetData() {
         // var vars = {};
         // var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value)
         // {
@@ -74,17 +82,39 @@ export default class GameManager extends cc.Component
 
 
         var gamedata = window.$Arena.getGameData();
-        this._matchManager._timeManager.totaltime = gamedata.play_time_seconds;
+        TimeManager.Instance.totaltime = gamedata.play_time_seconds;
         GameManager.Seed = gamedata.seed;
     }
 
-    OnGameOver()
-    {
-        // window.$Arena.submitScore(this._matchManager._scoreManager.totalScore, GameManager.Seed);
-        this._matchManager._scoreManager.AddHumanSavedBonus();
-        this._matchManager._scoreManager.AddCoinsBonus();
+    PlayImpactEffectAtPos(pos: cc.Vec2) {
+        this.ImpactPE.node.setPosition(pos);
+        this.ImpactPE.node.active = true;
+        this.ImpactPE.play();
+    }
+
+    PlayWindEffect(direction: number) {
+        if (direction == -1) {
+            this.leftWindEffect.node.active = true;
+            this.leftWindEffect.play();
+        }
+        else {
+            this.rightWindEffect.node.active = true;
+            this.rightWindEffect.play();
+        }
+    }
+
+    StopWindEffect() {
+        this.leftWindEffect.stop();
+        this.leftWindEffect.node.active = false;
+        this.rightWindEffect.stop();
+        this.rightWindEffect.node.active = false;
+    }
+
+    OnGameOver() {
+        ScoreManager.Instance.AddHumanSavedBonus();
+        ScoreManager.Instance.AddCoinsBonus();
         BonusSystem.Instance.stopAction();
 
-        this._matchManager._UIManager.OpenSubmitWindow();
+        UIManager.Instance.OpenSubmitWindow();
     }
 }

@@ -69,7 +69,7 @@
     "_skewX": 0,
     "_skewY": 0,
     "_is3DNode": false,
-    "groupIndex": 0,
+    "groupIndex": 6,
     "_id": ""
   },
   {
@@ -114,13 +114,15 @@
       "__id__": 1
     },
     "_enabled": true,
-    "_defaultClip": null,
+    "_defaultClip": {
+      "__uuid__": "16850b0d-f428-467b-b7fc-953c1c8321ff"
+    },
     "_clips": [
       {
         "__uuid__": "16850b0d-f428-467b-b7fc-953c1c8321ff"
       }
     ],
-    "playOnLoad": false,
+    "playOnLoad": true,
     "_id": ""
   },
   {

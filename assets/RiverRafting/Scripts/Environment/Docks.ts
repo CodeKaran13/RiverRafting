@@ -31,15 +31,15 @@ export default class Docks extends Obstacles
 
     update(dt)
     {
-        if (this.node.active)
-        {
-            if (Player.Instance.node.position.y - 500 > this.myPos)
-            {
-                // console.log('player is above me');
-                // this._obstaclePool.addObstacleBackToPool(this.node);
-                this.node.active = true;
-            }
-        }
+        // if (this.node.active)
+        // {
+        //     if (Player.Instance.node.position.y - 500 > this.myPos)
+        //     {
+        //         // console.log('player is above me');
+        //         // this._obstaclePool.addObstacleBackToPool(this.node);
+        //         this.node.active = false;
+        //     }
+        // }
     }
 
     onCollisionEnter(other, self)

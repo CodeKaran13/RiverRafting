@@ -86,8 +86,8 @@ export default class BonusSystem extends cc.Component {
     cleanRunCountdown() {
         this.cleanTime++;
 
-        this._scoreManager.AddBonus(this.bonusReward * this.bonusMultiplier);
-        this._scoreManager.AddScore(this.bonusReward * this.bonusMultiplier);
+        ScoreManager.Instance.AddBonus(this.bonusReward * this.bonusMultiplier);
+        ScoreManager.Instance.AddScore(this.bonusReward * this.bonusMultiplier);
         this.bonusMultiplier += 0.05;
 
         this.onUIUpdate();

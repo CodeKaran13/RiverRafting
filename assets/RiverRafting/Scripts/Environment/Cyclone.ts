@@ -31,7 +31,7 @@ export default class Cyclone extends Obstacles {
     }
 
     update(dt) {
-        if (this.node.active) {
+        if (this.node.group == 'default') {
             // console.log('cyclone pos: ' + this.myPos);
             // console.log('player pos: ' + this._player.position);
             if (Player.Instance.node.position.y - 500 > this.myPos.y) {

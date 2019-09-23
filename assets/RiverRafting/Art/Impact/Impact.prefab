@@ -54,8 +54,8 @@
     },
     "_position": {
       "__type__": "cc.Vec3",
-      "x": 0,
-      "y": 0,
+      "x": 283,
+      "y": 749,
       "z": 0
     },
     "_scale": {
@@ -290,7 +290,9 @@
       "__id__": 1
     },
     "_enabled": true,
-    "_defaultClip": null,
+    "_defaultClip": {
+      "__uuid__": "44e748ff-f0d7-4a58-8082-233a91f4ee17"
+    },
     "_clips": [
       {
         "__uuid__": "44e748ff-f0d7-4a58-8082-233a91f4ee17"

@@ -1,6 +1,5 @@
 import Player from "../Player";
 import CameraController from "../CameraController";
-import GameManager from "../Managers/GameManager";
 
 const { ccclass, property } = cc._decorator;
 
@@ -58,7 +57,7 @@ export default class InputHandler extends cc.Component {
             // this._cameraController.shouldZoomIn = false;
             // this._cameraController.startNormalize();
             // this._playerRef.restartCounter();
-            this.onKeyUp();
+            // this.onKeyUp();
         }, this.node);
     }
 
