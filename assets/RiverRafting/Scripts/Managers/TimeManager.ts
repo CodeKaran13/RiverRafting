@@ -11,20 +11,6 @@ export default class TimeManager extends cc.Component {
     @property(cc.Label)
     TimeLabel: cc.Label = null;
 
-    _matchManager: MatchManager = null;
-    @property({
-        type: GameManager,
-        visible: true,
-        serializable: true
-    })
-    _gameManagerRef: GameManager = null;
-    @property({
-        type: Player,
-        visible: true,
-        serializable: true
-    })
-    _player: Player = null;
-
     @property({
         visible: true,
         serializable: true
@@ -34,6 +20,14 @@ export default class TimeManager extends cc.Component {
     ShouldTimePass: boolean = true;
     currentime: number;
     sequenceas;
+
+    public static Instance: TimeManager = null;
+
+    start() {
+        if (TimeManager.Instance == null) {
+            TimeManager.Instance = this;
+        }
+    }
 
     restartTimer() {
         this.currentime = this.totaltime;
@@ -57,8 +51,8 @@ export default class TimeManager extends cc.Component {
                 else if (this.currentime < 120 && this.currentime >= 60) {
                     GameManager.currentDifficulty = Difficulty.Normal;
                     if (Player.Instance.MAXMOVEMENTSPEED != 4) {
-                        this._player.MAXMOVEMENTSPEED = 4;
-                        this._player.StartAccelerationSequence();
+                        Player.Instance.MAXMOVEMENTSPEED = 4;
+                        Player.Instance.StartAccelerationSequence();
                         Player.Instance.windDir = this.getRandomWindDir();
                         GameManager.Instance.PlayWindEffect(Player.Instance.windDir);
                         Player.Instance.IsWindy = true;

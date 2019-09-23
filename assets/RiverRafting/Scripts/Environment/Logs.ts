@@ -24,11 +24,11 @@ export default class Logs extends Obstacles {
         this.myAnimator.stop();
     }
     update(dt) {
-        if (this.node.active) {
-            if (Player.Instance.node.position.y - 500 > this.myPos) {
-                ObstaclePool.Instance.addObstacleBackToPool(this.node);
-            }
-        }
+        // if (this.node.active) {
+        //     if (Player.Instance.node.position.y - 500 > this.myPos) {
+        //         ObstaclePool.Instance.addObstacleBackToPool(this.node);
+        //     }
+        // }
     }
 
     onCollisionEnter(other, self) {

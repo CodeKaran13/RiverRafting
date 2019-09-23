@@ -1,6 +1,9 @@
 import { Difficulty } from "../Enums";
 import MatchManager from "./MatchManager";
 import BonusSystem from "../GamePlay/BonusSystem";
+import TimeManager from "./TimeManager";
+import UIManager from "./UIManager";
+import ScoreManager from "./ScoreManager";
 
 export enum GameState {
     PreGame = 0,
@@ -79,11 +82,11 @@ export default class GameManager extends cc.Component {
 
 
         var gamedata = window.$Arena.getGameData();
-        this._matchManager._timeManager.totaltime = gamedata.play_time_seconds;
+        TimeManager.Instance.totaltime = gamedata.play_time_seconds;
         GameManager.Seed = gamedata.seed;
     }
 
-    PlayImapactEffectAtPos(pos: cc.Vec2) {
+    PlayImpactEffectAtPos(pos: cc.Vec2) {
         this.ImpactPE.node.setPosition(pos);
         this.ImpactPE.node.active = true;
         this.ImpactPE.play();
@@ -108,11 +111,10 @@ export default class GameManager extends cc.Component {
     }
 
     OnGameOver() {
-        // window.$Arena.submitScore(this._matchManager._scoreManager.totalScore, GameManager.Seed);
-        this._matchManager._scoreManager.AddHumanSavedBonus();
-        this._matchManager._scoreManager.AddCoinsBonus();
+        ScoreManager.Instance.AddHumanSavedBonus();
+        ScoreManager.Instance.AddCoinsBonus();
         BonusSystem.Instance.stopAction();
 
-        this._matchManager._UIManager.OpenSubmitWindow();
+        UIManager.Instance.OpenSubmitWindow();
     }
 }

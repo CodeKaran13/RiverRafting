@@ -27,28 +27,6 @@ export default class MatchManager extends cc.Component {
         serializable: true
     })
     _poolingSystem: PoolingSystem = null;
-    @property({
-        type: TimeManager,
-        visible: true,
-        serializable: true
-    })
-    _timeManager: TimeManager = null;
-    @property({
-        type: GameManager,
-        visible: true,
-        serializable: true
-    })
-    _gameManager: GameManager = null;
-    _scoreManager: ScoreManager = null;
-    _UIManager: UIManager = null;
-    @property({
-        type: BonusSystem,
-        visible: true,
-        serializable: true
-    })
-    _bonusSystem: BonusSystem = null;
-    // _obstacleSpawner: ObstacleSpawner = null;
-    // _itemSpawner: ItemSpawner = null;
 
     // Script variables
     totalHeight: number = 0;
@@ -62,11 +40,6 @@ export default class MatchManager extends cc.Component {
     public static Instance: MatchManager = null;
 
     onLoad() {
-        this._timeManager._matchManager = this;
-        this._gameManager._matchManager = this;
-
-        // this._itemSpawner = this.node.getComponent(ItemSpawner);
-
         this.totalHeight = 1920;
     }
 
@@ -119,7 +92,7 @@ export default class MatchManager extends cc.Component {
     }
 
     StartGame() {
-        this.spawnNextWave(1920);
+        // this.spawnNextWave(1920);
     }
 
     @property
@@ -166,13 +139,16 @@ export default class MatchManager extends cc.Component {
                         var nextMap = cc.instantiate(PoolingSystem.Instance.MediumPrefabRiverMapSet0);
                     }
                 }
-                else if (this.counter >= this.totalHardPrefabsToSpawn && this.counter < (this.totalEasyPrefabsToSpawn + this.totalMediumPrefabsToSpawn + this.totalHardPrefabsToSpawn)) {
+                else if (this.counter >= this.totalHardPrefabsToSpawn) {
                     if (PoolingSystem.Instance.HardRiverMapSet0.size() > 0) {
                         var nextMap = PoolingSystem.Instance.HardRiverMapSet0.get();
                     }
                     else {
                         var nextMap = cc.instantiate(PoolingSystem.Instance.HardPrefabRiverMapSet0);
                     }
+                }
+                else {
+                    console.log('total limit exceeded.');
                 }
                 this.counter++;
                 this.setRendererOff(nextMap);
@@ -235,7 +211,7 @@ export default class MatchManager extends cc.Component {
                 break;
         }
     }
-    prefabArray: Number[] = [0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4, 5, 5, 5, 5, 5];
+    // prefabArray: Number[] = [0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4, 5, 5, 5, 5, 5];
     getRandomNumber() {
         // will return 0, 1, 2, 3, 4, 5, 6
         // var rand = this.prefabArray.splice(Math.floor(Math.random() * this.prefabArray.length), 1);
@@ -301,11 +277,12 @@ export default class MatchManager extends cc.Component {
         this.WavePrefabs.addChild(wavePrefab);
 
         wavePrefab.setPosition(new cc.Vec2(0, this.totalWaveHeight));
+        var waves = wavePrefab.getComponent(Waves);
         // console.log('pos: ' + wavePrefab.convertToWorldSpaceAR(cc.Vec2.ZERO));
-        wavePrefab.getComponent(Waves).myPos = wavePrefab.convertToWorldSpaceAR(cc.Vec2.ZERO);
+        waves.myPos = wavePrefab.convertToWorldSpaceAR(cc.Vec2.ZERO);
 
         wavePrefab.active = true;
-        wavePrefab.getComponent(Waves).IsActive = true;
-        wavePrefab.getComponent(Waves).CheckPlayerLocation = true;
+        waves.IsActive = true;
+        waves.CheckPlayerLocation = true;
     }
 }

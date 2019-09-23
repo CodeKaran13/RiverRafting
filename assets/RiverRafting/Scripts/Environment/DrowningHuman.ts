@@ -26,12 +26,12 @@ export default class DrowningHuman extends Collectibles {
         this.myPos = 0;
     }
     update(dt) {
-        if (this.node.active) {
-            if (Player.Instance.node.position.y - 500 > this.myPos) {
-                // console.log('drowning human, player is above me');
-                CollectiblesPool.Instance.addCollectibleBackToPool(this.node);
-            }
-        }
+        // if (this.node.active) {
+        //     if (Player.Instance.node.position.y - 500 > this.myPos) {
+        //         // console.log('drowning human, player is above me');
+        //         CollectiblesPool.Instance.addCollectibleBackToPool(this.node);
+        //     }
+        // }
     }
 
     onCollisionEnter(other, self) {

@@ -1,24 +1,9 @@
 import UIManager from "./UIManager";
-import MatchManager from "./MatchManager";
-import BonusSystem from "../GamePlay/BonusSystem";
 
 const { ccclass, property } = cc._decorator;
 
 @ccclass
 export default class ScoreManager extends cc.Component {
-    //All script refs
-    @property({
-        type: MatchManager,
-        visible: true,
-        serializable: true
-    })
-    _matchManager: MatchManager = null;
-    @property({
-        type: UIManager,
-        visible: true,
-        serializable: true
-    })
-    _UIManager: UIManager = null;
 
     @property
     perCoinBonus: number = 10;
@@ -34,10 +19,6 @@ export default class ScoreManager extends cc.Component {
 
     public static Instance: ScoreManager = null;
 
-    onLoad() {
-        this._matchManager._bonusSystem._scoreManager = this;
-        this._matchManager._scoreManager = this;
-    }
     start() {
         if (ScoreManager.Instance == null) {
             ScoreManager.Instance = this;
@@ -57,7 +38,7 @@ export default class ScoreManager extends cc.Component {
 
     AddScore(value: number) {
         this.totalScore += value;
-        this._UIManager.OnUIUpdateScore(this.totalScore);
+        UIManager.Instance.OnUIUpdateScore(this.totalScore);
     }
     SubScore(value: number) {
         this.totalScore -= value;
@@ -65,6 +46,6 @@ export default class ScoreManager extends cc.Component {
             this.totalScore = 0;
         }
 
-        this._UIManager.OnUIUpdateScore(this.totalScore);
+        UIManager.Instance.OnUIUpdateScore(this.totalScore);
     }
 }

@@ -31,7 +31,7 @@ export default class CollisionDetection extends cc.Component {
 
             var position = contact.getWorldManifold().points[0];
             // console.log('' + position);
-            GameManager.Instance.PlayImapactEffectAtPos(position);
+            GameManager.Instance.PlayImpactEffectAtPos(position);
         }
     }
 }

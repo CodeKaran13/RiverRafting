@@ -1,40 +1,18 @@
 import GameManager from "../Managers/GameManager";
 import { Difficulty, Renderer } from "../Enums";
 import MatchManager from "../Managers/MatchManager";
-import { TEST } from "../EventSystem/Emitter";
 
 const { ccclass, property } = cc._decorator;
 
 @ccclass
 export default class TurnMeOn extends cc.Component {
-    // All class Refs
 
     delaySequence: cc.ActionInterval;
 
     onEnable() {
         this.setCoinPacks();
-        this.setCoinsPosition();
-        this.setCoinsPosition();
-    }
-
-    onSetPosition() {
-        // console.log('assigning spawn positions');
-        // for (let i = 0; i < this.heartSpawnLocations.length; i++) {
-        //     this._itemSpawner.healthSpawnPos[i] = null;
-        //     this._itemSpawner.healthSpawnPos[i] = this.heartSpawnLocations[i];
-        // }
-        // for (let i = 0; i < this.humanSpawnLocation.length; i++) {
-        //     this._itemSpawner.humanSpawnPos[i] = null;
-        //     this._itemSpawner.humanSpawnPos[i] = this.humanSpawnLocation[i];
-        // }
-        // for (let i = 0; i < this.cycloneSpawnLocation.length; i++) {
-        //     this._obstacleSpawner.CycloneSpawnPos[i] = null;
-        //     this._obstacleSpawner.CycloneSpawnPos[i] = this.cycloneSpawnLocation[i];
-        // }
-        // for (let i = 0; i < this.cycloneSpawnLocation.length; i++) {
-        //     this._obstacleSpawner.LogsSpawnPos[i] = null;
-        //     this._obstacleSpawner.LogsSpawnPos[i] = this.logsSpawnLocation[i];
-        // }
+        this.setCoinsPackActive();
+        // this.setCoinsPackActive();
     }
 
     array: number[] = [];
@@ -76,8 +54,8 @@ export default class TurnMeOn extends cc.Component {
         var randIndex = Math.floor(Math.random() * this.array.length);
         return this.array.splice(randIndex, 1);
     }
-    indexPos: number = 0;
-    setCoinsPosition() {
+    // indexPos: number = 0;
+    setCoinsPackActive() {
         var rand = this.getRandomCoinPack();
         // console.log('setting coins pack: #', rand);
         // if (GameManager.currentDifficulty == Difficulty.Easy) {
@@ -91,24 +69,31 @@ export default class TurnMeOn extends cc.Component {
         // }
 
         this.node.children[0].children[MatchManager.easyIndex].children[rand[0]].active = true;
+
+        // for (let i = 0; i < this.node.children[0].children[MatchManager.easyIndex].children[rand[0]].childrenCount; i++)
+        //     this.node.children[0].children[MatchManager.easyIndex].children[rand[0]].children[i].group = 'default';
     }
 
     triggerOnce: boolean = false;
     onCollisionExit(other, self) {
         if (self.tag == 0 && other.node.name == 'StartCollider' && !this.triggerOnce) {
             this.triggerOnce = true;
-            // this.setCoinPacks();
-            // this.setCoinsPosition();
-            // this.setCoinsPosition();
 
             // cloud/lightning
             if (GameManager.currentDifficulty == Difficulty.Hard) {
                 // this.node.children[this.node.childrenCount - 1].active = true;
             }
 
-            if (!this.node.children[0].active) {
-                // cc.systemEvent.emit(Renderer.TURN_ON, this.node);
-            }
+            this.node.children[0].children[0].children[0].group = 'default';
+            this.node.children[0].children[0].children[2].group = 'default';
+
+            // for (let i = 0; i < this.node.children[0].children[MatchManager.easyIndex].childrenCount; i++) {
+            //     if (this.node.children[0].children[MatchManager.easyIndex].children[i].active) {
+            //         for (let j = 0; j < this.node.children[0].children[MatchManager.easyIndex].children[i].childrenCount; j++) {
+            //             this.node.children[0].children[MatchManager.easyIndex].children[i].children[j].group = 'default';
+            //         }
+            //     }
+            // }
 
             // landmass and rocks
             // for (let i = 0; i < self.node.children[0].childrenCount - 1; i++) {
@@ -132,7 +117,7 @@ export default class TurnMeOn extends cc.Component {
             // this.totalCount = this.node.children[0].childrenCount;
             // this.resetSequenceProps();
         }
-
+        
         // if (self.tag == 2 && other.node.name == 'StartCollider') {
         // landmass and rocks
         // for (let i = 0; i < self.node.children[0].childrenCount - 1; i++) {
