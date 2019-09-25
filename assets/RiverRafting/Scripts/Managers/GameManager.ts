@@ -50,16 +50,16 @@ export default class GameManager extends cc.Component {
         if (GameManager.Instance == null) {
             GameManager.Instance = this;
         }
-        // this.GetData();
+        this.GetData();
     }
-    update(dt) {
-        if (Math.floor(1 / dt) <= 35) {
-            GameManager.isHighEndDevice = false;
-        }
-        else {
-            GameManager.isHighEndDevice = true;
-        }
-    }
+    // update(dt) {
+    //     if (Math.floor(1 / dt) <= 35) {
+    //         GameManager.isHighEndDevice = false;
+    //     }
+    //     else {
+    //         GameManager.isHighEndDevice = true;
+    //     }
+    // }
 
     GetData() {
         // var vars = {};

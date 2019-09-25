@@ -11,7 +11,7 @@ export default class TurnMeOn extends cc.Component {
     onEnable() {
         this.setCoinPacks();
         this.setCoinsPackActive();
-        this.setCoinsPackActive();
+        // this.setCoinsPackActive();
     }
 
     array: number[] = [];
