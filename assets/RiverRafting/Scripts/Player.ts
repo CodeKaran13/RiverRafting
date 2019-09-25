@@ -3,6 +3,7 @@ import { Difficulty } from "./Enums";
 import HealthManager from "./Managers/HealthManager";
 import CollisionDetection from "./Environment/CollisionDetection";
 import BonusSystem from "./GamePlay/BonusSystem";
+import Cyclone from "./Environment/Cyclone";
 
 const { ccclass, property } = cc._decorator;
 
@@ -280,7 +281,8 @@ export default class Player extends cc.Component {
         else {
             this.node.stopAction(this.cycloneSequence);
             this.node.stopAction(this.dragSequence);
-            node.active = false;
+            // node.active = false;
+            node.getComponent(Cyclone).changeToCullGroup();
             this.reachedCenter = false;
             this.IsCycloned = false;
             this.currentRot = 0;

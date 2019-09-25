@@ -1,11 +1,10 @@
-import GameManager from "../Managers/GameManager";
-import { Difficulty, Renderer } from "../Enums";
 import MatchManager from "../Managers/MatchManager";
 
 const { ccclass, property } = cc._decorator;
 
 @ccclass
 export default class TurnMeOn extends cc.Component {
+
 
     delaySequence: cc.ActionInterval;
 
@@ -46,7 +45,7 @@ export default class TurnMeOn extends cc.Component {
         for (let i = 0; i < this.array.length; i++) {
             this.array[i] = null;
         }
-        for (let i = 0; i < this.node.children[0].children[MatchManager.easyIndex].childrenCount; i++) {
+        for (let i = 0; i < this.node.children[MatchManager.easyIndex].childrenCount; i++) {
             this.array.push(i);
         }
     }
@@ -68,7 +67,7 @@ export default class TurnMeOn extends cc.Component {
         //     this.node.children[0].children[MatchManager.hardIndex].children[rand[0]].active = true;
         // }
 
-        this.node.children[0].children[MatchManager.easyIndex].children[rand[0]].active = true;
+        this.node.children[MatchManager.easyIndex].children[rand[0]].active = true;
 
         // for (let i = 0; i < this.node.children[0].children[MatchManager.easyIndex].children[rand[0]].childrenCount; i++)
         //     this.node.children[0].children[MatchManager.easyIndex].children[rand[0]].children[i].group = 'default';
@@ -78,14 +77,15 @@ export default class TurnMeOn extends cc.Component {
     onCollisionExit(other, self) {
         if (self.tag == 0 && other.node.name == 'StartCollider' && !this.triggerOnce) {
             this.triggerOnce = true;
+            // console.log('turn on name: ' + this.node.convertToWorldSpaceAR(cc.Vec2.ZERO).y);
 
             // cloud/lightning
-            if (GameManager.currentDifficulty == Difficulty.Hard) {
-                // this.node.children[this.node.childrenCount - 1].active = true;
-            }
+            // if (GameManager.currentDifficulty == Difficulty.Hard) {
+            //     this.node.children[this.node.childrenCount - 1].active = true;
+            // }
 
-            this.node.children[0].children[0].children[0].group = 'default';
-            this.node.children[0].children[0].children[2].group = 'default';
+            this.node.children[0].children[0].group = 'default';
+            this.node.children[0].children[2].group = 'default';
 
             // for (let i = 0; i < this.node.children[0].children[MatchManager.easyIndex].childrenCount; i++) {
             //     if (this.node.children[0].children[MatchManager.easyIndex].children[i].active) {
@@ -97,46 +97,25 @@ export default class TurnMeOn extends cc.Component {
 
             // landmass and rocks
             // for (let i = 0; i < self.node.children[0].childrenCount - 1; i++) {
-            //     if (self.node.children[0].children[i].getComponent(cc.RenderComponent) != null) {
-            //         self.node.children[0].children[i].getComponent(cc.RenderComponent).enabled = true;
-            //     }
-            //     var grandchildcount = 0;
-            //     if (self.node.children[0].children[i].childrenCount > 0) {
-            //         grandchildcount = self.node.children[0].children[i].children[0].childrenCount;
-            //         if (grandchildcount > 0) {
-            //             for (var j = 0; j < grandchildcount; j++) {
-            //                 if (self.node.children[0].children[i].children[0].children[j].getComponent(cc.RenderComponent) != null) {
-            //                     self.node.children[0].children[i].children[0].children[j].getComponent(cc.RenderComponent).enabled = true;
-            //                 }
-            //             }
-            //         }
-            //     }
+            //     // console.log('landmass turn on: ' + i);
+            //     this.node.children[0].children[i].group = 'default';
+            //     // var grandchildcount = 0;
+            //     // if (self.node.children[0].children[i].childrenCount > 0) {
+            //     //     grandchildcount = self.node.children[0].children[i].children[0].childrenCount;
+            //     //     if (grandchildcount > 0) {
+            //     //         for (var j = 0; j < grandchildcount; j++) {
+            //     //             if (self.node.children[0].children[i].children[0].children[j].getComponent(cc.RenderComponent) != null) {
+            //     //                 self.node.children[0].children[i].children[0].children[j].getComponent(cc.RenderComponent).enabled = true;
+            //     //             }
+            //     //         }
+            //     //     }
+            //     // }
             // }
 
             // console.log("reached here" + this.node.name);
             // this.totalCount = this.node.children[0].childrenCount;
             // this.resetSequenceProps();
         }
-        
-        // if (self.tag == 2 && other.node.name == 'StartCollider') {
-        // landmass and rocks
-        // for (let i = 0; i < self.node.children[0].childrenCount - 1; i++) {
-        //     if (self.node.children[0].children[i].getComponent(cc.RenderComponent) != null) {
-        //         self.node.children[0].children[i].getComponent(cc.RenderComponent).enabled = true;
-        //     }
-        //     var grandchildcount = 0;
-        //     if (self.node.children[0].children[i].childrenCount > 0) {
-        //         grandchildcount = self.node.children[0].children[i].children[0].childrenCount;
-        //         if (grandchildcount > 0) {
-        //             for (var j = 0; j < grandchildcount; j++) {
-        //                 if (self.node.children[0].children[i].children[0].children[j].getComponent(cc.RenderComponent) != null) {
-        //                     self.node.children[0].children[i].children[0].children[j].getComponent(cc.RenderComponent).enabled = true;
-        //                 }
-        //             }
-        //         }
-        //     }
-        // }
-        // }
     }
 
     // index: number = 0;
@@ -192,13 +171,8 @@ export default class TurnMeOn extends cc.Component {
     // }
     // propsDelay() {
     //     if (this.propsIndex >= 0) {
-    //         if (this.node.children[0].children[this.totalCount - 1].children[this.propsIndex].getComponent(cc.RenderComponent) != null) {
-    //             this.node.children[0].children[this.totalCount - 1].children[this.propsIndex].getComponent(cc.RenderComponent).enabled = true;
-    //             if (GameManager.isHighEndDevice) {
-    //                 if (this.node.children[0].children[this.totalCount - 1].children[this.propsIndex].getComponent(dragonBones.ArmatureDisplay) != null)
-    //                     this.node.children[0].children[this.totalCount - 1].children[this.propsIndex].getComponent(dragonBones.ArmatureDisplay).timeScale = 0.5;
-    //             }
-    //         }
+    //         // console.log('prop index: turn on: ' + this.propsIndex);
+    //         this.node.children[0].children[this.totalCount - 1].children[this.propsIndex].group = 'default';
     //         this.propsIndex--;
     //     }
     //     else {

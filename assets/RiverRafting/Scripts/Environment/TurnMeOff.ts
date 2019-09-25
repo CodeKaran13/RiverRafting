@@ -5,9 +5,16 @@ const { ccclass, property } = cc._decorator;
 @ccclass
 export default class TurnMeOff extends cc.Component {
 
+    @property(cc.PhysicsPolygonCollider)
+    myLeftPhyCol: cc.PhysicsPolygonCollider = null;
+    @property(cc.PhysicsPolygonCollider)
+    myRightPhyCol: cc.PhysicsPolygonCollider = null;
+
     onCollisionExit(other, self: cc.BoxCollider) {
         if (self.tag == 1 && other.node.name == 'EndCollider') {
             // console.log('deactivating me');
+            // console.log('turn off name: ' + this.node.convertToWorldSpaceAR(cc.Vec2.ZERO).y);
+
             // this.resetSequenceProps();
             // var pos: number[] = [self.node.position.y];
             // cc.systemEvent.emit(Renderer.TURN_OFF, { pos });
@@ -15,8 +22,11 @@ export default class TurnMeOff extends cc.Component {
             // for clouds and lightning if active in scene
             // this.node.children[this.node.childrenCount - 1].active = false;
 
-            this.node.children[0].children[0].children[0].group = 'Cull';
-            this.node.children[0].children[0].children[2].group = 'Cull';
+            this.node.children[0].children[0].group = 'Cull';
+            this.node.children[0].children[2].group = 'Cull';
+
+            this.myLeftPhyCol.enabled = false;
+            this.myRightPhyCol.enabled = false;
 
             // for (let i = 0; i < this.node.children[0].children[MatchManager.easyIndex].childrenCount; i++) {
             //     if (this.node.children[0].children[MatchManager.easyIndex].children[i].active) {
@@ -45,12 +55,12 @@ export default class TurnMeOff extends cc.Component {
     // }
     // delayedLoop() {
     //     if (this.index < this.totalCount) {
-    //         this.node.children[0].children[this.index].active = false;
+    //         // console.log('turning off landmass: ' + this.index);
+    //         this.node.children[0].children[this.index].group = 'Cull';
     //         this.index++;
     //     }
     //     else {
     //         this.node.stopAction(this.delaySequence);
-    //         // this.resetSequenceProps();
     //     }
     // }
 
@@ -70,12 +80,8 @@ export default class TurnMeOff extends cc.Component {
     // }
     // propsDelay() {
     //     if (this.propsIndex < this.propsCount) {
-    //         this.node.children[0].children[this.totalCount - 1].children[this.propsIndex].active = false;
-    //         // console.log('' + this.node.children[0].children[this.totalCount - 1].children[this.propsIndex].name);
-    //         // if(this.node.children[0].children[this.totalCount-1].children[this.propsIndex].getComponent(dragonBones.ArmatureDisplay)!=null)
-    //         // {
-    //         //     this.node.children[0].children[this.totalCount-1].children[this.propsIndex].getComponent(dragonBones.ArmatureDisplay).timeScale = 0;
-    //         // }
+    //         this.node.children[0].children[this.totalCount - 1].children[this.propsIndex].group = 'Cull';
+    //         // console.log('turn off props: ' + this.propsIndex);
     //         this.propsIndex++;
     //     }
     //     else {

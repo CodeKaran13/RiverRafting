@@ -1,15 +1,6 @@
 import PoolingSystem from "../Pools/PoolingSystem";
-import TimeManager from "./TimeManager";
-import GameManager from "./GameManager";
-import ScoreManager from "./ScoreManager";
-import UIManager from "./UIManager";
-import BonusSystem from "../GamePlay/BonusSystem";
-import ItemSpawner from "../GamePlay/ItemSpawner";
 import Waves from "../GamePlay/Waves";
 import RiverMap from "../GamePlay/RiverMap";
-import { TEST } from "../EventSystem/Emitter";
-import { Renderer } from "../Enums";
-
 const { ccclass, property } = cc._decorator;
 
 @ccclass
@@ -121,8 +112,6 @@ export default class MatchManager extends cc.Component {
         switch (rand) {
             case 0:
                 // console.log('' + this.counter);
-
-                // var nextMap = this._poolingSystem.getRiverMapfromPool(0);
                 if (this.counter < this.totalEasyPrefabsToSpawn) {
                     if (PoolingSystem.Instance.EasyRiverMapSet0.size() > 0) {
                         var nextMap = PoolingSystem.Instance.EasyRiverMapSet0.get();
@@ -146,9 +135,6 @@ export default class MatchManager extends cc.Component {
                     else {
                         var nextMap = cc.instantiate(PoolingSystem.Instance.HardPrefabRiverMapSet0);
                     }
-                }
-                else {
-                    console.log('total limit exceeded.');
                 }
                 this.counter++;
                 this.setRendererOff(nextMap);
@@ -223,37 +209,31 @@ export default class MatchManager extends cc.Component {
             nextMap.parent.removeChild(nextMap);
         this.LevelPrefabs.addChild(nextMap, this.zOrder);
         this.zOrder--;
-        // console.log(this.totalHeight);
         nextMap.setPosition(new cc.Vec2(0, this.totalHeight));
         nextMap.active = true;
 
         this.totalHeight = this.totalHeight + nextMap.getComponent(RiverMap).myHeight;
 
-        // cc.systemEvent.emit(Renderer.TURN_OFF,false);
-
         // for (let i = 0; i < nextMap.children[0].childrenCount - 1; i++) {
-        //     nextMap.children[0].children[i].active = true;
-        //     if (nextMap.children[0].children[i].getComponent(cc.RenderComponent) != null) {
-        //         nextMap.children[0].children[i].getComponent(cc.RenderComponent).enabled = false;
-        //     }
-        //     var grandchildcount = 0;
-        //     if (nextMap.children[0].children[i].childrenCount > 0) {
-        //         grandchildcount = nextMap.children[0].children[i].children[0].childrenCount;
-        //         if (grandchildcount > 0) {
-        //             for (var j = 0; j < grandchildcount; j++) {
-        //                 nextMap.children[0].children[i].children[0].children[j].getComponent(cc.RenderComponent).enabled = false;
-        //             }
+        // nextMap.children[0].children[i].group = 'default';
+        // var grandchildcount = 0;
+        // if (nextMap.children[0].children[i].childrenCount > 0) {
+        //     grandchildcount = nextMap.children[0].children[i].children[0].childrenCount;
+        //     if (grandchildcount > 0) {
+        //         for (var j = 0; j < grandchildcount; j++) {
+        //             // nextMap.children[0].children[i].children[0].children[j].getComponent(cc.RenderComponent).enabled = false;
         //         }
         //     }
         // }
+        // }
 
         // var propIndex = nextMap.children[0].childrenCount - 1;
-        // nextMap.children[0].children[propIndex].active = true;
         // var grandchildcount = 0;
         // if (nextMap.children[0].children[propIndex].childrenCount > 0) {
         //     grandchildcount = nextMap.children[0].children[propIndex].childrenCount;
         //     if (grandchildcount > 0) {
         //         for (var j = 0; j < grandchildcount; j++) {
+        //             nextMap.children[0].children[propIndex].children[j].group = 'default';
         //             nextMap.children[0].children[propIndex].children[j].active = true;
         //             if (nextMap.children[0].children[propIndex].children[j].getComponent(dragonBones.ArmatureDisplay) != null) {
         //                 nextMap.children[0].children[propIndex].children[j].getComponent(dragonBones.ArmatureDisplay).timeScale = 0;

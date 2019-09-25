@@ -72,7 +72,7 @@
     "_skewX": 0,
     "_skewY": 0,
     "_is3DNode": false,
-    "groupIndex": 4,
+    "groupIndex": 7,
     "_rotationX": 0,
     "_rotationY": 0,
     "_id": ""
@@ -119,7 +119,9 @@
       "__id__": 1
     },
     "_enabled": true,
-    "_scoreManager": null,
+    "myCol": {
+      "__id__": 4
+    },
     "_id": ""
   },
   {
@@ -129,7 +131,7 @@
     "node": {
       "__id__": 1
     },
-    "_enabled": true,
+    "_enabled": false,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",

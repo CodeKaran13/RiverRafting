@@ -72,7 +72,7 @@
     "_skewX": 0,
     "_skewY": 0,
     "_is3DNode": false,
-    "groupIndex": 4,
+    "groupIndex": 7,
     "_rotationX": 0,
     "_rotationY": 0,
     "_id": ""
@@ -120,6 +120,9 @@
     },
     "_enabled": true,
     "health": 20,
+    "myCol": {
+      "__id__": 4
+    },
     "_id": ""
   },
   {
