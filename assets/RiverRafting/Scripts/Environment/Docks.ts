@@ -3,54 +3,67 @@ import HealthManager from "../Managers/HealthManager";
 import Player from "../Player";
 import BonusSystem from "../GamePlay/BonusSystem";
 import CameraController from "../CameraController";
+import FollowPlayer from "./FollowPlayer";
 
 const { ccclass, property } = cc._decorator;
 
 @ccclass
-export default class Docks extends Obstacles
-{
+export default class Docks extends Obstacles {
 
-    // onLoad () {}
-
-    start()
-    {
+    start() {
         this.myType = ObstacleType.Dock;
     }
 
-    onEnable() 
-    {
+    onEnable() {
         this.myAnimator.stop();
         this.myPos = this.node.convertToWorldSpace(cc.Vec2.ZERO).y;
-    }
 
-    onDisable()
-    {
+        this.startSequence();
+    }
+    onDisable() {
         this.myPos = 0;
         this.myAnimator.stop();
     }
 
-    update(dt)
-    {
-        // if (this.node.active)
-        // {
-        //     if (Player.Instance.node.position.y - 500 > this.myPos)
-        //     {
-        //         // console.log('player is above me');
-        //         // this._obstaclePool.addObstacleBackToPool(this.node);
-        //         this.node.active = false;
-        //     }
-        // }
-    }
-
-    onCollisionEnter(other, self)
-    {
-        if (other.node.name == 'Player')
-        {
+    onCollisionEnter(other, self) {
+        if (other.node.name == 'Player') {
             this.myAnimator.play('dock_crack');
             // this._player.getComponent(HealthManager).takeDamage(this.damage);
             Player.Instance.node.getComponent(HealthManager).takeDamage(this.damage);
             CameraController.Instance.cameraShake();
             BonusSystem.Instance.stopAction();
         }
+    }
+
+    //sequence to turn on/off box collider
+    sequence: cc.ActionInterval;
+    @property(cc.BoxCollider)
+    myCol: cc.BoxCollider = null;
+    startSequence() {
+        var time = cc.delayTime(1);
+        this.sequence = cc.sequence(time, cc.callFunc(this.checkPosition, this));
+        this.node.runAction(this.sequence.repeatForever());
+    }
+    checkPosition() {
+        if (!this.myCol.enabled) {
+            if (FollowPlayer.startColliderYPos > this.myPos) {
+                this.changeToDefaultGroup();
+            }
+        }
+        else {
+            if (FollowPlayer.endColliderYPos > this.myPos) {
+                this.changeToCullGroup();
+            }
+        }
+    }
+
+    changeToDefaultGroup() {
+        this.myCol.enabled = true;
+        this.node.group = 'default';
+    }
+    changeToCullGroup() {
+        this.myCol.enabled = false;
+        this.node.group = 'Cull';
+        this.node.stopAction(this.sequence);
     }
 }

@@ -83,7 +83,7 @@ export default class MatchManager extends cc.Component {
     }
 
     StartGame() {
-        // this.spawnNextWave(1920);
+        this.spawnNextWave(1920);
     }
 
     @property
@@ -261,7 +261,8 @@ export default class MatchManager extends cc.Component {
         // console.log('pos: ' + wavePrefab.convertToWorldSpaceAR(cc.Vec2.ZERO));
         waves.myPos = wavePrefab.convertToWorldSpaceAR(cc.Vec2.ZERO);
 
-        wavePrefab.active = true;
+        // wavePrefab.active = true;
+        wavePrefab.group = 'default';
         waves.IsActive = true;
         waves.CheckPlayerLocation = true;
     }

@@ -83,25 +83,12 @@ export default class PoolingSystem extends cc.Component {
 
     //Wave Prefabs
     @property({
-        type: cc.Node,
+        type: cc.Prefab,
         visible: true,
         serializable: true
     })
-    WavePrefabs: cc.Node[] = [];
-
-    // All script refs
-    @property({
-        type: ItemSpawner,
-        visible: true,
-        serializable: true
-    })
-    _itemSpawner: ItemSpawner = null;
-    @property({
-        type: ObstacleSpawner,
-        visible: true,
-        serializable: true
-    })
-    _obstacleSpawner: ObstacleSpawner = null;
+    WavePrefabs: cc.Prefab = null;
+    WaveNodePool: cc.NodePool;
 
     public static Instance: PoolingSystem = null;
 
@@ -111,7 +98,7 @@ export default class PoolingSystem extends cc.Component {
         }
     }
     start() {
-
+        this.WaveNodePool = new cc.NodePool();
     }
 
     // Pooling for river maps prefabs
@@ -136,26 +123,26 @@ export default class PoolingSystem extends cc.Component {
     getRiverMapfromPool(Type: number): cc.Node {
         switch (Type) {
             case 0:
-                // var ref = this.RiverMapsSet0.pop();
-                // return ref;
+            // var ref = this.RiverMapsSet0.pop();
+            // return ref;
             case 1:
-                // var ref = this.RiverMapsSet1.pop();
-                // return ref;
+            // var ref = this.RiverMapsSet1.pop();
+            // return ref;
             case 2:
-                // var ref = this.RiverMapsSet2.pop();
-                // return ref;
+            // var ref = this.RiverMapsSet2.pop();
+            // return ref;
             case 3:
-                // var ref = this.RiverMapsSet3.pop();
-                // return ref;
+            // var ref = this.RiverMapsSet3.pop();
+            // return ref;
             case 4:
-                // var ref = this.RiverMapsSet4.pop();
-                // return ref;
+            // var ref = this.RiverMapsSet4.pop();
+            // return ref;
             case 5:
-                // var ref = this.RiverMapsSet5.pop();
-                // return ref;
+            // var ref = this.RiverMapsSet5.pop();
+            // return ref;
             case 6:
-                // var ref = this.RiverMapsSet6.pop();
-                // return ref;
+            // var ref = this.RiverMapsSet6.pop();
+            // return ref;
             default:
                 console.log('no such case found with type: ' + Type);
                 return null;
@@ -165,14 +152,20 @@ export default class PoolingSystem extends cc.Component {
 
     // Pooling for wave prefabs
     addWavePrefabToPool(node: cc.Node) {
-        node.getComponent(Waves).IsActive = false;
-        node.getComponent(Waves).CheckPlayerLocation = false;
-        node.children[4].getComponent(SpawnNextWave).triggerOnce = false;
+        var _waves = node.getComponent(Waves);
+        _waves.IsActive = false;
+        _waves.CheckPlayerLocation = false;
+        _waves._spawnNextWave.triggerOnce = false;
         node.parent.removeChild(node);
-        this.WavePrefabs.push(node);
+        this.WaveNodePool.put(node);
     }
     getWavePrefabFromPool(): cc.Node {
-        var ref: cc.Node = this.WavePrefabs.pop();
+        if (this.WaveNodePool.size() > 0) {
+            var ref = this.WaveNodePool.get();
+        }
+        else {
+            ref = cc.instantiate(this.WavePrefabs);
+        }
         return ref;
     }
 }

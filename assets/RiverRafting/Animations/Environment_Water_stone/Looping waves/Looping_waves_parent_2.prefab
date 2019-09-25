@@ -33,7 +33,7 @@
         "__id__": 14
       }
     ],
-    "_active": false,
+    "_active": true,
     "_level": 1,
     "_components": [
       {
@@ -67,7 +67,7 @@
     "_position": {
       "__type__": "cc.Vec3",
       "x": 540,
-      "y": 0,
+      "y": 2200.254,
       "z": 0
     },
     "_scale": {
@@ -85,7 +85,7 @@
     "_skewX": 0,
     "_skewY": 0,
     "_is3DNode": false,
-    "groupIndex": 0,
+    "groupIndex": 7,
     "_id": ""
   },
   {
@@ -600,7 +600,6 @@
       "__id__": 14
     },
     "_enabled": true,
-    "_matchManager": null,
     "_id": ""
   },
   {
@@ -641,7 +640,9 @@
       "__id__": 1
     },
     "_enabled": true,
-    "_player": null,
+    "_spawnNextWave": {
+      "__id__": 16
+    },
     "_id": ""
   },
   {

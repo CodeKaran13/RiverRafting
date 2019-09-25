@@ -76,7 +76,7 @@ export default class Cyclone extends Obstacles {
         this.node.group = 'default';
     }
     changeToCullGroup() {
-        console.log('cull cyclone');
+        // console.log('cull cyclone');
         this.myCol1.enabled = false;
         this.myCol2.enabled = false;
         this.myAnimator.stop();
