@@ -23,7 +23,7 @@ export default class TimeManager extends cc.Component {
 
     public static Instance: TimeManager = null;
 
-    start() {
+    onLoad() {
         if (TimeManager.Instance == null) {
             TimeManager.Instance = this;
         }

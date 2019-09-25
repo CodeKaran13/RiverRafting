@@ -1747,7 +1747,7 @@
     },
     "_eulerAngles": {
       "__type__": "cc.Vec3",
-      "x": -90,
+      "x": -89.99999999999999,
       "y": -180,
       "z": 0
     },
@@ -9638,13 +9638,13 @@
     },
     "_enabled": true,
     "EasyPrefabRiverMapSet0": {
-      "__uuid__": "699c5bc2-5ffe-4565-915d-58035cb8f7a6"
+      "__uuid__": "e6a10a4b-3296-4b90-98e7-736323cac652"
     },
     "MediumPrefabRiverMapSet0": {
-      "__uuid__": "699c5bc2-5ffe-4565-915d-58035cb8f7a6"
+      "__uuid__": "e6a10a4b-3296-4b90-98e7-736323cac652"
     },
     "HardPrefabRiverMapSet0": {
-      "__uuid__": "699c5bc2-5ffe-4565-915d-58035cb8f7a6"
+      "__uuid__": "e6a10a4b-3296-4b90-98e7-736323cac652"
     },
     "PrefabRiverMapSet1": {
       "__uuid__": "a0436783-1c83-4d6b-9dec-338ba1553ba2"

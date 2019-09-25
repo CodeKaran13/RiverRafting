@@ -50,7 +50,6 @@ export default class GameManager extends cc.Component {
         if (GameManager.Instance == null) {
             GameManager.Instance = this;
         }
-
         // this.GetData();
     }
     update(dt) {
@@ -79,7 +78,6 @@ export default class GameManager extends cc.Component {
         // {
         //     this._matchManager._timeManager.totaltime = vars["time"];
         // }
-
 
         var gamedata = window.$Arena.getGameData();
         TimeManager.Instance.totaltime = gamedata.play_time_seconds;

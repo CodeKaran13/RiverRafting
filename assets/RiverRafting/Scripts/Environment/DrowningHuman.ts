@@ -3,6 +3,7 @@ import Player from "../Player";
 import CollectiblesPool from "../Pools/CollectiblesPool";
 import ScoreManager from "../Managers/ScoreManager";
 import GameManager from "../Managers/GameManager";
+import FollowPlayer from "./FollowPlayer";
 
 const { ccclass, property } = cc._decorator;
 
@@ -11,7 +12,6 @@ export default class DrowningHuman extends Collectibles {
 
     start() {
         this.myType = CollectibleType.DrowningHuman;
-        // console.log(this.node.name);
     }
     onEnable() {
         this.myPos = this.node.convertToWorldSpaceAR(cc.Vec2.ZERO).y;
@@ -25,24 +25,49 @@ export default class DrowningHuman extends Collectibles {
         this.myAnim.timeScale = 0;
         this.myPos = 0;
     }
-    update(dt) {
-        // if (this.node.active) {
-        //     if (Player.Instance.node.position.y - 500 > this.myPos) {
-        //         // console.log('drowning human, player is above me');
-        //         CollectiblesPool.Instance.addCollectibleBackToPool(this.node);
-        //     }
-        // }
-    }
 
     onCollisionEnter(other, self) {
         if (other.node.name == 'Player') {
             // console.log('player collided coin');
 
             // increase score
+            this.changeToCullGroup();
+
             ScoreManager.Instance.totalHumanSaved += 1;
             ScoreManager.Instance.AddScore(ScoreManager.Instance.perHumanSavedBonus);
             
-            CollectiblesPool.Instance.addCollectibleBackToPool(this.node);
         }
+    }
+
+    //sequence to turn on/off box collider
+    sequence: cc.ActionInterval;
+    @property(cc.BoxCollider)
+    myCol: cc.BoxCollider = null;
+    startSequence() {
+        var time = cc.delayTime(1);
+        this.sequence = cc.sequence(time, cc.callFunc(this.checkPosition, this));
+        this.node.runAction(this.sequence.repeatForever());
+    }
+    checkPosition() {
+        if (!this.myCol.enabled) {
+            if (FollowPlayer.startColliderYPos > this.myPos) {
+                this.changeToDefaultGroup();
+            }
+        }
+        else {
+            if (FollowPlayer.endColliderYPos > this.myPos) {
+                this.changeToCullGroup();
+            }
+        }
+    }
+
+    changeToDefaultGroup() {
+        this.myCol.enabled = true;
+        this.node.group = 'default';
+    }
+    changeToCullGroup() {
+        this.myCol.enabled = false;
+        this.node.group = 'Cull';
+        this.node.stopAction(this.sequence);
     }
 }
