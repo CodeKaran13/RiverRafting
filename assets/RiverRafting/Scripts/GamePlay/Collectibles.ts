@@ -15,5 +15,5 @@ export default class Collectibles extends cc.Component
 {
     myType: CollectibleType = null;
     myPos: any;
-    myAnim: cc.Animation | dragonBones.ArmatureDisplay;
+    myAnim: any;
 }

@@ -15,9 +15,10 @@ export default class Cyclone extends Obstacles {
         this.myType = ObstacleType.Cyclone;
     }
     onEnable() {
-        this.myPos = this.node.convertToWorldSpaceAR(cc.Vec2.ZERO);
+        this.myPos = this.node.convertToWorldSpaceAR(cc.Vec2.ZERO).y;
         this.myAnimator.play();
 
+        // console.log('start sequence called');
         this.startSequence();
     }
     onDisable() {
@@ -37,7 +38,7 @@ export default class Cyclone extends Obstacles {
         }
         if (self.tag == 1 && other.node.name == 'Player') {
             // console.log('center');
-            other.node.getComponent(Player).reachedCenter = true;
+            Player.Instance.reachedCenter = true;
         }
     }
 
@@ -53,13 +54,17 @@ export default class Cyclone extends Obstacles {
         this.node.runAction(this.sequence.repeatForever());
     }
     checkPosition() {
+        // console.log('checking');
         if (!this.myCol1.enabled && !this.myCol2.enabled) {
+            // console.log('colliders disabled');
             if (FollowPlayer.startColliderYPos > this.myPos) {
+                // console.log('start collider passed');
                 this.changeToDefaultGroup();
             }
         }
         else {
             if (FollowPlayer.endColliderYPos > this.myPos) {
+                // console.log('end collider passed');
                 this.changeToCullGroup();
             }
         }
@@ -71,8 +76,10 @@ export default class Cyclone extends Obstacles {
         this.node.group = 'default';
     }
     changeToCullGroup() {
+        console.log('cull cyclone');
         this.myCol1.enabled = false;
         this.myCol2.enabled = false;
+        this.myAnimator.stop();
         this.node.group = 'Cull';
         this.node.stopAction(this.sequence);
     }

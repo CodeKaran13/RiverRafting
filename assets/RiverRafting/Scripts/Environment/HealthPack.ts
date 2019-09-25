@@ -16,6 +16,8 @@ export default class HealthPack extends Collectibles {
     }
     onEnable() {
         this.myPos = this.node.convertToWorldSpaceAR(cc.Vec2.ZERO).y;
+
+        this.startSequence();
     }
     onDisable() {
         this.myPos = 0;

@@ -20,6 +20,8 @@ export default class DrowningHuman extends Collectibles {
         if(GameManager.isHighEndDevice) {
             this.myAnim.timeScale = 2;
         }
+
+        this.startSequence();
     }
     onDisable() {
         this.myAnim.timeScale = 0;
@@ -66,7 +68,9 @@ export default class DrowningHuman extends Collectibles {
         this.node.group = 'default';
     }
     changeToCullGroup() {
+        console.log('cull human');
         this.myCol.enabled = false;
+        this.myAnim.timeScale = 0;
         this.node.group = 'Cull';
         this.node.stopAction(this.sequence);
     }

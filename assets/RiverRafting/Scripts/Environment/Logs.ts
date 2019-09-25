@@ -62,6 +62,7 @@ export default class Logs extends Obstacles {
     }
     changeToCullGroup() {
         this.myCol.enabled = false;
+        this.myAnimator.stop();
         this.node.group = 'Cull';
         this.node.stopAction(this.sequence);
     }
