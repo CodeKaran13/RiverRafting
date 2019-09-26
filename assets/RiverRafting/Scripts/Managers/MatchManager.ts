@@ -1,10 +1,13 @@
 import PoolingSystem from "../Pools/PoolingSystem";
 import Waves from "../GamePlay/Waves";
 import RiverMap from "../GamePlay/RiverMap";
+import { PrefabSet } from "../Enums";
+import SelectNextMap from "../Environment/SelectNextMap";
 const { ccclass, property } = cc._decorator;
 
 @ccclass
 export default class MatchManager extends cc.Component {
+
     // RiverMap/Wave Prefabs Parent Node
     @property(cc.Node)
     LevelPrefabs: cc.Node = null;
@@ -23,6 +26,15 @@ export default class MatchManager extends cc.Component {
     totalHeight: number = 0;
     @property
     totalMapsToGenerate: number = 18;
+    @property
+    totalPrefabsToSpawn: number = 3;
+    zOrder: number = 0;
+    @property
+    totalEasyPrefabsToSpawn: number = 5;
+    @property
+    totalMediumPrefabsToSpawn: number = 5;
+    @property
+    totalHardPrefabsToSpawn: number = 10;
 
     public static easyIndex: number = 1;
     public static normalIndex: number = 2;
@@ -39,45 +51,9 @@ export default class MatchManager extends cc.Component {
             MatchManager.Instance = this;
         }
 
-        PoolingSystem.Instance.EasyRiverMapSet0 = new cc.NodePool();
-        PoolingSystem.Instance.MediumRiverMapSet0 = new cc.NodePool();
-        PoolingSystem.Instance.HardRiverMapSet0 = new cc.NodePool();
-        // PoolingSystem.Instance.RiverMapSet1 = new cc.NodePool();
-        // PoolingSystem.Instance.RiverMapSet2 = new cc.NodePool();
-        // PoolingSystem.Instance.RiverMapSet3 = new cc.NodePool();
-        // PoolingSystem.Instance.RiverMapSet4 = new cc.NodePool();
-        // PoolingSystem.Instance.RiverMapSet5 = new cc.NodePool();
-
-        for (let i = 0; i < this.totalPrefabsToSpawn; i++) {
-            // this.spawnNextRiverMap();
-
-            let map0Easy = cc.instantiate(PoolingSystem.Instance.EasyPrefabRiverMapSet0);
-            PoolingSystem.Instance.EasyRiverMapSet0.put(map0Easy);
-
-            let map0Medium = cc.instantiate(PoolingSystem.Instance.MediumPrefabRiverMapSet0);
-            PoolingSystem.Instance.MediumRiverMapSet0.put(map0Medium);
-
-            let map0Hard = cc.instantiate(PoolingSystem.Instance.HardPrefabRiverMapSet0);
-            PoolingSystem.Instance.HardRiverMapSet0.put(map0Hard);
-
-            // let map1 = cc.instantiate(PoolingSystem.Instance.PrefabRiverMapSet1);
-            // PoolingSystem.Instance.RiverMapSet1.put(map1);
-
-            // let map2 = cc.instantiate(PoolingSystem.Instance.PrefabRiverMapSet2);
-            // PoolingSystem.Instance.RiverMapSet2.put(map2);
-
-            // let map3 = cc.instantiate(PoolingSystem.Instance.PrefabRiverMapSet3);
-            // PoolingSystem.Instance.RiverMapSet3.put(map3);
-
-            // let map4 = cc.instantiate(PoolingSystem.Instance.PrefabRiverMapSet4);
-            // PoolingSystem.Instance.RiverMapSet3.put(map4);
-
-            // let map5 = cc.instantiate(PoolingSystem.Instance.PrefabRiverMapSet5);
-            // PoolingSystem.Instance.RiverMapSet3.put(map5);
-        }
+        PoolingSystem.Instance.InitNodePool();
 
         for (let i = 0; i < this.totalMapsToGenerate; i++) {
-            // console.log('called');
             this.spawnNextRiverMap();
         }
     }
@@ -86,113 +62,37 @@ export default class MatchManager extends cc.Component {
         this.spawnNextWave(1920);
     }
 
-    @property
-    totalPrefabsToSpawn: number = 0;
-    // counter: number = 0;
-    // spawnSequence: cc.ActionInterval;
-    // startSpawnSequence()
-    // {
-    //     var time = cc.delayTime(1);
-    //     this.counter = 0;
-    //     this.spawnSequence = cc.sequence(time, cc.callFunc(this.spawnNextRiverMap, this))
-    //     this.node.runAction(this.spawnSequence.repeatForever());
-    // }
-
-    zOrder: number = 0;
-    counter: number = 0;
-    @property
-    totalEasyPrefabsToSpawn: number = 5;
-    @property
-    totalMediumPrefabsToSpawn: number = 5;
-    @property
-    totalHardPrefabsToSpawn: number = 10;
     spawnNextRiverMap() {
         var rand = this.getRandomNumber();
-
         switch (rand) {
             case 0:
-                // console.log('' + this.counter);
-                if (this.counter < this.totalEasyPrefabsToSpawn) {
-                    if (PoolingSystem.Instance.EasyRiverMapSet0.size() > 0) {
-                        var nextMap = PoolingSystem.Instance.EasyRiverMapSet0.get();
-                    }
-                    else {
-                        var nextMap = cc.instantiate(PoolingSystem.Instance.EasyPrefabRiverMapSet0);
-                    }
-                }
-                else if (this.counter >= this.totalEasyPrefabsToSpawn && this.counter < (this.totalEasyPrefabsToSpawn + this.totalMediumPrefabsToSpawn)) {
-                    if (PoolingSystem.Instance.MediumRiverMapSet0.size() > 0) {
-                        var nextMap = PoolingSystem.Instance.MediumRiverMapSet0.get();
-                    }
-                    else {
-                        var nextMap = cc.instantiate(PoolingSystem.Instance.MediumPrefabRiverMapSet0);
-                    }
-                }
-                else if (this.counter >= this.totalHardPrefabsToSpawn) {
-                    if (PoolingSystem.Instance.HardRiverMapSet0.size() > 0) {
-                        var nextMap = PoolingSystem.Instance.HardRiverMapSet0.get();
-                    }
-                    else {
-                        var nextMap = cc.instantiate(PoolingSystem.Instance.HardPrefabRiverMapSet0);
-                    }
-                }
-                this.counter++;
+                var nextMap = SelectNextMap.Instance.selectNextMap(PrefabSet.Set_0);
                 this.setRendererOff(nextMap);
                 break;
             case 1:
-                // var nextMap = this._poolingSystem.getRiverMapfromPool(1);
-                if (PoolingSystem.Instance.RiverMapSet1.size() > 0) {
-                    var nextMap = PoolingSystem.Instance.RiverMapSet1.get();
-                }
-                else {
-                    var nextMap = cc.instantiate(PoolingSystem.Instance.PrefabRiverMapSet1);
-                }
+                var nextMap = SelectNextMap.Instance.selectNextMap(PrefabSet.Set_1);
                 this.setRendererOff(nextMap);
                 break;
             case 2:
-                // var nextMap = this._poolingSystem.getRiverMapfromPool(2);
-                if (PoolingSystem.Instance.RiverMapSet2.size() > 0) {
-                    var nextMap = PoolingSystem.Instance.RiverMapSet2.get();
-                }
-                else {
-                    var nextMap = cc.instantiate(PoolingSystem.Instance.PrefabRiverMapSet2);
-                }
+                var nextMap = SelectNextMap.Instance.selectNextMap(PrefabSet.Set_2);
                 this.setRendererOff(nextMap);
                 break;
             case 3:
-                // var nextMap = this._poolingSystem.getRiverMapfromPool(3);
-                if (PoolingSystem.Instance.RiverMapSet3.size() > 0) {
-                    var nextMap = PoolingSystem.Instance.RiverMapSet3.get();
-                }
-                else {
-                    var nextMap = cc.instantiate(PoolingSystem.Instance.PrefabRiverMapSet3);
-                }
+                var nextMap = SelectNextMap.Instance.selectNextMap(PrefabSet.Set_3);
                 this.setRendererOff(nextMap);
                 break;
             case 4:
-                // var nextMap = this._poolingSystem.getRiverMapfromPool(4);
-                if (PoolingSystem.Instance.RiverMapSet4.size() > 0) {
-                    var nextMap = PoolingSystem.Instance.RiverMapSet4.get();
-                }
-                else {
-                    var nextMap = cc.instantiate(PoolingSystem.Instance.PrefabRiverMapSet4);
-                }
+                var nextMap = SelectNextMap.Instance.selectNextMap(PrefabSet.Set_4);
                 this.setRendererOff(nextMap);
                 break;
             case 5:
-                // var nextMap = this._poolingSystem.getRiverMapfromPool(5);
-                if (PoolingSystem.Instance.RiverMapSet5.size() > 0) {
-                    var nextMap = PoolingSystem.Instance.RiverMapSet5.get();
-                }
-                else {
-                    var nextMap = cc.instantiate(PoolingSystem.Instance.PrefabRiverMapSet5);
-                }
+                var nextMap = SelectNextMap.Instance.selectNextMap(PrefabSet.Set_5);
                 this.setRendererOff(nextMap);
                 break;
-            // case 6:
-            //     var nextMap = this._poolingSystem.getRiverMapfromPool(6);
-            //     this.setRendererOff(nextMap);
-            //     break;
+            case 6:
+                var nextMap = SelectNextMap.Instance.selectNextMap(PrefabSet.Set_6);
+                this.setRendererOff(nextMap);
+                break;
             default:
                 break;
         }
@@ -258,10 +158,8 @@ export default class MatchManager extends cc.Component {
 
         wavePrefab.setPosition(new cc.Vec2(0, this.totalWaveHeight));
         var waves = wavePrefab.getComponent(Waves);
-        // console.log('pos: ' + wavePrefab.convertToWorldSpaceAR(cc.Vec2.ZERO));
         waves.myPos = wavePrefab.convertToWorldSpaceAR(cc.Vec2.ZERO);
 
-        // wavePrefab.active = true;
         wavePrefab.group = 'default';
         waves.IsActive = true;
         waves.CheckPlayerLocation = true;
