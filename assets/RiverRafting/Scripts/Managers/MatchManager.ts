@@ -83,7 +83,7 @@ export default class MatchManager extends cc.Component {
     }
 
     StartGame() {
-        // this.spawnNextWave(1920);
+        this.spawnNextWave(1920);
     }
 
     @property

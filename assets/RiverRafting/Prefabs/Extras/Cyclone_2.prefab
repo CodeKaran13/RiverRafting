@@ -542,6 +542,8 @@
       "__id__": 14
     },
     "damage": 5,
+    "myCol1": null,
+    "myCol2": null,
     "_id": ""
   },
   {
@@ -551,7 +553,7 @@
     "node": {
       "__id__": 1
     },
-    "_enabled": true,
+    "_enabled": false,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -568,7 +570,7 @@
     "node": {
       "__id__": 1
     },
-    "_enabled": true,
+    "_enabled": false,
     "tag": 1,
     "_offset": {
       "__type__": "cc.Vec2",

@@ -9638,13 +9638,13 @@
     },
     "_enabled": true,
     "EasyPrefabRiverMapSet0": {
-      "__uuid__": "e6a10a4b-3296-4b90-98e7-736323cac652"
+      "__uuid__": "7aca1e21-afb5-4132-8f5c-346c944632e0"
     },
     "MediumPrefabRiverMapSet0": {
       "__uuid__": "e6a10a4b-3296-4b90-98e7-736323cac652"
     },
     "HardPrefabRiverMapSet0": {
-      "__uuid__": "e6a10a4b-3296-4b90-98e7-736323cac652"
+      "__uuid__": "379b65b1-6ae5-424e-b391-b86828260b98"
     },
     "PrefabRiverMapSet1": {
       "__uuid__": "a0436783-1c83-4d6b-9dec-338ba1553ba2"
@@ -12091,10 +12091,10 @@
       "__uuid__": "40e690d1-6923-476a-8487-8576b98f151e"
     },
     "_spriteFrame": {
-      "__uuid__": "ae01cc0e-824c-409f-9312-add1f86e2e43"
+      "__uuid__": "61021967-eeea-4530-bfb6-32c203e5c2a8"
     },
     "_texture": {
-      "__uuid__": "2225d190-1491-4885-b37b-d4bf02e9a18d"
+      "__uuid__": "42f7126c-f86d-472f-9673-6b84ee314869"
     },
     "_stopped": true,
     "playOnLoad": true,

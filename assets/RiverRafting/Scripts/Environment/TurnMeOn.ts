@@ -9,7 +9,7 @@ export default class TurnMeOn extends cc.Component {
     delaySequence: cc.ActionInterval;
 
     onEnable() {
-        this.setCoinPacks();
+        //this.setCoinPacks();
         this.setCoinsPackActive();
         // this.setCoinsPackActive();
     }
@@ -50,8 +50,9 @@ export default class TurnMeOn extends cc.Component {
         }
     }
     getRandomCoinPack() {
-        var randIndex = Math.floor(Math.random() * this.array.length);
-        return this.array.splice(randIndex, 1);
+        //var randIndex = Math.floor(Math.random() * this.array.length);
+        //return this.array.splice(randIndex, 1);
+return 0;
     }
     // indexPos: number = 0;
     setCoinsPackActive() {
@@ -67,7 +68,7 @@ export default class TurnMeOn extends cc.Component {
         //     this.node.children[0].children[MatchManager.hardIndex].children[rand[0]].active = true;
         // }
 
-        this.node.children[MatchManager.easyIndex].children[rand[0]].active = true;
+        this.node.children[MatchManager.easyIndex].children[rand].active = true;
 
         // for (let i = 0; i < this.node.children[0].children[MatchManager.easyIndex].children[rand[0]].childrenCount; i++)
         //     this.node.children[0].children[MatchManager.easyIndex].children[rand[0]].children[i].group = 'default';

@@ -21,6 +21,7 @@ export default class Docks extends Obstacles
     {
         this.myAnimator.stop();
         this.myPos = this.node.convertToWorldSpace(cc.Vec2.ZERO).y;
+this.node.group = 'default';
     }
 
     onDisable()
