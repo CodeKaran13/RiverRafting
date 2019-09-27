@@ -1717,9 +1717,9 @@
     },
     "_eulerAngles": {
       "__type__": "cc.Vec3",
-      "x": -89.99999999999999,
+      "x": -90,
       "y": -180,
-      "z": -1.4124500153760508e-30
+      "z": 0
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -9611,20 +9611,32 @@
     },
     "_enabled": true,
     "EasyPrefabRiverMapSet0": {
-      "__uuid__": "e6a10a4b-3296-4b90-98e7-736323cac652"
+      "__uuid__": "7aca1e21-afb5-4132-8f5c-346c944632e0"
     },
     "MediumPrefabRiverMapSet0": {
-      "__uuid__": "e6a10a4b-3296-4b90-98e7-736323cac652"
+      "__uuid__": "3af4db60-c9f3-4114-ac90-2de7307a7216"
     },
     "HardPrefabRiverMapSet0": {
-      "__uuid__": "e6a10a4b-3296-4b90-98e7-736323cac652"
+      "__uuid__": "379b65b1-6ae5-424e-b391-b86828260b98"
     },
-    "EasyPrefabRiverMapSet1": null,
-    "MediumPrefabRiverMapSet1": null,
-    "HardPrefabRiverMapSet1": null,
-    "EasyPrefabRiverMapSet2": null,
-    "MediumPrefabRiverMapSet2": null,
-    "HardPrefabRiverMapSet2": null,
+    "EasyPrefabRiverMapSet1": {
+      "__uuid__": "ec072a99-96e5-4b73-a1a7-e4a8c86e958b"
+    },
+    "MediumPrefabRiverMapSet1": {
+      "__uuid__": "b50ccd6c-f476-49cb-948d-5344424a8382"
+    },
+    "HardPrefabRiverMapSet1": {
+      "__uuid__": "a293bb39-9187-44f4-a348-08177209b308"
+    },
+    "EasyPrefabRiverMapSet2": {
+      "__uuid__": "b2a3f2bd-99a8-4895-84a4-505404d3d41c"
+    },
+    "MediumPrefabRiverMapSet2": {
+      "__uuid__": "5e9061d4-9e55-4e8f-a0ba-1e91c42486df"
+    },
+    "HardPrefabRiverMapSet2": {
+      "__uuid__": "0cd13242-2845-4402-9164-475f0afd2bda"
+    },
     "EasyPrefabRiverMapSet3": null,
     "MediumPrefabRiverMapSet3": null,
     "HardPrefabRiverMapSet3": null,
@@ -10130,12 +10142,12 @@
       "__uuid__": "40e690d1-6923-476a-8487-8576b98f151e"
     },
     "_spriteFrame": {
-      "__uuid__": "ae01cc0e-824c-409f-9312-add1f86e2e43"
+      "__uuid__": "944ccda1-3d35-4771-ae38-71fa2ab894f5"
     },
     "_texture": {
-      "__uuid__": "2225d190-1491-4885-b37b-d4bf02e9a18d"
+      "__uuid__": "0bb25544-c026-45f9-81e0-c98083d57253"
     },
-    "_stopped": true,
+    "_stopped": false,
     "playOnLoad": true,
     "autoRemoveOnFinish": false,
     "totalParticles": 120,
