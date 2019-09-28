@@ -1749,7 +1749,7 @@
       "__type__": "cc.Vec3",
       "x": -89.99999999999999,
       "y": -180,
-      "z": 0
+      "z": -1.4124500153760508e-30
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -9511,7 +9511,7 @@
       "__id__": 221
     },
     "totalMapsToGenerate": 3,
-    "totalPrefabsToSpawn": 5,
+    "totalPrefabsToSpawn": 3,
     "totalEasyPrefabsToSpawn": 5,
     "totalMediumPrefabsToSpawn": 7,
     "totalHardPrefabsToSpawn": 10,
@@ -9638,13 +9638,13 @@
     },
     "_enabled": true,
     "EasyPrefabRiverMapSet0": {
-      "__uuid__": "7aca1e21-afb5-4132-8f5c-346c944632e0"
+      "__uuid__": "ac647703-8ccf-4a9a-9392-925b83d33177"
     },
     "MediumPrefabRiverMapSet0": {
-      "__uuid__": "e6a10a4b-3296-4b90-98e7-736323cac652"
+      "__uuid__": "0eaf0427-47d6-425d-b87d-7e72b00d8bbb"
     },
     "HardPrefabRiverMapSet0": {
-      "__uuid__": "379b65b1-6ae5-424e-b391-b86828260b98"
+      "__uuid__": "4be02685-cb2c-4c2e-a22c-7685ae80c55c"
     },
     "PrefabRiverMapSet1": {
       "__uuid__": "a0436783-1c83-4d6b-9dec-338ba1553ba2"

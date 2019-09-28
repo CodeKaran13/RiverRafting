@@ -88,7 +88,7 @@
     "_skewX": 0,
     "_skewY": 0,
     "_is3DNode": false,
-    "groupIndex": 5,
+    "groupIndex": 7,
     "_id": ""
   },
   {
@@ -542,8 +542,12 @@
       "__id__": 14
     },
     "damage": 5,
-    "myCol1": null,
-    "myCol2": null,
+    "myCol1": {
+      "__id__": 16
+    },
+    "myCol2": {
+      "__id__": 17
+    },
     "_id": ""
   },
   {
@@ -564,7 +568,7 @@
     "_id": ""
   },
   {
-    "__type__": "cc.CircleCollider",
+    "__type__": "cc.BoxCollider",
     "_name": "",
     "_objFlags": 0,
     "node": {
@@ -577,7 +581,11 @@
       "x": -64.6,
       "y": 61.1
     },
-    "_radius": 12.100000000000014,
+    "_size": {
+      "__type__": "cc.Size",
+      "width": 35,
+      "height": 35
+    },
     "_id": ""
   },
   {
