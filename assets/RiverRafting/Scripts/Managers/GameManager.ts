@@ -4,6 +4,7 @@ import BonusSystem from "../GamePlay/BonusSystem";
 import TimeManager from "./TimeManager";
 import UIManager from "./UIManager";
 import ScoreManager from "./ScoreManager";
+import Player from "../Player";
 
 export enum GameState {
     PreGame = 0,
@@ -19,6 +20,8 @@ export default class GameManager extends cc.Component {
 
     @property(cc.Animation)
     ImpactPE: cc.Animation = null;
+    @property(cc.ParticleSystem)
+    rainPS: cc.ParticleSystem = null;
     @property(cc.Animation)
     leftWindEffect: cc.Animation = null;
     @property(cc.Animation)
@@ -50,6 +53,9 @@ export default class GameManager extends cc.Component {
         if (GameManager.Instance == null) {
             GameManager.Instance = this;
         }
+
+        this.startFPSsequence();
+
         // this.GetData();
     }
     // update(dt) {
@@ -92,27 +98,54 @@ export default class GameManager extends cc.Component {
 
     PlayWindEffect(direction: number) {
         if (direction == -1) {
-            this.leftWindEffect.node.active = true;
+            // this.leftWindEffect.node.active = true;
+            this.leftWindEffect.node.group = 'Weather';
             this.leftWindEffect.play();
         }
         else {
-            this.rightWindEffect.node.active = true;
+            // this.rightWindEffect.node.active = true;
+            this.rightWindEffect.node.group = 'Weather';
             this.rightWindEffect.play();
         }
     }
 
     StopWindEffect() {
         this.leftWindEffect.stop();
-        this.leftWindEffect.node.active = false;
+        // this.leftWindEffect.node.active = false;
+        this.leftWindEffect.node.group = 'Cull';
         this.rightWindEffect.stop();
-        this.rightWindEffect.node.active = false;
+        this.rightWindEffect.node.group = 'Cull';
+        // this.rightWindEffect.node.active = false;
     }
 
     OnGameOver() {
+        GameManager.currentGameState = GameState.PostGame;
         ScoreManager.Instance.AddHumanSavedBonus();
         ScoreManager.Instance.AddCoinsBonus();
         BonusSystem.Instance.stopAction();
 
         UIManager.Instance.OpenSubmitWindow();
+    }
+
+    // FPS sequence
+    fpsSequence: cc.ActionInterval = null;
+    startFPSsequence() {
+        var time = cc.delayTime(2);
+        this.fpsSequence = cc.sequence(time, cc.callFunc(this.checkFPS, this));
+        this.node.runAction(this.fpsSequence.repeatForever());
+    }
+    checkFPS() {
+        if (Math.floor(1 / cc.director.getDeltaTime()) <= 35) {
+            GameManager.isHighEndDevice = false;
+            if (this.rainPS.active) {
+                this.rainPS.stopSystem();
+            }
+        }
+        else {
+            GameManager.isHighEndDevice = true;
+            if (!this.rainPS.active) {
+                this.rainPS.resetSystem();
+            }
+        }
     }
 }

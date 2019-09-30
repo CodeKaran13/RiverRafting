@@ -47,30 +47,63 @@ export default class TimeManager extends cc.Component {
 
                 if (this.currentime >= 120) {
                     GameManager.currentDifficulty = Difficulty.Easy;
+                    if (!GameManager.isHighEndDevice) {
+                        if (Player.Instance.MAXMOVEMENTSPEED != 6) {
+                            // console.log('low end start sequence acc');
+                            Player.Instance.MAXMOVEMENTSPEED = 6;
+                            Player.Instance.StartAccelerationSequence();
+                        }
+                    }
+                    else {
+                        if (Player.Instance.MAXMOVEMENTSPEED != 3) {
+                            // console.log('high end start sequence acc');
+                            Player.Instance.MAXMOVEMENTSPEED = 3;
+                            Player.Instance.StartAccelerationSequence();
+                        }
+                    }
                 }
                 else if (this.currentime < 120 && this.currentime >= 60) {
                     GameManager.currentDifficulty = Difficulty.Normal;
-                    if (Player.Instance.MAXMOVEMENTSPEED != 4) {
-                        Player.Instance.MAXMOVEMENTSPEED = 4;
-                        Player.Instance.StartAccelerationSequence();
-                        Player.Instance.windDir = this.getRandomWindDir();
-                        GameManager.Instance.PlayWindEffect(Player.Instance.windDir);
-                        Player.Instance.IsWindy = true;
-                        this.startWindyTimer();
+                    if (GameManager.isHighEndDevice) {
+                        if (Player.Instance.MAXMOVEMENTSPEED != 4) {
+                            Player.Instance.MAXMOVEMENTSPEED = 4;
+                            Player.Instance.StartAccelerationSequence();
+                            Player.Instance.windDir = this.getRandomWindDir();
+                            GameManager.Instance.PlayWindEffect(Player.Instance.windDir);
+                            Player.Instance.IsWindy = true;
+                            this.startWindyTimer();
+                        }
+                    }
+                    else {
+                        if (Player.Instance.MAXMOVEMENTSPEED != 7) {
+                            Player.Instance.MAXMOVEMENTSPEED = 7;
+                            Player.Instance.StartAccelerationSequence();
+                            Player.Instance.windDir = this.getRandomWindDir();
+                            GameManager.Instance.PlayWindEffect(Player.Instance.windDir);
+                            Player.Instance.IsWindy = true;
+                            this.startWindyTimer();
+                        }
                     }
                 }
                 else {
                     GameManager.currentDifficulty = Difficulty.Hard;
-                    if (Player.Instance.MAXMOVEMENTSPEED != 5) {
-                        Player.Instance.MAXMOVEMENTSPEED = 5;
-                        Player.Instance.StartAccelerationSequence();
+                    if (GameManager.isHighEndDevice) {
+                        if (Player.Instance.MAXMOVEMENTSPEED != 5) {
+                            Player.Instance.MAXMOVEMENTSPEED = 5;
+                            Player.Instance.StartAccelerationSequence();
+                        }
+                    }
+                    else {
+                        if (Player.Instance.MAXMOVEMENTSPEED != 8) {
+                            Player.Instance.MAXMOVEMENTSPEED = 8;
+                            Player.Instance.StartAccelerationSequence();
+                        }
                     }
                 }
             }
             else {
                 //trigger game over
                 GameManager.Instance.OnGameOver();
-                GameManager.currentGameState = GameState.PostGame;
             }
         }
         else {
@@ -118,7 +151,7 @@ export default class TimeManager extends cc.Component {
             Player.Instance.IsWindy = false;
             GameManager.Instance.StopWindEffect();
             this.node.stopAction(this.windSequence);
-            this.windTime = 3;
+            this.windTime = 7;
         }
     }
 }

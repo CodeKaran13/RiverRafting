@@ -16,7 +16,7 @@ export default class Player extends cc.Component {
 
     MAXTURNSPEED: number = 3;
     MINMOVEMENTSPEED: number = 1;
-    MAXMOVEMENTSPEED: number = 3;
+    MAXMOVEMENTSPEED: number = 1;
 
     turnSequence: cc.Action = null;
     brakeSequence;
@@ -42,8 +42,8 @@ export default class Player extends cc.Component {
 
         if (GameManager.currentGameState == GameState.InGame) {
             if (!this.HasAccelerationStarted) {
-                this.HasAccelerationStarted = true
-                this.StartAccelerationSequence();
+                this.HasAccelerationStarted = true;
+                // this.StartAccelerationSequence();
                 this.restartWrongDirectionSequence();
             }
 
@@ -188,6 +188,7 @@ export default class Player extends cc.Component {
         this.movementSpeed += 0.2;
         if (this.movementSpeed >= this.MAXMOVEMENTSPEED) {
             this.movementSpeed = this.MAXMOVEMENTSPEED;
+            // console.log('speed: ' + this.movementSpeed);
             this.node.stopAction(this.accelerateSequence);
         }
     }

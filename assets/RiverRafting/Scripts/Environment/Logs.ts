@@ -13,9 +13,6 @@ export default class Logs extends Obstacles {
         this.myType = ObstacleType.Log;
     }
     onEnable() {
-        if (GameManager.isHighEndDevice) {
-            this.myAnimator.play();
-        }
         this.myPos = this.node.convertToWorldSpace(cc.Vec2.ZERO).y;
 
         this.startSequence();
@@ -30,7 +27,7 @@ export default class Logs extends Obstacles {
             this.myAnimator.play('floating_wood_break');
             other.node.getComponent(HealthManager).takeDamage(this.damage);
             BonusSystem.Instance.stopAction();
-            this.changeToCullGroup();
+            // this.changeToCullGroup();
         }
     }
 
@@ -58,8 +55,10 @@ export default class Logs extends Obstacles {
 
     changeToDefaultGroup() {
         this.myCol.enabled = true;
+        this.myAnimator.play();
         this.node.group = 'default';
     }
+    //ANIMATION EVENT
     changeToCullGroup() {
         this.myCol.enabled = false;
         this.myAnimator.stop();
