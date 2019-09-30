@@ -1717,9 +1717,9 @@
     },
     "_eulerAngles": {
       "__type__": "cc.Vec3",
-      "x": -90,
+      "x": -89.99999999999999,
       "y": -180,
-      "z": 0
+      "z": -1.4124500153760508e-30
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -9637,18 +9637,42 @@
     "HardPrefabRiverMapSet2": {
       "__uuid__": "0cd13242-2845-4402-9164-475f0afd2bda"
     },
-    "EasyPrefabRiverMapSet3": null,
-    "MediumPrefabRiverMapSet3": null,
-    "HardPrefabRiverMapSet3": null,
-    "EasyPrefabRiverMapSet4": null,
-    "MediumPrefabRiverMapSet4": null,
-    "HardPrefabRiverMapSet4": null,
-    "EasyPrefabRiverMapSet5": null,
-    "MediumPrefabRiverMapSet5": null,
-    "HardPrefabRiverMapSet5": null,
-    "EasyPrefabRiverMapSet6": null,
-    "MediumPrefabRiverMapSet6": null,
-    "HardPrefabRiverMapSet6": null,
+    "EasyPrefabRiverMapSet3": {
+      "__uuid__": "51513e7a-a70c-4136-8440-f87226c632e6"
+    },
+    "MediumPrefabRiverMapSet3": {
+      "__uuid__": "47cd36f6-6b79-4e4b-a7a3-a4e33c299b46"
+    },
+    "HardPrefabRiverMapSet3": {
+      "__uuid__": "c2ef7267-1c10-4510-b6ee-4eaa2e5efaa8"
+    },
+    "EasyPrefabRiverMapSet4": {
+      "__uuid__": "bca5d434-4414-4c8b-a7e0-203a08f8d585"
+    },
+    "MediumPrefabRiverMapSet4": {
+      "__uuid__": "bee71a37-6592-4e29-93e1-96d28054bb0e"
+    },
+    "HardPrefabRiverMapSet4": {
+      "__uuid__": "5c72d542-02f5-4244-aae4-f839f8937f26"
+    },
+    "EasyPrefabRiverMapSet5": {
+      "__uuid__": "1cf2e60d-1198-44ec-b108-49741f5cd98c"
+    },
+    "MediumPrefabRiverMapSet5": {
+      "__uuid__": "f95a5e03-5683-4f73-9a61-b728d7eb3dfc"
+    },
+    "HardPrefabRiverMapSet5": {
+      "__uuid__": "ed87f4a3-12bb-4ddd-91cb-80f3ab058347"
+    },
+    "EasyPrefabRiverMapSet6": {
+      "__uuid__": "ac647703-8ccf-4a9a-9392-925b83d33177"
+    },
+    "MediumPrefabRiverMapSet6": {
+      "__uuid__": "0eaf0427-47d6-425d-b87d-7e72b00d8bbb"
+    },
+    "HardPrefabRiverMapSet6": {
+      "__uuid__": "4be02685-cb2c-4c2e-a22c-7685ae80c55c"
+    },
     "WavePrefabs": {
       "__uuid__": "20312058-3221-4039-87c6-bc760ac64f59"
     },

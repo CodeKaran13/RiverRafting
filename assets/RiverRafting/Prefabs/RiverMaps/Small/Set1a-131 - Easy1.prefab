@@ -44,13 +44,10 @@
       },
       {
         "__id__": 226
-      },
-      {
-        "__id__": 227
       }
     ],
     "_prefab": {
-      "__id__": 228
+      "__id__": 227
     },
     "_opacity": 255,
     "_color": {
@@ -6037,7 +6034,7 @@
     "myAnimator": {
       "__id__": 157
     },
-    "damage": 5,
+    "damage": 20,
     "myCol": {
       "__id__": 159
     },
@@ -6450,7 +6447,7 @@
     "_skewX": 0,
     "_skewY": 0,
     "_is3DNode": false,
-    "groupIndex": 7,
+    "groupIndex": 0,
     "_id": ""
   },
   {
@@ -8157,27 +8154,6 @@
       "__type__": "cc.Vec2",
       "x": 0,
       "y": 1408.5
-    },
-    "_size": {
-      "__type__": "cc.Size",
-      "width": 1400,
-      "height": 10
-    },
-    "_id": ""
-  },
-  {
-    "__type__": "cc.BoxCollider",
-    "_name": "",
-    "_objFlags": 0,
-    "node": {
-      "__id__": 1
-    },
-    "_enabled": true,
-    "tag": 2,
-    "_offset": {
-      "__type__": "cc.Vec2",
-      "x": 0,
-      "y": 352
     },
     "_size": {
       "__type__": "cc.Size",

@@ -101,7 +101,8 @@ export default class MatchManager extends cc.Component {
     getRandomNumber() {
         // will return 0, 1, 2, 3, 4, 5, 6
         // var rand = this.prefabArray.splice(Math.floor(Math.random() * this.prefabArray.length), 1);
-        var rand = Math.floor(Math.random() * 2);
+        var rand = Math.floor(Math.random() * 6);
+        // console.log(rand);
         // return rand[0];
         return rand;
         // return 0;
