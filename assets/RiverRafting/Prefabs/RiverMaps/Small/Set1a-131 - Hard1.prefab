@@ -44,13 +44,10 @@
       },
       {
         "__id__": 369
-      },
-      {
-        "__id__": 370
       }
     ],
     "_prefab": {
-      "__id__": 371
+      "__id__": 370
     },
     "_opacity": 255,
     "_color": {
@@ -1511,7 +1508,7 @@
         "__id__": 331
       }
     ],
-    "_active": true,
+    "_active": false,
     "_level": 3,
     "_components": [],
     "_prefab": {
@@ -8329,7 +8326,7 @@
     "_skewX": 0,
     "_skewY": 0,
     "_is3DNode": false,
-    "groupIndex": 0,
+    "groupIndex": 7,
     "_id": ""
   },
   {
@@ -9007,6 +9004,9 @@
       "__id__": 247
     },
     "damage": 5,
+    "myCol": {
+      "__id__": 249
+    },
     "_id": ""
   },
   {
@@ -9016,7 +9016,7 @@
     "node": {
       "__id__": 229
     },
-    "_enabled": true,
+    "_enabled": false,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -9120,7 +9120,7 @@
     "_skewX": 0,
     "_skewY": 0,
     "_is3DNode": false,
-    "groupIndex": 0,
+    "groupIndex": 7,
     "_id": ""
   },
   {
@@ -9798,6 +9798,9 @@
       "__id__": 269
     },
     "damage": 5,
+    "myCol": {
+      "__id__": 271
+    },
     "_id": ""
   },
   {
@@ -9807,7 +9810,7 @@
     "node": {
       "__id__": 251
     },
-    "_enabled": true,
+    "_enabled": false,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -10793,7 +10796,10 @@
     "myAnimator": {
       "__id__": 298
     },
-    "damage": 5,
+    "damage": 20,
+    "myCol": {
+      "__id__": 300
+    },
     "_id": ""
   },
   {
@@ -10803,7 +10809,7 @@
     "node": {
       "__id__": 273
     },
-    "_enabled": true,
+    "_enabled": false,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -11789,7 +11795,10 @@
     "myAnimator": {
       "__id__": 327
     },
-    "damage": 5,
+    "damage": 20,
+    "myCol": {
+      "__id__": 329
+    },
     "_id": ""
   },
   {
@@ -11799,7 +11808,7 @@
     "node": {
       "__id__": 302
     },
-    "_enabled": true,
+    "_enabled": false,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -12964,27 +12973,6 @@
       "__type__": "cc.Vec2",
       "x": 0,
       "y": 1408.5
-    },
-    "_size": {
-      "__type__": "cc.Size",
-      "width": 1400,
-      "height": 10
-    },
-    "_id": ""
-  },
-  {
-    "__type__": "cc.BoxCollider",
-    "_name": "",
-    "_objFlags": 0,
-    "node": {
-      "__id__": 1
-    },
-    "_enabled": true,
-    "tag": 2,
-    "_offset": {
-      "__type__": "cc.Vec2",
-      "x": 0,
-      "y": 352
     },
     "_size": {
       "__type__": "cc.Size",

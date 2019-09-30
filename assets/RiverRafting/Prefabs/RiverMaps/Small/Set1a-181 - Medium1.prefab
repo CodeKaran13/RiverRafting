@@ -327,7 +327,7 @@
     "_skewX": 0,
     "_skewY": 0,
     "_is3DNode": false,
-    "groupIndex": 0,
+    "groupIndex": 3,
     "_id": ""
   },
   {
@@ -897,7 +897,7 @@
     "_skewX": 0,
     "_skewY": 0,
     "_is3DNode": false,
-    "groupIndex": 0,
+    "groupIndex": 3,
     "_id": ""
   },
   {
@@ -1309,7 +1309,7 @@
         "__id__": 174
       }
     ],
-    "_active": true,
+    "_active": false,
     "_level": 3,
     "_components": [],
     "_prefab": {
@@ -3944,7 +3944,7 @@
     "_skewX": 0,
     "_skewY": 0,
     "_is3DNode": false,
-    "groupIndex": 0,
+    "groupIndex": 7,
     "_id": ""
   },
   {
@@ -4622,6 +4622,9 @@
       "__id__": 119
     },
     "damage": 5,
+    "myCol": {
+      "__id__": 121
+    },
     "_id": ""
   },
   {
@@ -4631,7 +4634,7 @@
     "node": {
       "__id__": 101
     },
-    "_enabled": true,
+    "_enabled": false,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -4735,7 +4738,7 @@
     "_skewX": 0,
     "_skewY": 0,
     "_is3DNode": false,
-    "groupIndex": 0,
+    "groupIndex": 7,
     "_id": ""
   },
   {
@@ -5413,6 +5416,9 @@
       "__id__": 141
     },
     "damage": 5,
+    "myCol": {
+      "__id__": 143
+    },
     "_id": ""
   },
   {
@@ -5422,7 +5428,7 @@
     "node": {
       "__id__": 123
     },
-    "_enabled": true,
+    "_enabled": false,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -6408,7 +6414,10 @@
     "myAnimator": {
       "__id__": 170
     },
-    "damage": 5,
+    "damage": 20,
+    "myCol": {
+      "__id__": 172
+    },
     "_id": ""
   },
   {
@@ -6418,7 +6427,7 @@
     "node": {
       "__id__": 145
     },
-    "_enabled": true,
+    "_enabled": false,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
@@ -7404,7 +7413,10 @@
     "myAnimator": {
       "__id__": 199
     },
-    "damage": 5,
+    "damage": 20,
+    "myCol": {
+      "__id__": 201
+    },
     "_id": ""
   },
   {
@@ -7414,7 +7426,7 @@
     "node": {
       "__id__": 174
     },
-    "_enabled": true,
+    "_enabled": false,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",

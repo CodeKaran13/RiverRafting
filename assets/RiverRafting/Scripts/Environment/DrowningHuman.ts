@@ -68,7 +68,7 @@ export default class DrowningHuman extends Collectibles {
         this.node.group = 'default';
     }
     changeToCullGroup() {
-        console.log('cull human');
+        // console.log('cull human');
         this.myCol.enabled = false;
         this.myAnim.timeScale = 0;
         this.node.group = 'Cull';
