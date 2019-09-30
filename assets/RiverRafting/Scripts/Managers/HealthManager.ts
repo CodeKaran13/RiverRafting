@@ -1,5 +1,7 @@
 // import MatchManager from "./MatchManager";
 import UIManager from "./UIManager";
+import MatchManager from "./MatchManager";
+import GameManager from "./GameManager";
 
 const { ccclass, property } = cc._decorator;
 
@@ -31,9 +33,10 @@ export default class HealthManager extends cc.Component
     takeDamage(damage: number)
     {
         this.currentHealth -= damage;
-        if (this.currentHealth < 0)
+        if (this.currentHealth <= 0)
         {
             this.currentHealth = 0;
+            GameManager.Instance.OnGameOver();
         }
         this.updateHealthLabel();
     }

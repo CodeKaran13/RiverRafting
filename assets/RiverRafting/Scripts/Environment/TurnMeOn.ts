@@ -86,7 +86,8 @@ return 0;
             // }
 
             this.node.children[0].children[0].group = 'default';
-            this.node.children[0].children[2].group = 'default';
+            this.node.children[0].children[1].group = 'default';
+            this.node.children[0].children[3].group = 'default';
 
             // for (let i = 0; i < this.node.children[0].children[MatchManager.easyIndex].childrenCount; i++) {
             //     if (this.node.children[0].children[MatchManager.easyIndex].children[i].active) {

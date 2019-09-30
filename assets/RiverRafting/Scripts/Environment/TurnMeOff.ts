@@ -23,7 +23,8 @@ export default class TurnMeOff extends cc.Component {
             // this.node.children[this.node.childrenCount - 1].active = false;
 
             this.node.children[0].children[0].group = 'Cull';
-            this.node.children[0].children[2].group = 'Cull';
+            this.node.children[0].children[1].group = 'Cull';
+            this.node.children[0].children[3].group = 'Cull';
 
             this.myLeftPhyCol.enabled = false;
             this.myRightPhyCol.enabled = false;

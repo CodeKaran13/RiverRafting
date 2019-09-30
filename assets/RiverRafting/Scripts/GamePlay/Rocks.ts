@@ -11,11 +11,7 @@ const { ccclass, property } = cc._decorator;
 export default class Rocks extends Obstacles {
 
     onEnable() {
-        // if (GameManager.isHighEndDevice)
-        //     this.myAnimator.play();
-
         this.myPos = this.node.convertToWorldSpaceAR(cc.Vec2.ZERO).y;
-
         this.startSequence();
     }
     onDisable() {
@@ -27,8 +23,7 @@ export default class Rocks extends Obstacles {
     }
 
     onCollisionEnter(other, self) {
-        if (other.node.parent.name == 'Player') {
-            // console.log('player collided rock');
+        if (other.node.name == 'Player') {
             Player.Instance.node.getComponent(HealthManager).takeDamage(5);
             BonusSystem.Instance.stopAction();
         }
