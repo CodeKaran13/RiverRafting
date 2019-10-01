@@ -30,6 +30,7 @@ export default class Docks extends Obstacles {
         if (other.node.name == 'Player') {
             this.myAnimator.play('dock_crack');
             Player.Instance.node.getComponent(HealthManager).takeDamage(this.damage);
+            Player.Instance.PlayBlinkEffect();
             CameraController.Instance.cameraShake();
             AudioScript.Instance.PlayDockImpactSound();
             BonusSystem.Instance.stopAction();

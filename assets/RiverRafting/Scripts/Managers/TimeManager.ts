@@ -47,20 +47,20 @@ export default class TimeManager extends cc.Component {
 
                 if (this.currentime >= 120) {
                     GameManager.currentDifficulty = Difficulty.Easy;
-                    if (!GameManager.isHighEndDevice) {
-                        if (Player.Instance.MAXMOVEMENTSPEED != 6) {
-                            // console.log('low end start sequence acc');
-                            Player.Instance.MAXMOVEMENTSPEED = 6;
-                            Player.Instance.StartAccelerationSequence();
-                        }
+                    // if (!GameManager.isHighEndDevice) {
+                    //     if (Player.Instance.MAXMOVEMENTSPEED != 6) {
+                    //         // console.log('low end start sequence acc');
+                    //         Player.Instance.MAXMOVEMENTSPEED = 6;
+                    //         Player.Instance.StartAccelerationSequence();
+                    //     }
+                    // }
+                    // else {
+                    if (Player.Instance.MAXMOVEMENTSPEED != 3) {
+                        // console.log('high end start sequence acc');
+                        Player.Instance.MAXMOVEMENTSPEED = 3;
+                        Player.Instance.StartAccelerationSequence();
                     }
-                    else {
-                        if (Player.Instance.MAXMOVEMENTSPEED != 3) {
-                            // console.log('high end start sequence acc');
-                            Player.Instance.MAXMOVEMENTSPEED = 3;
-                            Player.Instance.StartAccelerationSequence();
-                        }
-                    }
+                    // }
                 }
                 else if (this.currentime < 120 && this.currentime >= 60) {
                     GameManager.currentDifficulty = Difficulty.Normal;
@@ -74,16 +74,16 @@ export default class TimeManager extends cc.Component {
                             // this.startWindyTimer();
                         }
                     }
-                    else {
-                        if (Player.Instance.MAXMOVEMENTSPEED != 7) {
-                            Player.Instance.MAXMOVEMENTSPEED = 7;
-                            Player.Instance.StartAccelerationSequence();
-                            // Player.Instance.windDir = this.getRandomWindDir();
-                            // GameManager.Instance.PlayWindEffect(Player.Instance.windDir);
-                            // Player.Instance.IsWindy = true;
-                            // this.startWindyTimer();
-                        }
-                    }
+                    // else {
+                    //     if (Player.Instance.MAXMOVEMENTSPEED != 7) {
+                    //         Player.Instance.MAXMOVEMENTSPEED = 7;
+                    //         Player.Instance.StartAccelerationSequence();
+                    //         // Player.Instance.windDir = this.getRandomWindDir();
+                    //         // GameManager.Instance.PlayWindEffect(Player.Instance.windDir);
+                    //         // Player.Instance.IsWindy = true;
+                    //         // this.startWindyTimer();
+                    //     }
+                    // }
                 }
                 else {
                     GameManager.currentDifficulty = Difficulty.Hard;
@@ -93,12 +93,12 @@ export default class TimeManager extends cc.Component {
                             Player.Instance.StartAccelerationSequence();
                         }
                     }
-                    else {
-                        if (Player.Instance.MAXMOVEMENTSPEED != 8) {
-                            Player.Instance.MAXMOVEMENTSPEED = 8;
-                            Player.Instance.StartAccelerationSequence();
-                        }
-                    }
+                    // else {
+                    //     if (Player.Instance.MAXMOVEMENTSPEED != 8) {
+                    //         Player.Instance.MAXMOVEMENTSPEED = 8;
+                    //         Player.Instance.StartAccelerationSequence();
+                    //     }
+                    // }
                 }
             }
             else {

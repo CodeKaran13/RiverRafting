@@ -290,6 +290,10 @@ export default class Player extends cc.Component {
         }
     }
 
-
+    @property(cc.Animation)
+    myAnim: cc.Animation = null;
+    PlayBlinkEffect() {
+        this.myAnim.play();
+    }
 
 }

@@ -92,6 +92,8 @@ export default class UIManager extends cc.Component {
     healthBarSprite: cc.Sprite = null;
     @property(cc.Animation)
     explosionEffect: cc.Animation = null;
+    @property(cc.Animation)
+    scorePopUpEffect: cc.Animation = null;
 
     public static Instance: UIManager = null;
 
@@ -180,5 +182,11 @@ export default class UIManager extends cc.Component {
         this.explosionEffect.node.group = 'default';
         this.explosionEffect.node.setPosition(pos);
         this.explosionEffect.play();
+    }
+    playScorePopUpAtPos(pos: cc.Vec2) {
+        this.scorePopUpEffect.node.group = 'UI';
+        // console.log(pos);
+        this.scorePopUpEffect.node.setPosition(pos);
+        this.scorePopUpEffect.play();
     }
 }

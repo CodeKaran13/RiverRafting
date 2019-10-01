@@ -3,6 +3,7 @@ import HealthManager from "../Managers/HealthManager";
 import BonusSystem from "../GamePlay/BonusSystem";
 import FollowPlayer from "./FollowPlayer";
 import AudioScript from "../Sound/AudioScript";
+import Player from "../Player";
 
 const { ccclass, property } = cc._decorator;
 
@@ -26,6 +27,7 @@ export default class Logs extends Obstacles {
         if (other.node.name == 'Player') {
             this.myAnimator.play('floating_wood_break');
             other.node.getComponent(HealthManager).takeDamage(this.damage);
+            Player.Instance.PlayBlinkEffect();
             BonusSystem.Instance.stopAction();
             AudioScript.Instance.PlayWoodImpactSound();
         }

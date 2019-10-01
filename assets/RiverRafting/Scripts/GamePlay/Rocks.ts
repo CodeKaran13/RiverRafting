@@ -25,6 +25,7 @@ export default class Rocks extends Obstacles {
     onCollisionEnter(other, self) {
         if (other.node.name == 'Player') {
             Player.Instance.node.getComponent(HealthManager).takeDamage(5);
+            Player.Instance.PlayBlinkEffect();
             BonusSystem.Instance.stopAction();
         }
     }
