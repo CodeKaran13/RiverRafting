@@ -5,6 +5,7 @@ import TimeManager from "./TimeManager";
 import UIManager from "./UIManager";
 import ScoreManager from "./ScoreManager";
 import Player from "../Player";
+import AudioScript from "../Sound/AudioScript";
 
 export enum GameState {
     PreGame = 0,
@@ -55,8 +56,8 @@ export default class GameManager extends cc.Component {
         }
 
         this.startFPSsequence();
-
-        // this.GetData();
+        AudioScript.Instance.PlayBgMusic();
+        this.GetData();
     }
     // update(dt) {
     //     if (Math.floor(1 / dt) <= 35) {

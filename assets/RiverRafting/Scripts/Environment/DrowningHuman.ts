@@ -4,6 +4,7 @@ import CollectiblesPool from "../Pools/CollectiblesPool";
 import ScoreManager from "../Managers/ScoreManager";
 import GameManager from "../Managers/GameManager";
 import FollowPlayer from "./FollowPlayer";
+import AudioScript from "../Sound/AudioScript";
 
 const { ccclass, property } = cc._decorator;
 
@@ -34,7 +35,7 @@ export default class DrowningHuman extends Collectibles {
 
             // increase score
             this.changeToCullGroup();
-
+            AudioScript.Instance.PlayHumanCollectSound();
             ScoreManager.Instance.totalHumanSaved += 1;
             ScoreManager.Instance.AddScore(ScoreManager.Instance.perHumanSavedBonus);
             

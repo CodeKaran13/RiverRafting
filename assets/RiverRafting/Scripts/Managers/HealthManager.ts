@@ -2,6 +2,7 @@
 import UIManager from "./UIManager";
 import MatchManager from "./MatchManager";
 import GameManager from "./GameManager";
+import Player from "../Player";
 
 const { ccclass, property } = cc._decorator;
 
@@ -37,6 +38,8 @@ export default class HealthManager extends cc.Component
         {
             this.currentHealth = 0;
             GameManager.Instance.OnGameOver();
+            Player.Instance.node.group = 'Cull';
+            UIManager.Instance.playExplosionEffectAtPos(Player.Instance.node.position);
         }
         this.updateHealthLabel();
     }

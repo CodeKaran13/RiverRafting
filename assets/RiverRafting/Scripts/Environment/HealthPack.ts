@@ -3,6 +3,7 @@ import CollectiblesPool from "../Pools/CollectiblesPool";
 import Player from "../Player";
 import HealthManager from "../Managers/HealthManager";
 import FollowPlayer from "./FollowPlayer";
+import AudioScript from "../Sound/AudioScript";
 
 const { ccclass, property } = cc._decorator;
 
@@ -27,8 +28,8 @@ export default class HealthPack extends Collectibles {
         if (other.node.name == 'Player') {
             // console.log('player collided health');
             this.changeToCullGroup();
+            AudioScript.Instance.PlayHealthCollectSound();
             other.node.getComponent(HealthManager).increaseHP(this.health);
-            // CollectiblesPool.Instance.addCollectibleBackToPool(this.node);
         }
     }
 

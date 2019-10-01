@@ -1,6 +1,7 @@
 import Collectibles, { CollectibleType } from "../GamePlay/Collectibles";
 import ScoreManager from "../Managers/ScoreManager";
 import FollowPlayer from "./FollowPlayer";
+import AudioScript from "../Sound/AudioScript";
 
 const { ccclass, property } = cc._decorator;
 
@@ -23,11 +24,10 @@ export default class CoinPack extends Collectibles {
             // console.log('player collided coin');
 
             // increase score
-
             this.changeToCullGroup();
             ScoreManager.Instance.totalCoinsCollected += 1;
             ScoreManager.Instance.AddScore(ScoreManager.Instance.perCoinBonus);
-            // CollectiblesPool.Instance.addCollectibleBackToPool(this.node);
+            AudioScript.Instance.PlayCoinCollectSound();
         }
     }
 

@@ -3,6 +3,7 @@ import GameManager, { GameState } from "./GameManager";
 import HealthManager from "./HealthManager";
 import TimeManager from "./TimeManager";
 import ScoreManager from "./ScoreManager";
+import WindTimeManager from "../Environment/WindTimeManager";
 
 const { ccclass, property } = cc._decorator;
 
@@ -89,6 +90,8 @@ export default class UIManager extends cc.Component {
     //Sprite refs
     @property(cc.Sprite)
     healthBarSprite: cc.Sprite = null;
+    @property(cc.Animation)
+    explosionEffect: cc.Animation = null;
 
     public static Instance: UIManager = null;
 
@@ -135,6 +138,7 @@ export default class UIManager extends cc.Component {
 
         TimeManager.Instance.restartTimer();
         TimeManager.Instance.startTimer();
+        WindTimeManager.Instance.startSequence();
         MatchManager.Instance.StartGame();
 
         // close main menu window
@@ -169,5 +173,12 @@ export default class UIManager extends cc.Component {
     }
     OnMenuNoButtonClick() {
         this.MenuCrossWindow.active = false;
+    }
+
+    // Effect/Particle System
+    playExplosionEffectAtPos(pos: cc.Vec2) {
+        this.explosionEffect.node.group = 'default';
+        this.explosionEffect.node.setPosition(pos);
+        this.explosionEffect.play();
     }
 }

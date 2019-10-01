@@ -4,6 +4,7 @@ import Player from "../Player";
 import BonusSystem from "../GamePlay/BonusSystem";
 import CameraController from "../CameraController";
 import FollowPlayer from "./FollowPlayer";
+import AudioScript from "../Sound/AudioScript";
 
 const { ccclass, property } = cc._decorator;
 
@@ -28,9 +29,9 @@ export default class Docks extends Obstacles {
     onCollisionEnter(other, self) {
         if (other.node.name == 'Player') {
             this.myAnimator.play('dock_crack');
-            // this._player.getComponent(HealthManager).takeDamage(this.damage);
             Player.Instance.node.getComponent(HealthManager).takeDamage(this.damage);
             CameraController.Instance.cameraShake();
+            AudioScript.Instance.PlayDockImpactSound();
             BonusSystem.Instance.stopAction();
         }
     }
