@@ -57,7 +57,7 @@ export default class GameManager extends cc.Component {
 
         this.startFPSsequence();
         AudioScript.Instance.PlayBgMusic();
-        this.GetData();
+        // this.GetData();
     }
     // update(dt) {
     //     if (Math.floor(1 / dt) <= 35) {
@@ -92,8 +92,9 @@ export default class GameManager extends cc.Component {
     }
 
     PlayImpactEffectAtPos(pos: cc.Vec2) {
+        this.ImpactPE.node.group = 'default';
         this.ImpactPE.node.setPosition(pos);
-        this.ImpactPE.node.active = true;
+        // this.ImpactPE.node.active = true;
         this.ImpactPE.play();
     }
 

@@ -84,7 +84,7 @@ export default class TurnMeOn extends cc.Component {
             //     this.node.children[this.node.childrenCount - 1].active = true;
             // }
 
-            this.node.children[0].children[0].group = 'default';
+            this.node.children[0].children[0].group = 'Waves';
             this.node.children[0].children[1].group = 'default';
             this.node.children[0].children[3].group = 'default';
 

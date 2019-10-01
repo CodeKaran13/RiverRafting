@@ -136,7 +136,7 @@
     "SPW_Medieval.mtl": {
       "ver": "1.0.2",
       "uuid": "d44723d4-1809-4bed-89e6-eff9d2cb061d",
-      "dataAsSubAsset": "{\n  \"__type__\": \"cc.Material\",\n  \"_name\": \"\",\n  \"_objFlags\": 0,\n  \"_native\": \"\",\n  \"_effectAsset\": {\n    \"__uuid__\": \"abc2cb62-7852-4525-a90d-d474487b88f2\"\n  },\n  \"_defines\": {\n    \"USE_DIFFUSE_TEXTURE\": true\n  },\n  \"_props\": {\n    \"diffuseColor\": {\n      \"__type__\": \"cc.Color\",\n      \"r\": 204,\n      \"g\": 204,\n      \"b\": 204,\n      \"a\": 255\n    },\n    \"diffuseTexture\": {\n      \"__uuid__\": \"5cd8edef-7b21-4fbe-8613-83ecde29fa16\"\n    }\n  }\n}",
+      "dataAsSubAsset": "{\n  \"__type__\": \"cc.Material\",\n  \"_name\": \"\",\n  \"_objFlags\": 0,\n  \"_native\": \"\",\n  \"_effectAsset\": {\n    \"__uuid__\": \"abc2cb62-7852-4525-a90d-d474487b88f2\"\n  },\n  \"_defines\": {\n    \"USE_DIFFUSE_TEXTURE\": true,\n    \"USE_ALPHA_TEST\": false\n  },\n  \"_props\": {\n    \"diffuseColor\": {\n      \"__type__\": \"cc.Color\",\n      \"r\": 255,\n      \"g\": 254,\n      \"b\": 254,\n      \"a\": 255\n    },\n    \"diffuseTexture\": {\n      \"__uuid__\": \"5cd8edef-7b21-4fbe-8613-83ecde29fa16\"\n    },\n    \"glossiness\": 10,\n    \"alphaThreshold\": 1.3\n  }\n}",
       "name": "SPW_Medieval.mtl",
       "subMetas": {}
     }
