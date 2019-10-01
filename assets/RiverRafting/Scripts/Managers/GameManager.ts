@@ -5,6 +5,7 @@ import TimeManager from "./TimeManager";
 import UIManager from "./UIManager";
 import ScoreManager from "./ScoreManager";
 import Player from "../Player";
+import AudioScript from "../Sound/AudioScript";
 
 export enum GameState {
     PreGame = 0,
@@ -55,7 +56,7 @@ export default class GameManager extends cc.Component {
         }
 
         this.startFPSsequence();
-
+        AudioScript.Instance.PlayBgMusic();
         // this.GetData();
     }
     // update(dt) {
@@ -91,8 +92,9 @@ export default class GameManager extends cc.Component {
     }
 
     PlayImpactEffectAtPos(pos: cc.Vec2) {
+        this.ImpactPE.node.group = 'default';
         this.ImpactPE.node.setPosition(pos);
-        this.ImpactPE.node.active = true;
+        // this.ImpactPE.node.active = true;
         this.ImpactPE.play();
     }
 

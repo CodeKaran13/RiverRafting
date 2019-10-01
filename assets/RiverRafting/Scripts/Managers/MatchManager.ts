@@ -163,7 +163,7 @@ export default class MatchManager extends cc.Component {
         var waves = wavePrefab.getComponent(Waves);
         waves.myPos = wavePrefab.convertToWorldSpaceAR(cc.Vec2.ZERO);
 
-        wavePrefab.group = 'default';
+        wavePrefab.group = 'Waves';
         waves.IsActive = true;
         waves.CheckPlayerLocation = true;
     }

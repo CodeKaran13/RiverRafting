@@ -56,7 +56,8 @@ export default class BonusSystem extends cc.Component {
 
             if (GameManager.currentGameState == GameState.InGame) {
                 this.startCleanRunBonus();
-                this._playerBonusEffect.node.active = true;
+                // this._playerBonusEffect.node.active = true;
+                this._playerBonusEffect.node.group = 'default';
                 this._playerBonusEffect.play();
             }
         }
@@ -70,7 +71,8 @@ export default class BonusSystem extends cc.Component {
         this.closeLabel();
         this.resetBonus();
         this._playerBonusEffect.stop();
-        this._playerBonusEffect.node.active = false;
+        this._playerBonusEffect.node.group = 'Cull';
+        // this._playerBonusEffect.node.active = false;
         this.isBonusSequenceOn = false;
         // this.restartCounter();
     }
