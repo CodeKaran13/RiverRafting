@@ -4,6 +4,7 @@ import HealthManager from "./HealthManager";
 import TimeManager from "./TimeManager";
 import ScoreManager from "./ScoreManager";
 import WindTimeManager from "../Environment/WindTimeManager";
+import AudioScript from "../Sound/AudioScript";
 
 const { ccclass, property } = cc._decorator;
 
@@ -90,19 +91,23 @@ export default class UIManager extends cc.Component {
     //Sprite refs
     @property(cc.Sprite)
     healthBarSprite: cc.Sprite = null;
+
     @property(cc.Animation)
     explosionEffect: cc.Animation = null;
     @property(cc.Animation)
     scorePopUpEffect: cc.Animation = null;
+
+    @property(cc.Node)
+    GameSoundSprite: cc.Node = null;
+    @property(cc.Node)
+    MenuSoundSprite: cc.Node = null;
 
     public static Instance: UIManager = null;
 
     onLoad() {
         // this._matchManager._UIManager = this;
         this._healthManager._UIManager = this;
-    }
 
-    start() {
         if (UIManager.Instance == null) {
             UIManager.Instance = this;
         }
@@ -147,6 +152,48 @@ export default class UIManager extends cc.Component {
 
         this.MainMenuWindow.active = false;
         this.GameWindow.active = true;
+    }
+    OnSoundButtonClick() {
+        AudioScript.Instance.PlayButtonClickSound();
+
+        if (GameManager.Instance.IsSoundOn()) {
+            this.SwitchSoundMode(false);
+            AudioScript.Instance.StopBgMusic();
+            this.GameSoundSprite.children[0].active = false;
+            this.GameSoundSprite.children[1].active = true;
+        }
+        else {
+            this.SwitchSoundMode(true);
+            AudioScript.Instance.PlayBgMusic();
+            this.GameSoundSprite.children[0].active = true;
+            this.GameSoundSprite.children[1].active = false;
+        }
+    }
+    OnMenuSoundButtonClick() {
+        AudioScript.Instance.PlayButtonClickSound();
+
+        if (GameManager.Instance.IsSoundOn()) {
+            this.SwitchSoundMode(false);
+            AudioScript.Instance.StopBgMusic();
+            this.MenuSoundSprite.children[0].active = false;
+            this.MenuSoundSprite.children[1].active = true;
+        }
+        else {
+            this.SwitchSoundMode(true);
+            AudioScript.Instance.PlayBgMusic();
+            this.MenuSoundSprite.children[0].active = true;
+            this.MenuSoundSprite.children[1].active = false;
+        }
+    }
+    SwitchSoundMode(bool: boolean) {
+        AudioScript.Instance.isSoundOn = bool;
+
+        if (bool) {
+            GameManager.Instance.SetLocalData('Sound', 0);
+        }
+        else {
+            GameManager.Instance.SetLocalData('Sound', 1);
+        }
     }
 
     // Final submit button

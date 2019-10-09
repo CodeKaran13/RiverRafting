@@ -68,10 +68,6 @@ export default class AudioScript extends cc.Component {
             AudioScript.Instance = this;
         }
     }
-    start() {
-
-        // this.PlayAmbientSound();
-    }
 
     audioid = 0;
     bellSoundID = 0;
@@ -111,6 +107,10 @@ export default class AudioScript extends cc.Component {
             cc.audioEngine.playMusic(this.gameMusic, true);
         }
     }
+    StopBgMusic() {
+        cc.audioEngine.stopMusic();
+    }
+
     PlayCoinCollectSound() {
         if (this.isSoundOn) {
             cc.audioEngine.playEffect(this.coinCollect, false);

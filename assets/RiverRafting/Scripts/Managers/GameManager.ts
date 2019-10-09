@@ -28,6 +28,9 @@ export default class GameManager extends cc.Component {
     @property(cc.Animation)
     rightWindEffect: cc.Animation = null;
 
+    @property
+    IsPublicBuild: boolean = false;
+
     public static currentGameState: GameState = GameState.PreGame;
     public static currentDifficulty: Difficulty = Difficulty.Easy;
 
@@ -57,7 +60,24 @@ export default class GameManager extends cc.Component {
 
         this.startFPSsequence();
         AudioScript.Instance.PlayBgMusic();
-        // this.GetData();
+        this.GetData();
+
+        if (!this.IsSoundOn()) {
+            UIManager.Instance.SwitchSoundMode(false);
+            AudioScript.Instance.StopBgMusic();
+            // UIManager.Instance.GameSoundSprite.children[0].active = false;
+            // UIManager.Instance.GameSoundSprite.children[1].active = true;
+            UIManager.Instance.MenuSoundSprite.children[0].active = false;
+            UIManager.Instance.MenuSoundSprite.children[1].active = true;
+        }
+        else {
+            UIManager.Instance.SwitchSoundMode(true);
+            AudioScript.Instance.PlayBgMusic();
+            // UIManager.Instance.GameSoundSprite.children[0].active = true;
+            // UIManager.Instance.GameSoundSprite.children[1].active = false;
+            UIManager.Instance.MenuSoundSprite.children[0].active = true;
+            UIManager.Instance.MenuSoundSprite.children[1].active = false;
+        }
     }
     // update(dt) {
     //     if (Math.floor(1 / dt) <= 35) {
@@ -69,26 +89,26 @@ export default class GameManager extends cc.Component {
     // }
 
     GetData() {
-        // var vars = {};
-        // var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value)
-        // {
-        //     vars[key] = value;
-        // });
+        if (!this.IsPublicBuild) {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
 
-        // var gameSeconds;
+            var gameSeconds;
 
-        // if (vars["time"] == null)
-        // {
-        //     this._matchManager._timeManager.totaltime = 180;
-        // }
-        // else
-        // {
-        //     this._matchManager._timeManager.totaltime = vars["time"];
-        // }
-
-        var gamedata = window.$Arena.getGameData();
-        TimeManager.Instance.totaltime = gamedata.play_time_seconds;
-        GameManager.Seed = gamedata.seed;
+            if (vars["time"] == null) {
+                TimeManager.Instance.totaltime = 180;
+            }
+            else {
+                TimeManager.Instance.totaltime = vars["time"];
+            }
+        }
+        else {
+            var gamedata = window.$Arena.getGameData();
+            TimeManager.Instance.totaltime = gamedata.play_time_seconds;
+            GameManager.Seed = gamedata.seed;
+        }
     }
 
     PlayImpactEffectAtPos(pos: cc.Vec2) {
@@ -149,5 +169,18 @@ export default class GameManager extends cc.Component {
                 this.rainPS.resetSystem();
             }
         }
+    }
+    IsSoundOn(): boolean {
+        var value = cc.sys.localStorage.getItem('Sound');
+
+        if (value == null || value != 1) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+    SetLocalData(itemName: string, value: number) {
+        cc.sys.localStorage.setItem(itemName, value);
     }
 }
