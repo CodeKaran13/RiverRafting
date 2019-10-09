@@ -52,7 +52,7 @@ export default class TurnMeOn extends cc.Component {
     getRandomCoinPack() {
         //var randIndex = Math.floor(Math.random() * this.array.length);
         //return this.array.splice(randIndex, 1);
-return 0;
+        return 0;
     }
     // indexPos: number = 0;
     setCoinsPackActive() {

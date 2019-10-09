@@ -104,8 +104,8 @@ export default class MatchManager extends cc.Component {
         var rand = Math.floor(Math.random() * 6);
         // console.log(rand);
         // return rand[0];
-        // return rand;
-        return 3;
+        return rand;
+        // return 0;
     }
     setRendererOff(nextMap: cc.Node) {
         if (nextMap.parent != null)

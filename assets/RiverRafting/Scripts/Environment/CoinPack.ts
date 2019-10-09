@@ -13,6 +13,7 @@ export default class CoinPack extends Collectibles {
         this.myType = CollectibleType.Coins;
     }
     onEnable() {
+        // console.log('coinpack, onEnable');
         this.myPos = this.node.convertToWorldSpaceAR(cc.Vec2.ZERO).y;
         this.startSequence();
     }

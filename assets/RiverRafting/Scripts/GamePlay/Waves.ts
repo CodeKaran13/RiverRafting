@@ -56,7 +56,7 @@ export default class Waves extends cc.Component {
 
     changeToDefaultGroup() {
         // this.myCol.enabled = true;
-        this.node.group = 'default';
+        this.node.group = 'Waves';
     }
     changeToCullGroup() {
         // this.myCol.enabled = false;
