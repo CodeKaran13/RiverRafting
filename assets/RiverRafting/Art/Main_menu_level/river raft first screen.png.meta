@@ -1,0 +1,32 @@
+{
+  "ver": "2.3.1",
+  "uuid": "402edcf5-e7d8-4dd3-a70b-f7f99a5ee4c3",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "platformSettings": {},
+  "subMetas": {
+    "river raft first screen": {
+      "ver": "1.0.4",
+      "uuid": "067d55ad-fdaf-4c35-a3e7-6491ee0b4b93",
+      "rawTextureUuid": "402edcf5-e7d8-4dd3-a70b-f7f99a5ee4c3",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 1080,
+      "height": 1920,
+      "rawWidth": 1080,
+      "rawHeight": 1920,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}
