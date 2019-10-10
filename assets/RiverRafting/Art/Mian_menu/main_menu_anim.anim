@@ -1,0 +1,174 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "main_menu_anim",
+  "_objFlags": 0,
+  "_native": "",
+  "_duration": 0.4,
+  "sample": 60,
+  "speed": 0.1,
+  "wrapMode": 2,
+  "curveData": {
+    "paths": {
+      "boat": {
+        "props": {
+          "position": [
+            {
+              "frame": 0,
+              "value": [
+                558.611,
+                640,
+                0
+              ],
+              "curve": "cubicInOut"
+            },
+            {
+              "frame": 0.2,
+              "value": [
+                558.611,
+                620,
+                0
+              ],
+              "curve": "cubicInOut"
+            },
+            {
+              "frame": 0.4,
+              "value": [
+                558.611,
+                640,
+                0
+              ]
+            }
+          ],
+          "angle": [
+            {
+              "frame": 0,
+              "value": 3,
+              "curve": "cubicInOut"
+            },
+            {
+              "frame": 0.2,
+              "value": 0,
+              "curve": "cubicInOut"
+            },
+            {
+              "frame": 0.4,
+              "value": 3
+            }
+          ]
+        }
+      },
+      "clowd": {
+        "props": {
+          "position": [
+            {
+              "frame": 0,
+              "value": [
+                -139.174,
+                1759.007,
+                0
+              ]
+            },
+            {
+              "frame": 0.4,
+              "value": [
+                290.356,
+                1759.007,
+                0
+              ]
+            }
+          ],
+          "opacity": [
+            {
+              "frame": 0,
+              "value": 255
+            },
+            {
+              "frame": 0.4,
+              "value": 0
+            }
+          ]
+        }
+      },
+      "wave": {
+        "props": {
+          "scale": [],
+          "position": [
+            {
+              "frame": 0,
+              "value": [
+                599.024,
+                -94.277,
+                0
+              ]
+            }
+          ]
+        }
+      },
+      "clowd2": {
+        "props": {
+          "position": [
+            {
+              "frame": 0,
+              "value": [
+                1315.592,
+                1820.702,
+                0
+              ]
+            },
+            {
+              "frame": 0.4,
+              "value": [
+                831.947,
+                1820.702,
+                0
+              ]
+            }
+          ],
+          "opacity": [
+            {
+              "frame": 0,
+              "value": 255
+            },
+            {
+              "frame": 0.4,
+              "value": 0
+            }
+          ]
+        }
+      },
+      "titel copy": {
+        "props": {
+          "position": [
+            {
+              "frame": 0,
+              "value": [
+                525.261,
+                1450.399,
+                0
+              ],
+              "curve": "cubicInOut"
+            },
+            {
+              "frame": 0.2,
+              "value": [
+                525.261,
+                1468.052,
+                0
+              ],
+              "curve": "cubicInOut"
+            },
+            {
+              "frame": 0.4,
+              "value": [
+                525.261,
+                1450.399,
+                0
+              ]
+            }
+          ]
+        }
+      }
+    }
+  },
+  "events": []
+}
