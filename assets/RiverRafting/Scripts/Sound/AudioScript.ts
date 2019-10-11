@@ -139,9 +139,6 @@ export default class AudioScript extends cc.Component {
             cc.audioEngine.playMusic(this.bgMusic, true);
         }
     }
-    // StopBgMusic() {
-    //     cc.audioEngine.stopMusic();
-    // }
 
     PlayMainMenuMusic() {
         if (this.isSoundOn) {
