@@ -43,7 +43,7 @@ export default class MatchManager extends cc.Component {
     public static Instance: MatchManager = null;
 
     onLoad() {
-        this.totalHeight = 1920;
+        this.totalHeight = 1002;
     }
 
     start() {
@@ -59,7 +59,7 @@ export default class MatchManager extends cc.Component {
     }
 
     StartGame() {
-        this.spawnNextWave(1920);
+        this.spawnNextWave(0);
     }
 
     spawnNextRiverMap() {
