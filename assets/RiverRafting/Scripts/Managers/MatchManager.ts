@@ -43,7 +43,7 @@ export default class MatchManager extends cc.Component {
     public static Instance: MatchManager = null;
 
     onLoad() {
-        this.totalHeight = 1002;
+        this.totalHeight = 1005;
     }
 
     start() {
@@ -59,7 +59,7 @@ export default class MatchManager extends cc.Component {
     }
 
     StartGame() {
-        this.spawnNextWave(0);
+        this.spawnNextWave(1005);
     }
 
     spawnNextRiverMap() {
@@ -102,7 +102,7 @@ export default class MatchManager extends cc.Component {
         // will return 0, 1, 2, 3, 4, 5, 6
         // var rand = this.prefabArray.splice(Math.floor(Math.random() * this.prefabArray.length), 1);
         var rand = Math.floor(Math.random() * 6);
-        // console.log(rand);
+        console.log(rand);
         // return rand[0];
         return rand;
         // return 0;
@@ -160,6 +160,7 @@ export default class MatchManager extends cc.Component {
         this.WavePrefabs.addChild(wavePrefab);
 
         wavePrefab.setPosition(new cc.Vec2(0, this.totalWaveHeight));
+        // console.log(wavePrefab.position);
         var waves = wavePrefab.getComponent(Waves);
         waves.myPos = wavePrefab.convertToWorldSpaceAR(cc.Vec2.ZERO);
 

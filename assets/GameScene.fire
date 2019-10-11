@@ -1730,9 +1730,9 @@
     },
     "_eulerAngles": {
       "__type__": "cc.Vec3",
-      "x": -89.99999999999999,
-      "y": -180,
-      "z": -1.4124500153760508e-30
+      "x": 0,
+      "y": 0,
+      "z": 0
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -5117,7 +5117,7 @@
       "__type__": "cc.Vec3",
       "x": 0,
       "y": 0,
-      "z": 3
+      "z": 0
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -11040,55 +11040,55 @@
       "__uuid__": "ec072a99-96e5-4b73-a1a7-e4a8c86e958b"
     },
     "MediumPrefabRiverMapSet1": {
-      "__uuid__": "ec072a99-96e5-4b73-a1a7-e4a8c86e958b"
+      "__uuid__": "b50ccd6c-f476-49cb-948d-5344424a8382"
     },
     "HardPrefabRiverMapSet1": {
-      "__uuid__": "ec072a99-96e5-4b73-a1a7-e4a8c86e958b"
+      "__uuid__": "a293bb39-9187-44f4-a348-08177209b308"
     },
     "EasyPrefabRiverMapSet2": {
       "__uuid__": "b2a3f2bd-99a8-4895-84a4-505404d3d41c"
     },
     "MediumPrefabRiverMapSet2": {
-      "__uuid__": "b2a3f2bd-99a8-4895-84a4-505404d3d41c"
+      "__uuid__": "5e9061d4-9e55-4e8f-a0ba-1e91c42486df"
     },
     "HardPrefabRiverMapSet2": {
-      "__uuid__": "b2a3f2bd-99a8-4895-84a4-505404d3d41c"
+      "__uuid__": "0cd13242-2845-4402-9164-475f0afd2bda"
     },
     "EasyPrefabRiverMapSet3": {
       "__uuid__": "51513e7a-a70c-4136-8440-f87226c632e6"
     },
     "MediumPrefabRiverMapSet3": {
-      "__uuid__": "51513e7a-a70c-4136-8440-f87226c632e6"
+      "__uuid__": "47cd36f6-6b79-4e4b-a7a3-a4e33c299b46"
     },
     "HardPrefabRiverMapSet3": {
-      "__uuid__": "51513e7a-a70c-4136-8440-f87226c632e6"
+      "__uuid__": "c2ef7267-1c10-4510-b6ee-4eaa2e5efaa8"
     },
     "EasyPrefabRiverMapSet4": {
       "__uuid__": "bca5d434-4414-4c8b-a7e0-203a08f8d585"
     },
     "MediumPrefabRiverMapSet4": {
-      "__uuid__": "bca5d434-4414-4c8b-a7e0-203a08f8d585"
+      "__uuid__": "bee71a37-6592-4e29-93e1-96d28054bb0e"
     },
     "HardPrefabRiverMapSet4": {
-      "__uuid__": "bca5d434-4414-4c8b-a7e0-203a08f8d585"
+      "__uuid__": "5c72d542-02f5-4244-aae4-f839f8937f26"
     },
     "EasyPrefabRiverMapSet5": {
       "__uuid__": "1cf2e60d-1198-44ec-b108-49741f5cd98c"
     },
     "MediumPrefabRiverMapSet5": {
-      "__uuid__": "1cf2e60d-1198-44ec-b108-49741f5cd98c"
+      "__uuid__": "f95a5e03-5683-4f73-9a61-b728d7eb3dfc"
     },
     "HardPrefabRiverMapSet5": {
-      "__uuid__": "1cf2e60d-1198-44ec-b108-49741f5cd98c"
+      "__uuid__": "ed87f4a3-12bb-4ddd-91cb-80f3ab058347"
     },
     "EasyPrefabRiverMapSet6": {
       "__uuid__": "ac647703-8ccf-4a9a-9392-925b83d33177"
     },
     "MediumPrefabRiverMapSet6": {
-      "__uuid__": "ac647703-8ccf-4a9a-9392-925b83d33177"
+      "__uuid__": "0eaf0427-47d6-425d-b87d-7e72b00d8bbb"
     },
     "HardPrefabRiverMapSet6": {
-      "__uuid__": "ac647703-8ccf-4a9a-9392-925b83d33177"
+      "__uuid__": "4be02685-cb2c-4c2e-a22c-7685ae80c55c"
     },
     "WavePrefabs": {
       "__uuid__": "20312058-3221-4039-87c6-bc760ac64f59"
@@ -11704,7 +11704,7 @@
     "IsBoatWaveAnimation": true,
     "IsHealthBar": false,
     "OffsetX": 0,
-    "OffsetY": 1000,
+    "OffsetY": 800,
     "IsStartCollider": true,
     "IsEndCollider": false,
     "_id": "719wTyISRFIasZ6Ld2FhrR"
@@ -12045,7 +12045,7 @@
     "_contentSize": {
       "__type__": "cc.Size",
       "width": 1400,
-      "height": 1004
+      "height": 1005
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -14914,7 +14914,7 @@
       "__id__": 289
     },
     "_enabled": true,
-    "myHeight": 1004,
+    "myHeight": 1005,
     "_id": "a59IxxbapKwb17spwfVCki"
   },
   {
@@ -14960,7 +14960,7 @@
     "_offset": {
       "__type__": "cc.Vec2",
       "x": 0,
-      "y": 1004
+      "y": 1005
     },
     "_size": {
       "__type__": "cc.Size",

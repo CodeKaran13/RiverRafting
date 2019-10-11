@@ -22,21 +22,6 @@ export default class Waves extends cc.Component {
         this.startSequence();
     }
 
-    update(dt) {
-        // if(this.IsActive && this.CheckPlayerLocation)
-        // {
-        //     // console.log('wave pos: ' + this.myPos.y);
-        //     // console.log('player pos: ' + this._player.position.y);
-        //     var checkpoint = this.node.height + this.myPos.y;
-        //     if(Player.Instance.node.position.y > checkpoint + 150)
-        //     {
-        //         // console.log('adding waves back to pool');
-        //         MatchManager.Instance._poolingSystem.addWavePrefabToPool(this.node);
-        //     }
-        // }
-    }
-
-    //sequence to turn on/off box collider
     sequence: cc.ActionInterval;
     // @property(cc.BoxCollider)
     // myCol: cc.BoxCollider = null;

@@ -1,5 +1,4 @@
 import MatchManager from "../Managers/MatchManager";
-import Waves from "../GamePlay/Waves";
 
 const { ccclass, property } = cc._decorator;
 
