@@ -17,22 +17,22 @@
         "__id__": 2
       },
       {
-        "__id__": 279
-      },
-      {
-        "__id__": 280
+        "__id__": 282
       },
       {
         "__id__": 283
       },
       {
-        "__id__": 261
-      },
-      {
-        "__id__": 262
-      },
-      {
         "__id__": 286
+      },
+      {
+        "__id__": 264
+      },
+      {
+        "__id__": 265
+      },
+      {
+        "__id__": 260
       },
       {
         "__id__": 289
@@ -107,25 +107,25 @@
         "__id__": 3
       },
       {
-        "__id__": 259
+        "__id__": 262
       },
       {
-        "__id__": 264
-      },
-      {
-        "__id__": 270
-      },
-      {
-        "__id__": 103
+        "__id__": 267
       },
       {
         "__id__": 273
       },
       {
-        "__id__": 275
+        "__id__": 103
       },
       {
-        "__id__": 277
+        "__id__": 276
+      },
+      {
+        "__id__": 278
+      },
+      {
+        "__id__": 280
       }
     ],
     "_active": true,
@@ -249,6 +249,9 @@
     },
     "rainPS": {
       "__id__": 15
+    },
+    "boatEmitterPS": {
+      "__id__": 259
     },
     "leftWindEffect": {
       "__id__": 254
@@ -1730,8 +1733,8 @@
     },
     "_eulerAngles": {
       "__type__": "cc.Vec3",
-      "x": 0,
-      "y": 0,
+      "x": -90,
+      "y": -180,
       "z": 0
     },
     "_skewX": 0,
@@ -10817,6 +10820,192 @@
     "_id": "1fuCzd5IVP5ZZtble0FWnZ"
   },
   {
+    "__type__": "cc.ParticleSystem",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 260
+    },
+    "_enabled": true,
+    "_materials": [
+      {
+        "__uuid__": "eca5d2f2-8ef6-41c2-bbe6-f9c79d09c432"
+      }
+    ],
+    "_srcBlendFactor": 770,
+    "_dstBlendFactor": 1,
+    "_custom": true,
+    "_file": {
+      "__uuid__": "40e690d1-6923-476a-8487-8576b98f151e"
+    },
+    "_spriteFrame": {
+      "__uuid__": "944ccda1-3d35-4771-ae38-71fa2ab894f5"
+    },
+    "_texture": {
+      "__uuid__": "0bb25544-c026-45f9-81e0-c98083d57253"
+    },
+    "_stopped": true,
+    "playOnLoad": true,
+    "autoRemoveOnFinish": false,
+    "totalParticles": 120,
+    "duration": -1,
+    "emissionRate": 62,
+    "life": 2.1,
+    "lifeVar": 0.4,
+    "_startColor": {
+      "__type__": "cc.Color",
+      "r": 196,
+      "g": 196,
+      "b": 196,
+      "a": 20
+    },
+    "_startColorVar": {
+      "__type__": "cc.Color",
+      "r": 2,
+      "g": 107,
+      "b": 158,
+      "a": 20
+    },
+    "_endColor": {
+      "__type__": "cc.Color",
+      "r": 0,
+      "g": 0,
+      "b": 0,
+      "a": 75
+    },
+    "_endColorVar": {
+      "__type__": "cc.Color",
+      "r": 253,
+      "g": 253,
+      "b": 253,
+      "a": 0
+    },
+    "angle": -81,
+    "angleVar": 47,
+    "startSize": 60,
+    "startSizeVar": 20,
+    "endSize": -1,
+    "endSizeVar": 0,
+    "startSpin": 0,
+    "startSpinVar": 0,
+    "endSpin": 0,
+    "endSpinVar": 0,
+    "sourcePos": {
+      "__type__": "cc.Vec2",
+      "x": 0,
+      "y": 0
+    },
+    "posVar": {
+      "__type__": "cc.Vec2",
+      "x": 25,
+      "y": -20
+    },
+    "_positionType": 1,
+    "positionType": 1,
+    "emitterMode": 0,
+    "gravity": {
+      "__type__": "cc.Vec2",
+      "x": 0,
+      "y": -127
+    },
+    "speed": 15,
+    "speedVar": 5,
+    "tangentialAccel": 0,
+    "tangentialAccelVar": 0,
+    "radialAccel": 0,
+    "radialAccelVar": 0,
+    "rotationIsDir": false,
+    "startRadius": 0,
+    "startRadiusVar": 0,
+    "endRadius": 0,
+    "endRadiusVar": 0,
+    "rotatePerS": 0,
+    "rotatePerSVar": 0,
+    "_N$preview": true,
+    "_id": "9c+klBulBCd7KIWsoclI25"
+  },
+  {
+    "__type__": "cc.Node",
+    "_name": "BoatEmitterPS",
+    "_objFlags": 0,
+    "_parent": {
+      "__id__": 1
+    },
+    "_children": [],
+    "_active": true,
+    "_level": 1,
+    "_components": [
+      {
+        "__id__": 259
+      },
+      {
+        "__id__": 261
+      }
+    ],
+    "_prefab": null,
+    "_opacity": 255,
+    "_color": {
+      "__type__": "cc.Color",
+      "r": 255,
+      "g": 255,
+      "b": 255,
+      "a": 255
+    },
+    "_contentSize": {
+      "__type__": "cc.Size",
+      "width": 0,
+      "height": 0
+    },
+    "_anchorPoint": {
+      "__type__": "cc.Vec2",
+      "x": 0.5,
+      "y": 0.5
+    },
+    "_position": {
+      "__type__": "cc.Vec3",
+      "x": 540.798,
+      "y": -151.282,
+      "z": 0
+    },
+    "_scale": {
+      "__type__": "cc.Vec3",
+      "x": 0.375,
+      "y": 0.375,
+      "z": 0.375
+    },
+    "_eulerAngles": {
+      "__type__": "cc.Vec3",
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "_skewX": 0,
+    "_skewY": 0,
+    "_is3DNode": false,
+    "groupIndex": 0,
+    "_id": "20KF9rbydEhJEqnWJBliuH"
+  },
+  {
+    "__type__": "812cbRdzbFHoIdSz01zbcRx",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 260
+    },
+    "_enabled": true,
+    "_player": {
+      "__id__": 34
+    },
+    "IsWaterOnly": false,
+    "IsBoatWaveAnimation": true,
+    "IsHealthBar": false,
+    "OffsetX": 0,
+    "OffsetY": 0,
+    "IsStartCollider": false,
+    "IsEndCollider": false,
+    "_id": "f4rh4OzYdE1bgU01jxWBRT"
+  },
+  {
     "__type__": "cc.Node",
     "_name": "Match Manager",
     "_objFlags": 0,
@@ -10828,16 +11017,16 @@
     "_level": 2,
     "_components": [
       {
-        "__id__": 260
+        "__id__": 263
       },
       {
-        "__id__": 267
+        "__id__": 270
       },
       {
-        "__id__": 268
+        "__id__": 271
       },
       {
-        "__id__": 269
+        "__id__": 272
       }
     ],
     "_prefab": null,
@@ -10890,17 +11079,17 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 259
+      "__id__": 262
     },
     "_enabled": true,
     "LevelPrefabs": {
-      "__id__": 261
+      "__id__": 264
     },
     "WavePrefabs": {
-      "__id__": 262
+      "__id__": 265
     },
     "_poolingSystem": {
-      "__id__": 263
+      "__id__": 266
     },
     "totalMapsToGenerate": 3,
     "totalPrefabsToSpawn": 3,
@@ -11024,7 +11213,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 264
+      "__id__": 267
     },
     "_enabled": true,
     "EasyPrefabRiverMapSet0": {
@@ -11107,13 +11296,13 @@
     "_level": 2,
     "_components": [
       {
-        "__id__": 263
-      },
-      {
-        "__id__": 265
-      },
-      {
         "__id__": 266
+      },
+      {
+        "__id__": 268
+      },
+      {
+        "__id__": 269
       }
     ],
     "_prefab": null,
@@ -11166,7 +11355,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 264
+      "__id__": 267
     },
     "_enabled": true,
     "_id": "7fQJKrJoZJf4uccvLUNppi"
@@ -11176,7 +11365,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 264
+      "__id__": 267
     },
     "_enabled": true,
     "_id": "b1wk/jcadCUryUkRCzLfVU"
@@ -11186,11 +11375,11 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 259
+      "__id__": 262
     },
     "_enabled": true,
     "_CollectiblePool": {
-      "__id__": 265
+      "__id__": 268
     },
     "_id": "c2KHIsq4dLoLCafcXs+StD"
   },
@@ -11199,12 +11388,12 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 259
+      "__id__": 262
     },
     "_enabled": true,
     "_matchManager": null,
     "_ObstaclePoolRef": {
-      "__id__": 266
+      "__id__": 269
     },
     "_player": {
       "__id__": 34
@@ -11216,7 +11405,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 259
+      "__id__": 262
     },
     "_enabled": true,
     "_id": "d9nPphPoRNZKj/R2gm4Hsy"
@@ -11233,10 +11422,10 @@
     "_level": 2,
     "_components": [
       {
-        "__id__": 271
+        "__id__": 274
       },
       {
-        "__id__": 272
+        "__id__": 275
       }
     ],
     "_prefab": null,
@@ -11289,7 +11478,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 270
+      "__id__": 273
     },
     "_enabled": true,
     "TimeLabel": {
@@ -11304,7 +11493,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 270
+      "__id__": 273
     },
     "_enabled": true,
     "windIntervalTime": 20,
@@ -11323,7 +11512,7 @@
     "_level": 2,
     "_components": [
       {
-        "__id__": 274
+        "__id__": 277
       }
     ],
     "_prefab": null,
@@ -11376,7 +11565,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 273
+      "__id__": 276
     },
     "_enabled": true,
     "perCoinBonus": 10,
@@ -11395,7 +11584,7 @@
     "_level": 2,
     "_components": [
       {
-        "__id__": 276
+        "__id__": 279
       }
     ],
     "_prefab": null,
@@ -11446,18 +11635,27 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 275
+      "__id__": 278
     },
     "_enabled": true,
-    "gameMusic": {
-      "__uuid__": "ab049308-bcc3-4d3a-bcea-2b4e159bc231"
+    "bgMusic": {
+      "__uuid__": "bd30be9d-9b56-454a-99c0-4e7b33bdf1bf"
     },
-    "ButtonClickSound": null,
+    "buttonSound": {
+      "__uuid__": "7db24a20-6bdd-46ce-86cc-7971667b9482"
+    },
+    "mainMenuMusic": {
+      "__uuid__": "4f5601c7-651e-44f2-ac9b-b421b004d30c"
+    },
     "humanSavedSound": {
       "__uuid__": "76ab9a3f-5e02-4c23-aa32-8ff18c363590"
     },
-    "TitlePopUpSound": null,
-    "AmbientSound": null,
+    "playButtonSound": {
+      "__uuid__": "3edc7b7e-e5ab-47d7-89fe-40942e919c0c"
+    },
+    "ambientSound": {
+      "__uuid__": "9b69123a-e8f6-4db0-836e-cc6f1f51cf27"
+    },
     "coinCollect": {
       "__uuid__": "ca37da39-e73e-4aa5-bfa1-73e21f93b31d"
     },
@@ -11468,7 +11666,19 @@
       "__uuid__": "998c573e-e10b-4c4e-8d32-b88d231bf190"
     },
     "floatingWoodImpact": {
-      "__uuid__": "2f60bc0d-a240-43cf-b46d-b8241a87c3b4"
+      "__uuid__": "a0aba958-ff5c-456a-bfa5-47ff5adcbbb4"
+    },
+    "windSound": {
+      "__uuid__": "ea937b55-aad7-4193-8824-b1e3570b9c95"
+    },
+    "boatBlastSound": {
+      "__uuid__": "28169a07-c1ac-439a-8c2f-5d6efe99a4c3"
+    },
+    "popUpSound": {
+      "__uuid__": "bdadb2b6-7cde-4c76-83f2-79c3a6532b8c"
+    },
+    "gameOverSound": {
+      "__uuid__": "23fec46d-16c1-4117-9047-d76decdf0bc4"
     },
     "isSoundOn": true,
     "_id": "7adn95cxtDDI8o4FDY2pme"
@@ -11485,7 +11695,7 @@
     "_level": 2,
     "_components": [
       {
-        "__id__": 278
+        "__id__": 281
       }
     ],
     "_prefab": null,
@@ -11538,7 +11748,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 277
+      "__id__": 280
     },
     "_enabled": true,
     "bonusStartTime": 5,
@@ -11619,10 +11829,10 @@
     "_level": 1,
     "_components": [
       {
-        "__id__": 281
+        "__id__": 284
       },
       {
-        "__id__": 282
+        "__id__": 285
       }
     ],
     "_prefab": null,
@@ -11673,7 +11883,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 280
+      "__id__": 283
     },
     "_enabled": true,
     "tag": 0,
@@ -11694,7 +11904,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 280
+      "__id__": 283
     },
     "_enabled": true,
     "_player": {
@@ -11721,10 +11931,10 @@
     "_level": 1,
     "_components": [
       {
-        "__id__": 284
+        "__id__": 287
       },
       {
-        "__id__": 285
+        "__id__": 288
       }
     ],
     "_prefab": null,
@@ -11775,7 +11985,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 283
+      "__id__": 286
     },
     "_enabled": true,
     "tag": 0,
@@ -11796,7 +12006,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 283
+      "__id__": 286
     },
     "_enabled": true,
     "_player": {
@@ -11810,192 +12020,6 @@
     "IsStartCollider": false,
     "IsEndCollider": true,
     "_id": "fc1HnYwApP2K1pI6hB1/pa"
-  },
-  {
-    "__type__": "cc.Node",
-    "_name": "BoatEmitterPS",
-    "_objFlags": 0,
-    "_parent": {
-      "__id__": 1
-    },
-    "_children": [],
-    "_active": true,
-    "_level": 1,
-    "_components": [
-      {
-        "__id__": 287
-      },
-      {
-        "__id__": 288
-      }
-    ],
-    "_prefab": null,
-    "_opacity": 255,
-    "_color": {
-      "__type__": "cc.Color",
-      "r": 255,
-      "g": 255,
-      "b": 255,
-      "a": 255
-    },
-    "_contentSize": {
-      "__type__": "cc.Size",
-      "width": 0,
-      "height": 0
-    },
-    "_anchorPoint": {
-      "__type__": "cc.Vec2",
-      "x": 0.5,
-      "y": 0.5
-    },
-    "_position": {
-      "__type__": "cc.Vec3",
-      "x": 540.798,
-      "y": -151.282,
-      "z": 0
-    },
-    "_scale": {
-      "__type__": "cc.Vec3",
-      "x": 0.375,
-      "y": 0.375,
-      "z": 0.375
-    },
-    "_eulerAngles": {
-      "__type__": "cc.Vec3",
-      "x": 0,
-      "y": 0,
-      "z": 0
-    },
-    "_skewX": 0,
-    "_skewY": 0,
-    "_is3DNode": false,
-    "groupIndex": 0,
-    "_id": "20KF9rbydEhJEqnWJBliuH"
-  },
-  {
-    "__type__": "cc.ParticleSystem",
-    "_name": "",
-    "_objFlags": 0,
-    "node": {
-      "__id__": 286
-    },
-    "_enabled": true,
-    "_materials": [
-      {
-        "__uuid__": "eca5d2f2-8ef6-41c2-bbe6-f9c79d09c432"
-      }
-    ],
-    "_srcBlendFactor": 770,
-    "_dstBlendFactor": 1,
-    "_custom": true,
-    "_file": {
-      "__uuid__": "40e690d1-6923-476a-8487-8576b98f151e"
-    },
-    "_spriteFrame": {
-      "__uuid__": "944ccda1-3d35-4771-ae38-71fa2ab894f5"
-    },
-    "_texture": {
-      "__uuid__": "0bb25544-c026-45f9-81e0-c98083d57253"
-    },
-    "_stopped": true,
-    "playOnLoad": true,
-    "autoRemoveOnFinish": false,
-    "totalParticles": 120,
-    "duration": -1,
-    "emissionRate": 62,
-    "life": 2.1,
-    "lifeVar": 0.4,
-    "_startColor": {
-      "__type__": "cc.Color",
-      "r": 196,
-      "g": 196,
-      "b": 196,
-      "a": 20
-    },
-    "_startColorVar": {
-      "__type__": "cc.Color",
-      "r": 2,
-      "g": 107,
-      "b": 158,
-      "a": 20
-    },
-    "_endColor": {
-      "__type__": "cc.Color",
-      "r": 0,
-      "g": 0,
-      "b": 0,
-      "a": 75
-    },
-    "_endColorVar": {
-      "__type__": "cc.Color",
-      "r": 253,
-      "g": 253,
-      "b": 253,
-      "a": 0
-    },
-    "angle": -81,
-    "angleVar": 47,
-    "startSize": 60,
-    "startSizeVar": 20,
-    "endSize": -1,
-    "endSizeVar": 0,
-    "startSpin": 0,
-    "startSpinVar": 0,
-    "endSpin": 0,
-    "endSpinVar": 0,
-    "sourcePos": {
-      "__type__": "cc.Vec2",
-      "x": 0,
-      "y": 0
-    },
-    "posVar": {
-      "__type__": "cc.Vec2",
-      "x": 25,
-      "y": -20
-    },
-    "_positionType": 1,
-    "positionType": 1,
-    "emitterMode": 0,
-    "gravity": {
-      "__type__": "cc.Vec2",
-      "x": 0,
-      "y": -127
-    },
-    "speed": 15,
-    "speedVar": 5,
-    "tangentialAccel": 0,
-    "tangentialAccelVar": 0,
-    "radialAccel": 0,
-    "radialAccelVar": 0,
-    "rotationIsDir": false,
-    "startRadius": 0,
-    "startRadiusVar": 0,
-    "endRadius": 0,
-    "endRadiusVar": 0,
-    "rotatePerS": 0,
-    "rotatePerSVar": 0,
-    "_N$preview": true,
-    "_id": "9c+klBulBCd7KIWsoclI25"
-  },
-  {
-    "__type__": "812cbRdzbFHoIdSz01zbcRx",
-    "_name": "",
-    "_objFlags": 0,
-    "node": {
-      "__id__": 286
-    },
-    "_enabled": true,
-    "_player": {
-      "__id__": 34
-    },
-    "IsWaterOnly": false,
-    "IsBoatWaveAnimation": true,
-    "IsHealthBar": false,
-    "OffsetX": 0,
-    "OffsetY": 0,
-    "IsStartCollider": false,
-    "IsEndCollider": false,
-    "_id": "f4rh4OzYdE1bgU01jxWBRT"
   },
   {
     "__type__": "cc.Node",

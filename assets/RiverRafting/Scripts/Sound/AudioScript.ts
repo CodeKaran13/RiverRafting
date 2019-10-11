@@ -8,13 +8,19 @@ export default class AudioScript extends cc.Component {
         visible: true,
         serializable: true
     })
-    gameMusic: cc.AudioClip = null;
+    bgMusic: cc.AudioClip = null;
     @property({
         type: cc.AudioClip,
         visible: true,
         serializable: true
     })
-    ButtonClickSound: cc.AudioClip = null;
+    buttonSound: cc.AudioClip = null;
+    @property({
+        type: cc.AudioClip,
+        serializable: true,
+        visible: true
+    })
+    mainMenuMusic: cc.AudioClip = null;
     @property({
         type: cc.AudioClip,
         visible: true,
@@ -26,13 +32,13 @@ export default class AudioScript extends cc.Component {
         visible: true,
         serializable: true
     })
-    TitlePopUpSound: cc.AudioClip = null;
+    playButtonSound: cc.AudioClip = null;
     @property({
         type: cc.AudioClip,
         visible: true,
         serializable: true
     })
-    AmbientSound: cc.AudioClip = null;
+    ambientSound: cc.AudioClip = null;
     @property({
         type: cc.AudioClip,
         visible: true,
@@ -57,6 +63,30 @@ export default class AudioScript extends cc.Component {
         serializable: true
     })
     floatingWoodImpact: cc.AudioClip = null;
+    @property({
+        type: cc.AudioClip,
+        visible: true,
+        serializable: true
+    })
+    windSound: cc.AudioClip = null;
+    @property({
+        type: cc.AudioClip,
+        visible: true,
+        serializable: true
+    })
+    boatBlastSound: cc.AudioClip = null;
+    @property({
+        type: cc.AudioClip,
+        visible: true,
+        serializable: true
+    })
+    popUpSound: cc.AudioClip = null;
+    @property({
+        type: cc.AudioClip,
+        visible: true,
+        serializable: true
+    })
+    gameOverSound: cc.AudioClip = null;
 
     @property
     isSoundOn: boolean = true;
@@ -70,7 +100,9 @@ export default class AudioScript extends cc.Component {
     }
 
     audioid = 0;
-    bellSoundID = 0;
+    menuid = 0;
+    ambientid = 0;
+    windid = 0;
 
     PlayEffect(AudioClip: cc.AudioClip, loop: boolean) {
         if (this.isSoundOn) {
@@ -104,11 +136,23 @@ export default class AudioScript extends cc.Component {
 
     PlayBgMusic() {
         if (this.isSoundOn) {
-            cc.audioEngine.playMusic(this.gameMusic, true);
+            cc.audioEngine.playMusic(this.bgMusic, true);
         }
     }
-    StopBgMusic() {
-        cc.audioEngine.stopMusic();
+    // StopBgMusic() {
+    //     cc.audioEngine.stopMusic();
+    // }
+
+    PlayMainMenuMusic() {
+        if (this.isSoundOn) {
+            this.menuid = this.PlayEffect(this.mainMenuMusic, true);
+        }
+    }
+
+    PlayAmbientMusic() {
+        if (this.isSoundOn) {
+            this.ambientid = this.PlayEffect(this.ambientSound, true);
+        }
     }
 
     PlayCoinCollectSound() {
@@ -136,8 +180,33 @@ export default class AudioScript extends cc.Component {
             cc.audioEngine.playEffect(this.floatingWoodImpact, false);
         }
     }
-    PlayButtonClickSound() {
-        // console.log("Playing bonus sound");
-        this.PlayEffect(this.ButtonClickSound, false);
+    PlayWindSoundEffect() {
+        if (this.isSoundOn) {
+            this.windid = this.PlayEffect(this.windSound, true);
+        }
+    }
+    PlayBoatBlastSoundEffect() {
+        if (this.isSoundOn) {
+            cc.audioEngine.playEffect(this.boatBlastSound, false);
+        }
+    }
+    PlayPopUpSoundEffect() {
+        if (this.isSoundOn) {
+            cc.audioEngine.playEffect(this.popUpSound, false);
+        }
+    }
+    PlayGameOverSoundEffect() {
+        if (this.isSoundOn) {
+            cc.audioEngine.playEffect(this.gameOverSound, false);
+        }
+    }
+
+    PlayUIButtonClickSound() {
+        if (this.isSoundOn)
+            this.PlayEffect(this.buttonSound, false);
+    }
+    PlayButtonSound() {
+        if (this.isSoundOn)
+            this.PlayEffect(this.playButtonSound, false);
     }
 }

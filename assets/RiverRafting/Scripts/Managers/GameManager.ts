@@ -23,6 +23,8 @@ export default class GameManager extends cc.Component {
     ImpactPE: cc.Animation = null;
     @property(cc.ParticleSystem)
     rainPS: cc.ParticleSystem = null;
+    @property(cc.ParticleSystem)
+    boatEmitterPS: cc.ParticleSystem = null;
     @property(cc.Animation)
     leftWindEffect: cc.Animation = null;
     @property(cc.Animation)
@@ -59,12 +61,15 @@ export default class GameManager extends cc.Component {
         }
 
         this.startFPSsequence();
-        AudioScript.Instance.PlayBgMusic();
+
+        // AudioScript.Instance.PlayMainMenuMusic();
+        // AudioScript.Instance.PlayAmbientMusic();
+
         this.GetData();
 
         if (!this.IsSoundOn()) {
             UIManager.Instance.SwitchSoundMode(false);
-            AudioScript.Instance.StopBgMusic();
+            AudioScript.Instance.StopMusic();
             // UIManager.Instance.GameSoundSprite.children[0].active = false;
             // UIManager.Instance.GameSoundSprite.children[1].active = true;
             UIManager.Instance.MenuSoundSprite.children[0].active = false;
@@ -72,21 +77,14 @@ export default class GameManager extends cc.Component {
         }
         else {
             UIManager.Instance.SwitchSoundMode(true);
-            AudioScript.Instance.PlayBgMusic();
+            AudioScript.Instance.PlayMainMenuMusic();
+            AudioScript.Instance.PlayAmbientMusic();
             // UIManager.Instance.GameSoundSprite.children[0].active = true;
             // UIManager.Instance.GameSoundSprite.children[1].active = false;
             UIManager.Instance.MenuSoundSprite.children[0].active = true;
             UIManager.Instance.MenuSoundSprite.children[1].active = false;
         }
     }
-    // update(dt) {
-    //     if (Math.floor(1 / dt) <= 35) {
-    //         GameManager.isHighEndDevice = false;
-    //     }
-    //     else {
-    //         GameManager.isHighEndDevice = true;
-    //     }
-    // }
 
     GetData() {
         if (!this.IsPublicBuild) {
@@ -141,7 +139,12 @@ export default class GameManager extends cc.Component {
     }
 
     OnGameOver() {
+        AudioScript.Instance.PlayGameOverSoundEffect();
+
         GameManager.currentGameState = GameState.PostGame;
+        AudioScript.Instance.StopMusic();
+        this.boatEmitterPS.stopSystem();
+
         ScoreManager.Instance.AddHumanSavedBonus();
         ScoreManager.Instance.AddCoinsBonus();
         BonusSystem.Instance.stopAction();

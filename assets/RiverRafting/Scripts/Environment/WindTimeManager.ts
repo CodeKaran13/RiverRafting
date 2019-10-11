@@ -1,5 +1,6 @@
 import Player from "../Player";
 import GameManager from "../Managers/GameManager";
+import AudioScript from "../Sound/AudioScript";
 
 const { ccclass, property } = cc._decorator;
 
@@ -46,6 +47,7 @@ export default class WindTimeManager extends cc.Component {
 
     // WIND SEQUENCE
     windSequence: cc.ActionInterval = null;
+    playOnce: boolean = false;
     @property
     windDuration: number = 7;
     startWindyTimer() {
@@ -55,11 +57,17 @@ export default class WindTimeManager extends cc.Component {
     }
     windEffectCountdown() {
         this.windDuration--;
+        if (!this.playOnce) {
+            AudioScript.Instance.PlayWindSoundEffect();
+            this.playOnce = true;
+        }
         if (this.windDuration <= 0) {
             Player.Instance.IsWindy = false;
             GameManager.Instance.StopWindEffect();
             this.node.stopAction(this.windSequence);
             this.windDuration = 7;
+            AudioScript.Instance.StopEffect(AudioScript.Instance.windid);
+            this.playOnce = false;
         }
     }
 }

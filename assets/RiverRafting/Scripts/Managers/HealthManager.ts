@@ -3,6 +3,7 @@ import UIManager from "./UIManager";
 import MatchManager from "./MatchManager";
 import GameManager from "./GameManager";
 import Player from "../Player";
+import AudioScript from "../Sound/AudioScript";
 
 const { ccclass, property } = cc._decorator;
 
@@ -40,6 +41,7 @@ export default class HealthManager extends cc.Component
             GameManager.Instance.OnGameOver();
             Player.Instance.node.group = 'Cull';
             UIManager.Instance.playExplosionEffectAtPos(Player.Instance.node.position);
+            AudioScript.Instance.PlayBoatBlastSoundEffect();
         }
         this.updateHealthLabel();
     }

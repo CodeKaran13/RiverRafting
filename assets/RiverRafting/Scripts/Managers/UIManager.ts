@@ -128,6 +128,8 @@ export default class UIManager extends cc.Component {
     }
 
     OpenSubmitWindow() {
+        AudioScript.Instance.PlayPopUpSoundEffect();
+
         this.CleanRunBonusLabel.string = '' + ScoreManager.Instance.cleanRunBonus;
         this.HumansSavedLabel.string = '' + ScoreManager.Instance.totalHumanSaved + ' X ' + ScoreManager.Instance.perHumanSavedBonus;
         this.CoinsCollectedLabel.string = '' + ScoreManager.Instance.totalCoinsCollected + ' X ' + ScoreManager.Instance.perCoinBonus;
@@ -136,11 +138,15 @@ export default class UIManager extends cc.Component {
     }
 
     CloseSubmitWindow() {
+        AudioScript.Instance.PlayPopUpSoundEffect();
+
         this.SubmitScoreWindow.active = false;
     }
 
     // All Button functions
     OnPlayButtonClick() {
+        AudioScript.Instance.StopEffect(AudioScript.Instance.menuid);
+        AudioScript.Instance.PlayButtonSound();
         GameManager.currentGameState = GameState.InGame;
 
         TimeManager.Instance.restartTimer();
@@ -152,35 +158,42 @@ export default class UIManager extends cc.Component {
 
         this.MainMenuWindow.active = false;
         this.GameWindow.active = true;
+
+        AudioScript.Instance.PlayBgMusic();
+        AudioScript.Instance.LowerSoundMusicVolume(0.5);
     }
     OnSoundButtonClick() {
-        AudioScript.Instance.PlayButtonClickSound();
+        AudioScript.Instance.PlayUIButtonClickSound();
 
         if (GameManager.Instance.IsSoundOn()) {
             this.SwitchSoundMode(false);
-            AudioScript.Instance.StopBgMusic();
+            AudioScript.Instance.StopMusic();
+            AudioScript.Instance.StopEffect(AudioScript.Instance.ambientid);
             this.GameSoundSprite.children[0].active = false;
             this.GameSoundSprite.children[1].active = true;
         }
         else {
             this.SwitchSoundMode(true);
             AudioScript.Instance.PlayBgMusic();
+            AudioScript.Instance.PlayAmbientMusic();
             this.GameSoundSprite.children[0].active = true;
             this.GameSoundSprite.children[1].active = false;
         }
     }
     OnMenuSoundButtonClick() {
-        AudioScript.Instance.PlayButtonClickSound();
+        AudioScript.Instance.PlayUIButtonClickSound();
 
         if (GameManager.Instance.IsSoundOn()) {
             this.SwitchSoundMode(false);
-            AudioScript.Instance.StopBgMusic();
+            AudioScript.Instance.StopMusic();
+            AudioScript.Instance.StopEffect(AudioScript.Instance.ambientid);
             this.MenuSoundSprite.children[0].active = false;
             this.MenuSoundSprite.children[1].active = true;
         }
         else {
             this.SwitchSoundMode(true);
-            AudioScript.Instance.PlayBgMusic();
+            AudioScript.Instance.PlayAmbientMusic();
+            AudioScript.Instance.PlayMainMenuMusic();
             this.MenuSoundSprite.children[0].active = true;
             this.MenuSoundSprite.children[1].active = false;
         }
@@ -198,29 +211,43 @@ export default class UIManager extends cc.Component {
 
     // Final submit button
     OnSubmitButtonClick() {
+        AudioScript.Instance.PlayUIButtonClickSound();
         window.$Arena.submitScore(ScoreManager.Instance.totalScore, GameManager.Seed);
     }
 
     // In game cross button functions
     OnGameCrossButtonClick() {
+        AudioScript.Instance.PlayUIButtonClickSound();
+
+        AudioScript.Instance.PlayPopUpSoundEffect();
         this.GameCrossWindow.active = true;
     }
     OnGameYesButtonClick() {
         window.$Arena.submitScore(ScoreManager.Instance.totalScore, GameManager.Seed);
     }
     OnGameNoButtonClick() {
+        AudioScript.Instance.PlayUIButtonClickSound();
+
+        AudioScript.Instance.PlayPopUpSoundEffect();
         this.GameCrossWindow.active = false;
     }
 
     // Menu cross button functions
     OnMenuCrossButtonClick() {
+        AudioScript.Instance.PlayUIButtonClickSound();
+
+        AudioScript.Instance.PlayPopUpSoundEffect();
         this.MenuCrossWindow.active = true;
     }
     OnMenuYesButtonClick() {
+        AudioScript.Instance.PlayUIButtonClickSound();
         ScoreManager.Instance.totalScore = 0;
         window.$Arena.submitScore(ScoreManager.Instance.totalScore, GameManager.Seed);
     }
     OnMenuNoButtonClick() {
+        AudioScript.Instance.PlayUIButtonClickSound();
+
+        AudioScript.Instance.PlayPopUpSoundEffect();
         this.MenuCrossWindow.active = false;
     }
 
@@ -232,7 +259,6 @@ export default class UIManager extends cc.Component {
     }
     playScorePopUpAtPos(pos: cc.Vec2) {
         this.scorePopUpEffect.node.group = 'UI';
-        // console.log(pos);
         this.scorePopUpEffect.node.setPosition(pos);
         this.scorePopUpEffect.play();
     }
