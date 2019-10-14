@@ -27,7 +27,7 @@
         "__id__": 198
       }
     ],
-    "_active": false,
+    "_active": true,
     "_level": 1,
     "_components": [
       {
@@ -206,13 +206,13 @@
     "_position": {
       "__type__": "cc.Vec3",
       "x": 54.77,
-      "y": -2,
+      "y": 0,
       "z": 0
     },
     "_scale": {
       "__type__": "cc.Vec3",
       "x": 1,
-      "y": 1.005,
+      "y": 1.0005,
       "z": 1
     },
     "_eulerAngles": {
