@@ -27,7 +27,7 @@
         "__id__": 299
       }
     ],
-    "_active": false,
+    "_active": true,
     "_level": 1,
     "_components": [
       {
@@ -175,7 +175,7 @@
       "__id__": 2
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 3,
     "_components": [
       {
@@ -308,7 +308,7 @@
     },
     "_position": {
       "__type__": "cc.Vec3",
-      "x": -360,
+      "x": -351.157,
       "y": 0,
       "z": 0
     },
@@ -416,7 +416,7 @@
     },
     "_position": {
       "__type__": "cc.Vec3",
-      "x": -360,
+      "x": -351.157,
       "y": 0,
       "z": 0
     },
@@ -967,7 +967,7 @@
     },
     "_position": {
       "__type__": "cc.Vec3",
-      "x": 632,
+      "x": 623.378,
       "y": 0,
       "z": 0
     },
@@ -1075,7 +1075,7 @@
     },
     "_position": {
       "__type__": "cc.Vec3",
-      "x": 632,
+      "x": 623.378,
       "y": 0,
       "z": 0
     },
