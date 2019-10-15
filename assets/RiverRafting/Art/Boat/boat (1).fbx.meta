@@ -1,6 +1,6 @@
 {
   "ver": "1.0.14",
-  "uuid": "610053b3-c981-46d0-a280-9e61af4c580a",
+  "uuid": "ed33df8f-0a0e-47cb-ad88-9cfcc41c8146",
   "scaleFactor": 1,
   "boneCount": 0,
   "precomputeJointMatrix": false,
@@ -8,14 +8,14 @@
   "subMetas": {
     "buffer.bin": {
       "ver": "1.0.0",
-      "uuid": "d512ba1e-7c24-43bc-8e4d-439fe53b111a",
+      "uuid": "09fd8352-79a9-496b-bd7a-7dcca32c92fb",
       "subMetas": {}
     },
     "SPW_Medieval_Boat.mesh": {
       "ver": "1.0.1",
-      "uuid": "e14fcd64-25c0-49e0-8d5a-c4431f2081ba",
-      "verts": 362,
-      "tris": 180,
+      "uuid": "66c47ae1-3b48-4dd0-9a9f-c175365f32d6",
+      "verts": 179,
+      "tris": 89,
       "submeshes": 1,
       "minPos": {
         "x": -0.0111136622726917,
@@ -29,9 +29,27 @@
       },
       "subMetas": {}
     },
-    "SPW_Medieval_Boat.prefab": {
+    "pCube1.mesh": {
+      "ver": "1.0.1",
+      "uuid": "2d685a0a-78cc-439d-a9a0-e8e565a08062",
+      "verts": 8,
+      "tris": 4,
+      "submeshes": 1,
+      "minPos": {
+        "x": -0.00457665743306279,
+        "y": -0.000263678724877536,
+        "z": -0.00143985624890774
+      },
+      "maxPos": {
+        "x": 0.00457665743306279,
+        "y": 0.000263678724877536,
+        "z": 0.00143985624890774
+      },
+      "subMetas": {}
+    },
+    "boat (1).prefab": {
       "ver": "1.2.0",
-      "uuid": "3bcb3e5e-61d2-4d53-816c-cd78e6b699ba",
+      "uuid": "ca7ee9e2-ee54-49c3-a19b-2d2357a33d63",
       "optimizationPolicy": "AUTO",
       "asyncLoadAssets": false,
       "readonly": true,
@@ -133,11 +151,11 @@
       ],
       "subMetas": {}
     },
-    "SPW_Medieval.mtl": {
+    "anisotropic1.mtl": {
       "ver": "1.0.2",
-      "uuid": "d44723d4-1809-4bed-89e6-eff9d2cb061d",
-      "dataAsSubAsset": "{\n  \"__type__\": \"cc.Material\",\n  \"_name\": \"\",\n  \"_objFlags\": 0,\n  \"_native\": \"\",\n  \"_effectAsset\": {\n    \"__uuid__\": \"abc2cb62-7852-4525-a90d-d474487b88f2\"\n  },\n  \"_defines\": {\n    \"USE_DIFFUSE_TEXTURE\": true,\n    \"USE_ALPHA_TEST\": false\n  },\n  \"_props\": {\n    \"diffuseColor\": {\n      \"__type__\": \"cc.Color\",\n      \"r\": 255,\n      \"g\": 254,\n      \"b\": 254,\n      \"a\": 255\n    },\n    \"diffuseTexture\": {\n      \"__uuid__\": \"c2b67417-c751-4b42-99ba-f0a3fb64317f\"\n    },\n    \"glossiness\": 10,\n    \"alphaThreshold\": 1.3\n  }\n}",
-      "name": "SPW_Medieval.mtl",
+      "uuid": "8cc8cf15-733d-44af-9039-b37bdf38eaad",
+      "dataAsSubAsset": null,
+      "name": "anisotropic1.mtl",
       "subMetas": {}
     }
   }
