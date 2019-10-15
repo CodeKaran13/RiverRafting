@@ -119,9 +119,7 @@ export default class AudioScript extends cc.Component {
         }
     }
     StopEffect(effectid: number) {
-        if (this.isSoundOn) {
-            cc.audioEngine.stopEffect(effectid);
-        }
+        cc.audioEngine.stopEffect(effectid);
     }
     LowerSoundMusicVolume(volume: number) {
         if (this.isSoundOn) {

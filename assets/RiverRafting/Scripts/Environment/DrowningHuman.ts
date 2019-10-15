@@ -5,6 +5,7 @@ import ScoreManager from "../Managers/ScoreManager";
 import GameManager from "../Managers/GameManager";
 import FollowPlayer from "./FollowPlayer";
 import AudioScript from "../Sound/AudioScript";
+import UIManager from "../Managers/UIManager";
 
 const { ccclass, property } = cc._decorator;
 
@@ -39,6 +40,7 @@ export default class DrowningHuman extends Collectibles {
             ScoreManager.Instance.totalHumanSaved += 1;
             ScoreManager.Instance.AddScore(ScoreManager.Instance.perHumanSavedBonus);
             
+            UIManager.Instance.playScorePopUpAtHumanPos(this.node.convertToWorldSpaceAR(cc.Vec2.ZERO));
         }
     }
 

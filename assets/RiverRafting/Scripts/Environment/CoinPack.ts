@@ -30,7 +30,7 @@ export default class CoinPack extends Collectibles {
             ScoreManager.Instance.totalCoinsCollected += 1;
             ScoreManager.Instance.AddScore(ScoreManager.Instance.perCoinBonus);
             // console.log('coin: ' + this.node.convertToWorldSpaceAR(cc.Vec2.ZERO));
-            UIManager.Instance.playScorePopUpAtPos(this.node.convertToWorldSpaceAR(cc.Vec2.ZERO));
+            UIManager.Instance.playScorePopUpAtCoinPos(this.node.convertToWorldSpaceAR(cc.Vec2.ZERO));
             AudioScript.Instance.PlayCoinCollectSound();
         }
     }

@@ -95,7 +95,9 @@ export default class UIManager extends cc.Component {
     @property(cc.Animation)
     explosionEffect: cc.Animation = null;
     @property(cc.Animation)
-    scorePopUpEffect: cc.Animation = null;
+    scorePopUpEffect10: cc.Animation = null;
+    @property(cc.Animation)
+    scorePopUpEffect20: cc.Animation = null;
 
     @property(cc.Node)
     GameSoundSprite: cc.Node = null;
@@ -174,7 +176,7 @@ export default class UIManager extends cc.Component {
         }
         else {
             this.SwitchSoundMode(true);
-            AudioScript.Instance.PlayBgMusic();
+            AudioScript.Instance.PlayMainMenuMusic();
             AudioScript.Instance.PlayAmbientMusic();
             this.GameSoundSprite.children[0].active = true;
             this.GameSoundSprite.children[1].active = false;
@@ -182,18 +184,25 @@ export default class UIManager extends cc.Component {
     }
     OnMenuSoundButtonClick() {
         AudioScript.Instance.PlayUIButtonClickSound();
+        // console.log(GameManager.Instance.IsSoundOn());
 
         if (GameManager.Instance.IsSoundOn()) {
+            // console.log('true');
             this.SwitchSoundMode(false);
-            AudioScript.Instance.StopMusic();
+
+            AudioScript.Instance.StopEffect(AudioScript.Instance.menuid);
             AudioScript.Instance.StopEffect(AudioScript.Instance.ambientid);
+
             this.MenuSoundSprite.children[0].active = false;
             this.MenuSoundSprite.children[1].active = true;
         }
         else {
+            // console.log('false');
             this.SwitchSoundMode(true);
+            
             AudioScript.Instance.PlayAmbientMusic();
             AudioScript.Instance.PlayMainMenuMusic();
+
             this.MenuSoundSprite.children[0].active = true;
             this.MenuSoundSprite.children[1].active = false;
         }
@@ -257,9 +266,14 @@ export default class UIManager extends cc.Component {
         this.explosionEffect.node.setPosition(pos);
         this.explosionEffect.play();
     }
-    playScorePopUpAtPos(pos: cc.Vec2) {
-        this.scorePopUpEffect.node.group = 'UI';
-        this.scorePopUpEffect.node.setPosition(pos);
-        this.scorePopUpEffect.play();
+    playScorePopUpAtCoinPos(pos: cc.Vec2) {
+        this.scorePopUpEffect10.node.group = 'UI';
+        this.scorePopUpEffect10.node.setPosition(pos);
+        this.scorePopUpEffect10.play();
+    }
+    playScorePopUpAtHumanPos(pos: cc.Vec2) {
+        this.scorePopUpEffect20.node.group = 'UI';
+        this.scorePopUpEffect20.node.setPosition(pos);
+        this.scorePopUpEffect20.play();
     }
 }

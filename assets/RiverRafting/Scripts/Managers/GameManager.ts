@@ -45,14 +45,14 @@ export default class GameManager extends cc.Component {
         cc.director.getPhysicsManager().enabled = true;
         cc.director.getCollisionManager().enabled = true;
 
-        // cc.director.getCollisionManager().enabledDebugDraw = true;
-        // cc.director.getCollisionManager().enabledDrawBoundingBox = true;
+        cc.director.getCollisionManager().enabledDebugDraw = true;
+        cc.director.getCollisionManager().enabledDrawBoundingBox = true;
 
-        // cc.director.getPhysicsManager().debugDrawFlags = cc.PhysicsManager.DrawBits.e_aabbBit |
-        //     cc.PhysicsManager.DrawBits.e_pairBit |
-        //     cc.PhysicsManager.DrawBits.e_centerOfMassBit |
-        //     cc.PhysicsManager.DrawBits.e_jointBit |
-        //     cc.PhysicsManager.DrawBits.e_shapeBit;
+        cc.director.getPhysicsManager().debugDrawFlags = cc.PhysicsManager.DrawBits.e_aabbBit |
+            cc.PhysicsManager.DrawBits.e_pairBit |
+            cc.PhysicsManager.DrawBits.e_centerOfMassBit |
+            cc.PhysicsManager.DrawBits.e_jointBit |
+            cc.PhysicsManager.DrawBits.e_shapeBit;
     }
 
     start() {
@@ -68,15 +68,16 @@ export default class GameManager extends cc.Component {
         this.GetData();
 
         if (!this.IsSoundOn()) {
-            UIManager.Instance.SwitchSoundMode(false);
-            AudioScript.Instance.StopMusic();
+            // UIManager.Instance.SwitchSoundMode(false);
+            AudioScript.Instance.StopEffect(AudioScript.Instance.menuid);
+            AudioScript.Instance.StopEffect(AudioScript.Instance.ambientid);
             // UIManager.Instance.GameSoundSprite.children[0].active = false;
             // UIManager.Instance.GameSoundSprite.children[1].active = true;
             UIManager.Instance.MenuSoundSprite.children[0].active = false;
             UIManager.Instance.MenuSoundSprite.children[1].active = true;
         }
         else {
-            UIManager.Instance.SwitchSoundMode(true);
+            // UIManager.Instance.SwitchSoundMode(true);
             AudioScript.Instance.PlayMainMenuMusic();
             AudioScript.Instance.PlayAmbientMusic();
             // UIManager.Instance.GameSoundSprite.children[0].active = true;
@@ -149,7 +150,7 @@ export default class GameManager extends cc.Component {
         ScoreManager.Instance.AddCoinsBonus();
         BonusSystem.Instance.stopAction();
 
-        UIManager.Instance.OpenSubmitWindow();
+        // UIManager.Instance.OpenSubmitWindow();
     }
 
     // FPS sequence
