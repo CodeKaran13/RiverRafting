@@ -66,8 +66,8 @@
     },
     "_position": {
       "__type__": "cc.Vec3",
-      "x": 540,
-      "y": 2200.254,
+      "x": 0,
+      "y": 0,
       "z": 0
     },
     "_scale": {
@@ -116,8 +116,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 1844,
-      "height": 293
+      "width": 1822,
+      "height": 272
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -164,7 +164,7 @@
     "_srcBlendFactor": 770,
     "_dstBlendFactor": 771,
     "_spriteFrame": {
-      "__uuid__": "4411b6fe-28c5-4afd-b34e-afa9baab73e4"
+      "__uuid__": "97d2baa1-6ea4-47b6-8180-be89f63c318f"
     },
     "_type": 0,
     "_sizeMode": 1,
@@ -219,8 +219,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 1844,
-      "height": 293
+      "width": 1822,
+      "height": 272
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -267,7 +267,7 @@
     "_srcBlendFactor": 770,
     "_dstBlendFactor": 771,
     "_spriteFrame": {
-      "__uuid__": "4411b6fe-28c5-4afd-b34e-afa9baab73e4"
+      "__uuid__": "97d2baa1-6ea4-47b6-8180-be89f63c318f"
     },
     "_type": 0,
     "_sizeMode": 1,
@@ -322,8 +322,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 1844,
-      "height": 293
+      "width": 1822,
+      "height": 272
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -370,7 +370,7 @@
     "_srcBlendFactor": 770,
     "_dstBlendFactor": 771,
     "_spriteFrame": {
-      "__uuid__": "4411b6fe-28c5-4afd-b34e-afa9baab73e4"
+      "__uuid__": "97d2baa1-6ea4-47b6-8180-be89f63c318f"
     },
     "_type": 0,
     "_sizeMode": 1,
@@ -425,8 +425,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 1844,
-      "height": 293
+      "width": 1822,
+      "height": 272
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -473,7 +473,7 @@
     "_srcBlendFactor": 770,
     "_dstBlendFactor": 771,
     "_spriteFrame": {
-      "__uuid__": "4411b6fe-28c5-4afd-b34e-afa9baab73e4"
+      "__uuid__": "97d2baa1-6ea4-47b6-8180-be89f63c318f"
     },
     "_type": 0,
     "_sizeMode": 1,

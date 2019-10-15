@@ -3,6 +3,7 @@ import Waves from "../GamePlay/Waves";
 import RiverMap from "../GamePlay/RiverMap";
 import { PrefabSet } from "../Enums";
 import SelectNextMap from "../Environment/SelectNextMap";
+import StartRiverMap from "../GamePlay/StartRiverMap";
 const { ccclass, property } = cc._decorator;
 
 @ccclass
@@ -21,8 +22,21 @@ export default class MatchManager extends cc.Component {
         serializable: true
     })
     _poolingSystem: PoolingSystem = null;
+    @property({
+        type: StartRiverMap,
+        visible: true,
+        serializable: true
+    })
+    _startRiverMap1: StartRiverMap = null;
+    @property({
+        type: StartRiverMap,
+        visible: true,
+        serializable: true
+    })
+    _startRiverMap2: StartRiverMap = null;
 
     // Script variables
+    @property
     totalHeight: number = 0;
     @property
     totalMapsToGenerate: number = 18;
@@ -43,7 +57,7 @@ export default class MatchManager extends cc.Component {
     public static Instance: MatchManager = null;
 
     onLoad() {
-        this.totalHeight = 1005;
+        this.totalHeight = 1003;
     }
 
     start() {
@@ -56,10 +70,13 @@ export default class MatchManager extends cc.Component {
         for (let i = 0; i < this.totalMapsToGenerate; i++) {
             this.spawnNextRiverMap();
         }
+        // this.spawnNextWave(0);
     }
 
     StartGame() {
-        this.spawnNextWave(1005);
+        // this.spawnNextWave(450);
+        // this._startRiverMap1.OnStartGame();
+        // this._startRiverMap2.OnStartGame();
     }
 
     spawnNextRiverMap() {
@@ -102,7 +119,7 @@ export default class MatchManager extends cc.Component {
         // will return 0, 1, 2, 3, 4, 5, 6
         // var rand = this.prefabArray.splice(Math.floor(Math.random() * this.prefabArray.length), 1);
         var rand = Math.floor(Math.random() * 6);
-        console.log(rand);
+        // console.log(rand);
         // return rand[0];
         return rand;
         // return 0;
@@ -157,7 +174,8 @@ export default class MatchManager extends cc.Component {
 
         if (wavePrefab.parent != null)
             wavePrefab.parent.removeChild(wavePrefab);
-        this.WavePrefabs.addChild(wavePrefab);
+
+        this.WavePrefabs.addChild(wavePrefab, 99);
 
         wavePrefab.setPosition(new cc.Vec2(0, this.totalWaveHeight));
         // console.log(wavePrefab.position);

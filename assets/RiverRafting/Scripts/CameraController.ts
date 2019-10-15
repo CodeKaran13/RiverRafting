@@ -1,4 +1,5 @@
 import GameManager, { GameState } from "./Managers/GameManager";
+import MatchManager from "./Managers/MatchManager";
 
 const { ccclass, property } = cc._decorator;
 
@@ -23,6 +24,8 @@ export default class CameraController extends cc.Component {
     anim: cc.Animation = null;
     @property(cc.Camera)
     camera: cc.Camera = null;
+    @property(cc.Camera)
+    waveCamera: cc.Camera = null;
 
 
     // camera zoom
@@ -82,7 +85,9 @@ export default class CameraController extends cc.Component {
             if (this.camera.zoomRatio <= 3.5) {
                 // console.log('zooming in..');
                 var end = this.camera.zoomRatio + 0.2;
+                var end1 = this.waveCamera.zoomRatio + 0.2;
                 this.camera.zoomRatio = this.lerp(this.camera.zoomRatio, end, 0.1);
+                this.waveCamera.zoomRatio = this.lerp(this.waveCamera.zoomRatio, end1, 0.1);
             }
             else {
                 this.shouldZoomIn = false;
@@ -90,6 +95,8 @@ export default class CameraController extends cc.Component {
         }
         else {
             this.node.stopAction(this.zoominsequence);
+            // MatchManager.Instance._startRiverMap1.OnStartGame();
+            // MatchManager.Instance._startRiverMap2.OnStartGame();
         }
     }
 

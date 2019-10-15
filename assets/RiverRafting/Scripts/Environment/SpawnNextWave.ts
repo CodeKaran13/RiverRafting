@@ -12,6 +12,7 @@ export default class SpawnNextWave extends cc.Component {
             // console.log('spawn next wave');
             if (!this.triggerOnce) {
                 this.triggerOnce = true;
+                // console.log('spawn next wave');
                 MatchManager.Instance.spawnNextWave(this.node.parent.height);
             }
         }

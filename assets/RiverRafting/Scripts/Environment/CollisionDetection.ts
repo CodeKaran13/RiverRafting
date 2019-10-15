@@ -24,13 +24,10 @@ export default class CollisionDetection extends cc.Component {
     onBeginContact(contact: cc.PhysicsContact, selfCollider, otherCollider) {
         if (otherCollider.node.group == 'Bound') {
             // stop clean run on collision and restart timer for bonus system
-            console.log('collided: ' + otherCollider.node.parent.parent.name);
+            // console.log('collided: ' + otherCollider.node.parent.parent.name);
 
             BonusSystem.Instance.stopAction();
-            this.node.getComponent(HealthManager).takeDamage(5);
-
             var position = contact.getWorldManifold().points[0];
-            // console.log('' + position);
             GameManager.Instance.PlayImpactEffectAtPos(position);
         }
     }

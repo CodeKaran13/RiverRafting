@@ -34,6 +34,7 @@ export default class Waves extends cc.Component {
         if (this.IsActive && this.CheckPlayerLocation) {
             var checkpoint = this.node.height + this.myPos.y;
             if (Player.Instance.node.position.y > checkpoint + 150) {
+                // console.log('changed to cull group');
                 this.changeToCullGroup();
             }
         }

@@ -12,7 +12,7 @@ export default class TurnMeOff extends cc.Component {
 
     onCollisionExit(other, self: cc.BoxCollider) {
         if (self.tag == 1 && other.node.name == 'EndCollider') {
-            // console.log('deactivating me');
+            // console.log('' + this.node.name);
             // console.log('turn off name: ' + this.node.convertToWorldSpaceAR(cc.Vec2.ZERO).y);
 
             // this.resetSequenceProps();

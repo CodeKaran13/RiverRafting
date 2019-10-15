@@ -86,9 +86,11 @@ export default class PoolingSystem extends cc.Component {
         if (PoolingSystem.Instance == null) {
             PoolingSystem.Instance = this;
         }
+
+        this.WaveNodePool = new cc.NodePool();
     }
     start() {
-        this.WaveNodePool = new cc.NodePool();
+        
     }
 
     InitNodePool() {
