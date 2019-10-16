@@ -115,14 +115,18 @@ export default class MatchManager extends cc.Component {
         }
     }
     // prefabArray: Number[] = [0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4, 5, 5, 5, 5, 5];
+    prevRand: number = 0;
     getRandomNumber() {
         // will return 0, 1, 2, 3, 4, 5, 6
         // var rand = this.prefabArray.splice(Math.floor(Math.random() * this.prefabArray.length), 1);
-        var rand = Math.floor(Math.random() * 6);
-        // console.log(rand);
-        // return rand[0];
-        return rand;
-        // return 0;
+        var rand = Math.floor(Math.random() * 7);
+        if(rand == this.prevRand) {
+            return Math.floor(Math.random() * 7);
+        }
+        else {
+            this.prevRand = rand;
+            return rand;
+        }
     }
     setRendererOff(nextMap: cc.Node) {
         if (nextMap.parent != null)
