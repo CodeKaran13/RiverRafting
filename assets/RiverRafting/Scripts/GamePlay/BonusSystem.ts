@@ -50,9 +50,11 @@ export default class BonusSystem extends cc.Component {
     // 5 SEC SEQUENCE TO CHECK PLAYER HAS NOT HIT ANYTHING DURING THIS TIME. IF HIT, RESTART SEQUENCE
     restartCounter() {
         // this.cleanTime = 0;
-        this.startTime = 0;
-        this.currentTime = this.bonusStartTime;
-        this.startCounter();
+        if (!Player.Instance.IsCollidingBound()) {
+            this.startTime = 0;
+            this.currentTime = this.bonusStartTime;
+            this.startCounter();
+        }
     }
     startCounter() {
         var time = cc.delayTime(1);
@@ -98,7 +100,7 @@ export default class BonusSystem extends cc.Component {
     }
     cleanRunCountdown() {
 
-        
+
 
         // console.log('bonus multiplier: ' + this.bonusMultiplier);
         // console.log('bonus reward: ' + this.bonusMultiplier);
@@ -124,7 +126,7 @@ export default class BonusSystem extends cc.Component {
         this._playerBonusEffect.node.group = 'Cull';
         this.isBonusSequenceOn = false;
 
-        if(!this.IS_5_SEC_SEQUENCE_ON()) {
+        if (!this.IS_5_SEC_SEQUENCE_ON()) {
             this.restartCounter();
         }
     }

@@ -99,6 +99,7 @@ export default class Player extends cc.Component {
                     // }
                 }
                 else {
+                    // BonusSystem.Instance.restartCounter();
                     return false;
                 }
             }

@@ -32,6 +32,15 @@ export default class Rocks extends Obstacles {
                 BonusSystem.Instance.stopAction();
         }
     }
+    onCollisionStay(other, self) {
+        if (other.node.name == 'Player') {
+            if (BonusSystem.Instance.IS_5_SEC_SEQUENCE_ON()) {
+                BonusSystem.Instance.STOP_5_SEC_SEQUENCE();
+            }
+            if (BonusSystem.Instance.isBonusSequenceOn)
+                BonusSystem.Instance.stopAction();
+        }
+    }
 
     //sequence to turn on/off box collider
     sequence: cc.ActionInterval;

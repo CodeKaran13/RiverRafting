@@ -27,4 +27,14 @@ export default class CollisionDetection extends cc.Component {
             GameManager.Instance.PlayImpactEffectAtPos(position);
         }
     }
+
+    // onCollisionStay(other, self) {
+    //     if (other.node.group == 'Bound') {
+    //         if (BonusSystem.Instance.IS_5_SEC_SEQUENCE_ON()) {
+    //             BonusSystem.Instance.STOP_5_SEC_SEQUENCE();
+    //         }
+    //         if (BonusSystem.Instance.isBonusSequenceOn)
+    //             BonusSystem.Instance.stopAction();
+    //     }
+    // }
 }

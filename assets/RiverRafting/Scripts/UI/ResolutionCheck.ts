@@ -25,12 +25,11 @@ export default class ResolutionCheck extends cc.Component {
 
         // console.log(screen.width);
         // console.log(screen.height);
-        console.log(x + ', ' + y);
+        // console.log(x + ', ' + y);
 
-        this.canvas.designResolution.width = x;
-        this.canvas.designResolution.height = y;
+        // this.canvas.designResolution.width = x;
+        // this.canvas.designResolution.height = y;
 
-        UIManager.Instance.GameWindow.children[3].setPosition(0, y / 2);
 
         var ratio = x / y;
 
@@ -40,6 +39,7 @@ export default class ResolutionCheck extends cc.Component {
 
         }
         else {
+            UIManager.Instance.GameWindow.children[3].setPosition(0, (y / 2) - 200);
             // this.mainCamera.zoomRatio = 1;
             // this.secondCamera.zoomRatio = 0.8;
         }
