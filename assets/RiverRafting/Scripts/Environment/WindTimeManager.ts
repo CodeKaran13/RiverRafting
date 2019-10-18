@@ -1,5 +1,5 @@
 import Player from "../Player";
-import GameManager from "../Managers/GameManager";
+import GameManager, { GameState } from "../Managers/GameManager";
 import AudioScript from "../Sound/AudioScript";
 
 const { ccclass, property } = cc._decorator;
@@ -25,13 +25,19 @@ export default class WindTimeManager extends cc.Component {
     startSequence() {
         var time = cc.delayTime(this.windIntervalTime);
         this.sequence = cc.sequence(time, cc.callFunc(this.windCountdown, this));
-        this.node.runAction(this.sequence.repeatForever());
+        if (GameManager.currentGameState == GameState.InGame)
+            this.node.runAction(this.sequence.repeatForever());
+        else {
+            this.node.stopAction(this.sequence);
+        }
     }
     windCountdown() {
-        Player.Instance.windDir = this.getRandomWindDir();
-        GameManager.Instance.PlayWindEffect(Player.Instance.windDir);
-        Player.Instance.IsWindy = true;
-        this.startWindyTimer();
+        if (GameManager.currentGameState == GameState.InGame) {
+            Player.Instance.windDir = this.getRandomWindDir();
+            GameManager.Instance.PlayWindEffect(Player.Instance.windDir);
+            Player.Instance.IsWindy = true;
+            this.startWindyTimer();
+        }
     }
 
     getRandomWindDir() {
@@ -51,23 +57,30 @@ export default class WindTimeManager extends cc.Component {
     @property
     windDuration: number = 7;
     startWindyTimer() {
-        var time = cc.delayTime(1);
-        this.windSequence = cc.sequence(time, cc.callFunc(this.windEffectCountdown, this));
-        this.node.runAction(this.windSequence.repeatForever());
+        if (GameManager.currentGameState == GameState.InGame) {
+            var time = cc.delayTime(1);
+            this.windSequence = cc.sequence(time, cc.callFunc(this.windEffectCountdown, this));
+            this.node.runAction(this.windSequence.repeatForever());
+        }
     }
     windEffectCountdown() {
-        this.windDuration--;
-        if (!this.playOnce) {
-            AudioScript.Instance.PlayWindSoundEffect();
-            this.playOnce = true;
+        if (GameManager.currentGameState == GameState.InGame) {
+            this.windDuration--;
+            if (!this.playOnce) {
+                AudioScript.Instance.PlayWindSoundEffect();
+                this.playOnce = true;
+            }
+            if (this.windDuration <= 0) {
+                Player.Instance.IsWindy = false;
+                GameManager.Instance.StopWindEffect();
+                this.node.stopAction(this.windSequence);
+                this.windDuration = 7;
+                AudioScript.Instance.StopEffect(AudioScript.Instance.windid);
+                this.playOnce = false;
+            }
         }
-        if (this.windDuration <= 0) {
-            Player.Instance.IsWindy = false;
-            GameManager.Instance.StopWindEffect();
+        else {
             this.node.stopAction(this.windSequence);
-            this.windDuration = 7;
-            AudioScript.Instance.StopEffect(AudioScript.Instance.windid);
-            this.playOnce = false;
         }
     }
 }

@@ -70,7 +70,6 @@ export default class MatchManager extends cc.Component {
         for (let i = 0; i < this.totalMapsToGenerate; i++) {
             this.spawnNextRiverMap();
         }
-        // this.spawnNextWave(0);
     }
 
     StartGame() {

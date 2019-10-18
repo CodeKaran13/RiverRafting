@@ -5600,12 +5600,12 @@
     "_offset": {
       "__type__": "cc.Vec2",
       "x": 0,
-      "y": 19.2
+      "y": -9.4
     },
     "_size": {
       "__type__": "cc.Size",
       "width": 240.7,
-      "height": 173.2
+      "height": 116.1
     },
     "_id": ""
   },
@@ -6374,12 +6374,12 @@
     "_offset": {
       "__type__": "cc.Vec2",
       "x": 0,
-      "y": 19.2
+      "y": -9.4
     },
     "_size": {
       "__type__": "cc.Size",
       "width": 240.7,
-      "height": 173.2
+      "height": 116.1
     },
     "_id": ""
   },
@@ -7148,12 +7148,12 @@
     "_offset": {
       "__type__": "cc.Vec2",
       "x": 0,
-      "y": 19.2
+      "y": -9.4
     },
     "_size": {
       "__type__": "cc.Size",
       "width": 240.7,
-      "height": 173.2
+      "height": 116.1
     },
     "_id": ""
   },
@@ -7922,12 +7922,12 @@
     "_offset": {
       "__type__": "cc.Vec2",
       "x": 0,
-      "y": 19.2
+      "y": -9.4
     },
     "_size": {
       "__type__": "cc.Size",
       "width": 240.7,
-      "height": 173.2
+      "height": 116.1
     },
     "_id": ""
   },

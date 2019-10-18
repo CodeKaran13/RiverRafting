@@ -115,8 +115,10 @@ export default class Player extends cc.Component {
         this.currentAction = toLeft;
         this.node.children[0].children[0].runAction(tilt);
 
-        this.node.children[4].getComponent(dragonBones.ArmatureDisplay).timeScale = 0;
-        this.node.children[3].getComponent(dragonBones.ArmatureDisplay).timeScale = 3;
+        if (GameManager.currentGameState == GameState.InGame) {
+            this.node.children[4].getComponent(dragonBones.ArmatureDisplay).timeScale = 0;
+            this.node.children[3].getComponent(dragonBones.ArmatureDisplay).timeScale = 3;
+        }
     }
 
     RotateRight() {
@@ -127,8 +129,10 @@ export default class Player extends cc.Component {
 
         this.node.children[0].children[0].runAction(tilt);
 
-        this.node.children[4].getComponent(dragonBones.ArmatureDisplay).timeScale = 3;
-        this.node.children[3].getComponent(dragonBones.ArmatureDisplay).timeScale = 0;
+        if (GameManager.currentGameState == GameState.InGame) {
+            this.node.children[4].getComponent(dragonBones.ArmatureDisplay).timeScale = 3;
+            this.node.children[3].getComponent(dragonBones.ArmatureDisplay).timeScale = 0;
+        }
     }
 
     RotateToCenter() {
@@ -139,8 +143,10 @@ export default class Player extends cc.Component {
 
         this.node.children[0].children[0].runAction(tilt);
 
-        this.node.children[4].getComponent(dragonBones.ArmatureDisplay).timeScale = 3;
-        this.node.children[3].getComponent(dragonBones.ArmatureDisplay).timeScale = 3;
+        if (GameManager.currentGameState == GameState.InGame) {
+            this.node.children[4].getComponent(dragonBones.ArmatureDisplay).timeScale = 3;
+            this.node.children[3].getComponent(dragonBones.ArmatureDisplay).timeScale = 3;
+        }
     }
 
     StartAction(action: cc.Action) {
@@ -245,20 +251,16 @@ export default class Player extends cc.Component {
             var time = cc.delayTime(0.03);
             this.dragSequence = cc.sequence(time, cc.callFunc(this.dragRaftToCyclone, this, pos));
             this.node.runAction(this.dragSequence.repeatForever());
-            BonusSystem.Instance.stopAction();
-            // this.startCycloneEffect();
+            if (BonusSystem.Instance.isBonusSequenceOn)
+                BonusSystem.Instance.stopAction();
         }
     }
     dragRaftToCyclone(target, pos: cc.Vec2) {
         var dir = pos.sub(this.node.position);
         var endPos = this.node.position.add(dir.normalizeSelf().mulSelf(4));
-
         this.node.position = this.lerpVec2(this.node.position, endPos, 0.5);
-        // console.log('dragging..');
         if (this.reachedCenter) {
             this.node.stopAction(this.dragSequence);
-            // console.log('reached center');
-            // this.startCycloneEffect();
         }
     }
     startCycloneEffect(node) {
@@ -276,13 +278,11 @@ export default class Player extends cc.Component {
             if (this.node.angle > 355) {
                 this.node.angle = 0;
                 this.currentRot++;
-                // console.log('angle above 355, ' + this.currentRot);
             }
         }
         else {
             this.node.stopAction(this.cycloneSequence);
             this.node.stopAction(this.dragSequence);
-            // node.active = false;
             node.getComponent(Cyclone).changeToCullGroup();
             this.reachedCenter = false;
             this.IsCycloned = false;

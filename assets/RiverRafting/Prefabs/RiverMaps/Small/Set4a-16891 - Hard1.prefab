@@ -10252,7 +10252,7 @@
     "_position": {
       "__type__": "cc.Vec3",
       "x": 64.005,
-      "y": 897.562,
+      "y": 478.888,
       "z": 0
     },
     "_scale": {
@@ -10443,7 +10443,7 @@
     "node": {
       "__id__": 274
     },
-    "_enabled": false,
+    "_enabled": true,
     "_materials": [
       {
         "__uuid__": "eca5d2f2-8ef6-41c2-bbe6-f9c79d09c432"
@@ -10523,8 +10523,8 @@
     },
     "_position": {
       "__type__": "cc.Vec3",
-      "x": 68.572,
-      "y": -2155.115,
+      "x": 0,
+      "y": 0,
       "z": 0
     },
     "_scale": {

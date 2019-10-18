@@ -4,8 +4,8 @@ import BonusSystem from "../GamePlay/BonusSystem";
 import TimeManager from "./TimeManager";
 import UIManager from "./UIManager";
 import ScoreManager from "./ScoreManager";
-import Player from "../Player";
 import AudioScript from "../Sound/AudioScript";
+import Player from "../Player";
 
 export enum GameState {
     PreGame = 0,
@@ -19,6 +19,8 @@ const { ccclass, property } = cc._decorator;
 export default class GameManager extends cc.Component {
     _matchManager: MatchManager = null;
 
+    @property
+    IsPublicBuild: boolean = false;
     @property(cc.Animation)
     ImpactPE: cc.Animation = null;
     @property(cc.ParticleSystem)
@@ -30,8 +32,6 @@ export default class GameManager extends cc.Component {
     @property(cc.Animation)
     rightWindEffect: cc.Animation = null;
 
-    @property
-    IsPublicBuild: boolean = false;
 
     public static currentGameState: GameState = GameState.PreGame;
     public static currentDifficulty: Difficulty = Difficulty.Easy;
@@ -45,6 +45,7 @@ export default class GameManager extends cc.Component {
         cc.director.getPhysicsManager().enabled = true;
         cc.director.getCollisionManager().enabled = true;
 
+        cc.game.setFrameRate(60);
         // cc.director.getCollisionManager().enabledDebugDraw = true;
         // cc.director.getCollisionManager().enabledDrawBoundingBox = true;
 
@@ -62,28 +63,21 @@ export default class GameManager extends cc.Component {
 
         this.startFPSsequence();
 
-        // AudioScript.Instance.PlayMainMenuMusic();
-        // AudioScript.Instance.PlayAmbientMusic();
-
         this.GetData();
 
         if (!this.IsSoundOn()) {
-            // UIManager.Instance.SwitchSoundMode(false);
-            AudioScript.Instance.StopEffect(AudioScript.Instance.menuid);
             AudioScript.Instance.StopEffect(AudioScript.Instance.ambientid);
-            // UIManager.Instance.GameSoundSprite.children[0].active = false;
-            // UIManager.Instance.GameSoundSprite.children[1].active = true;
-            UIManager.Instance.MenuSoundSprite.children[0].active = false;
-            UIManager.Instance.MenuSoundSprite.children[1].active = true;
+            UIManager.Instance.GameSoundSprite.children[0].opacity = 0;
+            UIManager.Instance.GameSoundSprite.children[1].opacity = 255;
+            UIManager.Instance.MenuSoundSprite.children[0].opacity = 0;
+            UIManager.Instance.MenuSoundSprite.children[1].opacity = 255;
         }
         else {
-            // UIManager.Instance.SwitchSoundMode(true);
-            AudioScript.Instance.PlayMainMenuMusic();
             AudioScript.Instance.PlayAmbientMusic();
-            // UIManager.Instance.GameSoundSprite.children[0].active = true;
-            // UIManager.Instance.GameSoundSprite.children[1].active = false;
-            UIManager.Instance.MenuSoundSprite.children[0].active = true;
-            UIManager.Instance.MenuSoundSprite.children[1].active = false;
+            UIManager.Instance.GameSoundSprite.children[0].opacity = 255;
+            UIManager.Instance.GameSoundSprite.children[1].opacity = 0;
+            UIManager.Instance.MenuSoundSprite.children[0].opacity = 255;
+            UIManager.Instance.MenuSoundSprite.children[1].opacity = 0;
         }
     }
 
@@ -113,18 +107,15 @@ export default class GameManager extends cc.Component {
     PlayImpactEffectAtPos(pos: cc.Vec2) {
         this.ImpactPE.node.group = 'default';
         this.ImpactPE.node.setPosition(pos);
-        // this.ImpactPE.node.active = true;
         this.ImpactPE.play();
     }
 
     PlayWindEffect(direction: number) {
         if (direction == -1) {
-            // this.leftWindEffect.node.active = true;
             this.leftWindEffect.node.group = 'Weather';
             this.leftWindEffect.play();
         }
         else {
-            // this.rightWindEffect.node.active = true;
             this.rightWindEffect.node.group = 'Weather';
             this.rightWindEffect.play();
         }
@@ -132,11 +123,9 @@ export default class GameManager extends cc.Component {
 
     StopWindEffect() {
         this.leftWindEffect.stop();
-        // this.leftWindEffect.node.active = false;
         this.leftWindEffect.node.group = 'Cull';
         this.rightWindEffect.stop();
         this.rightWindEffect.node.group = 'Cull';
-        // this.rightWindEffect.node.active = false;
     }
 
     OnGameOver() {
@@ -145,12 +134,17 @@ export default class GameManager extends cc.Component {
         GameManager.currentGameState = GameState.PostGame;
         AudioScript.Instance.StopMusic();
         this.boatEmitterPS.stopSystem();
+        
+        Player.Instance.node.children[4].getComponent(dragonBones.ArmatureDisplay).timeScale = 0;
+        Player.Instance.node.children[3].getComponent(dragonBones.ArmatureDisplay).timeScale = 0;
 
         ScoreManager.Instance.AddHumanSavedBonus();
         ScoreManager.Instance.AddCoinsBonus();
-        BonusSystem.Instance.stopAction();
+        if (BonusSystem.Instance.isBonusSequenceOn)
+            BonusSystem.Instance.stopAction();
 
-        // UIManager.Instance.OpenSubmitWindow();
+        if (TimeManager.Instance.currentime <= 0)
+            UIManager.Instance.OpenSubmitWindow();
     }
 
     // FPS sequence

@@ -1,3 +1,5 @@
+import GameManager from "../Managers/GameManager";
+
 const { ccclass, property } = cc._decorator;
 
 @ccclass
@@ -105,7 +107,7 @@ export default class AudioScript extends cc.Component {
     windid = 0;
 
     PlayEffect(AudioClip: cc.AudioClip, loop: boolean) {
-        if (this.isSoundOn) {
+        if (GameManager.Instance.IsSoundOn()) {
             this.audioid = cc.audioEngine.playEffect(AudioClip, loop);
         }
         else {
@@ -114,7 +116,7 @@ export default class AudioScript extends cc.Component {
         return this.audioid;
     }
     LowerSoundEffectVolume(effectid: number, volume: number) {
-        if (this.isSoundOn) {
+        if (GameManager.Instance.IsSoundOn()) {
             cc.audioEngine.setVolume(effectid, volume);
         }
     }
@@ -122,86 +124,86 @@ export default class AudioScript extends cc.Component {
         cc.audioEngine.stopEffect(effectid);
     }
     LowerSoundMusicVolume(volume: number) {
-        if (this.isSoundOn) {
+        if (GameManager.Instance.IsSoundOn()) {
             cc.audioEngine.setMusicVolume(volume);
         }
     }
     StopMusic() {
-        if (this.isSoundOn) {
-            cc.audioEngine.stopMusic();
-        }
+        // if (this.isSoundOn) {
+        cc.audioEngine.stopMusic();
+        // }
     }
 
     PlayBgMusic() {
-        if (this.isSoundOn) {
+        if (GameManager.Instance.IsSoundOn()) {
             cc.audioEngine.playMusic(this.bgMusic, true);
         }
     }
 
     PlayMainMenuMusic() {
-        if (this.isSoundOn) {
-            this.menuid = this.PlayEffect(this.mainMenuMusic, true);
-        }
+        // if (this.isSoundOn) {
+        //     this.menuid = this.PlayEffect(this.mainMenuMusic, true);
+        // }
     }
 
     PlayAmbientMusic() {
-        if (this.isSoundOn) {
+        if (GameManager.Instance.IsSoundOn()) {
             this.ambientid = this.PlayEffect(this.ambientSound, true);
         }
     }
 
     PlayCoinCollectSound() {
-        if (this.isSoundOn) {
+        if (GameManager.Instance.IsSoundOn()) {
             cc.audioEngine.playEffect(this.coinCollect, false);
         }
     }
     PlayHealthCollectSound() {
-        if (this.isSoundOn) {
+        if (GameManager.Instance.IsSoundOn()) {
             cc.audioEngine.playEffect(this.healthCollect, false);
         }
     }
     PlayHumanCollectSound() {
-        if (this.isSoundOn) {
+        if (GameManager.Instance.IsSoundOn()) {
             cc.audioEngine.playEffect(this.humanSavedSound, false);
         }
     }
     PlayDockImpactSound() {
-        if (this.isSoundOn) {
+        if (GameManager.Instance.IsSoundOn()) {
             cc.audioEngine.playEffect(this.dockImpact, false);
         }
     }
     PlayWoodImpactSound() {
-        if (this.isSoundOn) {
+        if (GameManager.Instance.IsSoundOn()) {
             cc.audioEngine.playEffect(this.floatingWoodImpact, false);
         }
     }
     PlayWindSoundEffect() {
-        if (this.isSoundOn) {
+        if (GameManager.Instance.IsSoundOn()) {
             this.windid = this.PlayEffect(this.windSound, true);
         }
     }
     PlayBoatBlastSoundEffect() {
-        if (this.isSoundOn) {
+        if (GameManager.Instance.IsSoundOn()) {
             cc.audioEngine.playEffect(this.boatBlastSound, false);
         }
     }
     PlayPopUpSoundEffect() {
-        if (this.isSoundOn) {
+        if (GameManager.Instance.IsSoundOn()) {
             cc.audioEngine.playEffect(this.popUpSound, false);
         }
     }
     PlayGameOverSoundEffect() {
-        if (this.isSoundOn) {
+        if (GameManager.Instance.IsSoundOn()) {
             cc.audioEngine.playEffect(this.gameOverSound, false);
         }
     }
 
     PlayUIButtonClickSound() {
-        if (this.isSoundOn)
+        if (GameManager.Instance.IsSoundOn())
             this.PlayEffect(this.buttonSound, false);
     }
     PlayButtonSound() {
-        if (this.isSoundOn)
+        if (GameManager.Instance.IsSoundOn())
             this.PlayEffect(this.playButtonSound, false);
     }
 }

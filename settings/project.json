@@ -16,6 +16,9 @@
       false,
       true,
       true,
+      true,
+      null,
+      null,
       true
     ],
     [
@@ -63,7 +66,7 @@
     [
       false,
       false,
-      false,
+      true,
       false,
       false,
       false,
@@ -98,13 +101,12 @@
     "Cull",
     "Waves"
   ],
-  "last-module-event-record-time": 1569386600296,
+  "last-module-event-record-time": 1571220377753,
   "simulator-orientation": false,
   "simulator-resolution": {
     "height": 640,
     "width": 960
   },
   "use-customize-simulator": true,
-  "use-project-simulator-setting": false,
-  "start-scene": "current"
+  "use-project-simulator-setting": false
 }

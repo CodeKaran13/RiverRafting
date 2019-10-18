@@ -1,7 +1,6 @@
 import Obstacles, { ObstacleType } from "./Obstacles";
 import Player from "../Player";
 import HealthManager from "../Managers/HealthManager";
-import GameManager from "../Managers/GameManager";
 import BonusSystem from "./BonusSystem";
 import FollowPlayer from "../Environment/FollowPlayer";
 
@@ -26,7 +25,11 @@ export default class Rocks extends Obstacles {
         if (other.node.name == 'Player') {
             Player.Instance.node.getComponent(HealthManager).takeDamage(5);
             Player.Instance.PlayBlinkEffect();
-            BonusSystem.Instance.stopAction();
+            if (BonusSystem.Instance.IS_5_SEC_SEQUENCE_ON()) {
+                BonusSystem.Instance.STOP_5_SEC_SEQUENCE();
+            }
+            if (BonusSystem.Instance.isBonusSequenceOn)
+                BonusSystem.Instance.stopAction();
         }
     }
 

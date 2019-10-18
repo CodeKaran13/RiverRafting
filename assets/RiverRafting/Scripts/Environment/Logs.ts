@@ -28,7 +28,11 @@ export default class Logs extends Obstacles {
             this.myAnimator.play('floating_wood_break');
             other.node.getComponent(HealthManager).takeDamage(this.damage);
             Player.Instance.PlayBlinkEffect();
-            BonusSystem.Instance.stopAction();
+            if (BonusSystem.Instance.IS_5_SEC_SEQUENCE_ON()) {
+                BonusSystem.Instance.STOP_5_SEC_SEQUENCE();
+            }
+            if (BonusSystem.Instance.isBonusSequenceOn)
+                BonusSystem.Instance.stopAction();
             AudioScript.Instance.PlayWoodImpactSound();
         }
     }

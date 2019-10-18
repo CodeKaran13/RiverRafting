@@ -1,6 +1,5 @@
 import Player from "../Player";
 import Obstacles, { ObstacleType } from "../GamePlay/Obstacles";
-import ObstaclePool from "../Pools/ObstaclePool";
 import BonusSystem from "../GamePlay/BonusSystem";
 import FollowPlayer from "./FollowPlayer";
 
@@ -30,7 +29,11 @@ export default class Cyclone extends Obstacles {
         if (self.tag == 0 && other.node.name == 'Player') {
             if (!this.triggerOnce) {
                 this.triggerOnce = true;
-                BonusSystem.Instance.stopAction();
+                if (BonusSystem.Instance.IS_5_SEC_SEQUENCE_ON()) {
+                    BonusSystem.Instance.STOP_5_SEC_SEQUENCE();
+                }
+                if (BonusSystem.Instance.isBonusSequenceOn)
+                    BonusSystem.Instance.stopAction();
                 // console.log('entered cyclone');
                 Player.Instance.startCyclone(this.node.convertToWorldSpaceAR(cc.Vec2.ZERO));
                 Player.Instance.startCycloneEffect(this.node);
@@ -73,7 +76,7 @@ export default class Cyclone extends Obstacles {
     changeToDefaultGroup() {
         this.myCol1.enabled = true;
         this.myCol2.enabled = true;
-        this.node.group = 'default';
+        this.node.group = 'Waves';
     }
     changeToCullGroup() {
         // console.log('cull cyclone');

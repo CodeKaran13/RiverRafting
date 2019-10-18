@@ -33,7 +33,11 @@ export default class Docks extends Obstacles {
             Player.Instance.PlayBlinkEffect();
             CameraController.Instance.cameraShake();
             AudioScript.Instance.PlayDockImpactSound();
-            BonusSystem.Instance.stopAction();
+            if (BonusSystem.Instance.IS_5_SEC_SEQUENCE_ON()) {
+                BonusSystem.Instance.STOP_5_SEC_SEQUENCE();
+            }
+            if (BonusSystem.Instance.isBonusSequenceOn)
+                BonusSystem.Instance.stopAction();
         }
     }
 

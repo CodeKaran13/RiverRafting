@@ -5,6 +5,7 @@ import TimeManager from "./TimeManager";
 import ScoreManager from "./ScoreManager";
 import WindTimeManager from "../Environment/WindTimeManager";
 import AudioScript from "../Sound/AudioScript";
+import BonusSystem from "../GamePlay/BonusSystem";
 
 const { ccclass, property } = cc._decorator;
 
@@ -147,7 +148,7 @@ export default class UIManager extends cc.Component {
 
     // All Button functions
     OnPlayButtonClick() {
-        AudioScript.Instance.StopEffect(AudioScript.Instance.menuid);
+        // AudioScript.Instance.StopEffect(AudioScript.Instance.menuid);
         AudioScript.Instance.PlayButtonSound();
         GameManager.currentGameState = GameState.InGame;
 
@@ -155,14 +156,17 @@ export default class UIManager extends cc.Component {
         TimeManager.Instance.startTimer();
         WindTimeManager.Instance.startSequence();
         MatchManager.Instance.StartGame();
+        BonusSystem.Instance.restartCounter();
 
         // close main menu window
 
         this.MainMenuWindow.active = false;
         this.GameWindow.active = true;
 
-        AudioScript.Instance.PlayBgMusic();
-        AudioScript.Instance.LowerSoundMusicVolume(0.5);
+        if (GameManager.Instance.IsSoundOn()) {
+            AudioScript.Instance.PlayBgMusic();
+            AudioScript.Instance.LowerSoundMusicVolume(0.5);
+        }
     }
     OnSoundButtonClick() {
         AudioScript.Instance.PlayUIButtonClickSound();
@@ -171,15 +175,19 @@ export default class UIManager extends cc.Component {
             this.SwitchSoundMode(false);
             AudioScript.Instance.StopMusic();
             AudioScript.Instance.StopEffect(AudioScript.Instance.ambientid);
-            this.GameSoundSprite.children[0].active = false;
-            this.GameSoundSprite.children[1].active = true;
+            this.MenuSoundSprite.children[0].opacity = 0;
+            this.MenuSoundSprite.children[1].opacity = 255;
+            this.GameSoundSprite.children[0].opacity = 0;
+            this.GameSoundSprite.children[1].opacity = 255;
         }
         else {
             this.SwitchSoundMode(true);
-            AudioScript.Instance.PlayMainMenuMusic();
             AudioScript.Instance.PlayAmbientMusic();
-            this.GameSoundSprite.children[0].active = true;
-            this.GameSoundSprite.children[1].active = false;
+            AudioScript.Instance.PlayBgMusic();
+            this.MenuSoundSprite.children[0].opacity = 255;
+            this.MenuSoundSprite.children[1].opacity = 0;
+            this.GameSoundSprite.children[0].opacity = 255;
+            this.GameSoundSprite.children[1].opacity = 0;
         }
     }
     OnMenuSoundButtonClick() {
@@ -190,21 +198,25 @@ export default class UIManager extends cc.Component {
             // console.log('true');
             this.SwitchSoundMode(false);
 
-            AudioScript.Instance.StopEffect(AudioScript.Instance.menuid);
+            // AudioScript.Instance.StopEffect(AudioScript.Instance.menuid);
             AudioScript.Instance.StopEffect(AudioScript.Instance.ambientid);
 
-            this.MenuSoundSprite.children[0].active = false;
-            this.MenuSoundSprite.children[1].active = true;
+            this.MenuSoundSprite.children[0].opacity = 0;
+            this.MenuSoundSprite.children[1].opacity = 255;
+            this.GameSoundSprite.children[0].opacity = 0;
+            this.GameSoundSprite.children[1].opacity = 255;
         }
         else {
             // console.log('false');
             this.SwitchSoundMode(true);
-            
-            AudioScript.Instance.PlayAmbientMusic();
-            AudioScript.Instance.PlayMainMenuMusic();
 
-            this.MenuSoundSprite.children[0].active = true;
-            this.MenuSoundSprite.children[1].active = false;
+            AudioScript.Instance.PlayAmbientMusic();
+            // AudioScript.Instance.PlayMainMenuMusic();
+
+            this.MenuSoundSprite.children[0].opacity = 255;
+            this.MenuSoundSprite.children[1].opacity = 0;
+            this.GameSoundSprite.children[0].opacity = 255;
+            this.GameSoundSprite.children[1].opacity = 0;
         }
     }
     SwitchSoundMode(bool: boolean) {

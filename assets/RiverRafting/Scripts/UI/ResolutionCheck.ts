@@ -1,10 +1,11 @@
+import UIManager from "../Managers/UIManager";
+
 const { ccclass, property } = cc._decorator;
 
 @ccclass
-export default class ResolutionCheck extends cc.Component
-{
-    // @property(cc.Canvas)
-    // canvas: cc.Canvas = null;
+export default class ResolutionCheck extends cc.Component {
+    @property(cc.Canvas)
+    canvas: cc.Canvas = null;
 
     @property(cc.Camera)
     mainCamera: cc.Camera = null;
@@ -14,26 +15,32 @@ export default class ResolutionCheck extends cc.Component
 
     value: number = 0.51;
 
-    start()
-    {
+    start() {
         this.getResolution();
     }
 
-    getResolution()
-    {
-        var x = window.screen.width;
-        var y = window.screen.height;
+    getResolution() {
+        var x = window.screen.width * window.devicePixelRatio;
+        var y = window.screen.height * window.devicePixelRatio;
+
+        // console.log(screen.width);
+        // console.log(screen.height);
+        console.log(x + ', ' + y);
+
+        this.canvas.designResolution.width = x;
+        this.canvas.designResolution.height = y;
+
+        UIManager.Instance.GameWindow.children[3].setPosition(0, y / 2);
 
         var ratio = x / y;
 
-        if(ratio > this.value)
-        {
-            this.mainCamera.zoomRatio = 1;
+        if (ratio > this.value) {
+            // this.mainCamera.zoomRatio = 0.8;
             // this.secondCamera.zoomRatio = 1;
+
         }
-        else
-        {
-            this.mainCamera.zoomRatio = 0.8;
+        else {
+            // this.mainCamera.zoomRatio = 1;
             // this.secondCamera.zoomRatio = 0.8;
         }
     }
