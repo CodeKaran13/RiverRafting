@@ -1,5 +1,4 @@
 import GameManager, { GameState } from "./Managers/GameManager";
-import MatchManager from "./Managers/MatchManager";
 
 const { ccclass, property } = cc._decorator;
 
@@ -22,6 +21,10 @@ export default class CameraController extends cc.Component {
     shakeDuration: number = 0.5;
     @property(cc.Animation)
     anim: cc.Animation = null;
+    @property(cc.Animation)
+    waveAnim: cc.Animation = null;
+
+
     @property(cc.Camera)
     camera: cc.Camera = null;
     @property(cc.Camera)
@@ -33,10 +36,6 @@ export default class CameraController extends cc.Component {
     previousPos: cc.Vec2;
 
     public static Instance: CameraController = null;
-
-    onLoad() {
-
-    }
 
     start() {
         if (CameraController.Instance == null) {
@@ -53,22 +52,22 @@ export default class CameraController extends cc.Component {
         }
 
         if (this.startFollow) {
-            // this.node.position = new cc.Vec2(this.target.getPosition().x + this.followOffsetX, this.target.getPosition().y + this.followOffsetY);
             var Pos = new cc.Vec2(this.target.position.x + this.followOffsetX, this.target.position.y + this.followOffsetY);
             this.node.position = this.node.parent.convertToNodeSpaceAR(Pos);
         }
-
-        // console.log('camera zoom: ' + this.camera.zoomRatio);
     }
 
     cameraShake() {
         this.anim.play('shake');
+        this.waveAnim.play('shake');
         this.scheduleOnce(this.stopShake.bind(this), this.shakeDuration);
     }
 
     stopShake() {
         this.anim.stop();
-        this.camera.node.position = cc.p(0, 0);
+        this.waveAnim.stop();
+        this.camera.node.position = cc.Vec2.ZERO;//cc.p(0, 0);
+        this.waveCamera.node.position = cc.Vec2.ZERO;
     }
 
     zoominsequence: cc.ActionInterval;
@@ -95,8 +94,6 @@ export default class CameraController extends cc.Component {
         }
         else {
             this.node.stopAction(this.zoominsequence);
-            // MatchManager.Instance._startRiverMap1.OnStartGame();
-            // MatchManager.Instance._startRiverMap2.OnStartGame();
         }
     }
 
