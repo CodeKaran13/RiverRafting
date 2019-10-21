@@ -65,7 +65,7 @@ export default class Docks extends Obstacles {
 
     changeToDefaultGroup() {
         this.myCol.enabled = true;
-        this.node.group = 'default';
+        this.node.group = 'Obstacles';
     }
     changeToCullGroup() {
         this.myCol.enabled = false;

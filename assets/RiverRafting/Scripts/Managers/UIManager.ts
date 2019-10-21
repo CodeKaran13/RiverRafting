@@ -94,6 +94,8 @@ export default class UIManager extends cc.Component {
     healthBarSprite: cc.Sprite = null;
 
     @property(cc.Animation)
+    lowHealthAnim: cc.Animation = null;
+    @property(cc.Animation)
     explosionEffect: cc.Animation = null;
     @property(cc.Animation)
     scorePopUpEffect10: cc.Animation = null;
@@ -274,7 +276,7 @@ export default class UIManager extends cc.Component {
 
     // Effect/Particle System
     playExplosionEffectAtPos(pos: cc.Vec2) {
-        this.explosionEffect.node.group = 'default';
+        this.explosionEffect.node.group = 'Environment';
         this.explosionEffect.node.setPosition(pos);
         this.explosionEffect.play();
     }
@@ -287,5 +289,13 @@ export default class UIManager extends cc.Component {
         this.scorePopUpEffect20.node.group = 'UI';
         this.scorePopUpEffect20.node.setPosition(pos);
         this.scorePopUpEffect20.play();
+    }
+    playLowHealthAnim() {
+        this.lowHealthAnim.node.group = 'UI';
+        this.lowHealthAnim.play();
+    }
+    stopLowHealthAnim() {
+        this.lowHealthAnim.node.group = 'Cull';
+        this.lowHealthAnim.stop();
     }
 }

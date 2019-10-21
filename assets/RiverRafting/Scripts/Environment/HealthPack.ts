@@ -57,7 +57,7 @@ export default class HealthPack extends Collectibles {
 
     changeToDefaultGroup() {
         this.myCol.enabled = true;
-        this.node.group = 'default';
+        this.node.group = 'Collectibles';
     }
     changeToCullGroup() {
         this.myCol.enabled = false;

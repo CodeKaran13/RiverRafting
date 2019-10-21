@@ -68,7 +68,7 @@ export default class DrowningHuman extends Collectibles {
 
     changeToDefaultGroup() {
         this.myCol.enabled = true;
-        this.node.group = 'default';
+        this.node.group = 'Collectibles';
     }
     changeToCullGroup() {
         // console.log('cull human');

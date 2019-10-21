@@ -73,6 +73,18 @@
       false,
       false,
       false
+    ],
+    [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
     ]
   ],
   "design-resolution-height": 640,
@@ -99,7 +111,8 @@
     "Obstacles",
     "Weather",
     "Cull",
-    "Waves"
+    "Waves",
+    "Environment"
   ],
   "last-module-event-record-time": 1571220377753,
   "simulator-orientation": false,
@@ -108,6 +121,5 @@
     "width": 960
   },
   "use-customize-simulator": true,
-  "use-project-simulator-setting": false,
-  "start-scene": "current"
+  "use-project-simulator-setting": false
 }

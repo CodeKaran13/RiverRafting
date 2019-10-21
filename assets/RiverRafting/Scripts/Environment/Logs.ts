@@ -62,7 +62,7 @@ export default class Logs extends Obstacles {
     changeToDefaultGroup() {
         this.myCol.enabled = true;
         this.myAnimator.play();
-        this.node.group = 'default';
+        this.node.group = 'Obstacles';
     }
     //ANIMATION EVENT
     changeToCullGroup() {

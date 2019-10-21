@@ -66,7 +66,7 @@ export default class Rocks extends Obstacles {
 
     changeToDefaultGroup() {
         this.myCol.enabled = true;
-        this.node.group = 'default';
+        this.node.group = 'Obstacles';
         this.myAnimator.play();
     }
     changeToCullGroup() {

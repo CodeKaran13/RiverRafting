@@ -134,6 +134,7 @@ export default class GameManager extends cc.Component {
         GameManager.currentGameState = GameState.PostGame;
         AudioScript.Instance.StopMusic();
         this.boatEmitterPS.stopSystem();
+        UIManager.Instance.stopLowHealthAnim();
         
         Player.Instance.node.children[4].getComponent(dragonBones.ArmatureDisplay).timeScale = 0;
         Player.Instance.node.children[3].getComponent(dragonBones.ArmatureDisplay).timeScale = 0;

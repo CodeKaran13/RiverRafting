@@ -21,12 +21,16 @@ export default class CameraController extends cc.Component {
     shakeDuration: number = 0.5;
     @property(cc.Animation)
     anim: cc.Animation = null;
+    // @property(cc.Animation)
+    // gameAnim: cc.Animation = null;
     @property(cc.Animation)
     waveAnim: cc.Animation = null;
 
 
     @property(cc.Camera)
     camera: cc.Camera = null;
+    @property(cc.Camera)
+    gameCamera: cc.Camera = null;
     @property(cc.Camera)
     waveCamera: cc.Camera = null;
 
@@ -59,12 +63,14 @@ export default class CameraController extends cc.Component {
 
     cameraShake() {
         this.anim.play('shake');
+        // this.gameAnim.play('shake');
         this.waveAnim.play('shake');
         this.scheduleOnce(this.stopShake.bind(this), this.shakeDuration);
     }
 
     stopShake() {
         this.anim.stop();
+        // this.gameAnim.stop();
         this.waveAnim.stop();
         this.camera.node.position = cc.Vec2.ZERO;//cc.p(0, 0);
         this.waveCamera.node.position = cc.Vec2.ZERO;
@@ -85,8 +91,10 @@ export default class CameraController extends cc.Component {
                 // console.log('zooming in..');
                 var end = this.camera.zoomRatio + 0.2;
                 var end1 = this.waveCamera.zoomRatio + 0.2;
+                var end2 = this.gameCamera.zoomRatio + 0.2;
                 this.camera.zoomRatio = this.lerp(this.camera.zoomRatio, end, 0.1);
                 this.waveCamera.zoomRatio = this.lerp(this.waveCamera.zoomRatio, end1, 0.1);
+                this.gameCamera.zoomRatio = this.lerp(this.gameCamera.zoomRatio, end2, 0.1);
             }
             else {
                 this.shouldZoomIn = false;
