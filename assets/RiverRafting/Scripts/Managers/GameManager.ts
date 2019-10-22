@@ -105,7 +105,7 @@ export default class GameManager extends cc.Component {
     }
 
     PlayImpactEffectAtPos(pos: cc.Vec2) {
-        this.ImpactPE.node.group = 'default';
+        this.ImpactPE.node.group = 'Player';
         this.ImpactPE.node.setPosition(pos);
         this.ImpactPE.play();
     }
