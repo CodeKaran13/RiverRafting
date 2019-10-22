@@ -101,6 +101,8 @@ export default class UIManager extends cc.Component {
     scorePopUpEffect10: cc.Animation = null;
     @property(cc.Animation)
     scorePopUpEffect20: cc.Animation = null;
+    @property(cc.Animation)
+    tutorialAnim: cc.Animation = null;
 
     @property(cc.Node)
     GameSoundSprite: cc.Node = null;
@@ -111,8 +113,7 @@ export default class UIManager extends cc.Component {
 
     onLoad() {
         // this._matchManager._UIManager = this;
-        this._healthManager._UIManager = this;
-
+        
         if (UIManager.Instance == null) {
             UIManager.Instance = this;
         }
@@ -164,6 +165,8 @@ export default class UIManager extends cc.Component {
 
         this.MainMenuWindow.active = false;
         this.GameWindow.active = true;
+
+        this.tutorialAnim.play();
 
         if (GameManager.Instance.IsSoundOn()) {
             AudioScript.Instance.PlayBgMusic();
