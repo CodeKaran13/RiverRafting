@@ -1,4 +1,3 @@
-import MatchManager from "./MatchManager";
 import { Difficulty } from "../Enums";
 import GameManager, { GameState } from "./GameManager";
 import Player from "../Player";
@@ -11,20 +10,6 @@ export default class TimeManager extends cc.Component {
     @property(cc.Label)
     TimeLabel: cc.Label = null;
 
-    _matchManager: MatchManager = null;
-    @property({
-        type: GameManager,
-        visible: true,
-        serializable: true
-    })
-    _gameManagerRef: GameManager = null;
-    @property({
-        type: Player,
-        visible: true,
-        serializable: true
-    })
-    _player: Player = null;
-
     @property({
         visible: true,
         serializable: true
@@ -34,6 +19,14 @@ export default class TimeManager extends cc.Component {
     ShouldTimePass: boolean = true;
     currentime: number;
     sequenceas;
+
+    public static Instance: TimeManager = null;
+
+    onLoad() {
+        if (TimeManager.Instance == null) {
+            TimeManager.Instance = this;
+        }
+    }
 
     restartTimer() {
         this.currentime = this.totaltime;
@@ -53,29 +46,64 @@ export default class TimeManager extends cc.Component {
 
                 if (this.currentime >= 120) {
                     GameManager.currentDifficulty = Difficulty.Easy;
+                    // if (!GameManager.isHighEndDevice) {
+                    //     if (Player.Instance.MAXMOVEMENTSPEED != 6) {
+                    //         // console.log('low end start sequence acc');
+                    //         Player.Instance.MAXMOVEMENTSPEED = 6;
+                    //         Player.Instance.StartAccelerationSequence();
+                    //     }
+                    // }
+                    // else {
+                    if (Player.Instance.MAXMOVEMENTSPEED != 3) {
+                        // console.log('high end start sequence acc');
+                        Player.Instance.MAXMOVEMENTSPEED = 3;
+                        Player.Instance.StartAccelerationSequence();
+                    }
+                    // }
                 }
                 else if (this.currentime < 120 && this.currentime >= 60) {
                     GameManager.currentDifficulty = Difficulty.Normal;
-                    if (Player.Instance.MAXMOVEMENTSPEED != 4) {
-                        this._player.MAXMOVEMENTSPEED = 4;
-                        this._player.StartAccelerationSequence();
-                        Player.Instance.windDir = this.getRandomWindDir();
-                        Player.Instance.IsWindy = true;
-                        this.startWindyTimer();
+                    if (GameManager.isHighEndDevice) {
+                        if (Player.Instance.MAXMOVEMENTSPEED != 4) {
+                            Player.Instance.MAXMOVEMENTSPEED = 4;
+                            Player.Instance.StartAccelerationSequence();
+                            // Player.Instance.windDir = this.getRandomWindDir();
+                            // GameManager.Instance.PlayWindEffect(Player.Instance.windDir);
+                            // Player.Instance.IsWindy = true;
+                            // this.startWindyTimer();
+                        }
                     }
+                    // else {
+                    //     if (Player.Instance.MAXMOVEMENTSPEED != 7) {
+                    //         Player.Instance.MAXMOVEMENTSPEED = 7;
+                    //         Player.Instance.StartAccelerationSequence();
+                    //         // Player.Instance.windDir = this.getRandomWindDir();
+                    //         // GameManager.Instance.PlayWindEffect(Player.Instance.windDir);
+                    //         // Player.Instance.IsWindy = true;
+                    //         // this.startWindyTimer();
+                    //     }
+                    // }
                 }
                 else {
                     GameManager.currentDifficulty = Difficulty.Hard;
-                    if (Player.Instance.MAXMOVEMENTSPEED != 5) {
-                        Player.Instance.MAXMOVEMENTSPEED = 5;
-                        Player.Instance.StartAccelerationSequence();
+                    if (GameManager.isHighEndDevice) {
+                        if (Player.Instance.MAXMOVEMENTSPEED != 5) {
+                            Player.Instance.MAXMOVEMENTSPEED = 5;
+                            Player.Instance.StartAccelerationSequence();
+                        }
                     }
+                    // else {
+                    //     if (Player.Instance.MAXMOVEMENTSPEED != 8) {
+                    //         Player.Instance.MAXMOVEMENTSPEED = 8;
+                    //         Player.Instance.StartAccelerationSequence();
+                    //     }
+                    // }
                 }
             }
             else {
                 //trigger game over
-                this._gameManagerRef.OnGameOver();
-                GameManager.currentGameState = GameState.PostGame;
+                this.ShouldTimePass = false;
+                GameManager.Instance.OnGameOver();
             }
         }
         else {
@@ -96,33 +124,6 @@ export default class TimeManager extends cc.Component {
         }
         else {
             return "00:00";
-        }
-    }
-
-    getRandomWindDir() {
-        var rand = Math.floor(Math.random() * 2);
-
-        if (rand == 0) {
-            return -1;
-        }
-        else {
-            return 1;
-        }
-    }
-
-    windSequence: cc.ActionInterval = null;
-    windTime: number = 7;
-    startWindyTimer() {
-        var time = cc.delayTime(1);
-        this.windSequence = cc.sequence(time, cc.callFunc(this.windCountdown, this));
-        this.node.runAction(this.windSequence.repeatForever());
-    }
-    windCountdown() {
-        this.windTime--;
-        if (this.windTime <= 0) {
-            Player.Instance.IsWindy = false;
-            this.node.stopAction(this.windSequence);
-            this.windTime = 3;
         }
     }
 }

@@ -1,8 +1,7 @@
 const { ccclass, property } = cc._decorator;
 
 @ccclass
-export default class FollowPlayer extends cc.Component
-{
+export default class FollowPlayer extends cc.Component {
     @property({
         type: cc.Node,
         visible: true,
@@ -22,30 +21,35 @@ export default class FollowPlayer extends cc.Component
     @property
     OffsetY: number = 0;
 
-    // onLoad () {}
+    @property
+    IsStartCollider: boolean = false;
+    @property
+    IsEndCollider: boolean = false;
+    public static startColliderYPos: number = 0;
+    public static endColliderYPos: number = 0;
 
-    start()
-    {
-
-    }
-
-    update(dt)
-    {
-        if (!this.IsWaterOnly && !this.IsBoatWaveAnimation && !this.IsHealthBar)
-        {
+    update(dt) {
+        if (!this.IsWaterOnly && !this.IsBoatWaveAnimation && !this.IsHealthBar) {
             this.node.position = new cc.Vec2(540, this._player.position.y);
         }
-        else if (this.IsBoatWaveAnimation)
-        {
+
+        if (this.IsBoatWaveAnimation) {
             this.node.position = new cc.Vec2(this._player.position.x + this.OffsetX, this._player.position.y + this.OffsetY);
         }
-        else if (this.IsHealthBar)
-        {
+        
+        if (this.IsHealthBar) {
             this.node.position = new cc.Vec2(this._player.position.x, this._player.position.y + this.OffsetY);
         }
-        else
-        {
-            this.node.position = this._player.position;
+        // else {
+        //     this.node.position = this._player.position;
+        // }
+
+        if (this.IsStartCollider) {
+            FollowPlayer.startColliderYPos = this.node.position.y;
+        }
+
+        if (this.IsEndCollider) {
+            FollowPlayer.endColliderYPos = this.node.position.y;
         }
     }
 }

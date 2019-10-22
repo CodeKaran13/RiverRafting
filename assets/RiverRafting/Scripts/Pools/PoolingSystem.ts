@@ -1,158 +1,162 @@
-import ItemSpawner from "../GamePlay/ItemSpawner";
-import ObstacleSpawner from "../GamePlay/ObstacleSpawner";
-import RiverMap from "../GamePlay/RiverMap";
 import Waves from "../GamePlay/Waves";
+import MatchManager from "../Managers/MatchManager";
 
 const { ccclass, property } = cc._decorator;
 
 @ccclass
-export default class PoolingSystem extends cc.Component
-{
+export default class PoolingSystem extends cc.Component {
     //All river prefabs refs
-    @property({
-        type: cc.Node,
-        visible: true,
-        serializable: true
-    })
-    RiverMapsSet0: cc.Node[] = [];
-    @property({
-        type: cc.Node,
-        visible: true,
-        serializable: true
-    })
-    RiverMapsSet1: cc.Node[] = [];
-    @property({
-        type: cc.Node,
-        visible: true,
-        serializable: true
-    })
-    RiverMapsSet2: cc.Node[] = [];
-    @property({
-        type: cc.Node,
-        visible: true,
-        serializable: true
-    })
-    RiverMapsSet3: cc.Node[] = [];
-    @property({
-        type: cc.Node,
-        visible: true,
-        serializable: true
-    })
-    RiverMapsSet4: cc.Node[] = [];
-    @property({
-        type: cc.Node,
-        visible: true,
-        serializable: true
-    })
-    RiverMapsSet5: cc.Node[] = [];
-    @property({
-        type: cc.Node,
-        visible: true,
-        serializable: true
-    })
-    RiverMapsSet6: cc.Node[] = [];
-    // @property({
-    //     type: cc.Node,
-    //     visible: true,
-    //     serializable: true
-    // })
-    // RiverMapsSet7: cc.Node[] = [];
-    // @property({
-    //     type: cc.Node,
-    //     visible: true,
-    //     serializable: true
-    // })
-    // RiverMapsSet8: cc.Node[] = [];
+    @property(cc.Prefab)
+    EasyPrefabRiverMapSet0: cc.Prefab = null;
+    @property(cc.Prefab)
+    MediumPrefabRiverMapSet0: cc.Prefab = null;
+    @property(cc.Prefab)
+    HardPrefabRiverMapSet0: cc.Prefab = null;
+    @property(cc.Prefab)
+    EasyPrefabRiverMapSet1: cc.Prefab = null;
+    @property(cc.Prefab)
+    MediumPrefabRiverMapSet1: cc.Prefab = null;
+    @property(cc.Prefab)
+    HardPrefabRiverMapSet1: cc.Prefab = null;
+    @property(cc.Prefab)
+    EasyPrefabRiverMapSet2: cc.Prefab = null;
+    @property(cc.Prefab)
+    MediumPrefabRiverMapSet2: cc.Prefab = null;
+    @property(cc.Prefab)
+    HardPrefabRiverMapSet2: cc.Prefab = null;
+    @property(cc.Prefab)
+    EasyPrefabRiverMapSet3: cc.Prefab = null;
+    @property(cc.Prefab)
+    MediumPrefabRiverMapSet3: cc.Prefab = null;
+    @property(cc.Prefab)
+    HardPrefabRiverMapSet3: cc.Prefab = null;
+    @property(cc.Prefab)
+    EasyPrefabRiverMapSet4: cc.Prefab = null;
+    @property(cc.Prefab)
+    MediumPrefabRiverMapSet4: cc.Prefab = null;
+    @property(cc.Prefab)
+    HardPrefabRiverMapSet4: cc.Prefab = null;
+    @property(cc.Prefab)
+    EasyPrefabRiverMapSet5: cc.Prefab = null;
+    @property(cc.Prefab)
+    MediumPrefabRiverMapSet5: cc.Prefab = null;
+    @property(cc.Prefab)
+    HardPrefabRiverMapSet5: cc.Prefab = null;
+    @property(cc.Prefab)
+    EasyPrefabRiverMapSet6: cc.Prefab = null;
+    @property(cc.Prefab)
+    MediumPrefabRiverMapSet6: cc.Prefab = null;
+    @property(cc.Prefab)
+    HardPrefabRiverMapSet6: cc.Prefab = null;
+
+    EasyRiverMapSet0: cc.NodePool;
+    MediumRiverMapSet0: cc.NodePool;
+    HardRiverMapSet0: cc.NodePool;
+    EasyRiverMapSet1: cc.NodePool;
+    MediumRiverMapSet1: cc.NodePool;
+    HardRiverMapSet1: cc.NodePool;
+    EasyRiverMapSet2: cc.NodePool;
+    MediumRiverMapSet2: cc.NodePool;
+    HardRiverMapSet2: cc.NodePool;
+    EasyRiverMapSet3: cc.NodePool;
+    MediumRiverMapSet3: cc.NodePool;
+    HardRiverMapSet3: cc.NodePool;
+    EasyRiverMapSet4: cc.NodePool;
+    MediumRiverMapSet4: cc.NodePool;
+    HardRiverMapSet4: cc.NodePool;
+    EasyRiverMapSet5: cc.NodePool;
+    MediumRiverMapSet5: cc.NodePool;
+    HardRiverMapSet5: cc.NodePool;
+    EasyRiverMapSet6: cc.NodePool;
+    MediumRiverMapSet6: cc.NodePool;
+    HardRiverMapSet6: cc.NodePool;
 
     //Wave Prefabs
     @property({
-        type: cc.Node,
+        type: cc.Prefab,
         visible: true,
         serializable: true
     })
-    WavePrefabs: cc.Node[] = [];
+    WavePrefabs: cc.Prefab = null;
+    WaveNodePool: cc.NodePool;
 
-    // All script refs
-    @property({
-        type: ItemSpawner,
-        visible: true,
-        serializable: true
-    })
-    _itemSpawner: ItemSpawner = null;
-    @property({
-        type: ObstacleSpawner,
-        visible: true,
-        serializable: true
-    })
-    _obstacleSpawner: ObstacleSpawner = null;
+    public static Instance: PoolingSystem = null;
 
-    start()
-    {
+    onLoad() {
+        if (PoolingSystem.Instance == null) {
+            PoolingSystem.Instance = this;
+        }
 
+        this.WaveNodePool = new cc.NodePool();
+    }
+    start() {
+        
     }
 
-    // Pooling for river maps prefabs
-    addRiverMapToPool(Type: cc.Node)
-    {
-        // console.log('adding back to pool');
-        Type.getComponent(RiverMap).IsActive = false;
-        Type.getComponent(RiverMap).CheckPlayerLocation = false;
-        // Type.destroy();
-        Type.active = false;
-        // this.RiverMapsSet1.push(Type);
+    InitNodePool() {
+        PoolingSystem.Instance.EasyRiverMapSet0 = new cc.NodePool();
+        PoolingSystem.Instance.MediumRiverMapSet0 = new cc.NodePool();
+        PoolingSystem.Instance.HardRiverMapSet0 = new cc.NodePool();
 
-        // switch (Type)
-        // {
-        //     case 1:
+        PoolingSystem.Instance.EasyRiverMapSet1 = new cc.NodePool();
+        PoolingSystem.Instance.MediumRiverMapSet1 = new cc.NodePool();
+        PoolingSystem.Instance.HardRiverMapSet1 = new cc.NodePool();
 
-        //     default:
-        //         console.log('no such case found with name: ' + Type);
-        //         break;
-        // }
+        PoolingSystem.Instance.EasyRiverMapSet2 = new cc.NodePool();
+        PoolingSystem.Instance.MediumRiverMapSet2 = new cc.NodePool();
+        PoolingSystem.Instance.HardRiverMapSet2 = new cc.NodePool();
+
+        PoolingSystem.Instance.EasyRiverMapSet3 = new cc.NodePool();
+        PoolingSystem.Instance.MediumRiverMapSet3 = new cc.NodePool();
+        PoolingSystem.Instance.HardRiverMapSet3 = new cc.NodePool();
+
+        PoolingSystem.Instance.EasyRiverMapSet4 = new cc.NodePool();
+        PoolingSystem.Instance.MediumRiverMapSet4 = new cc.NodePool();
+        PoolingSystem.Instance.HardRiverMapSet4 = new cc.NodePool();
+
+        PoolingSystem.Instance.EasyRiverMapSet5 = new cc.NodePool();
+        PoolingSystem.Instance.MediumRiverMapSet5 = new cc.NodePool();
+        PoolingSystem.Instance.HardRiverMapSet5 = new cc.NodePool();
+
+        PoolingSystem.Instance.EasyRiverMapSet6 = new cc.NodePool();
+        PoolingSystem.Instance.MediumRiverMapSet6 = new cc.NodePool();
+        PoolingSystem.Instance.HardRiverMapSet6 = new cc.NodePool();
+
+
+        // this.fillNodePool();
     }
 
-    getRiverMapfromPool(Type: number): cc.Node
-    {
-        switch (Type)
-        {
-            case 0:
-                var ref = this.RiverMapsSet0.pop();
-                return ref;
-            case 1:
-                var ref = this.RiverMapsSet1.pop();
-                return ref;
-            case 2:
-                var ref = this.RiverMapsSet2.pop(); 
-                return ref;
-            case 3:
-                var ref = this.RiverMapsSet3.pop(); 
-                return ref;
-            case 4:
-                var ref = this.RiverMapsSet4.pop(); 
-                return ref;
-            case 5:
-                var ref = this.RiverMapsSet5.pop();
-                return ref;
-            case 6:
-                var ref = this.RiverMapsSet6.pop();
-                return ref;
-            default:
-                console.log('no such case found with type: ' + Type);
-                break;
+    fillNodePool() {
+        for (let i = 0; i < MatchManager.Instance.totalPrefabsToSpawn; i++) {
+
+            let map0Easy = cc.instantiate(PoolingSystem.Instance.EasyPrefabRiverMapSet0);
+            PoolingSystem.Instance.EasyRiverMapSet0.put(map0Easy);
+
+            let map0Medium = cc.instantiate(PoolingSystem.Instance.MediumPrefabRiverMapSet0);
+            PoolingSystem.Instance.MediumRiverMapSet0.put(map0Medium);
+
+            let map0Hard = cc.instantiate(PoolingSystem.Instance.HardPrefabRiverMapSet0);
+            PoolingSystem.Instance.HardRiverMapSet0.put(map0Hard);
+
         }
     }
 
     // Pooling for wave prefabs
-    addWavePrefabToPool(node: cc.Node)
-    {
-        node.getComponent(Waves).IsActive = false;
-        node.getComponent(Waves).CheckPlayerLocation = false;
+    addWavePrefabToPool(node: cc.Node) {
+        var _waves = node.getComponent(Waves);
+        _waves.IsActive = false;
+        _waves.CheckPlayerLocation = false;
+        _waves._spawnNextWave.triggerOnce = false;
         node.parent.removeChild(node);
-        this.WavePrefabs.push(node);
+        this.WaveNodePool.put(node);
     }
-    getWavePrefabFromPool(): cc.Node
-    {
-        var ref: cc.Node = this.WavePrefabs.pop();
+    getWavePrefabFromPool(): cc.Node {
+        if (this.WaveNodePool.size() > 0) {
+            var ref = this.WaveNodePool.get();
+        }
+        else {
+            ref = cc.instantiate(this.WavePrefabs);
+        }
         return ref;
     }
 }

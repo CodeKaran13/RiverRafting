@@ -1,54 +1,69 @@
 import Collectibles, { CollectibleType } from "../GamePlay/Collectibles";
-import Player from "../Player";
-import CollectiblesPool from "../Pools/CollectiblesPool";
 import ScoreManager from "../Managers/ScoreManager";
+import FollowPlayer from "./FollowPlayer";
+import AudioScript from "../Sound/AudioScript";
+import UIManager from "../Managers/UIManager";
 
 const { ccclass, property } = cc._decorator;
 
 @ccclass
-export default class CoinPack extends Collectibles
-{
+export default class CoinPack extends Collectibles {
 
-    start()
-    {
+    start() {
         this.myType = CollectibleType.Coins;
     }
-    onEnable() 
-    {
-        // this.node.getComponent(cc.BoxCollider).enabled = true;
+    onEnable() {
+        // console.log('coinpack, onEnable');
         this.myPos = this.node.convertToWorldSpaceAR(cc.Vec2.ZERO).y;
+        this.startSequence();
     }
-    onDisable()
-    {
+    onDisable() {
         this.myPos = 0;
     }
-    update(dt)
-    {
-        if (this.node.active)
-        {
-            if (Player.Instance.node.position.y - 500 > this.myPos)
-            {
-                // console.log('coinpack, player is above me');
-                // this._CollectiblePool.addCollectibleBackToPool(this.node);
-                CollectiblesPool.Instance.addCollectibleBackToPool(this.node);
+
+    onCollisionEnter(other, self) {
+        if (other.node.name == 'Player') {
+            // console.log('player collided coin');
+
+            // increase score
+            this.changeToCullGroup();
+            ScoreManager.Instance.totalCoinsCollected += 1;
+            ScoreManager.Instance.AddScore(ScoreManager.Instance.perCoinBonus);
+            // console.log('coin: ' + this.node.convertToWorldSpaceAR(cc.Vec2.ZERO));
+            UIManager.Instance.playScorePopUpAtCoinPos(this.node.convertToWorldSpaceAR(cc.Vec2.ZERO));
+            AudioScript.Instance.PlayCoinCollectSound();
+        }
+    }
+
+    //sequence to turn on/off box collider
+    sequence: cc.ActionInterval;
+    @property(cc.BoxCollider)
+    myCol: cc.BoxCollider = null;
+    startSequence() {
+        var time = cc.delayTime(1);
+        this.sequence = cc.sequence(time, cc.callFunc(this.checkPosition, this));
+        this.node.runAction(this.sequence.repeatForever());
+    }
+    checkPosition() {
+        if (!this.myCol.enabled) {
+            if (FollowPlayer.startColliderYPos > this.myPos) {
+                this.changeToDefaultGroup();
+            }
+        }
+        else {
+            if (FollowPlayer.endColliderYPos > this.myPos) {
+                this.changeToCullGroup();
             }
         }
     }
 
-    onCollisionEnter(other, self)
-    {
-        if(other.node.name == 'Player')
-        {
-            // console.log('player collided coin');
-
-            // increase score
-            // this._scoreManager.totalCoinsCollected += 1;
-            // this._scoreManager.AddScore(this._scoreManager.perCoinBonus);
-            // this._CollectiblePool.addCollectibleBackToPool(this.node);
-
-            ScoreManager.Instance.totalCoinsCollected += 1;
-            ScoreManager.Instance.AddScore(ScoreManager.Instance.perCoinBonus);
-            CollectiblesPool.Instance.addCollectibleBackToPool(this.node);
-        }
+    changeToDefaultGroup() {
+        this.myCol.enabled = true;
+        this.node.group = 'Collectibles';
+    }
+    changeToCullGroup() {
+        this.myCol.enabled = false;
+        this.node.group = 'Cull';
+        this.node.stopAction(this.sequence);
     }
 }

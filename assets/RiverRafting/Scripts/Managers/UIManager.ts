@@ -1,12 +1,16 @@
 import MatchManager from "./MatchManager";
 import GameManager, { GameState } from "./GameManager";
 import HealthManager from "./HealthManager";
+import TimeManager from "./TimeManager";
+import ScoreManager from "./ScoreManager";
+import WindTimeManager from "../Environment/WindTimeManager";
+import AudioScript from "../Sound/AudioScript";
+import BonusSystem from "../GamePlay/BonusSystem";
 
 const { ccclass, property } = cc._decorator;
 
 @ccclass
-export default class UIManager extends cc.Component
-{
+export default class UIManager extends cc.Component {
     // Canvas Windows
     @property({
         type: cc.Node,
@@ -79,18 +83,6 @@ export default class UIManager extends cc.Component
 
     // All Script Refs
     @property({
-        type: MatchManager,
-        visible: true,
-        serializable: true
-    })
-    _matchManager: MatchManager = null;
-    @property({
-        type: GameManager,
-        visible: true,
-        serializable: true
-    })
-    _gameManager: GameManager = null;
-    @property({
         type: HealthManager,
         visible: true,
         serializable: true
@@ -101,22 +93,35 @@ export default class UIManager extends cc.Component
     @property(cc.Sprite)
     healthBarSprite: cc.Sprite = null;
 
-    onLoad()
-    {
-        this._matchManager._UIManager = this;
-        this._healthManager._UIManager = this;
-        // this._matchManager = this._matchManagerNode.getComponent(MatchManager);
-    }
+    @property(cc.Animation)
+    lowHealthAnim: cc.Animation = null;
+    @property(cc.Animation)
+    explosionEffect: cc.Animation = null;
+    @property(cc.Animation)
+    scorePopUpEffect10: cc.Animation = null;
+    @property(cc.Animation)
+    scorePopUpEffect20: cc.Animation = null;
+    @property(cc.Animation)
+    tutorialAnim: cc.Animation = null;
 
-    start()
-    {
+    @property(cc.Node)
+    GameSoundSprite: cc.Node = null;
+    @property(cc.Node)
+    MenuSoundSprite: cc.Node = null;
 
+    public static Instance: UIManager = null;
+
+    onLoad() {
+        // this._matchManager._UIManager = this;
+        
+        if (UIManager.Instance == null) {
+            UIManager.Instance = this;
+        }
     }
 
     // All UI update functions
 
-    OnUIUpdateHealth(health: number)
-    {
+    OnUIUpdateHealth(health: number) {
         this.HealthLabel.string = '' + health;
 
         var fillValue = health / 100;
@@ -124,72 +129,176 @@ export default class UIManager extends cc.Component
         this.healthBarSprite.fillRange = fillValue;
     }
 
-    OnUIUpdateScore(score: number)
-    {
+    OnUIUpdateScore(score: number) {
         this.ScoreLabel.string = '' + score;
     }
 
-    OpenSubmitWindow()
-    {
-        this.CleanRunBonusLabel.string = '' + this._matchManager._scoreManager.cleanRunBonus;
-        this.HumansSavedLabel.string = '' + this._matchManager._scoreManager.totalHumanSaved + ' X ' + this._matchManager._scoreManager.perHumanSavedBonus;
-        this.CoinsCollectedLabel.string = '' + this._matchManager._scoreManager.totalCoinsCollected + ' X ' + this._matchManager._scoreManager.perCoinBonus;
-        this.SubmitScoreLabel.string = '' + this._matchManager._scoreManager.totalScore;
+    OpenSubmitWindow() {
+        AudioScript.Instance.PlayPopUpSoundEffect();
+
+        this.CleanRunBonusLabel.string = '' + ScoreManager.Instance.cleanRunBonus;
+        this.HumansSavedLabel.string = '' + ScoreManager.Instance.totalHumanSaved + ' X ' + ScoreManager.Instance.perHumanSavedBonus;
+        this.CoinsCollectedLabel.string = '' + ScoreManager.Instance.totalCoinsCollected + ' X ' + ScoreManager.Instance.perCoinBonus;
+        this.SubmitScoreLabel.string = '' + ScoreManager.Instance.totalScore;
         this.SubmitScoreWindow.active = true;
     }
 
-    CloseSubmitWindow()
-    {
+    CloseSubmitWindow() {
+        AudioScript.Instance.PlayPopUpSoundEffect();
+
         this.SubmitScoreWindow.active = false;
     }
 
     // All Button functions
-    OnPlayButtonClick()
-    {
+    OnPlayButtonClick() {
+        // AudioScript.Instance.StopEffect(AudioScript.Instance.menuid);
+        AudioScript.Instance.PlayButtonSound();
         GameManager.currentGameState = GameState.InGame;
 
-        this._matchManager._timeManager.restartTimer();
-        this._matchManager._timeManager.startTimer();
-        this._matchManager.StartGame();
+        TimeManager.Instance.restartTimer();
+        TimeManager.Instance.startTimer();
+        WindTimeManager.Instance.startSequence();
+        MatchManager.Instance.StartGame();
+        BonusSystem.Instance.restartCounter();
 
         // close main menu window
 
         this.MainMenuWindow.active = false;
         this.GameWindow.active = true;
+
+        this.tutorialAnim.play();
+
+        if (GameManager.Instance.IsSoundOn()) {
+            AudioScript.Instance.PlayBgMusic();
+            AudioScript.Instance.LowerSoundMusicVolume(0.5);
+        }
+    }
+    OnSoundButtonClick() {
+        AudioScript.Instance.PlayUIButtonClickSound();
+
+        if (GameManager.Instance.IsSoundOn()) {
+            this.SwitchSoundMode(false);
+            AudioScript.Instance.StopMusic();
+            AudioScript.Instance.StopEffect(AudioScript.Instance.ambientid);
+            this.MenuSoundSprite.children[0].opacity = 0;
+            this.MenuSoundSprite.children[1].opacity = 255;
+            this.GameSoundSprite.children[0].opacity = 0;
+            this.GameSoundSprite.children[1].opacity = 255;
+        }
+        else {
+            this.SwitchSoundMode(true);
+            AudioScript.Instance.PlayAmbientMusic();
+            AudioScript.Instance.PlayBgMusic();
+            this.MenuSoundSprite.children[0].opacity = 255;
+            this.MenuSoundSprite.children[1].opacity = 0;
+            this.GameSoundSprite.children[0].opacity = 255;
+            this.GameSoundSprite.children[1].opacity = 0;
+        }
+    }
+    OnMenuSoundButtonClick() {
+        AudioScript.Instance.PlayUIButtonClickSound();
+        // console.log(GameManager.Instance.IsSoundOn());
+
+        if (GameManager.Instance.IsSoundOn()) {
+            // console.log('true');
+            this.SwitchSoundMode(false);
+
+            // AudioScript.Instance.StopEffect(AudioScript.Instance.menuid);
+            AudioScript.Instance.StopEffect(AudioScript.Instance.ambientid);
+
+            this.MenuSoundSprite.children[0].opacity = 0;
+            this.MenuSoundSprite.children[1].opacity = 255;
+            this.GameSoundSprite.children[0].opacity = 0;
+            this.GameSoundSprite.children[1].opacity = 255;
+        }
+        else {
+            // console.log('false');
+            this.SwitchSoundMode(true);
+
+            AudioScript.Instance.PlayAmbientMusic();
+            // AudioScript.Instance.PlayMainMenuMusic();
+
+            this.MenuSoundSprite.children[0].opacity = 255;
+            this.MenuSoundSprite.children[1].opacity = 0;
+            this.GameSoundSprite.children[0].opacity = 255;
+            this.GameSoundSprite.children[1].opacity = 0;
+        }
+    }
+    SwitchSoundMode(bool: boolean) {
+        AudioScript.Instance.isSoundOn = bool;
+
+        if (bool) {
+            GameManager.Instance.SetLocalData('Sound', 0);
+        }
+        else {
+            GameManager.Instance.SetLocalData('Sound', 1);
+        }
     }
 
     // Final submit button
-    OnSubmitButtonClick()
-    {
-        window.$Arena.submitScore(this._matchManager._scoreManager.totalScore, GameManager.Seed);
+    OnSubmitButtonClick() {
+        AudioScript.Instance.PlayUIButtonClickSound();
+        window.$Arena.submitScore(ScoreManager.Instance.totalScore, GameManager.Seed);
     }
 
     // In game cross button functions
-    OnGameCrossButtonClick()
-    {
+    OnGameCrossButtonClick() {
+        AudioScript.Instance.PlayUIButtonClickSound();
+
+        AudioScript.Instance.PlayPopUpSoundEffect();
         this.GameCrossWindow.active = true;
     }
-    OnGameYesButtonClick()
-    {
-        window.$Arena.submitScore(this._matchManager._scoreManager.totalScore, GameManager.Seed);
+    OnGameYesButtonClick() {
+        window.$Arena.submitScore(ScoreManager.Instance.totalScore, GameManager.Seed);
     }
-    OnGameNoButtonClick()
-    {
+    OnGameNoButtonClick() {
+        AudioScript.Instance.PlayUIButtonClickSound();
+
+        AudioScript.Instance.PlayPopUpSoundEffect();
         this.GameCrossWindow.active = false;
     }
 
     // Menu cross button functions
-    OnMenuCrossButtonClick()
-    {
+    OnMenuCrossButtonClick() {
+        AudioScript.Instance.PlayUIButtonClickSound();
+
+        AudioScript.Instance.PlayPopUpSoundEffect();
         this.MenuCrossWindow.active = true;
     }
-    OnMenuYesButtonClick()
-    {
-        this._matchManager._scoreManager.totalScore = 0;
-        window.$Arena.submitScore(this._matchManager._scoreManager.totalScore, GameManager.Seed);
+    OnMenuYesButtonClick() {
+        AudioScript.Instance.PlayUIButtonClickSound();
+        ScoreManager.Instance.totalScore = 0;
+        window.$Arena.submitScore(ScoreManager.Instance.totalScore, GameManager.Seed);
     }
-    OnMenuNoButtonClick()
-    {
+    OnMenuNoButtonClick() {
+        AudioScript.Instance.PlayUIButtonClickSound();
+
+        AudioScript.Instance.PlayPopUpSoundEffect();
         this.MenuCrossWindow.active = false;
+    }
+
+    // Effect/Particle System
+    playExplosionEffectAtPos(pos: cc.Vec2) {
+        this.explosionEffect.node.group = 'Environment';
+        this.explosionEffect.node.setPosition(pos);
+        this.explosionEffect.play();
+    }
+    playScorePopUpAtCoinPos(pos: cc.Vec2) {
+        this.scorePopUpEffect10.node.group = 'UI';
+        this.scorePopUpEffect10.node.setPosition(pos);
+        this.scorePopUpEffect10.play();
+    }
+    playScorePopUpAtHumanPos(pos: cc.Vec2) {
+        this.scorePopUpEffect20.node.group = 'UI';
+        this.scorePopUpEffect20.node.setPosition(pos);
+        this.scorePopUpEffect20.play();
+    }
+    playLowHealthAnim() {
+        this.lowHealthAnim.node.group = 'UI';
+        this.lowHealthAnim.play();
+    }
+    stopLowHealthAnim() {
+        this.lowHealthAnim.node.group = 'Cull';
+        this.lowHealthAnim.stop();
     }
 }

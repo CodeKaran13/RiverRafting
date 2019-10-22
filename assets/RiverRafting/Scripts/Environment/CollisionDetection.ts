@@ -1,37 +1,40 @@
 import BonusSystem from "../GamePlay/BonusSystem";
-import HealthManager from "../Managers/HealthManager";
 import Player from "../Player";
+import GameManager from "../Managers/GameManager";
 
 const { ccclass, property } = cc._decorator;
 
 @ccclass
 export default class CollisionDetection extends cc.Component {
-    @property({
-        type: BonusSystem,
-        visible: true,
-        serializable: true
-    })
-    _bonusSystem: BonusSystem = null;
+
     _player: Player = null;
 
     start() {
-        this._player = this.node.getComponent(Player);
-    }
-    update() {
-        if (!this._player.IsCollidingBound() && !this._bonusSystem.isBonusSequenceOn && !this._player.IsCycloned) {
-            // console.log('starting bonus system');
-            this._bonusSystem.isBonusSequenceOn = true;
-            this._bonusSystem.restartCounter();
-        }
+        this._player = Player.Instance;
     }
 
-    onBeginContact(contact, selfCollider, otherCollider) {
+    onBeginContact(contact: cc.PhysicsContact, selfCollider, otherCollider) {
         if (otherCollider.node.group == 'Bound') {
             // stop clean run on collision and restart timer for bonus system
             // console.log('collided: ' + otherCollider.node.parent.parent.name);
+            if (BonusSystem.Instance.IS_5_SEC_SEQUENCE_ON()) {
+                BonusSystem.Instance.STOP_5_SEC_SEQUENCE();
+            }
 
-            this._bonusSystem.stopAction();
-            this.node.getComponent(HealthManager).takeDamage(5);
+            if (BonusSystem.Instance.isBonusSequenceOn)
+                BonusSystem.Instance.stopAction();
+            var position = contact.getWorldManifold().points[0];
+            GameManager.Instance.PlayImpactEffectAtPos(position);
         }
     }
+
+    // onCollisionStay(other, self) {
+    //     if (other.node.group == 'Bound') {
+    //         if (BonusSystem.Instance.IS_5_SEC_SEQUENCE_ON()) {
+    //             BonusSystem.Instance.STOP_5_SEC_SEQUENCE();
+    //         }
+    //         if (BonusSystem.Instance.isBonusSequenceOn)
+    //             BonusSystem.Instance.stopAction();
+    //     }
+    // }
 }

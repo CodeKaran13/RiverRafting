@@ -1,8 +1,9 @@
 import Obstacles, { ObstacleType } from "../GamePlay/Obstacles";
 import HealthManager from "../Managers/HealthManager";
-import ObstaclePool from "../Pools/ObstaclePool";
-import Player from "../Player";
 import BonusSystem from "../GamePlay/BonusSystem";
+import FollowPlayer from "./FollowPlayer";
+import AudioScript from "../Sound/AudioScript";
+import Player from "../Player";
 
 const { ccclass, property } = cc._decorator;
 
@@ -13,31 +14,61 @@ export default class Logs extends Obstacles {
         this.myType = ObstacleType.Log;
     }
     onEnable() {
-        this.myAnimator.play();
         this.myPos = this.node.convertToWorldSpace(cc.Vec2.ZERO).y;
-    }
 
+        this.startSequence();
+    }
     onDisable() {
         this.myPos = 0;
         this.myAnimator.stop();
     }
 
-    update(dt) {
-        if (this.node.active) {
-            if (Player.Instance.node.position.y - 500 > this.myPos) {
-                // console.log('LOGS, player is above me');
-                // this._obstaclePool.addObstacleBackToPool(this.node);
-                ObstaclePool.Instance.addObstacleBackToPool(this.node);
+    onCollisionEnter(other, self) {
+        if (other.node.name == 'Player') {
+            this.myAnimator.play('floating_wood_break');
+            other.node.getComponent(HealthManager).takeDamage(this.damage);
+            Player.Instance.PlayBlinkEffect();
+            if (BonusSystem.Instance.IS_5_SEC_SEQUENCE_ON()) {
+                BonusSystem.Instance.STOP_5_SEC_SEQUENCE();
+            }
+            if (BonusSystem.Instance.isBonusSequenceOn)
+                BonusSystem.Instance.stopAction();
+            AudioScript.Instance.PlayWoodImpactSound();
+        }
+    }
+
+    //sequence to turn on/off box collider
+    sequence: cc.ActionInterval;
+    @property(cc.BoxCollider)
+    myCol: cc.BoxCollider = null;
+    startSequence() {
+        var time = cc.delayTime(1);
+        this.sequence = cc.sequence(time, cc.callFunc(this.checkPosition, this));
+        this.node.runAction(this.sequence.repeatForever());
+    }
+    checkPosition() {
+        if (!this.myCol.enabled) {
+            if (FollowPlayer.startColliderYPos > this.myPos) {
+                this.changeToDefaultGroup();
+            }
+        }
+        else {
+            if (FollowPlayer.endColliderYPos > this.myPos) {
+                this.changeToCullGroup();
             }
         }
     }
 
-    onCollisionEnter(other, self) {
-        if (other.node.name == 'Player') {
-            this.myAnimator.play('floating_wood_break');
-            Player.Instance.node.getComponent(HealthManager).takeDamage(this.damage);
-            BonusSystem.Instance.stopAction();
-            // this._player.getComponent(HealthManager).takeDamage(this.damage);
-        }
+    changeToDefaultGroup() {
+        this.myCol.enabled = true;
+        this.myAnimator.play();
+        this.node.group = 'Obstacles';
+    }
+    //ANIMATION EVENT
+    changeToCullGroup() {
+        this.myCol.enabled = false;
+        this.myAnimator.stop();
+        this.node.group = 'Cull';
+        this.node.stopAction(this.sequence);
     }
 }

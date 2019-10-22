@@ -1,0 +1,7 @@
+{
+  "ver": "1.0.0",
+  "uuid": "e7a9ea56-eafe-4e59-8e0f-f9f758c46669",
+  "atlasJson": "{\"width\":2048,\"imagePath\":\"NewProject_tex.png\",\"height\":1024,\"name\":\"NewProject\",\"SubTexture\":[{\"width\":1250,\"y\":1,\"height\":645,\"name\":\"water\",\"x\":1}]}",
+  "texture": "9edd8244-cbe3-4e0b-853a-2452ae4c29c0",
+  "subMetas": {}
+}

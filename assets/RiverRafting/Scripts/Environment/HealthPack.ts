@@ -2,6 +2,8 @@ import Collectibles, { CollectibleType } from "../GamePlay/Collectibles";
 import CollectiblesPool from "../Pools/CollectiblesPool";
 import Player from "../Player";
 import HealthManager from "../Managers/HealthManager";
+import FollowPlayer from "./FollowPlayer";
+import AudioScript from "../Sound/AudioScript";
 
 const { ccclass, property } = cc._decorator;
 
@@ -15,28 +17,51 @@ export default class HealthPack extends Collectibles {
     }
     onEnable() {
         this.myPos = this.node.convertToWorldSpaceAR(cc.Vec2.ZERO).y;
+
+        this.startSequence();
     }
     onDisable() {
         this.myPos = 0;
-    }
-    update(dt) {
-        if (this.node.active) {
-            if (Player.Instance.node.position.y - 500 > this.myPos) {
-                // console.log('healthpack, player is above me');
-                // this._CollectiblePool.addCollectibleBackToPool(this.node);
-                CollectiblesPool.Instance.addCollectibleBackToPool(this.node);
-            }
-        }
     }
 
     onCollisionEnter(other, self) {
         if (other.node.name == 'Player') {
             // console.log('player collided health');
-            // this._player.getComponent('HealthManager').increaseHP(this.health);
-            // this._CollectiblePool.addCollectibleBackToPool(this.node);
-
-            Player.Instance.node.getComponent(HealthManager).increaseHP(this.health);
-            CollectiblesPool.Instance.addCollectibleBackToPool(this.node);
+            this.changeToCullGroup();
+            AudioScript.Instance.PlayHealthCollectSound();
+            other.node.getComponent(HealthManager).increaseHP(this.health);
         }
+    }
+
+    //sequence to turn on/off box collider
+    sequence: cc.ActionInterval;
+    @property(cc.BoxCollider)
+    myCol: cc.BoxCollider = null;
+    startSequence() {
+        var time = cc.delayTime(1);
+        this.sequence = cc.sequence(time, cc.callFunc(this.checkPosition, this));
+        this.node.runAction(this.sequence.repeatForever());
+    }
+    checkPosition() {
+        if (!this.myCol.enabled) {
+            if (FollowPlayer.startColliderYPos > this.myPos) {
+                this.changeToDefaultGroup();
+            }
+        }
+        else {
+            if (FollowPlayer.endColliderYPos > this.myPos) {
+                this.changeToCullGroup();
+            }
+        }
+    }
+
+    changeToDefaultGroup() {
+        this.myCol.enabled = true;
+        this.node.group = 'Collectibles';
+    }
+    changeToCullGroup() {
+        this.myCol.enabled = false;
+        this.node.group = 'Cull';
+        this.node.stopAction(this.sequence);
     }
 }

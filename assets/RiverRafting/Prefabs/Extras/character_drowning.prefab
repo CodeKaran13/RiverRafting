@@ -18,7 +18,7 @@
     "_parent": null,
     "_children": [],
     "_active": true,
-    "_level": 2,
+    "_level": 1,
     "_components": [
       {
         "__id__": 2
@@ -123,9 +123,9 @@
       "__id__": 1
     },
     "_enabled": true,
-    "_CollectiblePool": null,
-    "_player": null,
-    "_scoreManager": null,
+    "myCol": {
+      "__id__": 4
+    },
     "_id": ""
   },
   {
@@ -135,7 +135,7 @@
     "node": {
       "__id__": 1
     },
-    "_enabled": true,
+    "_enabled": false,
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",

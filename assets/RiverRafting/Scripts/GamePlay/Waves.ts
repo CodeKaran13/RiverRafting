@@ -1,41 +1,53 @@
 import MatchManager from "../Managers/MatchManager";
+import Player from "../Player";
+import SpawnNextWave from "../Environment/SpawnNextWave";
 
 const { ccclass, property } = cc._decorator;
 
 @ccclass
-export default class Waves extends cc.Component
-{
-    // References
-    @property(cc.Node)
-    _player: cc.Node = null;
-
-    // All script reference
-    _matchManager: MatchManager = null;
+export default class Waves extends cc.Component {
+    @property({
+        type: SpawnNextWave,
+        visible: true,
+        serializable: true
+    })
+    _spawnNextWave: SpawnNextWave = null;
 
     // Script variables
     CheckPlayerLocation: boolean = false;
     IsActive: boolean = false;
     myPos: cc.Vec2;
 
-    onLoad()
-    {
-        this._matchManager = cc.find('Script Collection/Match Manager').getComponent(MatchManager);
-        this._player = cc.find('Player');
+    start() {
+        this.startSequence();
     }
 
-    update(dt)
-    {
-        if(this.IsActive && this.CheckPlayerLocation)
-        {
-            // console.log('wave pos: ' + this.myPos.y);
-            // console.log('player pos: ' + this._player.position.y);
+    sequence: cc.ActionInterval;
+    // @property(cc.BoxCollider)
+    // myCol: cc.BoxCollider = null;
+    startSequence() {
+        var time = cc.delayTime(1);
+        this.sequence = cc.sequence(time, cc.callFunc(this.checkPosition, this));
+        this.node.runAction(this.sequence.repeatForever());
+    }
+    checkPosition() {
+        if (this.IsActive && this.CheckPlayerLocation) {
             var checkpoint = this.node.height + this.myPos.y;
-            if(this._player.position.y > checkpoint + 150)
-            {
-                // console.log('adding waves back to pool');
-                // this.CheckPlayerLocation = false;
-                this._matchManager._poolingSystem.addWavePrefabToPool(this.node);
+            if (Player.Instance.node.position.y > checkpoint + 150) {
+                // console.log('changed to cull group');
+                this.changeToCullGroup();
             }
         }
+    }
+
+    changeToDefaultGroup() {
+        // this.myCol.enabled = true;
+        this.node.group = 'Waves';
+    }
+    changeToCullGroup() {
+        // this.myCol.enabled = false;
+        this.node.group = 'Cull';
+        MatchManager.Instance._poolingSystem.addWavePrefabToPool(this.node);
+        this.node.stopAction(this.sequence);
     }
 }

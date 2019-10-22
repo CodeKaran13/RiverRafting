@@ -1,136 +1,113 @@
+import GameManager from "../Managers/GameManager";
+
 const { ccclass, property } = cc._decorator;
 
 @ccclass
 export default class AudioScript extends cc.Component {
 
-    @property(
-        {
-            type: cc.AudioClip,
-            visible: true,
-            serializable: true
-        }
-    )
-    BullPhussSounds: cc.AudioClip[] = [];
-
-    @property(
-        {
-            type: cc.AudioClip,
-            visible: true,
-            serializable: true
-        }
-    )
-    BullSpawnSounds: cc.AudioClip[] = [];
-
-    @property(
-        {
-            type: cc.AudioClip,
-            visible: true,
-            serializable: true
-        }
-    )
-    ButtonClickSound: cc.AudioClip = null;
-
-    @property(
-        {
-            type: cc.AudioClip,
-            visible: true,
-            serializable: true
-        }
-    )
-    BellSound: cc.AudioClip = null;
-
-    @property(
-        {
-            type: cc.AudioClip,
-            visible: true,
-            serializable: true
-        }
-    )
-    TitlePopUpSound: cc.AudioClip = null;
-
-    @property(
-        {
-            type: cc.AudioClip,
-            visible: true,
-            serializable: true
-        }
-    )
-    CarCrashSound: cc.AudioClip = null;
-
-    @property(
-        {
-            type: cc.AudioClip,
-            visible: true,
-            serializable: true
-        }
-    )
-    AmbientSound: cc.AudioClip = null;
-
-    @property(
-        {
-            type: cc.AudioClip,
-            visible: true,
-            serializable: true
-        }
-    )
-    public BgMusic: cc.AudioClip = null;
-
-    @property(
-        {
-            type: cc.AudioClip,
-            visible: true,
-            serializable: true
-        }
-    )
-    public UIButtonSound: cc.AudioClip = null;
-
-    @property(
-        {
-            type: cc.AudioClip,
-            visible: true,
-            serializable: true
-        }
-    )
-    public OilSound: cc.AudioClip = null;
-
-    @property(
-        {
-            type: cc.AudioClip,
-            visible: true,
-            serializable: true
-        }
-    )
-    public SpeedBreakerSound: cc.AudioClip = null;
-
-    @property(
-        {
-            type: cc.AudioClip,
-            visible: true,
-            serializable: true
-        }
-    )
-    public PotHoleSound: cc.AudioClip = null;
-
+    @property({
+        type: cc.AudioClip,
+        visible: true,
+        serializable: true
+    })
+    bgMusic: cc.AudioClip = null;
+    @property({
+        type: cc.AudioClip,
+        visible: true,
+        serializable: true
+    })
+    buttonSound: cc.AudioClip = null;
+    @property({
+        type: cc.AudioClip,
+        serializable: true,
+        visible: true
+    })
+    mainMenuMusic: cc.AudioClip = null;
+    @property({
+        type: cc.AudioClip,
+        visible: true,
+        serializable: true
+    })
+    humanSavedSound: cc.AudioClip = null;
+    @property({
+        type: cc.AudioClip,
+        visible: true,
+        serializable: true
+    })
+    playButtonSound: cc.AudioClip = null;
+    @property({
+        type: cc.AudioClip,
+        visible: true,
+        serializable: true
+    })
+    ambientSound: cc.AudioClip = null;
+    @property({
+        type: cc.AudioClip,
+        visible: true,
+        serializable: true
+    })
+    coinCollect: cc.AudioClip = null;
+    @property({
+        type: cc.AudioClip,
+        visible: true,
+        serializable: true
+    })
+    dockImpact: cc.AudioClip = null;
+    @property({
+        type: cc.AudioClip,
+        visible: true,
+        serializable: true
+    })
+    healthCollect: cc.AudioClip = null;
+    @property({
+        type: cc.AudioClip,
+        visible: true,
+        serializable: true
+    })
+    floatingWoodImpact: cc.AudioClip = null;
+    @property({
+        type: cc.AudioClip,
+        visible: true,
+        serializable: true
+    })
+    windSound: cc.AudioClip = null;
+    @property({
+        type: cc.AudioClip,
+        visible: true,
+        serializable: true
+    })
+    boatBlastSound: cc.AudioClip = null;
+    @property({
+        type: cc.AudioClip,
+        visible: true,
+        serializable: true
+    })
+    popUpSound: cc.AudioClip = null;
+    @property({
+        type: cc.AudioClip,
+        visible: true,
+        serializable: true
+    })
+    gameOverSound: cc.AudioClip = null;
 
     @property
     isSoundOn: boolean = true;
 
-    // LIFE-CYCLE CALLBACKS:
+    public static Instance: AudioScript = null;
 
-    // onLoad () {}
-
-    start() {
-        this.PlayAmbientSound();
+    onLoad() {
+        if (AudioScript.Instance == null) {
+            AudioScript.Instance = this;
+        }
     }
-    audioid = 0;
-    carpullsoundid = 0;
-    carmovingsoundid = 0;
-    carbonussoundid = 0;
-    bellSoundID = 0;
 
+    audioid = 0;
+    menuid = 0;
+    ambientid = 0;
+    windid = 0;
 
     PlayEffect(AudioClip: cc.AudioClip, loop: boolean) {
-        if (this.isSoundOn) {
+        if (GameManager.Instance.IsSoundOn()) {
             this.audioid = cc.audioEngine.playEffect(AudioClip, loop);
         }
         else {
@@ -138,132 +115,95 @@ export default class AudioScript extends cc.Component {
         }
         return this.audioid;
     }
-
     LowerSoundEffectVolume(effectid: number, volume: number) {
-        if (this.isSoundOn) {
+        if (GameManager.Instance.IsSoundOn()) {
             cc.audioEngine.setVolume(effectid, volume);
         }
     }
-
     StopEffect(effectid: number) {
-        if (this.isSoundOn) {
-            cc.audioEngine.stopEffect(effectid);
-        }
+        cc.audioEngine.stopEffect(effectid);
     }
-
-
-    PlayMusic(AudioClip: cc.AudioClip, loop: boolean) {
-        if (this.isSoundOn) {
-            cc.audioEngine.playMusic(AudioClip, loop);
-        }
-    }
-
     LowerSoundMusicVolume(volume: number) {
-        if (this.isSoundOn) {
+        if (GameManager.Instance.IsSoundOn()) {
             cc.audioEngine.setMusicVolume(volume);
         }
     }
-
     StopMusic() {
-        if (this.isSoundOn) {
-            cc.audioEngine.stopMusic();
+        // if (this.isSoundOn) {
+        cc.audioEngine.stopMusic();
+        // }
+    }
+
+    PlayBgMusic() {
+        if (GameManager.Instance.IsSoundOn()) {
+            cc.audioEngine.playMusic(this.bgMusic, true);
         }
     }
 
+    PlayMainMenuMusic() {
+        // if (this.isSoundOn) {
+        //     this.menuid = this.PlayEffect(this.mainMenuMusic, true);
+        // }
+    }
 
-    PlayBullSpawnSound(type: number) {
-        //console.log("Playing Car pull sound");
-        // var rand = Math.floor(Math.random() * 4 + 1);
-
-        // this.PlayEffect(this.BullSpawnSounds[rand], false);
-
-        switch (type) {
-            case 10:
-                this.PlayEffect(this.BullSpawnSounds[0], false);
-                break;
-            case 20:
-                this.PlayEffect(this.BullSpawnSounds[1], false);
-                break;
-            case 30:
-                this.PlayEffect(this.BullSpawnSounds[1], false);
-                break;
-            case 50:
-                this.PlayEffect(this.BullSpawnSounds[2], false);
-                break;
-            default:
-                break;
+    PlayAmbientMusic() {
+        if (GameManager.Instance.IsSoundOn()) {
+            this.ambientid = this.PlayEffect(this.ambientSound, true);
         }
     }
 
-    PlayBullPhusssSound() {
-        //console.log("Playing Move pull sound");
-
-        // var rand = Math.floor(Math.random() * 2 + 1);
-        this.PlayEffect(this.BullPhussSounds[0], false);
+    PlayCoinCollectSound() {
+        if (GameManager.Instance.IsSoundOn()) {
+            cc.audioEngine.playEffect(this.coinCollect, false);
+        }
+    }
+    PlayHealthCollectSound() {
+        if (GameManager.Instance.IsSoundOn()) {
+            cc.audioEngine.playEffect(this.healthCollect, false);
+        }
+    }
+    PlayHumanCollectSound() {
+        if (GameManager.Instance.IsSoundOn()) {
+            cc.audioEngine.playEffect(this.humanSavedSound, false);
+        }
+    }
+    PlayDockImpactSound() {
+        if (GameManager.Instance.IsSoundOn()) {
+            cc.audioEngine.playEffect(this.dockImpact, false);
+        }
+    }
+    PlayWoodImpactSound() {
+        if (GameManager.Instance.IsSoundOn()) {
+            cc.audioEngine.playEffect(this.floatingWoodImpact, false);
+        }
+    }
+    PlayWindSoundEffect() {
+        if (GameManager.Instance.IsSoundOn()) {
+            this.windid = this.PlayEffect(this.windSound, true);
+        }
+    }
+    PlayBoatBlastSoundEffect() {
+        if (GameManager.Instance.IsSoundOn()) {
+            cc.audioEngine.playEffect(this.boatBlastSound, false);
+        }
+    }
+    PlayPopUpSoundEffect() {
+        if (GameManager.Instance.IsSoundOn()) {
+            cc.audioEngine.playEffect(this.popUpSound, false);
+        }
+    }
+    PlayGameOverSoundEffect() {
+        if (GameManager.Instance.IsSoundOn()) {
+            cc.audioEngine.playEffect(this.gameOverSound, false);
+        }
     }
 
-    StopCarMovingSound() {
-        this.StopEffect(this.carmovingsoundid);
+    PlayUIButtonClickSound() {
+        if (GameManager.Instance.IsSoundOn())
+            this.PlayEffect(this.buttonSound, false);
     }
-
-    LowerCarMovingVolume() {
-        this.LowerSoundEffectVolume(this.carmovingsoundid, 0.5);
+    PlayButtonSound() {
+        if (GameManager.Instance.IsSoundOn())
+            this.PlayEffect(this.playButtonSound, false);
     }
-
-    PlayBellSound(loop: boolean) {
-        // console.log("Playing WellDone sound");
-        this.bellSoundID = this.PlayEffect(this.BellSound, loop);
-    }
-
-    StopBellSound() {
-        this.StopEffect(this.bellSoundID);
-    }
-
-    PlayButtonClickSound() {
-        // console.log("Playing bonus sound");
-        this.PlayEffect(this.ButtonClickSound, false);
-    }
-
-    PlayTitlePopUpSound() {
-        // console.log("Playing penalty sound");
-        this.PlayEffect(this.TitlePopUpSound, false);
-    }
-
-    PlayCrashSound() {
-        console.log("Playing crash sound");
-        // this.PlayEffect(this.CarCrashSound,false);
-    }
-
-    PlayBGSound() {
-        console.log("Playing bg sound");
-        // this.PlayMusic(this.BgMusic,true);
-    }
-
-    PlayAmbientSound() {
-        // console.log("Playing Ambient sound");
-        this.LowerSoundMusicVolume(0.3);
-        this.PlayMusic(this.AmbientSound, true);
-    }
-
-    PlayUISound() {
-        // console.log("Playing Ambient sound");
-        this.PlayEffect(this.UIButtonSound, false);
-    }
-
-    PlayOilSound() {
-        // console.log("Playing Oil sound");
-        this.PlayEffect(this.OilSound, false);
-    }
-
-    PlaySpeedBreakerSound() {
-        // console.log("Playing Oil sound");
-        this.PlayEffect(this.SpeedBreakerSound, false);
-    }
-
-    PlayPotHoleSound() {
-        // console.log("Playing Oil sound");
-        this.PlayEffect(this.PotHoleSound, false);
-    }
-
-    // update (dt) {}
 }

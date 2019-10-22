@@ -66,8 +66,8 @@
     },
     "_scale": {
       "__type__": "cc.Vec3",
-      "x": 1,
-      "y": 1,
+      "x": 2,
+      "y": 2,
       "z": 1
     },
     "_eulerAngles": {
@@ -79,7 +79,7 @@
     "_skewX": 0,
     "_skewY": 0,
     "_is3DNode": false,
-    "groupIndex": 0,
+    "groupIndex": 6,
     "_id": ""
   },
   {
@@ -158,7 +158,7 @@
     "_srcBlendFactor": 770,
     "_dstBlendFactor": 771,
     "_spriteFrame": {
-      "__uuid__": "480dccfa-91b1-4a01-9088-202c64ffa16f"
+      "__uuid__": "cffa2bb5-cac4-4015-937a-ed0a5a6c9dcf"
     },
     "_type": 0,
     "_sizeMode": 1,
@@ -171,9 +171,7 @@
     "_fillStart": 0,
     "_fillRange": 0,
     "_isTrimmedMode": true,
-    "_atlas": {
-      "__uuid__": "5efa8f5f-9e79-468b-b536-dbb66b40ab49"
-    },
+    "_atlas": null,
     "_id": ""
   },
   {
@@ -263,7 +261,7 @@
     "_srcBlendFactor": 770,
     "_dstBlendFactor": 771,
     "_spriteFrame": {
-      "__uuid__": "480dccfa-91b1-4a01-9088-202c64ffa16f"
+      "__uuid__": "cffa2bb5-cac4-4015-937a-ed0a5a6c9dcf"
     },
     "_type": 0,
     "_sizeMode": 1,
@@ -276,9 +274,7 @@
     "_fillStart": 0,
     "_fillRange": 0,
     "_isTrimmedMode": true,
-    "_atlas": {
-      "__uuid__": "5efa8f5f-9e79-468b-b536-dbb66b40ab49"
-    },
+    "_atlas": null,
     "_id": ""
   },
   {
@@ -368,7 +364,7 @@
     "_srcBlendFactor": 770,
     "_dstBlendFactor": 771,
     "_spriteFrame": {
-      "__uuid__": "480dccfa-91b1-4a01-9088-202c64ffa16f"
+      "__uuid__": "cffa2bb5-cac4-4015-937a-ed0a5a6c9dcf"
     },
     "_type": 0,
     "_sizeMode": 1,
@@ -381,9 +377,7 @@
     "_fillStart": 0,
     "_fillRange": 0,
     "_isTrimmedMode": true,
-    "_atlas": {
-      "__uuid__": "5efa8f5f-9e79-468b-b536-dbb66b40ab49"
-    },
+    "_atlas": null,
     "_id": ""
   },
   {
@@ -473,7 +467,7 @@
     "_srcBlendFactor": 770,
     "_dstBlendFactor": 771,
     "_spriteFrame": {
-      "__uuid__": "480dccfa-91b1-4a01-9088-202c64ffa16f"
+      "__uuid__": "cffa2bb5-cac4-4015-937a-ed0a5a6c9dcf"
     },
     "_type": 0,
     "_sizeMode": 1,
@@ -486,9 +480,7 @@
     "_fillStart": 0,
     "_fillRange": 0,
     "_isTrimmedMode": true,
-    "_atlas": {
-      "__uuid__": "5efa8f5f-9e79-468b-b536-dbb66b40ab49"
-    },
+    "_atlas": null,
     "_id": ""
   },
   {
@@ -510,13 +502,15 @@
       "__id__": 1
     },
     "_enabled": true,
-    "_defaultClip": null,
+    "_defaultClip": {
+      "__uuid__": "a6e446c7-528e-43bd-8c2d-cb9ef14b0b8b"
+    },
     "_clips": [
       {
         "__uuid__": "a6e446c7-528e-43bd-8c2d-cb9ef14b0b8b"
       }
     ],
-    "playOnLoad": false,
+    "playOnLoad": true,
     "_id": ""
   },
   {
